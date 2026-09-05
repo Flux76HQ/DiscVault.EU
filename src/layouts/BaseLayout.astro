@@ -26,7 +26,9 @@ interface Props {
 const {
   content,
   canonicalPath,
-  title = `${content.seo.title} | DiscVault`,
+  title = content.seo.title.startsWith('DiscVault')
+    ? content.seo.title
+    : `${content.seo.title} | DiscVault`,
   description = content.seo.description,
   noindex = false,
   productSchema = true,
@@ -58,7 +60,7 @@ const socialImage =
       };
 const structuredData = {
   '@context': 'https://schema.org',
-  '@type': ['SoftwareApplication', 'Product'],
+  '@type': 'SoftwareApplication',
   '@id': `${SITE_URL}/#product`,
   name: 'DiscVault',
   description,
@@ -110,6 +112,13 @@ const structuredData = {
           <link
             rel="preload"
             href="/fonts/instrument-serif-italic-latin.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin
+          />
+          <link
+            rel="preload"
+            href="/fonts/inter-regular-latin.woff2"
             as="font"
             type="font/woff2"
             crossorigin

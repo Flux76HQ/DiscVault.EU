@@ -56,7 +56,7 @@
 }
 
 .spine .slate {
-  font-size: 0.62rem;
+  font-size: 0.75rem;
   writing-mode: vertical-rl;
   transform: rotate(180deg);
   white-space: nowrap;

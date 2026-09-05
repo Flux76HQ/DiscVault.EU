@@ -1,6 +1,8 @@
 /* Reel 05 — the formats: a release lineup, hairlines only. */
 
 .formats {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 1000px;
   padding-top: 0;
   padding-bottom: clamp(4rem, 10vh, 8rem);
 }

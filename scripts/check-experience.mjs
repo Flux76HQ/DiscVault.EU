@@ -9,12 +9,14 @@
  *  - the strip is scrolled after 100 px;
  *  - the idle pass repeats three times;
  *  - the compiled CSS animates no background-position, filter or box-shadow;
- *  - every pass band rests entirely outside its parent.
+ *  - every pass band rests entirely outside its parent;
+ *  - axe reports no serious or critical violation at 1440 and 390 px.
  */
 import { spawn } from 'node:child_process';
 import { readdir, readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { chromium } from 'playwright';
+import AxeBuilder from '@axe-core/playwright';
 
 const host = '127.0.0.1';
 const port = 4177;
@@ -43,17 +45,36 @@ await new Promise((resolve, reject) => {
 const failures = [];
 const fail = (message) => failures.push(message);
 
-// Compiled CSS: no animated background-position, filter or box-shadow.
+// Compiled CSS (inlined into the pages, or emitted as files): no animated
+// background-position, filter or box-shadow.
+const cssSources = [];
+for (const route of routes) {
+  const file = path.join(
+    'dist',
+    route === '/' ? 'index.html' : path.join(route, 'index.html'),
+  );
+  const html = await readFile(file, 'utf8');
+  for (const match of html.matchAll(/<style[^>]*>([\s\S]*?)<\/style>/g)) {
+    cssSources.push({ name: `${file} <style>`, css: match[1] });
+  }
+}
 const cssDir = path.join('dist', '_astro');
-for (const file of await readdir(cssDir)) {
-  if (!file.endsWith('.css')) continue;
-  const css = await readFile(path.join(cssDir, file), 'utf8');
+for (const file of await readdir(cssDir).catch(() => [])) {
+  if (file.endsWith('.css')) {
+    cssSources.push({
+      name: file,
+      css: await readFile(path.join(cssDir, file), 'utf8'),
+    });
+  }
+}
+if (!cssSources.length) fail('no compiled CSS found to inspect');
+for (const { name, css } of cssSources) {
   for (const block of css.match(
     /@keyframes[^{]*\{(?:[^{}]*\{[^{}]*\})*[^{}]*\}/g,
   ) ?? []) {
     for (const property of ['background-position', 'filter', 'box-shadow']) {
       if (block.includes(`${property}:`)) {
-        fail(`${file} animates ${property} in ${block.slice(0, 40)}…`);
+        fail(`${name} animates ${property} in ${block.slice(0, 40)}…`);
       }
     }
   }
@@ -216,7 +237,37 @@ try {
       await context.close();
     }
 
-    // 3. Reduced motion: nothing running after 100 ms; the pass rests.
+    // 3. Accessibility: axe at desktop and phone widths, after the entrance.
+    for (const width of [1440, 390]) {
+      const context = await browser.newContext({
+        viewport: { width, height: width === 390 ? 844 : 900 },
+      });
+      const page = await context.newPage();
+      await page.goto(base + route, { waitUntil: 'networkidle' });
+      await page.waitForTimeout(2800);
+      const results = await new AxeBuilder({ page })
+        .withTags([
+          'wcag2a',
+          'wcag2aa',
+          'wcag21aa',
+          'wcag22aa',
+          'best-practice',
+        ])
+        .analyze();
+      for (const violation of results.violations) {
+        if (violation.impact === 'serious' || violation.impact === 'critical') {
+          fail(
+            `${route} @${width}: axe ${violation.impact} ${violation.id} on ${violation.nodes
+              .slice(0, 3)
+              .map((node) => node.target.join(' '))
+              .join(', ')}`,
+          );
+        }
+      }
+      await context.close();
+    }
+
+    // 4. Reduced motion: nothing running after 100 ms; the pass rests.
     {
       const context = await browser.newContext({
         viewport: { width: 1440, height: 900 },

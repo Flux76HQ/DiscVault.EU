@@ -1,4 +1,6 @@
 ---
+import '../styles/cinematic.css';
+import '../styles/tokens-dark-scope.css';
 import '../styles/shell.css';
 /**
  * The slate strip: the page's clapperboard. Transparent at rest, ground and
@@ -22,9 +24,17 @@ interface Props {
   locale: Locale;
   homePath: string;
   showCounter?: boolean;
+  /** A solid ground from the start (the light-capable legal shell). */
+  solid?: boolean;
 }
 
-const { content, locale, homePath, showCounter = true } = Astro.props;
+const {
+  content,
+  locale,
+  homePath,
+  showCounter = true,
+  solid = false,
+} = Astro.props;
 const homeAnchor = (anchor: string) => `${homePath}${anchor}`;
 const links = [
   { href: homeAnchor('#product'), label: content.nav.library },
@@ -36,15 +46,13 @@ const links = [
 ];
 ---
 
-<header class="strip" data-strip>
+<header
+  class:list={['strip', 'cine-dark', { 'strip-solid': solid }]}
+  data-strip
+>
   <div class="strip-inner">
     <a class="strip-brand" href={homePath} aria-label="DiscVault">
-      <img
-        src="/brand/discvault-logo-transparent.png"
-        width="24"
-        height="24"
-        alt=""
-      />
+      <img src="/brand/discvault-mark-96.png" width="24" height="24" alt="" />
       <span>DiscVault</span>
     </a>
 

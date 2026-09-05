@@ -8,7 +8,7 @@
 .slate {
   margin: 0;
   font-family: var(--font-slate);
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   font-variant-numeric: tabular-nums;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -117,7 +117,7 @@
   padding: 0.55rem 0;
   overflow: visible;
   font-family: var(--font-slate);
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--dv-platinum-dim);
@@ -145,7 +145,7 @@
   min-height: 44px;
   align-items: center;
   font-family: var(--font-slate);
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--dv-platinum-dim);
@@ -183,6 +183,18 @@
 
 .strip.is-scrolled::after {
   opacity: 1;
+}
+
+.strip-solid {
+  background: var(--cine-ground);
+}
+
+.strip-solid::after {
+  opacity: 1;
+}
+
+.cine-dark {
+  color-scheme: dark;
 }
 
 .strip-inner {
@@ -248,9 +260,9 @@
   border-bottom: var(--cine-hair) solid var(--cine-hairline);
   border-radius: 0;
   background: transparent;
-  color: var(--dv-platinum);
+  color: var(--dv-text-2);
   font-family: var(--font-slate);
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }

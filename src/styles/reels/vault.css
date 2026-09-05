@@ -1,6 +1,8 @@
 /* Reel 04 — the vault: the darkest reel, one lamp. */
 
 .vault {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 700px;
   padding-bottom: clamp(6rem, 18vh, 14rem);
   background: var(--cine-ground);
 }

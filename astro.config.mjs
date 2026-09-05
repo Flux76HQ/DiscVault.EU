@@ -43,6 +43,10 @@ export default defineConfig({
     }),
     exactHtmlOutput(),
   ],
+  build: {
+    // One request fewer before first paint: the page's CSS ships inline.
+    inlineStylesheets: 'always',
+  },
   vite: {
     build: {
       assetsInlineLimit: 0,
