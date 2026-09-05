@@ -89,8 +89,6 @@
 .hero-routes .button-secondary,
 .hero-routes .text-link {
   display: inline-block;
-  min-height: 44px;
-  padding-block: 0.55rem;
 }
 
 .hero-routes b {

@@ -36,17 +36,32 @@ const { leader, actions } = content;
       <div class="hero-routes">
         <a class="button button-secondary" href={APP_STORE_URL}>
           <b>01</b>
-          <span class="slate-dot" aria-hidden="true"> · </span>
+          <span class="sr-only">, </span><span
+            class="slate-dot"
+            aria-hidden="true"
+          >
+            ·
+          </span>
           {actions.appStore}
         </a>
         <a class="button button-secondary" href={ANDROID_BETA_SIGNUP_URL}>
           <b>02</b>
-          <span class="slate-dot" aria-hidden="true"> · </span>
+          <span class="sr-only">, </span><span
+            class="slate-dot"
+            aria-hidden="true"
+          >
+            ·
+          </span>
           {actions.android}
         </a>
         <a class="text-link" href={TESTFLIGHT_URL}>
           <b>03</b>
-          <span class="slate-dot" aria-hidden="true"> · </span>
+          <span class="sr-only">, </span><span
+            class="slate-dot"
+            aria-hidden="true"
+          >
+            ·
+          </span>
           {actions.testflight}
         </a>
       </div>

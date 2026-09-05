@@ -36,9 +36,12 @@ const extra = facts.slice(keep);
     shown.map((fact: string, index: number) => (
       <>
         {index > 0 && (
-          <span class="slate-dot" aria-hidden="true">
-            {HAIR}·{HAIR}
-          </span>
+          <>
+            <span class="sr-only">, </span>
+            <span class="slate-dot" aria-hidden="true">
+              {HAIR}·{HAIR}
+            </span>
+          </>
         )}
         <span class:list={['slate-fact', { 'slate-strong': index === strong }]}>
           {fact}
@@ -51,6 +54,7 @@ const extra = facts.slice(keep);
       <span class="slate-x">
         {extra.map((fact: string) => (
           <>
+            <span class="sr-only">, </span>
             <span class="slate-dot" aria-hidden="true">
               {HAIR}·{HAIR}
             </span>

@@ -114,7 +114,7 @@
 
 .button-secondary {
   min-width: 0;
-  padding: 0.55rem 0;
+  padding: 0.8rem 0;
   overflow: visible;
   font-family: var(--font-slate);
   font-size: 0.75rem;
@@ -136,14 +136,13 @@
 
 .button-compact {
   min-width: 0;
-  padding: 0.35rem 0 0.4rem;
+  padding: 0.8rem 0;
   font-size: 1rem;
 }
 
 .text-link {
-  display: inline-flex;
-  min-height: 44px;
-  align-items: center;
+  display: inline-block;
+  padding-block: 0.8rem;
   font-family: var(--font-slate);
   font-size: 0.75rem;
   letter-spacing: 0.12em;
