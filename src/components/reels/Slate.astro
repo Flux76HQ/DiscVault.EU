@@ -1,0 +1,67 @@
+---
+/**
+ * A slate: facts in Martian Mono, joined by a hair-spaced middle dot.
+ * `strong` marks the index of a fact to set in platinum (the product name).
+ * `collapse` keeps that many facts everywhere and wraps the rest in a
+ * `.slate-x` group that the stylesheet hides on narrower ranges, so a slate
+ * never breaks mid-fact and never ends on a stray dot.
+ */
+interface Props {
+  facts: readonly string[];
+  strong?: number;
+  collapse?: number;
+  as?: 'p' | 'span' | 'div';
+  class?: string;
+  id?: string;
+  hidden?: boolean;
+}
+
+const {
+  facts,
+  strong,
+  collapse,
+  as: Tag = 'p',
+  class: className,
+  id,
+  hidden,
+} = Astro.props;
+const HAIR = ' ';
+const keep = collapse ?? facts.length;
+const shown = facts.slice(0, keep);
+const extra = facts.slice(keep);
+---
+
+<Tag class:list={['slate', className]} id={id} aria-hidden={hidden}>
+  {
+    shown.map((fact: string, index: number) => (
+      <>
+        {index > 0 && (
+          <>
+            <span class="sr-only">, </span>
+            <span class="slate-dot" aria-hidden="true">
+              {HAIR}·{HAIR}
+            </span>
+          </>
+        )}
+        <span class:list={['slate-fact', { 'slate-strong': index === strong }]}>
+          {fact}
+        </span>
+      </>
+    ))
+  }
+  {
+    extra.length > 0 && (
+      <span class="slate-x">
+        {extra.map((fact: string) => (
+          <>
+            <span class="sr-only">, </span>
+            <span class="slate-dot" aria-hidden="true">
+              {HAIR}·{HAIR}
+            </span>
+            <span class="slate-fact">{fact}</span>
+          </>
+        ))}
+      </span>
+    )
+  }
+</Tag>

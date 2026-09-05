@@ -1,13 +1,32 @@
-export interface Capability {
-  title: string;
-  body: string;
+/**
+ * The marketing content model: seven reels, one shape for all twenty locales.
+ * Design source: Flux76HQ/App-Guidance, projects/discvault/website/
+ * (experience-architecture.md §10, hero.md §3).
+ */
+
+/** A voice line in segments; the segment at index 1 is emphasised. */
+export type Segments = [string, string] | [string, string, string];
+
+/** Slate facts; the component joins them with a hair-spaced middle dot. */
+export type Slate = string[];
+
+export interface Reel {
+  slate: Slate;
+  voice: Segments;
+  lead: string;
 }
 
-export interface ProductRoute {
-  label: string;
+export interface FormatRoute {
+  id: 'self-hosted' | 'ios' | 'android';
+  slate: Slate;
   title: string;
-  body: string;
-  points: string[];
+  body: string[];
+  action: string;
+}
+
+export interface Credit {
+  role: string;
+  name: string;
 }
 
 export interface MarketingContent {
@@ -18,72 +37,47 @@ export interface MarketingContent {
     description: string;
   };
   nav: {
-    product: string;
-    ios: string;
-    selfHosted: string;
+    library: string;
+    scan: string;
+    editions: string;
     privacy: string;
+    install: string;
     docs: string;
     menu: string;
     language: string;
   };
-  hero: {
-    eyebrow: string;
-    title: string;
-    accent: string;
-    lead: string;
+  actions: {
+    install: string;
+    installCompact: string;
     appStore: string;
-    androidBeta: string;
-    selfHosted: string;
+    android: string;
+    testflight: string;
+    privacy: string;
   };
-  routes: {
-    eyebrow: string;
-    heading: string;
-    mobileRoadmap: string;
-    ios: ProductRoute;
-    selfHosted: ProductRoute;
+  leader: Reel & { note: Slate };
+  shelf: Reel & { counter: Slate };
+  read: Reel & { note: Slate; captureAlt: string };
+  edition: Reel & { spines: string[] };
+  vault: Reel & { body: string[] };
+  formats: Reel & {
+    routes: [FormatRoute, FormatRoute, FormatRoute];
+    roadmap: string;
+    migration: Slate;
   };
-  capabilities: {
-    eyebrow: string;
-    heading: string;
-    items: Capability[];
-  };
-  showcase: {
-    eyebrow: string;
-    heading: string;
-    mobileLibrary: string;
-    mobileAdd: string;
-    mobileDetail: string;
-    desktopLibrary: string;
-    desktopDetail: string;
-  };
-  trust: {
-    eyebrow: string;
-    heading: string;
-    body: string;
-    noTrackingTitle: string;
-    noTrackingBody: string;
-    controlTitle: string;
-    controlBody: string;
-  };
-  comparison: {
-    eyebrow: string;
-    heading: string;
-    route: string;
-    bestFor: string;
-    setup: string;
-    iosBest: string;
-    iosSetup: string;
-    androidSetup: string;
-    selfBest: string;
-    selfSetup: string;
-  };
-  community: {
-    eyebrow: string;
-    heading: string;
-    discord: string;
-    issues: string;
-    support: string;
-    finalTitle: string;
+  credits: {
+    install: Credit;
+    appStore: Credit;
+    android: Credit;
+    testflight: Credit;
+    source: Credit;
+    community: Credit;
+    issues: Credit;
+    languages: Credit;
+    privacy: Credit;
+    terms: Credit;
+    legacy: Credit;
+    production: Credit;
+    final: Segments;
   };
   footer: {
     tagline: string;

@@ -1,0 +1,228 @@
+/*
+ * The cinematic layer for the marketing routes: site-only tokens on top of
+ * the generated Chrome & Blue tokens (tokens.css), the motion tokens, and the
+ * self-hosted typefaces. Never redefines a --dv-* token.
+ * Design source: Flux76HQ/App-Guidance, projects/discvault/website/.
+ */
+
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/instrument-serif-regular-latin.woff2') format('woff2');
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF,
+    U+FFFD;
+}
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/instrument-serif-regular-latin-ext.woff2') format('woff2');
+  unicode-range:
+    U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304,
+    U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0,
+    U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/instrument-serif-italic-latin.woff2') format('woff2');
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF,
+    U+FFFD;
+}
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/instrument-serif-italic-latin-ext.woff2') format('woff2');
+  unicode-range:
+    U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304,
+    U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0,
+    U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Martian Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/martian-mono-regular-latin.woff2') format('woff2');
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF,
+    U+FFFD;
+}
+@font-face {
+  font-family: 'Martian Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/martian-mono-regular-latin-ext.woff2') format('woff2');
+  unicode-range:
+    U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304,
+    U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0,
+    U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/inter-regular-latin.woff2') format('woff2');
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF,
+    U+FFFD;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/inter-regular-latin-ext.woff2') format('woff2');
+  unicode-range:
+    U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304,
+    U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0,
+    U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/inter-medium-latin.woff2') format('woff2');
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF,
+    U+FFFD;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/inter-medium-latin-ext.woff2') format('woff2');
+  unicode-range:
+    U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304,
+    U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0,
+    U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* Metric-matched fallbacks: shown until the real face arrives, sized so the
+ * swap does not move the layout. Overrides are the real font's hhea metrics
+ * divided by size-adjust (see public/fonts/README.md). */
+@font-face {
+  font-family: 'Instrument Serif Fallback';
+  src: local('Georgia'), local('Times New Roman'), local('Times');
+  size-adjust: 82%;
+  ascent-override: 120.7%;
+  descent-override: 37.8%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: 'Martian Mono Fallback';
+  src: local('Menlo'), local('Consolas'), local('DejaVu Sans Mono');
+  size-adjust: 125%;
+  ascent-override: 80%;
+  descent-override: 16%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: 'Inter Fallback';
+  src: local('Arial'), local('Helvetica Neue'), local('Helvetica');
+  size-adjust: 107%;
+  ascent-override: 90.5%;
+  descent-override: 22.5%;
+  line-gap-override: 0%;
+}
+
+:root {
+  /* The room */
+  --cine-ground: #04070d;
+  --cine-fog: #0c1424;
+  --cine-hairline: rgb(199 210 222 / 28%);
+  --cine-hairline-soft: rgb(199 210 222 / 14%);
+  --cine-hair: max(0.5px, 0.0625rem);
+  --cine-glass: rgb(234 240 247 / 4%);
+  --cine-glass-edge: rgb(255 255 255 / 10%);
+  --cine-lamp: #e8c48c;
+  --cine-shadow: 0 24px 60px -30px rgb(0 0 0 / 80%);
+  --cine-grating: linear-gradient(
+    100deg,
+    transparent 0%,
+    rgb(126 185 235 / 35%) 22%,
+    #7eb9eb 38%,
+    #d6cefa 44%,
+    #edc8f0 48%,
+    #f9f6f6 50%,
+    #7ee2c6 54%,
+    #4c93e4 60%,
+    rgb(76 147 228 / 35%) 74%,
+    transparent 100%
+  );
+  --cine-spectrum: conic-gradient(
+    from 0deg,
+    #2a6fd6 0deg,
+    #4c93e4 10deg,
+    #22c2a8 22deg,
+    #cff7e9 32deg,
+    #f9f6f6 38deg,
+    #ffd3e4 46deg,
+    #c7b4ff 58deg,
+    #6cb4fc 70deg,
+    #2a6fd6 82deg,
+    transparent 90deg,
+    transparent 360deg
+  );
+  --cine-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23g)'/%3E%3C/svg%3E");
+
+  /* Three voices */
+  --font-voice:
+    'Instrument Serif', 'Instrument Serif Fallback', 'Hiragino Mincho ProN',
+    'Yu Mincho', 'Songti SC', 'Apple Myungjo', 'Noto Serif', Georgia, serif;
+  --font-slate:
+    'Martian Mono', 'Martian Mono Fallback', ui-monospace, 'SF Mono', Menlo,
+    Consolas, monospace;
+  --font-body:
+    'Inter', 'Inter Fallback', ui-sans-serif, system-ui, -apple-system,
+    'Segoe UI', sans-serif;
+
+  /* Spacing scale (rem) */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-24: 6rem;
+  --space-36: 9rem;
+  --margin: clamp(1.25rem, 6vw, 7rem);
+
+  /* Motion: curves */
+  --ease-settle: cubic-bezier(0.16, 0.84, 0.24, 1);
+  --ease-light: linear;
+  --ease-hold: cubic-bezier(0.4, 0, 0.6, 1);
+  --ease-leave: cubic-bezier(0.7, 0, 0.84, 0);
+
+  /* Motion: the duration ladder */
+  --t-cut: 0ms;
+  --t-hold: 200ms;
+  --t-1: 600ms;
+  --t-2: 900ms;
+  --t-3: 1200ms;
+  --t-4: 1600ms;
+  --t-5: 2400ms;
+  --stagger: 90ms;
+  --idle-period: 9s;
+  --idle-repeats: 3;
+}

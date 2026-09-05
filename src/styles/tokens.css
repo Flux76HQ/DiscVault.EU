@@ -28,6 +28,18 @@
   --dv-sheen: conic-gradient(from 210deg, #7EB9EB, #D6CEFA, #EDC8F0, #F9F6F6, #7EE2C6, #4C93E4, #3C7CE1, #7EB9EB);
   --dv-shadow: 0 1px 2px rgba(0,0,0,.5), 0 10px 30px rgba(0,0,0,.4);
   --dv-theme-color: #090F1A;
+  --dv-fmt-4k-fill: #F2F6FA;
+  --dv-fmt-4k-on: #0A0E14;
+  --dv-fmt-bluray-fill: #3B9EFF;
+  --dv-fmt-bluray-on: #04121F;
+  --dv-fmt-dvd-fill: #C2A878;
+  --dv-fmt-dvd-deep: #8C7345;
+  --dv-fmt-dvd-on: #1C1508;
+  --dv-fmt-steel-fill: #8E9CAC;
+  --dv-fmt-steel-on: #0E141C;
+  --dv-fmt-steel-brushed: linear-gradient(115deg, #5C6875 0%, #8A97A6 18%, #D6E0EA 32%, #93A1B0 44%, #6B7683 58%, #B9C6D3 72%, #7E8B99 86%, #566270 100%);
+  --dv-fmt-digital-fill: #22C2A8;
+  --dv-fmt-digital-on: #04211C;
 }
 
 @media (prefers-color-scheme: light) {
@@ -47,6 +59,18 @@
   --dv-warning: #C2540B;
   --dv-error: #DC2626;
   --dv-info: #0E7C93;
+  --dv-fmt-4k-fill: #12181F;
+  --dv-fmt-4k-on: #FFFFFF;
+  --dv-fmt-bluray-fill: #1E6FD8;
+  --dv-fmt-bluray-on: #FFFFFF;
+  --dv-fmt-dvd-fill: #8C7345;
+  --dv-fmt-dvd-deep: #6B5730;
+  --dv-fmt-dvd-on: #FFFFFF;
+  --dv-fmt-steel-fill: #556270;
+  --dv-fmt-steel-on: #FFFFFF;
+  --dv-fmt-steel-brushed: linear-gradient(115deg, #6E7B89 0%, #9AA7B5 18%, #E2EAF2 32%, #A4B1BF 44%, #7C8996 58%, #C6D2DE 72%, #8D9AA8 86%, #67737F 100%);
+  --dv-fmt-digital-fill: #0E9C86;
+  --dv-fmt-digital-on: #FFFFFF;
     --dv-accent-bright: #1F5FBF;
     --dv-sheen: conic-gradient(from 210deg, #5E9AD0, #B3A8E4, #D6A8DC, #E8E4EE, #5CC4A8, #3B7BC4, #2A6FD6, #5E9AD0);
     --dv-shadow: 0 1px 2px rgba(20,30,45,.06), 0 12px 32px rgba(30,60,110,.10);

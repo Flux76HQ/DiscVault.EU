@@ -1,0 +1,81 @@
+/* Reel 02 — the read: a barcode as hairlines, the capture on screen glass. */
+
+.read {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 900px;
+}
+
+.read-note {
+  margin-top: var(--space-2);
+}
+
+.read-stage {
+  position: relative;
+  grid-column: 7 / -1;
+  min-height: 30rem;
+  margin-right: calc(var(--margin) * -1);
+  overflow: hidden;
+}
+
+.barcode {
+  position: absolute;
+  inset: 0 0 0 10%;
+  display: flex;
+  gap: 1.6%;
+  align-items: stretch;
+}
+
+.barcode i {
+  display: block;
+  flex: 0 0 auto;
+  width: calc(var(--w) * 0.55%);
+  background: var(--dv-platinum);
+  opacity: 0.32;
+}
+
+.laser {
+  position: absolute;
+  inset: 0 0 0 10%;
+  z-index: 2;
+  height: 2px;
+  top: 46%;
+  background: var(--cine-grating);
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+.capture {
+  position: absolute;
+  top: 8%;
+  left: 38%;
+  z-index: 3;
+  width: auto;
+  height: 84%;
+  aspect-ratio: 49 / 100;
+  margin: 0;
+  padding: 0.35rem;
+  background: var(--cine-glass);
+  border-radius: 4px;
+  box-shadow:
+    inset 1px 1px 0 var(--cine-glass-edge),
+    var(--cine-shadow);
+}
+
+.capture img,
+.capture picture {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 56.24rem) {
+  .read-stage {
+    grid-column: 1 / -1;
+    min-height: 26rem;
+    margin-right: calc(var(--margin) * -1);
+  }
+
+  .capture {
+    left: 42%;
+  }
+}

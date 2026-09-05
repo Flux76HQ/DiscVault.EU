@@ -1,4 +1,14 @@
 ---
+import '../styles/cinematic.css';
+import '../styles/tokens-dark-scope.css';
+import '../styles/shell.css';
+/**
+ * The slate strip: the page's clapperboard. Transparent at rest, ground and
+ * a hairline after 80 px of scroll (class `is-scrolled`, set by the motion
+ * script), a native <details> menu below 900 px. Release-gate hooks: exactly
+ * one docs link with `button button-compact` and one with
+ * `mobile-menu-primary`.
+ */
 import type { Locale } from '../content/locales';
 import type { MarketingContent } from '../content/types';
 import {
@@ -13,54 +23,75 @@ interface Props {
   content: MarketingContent;
   locale: Locale;
   homePath: string;
+  showCounter?: boolean;
+  /** A solid ground from the start (the light-capable legal shell). */
+  solid?: boolean;
 }
 
-const { content, locale, homePath } = Astro.props;
+const {
+  content,
+  locale,
+  homePath,
+  showCounter = true,
+  solid = false,
+} = Astro.props;
 const homeAnchor = (anchor: string) => `${homePath}${anchor}`;
+const links = [
+  { href: homeAnchor('#product'), label: content.nav.library },
+  { href: homeAnchor('#scan'), label: content.nav.scan },
+  { href: homeAnchor('#editions'), label: content.nav.editions },
+  { href: homeAnchor('#privacy'), label: content.nav.privacy },
+  { href: homeAnchor('#install'), label: content.nav.install },
+  { href: DOCS_URL, label: content.nav.docs },
+];
 ---
 
-<header class="site-header">
-  <div class="wrap header-inner">
-    <a class="brand" href={homePath} aria-label="DiscVault">
-      <img
-        src="/brand/discvault-logo-transparent.png"
-        width="44"
-        height="44"
-        alt=""
-      />
+<header
+  class:list={['strip', 'cine-dark', { 'strip-solid': solid }]}
+  data-strip
+>
+  <div class="strip-inner">
+    <a class="strip-brand" href={homePath} aria-label="DiscVault">
+      <img src="/brand/discvault-mark-96.png" width="24" height="24" alt="" />
       <span>DiscVault</span>
     </a>
 
-    <nav class="desktop-nav" aria-label={content.nav.product}>
-      <a href={homeAnchor('#product')}>{content.nav.product}</a>
-      <a href={homeAnchor('#self-hosted')}>{content.nav.selfHosted}</a>
-      <a href={homeAnchor('#ios')}>{content.nav.ios}</a>
-      <a href={homeAnchor('#android')}>Android</a>
-      <a href={homeAnchor('#privacy')}>{content.nav.privacy}</a>
-      <a href={DOCS_URL}>{content.nav.docs}</a>
+    <nav class="strip-nav slate" aria-label="DiscVault">
+      {links.map(({ href, label }) => <a href={href}>{label}</a>)}
     </nav>
 
-    <div class="header-tools">
+    <div class="strip-tools">
+      {
+        showCounter && (
+          <span class="strip-counter slate" aria-hidden="true">
+            Reel <b data-reel-counter>00</b> / 06
+          </span>
+        )
+      }
       <LocaleSwitcher locale={locale} label={content.nav.language} />
-      <div class="header-actions">
-        <a class="button button-compact" href={DOCS_URL}>
-          {content.hero.selfHosted}
-        </a>
-      </div>
-      <details class="mobile-menu">
-        <summary>{content.nav.menu}</summary>
-        <nav aria-label={content.nav.menu}>
+      <a class="button button-compact strip-install" href={DOCS_URL}>
+        {content.actions.installCompact}
+      </a>
+      <details class="menu">
+        <summary class="slate">{content.nav.menu}</summary>
+        <nav class="menu-sheet" aria-label={content.nav.menu}>
           <a class="mobile-menu-primary" href={DOCS_URL}>
-            {content.hero.selfHosted}
+            {content.actions.installCompact}
           </a>
-          <a href={homeAnchor('#product')}>{content.nav.product}</a>
-          <a href={homeAnchor('#self-hosted')}>{content.nav.selfHosted}</a>
-          <a href={homeAnchor('#ios')}>{content.nav.ios}</a>
-          <a href={homeAnchor('#android')}>Android</a>
-          <a href={homeAnchor('#privacy')}>{content.nav.privacy}</a>
-          <a href={APP_STORE_URL}>App Store</a>
-          <a href={ANDROID_BETA_SIGNUP_URL}>{content.hero.androidBeta}</a>
-          <a href={TESTFLIGHT_URL}>TestFlight beta</a>
+          {
+            links.map(({ href, label }) => (
+              <a class="slate" href={href}>
+                {label}
+              </a>
+            ))
+          }
+          <a class="slate" href={APP_STORE_URL}>{content.actions.appStore}</a>
+          <a class="slate" href={ANDROID_BETA_SIGNUP_URL}>
+            {content.actions.android}
+          </a>
+          <a class="slate" href={TESTFLIGHT_URL}>
+            {content.actions.testflight}
+          </a>
         </nav>
       </details>
     </div>

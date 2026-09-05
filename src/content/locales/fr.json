@@ -2,117 +2,227 @@
   "locale": "fr",
   "languageName": "Français",
   "seo": {
-    "title": "DiscVault. Conçu pour les collectionneurs.",
-    "description": "Utilisez votre appareil photo pour scanner des codes-barres, puis récupérez automatiquement les métadonnées et la pochette. L'app fonctionne entièrement seule — aucun serveur requis. Gérez votre collection directement sur votre appareil, sans le backend DiscVault."
+    "title": "DiscVault — un catalogue pour vos disques",
+    "description": "DiscVault catalogue vos films en 4K, Blu-ray et DVD. Scannez un code-barres, distinguez les éditions, sur votre appareil ou votre serveur. Sans pistage."
   },
   "nav": {
-    "product": "Fonctionnalités",
-    "ios": "iPhone & iPad",
-    "selfHosted": "Self-hosted",
+    "library": "Bibliothèque",
+    "scan": "Scanner",
+    "editions": "Éditions",
     "privacy": "Confidentialité",
+    "install": "Installer",
     "docs": "Docs",
     "menu": "Menu",
     "language": "Langues"
   },
-  "hero": {
-    "eyebrow": "DiscVault. Conçu pour les collectionneurs.",
-    "title": "DiscVault 26 est la.",
-    "accent": "Concu pour la prochaine etagere.",
-    "lead": "Conçu pour les personnes avec de vraies étagères, de vraies piles et de vraies éditions.",
+  "actions": {
+    "install": "Installer DiscVault 26",
+    "installCompact": "Installer v26",
     "appStore": "Télécharger sur l’App Store",
-    "androidBeta": "Demander l’accès à la bêta Android",
-    "selfHosted": "Installer v26"
+    "android": "Demander l’accès à la bêta Android",
+    "testflight": "Bêta TestFlight",
+    "privacy": "Politique de confidentialité"
   },
-  "routes": {
-    "eyebrow": "Installation",
-    "heading": "Commencez en auto-hébergement. Ajoutez le mobile selon vos besoins.",
-    "mobileRoadmap": "Les applications iOS et Android fonctionnent actuellement de manière autonome. Leur connexion à une installation DiscVault auto-hébergée est prévue ultérieurement.",
-    "ios": {
-      "label": "iPhone & iPad",
-      "title": "Fonctionne de façon autonome",
-      "body": "L'app fonctionne entièrement seule — aucun serveur requis. Gérez votre collection directement sur votre appareil, sans le backend DiscVault.",
-      "points": [
-        "Utilisez votre appareil photo pour scanner des codes-barres, puis récupérez automatiquement les métadonnées et la pochette.",
-        "Recherchez par titre, genre ou réalisateur et filtrez par format dans une vue de collection épurée."
-      ]
-    },
-    "selfHosted": {
-      "label": "Self-hosted",
-      "title": "DiscVault 26 est la.",
-      "body": "DiscVault 26 peut etre installe et utilise aujourd'hui. Il apporte une bibliotheque desktop-first, des pages detail enrichies, une base PostgreSQL, des plugins, des outils de migration et de meilleurs controles admin pour cataloguer des medias physiques en self-hosted.",
-      "points": [
-        "DiscVault 26 ajoute les flux sur invitation, outils owner/admin, RBAC Basic et Advanced, simulation de role, vues audit, acces API et integrations MCP-ready.",
-        "Gerez sources de metadonnees, recepteurs, sources d import, sources media numeriques, packages de plugins, controles de sante et jobs en arriere-plan depuis l admin."
-      ]
-    }
-  },
-  "capabilities": {
-    "eyebrow": "Fonctionnalités",
-    "heading": "Conçu pour les personnes avec de vraies étagères, de vraies piles et de vraies éditions.",
-    "items": [
-      {
-        "title": "Scanner et enrichir",
-        "body": "Utilisez votre appareil photo pour scanner des codes-barres, puis récupérez automatiquement les métadonnées et la pochette."
-      },
-      {
-        "title": "Filtrer et rechercher",
-        "body": "Recherchez par titre, genre ou réalisateur et filtrez par format dans une vue de collection épurée."
-      },
-      {
-        "title": "Nouvelle experience de bibliotheque",
-        "body": "Parcourez les posters, passez en liste ou en detail, filtrez par format, ouvrez les containers et box sets, et gardez une interface rapide sur les grandes collections."
-      },
-      {
-        "title": "Pages film et container plus riches",
-        "body": "Les pages de detail accueillent les backdrops, posters, videos, metadonnees, appartenance a la collection, etat vu et contenu des box sets."
-      },
-      {
-        "title": "Plateforme centree sur les plugins",
-        "body": "Gerez sources de metadonnees, recepteurs, sources d import, sources media numeriques, packages de plugins, controles de sante et jobs en arriere-plan depuis l admin."
-      },
-      {
-        "title": "Admin, RBAC, API et MCP",
-        "body": "DiscVault 26 ajoute les flux sur invitation, outils owner/admin, RBAC Basic et Advanced, simulation de role, vues audit, acces API et integrations MCP-ready."
-      }
+  "leader": {
+    "slate": [
+      "DiscVault 26",
+      "Un catalogue pour vos disques",
+      "Auto-hébergé",
+      "iPhone & iPad",
+      "Bêta Android"
+    ],
+    "voice": [
+      "La lumière, ",
+      "gardée."
+    ],
+    "lead": "DiscVault catalogue les films que vous possédez — sur disque, sur votre étagère, sur votre propre serveur.",
+    "note": [
+      "PWA & bureau",
+      "Guide d'installation"
     ]
   },
-  "showcase": {
-    "eyebrow": "Captures d’écran",
-    "heading": "Nouvelle experience de bibliotheque",
-    "mobileLibrary": "Bibliotheque DiscVault 26",
-    "mobileAdd": "Ajouter un film",
-    "mobileDetail": "Page de detail",
-    "desktopLibrary": "Bibliotheque DiscVault 26",
-    "desktopDetail": "Page de detail"
+  "shelf": {
+    "slate": [
+      "Reel 01",
+      "L'étagère"
+    ],
+    "counter": [
+      "45 / 45 films",
+      "29 vignettes"
+    ],
+    "voice": [
+      "Chaque édition, là où vous l'avez ",
+      "laissée",
+      "."
+    ],
+    "lead": "Parcourez les affiches, passez en vue liste ou détail, filtrez par format, ouvrez coffrets et conteneurs. Rapide sur les grandes collections."
   },
-  "trust": {
-    "eyebrow": "Confidentialité",
-    "heading": "Fonctionne de façon autonome",
-    "body": "L'app fonctionne entièrement seule — aucun serveur requis. Gérez votre collection directement sur votre appareil, sans le backend DiscVault.",
-    "noTrackingTitle": "Aucun suivi",
-    "noTrackingBody": "Aucune analyse, publicité ni suivi tiers.",
-    "controlTitle": "Vos données, votre choix",
-    "controlBody": "Conservez votre bibliothèque sur votre appareil ou sur un serveur DiscVault que vous administrez."
+  "read": {
+    "slate": [
+      "Reel 02",
+      "La lecture",
+      "EAN → Titre · Année · Format · Jaquette"
+    ],
+    "voice": [
+      "Visez avec la caméra. Le disque se ",
+      "lit",
+      " tout seul."
+    ],
+    "lead": "Scannez un code-barres et DiscVault renseigne titre, année, format et jaquette. Ou cherchez par nom.",
+    "note": [
+      "iPhone & iPad",
+      "Autonome",
+      "Aucun serveur requis"
+    ],
+    "captureAlt": "DiscVault sur iPhone : ajout d'un film après le scan de son code-barres"
   },
-  "comparison": {
-    "eyebrow": "Choisissez votre voie",
-    "heading": "Conçu pour les personnes avec de vraies étagères, de vraies piles et de vraies éditions.",
-    "route": "Voie",
-    "bestFor": "Idéal pour",
-    "setup": "Configuration",
-    "iosBest": "L'app fonctionne entièrement seule — aucun serveur requis. Gérez votre collection directement sur votre appareil, sans le backend DiscVault.",
-    "iosSetup": "Téléchargez-la sur l’App Store. Aucun serveur requis.",
-    "selfBest": "DiscVault 26 peut etre installe et utilise aujourd'hui. Il apporte une bibliotheque desktop-first, des pages detail enrichies, une base PostgreSQL, des plugins, des outils de migration et de meilleurs controles admin pour cataloguer des medias physiques en self-hosted.",
-    "selfSetup": "Suivez le guide d'installation actuel dans DiscVault Docs.",
-    "androidSetup": "Demandez l’accès sur Discord. Les testeurs acceptés installent via Google Play."
+  "edition": {
+    "slate": [
+      "Reel 03",
+      "L'édition",
+      "4K · BD · DVD · Steel · Coffret"
+    ],
+    "voice": [
+      "Les éditions ",
+      "comptent."
+    ],
+    "lead": "Un disque 4K n'est pas un Blu-ray. Un steelbook n'est pas un boîtier. Coffrets, conteneurs et disques d'une même sortie sont catalogués pour ce qu'ils sont.",
+    "spines": [
+      "4K Ultra HD",
+      "Blu-ray",
+      "DVD",
+      "Steelbook",
+      "Coffret · 8 films"
+    ]
   },
-  "community": {
-    "eyebrow": "Communauté",
-    "heading": "Besoin d’aide ou vous souhaitez suivre les mises à jour ?",
-    "discord": "Rejoindre Discord",
-    "issues": "Signaler un problème",
-    "support": "Thread de support",
-    "finalTitle": "DiscVault. Conçu pour les collectionneurs."
+  "vault": {
+    "slate": [
+      "Reel 04",
+      "Le coffre",
+      "0 traceur",
+      "0 publicité",
+      "Aucune analyse"
+    ],
+    "voice": [
+      "Elle vit là où vous la ",
+      "posez",
+      "."
+    ],
+    "lead": "Sur votre appareil ou sur un serveur à vous. Aucune analyse, aucune publicité, personne ne regarde ce que vous regardez.",
+    "body": [
+      "L'app iPhone et iPad garde votre collection sur l'appareil. DiscVault 26 la garde sur un serveur que vous administrez. Dans les deux cas, seul un code-barres ou un terme de recherche sort de l'appareil."
+    ]
+  },
+  "formats": {
+    "slate": [
+      "Reel 05",
+      "Les formats"
+    ],
+    "voice": [
+      "Trois façons ",
+      "d'entrer."
+    ],
+    "lead": "DiscVault 26 auto-hébergé dès aujourd'hui. iPhone et iPad autonomes. Android en bêta.",
+    "routes": [
+      {
+        "id": "self-hosted",
+        "slate": [
+          "PWA",
+          "Desktop",
+          "DiscVault 26"
+        ],
+        "title": "Self-hosted",
+        "body": [
+          "Une bibliothèque pensée pour le bureau, des pages de détail plus riches, des fondations PostgreSQL, des plugins, des outils de migration et des contrôles d'administration pour les collectionneurs qui gardent leur catalogue sur leur propre serveur.",
+          "Flux sur invitation, outils propriétaire et admin, accès par rôles, vues d'audit, accès API et intégrations prêtes pour MCP."
+        ],
+        "action": "Installer DiscVault 26"
+      },
+      {
+        "id": "ios",
+        "slate": [
+          "iOS",
+          "iPadOS",
+          "Autonome"
+        ],
+        "title": "iPhone & iPad",
+        "body": [
+          "Fonctionne entièrement sur l'appareil. Scanner, enrichir, filtrer et chercher sans serveur."
+        ],
+        "action": "Télécharger sur l’App Store"
+      },
+      {
+        "id": "android",
+        "slate": [
+          "Android",
+          "Bêta"
+        ],
+        "title": "Android",
+        "body": [
+          "Demandez l’accès sur Discord. Les testeurs acceptés installent via Google Play."
+        ],
+        "action": "Demander l’accès à la bêta Android"
+      }
+    ],
+    "roadmap": "Les applications iOS et Android fonctionnent actuellement de manière autonome. Leur connexion à une installation DiscVault auto-hébergée est prévue ultérieurement.",
+    "migration": [
+      "Migrer depuis Legacy",
+      "Docs"
+    ]
+  },
+  "credits": {
+    "install": {
+      "role": "Installer",
+      "name": "DiscVault 26"
+    },
+    "appStore": {
+      "role": "iPhone & iPad",
+      "name": "App Store"
+    },
+    "android": {
+      "role": "Android",
+      "name": "Bêta sur Discord"
+    },
+    "testflight": {
+      "role": "TestFlight",
+      "name": "Bêta"
+    },
+    "source": {
+      "role": "Source",
+      "name": "GitHub"
+    },
+    "community": {
+      "role": "Communauté",
+      "name": "Discord"
+    },
+    "issues": {
+      "role": "Signalements",
+      "name": "GitHub"
+    },
+    "languages": {
+      "role": "Langues",
+      "name": "Vingt"
+    },
+    "privacy": {
+      "role": "Confidentialité",
+      "name": "Politique de confidentialité"
+    },
+    "terms": {
+      "role": "Conditions",
+      "name": "Conditions"
+    },
+    "legacy": {
+      "role": "Legacy",
+      "name": "Migration héritée"
+    },
+    "production": {
+      "role": "Une production de",
+      "name": "Flux76"
+    },
+    "final": [
+      "DiscVault. Conçu pour les ",
+      "collectionneurs."
+    ]
   },
   "footer": {
     "tagline": "DiscVault. Conçu pour les collectionneurs.",

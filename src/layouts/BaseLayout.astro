@@ -15,12 +15,20 @@ interface Props {
   productSchema?: boolean;
   alternateLinks?: Array<{ locale: string; path: string }>;
   xDefaultPath?: string;
+  /** Marketing routes are dark-only; the legal shell keeps both schemes. */
+  scheme?: 'dark' | 'dark light';
+  /** Preload the Voice typeface; only the marketing routes set it large. */
+  preloadFonts?: boolean;
+  /** Apply the return-visit flag before first paint (marketing routes). */
+  motion?: boolean;
 }
 
 const {
   content,
   canonicalPath,
-  title = `${content.seo.title} | DiscVault`,
+  title = content.seo.title.startsWith('DiscVault')
+    ? content.seo.title
+    : `${content.seo.title} | DiscVault`,
   description = content.seo.description,
   noindex = false,
   productSchema = true,
@@ -29,17 +37,35 @@ const {
     path: localePath(locale),
   })),
   xDefaultPath = '/',
+  scheme = 'dark',
+  preloadFonts = true,
+  motion = true,
 } = Astro.props;
+const groundColor = '#04070D';
+// Applied before first paint so a return visit in the same session skips
+// the hero's entrance (motion-system.md §4). Storage failures are ignored.
+const returnFlagScript =
+  "try{if(sessionStorage.getItem('dv-hero-seen'))document.documentElement.classList.add('is-return')}catch(e){}";
 const canonical = new URL(canonicalPath, SITE_URL).href;
-const ogImage = new URL('/brand/discvault-icon-512-dark.png', SITE_URL).href;
+const iconImage = new URL('/brand/discvault-icon-512-dark.png', SITE_URL).href;
+// The marketing routes share a 1200 × 630 social image (the disc under the
+// key light with the campaign line); the legal shell keeps the icon.
+const socialImage =
+  Astro.props.scheme === 'dark light'
+    ? { url: iconImage, width: 512, height: 512 }
+    : {
+        url: new URL('/brand/og-pressed-light.png', SITE_URL).href,
+        width: 1200,
+        height: 630,
+      };
 const structuredData = {
   '@context': 'https://schema.org',
-  '@type': ['SoftwareApplication', 'Product'],
+  '@type': 'SoftwareApplication',
   '@id': `${SITE_URL}/#product`,
   name: 'DiscVault',
   description,
   url: canonical,
-  image: ogImage,
+  image: iconImage,
   applicationCategory: 'LifestyleApplication',
   operatingSystem: 'iOS, iPadOS, Web',
   brand: {
@@ -54,17 +80,53 @@ const structuredData = {
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="color-scheme" content="dark light" />
-    <meta
-      name="theme-color"
-      content={tokens.pwa['theme-color-dark'].$value}
-      media="(prefers-color-scheme: dark)"
-    />
-    <meta
-      name="theme-color"
-      content={tokens.pwa['theme-color-light'].$value}
-      media="(prefers-color-scheme: light)"
-    />
+    <meta name="color-scheme" content={scheme} />
+    {
+      scheme === 'dark' ? (
+        <meta name="theme-color" content={groundColor} />
+      ) : (
+        <>
+          <meta
+            name="theme-color"
+            content={tokens.pwa['theme-color-dark'].$value}
+            media="(prefers-color-scheme: dark)"
+          />
+          <meta
+            name="theme-color"
+            content={tokens.pwa['theme-color-light'].$value}
+            media="(prefers-color-scheme: light)"
+          />
+        </>
+      )
+    }
+    {
+      preloadFonts && (
+        <>
+          <link
+            rel="preload"
+            href="/fonts/instrument-serif-regular-latin.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin
+          />
+          <link
+            rel="preload"
+            href="/fonts/instrument-serif-italic-latin.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin
+          />
+          <link
+            rel="preload"
+            href="/fonts/inter-regular-latin.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin
+          />
+        </>
+      )
+    }
+    {motion && <script is:inline set:html={returnFlagScript} />}
     <title>{title}</title>
     <meta name="description" content={description} />
     {noindex && <meta name="robots" content="noindex, follow" />}
@@ -86,7 +148,8 @@ const structuredData = {
     <link
       rel="icon"
       type="image/png"
-      href="/brand/discvault-icon-512-dark.png"
+      sizes="48x48"
+      href="/brand/discvault-icon-48.png"
     />
     <link rel="apple-touch-icon" href="/brand/apple-touch-icon.png" />
     <link rel="sitemap" href="/sitemap-index.xml" />
@@ -95,14 +158,14 @@ const structuredData = {
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
-    <meta property="og:image" content={ogImage} />
-    <meta property="og:image:width" content="512" />
-    <meta property="og:image:height" content="512" />
+    <meta property="og:image" content={socialImage.url} />
+    <meta property="og:image:width" content={String(socialImage.width)} />
+    <meta property="og:image:height" content={String(socialImage.height)} />
     <meta property="og:locale" content={content.locale} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={ogImage} />
+    <meta name="twitter:image" content={socialImage.url} />
     {
       productSchema && (
         <script

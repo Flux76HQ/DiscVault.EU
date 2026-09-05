@@ -39,3 +39,6 @@ jobs:
 
       - name: Run Lighthouse budgets
         run: corepack pnpm lighthouse
+
+      - name: Run experience checks
+        run: corepack pnpm check:experience

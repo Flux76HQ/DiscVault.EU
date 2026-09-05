@@ -2,117 +2,227 @@
   "locale": "zh",
   "languageName": "中文",
   "seo": {
-    "title": "DiscVault。为收藏者而构建。",
-    "description": "使用摄像头扫描条码，然后自动获取电影元数据和封面图。 应用完全独立运行 — 无需服务器。无需 DiscVault backend，即可直接在设备上管理你的收藏。"
+    "title": "DiscVault — 为你的光盘建立目录",
+    "description": "DiscVault 为你拥有的 4K、Blu-ray 和 DVD 电影建立目录。扫描条形码，区分不同版本，保存在你的设备或你自己的服务器上。无跟踪。"
   },
   "nav": {
-    "product": "功能",
-    "ios": "iPhone & iPad",
-    "selfHosted": "Self-hosted",
+    "library": "资料库",
+    "scan": "扫描",
+    "editions": "版本",
     "privacy": "隐私",
+    "install": "安装",
     "docs": "Docs",
     "menu": "菜单",
     "language": "语言"
   },
-  "hero": {
-    "eyebrow": "DiscVault。为收藏者而构建。",
-    "title": "DiscVault 26 已到来。",
-    "accent": "为下一层收藏架而构建。",
-    "lead": "为真实货架、真实堆叠和真实版本的收藏者而构建。",
+  "actions": {
+    "install": "安装 DiscVault 26",
+    "installCompact": "安装 v26",
     "appStore": "从 App Store 下载",
-    "androidBeta": "申请 Android 测试版资格",
-    "selfHosted": "安装 v26"
+    "android": "申请 Android 测试版资格",
+    "testflight": "TestFlight 测试版",
+    "privacy": "隐私政策"
   },
-  "routes": {
-    "eyebrow": "安装",
-    "heading": "从自托管开始，按需添加移动端。",
-    "mobileRoadmap": "iOS 和 Android 应用目前可独立运行。未来计划支持连接到自托管的 DiscVault 实例。",
-    "ios": {
-      "label": "iPhone & iPad",
-      "title": "可独立运行",
-      "body": "应用完全独立运行 — 无需服务器。无需 DiscVault backend，即可直接在设备上管理你的收藏。",
-      "points": [
-        "使用摄像头扫描条码，然后自动获取电影元数据和封面图。",
-        "按标题、类型或导演搜索，并按格式筛选。"
-      ]
-    },
-    "selfHosted": {
-      "label": "Self-hosted",
-      "title": "DiscVault 26 已到来。",
-      "body": "DiscVault 26 现在可以安装和使用。它带来新的 desktop-first library、更丰富的 detail pages、PostgreSQL foundation、plugins、migration tools，以及适合 self-hosted 实体媒体 catalog 的更好 admin controls。",
-      "points": [
-        "DiscVault 26 增加仅邀请流程、所有者/管理员工具、Basic 和 Advanced RBAC、角色模拟、审计视图、API 访问以及 MCP 就绪集成。",
-        "可在管理区域管理元数据来源、接收器、导入来源、数字媒体来源、插件包、健康检查和后台任务。"
-      ]
-    }
-  },
-  "capabilities": {
-    "eyebrow": "功能",
-    "heading": "为真实货架、真实堆叠和真实版本的收藏者而构建。",
-    "items": [
-      {
-        "title": "扫描并增强",
-        "body": "使用摄像头扫描条码，然后自动获取电影元数据和封面图。"
-      },
-      {
-        "title": "筛选和搜索",
-        "body": "按标题、类型或导演搜索，并按格式筛选。"
-      },
-      {
-        "title": "全新的资料库体验",
-        "body": "浏览海报，切换到列表或详情视图，按格式筛选，打开容器和套装，并在大型收藏中保持界面快速响应。"
-      },
-      {
-        "title": "更丰富的电影和容器页面",
-        "body": "详情页现在可显示背景图、海报、视频、元数据、收藏归属、观看状态和套装内容。"
-      },
-      {
-        "title": "以插件为中心的平台",
-        "body": "可在管理区域管理元数据来源、接收器、导入来源、数字媒体来源、插件包、健康检查和后台任务。"
-      },
-      {
-        "title": "管理、RBAC、API 和 MCP",
-        "body": "DiscVault 26 增加仅邀请流程、所有者/管理员工具、Basic 和 Advanced RBAC、角色模拟、审计视图、API 访问以及 MCP 就绪集成。"
-      }
+  "leader": {
+    "slate": [
+      "DiscVault 26",
+      "为你的光盘建立目录",
+      "自托管",
+      "iPhone & iPad",
+      "Android 测试版"
+    ],
+    "voice": [
+      "光，",
+      "留住。"
+    ],
+    "lead": "DiscVault 为你拥有的电影建立目录 —— 在光盘上，在书架上，在你自己的服务器上。",
+    "note": [
+      "PWA 与桌面端",
+      "安装指南"
     ]
   },
-  "showcase": {
-    "eyebrow": "截图",
-    "heading": "全新的资料库体验",
-    "mobileLibrary": "DiscVault 26 资料库",
-    "mobileAdd": "添加电影",
-    "mobileDetail": "详情页",
-    "desktopLibrary": "DiscVault 26 资料库",
-    "desktopDetail": "详情页"
+  "shelf": {
+    "slate": [
+      "Reel 01",
+      "书架"
+    ],
+    "counter": [
+      "45 / 45 部电影",
+      "29 个磁贴"
+    ],
+    "voice": [
+      "每个版本，都在你",
+      "放下",
+      "它的地方。"
+    ],
+    "lead": "浏览海报，切换到列表或详情视图，按格式筛选，打开套装和容器。大型收藏也很快。"
   },
-  "trust": {
-    "eyebrow": "隐私",
-    "heading": "可独立运行",
-    "body": "应用完全独立运行 — 无需服务器。无需 DiscVault backend，即可直接在设备上管理你的收藏。",
-    "noTrackingTitle": "无跟踪",
-    "noTrackingBody": "没有分析、广告或第三方跟踪。",
-    "controlTitle": "你的数据，你的选择",
-    "controlBody": "将你的资料库保存在设备上，或保存在你自行管理的 DiscVault 服务器上。"
+  "read": {
+    "slate": [
+      "Reel 02",
+      "读取",
+      "EAN → 片名 · 年份 · 格式 · 封面"
+    ],
+    "voice": [
+      "对准相机。光盘自己",
+      "读取",
+      "自己。"
+    ],
+    "lead": "扫描条形码，DiscVault 会填入片名、年份、格式和封面。也可以按名称搜索。",
+    "note": [
+      "iPhone & iPad",
+      "独立运行",
+      "无需服务器"
+    ],
+    "captureAlt": "iPhone 上的 DiscVault：扫描条形码后添加电影"
   },
-  "comparison": {
-    "eyebrow": "选择你的路线",
-    "heading": "为真实货架、真实堆叠和真实版本的收藏者而构建。",
-    "route": "路线",
-    "bestFor": "最适合",
-    "setup": "设置",
-    "iosBest": "应用完全独立运行 — 无需服务器。无需 DiscVault backend，即可直接在设备上管理你的收藏。",
-    "iosSetup": "从 App Store 下载，无需服务器。",
-    "selfBest": "DiscVault 26 现在可以安装和使用。它带来新的 desktop-first library、更丰富的 detail pages、PostgreSQL foundation、plugins、migration tools，以及适合 self-hosted 实体媒体 catalog 的更好 admin controls。",
-    "selfSetup": "按照 DiscVault Docs 中的最新安装指南进行操作。",
-    "androidSetup": "通过 Discord 申请资格。获批的测试用户可通过 Google Play 安装。"
+  "edition": {
+    "slate": [
+      "Reel 03",
+      "版本",
+      "4K · BD · DVD · Steel · 套装"
+    ],
+    "voice": [
+      "版本很",
+      "重要。"
+    ],
+    "lead": "4K 光盘不是 Blu-ray。铁盒不是普通盒。套装、容器和一次发行中的各张光盘，都按它们本来的样子建立目录。",
+    "spines": [
+      "4K Ultra HD",
+      "Blu-ray",
+      "DVD",
+      "Steelbook",
+      "套装 · 8 部电影"
+    ]
   },
-  "community": {
-    "eyebrow": "社区",
-    "heading": "需要帮助或想关注更新?",
-    "discord": "加入 Discord",
-    "issues": "报告 Issue",
-    "support": "支持帖",
-    "finalTitle": "DiscVault。为收藏者而构建。"
+  "vault": {
+    "slate": [
+      "Reel 04",
+      "保险库",
+      "0 个跟踪器",
+      "0 条广告",
+      "无分析"
+    ],
+    "voice": [
+      "它在你",
+      "放",
+      "的地方。"
+    ],
+    "lead": "在你的设备上，或在你自己运行的服务器上。无分析，无广告，没有人看你在看什么。",
+    "body": [
+      "iPhone 和 iPad 应用把收藏保存在设备上。DiscVault 26 把它保存在你管理的服务器上。无论哪种方式，离开设备的只有一个条形码或一个搜索词。"
+    ]
+  },
+  "formats": {
+    "slate": [
+      "Reel 05",
+      "格式"
+    ],
+    "voice": [
+      "三条",
+      "入口。"
+    ],
+    "lead": "今天就能自托管 DiscVault 26。iPhone 和 iPad 独立运行。Android 处于测试版。",
+    "routes": [
+      {
+        "id": "self-hosted",
+        "slate": [
+          "PWA",
+          "Desktop",
+          "DiscVault 26"
+        ],
+        "title": "Self-hosted",
+        "body": [
+          "面向桌面的资料库、更丰富的详情页、PostgreSQL 基础、插件、迁移工具，以及为在自己服务器上保存目录的收藏者准备的管理控制。",
+          "仅限邀请的流程、所有者和管理员工具、基于角色的访问、审计视图、API 访问和支持 MCP 的集成。"
+        ],
+        "action": "安装 DiscVault 26"
+      },
+      {
+        "id": "ios",
+        "slate": [
+          "iOS",
+          "iPadOS",
+          "独立运行"
+        ],
+        "title": "iPhone & iPad",
+        "body": [
+          "完全在设备上运行。无需服务器即可扫描、补充、筛选和搜索。"
+        ],
+        "action": "从 App Store 下载"
+      },
+      {
+        "id": "android",
+        "slate": [
+          "Android",
+          "测试版"
+        ],
+        "title": "Android",
+        "body": [
+          "通过 Discord 申请资格。获批的测试用户可通过 Google Play 安装。"
+        ],
+        "action": "申请 Android 测试版资格"
+      }
+    ],
+    "roadmap": "iOS 和 Android 应用目前可独立运行。未来计划支持连接到自托管的 DiscVault 实例。",
+    "migration": [
+      "从 Legacy 迁移",
+      "Docs"
+    ]
+  },
+  "credits": {
+    "install": {
+      "role": "安装",
+      "name": "DiscVault 26"
+    },
+    "appStore": {
+      "role": "iPhone & iPad",
+      "name": "App Store"
+    },
+    "android": {
+      "role": "Android",
+      "name": "Discord 上的测试版"
+    },
+    "testflight": {
+      "role": "TestFlight",
+      "name": "测试版"
+    },
+    "source": {
+      "role": "源代码",
+      "name": "GitHub"
+    },
+    "community": {
+      "role": "社区",
+      "name": "Discord"
+    },
+    "issues": {
+      "role": "问题反馈",
+      "name": "GitHub"
+    },
+    "languages": {
+      "role": "语言",
+      "name": "二十种"
+    },
+    "privacy": {
+      "role": "隐私",
+      "name": "隐私政策"
+    },
+    "terms": {
+      "role": "条款",
+      "name": "条款"
+    },
+    "legacy": {
+      "role": "Legacy",
+      "name": "旧版迁移"
+    },
+    "production": {
+      "role": "出品",
+      "name": "Flux76"
+    },
+    "final": [
+      "DiscVault。为收藏者",
+      "打造。"
+    ]
   },
   "footer": {
     "tagline": "DiscVault。为收藏者而构建。",

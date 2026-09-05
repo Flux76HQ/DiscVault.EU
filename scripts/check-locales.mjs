@@ -34,7 +34,22 @@ if (JSON.stringify(actualLocales) !== JSON.stringify(expectedLocales)) {
   );
 }
 
+// Voice lines may have two or three segments per locale; their length is
+// checked separately, so the parity shape treats them as one leaf.
+const variableLengthPaths = new Set([
+  'leader.voice',
+  'shelf.voice',
+  'read.voice',
+  'edition.voice',
+  'vault.voice',
+  'formats.voice',
+  'credits.final',
+]);
+
 function shape(value, prefix = '') {
+  if (variableLengthPaths.has(prefix)) {
+    return [prefix];
+  }
   if (Array.isArray(value)) {
     return value.flatMap((item, index) => shape(item, `${prefix}[${index}]`));
   }
@@ -73,22 +88,52 @@ const locales = Object.fromEntries(
 );
 
 const referenceShape = shape(locales.en);
+
+// Keys that must be translated: a locale that keeps the English value here
+// has not been localised.
 const localizedCopyPaths = [
-  'hero.appStore',
-  'hero.androidBeta',
-  'routes.heading',
-  'routes.mobileRoadmap',
-  'trust.noTrackingTitle',
-  'trust.noTrackingBody',
-  'trust.controlTitle',
-  'trust.controlBody',
-  'comparison.eyebrow',
-  'comparison.bestFor',
-  'comparison.iosSetup',
-  'comparison.androidSetup',
-  'comparison.selfSetup',
+  'nav.library',
+  'nav.scan',
+  'nav.editions',
+  'nav.install',
+  'actions.appStore',
+  'actions.android',
+  'actions.privacy',
+  'leader.lead',
+  'shelf.lead',
+  'read.lead',
+  'edition.lead',
+  'vault.lead',
+  'formats.lead',
+  'formats.roadmap',
   'footer.legacy',
   'footer.terms',
+];
+
+// Voice lines: two or three segments, the emphasised segment at index 1.
+const voicePaths = [
+  'leader.voice',
+  'shelf.voice',
+  'read.voice',
+  'edition.voice',
+  'vault.voice',
+  'formats.voice',
+  'credits.final',
+];
+
+// Slates are arrays of facts; the component joins them with a hair-spaced
+// middle dot, so a fact never carries a separator of its own between words.
+const slatePaths = [
+  'leader.slate',
+  'leader.note',
+  'shelf.slate',
+  'shelf.counter',
+  'read.slate',
+  'read.note',
+  'edition.slate',
+  'vault.slate',
+  'formats.slate',
+  'formats.migration',
 ];
 
 function valueAtPath(value, dottedPath) {
@@ -104,8 +149,37 @@ for (const [locale, content] of Object.entries(locales)) {
   if (content.locale !== locale) {
     throw new Error(`${locale}.json declares locale "${content.locale}"`);
   }
-  if (content.capabilities.items.length !== 6) {
-    throw new Error(`${locale}.json must contain exactly six capabilities`);
+  for (const path of voicePaths) {
+    const segments = valueAtPath(content, path);
+    if (
+      !Array.isArray(segments) ||
+      segments.length < 2 ||
+      segments.length > 3 ||
+      !segments[1].trim()
+    ) {
+      throw new Error(
+        `${locale}.json ${path} must be two or three segments with the emphasised segment at index 1`,
+      );
+    }
+  }
+  for (const path of slatePaths) {
+    const facts = valueAtPath(content, path);
+    if (!Array.isArray(facts) || facts.length === 0) {
+      throw new Error(`${locale}.json ${path} must be a non-empty array`);
+    }
+    for (const fact of facts) {
+      if (/^\s|\s$/.test(fact)) {
+        throw new Error(
+          `${locale}.json ${path} fact "${fact}" has outer whitespace`,
+        );
+      }
+    }
+  }
+  const routeIds = content.formats.routes.map((route) => route.id);
+  if (JSON.stringify(routeIds) !== '["self-hosted","ios","android"]') {
+    throw new Error(
+      `${locale}.json formats.routes must be self-hosted, ios, android in that order`,
+    );
   }
   if (locale !== 'en') {
     const untranslated = localizedCopyPaths.filter(

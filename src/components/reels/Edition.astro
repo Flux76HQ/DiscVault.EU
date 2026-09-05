@@ -1,0 +1,35 @@
+---
+/**
+ * Reel 03, the edition: five spines on a shelf hairline, each in its
+ * material from the fixed format tokens. Carries id="editions".
+ */
+import '../../styles/reels/edition.css';
+import type { MarketingContent } from '../../content/types';
+import Slate from './Slate.astro';
+import Voice from './Voice.astro';
+
+interface Props {
+  content: MarketingContent;
+}
+
+const { content } = Astro.props;
+const { edition } = content;
+const materials = ['fourk', 'bluray', 'dvd', 'steel', 'box'];
+---
+
+<section class="edition reel" id="editions" aria-labelledby="edition-title">
+  <div class="reel-copy">
+    <Slate facts={edition.slate} strong={1} collapse={2} />
+    <Voice segments={edition.voice} level={2} size="l" id="edition-title" />
+    <p class="lead">{edition.lead}</p>
+  </div>
+  <ul class="spines">
+    {
+      edition.spines.map((label, index) => (
+        <li class:list={['spine', `spine-${materials[index]}`]}>
+          <span class="slate">{label}</span>
+        </li>
+      ))
+    }
+  </ul>
+</section>

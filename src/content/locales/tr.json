@@ -2,117 +2,227 @@
   "locale": "tr",
   "languageName": "Türkçe",
   "seo": {
-    "title": "DiscVault. Koleksiyoncular için geliştirildi.",
-    "description": "Kamera ile barkod tarayın, meta verileri ve kapak görsellerini otomatik alın. Uygulama tamamen kendi başına çalışır — sunucu gerekmez. Koleksiyonunuzu DiscVault backend olmadan doğrudan cihazınızda yönetin."
+    "title": "DiscVault — disklerin için bir katalog",
+    "description": "DiscVault, 4K, Blu-ray ve DVD'de sahip olduğun filmleri kataloglar. Bir barkod tara, sürümleri ayırt et, kendi cihazında ya da kendi sunucunda. Takip yok."
   },
   "nav": {
-    "product": "Özellikler",
-    "ios": "iPhone & iPad",
-    "selfHosted": "Self-hosted",
+    "library": "Kitaplık",
+    "scan": "Tara",
+    "editions": "Sürümler",
     "privacy": "Gizlilik",
+    "install": "Kur",
     "docs": "Docs",
     "menu": "Menü",
     "language": "Diller"
   },
-  "hero": {
-    "eyebrow": "DiscVault. Koleksiyoncular için geliştirildi.",
-    "title": "DiscVault 26 burada.",
-    "accent": "Bir sonraki raf için geliştirildi.",
-    "lead": "Gerçek rafları, yığınları ve sürümleri olan kişiler için geliştirildi.",
+  "actions": {
+    "install": "DiscVault 26'yı kur",
+    "installCompact": "v26 kur",
     "appStore": "App Store'dan indirin",
-    "androidBeta": "Android beta erişimi isteyin",
-    "selfHosted": "v26 kur"
+    "android": "Android beta erişimi isteyin",
+    "testflight": "TestFlight betası",
+    "privacy": "Gizlilik politikası"
   },
-  "routes": {
-    "eyebrow": "Kurulum",
-    "heading": "Self-hosted ile başlayın. Uygun olduğunda mobili ekleyin.",
-    "mobileRoadmap": "iOS ve Android uygulamaları şu anda bağımsız çalışır. Kendi sunucunuzda barındırılan bir DiscVault kurulumuna bağlanmaları ileride planlanmaktadır.",
-    "ios": {
-      "label": "iPhone & iPad",
-      "title": "Bağımsız çalışır",
-      "body": "Uygulama tamamen kendi başına çalışır — sunucu gerekmez. Koleksiyonunuzu DiscVault backend olmadan doğrudan cihazınızda yönetin.",
-      "points": [
-        "Kamera ile barkod tarayın, meta verileri ve kapak görsellerini otomatik alın.",
-        "Başlık, tür veya yönetmene göre arayın ve formata göre filtreleyin."
-      ]
-    },
-    "selfHosted": {
-      "label": "Self-hosted",
-      "title": "DiscVault 26 burada.",
-      "body": "DiscVault 26 artık kurulup kullanılabilir. Yeni desktop-first library, daha zengin detail pages, PostgreSQL foundation, plugins, migration tools ve self-hosted fiziksel medya catalog için daha iyi admin controls getirir.",
-      "points": [
-        "DiscVault 26; yalnızca davetli akışlar, sahip/yönetici araçları, Basic ve Advanced RBAC, rol simülasyonu, denetim görünümleri, API erişimi ve MCP-ready entegrasyonlar ekler.",
-        "Meta veri kaynaklarını, alıcıları, içe aktarma kaynaklarını, dijital medya kaynaklarını, eklenti paketlerini, health checkleri ve arka plan işlerini yönetici alanından yönetin."
-      ]
-    }
-  },
-  "capabilities": {
-    "eyebrow": "Özellikler",
-    "heading": "Gerçek rafları, yığınları ve sürümleri olan kişiler için geliştirildi.",
-    "items": [
-      {
-        "title": "Tara ve zenginleştir",
-        "body": "Kamera ile barkod tarayın, meta verileri ve kapak görsellerini otomatik alın."
-      },
-      {
-        "title": "Filtrele ve ara",
-        "body": "Başlık, tür veya yönetmene göre arayın ve formata göre filtreleyin."
-      },
-      {
-        "title": "Yeni kütüphane deneyimi",
-        "body": "Posterleri gezin, liste veya detay görünümlerine geçin, formata göre filtreleyin, container ve box setleri açın, büyük koleksiyonlarda arayüzü hızlı tutun."
-      },
-      {
-        "title": "Daha zengin film ve container sayfaları",
-        "body": "Detay sayfalarında artık arka planlar, posterler, videolar, meta veriler, koleksiyon üyeliği, izlenme durumu ve box set içerikleri için yer var."
-      },
-      {
-        "title": "Eklenti merkezli platform",
-        "body": "Meta veri kaynaklarını, alıcıları, içe aktarma kaynaklarını, dijital medya kaynaklarını, eklenti paketlerini, health checkleri ve arka plan işlerini yönetici alanından yönetin."
-      },
-      {
-        "title": "Yönetim, RBAC, API ve MCP",
-        "body": "DiscVault 26; yalnızca davetli akışlar, sahip/yönetici araçları, Basic ve Advanced RBAC, rol simülasyonu, denetim görünümleri, API erişimi ve MCP-ready entegrasyonlar ekler."
-      }
+  "leader": {
+    "slate": [
+      "DiscVault 26",
+      "Disklerin için bir katalog",
+      "Kendi sunucunda",
+      "iPhone & iPad",
+      "Android betası"
+    ],
+    "voice": [
+      "Işık, ",
+      "saklandı."
+    ],
+    "lead": "DiscVault sahip olduğun filmleri kataloglar — diskte, rafında, kendi sunucunda.",
+    "note": [
+      "PWA ve masaüstü",
+      "Kurulum kılavuzu"
     ]
   },
-  "showcase": {
-    "eyebrow": "Ekran görüntüleri",
-    "heading": "Yeni kütüphane deneyimi",
-    "mobileLibrary": "DiscVault 26 kütüphanesi",
-    "mobileAdd": "Film ekle",
-    "mobileDetail": "Detay sayfası",
-    "desktopLibrary": "DiscVault 26 kütüphanesi",
-    "desktopDetail": "Detay sayfası"
+  "shelf": {
+    "slate": [
+      "Reel 01",
+      "Raf"
+    ],
+    "counter": [
+      "45 / 45 film",
+      "29 kart"
+    ],
+    "voice": [
+      "Her sürüm, onu ",
+      "bıraktığın",
+      " yerde."
+    ],
+    "lead": "Afişlere göz at, liste ya da ayrıntı görünümüne geç, biçime göre filtrele, kutu setlerini ve kapları aç. Büyük koleksiyonlarda hızlı."
   },
-  "trust": {
-    "eyebrow": "Gizlilik",
-    "heading": "Bağımsız çalışır",
-    "body": "Uygulama tamamen kendi başına çalışır — sunucu gerekmez. Koleksiyonunuzu DiscVault backend olmadan doğrudan cihazınızda yönetin.",
-    "noTrackingTitle": "Takip yok",
-    "noTrackingBody": "Analiz, reklam veya üçüncü taraf takibi yok.",
-    "controlTitle": "Verileriniz, seçiminiz",
-    "controlBody": "Kütüphanenizi cihazınızda veya kendinizin yönettiği bir DiscVault sunucusunda saklayın."
+  "read": {
+    "slate": [
+      "Reel 02",
+      "Okuma",
+      "EAN → Başlık · Yıl · Biçim · Kapak"
+    ],
+    "voice": [
+      "Kamerayı tut. Disk kendini ",
+      "okur",
+      "."
+    ],
+    "lead": "Bir barkod tara, DiscVault başlığı, yılı, biçimi ve kapağı doldursun. Ya da adla ara.",
+    "note": [
+      "iPhone & iPad",
+      "Bağımsız",
+      "Sunucu gerekmez"
+    ],
+    "captureAlt": "iPhone'da DiscVault: barkodu tarandıktan sonra bir film ekleniyor"
   },
-  "comparison": {
-    "eyebrow": "Yolunuzu seçin",
-    "heading": "Gerçek rafları, yığınları ve sürümleri olan kişiler için geliştirildi.",
-    "route": "Yol",
-    "bestFor": "En uygun",
-    "setup": "Kurulum",
-    "iosBest": "Uygulama tamamen kendi başına çalışır — sunucu gerekmez. Koleksiyonunuzu DiscVault backend olmadan doğrudan cihazınızda yönetin.",
-    "iosSetup": "App Store'dan indirin. Sunucu gerekmez.",
-    "selfBest": "DiscVault 26 artık kurulup kullanılabilir. Yeni desktop-first library, daha zengin detail pages, PostgreSQL foundation, plugins, migration tools ve self-hosted fiziksel medya catalog için daha iyi admin controls getirir.",
-    "selfSetup": "DiscVault Docs'taki güncel kurulum kılavuzunu izleyin.",
-    "androidSetup": "Discord üzerinden erişim isteyin. Onaylanan test kullanıcıları Google Play üzerinden yükler."
+  "edition": {
+    "slate": [
+      "Reel 03",
+      "Sürüm",
+      "4K · BD · DVD · Steel · Kutu seti"
+    ],
+    "voice": [
+      "Sürümler ",
+      "önemlidir."
+    ],
+    "lead": "4K disk Blu-ray değildir. Steelbook sıradan bir kutu değildir. Kutu setleri, kaplar ve bir yayının içindeki diskler ne iseler o olarak kataloglanır.",
+    "spines": [
+      "4K Ultra HD",
+      "Blu-ray",
+      "DVD",
+      "Steelbook",
+      "Kutu seti · 8 film"
+    ]
   },
-  "community": {
-    "eyebrow": "Topluluk",
-    "heading": "Yardıma mı ihtiyacınız var veya güncellemeleri takip mi etmek istiyorsunuz?",
-    "discord": "Discord'a katıl",
-    "issues": "Issue bildir",
-    "support": "Destek konusu",
-    "finalTitle": "DiscVault. Koleksiyoncular için geliştirildi."
+  "vault": {
+    "slate": [
+      "Reel 04",
+      "Kasa",
+      "0 izleyici",
+      "0 reklam",
+      "Analitik yok"
+    ],
+    "voice": [
+      "Koyduğun yerde ",
+      "kalır",
+      "."
+    ],
+    "lead": "Kendi cihazında ya da kendi çalıştırdığın bir sunucuda. Analitik yok, reklam yok, ne izlediğini kimse izlemiyor.",
+    "body": [
+      "iPhone ve iPad uygulaması koleksiyonu cihazda tutar. DiscVault 26 onu senin yönettiğin bir sunucuda tutar. Her iki durumda da cihazdan yalnızca bir barkod ya da bir arama terimi çıkar."
+    ]
+  },
+  "formats": {
+    "slate": [
+      "Reel 05",
+      "Biçimler"
+    ],
+    "voice": [
+      "İçeri üç ",
+      "yol."
+    ],
+    "lead": "Kendi sunucunda DiscVault 26 bugün. iPhone ve iPad bağımsız. Android betada.",
+    "routes": [
+      {
+        "id": "self-hosted",
+        "slate": [
+          "PWA",
+          "Desktop",
+          "DiscVault 26"
+        ],
+        "title": "Self-hosted",
+        "body": [
+          "Masaüstü öncelikli bir kitaplık, daha zengin ayrıntı sayfaları, PostgreSQL temeli, eklentiler, taşıma araçları ve kataloğunu kendi sunucusunda tutan koleksiyoncular için yönetim denetimleri.",
+          "Yalnızca davetle akışlar, sahip ve yönetici araçları, rol tabanlı erişim, denetim görünümleri, API erişimi ve MCP'ye hazır entegrasyonlar."
+        ],
+        "action": "DiscVault 26'yı kur"
+      },
+      {
+        "id": "ios",
+        "slate": [
+          "iOS",
+          "iPadOS",
+          "Bağımsız"
+        ],
+        "title": "iPhone & iPad",
+        "body": [
+          "Tamamen cihazda çalışır. Sunucu olmadan tara, zenginleştir, filtrele ve ara."
+        ],
+        "action": "App Store'dan indirin"
+      },
+      {
+        "id": "android",
+        "slate": [
+          "Android",
+          "Beta"
+        ],
+        "title": "Android",
+        "body": [
+          "Discord üzerinden erişim isteyin. Onaylanan test kullanıcıları Google Play üzerinden yükler."
+        ],
+        "action": "Android beta erişimi isteyin"
+      }
+    ],
+    "roadmap": "iOS ve Android uygulamaları şu anda bağımsız çalışır. Kendi sunucunuzda barındırılan bir DiscVault kurulumuna bağlanmaları ileride planlanmaktadır.",
+    "migration": [
+      "Legacy'den geçiş",
+      "Docs"
+    ]
+  },
+  "credits": {
+    "install": {
+      "role": "Kurulum",
+      "name": "DiscVault 26"
+    },
+    "appStore": {
+      "role": "iPhone & iPad",
+      "name": "App Store"
+    },
+    "android": {
+      "role": "Android",
+      "name": "Discord'da beta"
+    },
+    "testflight": {
+      "role": "TestFlight",
+      "name": "Beta"
+    },
+    "source": {
+      "role": "Kaynak",
+      "name": "GitHub"
+    },
+    "community": {
+      "role": "Topluluk",
+      "name": "Discord"
+    },
+    "issues": {
+      "role": "Sorunlar",
+      "name": "GitHub"
+    },
+    "languages": {
+      "role": "Diller",
+      "name": "Yirmi"
+    },
+    "privacy": {
+      "role": "Gizlilik",
+      "name": "Gizlilik politikası"
+    },
+    "terms": {
+      "role": "Koşullar",
+      "name": "Koşullar"
+    },
+    "legacy": {
+      "role": "Legacy",
+      "name": "Eski sürüm geçişi"
+    },
+    "production": {
+      "role": "Yapım",
+      "name": "Flux76"
+    },
+    "final": [
+      "DiscVault. Koleksiyoncular için ",
+      "yapıldı."
+    ]
   },
   "footer": {
     "tagline": "DiscVault. Koleksiyoncular için geliştirildi.",

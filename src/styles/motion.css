@@ -1,0 +1,209 @@
+/*
+ * The motion system (motion-system.md): every animation on the marketing
+ * routes that is not part of the hero's own stylesheet. Light moves,
+ * objects hold; cut, don't fade; nothing is hidden at rest.
+ */
+
+/* M09 — the pass along a primary action's hairline on hover and focus */
+.button:hover::before,
+.button:focus-visible::before {
+  animation: pass-once var(--t-2) var(--ease-light) both;
+}
+
+@keyframes pass-once {
+  from {
+    transform: translateX(260%);
+  }
+
+  to {
+    transform: translateX(-110%);
+  }
+}
+
+/* M10 — a reel's top rule passes once as the reel goes live */
+.reel-rule {
+  position: relative;
+  overflow: hidden;
+}
+
+.reel-rule::after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 40%;
+  background: var(--cine-grating);
+  transform: translateX(260%);
+  content: '';
+}
+
+.reel.is-armed.is-live .reel-rule::after {
+  animation: pass-once var(--t-5) var(--ease-light) both;
+}
+
+/* M11, M15, M17 — cut-ins: visibility, never opacity, live by default.
+ * Only reels entirely below the fold at load are armed by the script. */
+.reel.is-armed .reel-copy > *,
+.reel.is-armed .spine,
+.reel.is-armed .route {
+  visibility: hidden;
+}
+
+.reel.is-armed.is-live .reel-copy > *,
+.reel.is-armed.is-live .spine,
+.reel.is-armed.is-live .route {
+  visibility: visible;
+  transition: visibility 0s;
+}
+
+.reel.is-armed.is-live .reel-copy > :nth-child(2),
+.reel.is-armed.is-live .spine:nth-child(2),
+.reel.is-armed.is-live .route:nth-child(2) {
+  transition-delay: var(--stagger);
+}
+
+.reel.is-armed.is-live .reel-copy > :nth-child(3),
+.reel.is-armed.is-live .spine:nth-child(3),
+.reel.is-armed.is-live .route:nth-child(3) {
+  transition-delay: calc(var(--stagger) * 2);
+}
+
+.reel.is-armed.is-live .reel-copy > :nth-child(4),
+.reel.is-armed.is-live .spine:nth-child(4) {
+  transition-delay: calc(var(--stagger) * 3);
+}
+
+.reel.is-armed.is-live .reel-copy > :nth-child(5),
+.reel.is-armed.is-live .spine:nth-child(5) {
+  transition-delay: calc(var(--stagger) * 4);
+}
+
+/* M14 — the read: the laser line passes down the bars and the capture
+ * resolves behind it. Resolved by default; plays once when armed. */
+.read.is-armed .laser {
+  transform: translateY(-46vh);
+}
+
+.read.is-armed .capture {
+  clip-path: inset(0 0 100% 0);
+}
+
+.read.is-armed.is-live .laser {
+  animation: laser var(--t-3) var(--ease-light) both;
+}
+
+.read.is-armed.is-live .capture {
+  animation: resolve var(--t-3) var(--ease-light) both;
+}
+
+@keyframes laser {
+  from {
+    transform: translateY(-46vh);
+  }
+
+  to {
+    transform: translateY(54vh);
+  }
+}
+
+@keyframes resolve {
+  from {
+    clip-path: inset(0 0 100% 0);
+  }
+
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+/* M08, M12 — scroll timelines: the hero dims as it leaves, the wall
+ * dollies across its visible range. Hold where unsupported. */
+@supports (animation-timeline: view()) {
+  .scroller {
+    animation: hero-leave var(--ease-leave) both;
+    animation-timeline: view();
+    animation-range: exit 0% exit 100%;
+  }
+
+  @keyframes hero-leave {
+    from {
+      transform: scale(1);
+      opacity: 1;
+    }
+
+    to {
+      transform: scale(0.96);
+      opacity: 0.8;
+    }
+  }
+
+  @media (min-width: 56.25rem) {
+    .wall-stage {
+      animation: dolly linear both;
+      animation-timeline: view();
+      animation-range: entry 0% exit 100%;
+    }
+
+    @keyframes dolly {
+      from {
+        transform: rotateY(3deg) scale(1);
+      }
+
+      to {
+        transform: rotateY(3deg) scale(1.035);
+      }
+    }
+  }
+}
+
+/* The rest state: designed, not disabled. */
+@media (prefers-reduced-motion: reduce), (update: slow) {
+  .button:hover::before,
+  .button:focus-visible::before,
+  .reel-rule::after {
+    animation: none;
+    transform: translateX(75%);
+  }
+
+  .reel.is-armed .reel-copy > *,
+  .reel.is-armed .spine,
+  .reel.is-armed .route {
+    visibility: visible;
+  }
+
+  .read.is-armed .laser,
+  .read.is-armed.is-live .laser {
+    animation: none;
+    transform: none;
+  }
+
+  .read.is-armed .capture,
+  .read.is-armed.is-live .capture {
+    animation: none;
+    clip-path: none;
+  }
+
+  .scroller,
+  .wall-stage {
+    animation: none;
+  }
+
+  .strip,
+  .strip::after,
+  .strip-nav a,
+  .button-secondary,
+  .credit dd a,
+  .spine {
+    transition: none;
+  }
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  .strip.is-scrolled {
+    background: var(--cine-ground);
+  }
+
+  .capture {
+    background: var(--cine-fog);
+  }
+}

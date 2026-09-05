@@ -1,0 +1,130 @@
+/* Reel 03 — the edition: five spines on a shelf hairline. */
+
+.edition {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 800px;
+  background: linear-gradient(
+    to bottom,
+    var(--cine-ground) 70%,
+    var(--cine-fog)
+  );
+}
+
+.spines {
+  position: relative;
+  display: flex;
+  grid-column: 1 / -1;
+  gap: clamp(1rem, 3vw, 2.5rem);
+  align-items: flex-end;
+  margin: var(--space-8) 0 0;
+  padding: 0 0 4.5rem;
+  list-style: none;
+}
+
+.spines::after {
+  position: absolute;
+  right: calc(var(--margin) * -1);
+  bottom: 4.5rem;
+  left: 0;
+  height: var(--cine-hair);
+  background: var(--cine-hairline);
+  content: '';
+}
+
+.spine {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: clamp(2.75rem, 6vw, 4rem);
+  height: clamp(12rem, 30vw, 20rem);
+  padding-bottom: 1rem;
+  border-radius: 2px;
+  box-shadow:
+    inset 1px 1px 0 rgb(255 255 255 / 18%),
+    var(--cine-shadow),
+    0 2px 0 -1px rgb(0 0 0 / 60%);
+  transition: box-shadow var(--t-hold) var(--ease-hold);
+}
+
+.spine:hover {
+  box-shadow:
+    inset 1px 1px 0 rgb(255 255 255 / 28%),
+    var(--cine-shadow),
+    0 2px 0 -1px rgb(0 0 0 / 60%);
+}
+
+.spine .slate {
+  font-size: 0.75rem;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  white-space: nowrap;
+}
+
+.spine-fourk {
+  background: linear-gradient(180deg, #0f141b, #0a0e14 60%, #070a0f);
+}
+
+.spine-fourk .slate {
+  color: var(--dv-fmt-4k-fill);
+}
+
+.spine-bluray {
+  background: linear-gradient(
+    180deg,
+    var(--dv-fmt-bluray-fill),
+    #1e6fd8 70%,
+    #17539f
+  );
+}
+
+.spine-bluray .slate {
+  color: var(--dv-fmt-bluray-on);
+}
+
+.spine-dvd {
+  background: linear-gradient(
+    180deg,
+    var(--dv-fmt-dvd-fill),
+    var(--dv-fmt-dvd-deep)
+  );
+  box-shadow: var(--cine-shadow);
+}
+
+.spine-dvd .slate {
+  color: var(--dv-fmt-dvd-on);
+}
+
+.spine-steel {
+  background:
+    repeating-linear-gradient(
+      115deg,
+      rgb(255 255 255 / 5%) 0 1px,
+      transparent 1px 3px
+    ),
+    var(--dv-fmt-steel-brushed);
+}
+
+.spine-steel .slate {
+  color: var(--dv-fmt-steel-on);
+}
+
+.spine-box {
+  width: clamp(6rem, 12vw, 9rem);
+  background: linear-gradient(180deg, var(--dv-surface-2), var(--dv-surface-1));
+}
+
+.spine-box .slate {
+  color: var(--dv-platinum);
+}
+
+@media (max-width: 37.49rem) {
+  .spine {
+    width: 2.75rem;
+  }
+
+  .spine-box {
+    width: 5rem;
+  }
+}

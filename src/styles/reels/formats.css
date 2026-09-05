@@ -1,0 +1,84 @@
+/* Reel 05 — the formats: a release lineup, hairlines only. */
+
+.formats {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 1000px;
+  padding-top: 0;
+  padding-bottom: clamp(4rem, 10vh, 8rem);
+}
+
+.formats .reel-rule {
+  margin-bottom: clamp(4rem, 12vh, 9rem);
+}
+
+.lineup {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: 5fr 3fr 3fr;
+  gap: 0 var(--space-8);
+  margin-top: var(--space-8);
+}
+
+.route {
+  display: grid;
+  gap: var(--space-4);
+  align-content: start;
+  padding-block: var(--space-6);
+}
+
+.route:nth-child(2),
+.route:nth-child(3) {
+  border-left: var(--cine-hair) solid var(--cine-hairline-soft);
+  padding-left: var(--space-8);
+}
+
+.route-card-featured .voice-m {
+  font-size: 2.25rem;
+}
+
+.route .voice-m {
+  font-size: 1.75rem;
+}
+
+.route-body {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.route-body p {
+  max-width: 48ch;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.route .button {
+  margin-top: var(--space-2);
+}
+
+.route-migration .slate {
+  display: inline;
+}
+
+.formats-roadmap {
+  grid-column: 1 / -1;
+  margin-top: var(--space-8);
+  max-width: none;
+  text-wrap: pretty;
+}
+
+@media (max-width: 56.24rem) {
+  .lineup {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .route {
+    border-top: var(--cine-hair) solid var(--cine-hairline-soft);
+  }
+
+  .route:nth-child(2),
+  .route:nth-child(3) {
+    border-left: 0;
+    padding-left: 0;
+  }
+}

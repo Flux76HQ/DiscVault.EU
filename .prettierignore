@@ -6,4 +6,6 @@ public/styles.css
 src/content/legal/*.html
 src/content/locales/*.json
 src/styles/tokens.css
+src/styles/tokens-dark-pin.css
+src/styles/tokens-dark-scope.css
 pnpm-lock.yaml

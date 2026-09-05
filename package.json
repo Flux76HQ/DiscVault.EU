@@ -1,6 +1,6 @@
 {
   "name": "discvault-marketing",
-  "version": "1.0.6",
+  "version": "2.0.0",
   "private": true,
   "type": "module",
   "packageManager": "pnpm@11.13.0",
@@ -23,6 +23,8 @@
     "check:locales": "node scripts/check-locales.mjs",
     "check:links": "node scripts/check-links.mjs",
     "check:routes": "node scripts/check-critical-routes.mjs",
+    "check:experience": "node scripts/check-experience.mjs",
+    "matrix": "node scripts/screenshot-matrix.mjs",
     "check:version": "node scripts/version-guard.mjs",
     "check:quick": "prettier --check . && node scripts/generate-brand-css.mjs --check && node scripts/check-locales.mjs && node scripts/version-guard.mjs",
     "check": "prettier --check . && node scripts/generate-brand-css.mjs --check && astro check && node scripts/check-locales.mjs && astro build && node scripts/check-links.mjs && node scripts/check-critical-routes.mjs && node scripts/version-guard.mjs",
@@ -39,6 +41,7 @@
   },
   "devDependencies": {
     "@astrojs/check": "0.9.9",
+    "@axe-core/playwright": "4.10.2",
     "chrome-launcher": "1.2.1",
     "lighthouse": "12.6.1",
     "playwright": "1.61.1",

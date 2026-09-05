@@ -1,0 +1,75 @@
+---
+/**
+ * Reel 05, the formats: the three routes as a release lineup, three
+ * articles with the same internal order. Release-gate hooks: the articles
+ * carry id="self-hosted" (class route-card-featured, id="migration" inside),
+ * id="ios" and id="android" in that order; docs as `button`, App Store and
+ * Discord as `button button-secondary`, TestFlight as text. Carries
+ * id="install".
+ */
+import '../../styles/reels/formats.css';
+import type { MarketingContent } from '../../content/types';
+import {
+  ANDROID_BETA_SIGNUP_URL,
+  APP_STORE_URL,
+  DOCS_URL,
+  TESTFLIGHT_URL,
+} from '../../config';
+import Slate from './Slate.astro';
+import Voice from './Voice.astro';
+
+interface Props {
+  content: MarketingContent;
+}
+
+const { content } = Astro.props;
+const { formats, actions } = content;
+const [selfHosted, ios, android] = formats.routes;
+---
+
+<section class="formats reel" id="install" aria-labelledby="formats-title">
+  <div class="reel-rule" aria-hidden="true"></div>
+  <div class="reel-copy">
+    <Slate facts={formats.slate} strong={1} />
+    <Voice segments={formats.voice} level={2} size="l" id="formats-title" />
+    <p class="lead">{formats.lead}</p>
+  </div>
+
+  <div class="lineup">
+    <article class="route route-card-featured" id="self-hosted">
+      <Slate facts={selfHosted.slate} strong={2} />
+      <h3 class="voice voice-m">{selfHosted.title}</h3>
+      <div class="route-body" id="migration">
+        {selfHosted.body.map((paragraph) => <p>{paragraph}</p>)}
+      </div>
+      <a class="button" href={DOCS_URL}>{selfHosted.action}</a>
+      <a class="text-link route-migration" href={DOCS_URL}>
+        <Slate as="span" facts={formats.migration} />
+        <span aria-hidden="true">→</span>
+      </a>
+    </article>
+
+    <article class="route" id="ios">
+      <Slate facts={ios.slate} />
+      <h3 class="voice voice-m">{ios.title}</h3>
+      <div class="route-body">
+        {ios.body.map((paragraph) => <p>{paragraph}</p>)}
+      </div>
+      <a class="button button-secondary" href={APP_STORE_URL}>{ios.action}</a>
+      <a class="text-link" href={TESTFLIGHT_URL}>{actions.testflight} →</a>
+    </article>
+
+    <article class="route" id="android">
+      <Slate facts={android.slate} />
+      <h3 class="voice voice-m">{android.title}</h3>
+      <div class="route-body">
+        {android.body.map((paragraph) => <p>{paragraph}</p>)}
+      </div>
+      <a class="button button-secondary" href={ANDROID_BETA_SIGNUP_URL}>
+        {android.action}
+      </a>
+    </article>
+  </div>
+
+  <p class="slate formats-roadmap">{formats.roadmap}</p>
+</section>

@@ -1,40 +1,125 @@
 ---
+import '../styles/cinematic.css';
+import '../styles/tokens-dark-scope.css';
+import '../styles/shell.css';
+/**
+ * Reel 06, the credits: role on the left in the slate, name on the right in
+ * the voice. Carries the conversion ladder once more (docs as `button`, App
+ * Store and Discord as `button button-secondary`, TestFlight as text), the
+ * legal routes (Dutch variants on /nl/), the Legacy link and the verified
+ * Flux76 credit.
+ */
 import type { MarketingContent } from '../content/types';
 import type { Locale } from '../content/locales';
-import { DOCS_URL, GITHUB_URL, SUPPORT_URL } from '../config';
+import {
+  ANDROID_BETA_SIGNUP_URL,
+  APP_STORE_URL,
+  DISCORD_URL,
+  DOCS_URL,
+  GITHUB_URL,
+  ISSUES_URL,
+  TESTFLIGHT_URL,
+} from '../config';
+import LocaleSwitcher from './LocaleSwitcher.astro';
+import Voice from './reels/Voice.astro';
 
 interface Props {
   content: MarketingContent;
   locale: Locale;
+  /** The legal shell keeps both colour schemes; marketing routes are dark. */
+  lightCapable?: boolean;
 }
 
-const { content, locale } = Astro.props;
+const { content, locale, lightCapable = false } = Astro.props;
 const privacyPath = locale === 'nl' ? '/privacy-nl.html' : '/privacy.html';
 const termsPath = locale === 'nl' ? '/terms-nl.html' : '/terms.html';
+const { credits } = content;
 ---
 
-<footer class="site-footer">
-  <div class="wrap footer-inner">
-    <div class="footer-brand">
-      <img
-        src="/brand/discvault-logo-transparent.png"
-        width="40"
-        height="40"
-        alt=""
-      />
-      <div>
-        <strong>DiscVault</strong>
-        <p>{content.footer.tagline}</p>
+<footer class="credits cine-dark" id="credits">
+  <div class="credits-inner">
+    <dl class="credits-list">
+      <div class="credit">
+        <dt class="slate">{credits.install.role}</dt>
+        <dd><a class="button" href={DOCS_URL}>{credits.install.name}</a></dd>
       </div>
-    </div>
-    <nav aria-label={content.footer.tagline}>
-      <a href={DOCS_URL}>Docs</a>
-      <a href={GITHUB_URL}>{content.footer.source}</a>
-      <a href={SUPPORT_URL}>{content.footer.support}</a>
-      <a href="/legacy/">{content.footer.legacy}</a>
-      <a href={privacyPath}>{content.footer.privacy}</a>
-      <a href={termsPath}>{content.footer.terms}</a>
-    </nav>
-    <p class="footer-note">{content.trust.noTrackingBody}</p>
+      <div class="credit">
+        <dt class="slate">{credits.appStore.role}</dt>
+        <dd>
+          <a class="button button-secondary" href={APP_STORE_URL}>
+            {credits.appStore.name}
+          </a>
+        </dd>
+      </div>
+      <div class="credit">
+        <dt class="slate">{credits.android.role}</dt>
+        <dd>
+          <a class="button button-secondary" href={ANDROID_BETA_SIGNUP_URL}>
+            {credits.android.name}
+          </a>
+        </dd>
+      </div>
+      <div class="credit">
+        <dt class="slate">{credits.testflight.role}</dt>
+        <dd><a href={TESTFLIGHT_URL}>{credits.testflight.name}</a></dd>
+      </div>
+      <div class="credit">
+        <dt class="slate">{credits.source.role}</dt>
+        <dd><a href={GITHUB_URL}>{credits.source.name}</a></dd>
+      </div>
+      <div class="credit">
+        <dt class="slate">{credits.community.role}</dt>
+        <dd><a href={DISCORD_URL}>{credits.community.name}</a></dd>
+      </div>
+      <div class="credit">
+        <dt class="slate">{credits.issues.role}</dt>
+        <dd><a href={ISSUES_URL}>{credits.issues.name}</a></dd>
+      </div>
+      <div class="credit">
+        <dt class="slate">{credits.languages.role}</dt>
+        <dd>
+          <span>{credits.languages.name}</span>
+          <LocaleSwitcher locale={locale} label={content.nav.language} />
+        </dd>
+      </div>
+      <div class="credit">
+        <dt class="slate">{credits.privacy.role}</dt>
+        <dd><a href={privacyPath}>{credits.privacy.name}</a></dd>
+      </div>
+      <div class="credit">
+        <dt class="slate">{credits.terms.role}</dt>
+        <dd><a href={termsPath}>{credits.terms.name}</a></dd>
+      </div>
+      <div class="credit">
+        <dt class="slate">{credits.legacy.role}</dt>
+        <dd><a href="/legacy/">{credits.legacy.name}</a></dd>
+      </div>
+      <div class="credit credit-production">
+        <dt class="slate">{credits.production.role}</dt>
+        <dd>
+          <a href="https://flux76.com" aria-label="Flux76">
+            <picture>
+              {
+                lightCapable && (
+                  <source
+                    srcset="/brand/flux76-wordmark-light.png"
+                    media="(prefers-color-scheme: light)"
+                  />
+                )
+              }
+              <img
+                src="/brand/flux76-wordmark-dark.png"
+                width="160"
+                height="48"
+                alt="Flux76"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
+          </a>
+        </dd>
+      </div>
+    </dl>
+    <Voice segments={credits.final} level="p" size="l" class="credits-final" />
   </div>
 </footer>

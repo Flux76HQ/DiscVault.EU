@@ -1,0 +1,21 @@
+---
+/**
+ * The primary action: a voice-set link over a hairline (class `button`, the
+ * release-gate hook), optionally with a slate note beneath it.
+ */
+import Slate from './Slate.astro';
+
+interface Props {
+  href: string;
+  label: string;
+  note?: readonly string[];
+  class?: string;
+}
+
+const { href, label, note, class: className } = Astro.props;
+---
+
+<div class:list={['action', className]}>
+  <a class="button" href={href}>{label}</a>
+  {note && <Slate facts={note} class="action-note" />}
+</div>

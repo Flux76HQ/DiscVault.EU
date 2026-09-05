@@ -1,0 +1,37 @@
+/*
+ * Generated from Flux76HQ/App-Guidance/docs/branding/apps/discvault/pwa/tokens.json
+ * Dark values scoped to .cine-dark (the strip and the credits) in both
+ * schemes. Run "pnpm brand:build" after updating tokens.json.
+ */
+.cine-dark {
+  --dv-bg: #090F1A;
+  --dv-surface-1: #111A2A;
+  --dv-surface-2: #1A2438;
+  --dv-surface-3: #243047;
+  --dv-border-subtle: #2B3852;
+  --dv-border: #394863;
+  --dv-text: #EAF0F7;
+  --dv-text-2: #9AA7B8;
+  --dv-text-3: #647082;
+  --dv-platinum: #C7D2DE;
+  --dv-platinum-dim: #8996A6;
+  --dv-success: #34D399;
+  --dv-warning: #FB8C3C;
+  --dv-error: #FF5A52;
+  --dv-info: #22C0DE;
+  --dv-accent-bright: #6CB4FC;
+  --dv-sheen: conic-gradient(from 210deg, #7EB9EB, #D6CEFA, #EDC8F0, #F9F6F6, #7EE2C6, #4C93E4, #3C7CE1, #7EB9EB);
+  --dv-shadow: 0 1px 2px rgba(0,0,0,.5), 0 10px 30px rgba(0,0,0,.4);
+  --dv-fmt-4k-fill: #F2F6FA;
+  --dv-fmt-4k-on: #0A0E14;
+  --dv-fmt-bluray-fill: #3B9EFF;
+  --dv-fmt-bluray-on: #04121F;
+  --dv-fmt-dvd-fill: #C2A878;
+  --dv-fmt-dvd-deep: #8C7345;
+  --dv-fmt-dvd-on: #1C1508;
+  --dv-fmt-steel-fill: #8E9CAC;
+  --dv-fmt-steel-on: #0E141C;
+  --dv-fmt-steel-brushed: linear-gradient(115deg, #5C6875 0%, #8A97A6 18%, #D6E0EA 32%, #93A1B0 44%, #6B7683 58%, #B9C6D3 72%, #7E8B99 86%, #566270 100%);
+  --dv-fmt-digital-fill: #22C2A8;
+  --dv-fmt-digital-on: #04211C;
+}

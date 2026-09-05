@@ -42,8 +42,17 @@ const dutchPath = `/${documentType}-nl.html`;
     { locale: 'nl', path: dutchPath },
   ]}
   xDefaultPath={englishPath}
+  scheme="dark light"
+  preloadFonts={false}
+  motion={false}
 >
-  <Header content={content} locale={locale} homePath={localePath(locale)} />
+  <Header
+    content={content}
+    locale={locale}
+    homePath={localePath(locale)}
+    showCounter={false}
+    solid
+  />
   <main id="main">
     <header class="legal-hero wrap">
       <p class="eyebrow">{eyebrow}</p>
@@ -52,5 +61,5 @@ const dutchPath = `/${documentType}-nl.html`;
     </header>
     <article class="legal wrap" set:html={body} />
   </main>
-  <Footer content={content} locale={locale} />
+  <Footer content={content} locale={locale} lightCapable />
 </BaseLayout>

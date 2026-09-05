@@ -158,6 +158,14 @@ for (const legacyTarget of ['discvault26', 'migration', 'install']) {
     );
   }
 }
+if (
+  !englishHome.includes('class="credits-list"') ||
+  !englishHome.includes('Migrating from Legacy')
+) {
+  throw new Error(
+    'Marketing homepage must render the credits list and the Legacy migration slate',
+  );
+}
 
 const marketingPages = [
   ['index.html', 'en', 'https://discvault.eu/'],
@@ -177,6 +185,9 @@ for (const [file, locale, canonical] of marketingPages) {
     discord,
     docs,
     'id="android"',
+    'id="product"',
+    'id="scan"',
+    'id="editions"',
     'hreflang="x-default"',
     'application/ld+json',
   ];
