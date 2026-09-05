@@ -2,117 +2,227 @@
   "locale": "no",
   "languageName": "Norsk",
   "seo": {
-    "title": "DiscVault. Bygget for samlere.",
-    "description": "Bruk kameraet til å skanne strekkoder og hent automatisk filmmetadata og omslag. Appen kjører helt på egen hånd — ingen server nødvendig. Administrer samlingen din rett på enheten uten DiscVault-backend."
+    "title": "DiscVault — en katalog for platene dine",
+    "description": "DiscVault katalogiserer filmene du eier på 4K, Blu-ray og DVD. Skann en strekkode, hold utgaver fra hverandre, på enheten din eller din egen server. Ingen sporing."
   },
   "nav": {
-    "product": "Funksjoner",
-    "ios": "iPhone & iPad",
-    "selfHosted": "Self-hosted",
+    "library": "Bibliotek",
+    "scan": "Skann",
+    "editions": "Utgaver",
     "privacy": "Personvern",
+    "install": "Installer",
     "docs": "Docs",
     "menu": "Meny",
     "language": "Språk"
   },
-  "hero": {
-    "eyebrow": "DiscVault. Bygget for samlere.",
-    "title": "DiscVault 26 er her.",
-    "accent": "Bygget for neste hylle.",
-    "lead": "Bygget for folk med ekte hyller, ekte stabler og ekte utgaver.",
+  "actions": {
+    "install": "Installer DiscVault 26",
+    "installCompact": "Installer v26",
     "appStore": "Last ned i App Store",
-    "androidBeta": "Be om tilgang til Android-betaen",
-    "selfHosted": "Installer v26"
+    "android": "Be om tilgang til Android-betaen",
+    "testflight": "TestFlight-beta",
+    "privacy": "Personvernerklæring"
   },
-  "routes": {
-    "eyebrow": "Installasjon",
-    "heading": "Start selvhostet. Legg til mobil når det passer.",
-    "mobileRoadmap": "iOS- og Android-appene fungerer selvstendig i dag. Tilkobling til en selvhostet DiscVault-installasjon er planlagt på et senere tidspunkt.",
-    "ios": {
-      "label": "iPhone & iPad",
-      "title": "Fungerer frittstående",
-      "body": "Appen kjører helt på egen hånd — ingen server nødvendig. Administrer samlingen din rett på enheten uten DiscVault-backend.",
-      "points": [
-        "Bruk kameraet til å skanne strekkoder og hent automatisk filmmetadata og omslag.",
-        "Søk etter tittel, sjanger eller regissør og filtrer etter format i en ryddig samlingsvisning."
-      ]
-    },
-    "selfHosted": {
-      "label": "Self-hosted",
-      "title": "DiscVault 26 er her.",
-      "body": "DiscVault 26 kan installeres og brukes nå. Den gir et nytt desktop-first bibliotek, rikere detaljsider, PostgreSQL-grunnlag, plugins, migreringsverktøy og bedre adminkontroller for self-hosted fysiske mediesamlinger.",
-      "points": [
-        "DiscVault 26 legger til invite-only flyter, owner/admin-verktoy, Basic og Advanced RBAC, rollesimulering, auditvisninger, API-tilgang og MCP-klare integrasjoner.",
-        "Administrer metadatakilder, mottakere, importkilder, digitale mediekilder, pluginpakker, health checks og bakgrunnsjobber fra adminomradet."
-      ]
-    }
-  },
-  "capabilities": {
-    "eyebrow": "Funksjoner",
-    "heading": "Bygget for folk med ekte hyller, ekte stabler og ekte utgaver.",
-    "items": [
-      {
-        "title": "Skann og berik",
-        "body": "Bruk kameraet til å skanne strekkoder og hent automatisk filmmetadata og omslag."
-      },
-      {
-        "title": "Filtrer og søk",
-        "body": "Søk etter tittel, sjanger eller regissør og filtrer etter format i en ryddig samlingsvisning."
-      },
-      {
-        "title": "Ny bibliotekopplevelse",
-        "body": "Bla gjennom postere, bytt til liste eller detaljvisning, filtrer pa format, apne containere og box sets, og hold grensesnittet raskt pa store samlinger."
-      },
-      {
-        "title": "Rikere film- og containersider",
-        "body": "Detaljsider gir na plass til backdrops, postere, videoer, metadata, samlingstilknytning, sett-status og innhold i box sets."
-      },
-      {
-        "title": "Pluginsentrert plattform",
-        "body": "Administrer metadatakilder, mottakere, importkilder, digitale mediekilder, pluginpakker, health checks og bakgrunnsjobber fra adminomradet."
-      },
-      {
-        "title": "Admin, RBAC, API og MCP",
-        "body": "DiscVault 26 legger til invite-only flyter, owner/admin-verktoy, Basic og Advanced RBAC, rollesimulering, auditvisninger, API-tilgang og MCP-klare integrasjoner."
-      }
+  "leader": {
+    "slate": [
+      "DiscVault 26",
+      "En katalog for platene dine",
+      "Self-hosted",
+      "iPhone & iPad",
+      "Android-beta"
+    ],
+    "voice": [
+      "Lys, ",
+      "bevart."
+    ],
+    "lead": "DiscVault katalogiserer filmene du eier — på plate, i hylla, på din egen server.",
+    "note": [
+      "PWA & desktop",
+      "Installasjonsveiledning"
     ]
   },
-  "showcase": {
-    "eyebrow": "Skjermbilder",
-    "heading": "Ny bibliotekopplevelse",
-    "mobileLibrary": "DiscVault 26 bibliotek",
-    "mobileAdd": "Legg til film",
-    "mobileDetail": "Detaljside",
-    "desktopLibrary": "DiscVault 26 bibliotek",
-    "desktopDetail": "Detaljside"
+  "shelf": {
+    "slate": [
+      "Reel 01",
+      "Hylla"
+    ],
+    "counter": [
+      "45 / 45 filmer",
+      "29 fliser"
+    ],
+    "voice": [
+      "Hver utgave, der du ",
+      "la",
+      " den."
+    ],
+    "lead": "Bla i plakater, bytt til liste- eller detaljvisning, filtrer på format, åpne bokssett og beholdere. Raskt i store samlinger."
   },
-  "trust": {
-    "eyebrow": "Personvern",
-    "heading": "Fungerer frittstående",
-    "body": "Appen kjører helt på egen hånd — ingen server nødvendig. Administrer samlingen din rett på enheten uten DiscVault-backend.",
-    "noTrackingTitle": "Ingen sporing",
-    "noTrackingBody": "Ingen analyse, reklame eller tredjepartssporing.",
-    "controlTitle": "Dine data, ditt valg",
-    "controlBody": "Behold biblioteket ditt på enheten din eller på en DiscVault-server du selv administrerer."
+  "read": {
+    "slate": [
+      "Reel 02",
+      "Avlesingen",
+      "EAN → Tittel · År · Format · Omslag"
+    ],
+    "voice": [
+      "Rett kameraet. Platen ",
+      "leser",
+      " seg selv."
+    ],
+    "lead": "Skann en strekkode, så fyller DiscVault inn tittel, år, format og omslag. Eller søk på navn.",
+    "note": [
+      "iPhone & iPad",
+      "Frittstående",
+      "Ingen server nødvendig"
+    ],
+    "captureAlt": "DiscVault på iPhone: legger til en film etter skanning av strekkoden"
   },
-  "comparison": {
-    "eyebrow": "Velg din rute",
-    "heading": "Bygget for folk med ekte hyller, ekte stabler og ekte utgaver.",
-    "route": "Rute",
-    "bestFor": "Best egnet for",
-    "setup": "Oppsett",
-    "iosBest": "Appen kjører helt på egen hånd — ingen server nødvendig. Administrer samlingen din rett på enheten uten DiscVault-backend.",
-    "iosSetup": "Last ned i App Store. Ingen server nødvendig.",
-    "selfBest": "DiscVault 26 kan installeres og brukes nå. Den gir et nytt desktop-first bibliotek, rikere detaljsider, PostgreSQL-grunnlag, plugins, migreringsverktøy og bedre adminkontroller for self-hosted fysiske mediesamlinger.",
-    "selfSetup": "Følg den aktuelle installasjonsveiledningen i DiscVault Docs.",
-    "androidSetup": "Be om tilgang via Discord. Godkjente testere installerer via Google Play."
+  "edition": {
+    "slate": [
+      "Reel 03",
+      "Utgaven",
+      "4K · BD · DVD · Steel · Bokssett"
+    ],
+    "voice": [
+      "Utgaver ",
+      "betyr noe."
+    ],
+    "lead": "En 4K-plate er ikke en Blu-ray. En steelbook er ikke et vanlig cover. Bokssett, beholdere og platene i en utgivelse katalogiseres som det de er.",
+    "spines": [
+      "4K Ultra HD",
+      "Blu-ray",
+      "DVD",
+      "Steelbook",
+      "Bokssett · 8 filmer"
+    ]
   },
-  "community": {
-    "eyebrow": "Fellesskap",
-    "heading": "Trenger du hjelp eller vil følge oppdateringer?",
-    "discord": "Bli med på Discord",
-    "issues": "Rapporter et problem",
-    "support": "Supporttråd",
-    "finalTitle": "DiscVault. Bygget for samlere."
+  "vault": {
+    "slate": [
+      "Reel 04",
+      "Hvelvet",
+      "0 sporere",
+      "0 annonser",
+      "Ingen analyse"
+    ],
+    "voice": [
+      "Den bor der du ",
+      "legger",
+      " den."
+    ],
+    "lead": "På enheten din, eller på en server du selv kjører. Ingen analyse, ingen annonser, ingen som ser hva du ser.",
+    "body": [
+      "iPhone- og iPad-appen holder samlingen på enheten. DiscVault 26 holder den på en server du administrerer. Uansett forlater bare en strekkode eller et søkeord enheten."
+    ]
+  },
+  "formats": {
+    "slate": [
+      "Reel 05",
+      "Formatene"
+    ],
+    "voice": [
+      "Tre veier ",
+      "inn."
+    ],
+    "lead": "Self-hosted DiscVault 26 i dag. iPhone og iPad frittstående. Android i beta.",
+    "routes": [
+      {
+        "id": "self-hosted",
+        "slate": [
+          "PWA",
+          "Desktop",
+          "DiscVault 26"
+        ],
+        "title": "Self-hosted",
+        "body": [
+          "Et bibliotek bygget for skrivebordet, rikere detaljsider, PostgreSQL-grunnlag, plugins, migreringsverktøy og adminkontroller for samlere som holder katalogen på egen server.",
+          "Invitasjonsflyter, eier- og adminverktøy, rollebasert tilgang, revisjonsvisninger, API-tilgang og MCP-klare integrasjoner."
+        ],
+        "action": "Installer DiscVault 26"
+      },
+      {
+        "id": "ios",
+        "slate": [
+          "iOS",
+          "iPadOS",
+          "Frittstående"
+        ],
+        "title": "iPhone & iPad",
+        "body": [
+          "Kjører helt på enheten. Skann, berik, filtrer og søk uten server."
+        ],
+        "action": "Last ned i App Store"
+      },
+      {
+        "id": "android",
+        "slate": [
+          "Android",
+          "Beta"
+        ],
+        "title": "Android",
+        "body": [
+          "Be om tilgang via Discord. Godkjente testere installerer via Google Play."
+        ],
+        "action": "Be om tilgang til Android-betaen"
+      }
+    ],
+    "roadmap": "iOS- og Android-appene fungerer selvstendig i dag. Tilkobling til en selvhostet DiscVault-installasjon er planlagt på et senere tidspunkt.",
+    "migration": [
+      "Migrere fra Legacy",
+      "Docs"
+    ]
+  },
+  "credits": {
+    "install": {
+      "role": "Installer",
+      "name": "DiscVault 26"
+    },
+    "appStore": {
+      "role": "iPhone & iPad",
+      "name": "App Store"
+    },
+    "android": {
+      "role": "Android",
+      "name": "Beta via Discord"
+    },
+    "testflight": {
+      "role": "TestFlight",
+      "name": "Beta"
+    },
+    "source": {
+      "role": "Kildekode",
+      "name": "GitHub"
+    },
+    "community": {
+      "role": "Fellesskap",
+      "name": "Discord"
+    },
+    "issues": {
+      "role": "Saker",
+      "name": "GitHub"
+    },
+    "languages": {
+      "role": "Språk",
+      "name": "Tjue"
+    },
+    "privacy": {
+      "role": "Personvern",
+      "name": "Personvernerklæring"
+    },
+    "terms": {
+      "role": "Vilkår",
+      "name": "Vilkår"
+    },
+    "legacy": {
+      "role": "Legacy",
+      "name": "Migrering av gammel versjon"
+    },
+    "production": {
+      "role": "En produksjon av",
+      "name": "Flux76"
+    },
+    "final": [
+      "DiscVault. Bygget for ",
+      "samlere."
+    ]
   },
   "footer": {
     "tagline": "DiscVault. Bygget for samlere.",

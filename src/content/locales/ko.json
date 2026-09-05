@@ -2,117 +2,227 @@
   "locale": "ko",
   "languageName": "한국어",
   "seo": {
-    "title": "DiscVault. 수집가를 위해 설계되었습니다.",
-    "description": "카메라로 바코드를 스캔하고 영화 메타데이터와 커버 이미지를 자동으로 가져옵니다. 앱은 완전히 독립적으로 실행되며 서버가 필요 없습니다. DiscVault backend 없이 기기에서 바로 컬렉션을 관리하세요."
+    "title": "DiscVault — 당신의 디스크를 위한 카탈로그",
+    "description": "DiscVault는 4K, Blu-ray, DVD로 소장한 영화를 카탈로그로 정리합니다. 바코드를 스캔하고, 에디션을 구분하고, 내 기기나 내 서버에 보관하세요. 추적 없음."
   },
   "nav": {
-    "product": "기능",
-    "ios": "iPhone & iPad",
-    "selfHosted": "Self-hosted",
+    "library": "라이브러리",
+    "scan": "스캔",
+    "editions": "에디션",
     "privacy": "개인정보",
+    "install": "설치",
     "docs": "Docs",
     "menu": "메뉴",
     "language": "언어"
   },
-  "hero": {
-    "eyebrow": "DiscVault. 수집가를 위해 설계되었습니다.",
-    "title": "DiscVault 26이 도착했습니다.",
-    "accent": "다음 선반을 위해 설계되었습니다.",
-    "lead": "실제 선반, 실제 더미, 실제 에디션을 가진 사람들을 위해 설계되었습니다.",
+  "actions": {
+    "install": "DiscVault 26 설치",
+    "installCompact": "v26 설치",
     "appStore": "App Store에서 다운로드",
-    "androidBeta": "Android 베타 액세스 요청",
-    "selfHosted": "v26 설치"
+    "android": "Android 베타 액세스 요청",
+    "testflight": "TestFlight 베타",
+    "privacy": "개인정보 처리방침"
   },
-  "routes": {
-    "eyebrow": "설치",
-    "heading": "셀프 호스팅으로 시작하고, 필요할 때 모바일을 추가하세요.",
-    "mobileRoadmap": "iOS 및 Android 앱은 현재 독립적으로 작동합니다. 자체 호스팅 DiscVault 설치와의 연결은 추후 단계에서 제공할 예정입니다.",
-    "ios": {
-      "label": "iPhone & iPad",
-      "title": "독립 실행",
-      "body": "앱은 완전히 독립적으로 실행되며 서버가 필요 없습니다. DiscVault backend 없이 기기에서 바로 컬렉션을 관리하세요.",
-      "points": [
-        "카메라로 바코드를 스캔하고 영화 메타데이터와 커버 이미지를 자동으로 가져옵니다.",
-        "제목, 장르, 감독으로 검색하고 형식으로 필터링합니다."
-      ]
-    },
-    "selfHosted": {
-      "label": "Self-hosted",
-      "title": "DiscVault 26이 도착했습니다.",
-      "body": "DiscVault 26은 지금 설치하고 사용할 수 있습니다. 새로운 desktop-first library, 더 풍부한 detail pages, PostgreSQL foundation, plugins, migration tools, self-hosted 물리 미디어 catalog를 위한 향상된 admin controls를 제공합니다.",
-      "points": [
-        "DiscVault 26은 초대 전용 흐름, 소유자/관리자 도구, Basic 및 Advanced RBAC, 역할 시뮬레이션, 감사 보기, API 액세스, MCP 지원 통합을 추가합니다.",
-        "관리자 영역에서 메타데이터 소스, 수신기, 가져오기 소스, 디지털 미디어 소스, 플러그인 패키지, 상태 점검, 백그라운드 작업을 관리합니다."
-      ]
-    }
-  },
-  "capabilities": {
-    "eyebrow": "기능",
-    "heading": "실제 선반, 실제 더미, 실제 에디션을 가진 사람들을 위해 설계되었습니다.",
-    "items": [
-      {
-        "title": "스캔 및 보강",
-        "body": "카메라로 바코드를 스캔하고 영화 메타데이터와 커버 이미지를 자동으로 가져옵니다."
-      },
-      {
-        "title": "필터와 검색",
-        "body": "제목, 장르, 감독으로 검색하고 형식으로 필터링합니다."
-      },
-      {
-        "title": "새로운 라이브러리 경험",
-        "body": "포스터를 탐색하고, 목록 또는 상세 보기로 전환하고, 형식별로 필터링하고, 컨테이너와 박스 세트를 열며, 대규모 컬렉션에서도 빠른 인터페이스를 유지합니다."
-      },
-      {
-        "title": "더 풍부한 영화 및 컨테이너 페이지",
-        "body": "상세 페이지에는 배경 이미지, 포스터, 동영상, 메타데이터, 컬렉션 포함 여부, 시청 상태, 박스 세트 내용을 담을 수 있습니다."
-      },
-      {
-        "title": "플러그인 중심 플랫폼",
-        "body": "관리자 영역에서 메타데이터 소스, 수신기, 가져오기 소스, 디지털 미디어 소스, 플러그인 패키지, 상태 점검, 백그라운드 작업을 관리합니다."
-      },
-      {
-        "title": "관리, RBAC, API, MCP",
-        "body": "DiscVault 26은 초대 전용 흐름, 소유자/관리자 도구, Basic 및 Advanced RBAC, 역할 시뮬레이션, 감사 보기, API 액세스, MCP 지원 통합을 추가합니다."
-      }
+  "leader": {
+    "slate": [
+      "DiscVault 26",
+      "당신의 디스크를 위한 카탈로그",
+      "셀프 호스팅",
+      "iPhone & iPad",
+      "Android 베타"
+    ],
+    "voice": [
+      "빛을, ",
+      "간직하다."
+    ],
+    "lead": "DiscVault는 당신이 소장한 영화를 카탈로그로 정리합니다 — 디스크에, 선반에, 당신의 서버에.",
+    "note": [
+      "PWA & 데스크톱",
+      "설치 안내"
     ]
   },
-  "showcase": {
-    "eyebrow": "스크린샷",
-    "heading": "새로운 라이브러리 경험",
-    "mobileLibrary": "DiscVault 26 라이브러리",
-    "mobileAdd": "영화 추가",
-    "mobileDetail": "상세 페이지",
-    "desktopLibrary": "DiscVault 26 라이브러리",
-    "desktopDetail": "상세 페이지"
+  "shelf": {
+    "slate": [
+      "Reel 01",
+      "선반"
+    ],
+    "counter": [
+      "45 / 45편",
+      "29 타일"
+    ],
+    "voice": [
+      "모든 에디션을, 당신이 ",
+      "둔",
+      " 자리에."
+    ],
+    "lead": "포스터를 둘러보고, 목록이나 상세 보기로 전환하고, 포맷으로 필터링하고, 박스 세트와 컨테이너를 열어 보세요. 큰 컬렉션에서도 빠릅니다."
   },
-  "trust": {
-    "eyebrow": "개인정보",
-    "heading": "독립 실행",
-    "body": "앱은 완전히 독립적으로 실행되며 서버가 필요 없습니다. DiscVault backend 없이 기기에서 바로 컬렉션을 관리하세요.",
-    "noTrackingTitle": "추적 없음",
-    "noTrackingBody": "분석, 광고, 제3자 추적이 전혀 없습니다.",
-    "controlTitle": "당신의 데이터, 당신의 선택",
-    "controlBody": "라이브러리를 기기에 보관하거나 직접 관리하는 DiscVault 서버에 보관하세요."
+  "read": {
+    "slate": [
+      "Reel 02",
+      "읽기",
+      "EAN → 제목 · 연도 · 포맷 · 커버"
+    ],
+    "voice": [
+      "카메라를 대세요. 디스크가 스스로 ",
+      "읽힙니다",
+      "."
+    ],
+    "lead": "바코드를 스캔하면 DiscVault가 제목, 연도, 포맷, 커버를 채웁니다. 이름으로 검색할 수도 있습니다.",
+    "note": [
+      "iPhone & iPad",
+      "단독 실행",
+      "서버 불필요"
+    ],
+    "captureAlt": "iPhone의 DiscVault: 바코드를 스캔한 뒤 영화 추가"
   },
-  "comparison": {
-    "eyebrow": "경로를 선택하세요",
-    "heading": "실제 선반, 실제 더미, 실제 에디션을 가진 사람들을 위해 설계되었습니다.",
-    "route": "경로",
-    "bestFor": "적합한 대상",
-    "setup": "설정",
-    "iosBest": "앱은 완전히 독립적으로 실행되며 서버가 필요 없습니다. DiscVault backend 없이 기기에서 바로 컬렉션을 관리하세요.",
-    "iosSetup": "App Store에서 다운로드하세요. 서버가 필요 없습니다.",
-    "selfBest": "DiscVault 26은 지금 설치하고 사용할 수 있습니다. 새로운 desktop-first library, 더 풍부한 detail pages, PostgreSQL foundation, plugins, migration tools, self-hosted 물리 미디어 catalog를 위한 향상된 admin controls를 제공합니다.",
-    "selfSetup": "DiscVault Docs의 최신 설치 가이드를 따르세요.",
-    "androidSetup": "Discord에서 액세스를 요청하세요. 승인된 테스터는 Google Play를 통해 설치합니다."
+  "edition": {
+    "slate": [
+      "Reel 03",
+      "에디션",
+      "4K · BD · DVD · Steel · 박스 세트"
+    ],
+    "voice": [
+      "에디션이 ",
+      "중요합니다."
+    ],
+    "lead": "4K 디스크는 Blu-ray가 아닙니다. 스틸북은 일반 케이스가 아닙니다. 박스 세트, 컨테이너, 그리고 한 릴리스 안의 디스크들은 있는 그대로 카탈로그에 담깁니다.",
+    "spines": [
+      "4K Ultra HD",
+      "Blu-ray",
+      "DVD",
+      "Steelbook",
+      "박스 세트 · 8편"
+    ]
   },
-  "community": {
-    "eyebrow": "커뮤니티",
-    "heading": "도움이 필요하거나 업데이트를 따라가고 싶으신가요?",
-    "discord": "Discord 참여",
-    "issues": "Issue 보고",
-    "support": "지원 스레드",
-    "finalTitle": "DiscVault. 수집가를 위해 설계되었습니다."
+  "vault": {
+    "slate": [
+      "Reel 04",
+      "금고",
+      "트래커 0",
+      "광고 0",
+      "분석 없음"
+    ],
+    "voice": [
+      "당신이 ",
+      "둔",
+      " 곳에 있습니다."
+    ],
+    "lead": "내 기기에, 또는 내가 직접 운영하는 서버에. 분석 없음, 광고 없음, 무엇을 보는지 아무도 보지 않습니다.",
+    "body": [
+      "iPhone과 iPad 앱은 컬렉션을 기기에 보관합니다. DiscVault 26은 당신이 관리하는 서버에 보관합니다. 어느 쪽이든 기기 밖으로 나가는 것은 바코드나 검색어뿐입니다."
+    ]
+  },
+  "formats": {
+    "slate": [
+      "Reel 05",
+      "포맷"
+    ],
+    "voice": [
+      "들어가는 길은 ",
+      "셋."
+    ],
+    "lead": "셀프 호스팅 DiscVault 26은 오늘부터. iPhone과 iPad는 단독 실행. Android는 베타.",
+    "routes": [
+      {
+        "id": "self-hosted",
+        "slate": [
+          "PWA",
+          "Desktop",
+          "DiscVault 26"
+        ],
+        "title": "Self-hosted",
+        "body": [
+          "데스크톱 우선 라이브러리, 더 풍부한 상세 페이지, PostgreSQL 기반, 플러그인, 마이그레이션 도구, 그리고 자신의 서버에 카탈로그를 두는 수집가를 위한 관리 기능.",
+          "초대 전용 흐름, 소유자 및 관리자 도구, 역할 기반 접근, 감사 보기, API 접근, MCP 지원 통합."
+        ],
+        "action": "DiscVault 26 설치"
+      },
+      {
+        "id": "ios",
+        "slate": [
+          "iOS",
+          "iPadOS",
+          "단독 실행"
+        ],
+        "title": "iPhone & iPad",
+        "body": [
+          "기기에서 완전히 실행됩니다. 서버 없이 스캔, 보강, 필터링, 검색."
+        ],
+        "action": "App Store에서 다운로드"
+      },
+      {
+        "id": "android",
+        "slate": [
+          "Android",
+          "베타"
+        ],
+        "title": "Android",
+        "body": [
+          "Discord에서 액세스를 요청하세요. 승인된 테스터는 Google Play를 통해 설치합니다."
+        ],
+        "action": "Android 베타 액세스 요청"
+      }
+    ],
+    "roadmap": "iOS 및 Android 앱은 현재 독립적으로 작동합니다. 자체 호스팅 DiscVault 설치와의 연결은 추후 단계에서 제공할 예정입니다.",
+    "migration": [
+      "Legacy에서 이전",
+      "Docs"
+    ]
+  },
+  "credits": {
+    "install": {
+      "role": "설치",
+      "name": "DiscVault 26"
+    },
+    "appStore": {
+      "role": "iPhone & iPad",
+      "name": "App Store"
+    },
+    "android": {
+      "role": "Android",
+      "name": "Discord에서 베타"
+    },
+    "testflight": {
+      "role": "TestFlight",
+      "name": "베타"
+    },
+    "source": {
+      "role": "소스",
+      "name": "GitHub"
+    },
+    "community": {
+      "role": "커뮤니티",
+      "name": "Discord"
+    },
+    "issues": {
+      "role": "문제 신고",
+      "name": "GitHub"
+    },
+    "languages": {
+      "role": "언어",
+      "name": "스무 개"
+    },
+    "privacy": {
+      "role": "개인정보",
+      "name": "개인정보 처리방침"
+    },
+    "terms": {
+      "role": "약관",
+      "name": "약관"
+    },
+    "legacy": {
+      "role": "Legacy",
+      "name": "레거시 마이그레이션"
+    },
+    "production": {
+      "role": "제작",
+      "name": "Flux76"
+    },
+    "final": [
+      "DiscVault. 수집가를 위해 ",
+      "만들었습니다."
+    ]
   },
   "footer": {
     "tagline": "DiscVault. 수집가를 위해 설계되었습니다.",

@@ -2,117 +2,227 @@
   "locale": "hu",
   "languageName": "Magyar",
   "seo": {
-    "title": "DiscVault. Gyűjtőknek építve.",
-    "description": "Olvasson be vonalkódokat, majd töltse le automatikusan a metaadatokat és borítókat. Az alkalmazás teljesen önállóan fut — nincs szükség szerverre. Kezelje gyűjteményét közvetlenül a készülékén, DiscVault backend nélkül."
+    "title": "DiscVault — katalógus a lemezeidhez",
+    "description": "A DiscVault katalogizálja a 4K, Blu-ray és DVD lemezeken birtokolt filmjeidet. Olvass be egy vonalkódot, tartsd külön a kiadásokat, a saját eszközödön vagy a saját szervereden. Nyomkövetés nélkül."
   },
   "nav": {
-    "product": "Funkciók",
-    "ios": "iPhone & iPad",
-    "selfHosted": "Self-hosted",
+    "library": "Könyvtár",
+    "scan": "Szkennelés",
+    "editions": "Kiadások",
     "privacy": "Adatvédelem",
+    "install": "Telepítés",
     "docs": "Docs",
     "menu": "Menü",
     "language": "Nyelvek"
   },
-  "hero": {
-    "eyebrow": "DiscVault. Gyűjtőknek építve.",
-    "title": "Megérkezett a DiscVault 26.",
-    "accent": "A következő polcra építve.",
-    "lead": "Valódi polcokhoz, kupacokhoz és kiadásokhoz készült.",
+  "actions": {
+    "install": "DiscVault 26 telepítése",
+    "installCompact": "v26 telepítése",
     "appStore": "Letöltés az App Store-ból",
-    "androidBeta": "Hozzáférés kérése az Android bétához",
-    "selfHosted": "v26 telepítése"
+    "android": "Hozzáférés kérése az Android bétához",
+    "testflight": "TestFlight béta",
+    "privacy": "Adatvédelmi szabályzat"
   },
-  "routes": {
-    "eyebrow": "Telepítés",
-    "heading": "Kezdje saját üzemeltetéssel. Adja hozzá a mobilalkalmazást, amikor megfelelő.",
-    "mobileRoadmap": "Az iOS- és Android-alkalmazások jelenleg önállóan működnek. A saját üzemeltetésű DiscVault-példányhoz való csatlakoztatásuk egy későbbi szakaszra van tervezve.",
-    "ios": {
-      "label": "iPhone & iPad",
-      "title": "Önállóan működik",
-      "body": "Az alkalmazás teljesen önállóan fut — nincs szükség szerverre. Kezelje gyűjteményét közvetlenül a készülékén, DiscVault backend nélkül.",
-      "points": [
-        "Olvasson be vonalkódokat, majd töltse le automatikusan a metaadatokat és borítókat.",
-        "Keressen cím, műfaj vagy rendező szerint, és szűrjön formátumra."
-      ]
-    },
-    "selfHosted": {
-      "label": "Self-hosted",
-      "title": "Megérkezett a DiscVault 26.",
-      "body": "A DiscVault 26 már telepíthető és használható. Új desktop-first library, gazdagabb detail pages, PostgreSQL foundation, plugins, migration tools és jobb admin controls érkezik self-hosted fizikai média cataloghoz.",
-      "points": [
-        "A DiscVault 26 meghívásos folyamatokat, tulajdonosi/admin eszközöket, Basic és Advanced RBAC-t, szerepszimulációt, auditnézeteket, API-hozzáférést és MCP-ready integrációkat ad hozzá.",
-        "Kezelje a metaadatforrásokat, fogadókat, importforrásokat, digitális médiaforrásokat, bővítménycsomagokat, health checkeket és háttérfeladatokat az admin felületről."
-      ]
-    }
-  },
-  "capabilities": {
-    "eyebrow": "Funkciók",
-    "heading": "Valódi polcokhoz, kupacokhoz és kiadásokhoz készült.",
-    "items": [
-      {
-        "title": "Szkennelés és gazdagítás",
-        "body": "Olvasson be vonalkódokat, majd töltse le automatikusan a metaadatokat és borítókat."
-      },
-      {
-        "title": "Szűrés és keresés",
-        "body": "Keressen cím, műfaj vagy rendező szerint, és szűrjön formátumra."
-      },
-      {
-        "title": "Új könyvtárélmény",
-        "body": "Böngésszen posztereket, váltson lista- vagy részletnézetre, szűrjön formátum szerint, nyisson meg konténereket és box seteket, és tartsa gyorsan a felületet nagy gyűjteményeknél is."
-      },
-      {
-        "title": "Gazdagabb film- és konténeroldalak",
-        "body": "A részletoldalakon most van hely háttereknek, posztereknek, videóknak, metaadatoknak, gyűjteményi tagságnak, megtekintési állapotnak és box set tartalmaknak."
-      },
-      {
-        "title": "Bővítményközpontú platform",
-        "body": "Kezelje a metaadatforrásokat, fogadókat, importforrásokat, digitális médiaforrásokat, bővítménycsomagokat, health checkeket és háttérfeladatokat az admin felületről."
-      },
-      {
-        "title": "Admin, RBAC, API és MCP",
-        "body": "A DiscVault 26 meghívásos folyamatokat, tulajdonosi/admin eszközöket, Basic és Advanced RBAC-t, szerepszimulációt, auditnézeteket, API-hozzáférést és MCP-ready integrációkat ad hozzá."
-      }
+  "leader": {
+    "slate": [
+      "DiscVault 26",
+      "Katalógus a lemezeidhez",
+      "Saját szerveren",
+      "iPhone & iPad",
+      "Android béta"
+    ],
+    "voice": [
+      "Fény, ",
+      "megőrizve."
+    ],
+    "lead": "A DiscVault katalogizálja a filmjeidet — lemezen, a polcodon, a saját szervereden.",
+    "note": [
+      "PWA és asztali",
+      "Telepítési útmutató"
     ]
   },
-  "showcase": {
-    "eyebrow": "Képernyőképek",
-    "heading": "Új könyvtárélmény",
-    "mobileLibrary": "DiscVault 26 könyvtár",
-    "mobileAdd": "Film hozzáadása",
-    "mobileDetail": "Részletoldal",
-    "desktopLibrary": "DiscVault 26 könyvtár",
-    "desktopDetail": "Részletoldal"
+  "shelf": {
+    "slate": [
+      "Reel 01",
+      "A polc"
+    ],
+    "counter": [
+      "45 / 45 film",
+      "29 csempe"
+    ],
+    "voice": [
+      "Minden kiadás ott, ahol ",
+      "hagytad",
+      "."
+    ],
+    "lead": "Böngéssz a plakátok között, válts lista- vagy részletnézetre, szűrj formátum szerint, nyisd meg a dobozokat és tárolókat. Gyors nagy gyűjteményeknél is."
   },
-  "trust": {
-    "eyebrow": "Adatvédelem",
-    "heading": "Önállóan működik",
-    "body": "Az alkalmazás teljesen önállóan fut — nincs szükség szerverre. Kezelje gyűjteményét közvetlenül a készülékén, DiscVault backend nélkül.",
-    "noTrackingTitle": "Nincs nyomkövetés",
-    "noTrackingBody": "Nincs analitika, hirdetés vagy harmadik féltől származó nyomkövetés.",
-    "controlTitle": "A te adataid, a te választásod",
-    "controlBody": "Tartsa a könyvtárát a saját eszközén, vagy egy Ön által felügyelt DiscVault szerveren."
+  "read": {
+    "slate": [
+      "Reel 02",
+      "A beolvasás",
+      "EAN → Cím · Év · Formátum · Borító"
+    ],
+    "voice": [
+      "Irányítsd rá a kamerát. A lemez ",
+      "beolvassa",
+      " magát."
+    ],
+    "lead": "Olvass be egy vonalkódot, és a DiscVault kitölti a címet, az évet, a formátumot és a borítót. Vagy keress névre.",
+    "note": [
+      "iPhone & iPad",
+      "Önálló",
+      "Nincs szükség szerverre"
+    ],
+    "captureAlt": "DiscVault iPhone-on: film hozzáadása a vonalkód beolvasása után"
   },
-  "comparison": {
-    "eyebrow": "Válassza ki az útját",
-    "heading": "Valódi polcokhoz, kupacokhoz és kiadásokhoz készült.",
-    "route": "Út",
-    "bestFor": "Legjobb választás",
-    "setup": "Beállítás",
-    "iosBest": "Az alkalmazás teljesen önállóan fut — nincs szükség szerverre. Kezelje gyűjteményét közvetlenül a készülékén, DiscVault backend nélkül.",
-    "iosSetup": "Töltsd le az App Store-ból. Nincs szükség szerverre.",
-    "selfBest": "A DiscVault 26 már telepíthető és használható. Új desktop-first library, gazdagabb detail pages, PostgreSQL foundation, plugins, migration tools és jobb admin controls érkezik self-hosted fizikai média cataloghoz.",
-    "selfSetup": "Kövesse a DiscVault Docs aktuális telepítési útmutatóját.",
-    "androidSetup": "Kérj hozzáférést a Discordon. A jóváhagyott tesztelők a Google Playen keresztül telepítenek."
+  "edition": {
+    "slate": [
+      "Reel 03",
+      "A kiadás",
+      "4K · BD · DVD · Steel · Doboz"
+    ],
+    "voice": [
+      "A kiadások ",
+      "számítanak."
+    ],
+    "lead": "A 4K lemez nem Blu-ray. A steelbook nem sima tok. A dobozok, tárolók és a kiadásban lévő lemezek annak vannak katalogizálva, amik.",
+    "spines": [
+      "4K Ultra HD",
+      "Blu-ray",
+      "DVD",
+      "Steelbook",
+      "Doboz · 8 film"
+    ]
   },
-  "community": {
-    "eyebrow": "Közösség",
-    "heading": "Segítségre van szüksége, vagy követné a frissítéseket?",
-    "discord": "Csatlakozás Discordhoz",
-    "issues": "Issue jelentése",
-    "support": "Támogatási téma",
-    "finalTitle": "DiscVault. Gyűjtőknek építve."
+  "vault": {
+    "slate": [
+      "Reel 04",
+      "A széf",
+      "0 nyomkövető",
+      "0 hirdetés",
+      "Nincs analitika"
+    ],
+    "voice": [
+      "Ott van, ahová ",
+      "teszed",
+      "."
+    ],
+    "lead": "A saját eszközödön vagy egy általad üzemeltetett szerveren. Nincs analitika, nincs hirdetés, senki sem nézi, mit nézel.",
+    "body": [
+      "Az iPhone- és iPad-alkalmazás az eszközön tartja a gyűjteményt. A DiscVault 26 egy általad kezelt szerveren tartja. Mindkét esetben csak egy vonalkód vagy egy keresőkifejezés hagyja el az eszközt."
+    ]
+  },
+  "formats": {
+    "slate": [
+      "Reel 05",
+      "A formátumok"
+    ],
+    "voice": [
+      "Három út ",
+      "befelé."
+    ],
+    "lead": "Saját szerveren futó DiscVault 26 már ma. iPhone és iPad önállóan. Android bétában.",
+    "routes": [
+      {
+        "id": "self-hosted",
+        "slate": [
+          "PWA",
+          "Desktop",
+          "DiscVault 26"
+        ],
+        "title": "Self-hosted",
+        "body": [
+          "Asztali gépre tervezett könyvtár, gazdagabb részletoldalak, PostgreSQL-alap, bővítmények, migrációs eszközök és adminvezérlők azoknak a gyűjtőknek, akik a saját szerverükön tartják a katalógust.",
+          "Meghívásos folyamatok, tulajdonosi és admin eszközök, szerepköralapú hozzáférés, auditnézetek, API-hozzáférés és MCP-kész integrációk."
+        ],
+        "action": "DiscVault 26 telepítése"
+      },
+      {
+        "id": "ios",
+        "slate": [
+          "iOS",
+          "iPadOS",
+          "Önálló"
+        ],
+        "title": "iPhone & iPad",
+        "body": [
+          "Teljes egészében az eszközön fut. Szkennelj, gazdagíts, szűrj és keress szerver nélkül."
+        ],
+        "action": "Letöltés az App Store-ból"
+      },
+      {
+        "id": "android",
+        "slate": [
+          "Android",
+          "Béta"
+        ],
+        "title": "Android",
+        "body": [
+          "Kérj hozzáférést a Discordon. A jóváhagyott tesztelők a Google Playen keresztül telepítenek."
+        ],
+        "action": "Hozzáférés kérése az Android bétához"
+      }
+    ],
+    "roadmap": "Az iOS- és Android-alkalmazások jelenleg önállóan működnek. A saját üzemeltetésű DiscVault-példányhoz való csatlakoztatásuk egy későbbi szakaszra van tervezve.",
+    "migration": [
+      "Átállás Legacy-ről",
+      "Docs"
+    ]
+  },
+  "credits": {
+    "install": {
+      "role": "Telepítés",
+      "name": "DiscVault 26"
+    },
+    "appStore": {
+      "role": "iPhone & iPad",
+      "name": "App Store"
+    },
+    "android": {
+      "role": "Android",
+      "name": "Béta Discordon"
+    },
+    "testflight": {
+      "role": "TestFlight",
+      "name": "Béta"
+    },
+    "source": {
+      "role": "Forráskód",
+      "name": "GitHub"
+    },
+    "community": {
+      "role": "Közösség",
+      "name": "Discord"
+    },
+    "issues": {
+      "role": "Hibák",
+      "name": "GitHub"
+    },
+    "languages": {
+      "role": "Nyelvek",
+      "name": "Húsz"
+    },
+    "privacy": {
+      "role": "Adatvédelem",
+      "name": "Adatvédelmi szabályzat"
+    },
+    "terms": {
+      "role": "Feltételek",
+      "name": "Feltételek"
+    },
+    "legacy": {
+      "role": "Legacy",
+      "name": "Korábbi verzió migrálása"
+    },
+    "production": {
+      "role": "Készítette",
+      "name": "Flux76"
+    },
+    "final": [
+      "DiscVault. Gyűjtőknek ",
+      "készült."
+    ]
   },
   "footer": {
     "tagline": "DiscVault. Gyűjtőknek építve.",

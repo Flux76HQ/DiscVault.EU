@@ -1,5 +1,6 @@
 ---
 import type { MarketingContent } from '../content/types';
+import { toLegacy } from '../content/bridge';
 import type { Locale } from '../content/locales';
 import { DOCS_URL, GITHUB_URL, SUPPORT_URL } from '../config';
 
@@ -8,7 +9,8 @@ interface Props {
   locale: Locale;
 }
 
-const { content, locale } = Astro.props;
+const { content: reelContent, locale } = Astro.props;
+const content = toLegacy(reelContent);
 const privacyPath = locale === 'nl' ? '/privacy-nl.html' : '/privacy.html';
 const termsPath = locale === 'nl' ? '/terms-nl.html' : '/terms.html';
 ---

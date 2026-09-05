@@ -2,117 +2,227 @@
   "locale": "el",
   "languageName": "Ελληνικά",
   "seo": {
-    "title": "DiscVault. Σχεδιασμένο για συλλέκτες.",
-    "description": "Σαρώστε barcodes και πάρτε αυτόματα metadata και εξώφυλλα. Η εφαρμογή λειτουργεί εντελώς μόνη της — χωρίς server. Διαχειριστείτε τη συλλογή σας απευθείας στη συσκευή σας, χωρίς το backend του DiscVault."
+    "title": "DiscVault — ένας κατάλογος για τους δίσκους σου",
+    "description": "Το DiscVault καταλογογραφεί τις ταινίες που έχεις σε 4K, Blu-ray και DVD. Σάρωσε ένα barcode, ξεχώρισε τις εκδόσεις, στη συσκευή σου ή στον δικό σου διακομιστή. Χωρίς παρακολούθηση."
   },
   "nav": {
-    "product": "Λειτουργίες",
-    "ios": "iPhone & iPad",
-    "selfHosted": "Self-hosted",
+    "library": "Βιβλιοθήκη",
+    "scan": "Σάρωση",
+    "editions": "Εκδόσεις",
     "privacy": "Απόρρητο",
+    "install": "Εγκατάσταση",
     "docs": "Docs",
     "menu": "Μενού",
     "language": "Γλώσσες"
   },
-  "hero": {
-    "eyebrow": "DiscVault. Σχεδιασμένο για συλλέκτες.",
-    "title": "Το DiscVault 26 είναι εδώ.",
-    "accent": "Φτιαγμένο για το επόμενο ράφι.",
-    "lead": "Φτιαγμένο για ανθρώπους με πραγματικά ράφια, στοίβες και εκδόσεις.",
+  "actions": {
+    "install": "Εγκατάσταση του DiscVault 26",
+    "installCompact": "Εγκατάσταση v26",
     "appStore": "Λήψη από το App Store",
-    "androidBeta": "Αίτημα πρόσβασης στην beta για Android",
-    "selfHosted": "Εγκατάσταση v26"
+    "android": "Αίτημα πρόσβασης στην beta για Android",
+    "testflight": "Beta στο TestFlight",
+    "privacy": "Πολιτική απορρήτου"
   },
-  "routes": {
-    "eyebrow": "Εγκατάσταση",
-    "heading": "Ξεκινήστε με self-hosted. Προσθέστε κινητό όταν σας ταιριάζει.",
-    "mobileRoadmap": "Οι εφαρμογές iOS και Android λειτουργούν σήμερα αυτόνομα. Η σύνδεσή τους με μια αυτοφιλοξενούμενη εγκατάσταση DiscVault έχει προγραμματιστεί για αργότερα.",
-    "ios": {
-      "label": "iPhone & iPad",
-      "title": "Λειτουργεί αυτόνομα",
-      "body": "Η εφαρμογή λειτουργεί εντελώς μόνη της — χωρίς server. Διαχειριστείτε τη συλλογή σας απευθείας στη συσκευή σας, χωρίς το backend του DiscVault.",
-      "points": [
-        "Σαρώστε barcodes και πάρτε αυτόματα metadata και εξώφυλλα.",
-        "Αναζητήστε ανά τίτλο, είδος ή σκηνοθέτη και φιλτράρετε ανά format."
-      ]
-    },
-    "selfHosted": {
-      "label": "Self-hosted",
-      "title": "Το DiscVault 26 είναι εδώ.",
-      "body": "Το DiscVault 26 μπορεί πλέον να εγκατασταθεί και να χρησιμοποιηθεί. Φέρνει νέο desktop-first library, πλουσιότερα detail pages, PostgreSQL foundation, plugins, migration tools και καλύτερα admin controls για self-hosted catalog φυσικών media.",
-      "points": [
-        "Το DiscVault 26 προσθέτει ροές μόνο με πρόσκληση, εργαλεία owner/admin, Basic και Advanced RBAC, προσομοίωση ρόλων, audit views, πρόσβαση API και MCP-ready integrations.",
-        "Διαχειριστείτε πηγές metadata, receivers, πηγές εισαγωγής, ψηφιακές πηγές πολυμέσων, πακέτα plugins, health checks και εργασίες παρασκηνίου από την περιοχή admin."
-      ]
-    }
-  },
-  "capabilities": {
-    "eyebrow": "Λειτουργίες",
-    "heading": "Φτιαγμένο για ανθρώπους με πραγματικά ράφια, στοίβες και εκδόσεις.",
-    "items": [
-      {
-        "title": "Σάρωση και εμπλουτισμός",
-        "body": "Σαρώστε barcodes και πάρτε αυτόματα metadata και εξώφυλλα."
-      },
-      {
-        "title": "Φίλτρα και αναζήτηση",
-        "body": "Αναζητήστε ανά τίτλο, είδος ή σκηνοθέτη και φιλτράρετε ανά format."
-      },
-      {
-        "title": "Νέα εμπειρία βιβλιοθήκης",
-        "body": "Περιηγηθείτε σε αφίσες, αλλάξτε σε λίστα ή λεπτομέρειες, φιλτράρετε ανά μορφή, ανοίξτε containers και box sets και κρατήστε το interface γρήγορο σε μεγάλες συλλογές."
-      },
-      {
-        "title": "Πλουσιότερες σελίδες ταινιών και containers",
-        "body": "Οι σελίδες λεπτομερειών έχουν χώρο για backdrops, αφίσες, βίντεο, metadata, συμμετοχή σε συλλογές, κατάσταση παρακολούθησης και περιεχόμενα box set."
-      },
-      {
-        "title": "Πλατφόρμα με επίκεντρο τα plugins",
-        "body": "Διαχειριστείτε πηγές metadata, receivers, πηγές εισαγωγής, ψηφιακές πηγές πολυμέσων, πακέτα plugins, health checks και εργασίες παρασκηνίου από την περιοχή admin."
-      },
-      {
-        "title": "Admin, RBAC, API και MCP",
-        "body": "Το DiscVault 26 προσθέτει ροές μόνο με πρόσκληση, εργαλεία owner/admin, Basic και Advanced RBAC, προσομοίωση ρόλων, audit views, πρόσβαση API και MCP-ready integrations."
-      }
+  "leader": {
+    "slate": [
+      "DiscVault 26",
+      "Ένας κατάλογος για τους δίσκους σου",
+      "Self-hosted",
+      "iPhone & iPad",
+      "Beta Android"
+    ],
+    "voice": [
+      "Φως, ",
+      "φυλαγμένο."
+    ],
+    "lead": "Το DiscVault καταλογογραφεί τις ταινίες που έχεις — σε δίσκο, στο ράφι σου, στον δικό σου διακομιστή.",
+    "note": [
+      "PWA & desktop",
+      "Οδηγός εγκατάστασης"
     ]
   },
-  "showcase": {
-    "eyebrow": "Στιγμιότυπα",
-    "heading": "Νέα εμπειρία βιβλιοθήκης",
-    "mobileLibrary": "Βιβλιοθήκη DiscVault 26",
-    "mobileAdd": "Προσθήκη ταινίας",
-    "mobileDetail": "Σελίδα λεπτομερειών",
-    "desktopLibrary": "Βιβλιοθήκη DiscVault 26",
-    "desktopDetail": "Σελίδα λεπτομερειών"
+  "shelf": {
+    "slate": [
+      "Reel 01",
+      "Το ράφι"
+    ],
+    "counter": [
+      "45 / 45 ταινίες",
+      "29 πλακίδια"
+    ],
+    "voice": [
+      "Κάθε έκδοση, εκεί που την ",
+      "άφησες",
+      "."
+    ],
+    "lead": "Ξεφύλλισε αφίσες, άλλαξε σε λίστα ή προβολή λεπτομερειών, φιλτράρισε ανά φορμά, άνοιξε box set και containers. Γρήγορο σε μεγάλες συλλογές."
   },
-  "trust": {
-    "eyebrow": "Απόρρητο",
-    "heading": "Λειτουργεί αυτόνομα",
-    "body": "Η εφαρμογή λειτουργεί εντελώς μόνη της — χωρίς server. Διαχειριστείτε τη συλλογή σας απευθείας στη συσκευή σας, χωρίς το backend του DiscVault.",
-    "noTrackingTitle": "Χωρίς παρακολούθηση",
-    "noTrackingBody": "Καμία ανάλυση, διαφήμιση ή παρακολούθηση από τρίτους.",
-    "controlTitle": "Τα δεδομένα σας, η επιλογή σας",
-    "controlBody": "Κρατήστε τη βιβλιοθήκη σας στη συσκευή σας ή σε έναν διακομιστή DiscVault που διαχειρίζεστε εσείς."
+  "read": {
+    "slate": [
+      "Reel 02",
+      "Η ανάγνωση",
+      "EAN → Τίτλος · Έτος · Φορμά · Εξώφυλλο"
+    ],
+    "voice": [
+      "Στόχευσε με την κάμερα. Ο δίσκος ",
+      "διαβάζεται",
+      " μόνος του."
+    ],
+    "lead": "Σάρωσε ένα barcode και το DiscVault συμπληρώνει τίτλο, έτος, φορμά και εξώφυλλο. Ή αναζήτησε με το όνομα.",
+    "note": [
+      "iPhone & iPad",
+      "Αυτόνομο",
+      "Χωρίς διακομιστή"
+    ],
+    "captureAlt": "Το DiscVault σε iPhone: προσθήκη ταινίας μετά τη σάρωση του barcode της"
   },
-  "comparison": {
-    "eyebrow": "Επιλέξτε τη διαδρομή σας",
-    "heading": "Φτιαγμένο για ανθρώπους με πραγματικά ράφια, στοίβες και εκδόσεις.",
-    "route": "Διαδρομή",
-    "bestFor": "Ιδανικό για",
-    "setup": "Ρύθμιση",
-    "iosBest": "Η εφαρμογή λειτουργεί εντελώς μόνη της — χωρίς server. Διαχειριστείτε τη συλλογή σας απευθείας στη συσκευή σας, χωρίς το backend του DiscVault.",
-    "iosSetup": "Κατεβάστε από το App Store. Δεν απαιτείται διακομιστής.",
-    "selfBest": "Το DiscVault 26 μπορεί πλέον να εγκατασταθεί και να χρησιμοποιηθεί. Φέρνει νέο desktop-first library, πλουσιότερα detail pages, PostgreSQL foundation, plugins, migration tools και καλύτερα admin controls για self-hosted catalog φυσικών media.",
-    "selfSetup": "Ακολουθήστε τον τρέχοντα οδηγό εγκατάστασης στο DiscVault Docs.",
-    "androidSetup": "Ζητήστε πρόσβαση μέσω Discord. Οι εγκεκριμένοι δοκιμαστές εγκαθιστούν μέσω Google Play."
+  "edition": {
+    "slate": [
+      "Reel 03",
+      "Η έκδοση",
+      "4K · BD · DVD · Steel · Box set"
+    ],
+    "voice": [
+      "Οι εκδόσεις ",
+      "μετράνε."
+    ],
+    "lead": "Ένας δίσκος 4K δεν είναι Blu-ray. Ένα steelbook δεν είναι απλή θήκη. Box set, containers και οι δίσκοι μιας κυκλοφορίας καταλογογραφούνται ως αυτό που είναι.",
+    "spines": [
+      "4K Ultra HD",
+      "Blu-ray",
+      "DVD",
+      "Steelbook",
+      "Box set · 8 ταινίες"
+    ]
   },
-  "community": {
-    "eyebrow": "Κοινότητα",
-    "heading": "Χρειάζεστε βοήθεια ή θέλετε να παρακολουθείτε ενημερώσεις;",
-    "discord": "Συμμετοχή στο Discord",
-    "issues": "Αναφορά Issue",
-    "support": "Νήμα υποστήριξης",
-    "finalTitle": "DiscVault. Σχεδιασμένο για συλλέκτες."
+  "vault": {
+    "slate": [
+      "Reel 04",
+      "Το θησαυροφυλάκιο",
+      "0 trackers",
+      "0 διαφημίσεις",
+      "Χωρίς analytics"
+    ],
+    "voice": [
+      "Ζει εκεί που το ",
+      "βάζεις",
+      "."
+    ],
+    "lead": "Στη συσκευή σου ή σε έναν διακομιστή που τρέχεις εσύ. Χωρίς analytics, χωρίς διαφημίσεις, κανείς δεν βλέπει τι βλέπεις.",
+    "body": [
+      "Η εφαρμογή για iPhone και iPad κρατά τη συλλογή στη συσκευή. Το DiscVault 26 την κρατά σε διακομιστή που διαχειρίζεσαι εσύ. Και στις δύο περιπτώσεις, μόνο ένα barcode ή ένας όρος αναζήτησης φεύγει από τη συσκευή."
+    ]
+  },
+  "formats": {
+    "slate": [
+      "Reel 05",
+      "Τα φορμά"
+    ],
+    "voice": [
+      "Τρεις δρόμοι προς τα ",
+      "μέσα."
+    ],
+    "lead": "Self-hosted DiscVault 26 σήμερα. iPhone και iPad αυτόνομα. Android σε beta.",
+    "routes": [
+      {
+        "id": "self-hosted",
+        "slate": [
+          "PWA",
+          "Desktop",
+          "DiscVault 26"
+        ],
+        "title": "Self-hosted",
+        "body": [
+          "Μια βιβλιοθήκη σχεδιασμένη για desktop, πλουσιότερες σελίδες λεπτομερειών, βάση PostgreSQL, plugins, εργαλεία μετάβασης και εργαλεία διαχείρισης για συλλέκτες που κρατούν τον κατάλογό τους στον δικό τους διακομιστή.",
+          "Ροές μόνο με πρόσκληση, εργαλεία ιδιοκτήτη και διαχειριστή, πρόσβαση βάσει ρόλων, προβολές ελέγχου, πρόσβαση σε API και ενσωματώσεις έτοιμες για MCP."
+        ],
+        "action": "Εγκατάσταση του DiscVault 26"
+      },
+      {
+        "id": "ios",
+        "slate": [
+          "iOS",
+          "iPadOS",
+          "Αυτόνομο"
+        ],
+        "title": "iPhone & iPad",
+        "body": [
+          "Τρέχει εξ ολοκλήρου στη συσκευή. Σάρωση, εμπλουτισμός, φιλτράρισμα και αναζήτηση χωρίς διακομιστή."
+        ],
+        "action": "Λήψη από το App Store"
+      },
+      {
+        "id": "android",
+        "slate": [
+          "Android",
+          "Beta"
+        ],
+        "title": "Android",
+        "body": [
+          "Ζητήστε πρόσβαση μέσω Discord. Οι εγκεκριμένοι δοκιμαστές εγκαθιστούν μέσω Google Play."
+        ],
+        "action": "Αίτημα πρόσβασης στην beta για Android"
+      }
+    ],
+    "roadmap": "Οι εφαρμογές iOS και Android λειτουργούν σήμερα αυτόνομα. Η σύνδεσή τους με μια αυτοφιλοξενούμενη εγκατάσταση DiscVault έχει προγραμματιστεί για αργότερα.",
+    "migration": [
+      "Μετάβαση από το Legacy",
+      "Docs"
+    ]
+  },
+  "credits": {
+    "install": {
+      "role": "Εγκατάσταση",
+      "name": "DiscVault 26"
+    },
+    "appStore": {
+      "role": "iPhone & iPad",
+      "name": "App Store"
+    },
+    "android": {
+      "role": "Android",
+      "name": "Beta στο Discord"
+    },
+    "testflight": {
+      "role": "TestFlight",
+      "name": "Beta"
+    },
+    "source": {
+      "role": "Πηγαίος κώδικας",
+      "name": "GitHub"
+    },
+    "community": {
+      "role": "Κοινότητα",
+      "name": "Discord"
+    },
+    "issues": {
+      "role": "Ζητήματα",
+      "name": "GitHub"
+    },
+    "languages": {
+      "role": "Γλώσσες",
+      "name": "Είκοσι"
+    },
+    "privacy": {
+      "role": "Απόρρητο",
+      "name": "Πολιτική απορρήτου"
+    },
+    "terms": {
+      "role": "Όροι",
+      "name": "Όροι"
+    },
+    "legacy": {
+      "role": "Legacy",
+      "name": "Μετάβαση από παλαιότερη έκδοση"
+    },
+    "production": {
+      "role": "Μια παραγωγή της",
+      "name": "Flux76"
+    },
+    "final": [
+      "DiscVault. Φτιαγμένο για ",
+      "συλλέκτες."
+    ]
   },
   "footer": {
     "tagline": "DiscVault. Σχεδιασμένο για συλλέκτες.",

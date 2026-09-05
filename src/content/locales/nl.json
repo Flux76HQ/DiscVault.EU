@@ -2,117 +2,226 @@
   "locale": "nl",
   "languageName": "Nederlands",
   "seo": {
-    "title": "DiscVault. Gebouwd voor verzamelaars.",
-    "description": "Gebruik je camera om barcodes te scannen en haal automatisch filmmetadata en coverafbeeldingen op. De app draait volledig op zichzelf — geen server nodig. Beheer je collectie direct op je apparaat zonder de DiscVault-backend."
+    "title": "DiscVault — een catalogus voor je discs",
+    "description": "DiscVault catalogiseert de films die je bezit op 4K, Blu-ray en dvd. Scan een barcode, houd edities uit elkaar, op je apparaat of je eigen server. Geen tracking."
   },
   "nav": {
-    "product": "Functies",
-    "ios": "iPhone & iPad",
-    "selfHosted": "Self-hosted",
+    "library": "Bibliotheek",
+    "scan": "Scannen",
+    "editions": "Edities",
     "privacy": "Privacy",
+    "install": "Installeren",
     "docs": "Docs",
     "menu": "Menu",
     "language": "Talen"
   },
-  "hero": {
-    "eyebrow": "DiscVault. Gebouwd voor verzamelaars.",
-    "title": "DiscVault 26 is er.",
-    "accent": "Gebouwd voor de volgende plank.",
-    "lead": "Gebouwd voor mensen met echte planken, echte stapels en echte edities.",
+  "actions": {
+    "install": "Installeer DiscVault 26",
+    "installCompact": "Installeer v26",
     "appStore": "Download in de App Store",
-    "androidBeta": "Android-bèta aanvragen",
-    "selfHosted": "Installeer v26"
+    "android": "Android-bèta aanvragen",
+    "testflight": "TestFlight-bèta",
+    "privacy": "Privacybeleid"
   },
-  "routes": {
-    "eyebrow": "Installatie",
-    "heading": "Start self-hosted. Voeg mobiel toe wanneer het past.",
-    "mobileRoadmap": "De iOS- en Android-apps werken nu zelfstandig. Koppeling met een self-hosted DiscVault-installatie staat gepland voor een later stadium.",
-    "ios": {
-      "label": "iPhone & iPad",
-      "title": "Werkt zelfstandig",
-      "body": "De app draait volledig op zichzelf — geen server nodig. Beheer je collectie direct op je apparaat zonder de DiscVault-backend.",
-      "points": [
-        "Gebruik je camera om barcodes te scannen en haal automatisch filmmetadata en coverafbeeldingen op.",
-        "Zoek op titel, genre of regisseur en filter op formaat in een overzichtelijke collectieweergave."
-      ]
-    },
-    "selfHosted": {
-      "label": "Self-hosted",
-      "title": "DiscVault 26 is er.",
-      "body": "DiscVault 26 kan nu geïnstalleerd en gebruikt worden. Het brengt een nieuwe desktop-first bibliotheek, rijkere detailpagina's, PostgreSQL-fundamenten, plugins, migratietools en betere admin-controls voor verzamelaars die hun fysieke media self-hosted willen catalogiseren.",
-      "points": [
-        "DiscVault 26 voegt invite-only flows, eigenaar/admin-tools, Basic en Advanced RBAC, rolsimulatie, auditweergaven, API-toegang en MCP-ready integraties toe.",
-        "Beheer metadatabronnen, receivers, importbronnen, digitale mediabronnen, pluginpakketten, healthchecks en achtergrondtaken vanuit het adminpaneel."
-      ]
-    }
-  },
-  "capabilities": {
-    "eyebrow": "Functies",
-    "heading": "Gebouwd voor mensen met echte planken, echte stapels en echte edities.",
-    "items": [
-      {
-        "title": "Scannen en verrijken",
-        "body": "Gebruik je camera om barcodes te scannen en haal automatisch filmmetadata en coverafbeeldingen op."
-      },
-      {
-        "title": "Filteren en zoeken",
-        "body": "Zoek op titel, genre of regisseur en filter op formaat in een overzichtelijke collectieweergave."
-      },
-      {
-        "title": "Nieuwe bibliotheekervaring",
-        "body": "Blader door posters, schakel naar lijst- of detailweergave, filter op formaat, open containers en boxsets, en houd grote collecties snel."
-      },
-      {
-        "title": "Rijkere film- en containerpagina's",
-        "body": "Detailpagina's bieden nu ruimte voor backdrops, posters, video's, metadata, collectiekoppelingen, bekeken-status en boxsetinhoud."
-      },
-      {
-        "title": "Platform rond plugins",
-        "body": "Beheer metadatabronnen, receivers, importbronnen, digitale mediabronnen, pluginpakketten, healthchecks en achtergrondtaken vanuit het adminpaneel."
-      },
-      {
-        "title": "Admin, RBAC, API en MCP",
-        "body": "DiscVault 26 voegt invite-only flows, eigenaar/admin-tools, Basic en Advanced RBAC, rolsimulatie, auditweergaven, API-toegang en MCP-ready integraties toe."
-      }
+  "leader": {
+    "slate": [
+      "DiscVault 26",
+      "Een catalogus voor je discs",
+      "Self-hosted",
+      "iPhone & iPad",
+      "Android-bèta"
+    ],
+    "voice": [
+      "Licht, ",
+      "bewaard."
+    ],
+    "lead": "DiscVault catalogiseert de films die je bezit — op disc, op je plank, op je eigen server.",
+    "note": [
+      "PWA & desktop",
+      "Installatiegids"
     ]
   },
-  "showcase": {
-    "eyebrow": "Schermafbeeldingen",
-    "heading": "Nieuwe bibliotheekervaring",
-    "mobileLibrary": "DiscVault 26 bibliotheek",
-    "mobileAdd": "Film toevoegen",
-    "mobileDetail": "Detailpagina",
-    "desktopLibrary": "DiscVault 26 bibliotheek",
-    "desktopDetail": "Detailpagina"
+  "shelf": {
+    "slate": [
+      "Reel 01",
+      "De plank"
+    ],
+    "counter": [
+      "45 / 45 films",
+      "29 tegels"
+    ],
+    "voice": [
+      "Elke editie, waar je hem ",
+      "liet",
+      " staan."
+    ],
+    "lead": "Blader door posters, wissel naar lijst- of detailweergave, filter op formaat, open boxsets en containers. Snel bij grote collecties."
   },
-  "trust": {
-    "eyebrow": "Privacy",
-    "heading": "Werkt zelfstandig",
-    "body": "De app draait volledig op zichzelf — geen server nodig. Beheer je collectie direct op je apparaat zonder de DiscVault-backend.",
-    "noTrackingTitle": "Geen tracking",
-    "noTrackingBody": "Geen analytics, advertenties of tracking door derden.",
-    "controlTitle": "Jouw data, jouw keuze",
-    "controlBody": "Bewaar je bibliotheek op je apparaat of op een DiscVault-server die je zelf beheert."
+  "read": {
+    "slate": [
+      "Reel 02",
+      "De scan",
+      "EAN → Titel · Jaar · Formaat · Cover"
+    ],
+    "voice": [
+      "Richt de camera. De disc ",
+      "leest",
+      " zichzelf."
+    ],
+    "lead": "Scan een barcode en DiscVault vult titel, jaar, formaat en coverafbeelding in. Of zoek op naam.",
+    "note": [
+      "iPhone & iPad",
+      "Zelfstandig",
+      "Geen server nodig"
+    ],
+    "captureAlt": "DiscVault op iPhone: een film toevoegen na het scannen van de barcode"
   },
-  "comparison": {
-    "eyebrow": "Kies je route",
-    "heading": "Gebouwd voor mensen met echte planken, echte stapels en echte edities.",
-    "route": "Route",
-    "bestFor": "Het beste voor",
-    "setup": "Installatie",
-    "iosBest": "De app draait volledig op zichzelf — geen server nodig. Beheer je collectie direct op je apparaat zonder de DiscVault-backend.",
-    "iosSetup": "Download in de App Store. Geen server nodig.",
-    "selfBest": "DiscVault 26 kan nu geïnstalleerd en gebruikt worden. Het brengt een nieuwe desktop-first bibliotheek, rijkere detailpagina's, PostgreSQL-fundamenten, plugins, migratietools en betere admin-controls voor verzamelaars die hun fysieke media self-hosted willen catalogiseren.",
-    "selfSetup": "Volg de actuele installatiehandleiding in DiscVault Docs.",
-    "androidSetup": "Vraag toegang aan via Discord. Goedgekeurde testers installeren via Google Play."
+  "edition": {
+    "slate": [
+      "Reel 03",
+      "De editie",
+      "4K · BD · dvd · Steel · Boxset"
+    ],
+    "voice": [
+      "Edities ",
+      "tellen."
+    ],
+    "lead": "Een 4K-disc is geen Blu-ray. Een steelbook is geen keepcase. Boxsets, containers en de discs in een release worden gecatalogiseerd als wat ze zijn.",
+    "spines": [
+      "4K Ultra HD",
+      "Blu-ray",
+      "DVD",
+      "Steelbook",
+      "Boxset · 8 films"
+    ]
   },
-  "community": {
-    "eyebrow": "Community",
-    "heading": "Hulp nodig of wil je updates volgen?",
-    "discord": "Word lid van Discord",
-    "issues": "Probleem melden",
-    "support": "Supportthread",
-    "finalTitle": "DiscVault. Gebouwd voor verzamelaars."
+  "vault": {
+    "slate": [
+      "Reel 04",
+      "De kluis",
+      "0 trackers",
+      "0 advertenties",
+      "Geen analytics"
+    ],
+    "voice": [
+      "Het staat waar jij het ",
+      "neerzet."
+    ],
+    "lead": "Op je apparaat, of op een server die je zelf draait. Geen analytics, geen advertenties, niemand die meekijkt wat je kijkt.",
+    "body": [
+      "De iPhone- en iPad-app bewaart je collectie op het apparaat. DiscVault 26 bewaart hem op een server die jij beheert. In beide gevallen verlaat alleen een barcode of een zoekterm het apparaat."
+    ]
+  },
+  "formats": {
+    "slate": [
+      "Reel 05",
+      "De formaten"
+    ],
+    "voice": [
+      "Drie manieren ",
+      "binnen."
+    ],
+    "lead": "Self-hosted DiscVault 26 vandaag. iPhone en iPad zelfstandig. Android in bèta.",
+    "routes": [
+      {
+        "id": "self-hosted",
+        "slate": [
+          "PWA",
+          "Desktop",
+          "DiscVault 26"
+        ],
+        "title": "Self-hosted",
+        "body": [
+          "Een desktop-first bibliotheek, rijkere detailpagina's, PostgreSQL-fundamenten, plugins, migratietools en admin-controls voor verzamelaars die hun catalogus op hun eigen server houden.",
+          "Invite-only flows, eigenaar- en admin-tools, rolgebaseerde toegang, auditweergaven, API-toegang en MCP-ready integraties."
+        ],
+        "action": "Installeer DiscVault 26"
+      },
+      {
+        "id": "ios",
+        "slate": [
+          "iOS",
+          "iPadOS",
+          "Zelfstandig"
+        ],
+        "title": "iPhone & iPad",
+        "body": [
+          "Draait volledig op het apparaat. Scannen, verrijken, filteren en zoeken zonder server."
+        ],
+        "action": "Download in de App Store"
+      },
+      {
+        "id": "android",
+        "slate": [
+          "Android",
+          "Bèta"
+        ],
+        "title": "Android",
+        "body": [
+          "Vraag toegang aan via Discord. Goedgekeurde testers installeren via Google Play."
+        ],
+        "action": "Android-bèta aanvragen"
+      }
+    ],
+    "roadmap": "De iOS- en Android-apps werken nu zelfstandig. Koppeling met een self-hosted DiscVault-installatie staat gepland voor een later stadium.",
+    "migration": [
+      "Migreren vanaf Legacy",
+      "Docs"
+    ]
+  },
+  "credits": {
+    "install": {
+      "role": "Installeren",
+      "name": "DiscVault 26"
+    },
+    "appStore": {
+      "role": "iPhone & iPad",
+      "name": "App Store"
+    },
+    "android": {
+      "role": "Android",
+      "name": "Bèta via Discord"
+    },
+    "testflight": {
+      "role": "TestFlight",
+      "name": "Bèta"
+    },
+    "source": {
+      "role": "Broncode",
+      "name": "GitHub"
+    },
+    "community": {
+      "role": "Community",
+      "name": "Discord"
+    },
+    "issues": {
+      "role": "Problemen",
+      "name": "GitHub"
+    },
+    "languages": {
+      "role": "Talen",
+      "name": "Twintig"
+    },
+    "privacy": {
+      "role": "Privacy",
+      "name": "Privacybeleid"
+    },
+    "terms": {
+      "role": "Voorwaarden",
+      "name": "Voorwaarden"
+    },
+    "legacy": {
+      "role": "Legacy",
+      "name": "Migratie van oudere versie"
+    },
+    "production": {
+      "role": "Een productie van",
+      "name": "Flux76"
+    },
+    "final": [
+      "DiscVault. Gebouwd voor ",
+      "verzamelaars."
+    ]
   },
   "footer": {
     "tagline": "DiscVault. Gebouwd voor verzamelaars.",

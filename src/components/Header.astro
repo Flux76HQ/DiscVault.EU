@@ -1,6 +1,7 @@
 ---
 import type { Locale } from '../content/locales';
 import type { MarketingContent } from '../content/types';
+import { toLegacy } from '../content/bridge';
 import {
   ANDROID_BETA_SIGNUP_URL,
   APP_STORE_URL,
@@ -15,7 +16,8 @@ interface Props {
   homePath: string;
 }
 
-const { content, locale, homePath } = Astro.props;
+const { content: reelContent, locale, homePath } = Astro.props;
+const content = toLegacy(reelContent);
 const homeAnchor = (anchor: string) => `${homePath}${anchor}`;
 ---
 

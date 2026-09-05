@@ -7,7 +7,8 @@ import mobileDetail from '../assets/showcase/mobile-detail.png';
 import desktopLibrary from '../assets/showcase/desktop-library.png';
 import desktopDetail from '../assets/showcase/desktop-detail.png';
 import type { Locale } from '../content/locales';
-import type { MarketingContent, ProductRoute } from '../content/types';
+import type { MarketingContent } from '../content/types';
+import { toLegacy, type LegacyRoute as ProductRoute } from '../content/bridge';
 import {
   ANDROID_BETA_SIGNUP_URL,
   APP_STORE_URL,
@@ -26,7 +27,8 @@ interface Props {
   homePath: string;
 }
 
-const { content, locale, homePath } = Astro.props;
+const { content: reelContent, locale, homePath } = Astro.props;
+const content = toLegacy(reelContent);
 const privacyPath = locale === 'nl' ? '/privacy-nl.html' : '/privacy.html';
 
 const routes: Array<{
@@ -74,7 +76,7 @@ const routes: Array<{
 ];
 ---
 
-<Header content={content} locale={locale} homePath={homePath} />
+<Header content={reelContent} locale={locale} homePath={homePath} />
 
 <main id="main">
   <span id="discvault26" class="anchor-target" aria-hidden="true"></span>
@@ -366,4 +368,4 @@ const routes: Array<{
   </section>
 </main>
 
-<Footer content={content} locale={locale} />
+<Footer content={reelContent} locale={locale} />

@@ -2,117 +2,227 @@
   "locale": "fi",
   "languageName": "Suomi",
   "seo": {
-    "title": "DiscVault. Rakennettu keräilijöille.",
-    "description": "Skannaa viivakoodeja kameralla ja hae automaattisesti elokuvien metatiedot ja kansikuvat. Sovellus toimii täysin itsenäisesti — palvelinta ei tarvita. Hallitse kokoelmaasi suoraan laitteellasi ilman DiscVault-backendia."
+    "title": "DiscVault — luettelo levyillesi",
+    "description": "DiscVault luetteloi omistamasi elokuvat 4K-, Blu-ray- ja DVD-levyillä. Skannaa viivakoodi, pidä julkaisut erillään, omalla laitteellasi tai omalla palvelimellasi. Ei seurantaa."
   },
   "nav": {
-    "product": "Ominaisuudet",
-    "ios": "iPhone & iPad",
-    "selfHosted": "Self-hosted",
+    "library": "Kirjasto",
+    "scan": "Skannaa",
+    "editions": "Julkaisut",
     "privacy": "Tietosuoja",
+    "install": "Asenna",
     "docs": "Docs",
     "menu": "Valikko",
     "language": "Kielet"
   },
-  "hero": {
-    "eyebrow": "DiscVault. Rakennettu keräilijöille.",
-    "title": "DiscVault 26 on taalla.",
-    "accent": "Rakennettu seuraavalle hyllylle.",
-    "lead": "Rakennettu ihmisille, joilla on oikeita hyllyjä, pinoja ja julkaisuja.",
+  "actions": {
+    "install": "Asenna DiscVault 26",
+    "installCompact": "Asenna v26",
     "appStore": "Lataa App Storesta",
-    "androidBeta": "Pyydä pääsyä Android-betaan",
-    "selfHosted": "Asenna v26"
+    "android": "Pyydä pääsyä Android-betaan",
+    "testflight": "TestFlight-beta",
+    "privacy": "Tietosuojakäytäntö"
   },
-  "routes": {
-    "eyebrow": "Asennus",
-    "heading": "Aloita itse ylläpidetystä. Lisää mobiili, kun se sopii.",
-    "mobileRoadmap": "iOS- ja Android-sovellukset toimivat tällä hetkellä itsenäisesti. Niiden yhdistäminen itse ylläpidettyyn DiscVault-asennukseen on suunnitteilla myöhemmin.",
-    "ios": {
-      "label": "iPhone & iPad",
-      "title": "Toimii itsenäisesti",
-      "body": "Sovellus toimii täysin itsenäisesti — palvelinta ei tarvita. Hallitse kokoelmaasi suoraan laitteellasi ilman DiscVault-backendia.",
-      "points": [
-        "Skannaa viivakoodeja kameralla ja hae automaattisesti elokuvien metatiedot ja kansikuvat.",
-        "Hae nimellä, lajityypillä tai ohjaajalla ja suodata formaatin mukaan selkeässä kokoelmanäkymässä."
-      ]
-    },
-    "selfHosted": {
-      "label": "Self-hosted",
-      "title": "DiscVault 26 on taalla.",
-      "body": "DiscVault 26 voidaan asentaa ja ottaa kayttoon nyt. Se tuo uuden desktop-first-kirjaston, rikkaammat tietosivut, PostgreSQL-pohjan, pluginit, migraatiotyokalut ja paremmat admin-kontrollit self-hosted fyysisille kokoelmille.",
-      "points": [
-        "DiscVault 26 lisaä kutsupohjaiset virrat, owner/admin-tyokalut, Basic ja Advanced RBACin, roolisimulaation, audit-nakymat, API-kayton ja MCP-valmiit integraatiot.",
-        "Hallitse metadatalahteita, vastaanottimia, tuontilahteita, digitaalisia medialahteita, plugin-paketteja, health checkeja ja taustatoita admin-alueelta."
-      ]
-    }
-  },
-  "capabilities": {
-    "eyebrow": "Ominaisuudet",
-    "heading": "Rakennettu ihmisille, joilla on oikeita hyllyjä, pinoja ja julkaisuja.",
-    "items": [
-      {
-        "title": "Skannaa ja rikasta",
-        "body": "Skannaa viivakoodeja kameralla ja hae automaattisesti elokuvien metatiedot ja kansikuvat."
-      },
-      {
-        "title": "Suodata ja hae",
-        "body": "Hae nimellä, lajityypillä tai ohjaajalla ja suodata formaatin mukaan selkeässä kokoelmanäkymässä."
-      },
-      {
-        "title": "Uusi kirjastokokemus",
-        "body": "Selaa julisteita, vaihda lista- tai yksityiskohtanakymiin, suodata formaatin mukaan, avaa containerit ja box setit, ja pida kayttoliittyma nopeana suurissa kokoelmissa."
-      },
-      {
-        "title": "Rikkaammat elokuva- ja container-sivut",
-        "body": "Yksityiskohtasivuilla on nyt tilaa backdroppien, julisteiden, videoiden, metadatan, kokoelmajasenyyden, katsottu-tilan ja box set -sisaltojen nayttamiseen."
-      },
-      {
-        "title": "Plugin-keskeinen alusta",
-        "body": "Hallitse metadatalahteita, vastaanottimia, tuontilahteita, digitaalisia medialahteita, plugin-paketteja, health checkeja ja taustatoita admin-alueelta."
-      },
-      {
-        "title": "Admin, RBAC, API ja MCP",
-        "body": "DiscVault 26 lisaä kutsupohjaiset virrat, owner/admin-tyokalut, Basic ja Advanced RBACin, roolisimulaation, audit-nakymat, API-kayton ja MCP-valmiit integraatiot."
-      }
+  "leader": {
+    "slate": [
+      "DiscVault 26",
+      "Luettelo levyillesi",
+      "Itse isännöity",
+      "iPhone & iPad",
+      "Android-beta"
+    ],
+    "voice": [
+      "Valo, ",
+      "talletettu."
+    ],
+    "lead": "DiscVault luetteloi omistamasi elokuvat — levyllä, hyllyssä, omalla palvelimellasi.",
+    "note": [
+      "PWA & työpöytä",
+      "Asennusohje"
     ]
   },
-  "showcase": {
-    "eyebrow": "Kuvakaappaukset",
-    "heading": "Uusi kirjastokokemus",
-    "mobileLibrary": "DiscVault 26 kirjasto",
-    "mobileAdd": "Lisää elokuva",
-    "mobileDetail": "Yksityiskohtasivu",
-    "desktopLibrary": "DiscVault 26 kirjasto",
-    "desktopDetail": "Yksityiskohtasivu"
+  "shelf": {
+    "slate": [
+      "Reel 01",
+      "Hylly"
+    ],
+    "counter": [
+      "45 / 45 elokuvaa",
+      "29 ruutua"
+    ],
+    "voice": [
+      "Jokainen julkaisu siinä, mihin sen ",
+      "jätit",
+      "."
+    ],
+    "lead": "Selaa julisteita, vaihda luettelo- tai tietonäkymään, suodata formaatin mukaan, avaa boksit ja säiliöt. Nopea suurissa kokoelmissa."
   },
-  "trust": {
-    "eyebrow": "Tietosuoja",
-    "heading": "Toimii itsenäisesti",
-    "body": "Sovellus toimii täysin itsenäisesti — palvelinta ei tarvita. Hallitse kokoelmaasi suoraan laitteellasi ilman DiscVault-backendia.",
-    "noTrackingTitle": "Ei seurantaa",
-    "noTrackingBody": "Ei analytiikkaa, mainontaa tai kolmannen osapuolen seurantaa.",
-    "controlTitle": "Omat tiedot, oma valinta",
-    "controlBody": "Säilytä kirjastosi laitteellasi tai DiscVault-palvelimella, jota itse hallinnoit."
+  "read": {
+    "slate": [
+      "Reel 02",
+      "Luku",
+      "EAN → Nimi · Vuosi · Formaatti · Kansi"
+    ],
+    "voice": [
+      "Osoita kameralla. Levy ",
+      "lukee",
+      " itsensä."
+    ],
+    "lead": "Skannaa viivakoodi, ja DiscVault täyttää nimen, vuoden, formaatin ja kannen. Tai hae nimellä.",
+    "note": [
+      "iPhone & iPad",
+      "Itsenäinen",
+      "Ei palvelinta"
+    ],
+    "captureAlt": "DiscVault iPhonella: elokuvan lisääminen viivakoodin skannauksen jälkeen"
   },
-  "comparison": {
-    "eyebrow": "Valitse reittisi",
-    "heading": "Rakennettu ihmisille, joilla on oikeita hyllyjä, pinoja ja julkaisuja.",
-    "route": "Reitti",
-    "bestFor": "Parhaiten sopii",
-    "setup": "Käyttöönotto",
-    "iosBest": "Sovellus toimii täysin itsenäisesti — palvelinta ei tarvita. Hallitse kokoelmaasi suoraan laitteellasi ilman DiscVault-backendia.",
-    "iosSetup": "Lataa App Storesta. Palvelinta ei tarvita.",
-    "selfBest": "DiscVault 26 voidaan asentaa ja ottaa kayttoon nyt. Se tuo uuden desktop-first-kirjaston, rikkaammat tietosivut, PostgreSQL-pohjan, pluginit, migraatiotyokalut ja paremmat admin-kontrollit self-hosted fyysisille kokoelmille.",
-    "selfSetup": "Seuraa DiscVault Docsin ajantasaista asennusohjetta.",
-    "androidSetup": "Pyydä pääsyä Discordissa. Hyväksytyt testaajat asentavat Google Playn kautta."
+  "edition": {
+    "slate": [
+      "Reel 03",
+      "Julkaisu",
+      "4K · BD · DVD · Steel · Boksi"
+    ],
+    "voice": [
+      "Julkaisuilla on ",
+      "väliä."
+    ],
+    "lead": "4K-levy ei ole Blu-ray. Steelbook ei ole tavallinen kotelo. Boksit, säiliöt ja julkaisun sisältämät levyt luetteloidaan sinä, mitä ne ovat.",
+    "spines": [
+      "4K Ultra HD",
+      "Blu-ray",
+      "DVD",
+      "Steelbook",
+      "Boksi · 8 elokuvaa"
+    ]
   },
-  "community": {
-    "eyebrow": "Yhteisö",
-    "heading": "Tarvitsetko apua tai haluatko seurata päivityksiä?",
-    "discord": "Liity Discordiin",
-    "issues": "Ilmoita ongelmasta",
-    "support": "Tukiketju",
-    "finalTitle": "DiscVault. Rakennettu keräilijöille."
+  "vault": {
+    "slate": [
+      "Reel 04",
+      "Holvi",
+      "0 seurainta",
+      "0 mainosta",
+      "Ei analytiikkaa"
+    ],
+    "voice": [
+      "Se on siellä, minne sen ",
+      "laitat",
+      "."
+    ],
+    "lead": "Omalla laitteellasi tai palvelimella, jota itse ylläpidät. Ei analytiikkaa, ei mainoksia, kukaan ei katso mitä katsot.",
+    "body": [
+      "iPhone- ja iPad-sovellus pitää kokoelman laitteella. DiscVault 26 pitää sen palvelimella, jota hallinnoit. Kummassakin tapauksessa laitteelta lähtee vain viivakoodi tai hakusana."
+    ]
+  },
+  "formats": {
+    "slate": [
+      "Reel 05",
+      "Formaatit"
+    ],
+    "voice": [
+      "Kolme tietä ",
+      "sisään."
+    ],
+    "lead": "Itse isännöity DiscVault 26 tänään. iPhone ja iPad itsenäisesti. Android betassa.",
+    "routes": [
+      {
+        "id": "self-hosted",
+        "slate": [
+          "PWA",
+          "Desktop",
+          "DiscVault 26"
+        ],
+        "title": "Self-hosted",
+        "body": [
+          "Työpöydälle suunniteltu kirjasto, rikkaammat tietosivut, PostgreSQL-perusta, lisäosat, siirtotyökalut ja hallintatyökalut keräilijöille, jotka pitävät luettelonsa omalla palvelimellaan.",
+          "Kutsuperusteiset kulut, omistajan ja ylläpitäjän työkalut, roolipohjainen pääsy, auditointinäkymät, API-pääsy ja MCP-valmiit integraatiot."
+        ],
+        "action": "Asenna DiscVault 26"
+      },
+      {
+        "id": "ios",
+        "slate": [
+          "iOS",
+          "iPadOS",
+          "Itsenäinen"
+        ],
+        "title": "iPhone & iPad",
+        "body": [
+          "Toimii kokonaan laitteella. Skannaa, rikasta, suodata ja hae ilman palvelinta."
+        ],
+        "action": "Lataa App Storesta"
+      },
+      {
+        "id": "android",
+        "slate": [
+          "Android",
+          "Beta"
+        ],
+        "title": "Android",
+        "body": [
+          "Pyydä pääsyä Discordissa. Hyväksytyt testaajat asentavat Google Playn kautta."
+        ],
+        "action": "Pyydä pääsyä Android-betaan"
+      }
+    ],
+    "roadmap": "iOS- ja Android-sovellukset toimivat tällä hetkellä itsenäisesti. Niiden yhdistäminen itse ylläpidettyyn DiscVault-asennukseen on suunnitteilla myöhemmin.",
+    "migration": [
+      "Siirtyminen Legacystä",
+      "Docs"
+    ]
+  },
+  "credits": {
+    "install": {
+      "role": "Asenna",
+      "name": "DiscVault 26"
+    },
+    "appStore": {
+      "role": "iPhone & iPad",
+      "name": "App Store"
+    },
+    "android": {
+      "role": "Android",
+      "name": "Beta Discordissa"
+    },
+    "testflight": {
+      "role": "TestFlight",
+      "name": "Beta"
+    },
+    "source": {
+      "role": "Lähdekoodi",
+      "name": "GitHub"
+    },
+    "community": {
+      "role": "Yhteisö",
+      "name": "Discord"
+    },
+    "issues": {
+      "role": "Ongelmat",
+      "name": "GitHub"
+    },
+    "languages": {
+      "role": "Kielet",
+      "name": "Kaksikymmentä"
+    },
+    "privacy": {
+      "role": "Tietosuoja",
+      "name": "Tietosuojakäytäntö"
+    },
+    "terms": {
+      "role": "Ehdot",
+      "name": "Käyttöehdot"
+    },
+    "legacy": {
+      "role": "Legacy",
+      "name": "Vanhan version siirto"
+    },
+    "production": {
+      "role": "Tuotanto",
+      "name": "Flux76"
+    },
+    "final": [
+      "DiscVault. Tehty ",
+      "keräilijöille."
+    ]
   },
   "footer": {
     "tagline": "DiscVault. Rakennettu keräilijöille.",
