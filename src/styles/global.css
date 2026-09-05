@@ -156,214 +156,6 @@ h3 {
   scroll-margin-top: 6rem;
 }
 
-.site-header {
-  position: sticky;
-  z-index: 30;
-  top: 0;
-  border-bottom: 1px solid var(--dv-border-subtle);
-  background: color-mix(in srgb, var(--dv-bg) 88%, transparent);
-  backdrop-filter: blur(18px);
-}
-
-.header-inner {
-  display: flex;
-  min-height: 72px;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-}
-
-.brand {
-  display: inline-flex;
-  min-height: 44px;
-  align-items: center;
-  gap: 0.7rem;
-  color: var(--dv-text);
-  font-size: 1.05rem;
-  font-weight: 760;
-  text-decoration: none;
-}
-
-.brand img,
-.footer-brand img {
-  border-radius: 24%;
-}
-
-.desktop-nav {
-  display: none;
-  align-items: center;
-  gap: 0.2rem;
-}
-
-.desktop-nav a {
-  display: inline-flex;
-  min-height: 44px;
-  align-items: center;
-  padding-inline: 0.65rem;
-  color: var(--dv-text-2);
-  font-size: 0.88rem;
-  font-weight: 650;
-  text-decoration: none;
-}
-
-.desktop-nav a:hover {
-  color: var(--dv-text);
-}
-
-.header-tools {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.locale-switcher select {
-  min-height: 44px;
-  max-width: 9rem;
-  border: 1px solid var(--dv-border);
-  border-radius: 0.65rem;
-  background: var(--dv-surface-1);
-  color: var(--dv-text);
-  font: inherit;
-  font-size: 0.85rem;
-}
-
-.header-actions {
-  display: none;
-  gap: 0.5rem;
-}
-
-.mobile-menu {
-  position: relative;
-}
-
-.mobile-menu summary {
-  display: inline-flex;
-  min-height: 44px;
-  cursor: pointer;
-  list-style: none;
-  align-items: center;
-  padding: 0.55rem 0.8rem;
-  border: 1px solid var(--dv-border);
-  border-radius: 0.65rem;
-  background: var(--dv-surface-1);
-  font-weight: 700;
-}
-
-.mobile-menu summary::-webkit-details-marker {
-  display: none;
-}
-
-.mobile-menu nav {
-  position: absolute;
-  top: calc(100% + 0.6rem);
-  right: 0;
-  display: grid;
-  width: min(18rem, calc(100vw - 2rem));
-  max-height: calc(100vh - 5.5rem);
-  max-height: calc(100dvh - 5.5rem);
-  overflow-y: auto;
-  overscroll-behavior: contain;
-  padding: 0.5rem;
-  border: 1px solid var(--dv-border);
-  border-radius: 0.9rem;
-  background: var(--dv-surface-1);
-  box-shadow: var(--dv-shadow);
-}
-
-.mobile-menu nav a {
-  display: flex;
-  min-height: 44px;
-  align-items: center;
-  padding-inline: 0.75rem;
-  border-radius: 0.5rem;
-  color: var(--dv-text);
-  font-weight: 650;
-  text-decoration: none;
-}
-
-.mobile-menu nav a:hover {
-  background: var(--dv-surface-3);
-}
-
-.mobile-menu nav .mobile-menu-primary {
-  justify-content: center;
-  border: 1px solid var(--dv-accent);
-  margin-bottom: 0.25rem;
-  background: var(--dv-accent);
-  color: var(--dv-accent-on);
-}
-
-.mobile-menu nav .mobile-menu-primary:hover {
-  border-color: var(--dv-accent-hover);
-  background: var(--dv-accent-hover);
-  color: var(--dv-accent-on);
-}
-
-.button {
-  display: inline-flex;
-  min-height: 52px;
-  align-items: center;
-  justify-content: center;
-  gap: 0.25rem;
-  padding: 0.7rem 1.25rem;
-  border: 1px solid var(--dv-accent);
-  border-radius: 0.8rem;
-  background: var(--dv-accent);
-  box-shadow: 0 8px 28px color-mix(in srgb, var(--dv-accent) 24%, transparent);
-  color: var(--dv-accent-on);
-  font-weight: 760;
-  line-height: 1.2;
-  text-align: center;
-  text-decoration: none;
-  transition:
-    background 160ms ease,
-    border-color 160ms ease,
-    transform 160ms ease;
-}
-
-.button:hover {
-  border-color: var(--dv-accent-hover);
-  background: var(--dv-accent-hover);
-  color: var(--dv-accent-on);
-  transform: translateY(-2px);
-}
-
-.button:active {
-  border-color: var(--dv-accent-press);
-  background: var(--dv-accent-press);
-  transform: translateY(0);
-}
-
-.button-compact {
-  min-height: 44px;
-  padding: 0.55rem 0.8rem;
-  font-size: 0.82rem;
-}
-
-.button-kicker {
-  display: block;
-  color: var(--dv-accent-on);
-  font-size: 0.64rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.button-secondary {
-  border-color: var(--dv-border);
-  background: var(--dv-surface-1);
-  box-shadow: none;
-  color: var(--dv-text);
-}
-
-.button-secondary .button-kicker {
-  color: var(--dv-accent-bright);
-}
-
-.button-secondary:hover .button-kicker {
-  color: var(--dv-accent-on);
-}
-
 .platform-actions {
   display: grid;
   max-width: 44rem;
@@ -766,45 +558,6 @@ tbody tr:last-child > * {
   margin-inline: auto;
 }
 
-.site-footer {
-  border-top: 1px solid var(--dv-border-subtle);
-  background: var(--dv-surface-1);
-}
-
-.footer-inner {
-  display: grid;
-  gap: 2rem;
-  padding-block: 2.5rem;
-}
-
-.footer-brand {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-
-.footer-brand p,
-.footer-note {
-  margin: 0;
-  color: var(--dv-text-2);
-  font-size: 0.85rem;
-}
-
-.footer-inner nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.3rem 1rem;
-}
-
-.footer-inner nav a {
-  display: inline-flex;
-  min-height: 44px;
-  align-items: center;
-  color: var(--dv-text-2);
-  font-size: 0.88rem;
-  font-weight: 650;
-}
-
 .legal-hero {
   padding-block: clamp(4rem, 10vw, 7rem) 3rem;
 }
@@ -888,20 +641,6 @@ tbody tr:last-child > * {
   margin-bottom: 0;
 }
 
-@media (max-width: 30rem) {
-  .header-inner {
-    gap: 0.5rem;
-  }
-
-  .brand > span {
-    display: none;
-  }
-
-  .locale-switcher select {
-    max-width: 7.5rem;
-  }
-}
-
 @media (min-width: 40rem) {
   .platform-secondary-actions {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -913,15 +652,6 @@ tbody tr:last-child > * {
 
   .shot-desktop {
     grid-column: span 3;
-  }
-
-  .footer-inner {
-    grid-template-columns: 1fr 2fr;
-    align-items: center;
-  }
-
-  .footer-note {
-    grid-column: 1 / -1;
   }
 }
 
@@ -948,30 +678,6 @@ tbody tr:last-child > * {
 
   .trust-panel {
     grid-template-columns: minmax(0, 1.15fr) minmax(18rem, 0.85fr);
-  }
-}
-
-@media (min-width: 78rem) {
-  .desktop-nav,
-  .header-actions {
-    display: flex;
-  }
-
-  .mobile-menu {
-    display: none;
-  }
-
-  .locale-switcher select {
-    max-width: 7.5rem;
-  }
-
-  .footer-inner {
-    grid-template-columns: 1fr 2fr auto;
-  }
-
-  .footer-note {
-    grid-column: auto;
-    text-align: right;
   }
 }
 

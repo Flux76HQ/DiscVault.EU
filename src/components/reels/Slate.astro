@@ -1,0 +1,41 @@
+---
+/**
+ * A slate: facts in Martian Mono, joined by a hair-spaced middle dot.
+ * `strong` marks the index of a fact to set in platinum (the product name).
+ */
+interface Props {
+  facts: readonly string[];
+  strong?: number;
+  as?: 'p' | 'span' | 'div';
+  class?: string;
+  id?: string;
+  hidden?: boolean;
+}
+
+const {
+  facts,
+  strong,
+  as: Tag = 'p',
+  class: className,
+  id,
+  hidden,
+} = Astro.props;
+const HAIR = ' ';
+---
+
+<Tag class:list={['slate', className]} id={id} aria-hidden={hidden}>
+  {
+    facts.map((fact: string, index: number) => (
+      <>
+        {index > 0 && (
+          <span class="slate-dot" aria-hidden="true">
+            {HAIR}·{HAIR}
+          </span>
+        )}
+        <span class:list={['slate-fact', { 'slate-strong': index === strong }]}>
+          {fact}
+        </span>
+      </>
+    ))
+  }
+</Tag>

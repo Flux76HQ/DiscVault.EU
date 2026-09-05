@@ -1,0 +1,26 @@
+---
+/**
+ * A voice line in Instrument Serif. Segments render in order; the segment at
+ * index 1 is the emphasised word and is set in italic.
+ */
+import type { Segments } from '../../content/types';
+
+interface Props {
+  segments: Segments;
+  level?: 1 | 2 | 3 | 'p';
+  size?: 'xl' | 'l' | 'm' | 's';
+  class?: string;
+  id?: string;
+}
+
+const { segments, level = 2, size = 'l', class: className, id } = Astro.props;
+const Tag = level === 'p' ? 'p' : (`h${level}` as 'h1' | 'h2' | 'h3');
+---
+
+<Tag class:list={['voice', `voice-${size}`, className]} id={id}>
+  {
+    segments.map((segment, index) =>
+      index === 1 ? <em>{segment}</em> : segment,
+    )
+  }
+</Tag>
