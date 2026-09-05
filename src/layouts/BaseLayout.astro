@@ -45,7 +45,17 @@ const groundColor = '#04070D';
 const returnFlagScript =
   "try{if(sessionStorage.getItem('dv-hero-seen'))document.documentElement.classList.add('is-return')}catch(e){}";
 const canonical = new URL(canonicalPath, SITE_URL).href;
-const ogImage = new URL('/brand/discvault-icon-512-dark.png', SITE_URL).href;
+const iconImage = new URL('/brand/discvault-icon-512-dark.png', SITE_URL).href;
+// The marketing routes share a 1200 × 630 social image (the disc under the
+// key light with the campaign line); the legal shell keeps the icon.
+const socialImage =
+  Astro.props.scheme === 'dark light'
+    ? { url: iconImage, width: 512, height: 512 }
+    : {
+        url: new URL('/brand/og-pressed-light.png', SITE_URL).href,
+        width: 1200,
+        height: 630,
+      };
 const structuredData = {
   '@context': 'https://schema.org',
   '@type': ['SoftwareApplication', 'Product'],
@@ -53,7 +63,7 @@ const structuredData = {
   name: 'DiscVault',
   description,
   url: canonical,
-  image: ogImage,
+  image: iconImage,
   applicationCategory: 'LifestyleApplication',
   operatingSystem: 'iOS, iPadOS, Web',
   brand: {
@@ -129,7 +139,8 @@ const structuredData = {
     <link
       rel="icon"
       type="image/png"
-      href="/brand/discvault-icon-512-dark.png"
+      sizes="48x48"
+      href="/brand/discvault-icon-48.png"
     />
     <link rel="apple-touch-icon" href="/brand/apple-touch-icon.png" />
     <link rel="sitemap" href="/sitemap-index.xml" />
@@ -138,14 +149,14 @@ const structuredData = {
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
-    <meta property="og:image" content={ogImage} />
-    <meta property="og:image:width" content="512" />
-    <meta property="og:image:height" content="512" />
+    <meta property="og:image" content={socialImage.url} />
+    <meta property="og:image:width" content={String(socialImage.width)} />
+    <meta property="og:image:height" content={String(socialImage.height)} />
     <meta property="og:locale" content={content.locale} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={ogImage} />
+    <meta name="twitter:image" content={socialImage.url} />
     {
       productSchema && (
         <script
