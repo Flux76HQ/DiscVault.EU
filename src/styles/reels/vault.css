@@ -1,0 +1,27 @@
+/* Reel 04 — the vault: the darkest reel, one lamp. */
+
+.vault {
+  padding-bottom: clamp(6rem, 18vh, 14rem);
+  background: var(--cine-ground);
+}
+
+.vault-copy {
+  position: relative;
+  padding-left: var(--space-6);
+}
+
+.vault-copy::before {
+  position: absolute;
+  top: 3.4rem;
+  left: 0;
+  width: 2px;
+  height: 40px;
+  background: var(--cine-lamp);
+  box-shadow: 0 0 18px 2px rgb(232 196 140 / 30%);
+  content: '';
+}
+
+.vault-body {
+  max-width: 58ch;
+  margin: 0;
+}

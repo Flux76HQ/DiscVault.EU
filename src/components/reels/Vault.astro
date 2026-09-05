@@ -1,0 +1,31 @@
+---
+/**
+ * Reel 04, the vault: the darkest reel. A text column alone, one tungsten
+ * lamp at its edge, three zeros in the slate, the privacy policy as a slate
+ * action (Dutch route on /nl/). Carries id="privacy".
+ */
+import '../../styles/reels/vault.css';
+import type { Locale } from '../../content/locales';
+import type { MarketingContent } from '../../content/types';
+import Slate from './Slate.astro';
+import Voice from './Voice.astro';
+
+interface Props {
+  content: MarketingContent;
+  locale: Locale;
+}
+
+const { content, locale } = Astro.props;
+const { vault, actions } = content;
+const privacyPath = locale === 'nl' ? '/privacy-nl.html' : '/privacy.html';
+---
+
+<section class="vault reel" id="privacy" aria-labelledby="vault-title">
+  <div class="reel-copy vault-copy">
+    <Slate facts={vault.slate} strong={1} collapse={2} />
+    <Voice segments={vault.voice} level={2} size="l" id="vault-title" />
+    <p class="lead">{vault.lead}</p>
+    {vault.body.map((paragraph) => <p class="vault-body">{paragraph}</p>)}
+    <a class="text-link" href={privacyPath}>{actions.privacy} →</a>
+  </div>
+</section>

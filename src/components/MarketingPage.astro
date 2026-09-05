@@ -1,25 +1,17 @@
 ---
 import '../styles/tokens-dark-pin.css';
 import '../styles/cinematic.css';
+import '../styles/reels/reels.css';
 import type { Locale } from '../content/locales';
 import type { MarketingContent } from '../content/types';
-import { toLegacy, type LegacyRoute as ProductRoute } from '../content/bridge';
-import {
-  ANDROID_BETA_SIGNUP_URL,
-  APP_STORE_URL,
-  DISCORD_URL,
-  DOCS_URL,
-  ISSUES_URL,
-  SUPPORT_URL,
-  TESTFLIGHT_URL,
-} from '../config';
 import Footer from './Footer.astro';
+import Header from './Header.astro';
 import Hero from './reels/Hero.astro';
 import Shelf from './reels/Shelf.astro';
 import Read from './reels/Read.astro';
 import Edition from './reels/Edition.astro';
-import '../styles/reels/reels.css';
-import Header from './Header.astro';
+import Vault from './reels/Vault.astro';
+import Formats from './reels/Formats.astro';
 
 interface Props {
   content: MarketingContent;
@@ -27,216 +19,18 @@ interface Props {
   homePath: string;
 }
 
-const { content: reelContent, locale, homePath } = Astro.props;
-const content = toLegacy(reelContent);
-const privacyPath = locale === 'nl' ? '/privacy-nl.html' : '/privacy.html';
-
-const routes: Array<{
-  id: string;
-  route: ProductRoute;
-  label: string;
-  badge: string;
-  href: string;
-  cta: string;
-  featured?: boolean;
-  secondary?: {
-    href: string;
-    label: string;
-  };
-}> = [
-  {
-    id: 'self-hosted',
-    route: content.routes.selfHosted,
-    label: content.routes.selfHosted.label,
-    badge: 'PWA / Desktop',
-    href: DOCS_URL,
-    cta: content.hero.selfHosted,
-    featured: true,
-  },
-  {
-    id: 'ios',
-    route: content.routes.ios,
-    label: content.routes.ios.label,
-    badge: 'iOS / iPadOS',
-    href: APP_STORE_URL,
-    cta: content.hero.appStore,
-    secondary: {
-      href: TESTFLIGHT_URL,
-      label: 'TestFlight beta',
-    },
-  },
-  {
-    id: 'android',
-    route: content.routes.ios,
-    label: 'Android',
-    badge: 'Android beta',
-    href: ANDROID_BETA_SIGNUP_URL,
-    cta: content.hero.androidBeta,
-  },
-];
+const { content, locale, homePath } = Astro.props;
 ---
 
-<Header content={reelContent} locale={locale} homePath={homePath} />
+<Header content={content} locale={locale} homePath={homePath} />
 
 <main id="main">
-  <Hero content={reelContent} />
-  <Shelf content={reelContent} />
-  <Read content={reelContent} />
-  <Edition content={reelContent} />
-
-  <span id="install" class="anchor-target" aria-hidden="true"></span>
-  <section class="section wrap">
-    <div class="section-heading">
-      <p class="eyebrow">{content.routes.eyebrow}</p>
-      <h2>{content.routes.heading}</h2>
-      <p>{content.routes.mobileRoadmap}</p>
-    </div>
-    <div class="route-grid">
-      {
-        routes.map(
-          ({ id, route, label, badge, href, cta, featured, secondary }) => (
-            <article
-              id={id}
-              class:list={['route-card', { 'route-card-featured': featured }]}
-            >
-              {id === 'self-hosted' && (
-                <span id="migration" class="anchor-target" aria-hidden="true" />
-              )}
-              <div class="route-copy">
-                <span class="platform-badge">{badge}</span>
-                <p class="route-label">{label}</p>
-                <h3>{route.title}</h3>
-                <p>{route.body}</p>
-              </div>
-              <div class="route-details">
-                <ul>
-                  {route.points.map((point) => (
-                    <li>{point}</li>
-                  ))}
-                </ul>
-                <div class="route-actions">
-                  <a
-                    class:list={['button', { 'button-secondary': !featured }]}
-                    href={href}
-                  >
-                    {cta}
-                  </a>
-                  {secondary && (
-                    <a class="text-link" href={secondary.href}>
-                      {secondary.label} <span aria-hidden="true">→</span>
-                    </a>
-                  )}
-                </div>
-              </div>
-            </article>
-          ),
-        )
-      }
-    </div>
-  </section>
-
-  <section id="privacy" class="section wrap">
-    <div class="trust-panel">
-      <div>
-        <p class="eyebrow">{content.trust.eyebrow}</p>
-        <h2>{content.trust.heading}</h2>
-        <p class="lead">{content.trust.body}</p>
-        <a class="text-link" href={privacyPath}>
-          {content.footer.privacy}
-          <span aria-hidden="true">→</span>
-        </a>
-      </div>
-      <div class="trust-points">
-        <article>
-          <span aria-hidden="true">◎</span>
-          <h3>{content.trust.noTrackingTitle}</h3>
-          <p>{content.trust.noTrackingBody}</p>
-        </article>
-        <article>
-          <span aria-hidden="true">◇</span>
-          <h3>{content.trust.controlTitle}</h3>
-          <p>{content.trust.controlBody}</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-tinted">
-    <div class="wrap comparison">
-      <div class="section-heading">
-        <p class="eyebrow">{content.comparison.eyebrow}</p>
-        <h2>{content.comparison.heading}</h2>
-      </div>
-      <div
-        class="table-scroll"
-        tabindex="0"
-        aria-label={content.comparison.heading}
-      >
-        <table>
-          <thead>
-            <tr>
-              <th scope="col">{content.comparison.route}</th>
-              <th scope="col">{content.comparison.bestFor}</th>
-              <th scope="col">{content.comparison.setup}</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">Self-hosted</th>
-              <td>{content.comparison.selfBest}</td>
-              <td>{content.comparison.selfSetup}</td>
-            </tr>
-            <tr>
-              <th scope="row">iPhone & iPad</th>
-              <td>{content.comparison.iosBest}</td>
-              <td>{content.comparison.iosSetup}</td>
-            </tr>
-            <tr>
-              <th scope="row">Android beta</th>
-              <td>{content.comparison.iosBest}</td>
-              <td>{content.comparison.androidSetup}</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-
-  <section class="section wrap community">
-    <div>
-      <p class="eyebrow">{content.community.eyebrow}</p>
-      <h2>{content.community.heading}</h2>
-    </div>
-    <nav aria-label={content.community.heading}>
-      <a class="chip-link" href={DISCORD_URL}>{content.community.discord}</a>
-      <a class="chip-link" href={ISSUES_URL}>{content.community.issues}</a>
-      <a class="chip-link" href={SUPPORT_URL}>{content.community.support}</a>
-    </nav>
-  </section>
-
-  <section class="final-cta wrap">
-    <p class="eyebrow">DiscVault</p>
-    <h2>{content.community.finalTitle}</h2>
-    <div class="platform-actions">
-      <a class="button platform-primary" href={DOCS_URL}>
-        <span class="button-kicker">PWA & Desktop</span>
-        {content.hero.selfHosted}
-      </a>
-      <div class="platform-secondary-actions">
-        <a class="button button-secondary" href={APP_STORE_URL}>
-          <span class="button-kicker">iPhone & iPad</span>
-          {content.hero.appStore}
-        </a>
-        <a class="button button-secondary" href={ANDROID_BETA_SIGNUP_URL}>
-          <span class="button-kicker">Android</span>
-          {content.hero.androidBeta}
-        </a>
-      </div>
-    </div>
-    <a class="text-link testflight-link" href={TESTFLIGHT_URL}>
-      TestFlight beta <span aria-hidden="true">→</span>
-    </a>
-  </section>
+  <Hero content={content} />
+  <Shelf content={content} />
+  <Read content={content} />
+  <Edition content={content} />
+  <Vault content={content} locale={locale} />
+  <Formats content={content} />
 </main>
 
-<Footer content={reelContent} locale={locale} />
+<Footer content={content} locale={locale} />
