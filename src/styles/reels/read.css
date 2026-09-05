@@ -49,7 +49,9 @@
   top: 8%;
   left: 38%;
   z-index: 3;
-  width: min(34%, 18rem);
+  width: auto;
+  height: 84%;
+  aspect-ratio: 49 / 100;
   margin: 0;
   padding: 0.35rem;
   background: var(--cine-glass);
@@ -75,6 +77,5 @@
 
   .capture {
     left: 42%;
-    width: 44%;
   }
 }

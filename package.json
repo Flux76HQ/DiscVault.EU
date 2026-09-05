@@ -1,6 +1,6 @@
 {
   "name": "discvault-marketing",
-  "version": "1.0.16",
+  "version": "1.0.17",
   "private": true,
   "type": "module",
   "packageManager": "pnpm@11.13.0",
@@ -24,6 +24,7 @@
     "check:links": "node scripts/check-links.mjs",
     "check:routes": "node scripts/check-critical-routes.mjs",
     "check:experience": "node scripts/check-experience.mjs",
+    "matrix": "node scripts/screenshot-matrix.mjs",
     "check:version": "node scripts/version-guard.mjs",
     "check:quick": "prettier --check . && node scripts/generate-brand-css.mjs --check && node scripts/check-locales.mjs && node scripts/version-guard.mjs",
     "check": "prettier --check . && node scripts/generate-brand-css.mjs --check && astro check && node scripts/check-locales.mjs && astro build && node scripts/check-links.mjs && node scripts/check-critical-routes.mjs && node scripts/version-guard.mjs",
