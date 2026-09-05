@@ -15,6 +15,10 @@ interface Props {
   productSchema?: boolean;
   alternateLinks?: Array<{ locale: string; path: string }>;
   xDefaultPath?: string;
+  /** Marketing routes are dark-only; the legal shell keeps both schemes. */
+  scheme?: 'dark' | 'dark light';
+  /** Preload the Voice typeface; only the marketing routes set it large. */
+  preloadFonts?: boolean;
 }
 
 const {
@@ -29,7 +33,10 @@ const {
     path: localePath(locale),
   })),
   xDefaultPath = '/',
+  scheme = 'dark',
+  preloadFonts = true,
 } = Astro.props;
+const groundColor = '#04070D';
 const canonical = new URL(canonicalPath, SITE_URL).href;
 const ogImage = new URL('/brand/discvault-icon-512-dark.png', SITE_URL).href;
 const structuredData = {
@@ -54,17 +61,45 @@ const structuredData = {
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="color-scheme" content="dark light" />
-    <meta
-      name="theme-color"
-      content={tokens.pwa['theme-color-dark'].$value}
-      media="(prefers-color-scheme: dark)"
-    />
-    <meta
-      name="theme-color"
-      content={tokens.pwa['theme-color-light'].$value}
-      media="(prefers-color-scheme: light)"
-    />
+    <meta name="color-scheme" content={scheme} />
+    {
+      scheme === 'dark' ? (
+        <meta name="theme-color" content={groundColor} />
+      ) : (
+        <>
+          <meta
+            name="theme-color"
+            content={tokens.pwa['theme-color-dark'].$value}
+            media="(prefers-color-scheme: dark)"
+          />
+          <meta
+            name="theme-color"
+            content={tokens.pwa['theme-color-light'].$value}
+            media="(prefers-color-scheme: light)"
+          />
+        </>
+      )
+    }
+    {
+      preloadFonts && (
+        <>
+          <link
+            rel="preload"
+            href="/fonts/instrument-serif-regular-latin.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin
+          />
+          <link
+            rel="preload"
+            href="/fonts/instrument-serif-italic-latin.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin
+          />
+        </>
+      )
+    }
     <title>{title}</title>
     <meta name="description" content={description} />
     {noindex && <meta name="robots" content="noindex, follow" />}
