@@ -2,6 +2,7 @@
 import '../styles/tokens-dark-pin.css';
 import '../styles/cinematic.css';
 import '../styles/reels/reels.css';
+import '../styles/motion.css';
 import type { Locale } from '../content/locales';
 import type { MarketingContent } from '../content/types';
 import Footer from './Footer.astro';
@@ -34,3 +35,7 @@ const { content, locale, homePath } = Astro.props;
 </main>
 
 <Footer content={content} locale={locale} />
+
+<script>
+  import '../scripts/motion';
+</script>

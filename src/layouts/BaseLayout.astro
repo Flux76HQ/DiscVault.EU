@@ -19,6 +19,8 @@ interface Props {
   scheme?: 'dark' | 'dark light';
   /** Preload the Voice typeface; only the marketing routes set it large. */
   preloadFonts?: boolean;
+  /** Apply the return-visit flag before first paint (marketing routes). */
+  motion?: boolean;
 }
 
 const {
@@ -35,8 +37,13 @@ const {
   xDefaultPath = '/',
   scheme = 'dark',
   preloadFonts = true,
+  motion = true,
 } = Astro.props;
 const groundColor = '#04070D';
+// Applied before first paint so a return visit in the same session skips
+// the hero's entrance (motion-system.md §4). Storage failures are ignored.
+const returnFlagScript =
+  "try{if(sessionStorage.getItem('dv-hero-seen'))document.documentElement.classList.add('is-return')}catch(e){}";
 const canonical = new URL(canonicalPath, SITE_URL).href;
 const ogImage = new URL('/brand/discvault-icon-512-dark.png', SITE_URL).href;
 const structuredData = {
@@ -100,6 +107,7 @@ const structuredData = {
         </>
       )
     }
+    {motion && <script is:inline set:html={returnFlagScript} />}
     <title>{title}</title>
     <meta name="description" content={description} />
     {noindex && <meta name="robots" content="noindex, follow" />}
