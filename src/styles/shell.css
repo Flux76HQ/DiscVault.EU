@@ -65,6 +65,25 @@
   line-height: 1.2;
 }
 
+/* Scripts the Voice face does not cover set in the system serif, which runs
+ * wider than Instrument Serif; CJK glyphs are wider still. One step down
+ * keeps voice lines to two lines in the seven-column measure. */
+:lang(el) .voice-xl,
+:lang(uk) .voice-xl,
+:lang(ja) .voice-xl,
+:lang(zh) .voice-xl,
+:lang(ko) .voice-xl {
+  font-size: clamp(3.25rem, 8.5vw, 7.5rem);
+}
+
+:lang(el) .voice-l,
+:lang(uk) .voice-l,
+:lang(ja) .voice-l,
+:lang(zh) .voice-l,
+:lang(ko) .voice-l {
+  font-size: clamp(2.25rem, 5vw, 3.75rem);
+}
+
 :lang(ja) .slate,
 :lang(zh) .slate,
 :lang(ko) .slate {
