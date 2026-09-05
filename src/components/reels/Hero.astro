@@ -1,0 +1,55 @@
+---
+/**
+ * Reel 00, the leader: the slate (the literal), the campaign line, the lead,
+ * the primary action over a hairline, and the other routes as slate lines.
+ * Carries id="discvault26" for the Legacy page's deep link.
+ */
+import '../../styles/reels/hero.css';
+import type { MarketingContent } from '../../content/types';
+import {
+  ANDROID_BETA_SIGNUP_URL,
+  APP_STORE_URL,
+  DOCS_URL,
+  TESTFLIGHT_URL,
+} from '../../config';
+import Action from './Action.astro';
+import Disc from './Disc.astro';
+import Slate from './Slate.astro';
+import Voice from './Voice.astro';
+
+interface Props {
+  content: MarketingContent;
+}
+
+const { content } = Astro.props;
+const { leader, actions } = content;
+---
+
+<section class="hero reel" id="discvault26" aria-labelledby="hero-title">
+  <Disc />
+  <div class="hero-copy">
+    <Slate facts={leader.slate} strong={0} collapse={2} class="hero-slate" />
+    <Voice segments={leader.voice} level={1} size="xl" id="hero-title" />
+    <p class="lead hero-lead">{leader.lead}</p>
+    <div class="hero-actions">
+      <Action href={DOCS_URL} label={actions.install} note={leader.note} />
+      <div class="hero-routes">
+        <a class="button button-secondary" href={APP_STORE_URL}>
+          <b>01</b>
+          <span class="slate-dot" aria-hidden="true"> · </span>
+          {actions.appStore}
+        </a>
+        <a class="button button-secondary" href={ANDROID_BETA_SIGNUP_URL}>
+          <b>02</b>
+          <span class="slate-dot" aria-hidden="true"> · </span>
+          {actions.android}
+        </a>
+        <a class="text-link" href={TESTFLIGHT_URL}>
+          <b>03</b>
+          <span class="slate-dot" aria-hidden="true"> · </span>
+          {actions.testflight}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

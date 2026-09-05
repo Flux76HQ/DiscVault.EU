@@ -1,0 +1,483 @@
+/*
+ * Reel 00 — the leader (hero.md). The stage is sized to its content; the
+ * disc enters from the right; the copy holds the left axis.
+ */
+
+.hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: var(--space-6);
+  align-content: center;
+  min-height: min(46rem, 88vh);
+  padding: 6rem var(--margin) 6rem;
+  margin-top: -64px;
+  overflow: hidden;
+  isolation: isolate;
+  background: var(--cine-ground);
+}
+
+.hero::before {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  background:
+    linear-gradient(to bottom, rgb(4 7 13 / 85%), transparent 140px),
+    radial-gradient(ellipse at 50% 50%, transparent 55%, rgb(0 0 0 / 12%) 100%);
+  content: '';
+}
+
+.hero::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+  height: 160px;
+  pointer-events: none;
+  background: linear-gradient(to bottom, transparent, var(--cine-fog));
+  content: '';
+}
+
+.hero-copy {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-column: 1 / span 7;
+  gap: 1.75rem;
+}
+
+.hero-copy .voice-xl em {
+  display: block;
+  padding-left: 0.15em;
+}
+
+.hero-lead {
+  max-width: 44ch;
+  margin: 0;
+  color: var(--dv-text);
+  font-size: clamp(1.125rem, 1.6vw, 1.375rem);
+  line-height: 1.5;
+  text-wrap: pretty;
+}
+
+.hero-actions {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.action {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.action .button {
+  width: min(100%, 24rem);
+}
+
+.action-note {
+  font-size: 0.66rem;
+}
+
+.hero-routes {
+  display: grid;
+  gap: 0.1rem;
+  margin-top: var(--space-2);
+}
+
+.hero-routes .button-secondary,
+.hero-routes .text-link {
+  display: inline-block;
+  min-height: 44px;
+  padding-block: 0.55rem;
+}
+
+.hero-routes b {
+  font-weight: 400;
+  color: var(--dv-platinum-dim);
+}
+
+/* ---- the disc ---- */
+.scene {
+  position: absolute;
+  z-index: 1;
+  top: 55%;
+  left: 84vw;
+  width: min(58vw, 52rem);
+  aspect-ratio: 1;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+
+.scroller {
+  width: 100%;
+  height: 100%;
+}
+
+.tilt {
+  width: 100%;
+  height: 100%;
+  transform: perspective(1600px) rotateX(calc(8deg + var(--ty, 0) * 4deg))
+    rotateY(calc(-14deg + var(--tx, 0) * 6deg));
+  transform-style: preserve-3d;
+  transition: transform 180ms var(--ease-settle);
+  will-change: transform;
+}
+
+.settle {
+  width: 100%;
+  height: 100%;
+  animation: settle var(--t-3) var(--ease-settle) 300ms both;
+}
+
+.disc {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 50%;
+  background:
+    radial-gradient(
+      circle at 50% 50%,
+      rgb(255 255 255 / 0%) 0 30%,
+      rgb(126 185 235 / 8%) 31% 34%,
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 50% 50%,
+      #141c2b 0%,
+      #0e1522 45%,
+      #0a0f1a 75%,
+      #070b13 100%
+    );
+  box-shadow:
+    inset 2px 2px 0 rgb(255 255 255 / 30%),
+    inset -1px -1px 0 rgb(255 255 255 / 6%),
+    inset -8px -10px 40px rgb(4 7 13 / 60%),
+    0 0 0 1px rgb(0 0 0 / 60%),
+    0 60px 120px -50px rgb(0 0 0 / 90%);
+}
+
+.grooves {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: repeating-radial-gradient(
+    circle at 50% 50%,
+    rgb(255 255 255 / 7%) 0 1px,
+    transparent 1px 3px
+  );
+  mask-image: linear-gradient(
+    135deg,
+    black 0%,
+    rgb(0 0 0 / 60%) 40%,
+    transparent 70%
+  );
+}
+
+.spectrum {
+  position: absolute;
+  inset: -2%;
+  border-radius: 50%;
+  background: var(--cine-spectrum);
+  mix-blend-mode: screen;
+  opacity: 0.95;
+  transform: rotate(calc(-35deg - var(--tx, 0) * 25deg + var(--ty, 0) * 10deg));
+  transition: transform 180ms var(--ease-settle);
+  will-change: transform;
+  -webkit-mask-image:
+    conic-gradient(
+      from 0deg,
+      transparent 0deg,
+      rgb(0 0 0 / 40%) 10deg,
+      rgb(0 0 0 / 90%) 26deg,
+      black 40deg,
+      rgb(0 0 0 / 90%) 54deg,
+      rgb(0 0 0 / 40%) 72deg,
+      transparent 88deg,
+      transparent 360deg
+    ),
+    radial-gradient(circle, transparent 0 34%, black 40%);
+  -webkit-mask-composite: source-in;
+  mask-image:
+    conic-gradient(
+      from 0deg,
+      transparent 0deg,
+      rgb(0 0 0 / 40%) 10deg,
+      rgb(0 0 0 / 90%) 26deg,
+      black 40deg,
+      rgb(0 0 0 / 90%) 54deg,
+      rgb(0 0 0 / 40%) 72deg,
+      transparent 88deg,
+      transparent 360deg
+    ),
+    radial-gradient(circle, transparent 0 34%, black 40%);
+  mask-composite: intersect;
+}
+
+.tracks {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  border-radius: 50%;
+  pointer-events: none;
+  background: repeating-radial-gradient(
+    circle at 50% 50%,
+    rgb(4 7 13 / 22%) 0 1px,
+    transparent 1px 3px
+  );
+}
+
+.pass {
+  position: absolute;
+  inset: -2%;
+  overflow: hidden;
+  border-radius: 50%;
+  mix-blend-mode: screen;
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.pass::after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 45%;
+  background: var(--cine-grating);
+  transform: translateX(240%);
+  animation: pass var(--idle-period) var(--ease-light) var(--t-5)
+    var(--idle-repeats);
+  content: '';
+}
+
+.hub {
+  position: absolute;
+  inset: 35%;
+  z-index: 3;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    var(--cine-ground) 0 25%,
+    rgb(199 210 222 / 28%) 25.5% 26.5%,
+    #0b1220 27% 38%,
+    rgb(255 255 255 / 42%) 38.5% 39.5%,
+    #141c2b 40% 46%,
+    rgb(199 210 222 / 55%) 46.5% 47.5%,
+    #10182a 48% 61%,
+    rgb(255 255 255 / 22%) 61.5% 62.5%,
+    transparent 63.5%
+  );
+  box-shadow: inset 1px 1px 0 rgb(255 255 255 / 20%);
+  animation: spinup var(--t-3) var(--ease-settle) 300ms both;
+}
+
+.hub::after {
+  position: absolute;
+  top: 41%;
+  left: 50%;
+  width: 1px;
+  height: 6%;
+  background: rgb(4 7 13 / 50%);
+  transform: translateX(-50%);
+  content: '';
+}
+
+.sweep {
+  position: absolute;
+  inset: -6%;
+  z-index: 4;
+  background: linear-gradient(
+    100deg,
+    transparent 0%,
+    transparent 32%,
+    var(--cine-ground) 52%,
+    var(--cine-ground) 100%
+  );
+  transform: translateX(-12%);
+  animation: sweep var(--t-4) var(--ease-settle) 300ms both;
+}
+
+.reflection {
+  position: absolute;
+  z-index: 0;
+  top: calc(55% + min(29vw, 26rem));
+  left: 84vw;
+  width: min(58vw, 52rem);
+  aspect-ratio: 1;
+  pointer-events: none;
+  opacity: 0.3;
+  filter: blur(10px);
+  transform: translate(-50%, -8%) scaleY(-0.55);
+  mask-image: linear-gradient(to top, black, transparent 45%);
+  animation: reflect var(--t-1) var(--ease-hold) 1100ms both;
+}
+
+.reflection::before {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: var(--cine-spectrum);
+  transform: rotate(-35deg);
+  mask-image: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    black 20deg,
+    black 50deg,
+    transparent 70deg,
+    transparent 360deg
+  );
+  content: '';
+}
+
+@keyframes settle {
+  from {
+    transform: rotateY(-8deg);
+  }
+
+  to {
+    transform: rotateY(0);
+  }
+}
+
+@keyframes spinup {
+  from {
+    transform: rotate(-18deg);
+  }
+
+  to {
+    transform: rotate(0);
+  }
+}
+
+@keyframes sweep {
+  from {
+    transform: translateX(-12%);
+  }
+
+  to {
+    transform: translateX(120%);
+  }
+}
+
+@keyframes pass {
+  0% {
+    transform: translateX(240%);
+  }
+
+  27% {
+    transform: translateX(-110%);
+  }
+
+  100% {
+    transform: translateX(-110%);
+  }
+}
+
+@keyframes reflect {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 0.3;
+  }
+}
+
+/* Return visits in a session: the room is already lit. */
+.is-return .settle,
+.is-return .hub,
+.is-return .reflection {
+  animation: none;
+}
+
+.is-return .sweep {
+  display: none;
+}
+
+.is-return .pass::after {
+  animation-delay: var(--t-3);
+}
+
+/* ---- ranges ---- */
+@media (max-width: 74.99rem) {
+  .scene,
+  .reflection {
+    left: 86vw;
+    width: 60vw;
+  }
+
+  .reflection {
+    top: calc(55% + 30vw);
+  }
+
+  .hero-copy {
+    grid-column: 1 / span 8;
+  }
+
+  .hero-slate .slate-x {
+    display: none;
+  }
+}
+
+@media (max-width: 56.24rem) {
+  .scene {
+    top: 30%;
+    left: 96vw;
+    width: 80vw;
+  }
+
+  .reflection {
+    display: none;
+  }
+
+  .hero-copy {
+    grid-column: 1 / -1;
+  }
+
+  .hero {
+    padding-bottom: 5rem;
+  }
+}
+
+@media (max-width: 37.49rem) {
+  .scene {
+    top: 14%;
+    left: 106vw;
+    width: 120vw;
+  }
+
+  .hero-copy .voice-xl {
+    font-size: clamp(3.4rem, 17vw, 4.5rem);
+  }
+}
+
+@media (max-height: 31.25rem) {
+  .hero {
+    min-height: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .settle,
+  .hub,
+  .reflection,
+  .pass::after,
+  .scroller {
+    animation: none;
+  }
+
+  .sweep {
+    display: none;
+  }
+
+  .pass::after {
+    transform: translateX(65%);
+  }
+
+  .tilt,
+  .spectrum {
+    transition: none;
+  }
+}

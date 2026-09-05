@@ -20,6 +20,7 @@ import {
   TESTFLIGHT_URL,
 } from '../config';
 import Footer from './Footer.astro';
+import Hero from './reels/Hero.astro';
 import Header from './Header.astro';
 
 interface Props {
@@ -80,45 +81,7 @@ const routes: Array<{
 <Header content={reelContent} locale={locale} homePath={homePath} />
 
 <main id="main">
-  <span id="discvault26" class="anchor-target" aria-hidden="true"></span>
-  <section class="hero wrap">
-    <div class="hero-copy">
-      <p class="eyebrow">{content.hero.eyebrow}</p>
-      <h1>
-        {content.hero.title}
-        <span>{content.hero.accent}</span>
-      </h1>
-      <p class="lead">{content.hero.lead}</p>
-      <div class="platform-actions" aria-label={content.routes.heading}>
-        <a class="button platform-primary" href={DOCS_URL}>
-          <span class="button-kicker">PWA & Desktop</span>
-          {content.hero.selfHosted}
-        </a>
-        <div class="platform-secondary-actions">
-          <a class="button button-secondary" href={APP_STORE_URL}>
-            <span class="button-kicker">iPhone & iPad</span>
-            {content.hero.appStore}
-          </a>
-          <a class="button button-secondary" href={ANDROID_BETA_SIGNUP_URL}>
-            <span class="button-kicker">Android</span>
-            {content.hero.androidBeta}
-          </a>
-        </div>
-      </div>
-      <a class="text-link testflight-link" href={TESTFLIGHT_URL}>
-        TestFlight beta <span aria-hidden="true">→</span>
-      </a>
-    </div>
-    <div class="hero-mark" aria-hidden="true">
-      <img
-        src="/brand/discvault-logo-transparent.png"
-        width="392"
-        height="392"
-        alt=""
-        fetchpriority="high"
-      />
-    </div>
-  </section>
+  <Hero content={reelContent} />
 
   <span id="install" class="anchor-target" aria-hidden="true"></span>
   <section id="product" class="section wrap">
