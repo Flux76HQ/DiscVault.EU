@@ -1,0 +1,47 @@
+---
+/**
+ * Reel 02, the read: a barcode drawn as hairlines, the laser line, and the
+ * "Add movie" capture that resolves behind it. Carries id="scan".
+ */
+import '../../styles/reels/read.css';
+import { Picture } from 'astro:assets';
+import capture from '../../assets/showcase/mobile-import.png';
+import type { MarketingContent } from '../../content/types';
+import Slate from './Slate.astro';
+import Voice from './Voice.astro';
+
+interface Props {
+  content: MarketingContent;
+}
+
+const { content } = Astro.props;
+const { read } = content;
+const bars = [3, 8, 2, 5, 12, 2, 6, 3, 9, 2, 4, 7, 2, 10, 3, 5, 2, 8, 4, 2];
+---
+
+<section class="read reel" id="scan" aria-labelledby="read-title">
+  <div class="reel-copy">
+    <Slate facts={read.slate} strong={1} collapse={2} />
+    <Voice segments={read.voice} level={2} size="l" id="read-title" />
+    <p class="lead">{read.lead}</p>
+    <Slate facts={read.note} class="read-note" />
+  </div>
+  <div class="read-stage">
+    <div class="barcode" aria-hidden="true">
+      {bars.map((width) => <i style={`--w: ${width}`} />)}
+    </div>
+    <div class="laser" aria-hidden="true"></div>
+    <figure class="capture">
+      <Picture
+        src={capture}
+        formats={['avif']}
+        fallbackFormat="webp"
+        widths={[360, 540, 784]}
+        sizes="(min-width: 900px) 20vw, 60vw"
+        alt={read.captureAlt}
+        loading="lazy"
+        decoding="async"
+      />
+    </figure>
+  </div>
+</section>

@@ -1,12 +1,6 @@
 ---
 import '../styles/tokens-dark-pin.css';
 import '../styles/cinematic.css';
-import { Picture } from 'astro:assets';
-import mobileLibrary from '../assets/showcase/mobile-library.png';
-import mobileAdd from '../assets/showcase/mobile-import.png';
-import mobileDetail from '../assets/showcase/mobile-detail.png';
-import desktopLibrary from '../assets/showcase/desktop-library.png';
-import desktopDetail from '../assets/showcase/desktop-detail.png';
 import type { Locale } from '../content/locales';
 import type { MarketingContent } from '../content/types';
 import { toLegacy, type LegacyRoute as ProductRoute } from '../content/bridge';
@@ -21,6 +15,10 @@ import {
 } from '../config';
 import Footer from './Footer.astro';
 import Hero from './reels/Hero.astro';
+import Shelf from './reels/Shelf.astro';
+import Read from './reels/Read.astro';
+import Edition from './reels/Edition.astro';
+import '../styles/reels/reels.css';
 import Header from './Header.astro';
 
 interface Props {
@@ -82,9 +80,12 @@ const routes: Array<{
 
 <main id="main">
   <Hero content={reelContent} />
+  <Shelf content={reelContent} />
+  <Read content={reelContent} />
+  <Edition content={reelContent} />
 
   <span id="install" class="anchor-target" aria-hidden="true"></span>
-  <section id="product" class="section wrap">
+  <section class="section wrap">
     <div class="section-heading">
       <p class="eyebrow">{content.routes.eyebrow}</p>
       <h2>{content.routes.heading}</h2>
@@ -131,100 +132,6 @@ const routes: Array<{
           ),
         )
       }
-    </div>
-  </section>
-
-  <section class="section section-tinted">
-    <div class="wrap">
-      <div class="section-heading">
-        <p class="eyebrow">{content.capabilities.eyebrow}</p>
-        <h2>{content.capabilities.heading}</h2>
-      </div>
-      <div class="capability-grid">
-        {
-          content.capabilities.items.map((capability, index) => (
-            <article class="capability-card">
-              <span aria-hidden="true">
-                {String(index + 1).padStart(2, '0')}
-              </span>
-              <h3>{capability.title}</h3>
-              <p>{capability.body}</p>
-              <a href={DOCS_URL}>
-                Docs <span aria-hidden="true">↗</span>
-              </a>
-            </article>
-          ))
-        }
-      </div>
-    </div>
-  </section>
-
-  <section class="section wrap" aria-labelledby="showcase-title">
-    <div class="section-heading">
-      <p class="eyebrow">{content.showcase.eyebrow}</p>
-      <h2 id="showcase-title">{content.showcase.heading}</h2>
-    </div>
-    <div class="showcase-grid">
-      <figure class="shot shot-phone">
-        <Picture
-          src={mobileLibrary}
-          formats={['avif']}
-          fallbackFormat="webp"
-          widths={[360, 540, 735]}
-          sizes="(min-width: 900px) 24vw, 70vw"
-          alt={content.showcase.mobileLibrary}
-          loading="lazy"
-        />
-        <figcaption>{content.showcase.mobileLibrary}</figcaption>
-      </figure>
-      <figure class="shot shot-phone">
-        <Picture
-          src={mobileAdd}
-          formats={['avif']}
-          fallbackFormat="webp"
-          widths={[360, 540, 735]}
-          sizes="(min-width: 900px) 24vw, 70vw"
-          alt={content.showcase.mobileAdd}
-          loading="lazy"
-        />
-        <figcaption>{content.showcase.mobileAdd}</figcaption>
-      </figure>
-      <figure class="shot shot-phone">
-        <Picture
-          src={mobileDetail}
-          formats={['avif']}
-          fallbackFormat="webp"
-          widths={[360, 540, 735]}
-          sizes="(min-width: 900px) 24vw, 70vw"
-          alt={content.showcase.mobileDetail}
-          loading="lazy"
-        />
-        <figcaption>{content.showcase.mobileDetail}</figcaption>
-      </figure>
-      <figure class="shot shot-desktop">
-        <Picture
-          src={desktopLibrary}
-          formats={['avif']}
-          fallbackFormat="webp"
-          widths={[640, 960, 1400]}
-          sizes="(min-width: 900px) 52vw, 92vw"
-          alt={content.showcase.desktopLibrary}
-          loading="lazy"
-        />
-        <figcaption>{content.showcase.desktopLibrary}</figcaption>
-      </figure>
-      <figure class="shot shot-desktop">
-        <Picture
-          src={desktopDetail}
-          formats={['avif']}
-          fallbackFormat="webp"
-          widths={[640, 960, 1400]}
-          sizes="(min-width: 900px) 52vw, 92vw"
-          alt={content.showcase.desktopDetail}
-          loading="lazy"
-        />
-        <figcaption>{content.showcase.desktopDetail}</figcaption>
-      </figure>
     </div>
   </section>
 

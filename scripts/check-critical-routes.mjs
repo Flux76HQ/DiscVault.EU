@@ -177,6 +177,9 @@ for (const [file, locale, canonical] of marketingPages) {
     discord,
     docs,
     'id="android"',
+    'id="product"',
+    'id="scan"',
+    'id="editions"',
     'hreflang="x-default"',
     'application/ld+json',
   ];

@@ -12,6 +12,21 @@ const themeLines = (theme) =>
     .join('\n');
 
 const accent = tokens.accent.presets.bluray;
+const formatLines = (theme) =>
+  [
+    `  --dv-fmt-4k-fill: ${tokens.format['4k'][theme].fill};`,
+    `  --dv-fmt-4k-on: ${tokens.format['4k'][theme].on};`,
+    `  --dv-fmt-bluray-fill: ${tokens.format.bluray[theme].fill};`,
+    `  --dv-fmt-bluray-on: ${tokens.format.bluray[theme].on};`,
+    `  --dv-fmt-dvd-fill: ${tokens.format.dvd[theme].fill};`,
+    `  --dv-fmt-dvd-deep: ${tokens.format.dvd[theme].deep};`,
+    `  --dv-fmt-dvd-on: ${tokens.format.dvd[theme].on};`,
+    `  --dv-fmt-steel-fill: ${tokens.format.steel[theme].fill};`,
+    `  --dv-fmt-steel-on: ${tokens.format.steel[theme].on};`,
+    `  --dv-fmt-steel-brushed: ${tokens.format.steel[theme].brushed};`,
+    `  --dv-fmt-digital-fill: ${tokens.format.digital[theme].fill};`,
+    `  --dv-fmt-digital-on: ${tokens.format.digital[theme].on};`,
+  ].join('\n');
 const generated = `/*
  * Generated from ${source.repository}/${source.tokens}
  * Revision: ${source.revision}
@@ -28,11 +43,13 @@ ${themeLines('dark')}
   --dv-sheen: ${tokens.effect.sheen.dark.$value};
   --dv-shadow: ${tokens.effect.shadow.dark.$value};
   --dv-theme-color: ${tokens.pwa['theme-color-dark'].$value};
+${formatLines('dark')}
 }
 
 @media (prefers-color-scheme: light) {
   :root {
 ${themeLines('light')}
+${formatLines('light')}
     --dv-accent-bright: ${accent['bright-light']};
     --dv-sheen: ${tokens.effect.sheen.light.$value};
     --dv-shadow: ${tokens.effect.shadow.light.$value};
@@ -57,6 +74,7 @@ ${themeLines('dark')}
     --dv-sheen: ${tokens.effect.sheen.dark.$value};
     --dv-shadow: ${tokens.effect.shadow.dark.$value};
     --dv-theme-color: ${tokens.pwa['theme-color-dark'].$value};
+${formatLines('dark')}
   }
 }
 `;

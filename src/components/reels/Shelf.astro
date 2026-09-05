@@ -1,0 +1,44 @@
+---
+/**
+ * Reel 01, the shelf: the poster wall at full bleed, yawed 3°, lit from
+ * within; the app's own counter in the slate. Carries id="product" (nav)
+ * and the heading id="showcase-title" (preserved deep link).
+ */
+import '../../styles/reels/shelf.css';
+import { Picture } from 'astro:assets';
+import wall from '../../assets/showcase/desktop-library-wall.png';
+import type { MarketingContent } from '../../content/types';
+import Slate from './Slate.astro';
+import Voice from './Voice.astro';
+
+interface Props {
+  content: MarketingContent;
+}
+
+const { content } = Astro.props;
+const { shelf } = content;
+---
+
+<section class="shelf reel" id="product" aria-labelledby="showcase-title">
+  <div class="reel-copy">
+    <Slate facts={[...shelf.slate, ...shelf.counter]} strong={1} />
+    <Voice segments={shelf.voice} level={2} size="l" id="showcase-title" />
+    <p class="lead">{shelf.lead}</p>
+  </div>
+  <div class="wall" aria-hidden="true">
+    <div class="wall-stage">
+      <Picture
+        src={wall}
+        formats={['avif']}
+        fallbackFormat="webp"
+        widths={[768, 1280, 1920]}
+        sizes="100vw"
+        alt=""
+        loading="lazy"
+        decoding="async"
+        fetchpriority="low"
+      />
+    </div>
+    <div class="wall-torch"></div>
+  </div>
+</section>
