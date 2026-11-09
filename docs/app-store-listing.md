@@ -95,7 +95,7 @@ images are never stored or transmitted; only the decoded barcode number is sent
 for a metadata lookup.
 
 NETWORK: the app contacts one HTTPS service, MovieVault
-(https://movies.vaultstack.eu), which is operated by us (DiscVault — VaultStack)
+(https://movies2.vaultstack.eu), which is operated by us (DiscVault — VaultStack)
 and hosted in the EU. It receives only the scanned barcode or typed search term,
 plus a randomly generated device identifier used to issue a token and rate-limit
 abuse. No name, email, Apple ID, location, or contacts are sent.
@@ -184,7 +184,7 @@ VisionKit. Camerabeelden worden nooit opgeslagen of verzonden; alleen het
 gedecodeerde barcodenummer wordt gebruikt voor een metadata-lookup.
 
 NETWERK: de app benadert één HTTPS-dienst, MovieVault
-(https://movies.vaultstack.eu), die door ons (DiscVault — VaultStack) wordt
+(https://movies2.vaultstack.eu), die door ons (DiscVault — VaultStack) wordt
 beheerd en in de EU wordt gehost. Deze ontvangt alleen de gescande barcode of
 getypte zoekterm, plus een willekeurig gegenereerde device-identifier om een
 token af te geven en misbruik te beperken. Er worden geen naam, e-mail, Apple
