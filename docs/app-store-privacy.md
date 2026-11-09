@@ -19,7 +19,7 @@ Waarom niet "No"? Apple rekent iets als *collected* zodra het het toestel
 verlaat op een manier die jij (of je partners) kunt inzien. De app zelf
 verzamelt niets voor lokaal gebruik, **maar** roept één online dienst aan die
 door jou (DiscVault — VaultStack) wordt beheerd: **MovieVault**
-(`movies.vaultstack.eu`). Daar wordt bij een barcode-scan of titelzoekopdracht
+(`movies2.vaultstack.eu`). Daar wordt bij een barcode-scan of titelzoekopdracht
 data naartoe gestuurd. Daardoor moet je "Yes" kiezen en de betreffende
 datatypes declareren.
 
