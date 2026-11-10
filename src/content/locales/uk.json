@@ -2,359 +2,359 @@
   "locale": "uk",
   "languageName": "Українська",
   "seo": {
-    "title": "DiscVault — catalogue the films you own on disc",
-    "description": "DiscVault catalogues the films you own on 4K, Blu-ray and DVD. Scan a barcode, keep editions and box sets straight, on your iPhone or your own server. No ads, no tracking.",
-    "ogAlt": "DiscVault: a wall of film covers with 4K, Blu-ray and DVD badges."
+    "title": "DiscVault — каталог фільмів, які ти маєш на дисках",
+    "description": "DiscVault каталогізує твої фільми на 4K, Blu-ray і DVD. Скануй штрихкод, розрізняй видання й бокс-сети — на iPhone або власному сервері. Без реклами й стеження.",
+    "ogAlt": "DiscVault: стіна обкладинок фільмів із позначками 4K, Blu-ray і DVD."
   },
   "a11y": {
-    "skip": "Skip to content",
-    "home": "DiscVault, home",
-    "menu": "Menu",
-    "language": "Language",
-    "sections": "Sections",
-    "pauseMotion": "Pause the motion",
-    "playMotion": "Play the motion"
+    "skip": "Перейти до вмісту",
+    "home": "DiscVault, головна",
+    "menu": "Меню",
+    "language": "Мова",
+    "sections": "Розділи",
+    "pauseMotion": "Призупинити рух",
+    "playMotion": "Відтворити рух"
   },
   "nav": {
-    "collect": "Collect",
-    "scan": "Scan",
-    "editions": "Editions",
-    "selfHosted": "Self-hosted",
-    "privacy": "Privacy",
-    "faq": "Questions",
+    "collect": "Збирати",
+    "scan": "Сканувати",
+    "editions": "Видання",
+    "selfHosted": "Власний сервер",
+    "privacy": "Конфіденційність",
+    "faq": "Запитання",
     "docs": "Docs",
-    "get": "Get DiscVault"
+    "get": "Отримати DiscVault"
   },
   "actions": {
-    "appStore": "Download on the App Store",
-    "selfHost": "Self-host DiscVault",
-    "android": "Request Android beta access",
-    "testflight": "Join the TestFlight beta",
-    "installGuide": "Read the install guide",
-    "migrationGuide": "Read the migration guide",
-    "privacyPolicy": "Read the privacy policy",
-    "discord": "Join the Discord",
-    "github": "Source on GitHub",
-    "issues": "Report an issue",
-    "support": "Buy me a coffee",
-    "moreAnswers": "More answers in the docs",
-    "backToTop": "Back to top"
+    "appStore": "Завантажити з App Store",
+    "selfHost": "Розгорнути DiscVault у себе",
+    "android": "Подати заявку на доступ до бета-версії Android",
+    "testflight": "Долучитися до бети в TestFlight",
+    "installGuide": "Читати посібник зі встановлення",
+    "migrationGuide": "Читати посібник із міграції",
+    "privacyPolicy": "Читати політику конфіденційності",
+    "discord": "Приєднатися до Discord",
+    "github": "Код на GitHub",
+    "issues": "Повідомити про проблему",
+    "support": "Пригостити мене кавою",
+    "moreAnswers": "Більше відповідей у документації",
+    "backToTop": "Нагору"
   },
   "hero": {
-    "title": "Your film shelf, catalogued.",
-    "lead": "DiscVault keeps track of every film you own on 4K, Blu-ray and DVD. Scan a barcode and the title, edition and cover fill themselves in.",
-    "note": "For iPhone and iPad, or self-hosted on your own server. Android is in beta.",
-    "mediaAlt": "The DiscVault library: a wall of film covers, each with a 4K, Blu-ray, DVD or box-set badge."
+    "title": "Твоя кінополиця в каталозі.",
+    "lead": "DiscVault веде облік кожного фільму, який ти маєш на 4K, Blu-ray і DVD. Скануй штрихкод — назва, видання й обкладинка заповняться самі.",
+    "note": "Для iPhone та iPad або на власному сервері. Android — у беті.",
+    "mediaAlt": "Бібліотека DiscVault: стіна обкладинок фільмів, кожна з позначкою 4K, Blu-ray, DVD або бокс-сета."
   },
   "collect": {
-    "title": "Built for collectors.",
+    "title": "Створено для колекціонерів.",
     "blocks": {
       "library": {
-        "title": "A library that looks like your shelf",
+        "title": "Бібліотека, схожа на твою полицю",
         "points": [
-          "Posters, a list or a detail view",
-          "Filter by 4K, Blu-ray or DVD",
-          "Search by title, barcode, cast or crew",
-          "Box sets open to the films inside",
-          "Quick, even on a large collection"
+          "Постери, список або детальний вигляд",
+          "Фільтр за 4K, Blu-ray чи DVD",
+          "Пошук за назвою, штрихкодом, акторами чи знімальною групою",
+          "Бокс-сети розкриваються до фільмів усередині",
+          "Швидко навіть у великій колекції"
         ],
-        "mediaAlt": "The library on a phone: a grid of film covers with format badges."
+        "mediaAlt": "Бібліотека на телефоні: сітка обкладинок фільмів із позначками форматів."
       },
       "detail": {
-        "title": "Every film gets a proper page",
+        "title": "Кожен фільм має повноцінну сторінку",
         "points": [
-          "Edition, format and barcode",
-          "Cast, crew and artwork",
-          "Your own poster or backdrop",
-          "Series and their seasons",
-          "Plex and Jellyfin copies marked"
+          "Видання, формат і штрихкод",
+          "Актори, знімальна група й зображення",
+          "Власний постер або фон",
+          "Серіали та їхні сезони",
+          "Позначено копії в Plex і Jellyfin"
         ],
-        "mediaAlt": "A film’s page on a phone: cover, backdrop, year, format and barcode."
+        "mediaAlt": "Сторінка фільму на телефоні: обкладинка, фон, рік, формат і штрихкод."
       },
       "lists": {
-        "title": "Lists for what happens next",
+        "title": "Списки для того, що буде далі",
         "points": [
-          "A watchlist for tonight",
-          "Watch history, with dates",
-          "A wishlist with price alerts",
-          "Loans: who has which disc",
-          "Tags you make up yourself"
+          "Список для перегляду на сьогоднішній вечір",
+          "Історія переглядів із датами",
+          "Список бажань зі сповіщеннями про ціну",
+          "Позики: у кого який диск",
+          "Теги, які ти вигадуєш на свій розсуд"
         ],
-        "mediaAlt": "The wishlist: four films with their current and target prices."
+        "mediaAlt": "Список бажань: чотири фільми з поточною та бажаною ціною."
       },
       "insight": {
-        "title": "Know what you own",
+        "title": "Знай, що маєш",
         "points": [
-          "Statistics by format, decade and genre",
-          "A place for every disc, down to the shelf",
-          "Your own score for every film",
-          "What is on loan, and what is overdue"
+          "Статистика за форматом, десятиліттям і жанром",
+          "Місце для кожного диска, аж до полиці",
+          "Твоя оцінка для кожного фільму",
+          "Що позичено і що вже прострочено"
         ],
-        "mediaAlt": "Statistics: 54 films split by format into Blu-ray, 4K UHD and DVD."
+        "mediaAlt": "Статистика: 54 фільми, розподілені за форматом на Blu-ray, 4K UHD і DVD."
       },
       "iphone": {
-        "title": "At home on iPhone and iPad",
+        "title": "Як удома на iPhone та iPad",
         "points": [
-          "Ask Siri how many films by a director you own",
-          "Find any disc from Spotlight",
-          "Discover what to add next, on your own TMDB key",
-          "Lock the app with Face ID",
-          "iCloud keeps your devices in step"
+          "Спитай Siri, скільки фільмів певного режисера в тебе є",
+          "Знайди будь-який диск через Spotlight",
+          "Шукай, що додати далі, з власним ключем TMDB",
+          "Заблокуй застосунок за допомогою Face ID",
+          "iCloud синхронізує твої пристрої"
         ],
-        "mediaAlt": "DiscVault on an iPhone."
+        "mediaAlt": "DiscVault на iPhone."
       }
     }
   },
   "scan": {
-    "titleStart": "Point the camera.",
-    "titleEnd": "It files itself.",
-    "lead": "Every disc has a barcode. Pick one of these and see what DiscVault makes of it.",
+    "titleStart": "Наведи камеру.",
+    "titleEnd": "Диск запишеться сам.",
+    "lead": "Кожен диск має штрихкод. Вибери один із цих і подивися, що з ним зробить DiscVault.",
     "record": {
-      "format": "Format",
-      "year": "Year",
-      "runtime": "Runtime",
-      "minutes": "min",
-      "director": "Director",
-      "barcode": "Barcode",
-      "added": "Added to your library"
+      "format": "Формат",
+      "year": "Рік",
+      "runtime": "Тривалість",
+      "minutes": "хв",
+      "director": "Режисер",
+      "barcode": "Штрихкод",
+      "added": "Додано до твоєї бібліотеки"
     },
-    "note": "On iPhone and iPad the disc catalogue lives on the device, so a scan works offline.",
-    "fallback": "No barcode? Search by title, or paste an IMDb or TMDB ID."
+    "note": "На iPhone та iPad каталог дисків зберігається на пристрої, тож сканування працює офлайн.",
+    "fallback": "Немає штрихкоду? Шукай за назвою або встав ідентифікатор IMDb чи TMDB."
   },
   "editions": {
-    "title": "Editions matter.",
-    "lead": "A 4K disc is not a Blu-ray. A Steelbook is not a keep case. Box sets, and the discs inside a release, are catalogued as what they are.",
+    "title": "Видання мають значення.",
+    "lead": "Диск 4K — не Blu-ray. Steelbook — не звичайний кейс. Бокс-сети й диски всередині релізу каталогізуються як те, чим вони є.",
     "items": {
       "uhd": {
         "name": "4K Ultra HD",
-        "detail": "17 on this shelf"
+        "detail": "17 на цій полиці"
       },
       "bluray": {
         "name": "Blu-ray",
-        "detail": "26 on this shelf"
+        "detail": "26 на цій полиці"
       },
       "dvd": {
         "name": "DVD",
-        "detail": "11 on this shelf"
+        "detail": "11 на цій полиці"
       },
       "steelbook": {
         "name": "Steelbook",
-        "detail": "1 on this shelf"
+        "detail": "1 на цій полиці"
       },
       "boxset": {
-        "name": "Box sets",
-        "detail": "3 sets, 12 films"
+        "name": "Бокс-сети",
+        "detail": "3 бокс-сети, 12 фільмів"
       }
     },
-    "note": "The shelf on this page is a demo library of 54 invented films."
+    "note": "Полиця на цій сторінці — демонстраційна бібліотека з 54 вигаданих фільмів."
   },
   "platforms": {
-    "title": "Two ways to keep it.",
-    "lead": "On the device in your pocket, or on a server in your home. Both are DiscVault; pick where your collection lives.",
+    "title": "Два способи зберігати.",
+    "lead": "На пристрої в кишені або на сервері вдома. І те, і те — DiscVault; обери, де житиме твоя колекція.",
     "columns": {
       "ios": {
-        "name": "iPhone and iPad",
-        "sub": "The app"
+        "name": "iPhone та iPad",
+        "sub": "Застосунок"
       },
       "selfHosted": {
-        "name": "Your own server",
+        "name": "Власний сервер",
         "sub": "Self-hosted"
       }
     },
     "rows": {
       "home": {
-        "label": "Where it lives",
-        "ios": "On your device, synced through your own iCloud",
-        "selfHosted": "On a server you run"
+        "label": "Де зберігається",
+        "ios": "На твоєму пристрої, синхронізація через твій iCloud",
+        "selfHosted": "На сервері, яким керуєш ти"
       },
       "add": {
-        "label": "Adding a disc",
-        "ios": "Scan with the camera, search or type it in",
-        "selfHosted": "Barcode, search or a whole import"
+        "label": "Додавання диска",
+        "ios": "Скануй камерою, шукай або введи вручну",
+        "selfHosted": "Штрихкод, пошук або імпорт усієї колекції"
       },
       "share": {
-        "label": "Sharing",
-        "ios": "Your own devices",
-        "selfHosted": "A household: invites, groups and roles"
+        "label": "Спільний доступ",
+        "ios": "Твої власні пристрої",
+        "selfHosted": "Родина: запрошення, групи й ролі"
       },
       "signin": {
-        "label": "Signing in",
-        "ios": "No account at all",
-        "selfHosted": "Passkeys first; password, TOTP or OpenID Connect if you prefer"
+        "label": "Вхід",
+        "ios": "Жодного облікового запису",
+        "selfHosted": "Передусім ключі доступу; за бажанням — пароль, TOTP або OpenID Connect"
       },
       "extras": {
-        "label": "Also there",
-        "ios": "Siri, Spotlight and Face ID lock",
-        "selfHosted": "Plugins, API keys, an MCP endpoint, backup and restore"
+        "label": "А також",
+        "ios": "Siri, Spotlight і блокування через Face ID",
+        "selfHosted": "Плагіни, ключі API, кінцева точка MCP, резервне копіювання та відновлення"
       },
       "languages": {
-        "label": "Languages",
+        "label": "Мови",
         "ios": "13",
         "selfHosted": "29"
       }
     },
     "android": {
       "title": "Android",
-      "body": "In beta. Request access on Discord; approved testers install through Google Play."
+      "body": "У беті. Подай заявку через Discord; схвалені тестувальники встановлюють через Google Play."
     },
-    "roadmap": "The apps work on their own today. Connecting them to a self-hosted DiscVault is planned for a later stage."
+    "roadmap": "Зараз застосунки працюють автономно. Підключення до самостійно розгорнутого DiscVault заплановано на пізніший етап."
   },
   "selfHosted": {
-    "title": "On a server you run.",
-    "lead": "The self-hosted edition is a web app for the whole household. It installs on Docker, Unraid or Home Assistant.",
+    "title": "На сервері, яким керуєш ти.",
+    "lead": "Версія для власного сервера — це вебзастосунок для всієї родини. Встановлюється на Docker, Unraid або Home Assistant.",
     "shots": {
       "library": {
-        "label": "Library",
-        "alt": "DiscVault in a browser: the library as a wall of covers, with search, view switch and format filters."
+        "label": "Бібліотека",
+        "alt": "DiscVault у браузері: бібліотека як стіна обкладинок, із пошуком, перемикачем вигляду та фільтрами форматів."
       },
       "detail": {
-        "label": "Detail",
-        "alt": "DiscVault: a film's detail page with backdrop, cover, edition and metadata."
+        "label": "Деталі",
+        "alt": "DiscVault: сторінка фільму з фоном, обкладинкою, виданням і метаданими."
       },
       "boxset": {
-        "label": "Box set",
-        "alt": "DiscVault: a box set opened to show the films it contains."
+        "label": "Бокс-сет",
+        "alt": "DiscVault: відкритий бокс-сет із фільмами, які до нього входять."
       },
       "lists": {
-        "label": "Watchlist",
-        "alt": "DiscVault: the watchlist as a grid of covers."
+        "label": "Список для перегляду",
+        "alt": "DiscVault: список для перегляду як сітка обкладинок."
       }
     },
     "points": [
-      "Invite-only accounts with roles",
-      "Passkeys first",
-      "Plugins for metadata and prices",
-      "API keys and an MCP endpoint",
-      "Backup and restore",
-      "Installs as an app on your phone"
+      "Облікові записи лише за запрошенням, із ролями",
+      "Передусім ключі доступу",
+      "Плагіни для метаданих і цін",
+      "Ключі API та кінцева точка MCP",
+      "Резервне копіювання та відновлення",
+      "Встановлюється як застосунок на телефон"
     ],
     "migration": {
-      "title": "Coming from DiscVault Legacy?",
-      "body": "The migration wizard carries your collection across to the current DiscVault."
+      "title": "Переходиш із DiscVault Legacy?",
+      "body": "Майстер міграції перенесе твою колекцію до актуального DiscVault."
     }
   },
   "runs": {
-    "title": "Where DiscVault runs",
+    "title": "Де працює DiscVault",
     "names": [
       "iPhone",
       "iPad",
       "Docker",
       "Unraid",
       "Home Assistant",
-      "Android beta",
-      "Any browser"
+      "Бета для Android",
+      "Будь-який браузер"
     ],
-    "caption": "Where DiscVault runs today."
+    "caption": "Де DiscVault працює сьогодні."
   },
   "privacy": {
-    "title": "It lives where you put it.",
-    "lead": "On your device, or on a server you run. No profiling, no advertising, nobody watching what you watch.",
+    "title": "Живе там, де ти вирішиш.",
+    "lead": "На твоєму пристрої або на власному сервері. Без профілювання, без реклами, ніхто не дивиться, що ти дивишся.",
     "tiles": {
       "ads": {
         "figure": "0",
-        "label": "ads"
+        "label": "реклами"
       },
       "trackers": {
         "figure": "0",
-        "label": "trackers"
+        "label": "трекерів"
       },
       "profiles": {
         "figure": "0",
-        "label": "profiles"
+        "label": "профілів"
       },
       "count": {
         "figure": "1",
-        "label": "anonymous daily count"
+        "label": "анонімний щоденний підрахунок"
       }
     },
     "body": [
-      "The iPhone and iPad app keeps your collection on the device. The self-hosted edition keeps it on a server you administer. Either way the only thing that leaves is a barcode or a search term.",
-      "One exception: a self-hosted server tells api.discvault.eu once a day that it is running. It sends its version and the number of days since its previous report: no identifier, and nothing about your collection. That is only there to estimate how much DiscVault is used, and you can turn it off."
+      "Застосунок для iPhone та iPad тримає колекцію на пристрої. Версія для власного сервера тримає її на сервері, яким ти керуєш. У будь-якому разі пристрій залишає лише штрихкод або пошуковий запит.",
+      "Один виняток: самостійно розгорнутий сервер раз на день повідомляє api.discvault.eu, що він працює. Він надсилає свою версію та кількість днів від попереднього повідомлення: жодного ідентифікатора й нічого про твою колекцію. Це потрібно лише для того, щоб оцінити, наскільки активно використовується DiscVault, і це можна вимкнути."
     ]
   },
   "plans": {
-    "titleStart": "The core is",
-    "titleFree": "free",
+    "titleStart": "Основа",
+    "titleFree": "безплатна",
     "titleEnd": ".",
-    "lead": "Scanning, cataloguing, searching, backing up and restoring cost nothing. DiscVault is free to self-host.",
+    "lead": "Сканування, каталогізація, пошук, резервне копіювання та відновлення нічого не коштують. Розгорнути DiscVault на власному сервері можна безплатно.",
     "points": [
-      "Scanning and adding discs",
-      "Full backup and restore",
-      "Watchlist, history and wishlist",
-      "iCloud sync between your devices",
-      "Getting your data out, always"
+      "Сканування й додавання дисків",
+      "Повне резервне копіювання та відновлення",
+      "Список для перегляду, історія та список бажань",
+      "Синхронізація через iCloud між твоїми пристроями",
+      "Експорт своїх даних — завжди"
     ],
-    "support": "DiscVault is made by one developer. If it earns a place on your shelf, a coffee is welcome. A donation unlocks nothing; it is only a thank-you."
+    "support": "DiscVault створює один розробник. Якщо він заслужив місце на твоїй полиці, кава буде доречною. Пожертва нічого не розблоковує; це лише подяка."
   },
   "faq": {
-    "title": "Good questions.",
+    "title": "Слушні запитання.",
     "items": {
       "server": {
-        "question": "Do I need a server?",
+        "question": "Чи потрібен мені сервер?",
         "answer": [
-          "No. The iPhone and iPad app works entirely on its own. A server is only for people who want the self-hosted web edition, made for a whole household."
+          "Ні. Застосунок для iPhone та iPad працює цілком самостійно. Сервер потрібен лише тим, хто хоче вебверсію для власного сервера, зроблену для всієї родини."
         ]
       },
       "account": {
-        "question": "Do I need an account?",
+        "question": "Чи потрібен мені обліковий запис?",
         "answer": [
-          "Not for the app. On a self-hosted DiscVault the accounts live on your own server; you invite who you like."
+          "Для застосунку — ні. У самостійно розгорнутому DiscVault облікові записи зберігаються на твоєму сервері; ти запрошуєш, кого хочеш."
         ]
       },
       "data": {
-        "question": "Where does the film information come from?",
+        "question": "Звідки береться інформація про фільми?",
         "answer": [
-          "Disc releases, barcodes and covers come from MovieVault, the catalogue behind DiscVault. Film details, cast and Discover use TMDB with your own free key.",
-          "This product uses the TMDB API but is not endorsed or certified by TMDB."
+          "Дискові релізи, штрихкоди й обкладинки надходять із MovieVault — каталогу, на якому працює DiscVault. Відомості про фільм, акторський склад і «Огляд» використовують TMDB з твоїм власним безплатним ключем.",
+          "Цей продукт використовує TMDB API, але не схвалений і не сертифікований TMDB."
         ]
       },
       "sends": {
-        "question": "What does DiscVault send out?",
+        "question": "Що DiscVault надсилає назовні?",
         "answer": [
-          "A barcode or a search term when you look something up. A self-hosted server also reports once a day, anonymously, that it is running; you can turn that off. The privacy policy has the details."
+          "Штрихкод або пошуковий запит, коли ти щось шукаєш. Самостійно розгорнутий сервер також раз на день анонімно повідомляє, що він працює; це можна вимкнути. Подробиці — у політиці конфіденційності."
         ]
       },
       "sync": {
-        "question": "Can the app sync with my own server?",
+        "question": "Чи може застосунок синхронізуватися з моїм сервером?",
         "answer": [
-          "Not yet. The apps and the self-hosted edition each work on their own today; connecting them is planned for a later stage."
+          "Поки що ні. Застосунки й версія для власного сервера сьогодні працюють окремо; їх поєднання заплановано на пізніший етап."
         ]
       },
       "export": {
-        "question": "Can I get my collection out again?",
+        "question": "Чи можна забрати свою колекцію назад?",
         "answer": [
-          "Yes. Backup and restore are part of the free core, and so is a CSV export. Your data is never held back."
+          "Так. Резервне копіювання та відновлення входять до безплатної основи, як і експорт у CSV. Твої дані ніколи не утримуються."
         ]
       },
       "android": {
-        "question": "Is there an Android app?",
+        "question": "Чи є застосунок для Android?",
         "answer": [
-          "It is in beta. Request access on Discord; approved testers install it through Google Play."
+          "Він у беті. Подай заявку через Discord; схвалені тестувальники встановлюють його через Google Play."
         ]
       },
       "legacy": {
-        "question": "I still run DiscVault Legacy. How do I move?",
+        "question": "Я досі користуюся DiscVault Legacy. Як перейти?",
         "answer": [
-          "The self-hosted edition has a migration wizard that brings your collection across from Legacy. The migration guide walks through it for Unraid and Docker."
+          "У версії для власного сервера є майстер міграції, який переносить колекцію з Legacy. Посібник із міграції описує це крок за кроком для Unraid і Docker."
         ]
       }
     }
   },
   "cta": {
-    "title": "Scan your first disc.",
-    "lead": "Take the nearest case off the shelf and point the camera at the barcode. That is the whole setup."
+    "title": "Скануй свій перший диск.",
+    "lead": "Візьми з полиці найближчий кейс і наведи камеру на штрихкод. Оце й усе налаштування."
   },
   "footer": {
-    "tagline": "DiscVault. Built for collectors.",
+    "tagline": "DiscVault. Створено для колекціонерів.",
     "groups": {
-      "product": "Product",
-      "help": "Help",
-      "legal": "Legal"
+      "product": "Продукт",
+      "help": "Допомога",
+      "legal": "Правова інформація"
     },
-    "privacy": "Privacy policy",
-    "terms": "Terms",
-    "legacy": "Legacy migration",
-    "production": "Made by",
-    "tmdb": "This product uses the TMDB API but is not endorsed or certified by TMDB."
+    "privacy": "Політика конфіденційності",
+    "terms": "Умови",
+    "legacy": "Перенесення застарілої версії",
+    "production": "Розроблено",
+    "tmdb": "Цей продукт використовує TMDB API, але не схвалений і не сертифікований TMDB."
   }
 }

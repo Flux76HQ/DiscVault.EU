@@ -2,359 +2,359 @@
   "locale": "ko",
   "languageName": "한국어",
   "seo": {
-    "title": "DiscVault — catalogue the films you own on disc",
-    "description": "DiscVault catalogues the films you own on 4K, Blu-ray and DVD. Scan a barcode, keep editions and box sets straight, on your iPhone or your own server. No ads, no tracking.",
-    "ogAlt": "DiscVault: a wall of film covers with 4K, Blu-ray and DVD badges."
+    "title": "DiscVault — 디스크로 소장한 영화를 위한 카탈로그",
+    "description": "DiscVault는 4K, Blu-ray, DVD로 소장한 영화를 카탈로그로 정리합니다. 바코드를 스캔하고 에디션과 박스 세트를 구분하세요. iPhone이나 내 서버에서. 광고도 추적도 없습니다.",
+    "ogAlt": "DiscVault: 4K, Blu-ray, DVD 배지가 붙은 영화 커버가 벽처럼 늘어선 모습."
   },
   "a11y": {
-    "skip": "Skip to content",
-    "home": "DiscVault, home",
-    "menu": "Menu",
-    "language": "Language",
-    "sections": "Sections",
-    "pauseMotion": "Pause the motion",
-    "playMotion": "Play the motion"
+    "skip": "본문으로 건너뛰기",
+    "home": "DiscVault 홈",
+    "menu": "메뉴",
+    "language": "언어",
+    "sections": "섹션",
+    "pauseMotion": "움직임 일시 정지",
+    "playMotion": "움직임 재생"
   },
   "nav": {
-    "collect": "Collect",
-    "scan": "Scan",
-    "editions": "Editions",
-    "selfHosted": "Self-hosted",
-    "privacy": "Privacy",
-    "faq": "Questions",
+    "collect": "수집",
+    "scan": "스캔",
+    "editions": "에디션",
+    "selfHosted": "셀프 호스팅",
+    "privacy": "개인정보",
+    "faq": "질문",
     "docs": "Docs",
-    "get": "Get DiscVault"
+    "get": "DiscVault 받기"
   },
   "actions": {
-    "appStore": "Download on the App Store",
-    "selfHost": "Self-host DiscVault",
-    "android": "Request Android beta access",
-    "testflight": "Join the TestFlight beta",
-    "installGuide": "Read the install guide",
-    "migrationGuide": "Read the migration guide",
-    "privacyPolicy": "Read the privacy policy",
-    "discord": "Join the Discord",
-    "github": "Source on GitHub",
-    "issues": "Report an issue",
-    "support": "Buy me a coffee",
-    "moreAnswers": "More answers in the docs",
-    "backToTop": "Back to top"
+    "appStore": "App Store에서 다운로드",
+    "selfHost": "DiscVault 셀프 호스팅하기",
+    "android": "Android 베타 액세스 요청",
+    "testflight": "TestFlight 베타 참여",
+    "installGuide": "설치 안내 읽기",
+    "migrationGuide": "마이그레이션 안내 읽기",
+    "privacyPolicy": "개인정보 처리방침 읽기",
+    "discord": "Discord 참여",
+    "github": "GitHub에서 소스 보기",
+    "issues": "문제 신고",
+    "support": "커피 한 잔 사 주기",
+    "moreAnswers": "문서에서 더 많은 답변 보기",
+    "backToTop": "맨 위로"
   },
   "hero": {
-    "title": "Your film shelf, catalogued.",
-    "lead": "DiscVault keeps track of every film you own on 4K, Blu-ray and DVD. Scan a barcode and the title, edition and cover fill themselves in.",
-    "note": "For iPhone and iPad, or self-hosted on your own server. Android is in beta.",
-    "mediaAlt": "The DiscVault library: a wall of film covers, each with a 4K, Blu-ray, DVD or box-set badge."
+    "title": "내 영화 선반을 카탈로그로.",
+    "lead": "DiscVault는 4K, Blu-ray, DVD로 소장한 모든 영화를 기록해 둡니다. 바코드를 스캔하면 제목, 에디션, 커버가 알아서 채워집니다.",
+    "note": "iPhone과 iPad용 앱, 또는 내 서버에 셀프 호스팅. Android는 베타입니다.",
+    "mediaAlt": "DiscVault 라이브러리: 영화 커버가 벽처럼 늘어서 있고, 커버마다 4K, Blu-ray, DVD 또는 박스 세트 배지가 붙어 있습니다."
   },
   "collect": {
-    "title": "Built for collectors.",
+    "title": "수집가를 위해 만들었습니다.",
     "blocks": {
       "library": {
-        "title": "A library that looks like your shelf",
+        "title": "내 선반을 닮은 라이브러리",
         "points": [
-          "Posters, a list or a detail view",
-          "Filter by 4K, Blu-ray or DVD",
-          "Search by title, barcode, cast or crew",
-          "Box sets open to the films inside",
-          "Quick, even on a large collection"
+          "포스터, 목록 또는 상세 보기",
+          "4K, Blu-ray, DVD로 필터링",
+          "제목, 바코드, 출연진, 제작진으로 검색",
+          "박스 세트를 열면 안에 든 영화가 보입니다",
+          "큰 컬렉션에서도 빠릅니다"
         ],
-        "mediaAlt": "The library on a phone: a grid of film covers with format badges."
+        "mediaAlt": "휴대폰에 표시된 라이브러리: 포맷 배지가 붙은 영화 커버 그리드."
       },
       "detail": {
-        "title": "Every film gets a proper page",
+        "title": "영화마다 제대로 된 페이지",
         "points": [
-          "Edition, format and barcode",
-          "Cast, crew and artwork",
-          "Your own poster or backdrop",
-          "Series and their seasons",
-          "Plex and Jellyfin copies marked"
+          "에디션, 포맷, 바코드",
+          "출연진, 제작진, 아트워크",
+          "직접 고른 포스터나 배경 이미지",
+          "시리즈와 시즌",
+          "Plex와 Jellyfin에 있는 사본 표시"
         ],
-        "mediaAlt": "A film’s page on a phone: cover, backdrop, year, format and barcode."
+        "mediaAlt": "휴대폰에 표시된 영화 페이지: 커버, 배경 이미지, 연도, 포맷, 바코드."
       },
       "lists": {
-        "title": "Lists for what happens next",
+        "title": "다음을 위한 목록",
         "points": [
-          "A watchlist for tonight",
-          "Watch history, with dates",
-          "A wishlist with price alerts",
-          "Loans: who has which disc",
-          "Tags you make up yourself"
+          "오늘 밤을 위한 시청 예정 목록",
+          "날짜가 남는 시청 기록",
+          "가격 알림이 있는 위시리스트",
+          "대여: 누가 어떤 디스크를 가져갔는지",
+          "직접 만드는 태그"
         ],
-        "mediaAlt": "The wishlist: four films with their current and target prices."
+        "mediaAlt": "위시리스트: 현재 가격과 목표 가격이 표시된 영화 네 편."
       },
       "insight": {
-        "title": "Know what you own",
+        "title": "무엇을 소장했는지 한눈에",
         "points": [
-          "Statistics by format, decade and genre",
-          "A place for every disc, down to the shelf",
-          "Your own score for every film",
-          "What is on loan, and what is overdue"
+          "포맷, 연대, 장르별 통계",
+          "디스크마다 정해 두는 자리, 선반 칸까지",
+          "영화마다 매기는 나만의 점수",
+          "빌려준 디스크와 반납 기한이 지난 디스크"
         ],
-        "mediaAlt": "Statistics: 54 films split by format into Blu-ray, 4K UHD and DVD."
+        "mediaAlt": "통계: 영화 54편을 Blu-ray, 4K UHD, DVD 포맷별로 나눈 모습."
       },
       "iphone": {
-        "title": "At home on iPhone and iPad",
+        "title": "iPhone과 iPad에 꼭 맞게",
         "points": [
-          "Ask Siri how many films by a director you own",
-          "Find any disc from Spotlight",
-          "Discover what to add next, on your own TMDB key",
-          "Lock the app with Face ID",
-          "iCloud keeps your devices in step"
+          "어떤 감독의 영화를 몇 편 소장했는지 Siri에게 물어보세요",
+          "Spotlight에서 어떤 디스크든 찾으세요",
+          "내 TMDB 키로 다음에 추가할 영화를 찾아보세요",
+          "Face ID로 앱을 잠그세요",
+          "iCloud가 내 기기들을 동기화합니다"
         ],
-        "mediaAlt": "DiscVault on an iPhone."
+        "mediaAlt": "iPhone의 DiscVault."
       }
     }
   },
   "scan": {
-    "titleStart": "Point the camera.",
-    "titleEnd": "It files itself.",
-    "lead": "Every disc has a barcode. Pick one of these and see what DiscVault makes of it.",
+    "titleStart": "카메라를 대세요.",
+    "titleEnd": "알아서 정리됩니다.",
+    "lead": "모든 디스크에는 바코드가 있습니다. 이 중 하나를 골라 DiscVault가 어떻게 읽어 내는지 보세요.",
     "record": {
-      "format": "Format",
-      "year": "Year",
-      "runtime": "Runtime",
-      "minutes": "min",
-      "director": "Director",
-      "barcode": "Barcode",
-      "added": "Added to your library"
+      "format": "포맷",
+      "year": "연도",
+      "runtime": "상영 시간",
+      "minutes": "분",
+      "director": "감독",
+      "barcode": "바코드",
+      "added": "라이브러리에 추가됨"
     },
-    "note": "On iPhone and iPad the disc catalogue lives on the device, so a scan works offline.",
-    "fallback": "No barcode? Search by title, or paste an IMDb or TMDB ID."
+    "note": "iPhone과 iPad에서는 디스크 카탈로그가 기기에 들어 있어 오프라인에서도 스캔할 수 있습니다.",
+    "fallback": "바코드가 없나요? 제목으로 검색하거나 IMDb 또는 TMDB ID를 붙여 넣으세요."
   },
   "editions": {
-    "title": "Editions matter.",
-    "lead": "A 4K disc is not a Blu-ray. A Steelbook is not a keep case. Box sets, and the discs inside a release, are catalogued as what they are.",
+    "title": "에디션이 중요합니다.",
+    "lead": "4K 디스크는 Blu-ray가 아닙니다. Steelbook은 일반 케이스가 아닙니다. 박스 세트와 한 릴리스 안의 디스크들은 있는 그대로 카탈로그에 담깁니다.",
     "items": {
       "uhd": {
         "name": "4K Ultra HD",
-        "detail": "17 on this shelf"
+        "detail": "이 선반에 17개"
       },
       "bluray": {
         "name": "Blu-ray",
-        "detail": "26 on this shelf"
+        "detail": "이 선반에 26개"
       },
       "dvd": {
         "name": "DVD",
-        "detail": "11 on this shelf"
+        "detail": "이 선반에 11개"
       },
       "steelbook": {
         "name": "Steelbook",
-        "detail": "1 on this shelf"
+        "detail": "이 선반에 1개"
       },
       "boxset": {
-        "name": "Box sets",
-        "detail": "3 sets, 12 films"
+        "name": "박스 세트",
+        "detail": "3세트, 영화 12편"
       }
     },
-    "note": "The shelf on this page is a demo library of 54 invented films."
+    "note": "이 페이지의 선반은 가상의 영화 54편으로 만든 데모 라이브러리입니다."
   },
   "platforms": {
-    "title": "Two ways to keep it.",
-    "lead": "On the device in your pocket, or on a server in your home. Both are DiscVault; pick where your collection lives.",
+    "title": "보관하는 두 가지 방법.",
+    "lead": "주머니 속 기기에, 또는 집에 있는 서버에. 둘 다 DiscVault입니다. 컬렉션을 어디에 둘지 고르세요.",
     "columns": {
       "ios": {
-        "name": "iPhone and iPad",
-        "sub": "The app"
+        "name": "iPhone과 iPad",
+        "sub": "앱"
       },
       "selfHosted": {
-        "name": "Your own server",
-        "sub": "Self-hosted"
+        "name": "내 서버",
+        "sub": "셀프 호스팅"
       }
     },
     "rows": {
       "home": {
-        "label": "Where it lives",
-        "ios": "On your device, synced through your own iCloud",
-        "selfHosted": "On a server you run"
+        "label": "보관 위치",
+        "ios": "내 기기에 보관하고 내 iCloud로 동기화",
+        "selfHosted": "내가 직접 운영하는 서버"
       },
       "add": {
-        "label": "Adding a disc",
-        "ios": "Scan with the camera, search or type it in",
-        "selfHosted": "Barcode, search or a whole import"
+        "label": "디스크 추가",
+        "ios": "카메라로 스캔, 검색 또는 직접 입력",
+        "selfHosted": "바코드, 검색 또는 전체 가져오기"
       },
       "share": {
-        "label": "Sharing",
-        "ios": "Your own devices",
-        "selfHosted": "A household: invites, groups and roles"
+        "label": "공유",
+        "ios": "내 기기들",
+        "selfHosted": "한 가족: 초대, 그룹, 역할"
       },
       "signin": {
-        "label": "Signing in",
-        "ios": "No account at all",
-        "selfHosted": "Passkeys first; password, TOTP or OpenID Connect if you prefer"
+        "label": "로그인",
+        "ios": "계정이 전혀 필요 없음",
+        "selfHosted": "패스키 우선. 원하면 암호, TOTP 또는 OpenID Connect"
       },
       "extras": {
-        "label": "Also there",
-        "ios": "Siri, Spotlight and Face ID lock",
-        "selfHosted": "Plugins, API keys, an MCP endpoint, backup and restore"
+        "label": "그 밖에",
+        "ios": "Siri, Spotlight, Face ID 잠금",
+        "selfHosted": "플러그인, API 키, MCP 엔드포인트, 백업 및 복원"
       },
       "languages": {
-        "label": "Languages",
+        "label": "언어",
         "ios": "13",
         "selfHosted": "29"
       }
     },
     "android": {
       "title": "Android",
-      "body": "In beta. Request access on Discord; approved testers install through Google Play."
+      "body": "베타입니다. Discord에서 액세스를 요청하세요. 승인된 테스터는 Google Play를 통해 설치합니다."
     },
-    "roadmap": "The apps work on their own today. Connecting them to a self-hosted DiscVault is planned for a later stage."
+    "roadmap": "앱은 현재 독립적으로 작동합니다. 셀프 호스팅 DiscVault와의 연결은 추후 단계에서 제공할 예정입니다."
   },
   "selfHosted": {
-    "title": "On a server you run.",
-    "lead": "The self-hosted edition is a web app for the whole household. It installs on Docker, Unraid or Home Assistant.",
+    "title": "내가 운영하는 서버에.",
+    "lead": "셀프 호스팅 버전은 온 가족이 함께 쓰는 웹 앱입니다. Docker, Unraid 또는 Home Assistant에 설치합니다.",
     "shots": {
       "library": {
-        "label": "Library",
-        "alt": "DiscVault in a browser: the library as a wall of covers, with search, view switch and format filters."
+        "label": "라이브러리",
+        "alt": "브라우저에서 본 DiscVault: 커버가 벽처럼 늘어선 라이브러리와 검색, 보기 전환, 포맷 필터."
       },
       "detail": {
-        "label": "Detail",
-        "alt": "DiscVault: a film's detail page with backdrop, cover, edition and metadata."
+        "label": "상세",
+        "alt": "DiscVault: 배경 이미지, 커버, 에디션, 메타데이터가 있는 영화 상세 페이지."
       },
       "boxset": {
-        "label": "Box set",
-        "alt": "DiscVault: a box set opened to show the films it contains."
+        "label": "박스 세트",
+        "alt": "DiscVault: 박스 세트를 열어 안에 든 영화를 보여 주는 화면."
       },
       "lists": {
-        "label": "Watchlist",
-        "alt": "DiscVault: the watchlist as a grid of covers."
+        "label": "시청 예정",
+        "alt": "DiscVault: 커버 그리드로 표시된 시청 예정 목록."
       }
     },
     "points": [
-      "Invite-only accounts with roles",
-      "Passkeys first",
-      "Plugins for metadata and prices",
-      "API keys and an MCP endpoint",
-      "Backup and restore",
-      "Installs as an app on your phone"
+      "역할이 있는 초대 전용 계정",
+      "패스키 우선",
+      "메타데이터와 가격을 위한 플러그인",
+      "API 키와 MCP 엔드포인트",
+      "백업 및 복원",
+      "휴대폰에 앱으로 설치"
     ],
     "migration": {
-      "title": "Coming from DiscVault Legacy?",
-      "body": "The migration wizard carries your collection across to the current DiscVault."
+      "title": "DiscVault Legacy를 쓰고 있나요?",
+      "body": "마이그레이션 마법사가 컬렉션을 현재의 DiscVault로 옮겨 줍니다."
     }
   },
   "runs": {
-    "title": "Where DiscVault runs",
+    "title": "DiscVault가 실행되는 곳",
     "names": [
       "iPhone",
       "iPad",
       "Docker",
       "Unraid",
       "Home Assistant",
-      "Android beta",
-      "Any browser"
+      "Android 베타",
+      "모든 브라우저"
     ],
-    "caption": "Where DiscVault runs today."
+    "caption": "현재 DiscVault가 실행되는 곳."
   },
   "privacy": {
-    "title": "It lives where you put it.",
-    "lead": "On your device, or on a server you run. No profiling, no advertising, nobody watching what you watch.",
+    "title": "당신이 둔 곳에 있습니다.",
+    "lead": "내 기기에, 또는 내가 직접 운영하는 서버에. 프로파일링 없음, 광고 없음, 무엇을 보는지 아무도 보지 않습니다.",
     "tiles": {
       "ads": {
         "figure": "0",
-        "label": "ads"
+        "label": "광고"
       },
       "trackers": {
         "figure": "0",
-        "label": "trackers"
+        "label": "트래커"
       },
       "profiles": {
         "figure": "0",
-        "label": "profiles"
+        "label": "프로필"
       },
       "count": {
         "figure": "1",
-        "label": "anonymous daily count"
+        "label": "익명 일일 집계"
       }
     },
     "body": [
-      "The iPhone and iPad app keeps your collection on the device. The self-hosted edition keeps it on a server you administer. Either way the only thing that leaves is a barcode or a search term.",
-      "One exception: a self-hosted server tells api.discvault.eu once a day that it is running. It sends its version and the number of days since its previous report: no identifier, and nothing about your collection. That is only there to estimate how much DiscVault is used, and you can turn it off."
+      "iPhone과 iPad 앱은 컬렉션을 기기에 보관합니다. 셀프 호스팅 버전은 당신이 관리하는 서버에 보관합니다. 어느 쪽이든 기기 밖으로 나가는 것은 바코드나 검색어뿐입니다.",
+      "예외가 하나 있습니다. 셀프 호스팅 서버는 하루에 한 번 api.discvault.eu에 실행 중임을 알립니다. 버전과 이전 보고 이후 지난 일수만 보내며, 식별자나 컬렉션에 관한 정보는 보내지 않습니다. DiscVault가 얼마나 사용되는지 가늠하기 위한 용도일 뿐이며 끌 수 있습니다."
     ]
   },
   "plans": {
-    "titleStart": "The core is",
-    "titleFree": "free",
-    "titleEnd": ".",
-    "lead": "Scanning, cataloguing, searching, backing up and restoring cost nothing. DiscVault is free to self-host.",
+    "titleStart": "핵심 기능은",
+    "titleFree": "무료",
+    "titleEnd": "입니다.",
+    "lead": "스캔, 카탈로그 정리, 검색, 백업, 복원에는 비용이 들지 않습니다. DiscVault 셀프 호스팅도 무료입니다.",
     "points": [
-      "Scanning and adding discs",
-      "Full backup and restore",
-      "Watchlist, history and wishlist",
-      "iCloud sync between your devices",
-      "Getting your data out, always"
+      "디스크 스캔 및 추가",
+      "전체 백업 및 복원",
+      "시청 예정 목록, 시청 기록, 위시리스트",
+      "내 기기 간 iCloud 동기화",
+      "언제든 내 데이터 내보내기"
     ],
-    "support": "DiscVault is made by one developer. If it earns a place on your shelf, a coffee is welcome. A donation unlocks nothing; it is only a thank-you."
+    "support": "DiscVault는 개발자 한 명이 만듭니다. 당신의 선반에 자리를 얻을 만하다면 커피 한 잔은 언제나 환영입니다. 후원한다고 잠금 해제되는 기능은 없습니다. 감사의 표시일 뿐입니다."
   },
   "faq": {
-    "title": "Good questions.",
+    "title": "좋은 질문입니다.",
     "items": {
       "server": {
-        "question": "Do I need a server?",
+        "question": "서버가 필요한가요?",
         "answer": [
-          "No. The iPhone and iPad app works entirely on its own. A server is only for people who want the self-hosted web edition, made for a whole household."
+          "아니요. iPhone과 iPad 앱은 그 자체로 완전히 작동합니다. 서버는 온 가족이 함께 쓰는 셀프 호스팅 웹 버전을 원하는 분에게만 필요합니다."
         ]
       },
       "account": {
-        "question": "Do I need an account?",
+        "question": "계정이 필요한가요?",
         "answer": [
-          "Not for the app. On a self-hosted DiscVault the accounts live on your own server; you invite who you like."
+          "앱에는 필요 없습니다. 셀프 호스팅 DiscVault에서는 계정이 내 서버에 있으며, 원하는 사람을 초대하면 됩니다."
         ]
       },
       "data": {
-        "question": "Where does the film information come from?",
+        "question": "영화 정보는 어디에서 오나요?",
         "answer": [
-          "Disc releases, barcodes and covers come from MovieVault, the catalogue behind DiscVault. Film details, cast and Discover use TMDB with your own free key.",
-          "This product uses the TMDB API but is not endorsed or certified by TMDB."
+          "디스크 릴리스, 바코드, 커버는 DiscVault의 바탕이 되는 카탈로그인 MovieVault에서 옵니다. 영화 상세 정보, 출연진, 탐색 기능은 당신의 무료 키로 TMDB를 이용합니다.",
+          "이 제품은 TMDB API를 사용하지만 TMDB의 보증이나 인증을 받지 않았습니다."
         ]
       },
       "sends": {
-        "question": "What does DiscVault send out?",
+        "question": "DiscVault는 무엇을 외부로 보내나요?",
         "answer": [
-          "A barcode or a search term when you look something up. A self-hosted server also reports once a day, anonymously, that it is running; you can turn that off. The privacy policy has the details."
+          "무언가를 찾아볼 때 바코드나 검색어를 보냅니다. 셀프 호스팅 서버는 하루에 한 번 실행 중임을 익명으로 알리기도 하며, 이 기능은 끌 수 있습니다. 자세한 내용은 개인정보 처리방침에 있습니다."
         ]
       },
       "sync": {
-        "question": "Can the app sync with my own server?",
+        "question": "앱을 내 서버와 동기화할 수 있나요?",
         "answer": [
-          "Not yet. The apps and the self-hosted edition each work on their own today; connecting them is planned for a later stage."
+          "아직은 안 됩니다. 앱과 셀프 호스팅 버전은 현재 각각 독립적으로 작동하며, 둘의 연결은 추후 단계에서 제공할 예정입니다."
         ]
       },
       "export": {
-        "question": "Can I get my collection out again?",
+        "question": "컬렉션을 다시 꺼낼 수 있나요?",
         "answer": [
-          "Yes. Backup and restore are part of the free core, and so is a CSV export. Your data is never held back."
+          "네. 백업과 복원은 무료 핵심 기능에 포함되며 CSV 내보내기도 마찬가지입니다. 당신의 데이터를 붙잡아 두는 일은 없습니다."
         ]
       },
       "android": {
-        "question": "Is there an Android app?",
+        "question": "Android 앱이 있나요?",
         "answer": [
-          "It is in beta. Request access on Discord; approved testers install it through Google Play."
+          "베타입니다. Discord에서 액세스를 요청하세요. 승인된 테스터는 Google Play를 통해 설치합니다."
         ]
       },
       "legacy": {
-        "question": "I still run DiscVault Legacy. How do I move?",
+        "question": "아직 DiscVault Legacy를 쓰고 있습니다. 어떻게 옮기나요?",
         "answer": [
-          "The self-hosted edition has a migration wizard that brings your collection across from Legacy. The migration guide walks through it for Unraid and Docker."
+          "셀프 호스팅 버전에는 Legacy에서 컬렉션을 가져오는 마이그레이션 마법사가 있습니다. 마이그레이션 안내에서 Unraid와 Docker 기준으로 과정을 설명합니다."
         ]
       }
     }
   },
   "cta": {
-    "title": "Scan your first disc.",
-    "lead": "Take the nearest case off the shelf and point the camera at the barcode. That is the whole setup."
+    "title": "첫 디스크를 스캔하세요.",
+    "lead": "선반에서 가장 가까운 케이스를 꺼내 바코드에 카메라를 대세요. 설정은 그게 전부입니다."
   },
   "footer": {
-    "tagline": "DiscVault. Built for collectors.",
+    "tagline": "DiscVault. 수집가를 위해 만들었습니다.",
     "groups": {
-      "product": "Product",
-      "help": "Help",
-      "legal": "Legal"
+      "product": "제품",
+      "help": "도움말",
+      "legal": "법적 고지"
     },
-    "privacy": "Privacy policy",
-    "terms": "Terms",
-    "legacy": "Legacy migration",
-    "production": "Made by",
-    "tmdb": "This product uses the TMDB API but is not endorsed or certified by TMDB."
+    "privacy": "개인정보 처리방침",
+    "terms": "약관",
+    "legacy": "Legacy 마이그레이션",
+    "production": "제작",
+    "tmdb": "이 제품은 TMDB API를 사용하지만 TMDB의 보증이나 인증을 받지 않았습니다."
   }
 }

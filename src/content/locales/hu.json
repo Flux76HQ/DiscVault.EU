@@ -2,359 +2,359 @@
   "locale": "hu",
   "languageName": "Magyar",
   "seo": {
-    "title": "DiscVault — catalogue the films you own on disc",
-    "description": "DiscVault catalogues the films you own on 4K, Blu-ray and DVD. Scan a barcode, keep editions and box sets straight, on your iPhone or your own server. No ads, no tracking.",
-    "ogAlt": "DiscVault: a wall of film covers with 4K, Blu-ray and DVD badges."
+    "title": "DiscVault — katalógus a lemezen meglévő filmjeidhez",
+    "description": "A DiscVault katalogizálja 4K, Blu-ray és DVD filmjeidet. Vonalkód beolvasása, kiadások külön tartva, iPhone-on vagy saját szerveren. Reklám és nyomkövetés nélkül.",
+    "ogAlt": "DiscVault: filmborítókból álló fal 4K, Blu-ray és DVD jelvényekkel."
   },
   "a11y": {
-    "skip": "Skip to content",
-    "home": "DiscVault, home",
-    "menu": "Menu",
-    "language": "Language",
-    "sections": "Sections",
-    "pauseMotion": "Pause the motion",
-    "playMotion": "Play the motion"
+    "skip": "Ugrás a tartalomra",
+    "home": "DiscVault, kezdőlap",
+    "menu": "Menü",
+    "language": "Nyelv",
+    "sections": "Szakaszok",
+    "pauseMotion": "Mozgás szüneteltetése",
+    "playMotion": "Mozgás lejátszása"
   },
   "nav": {
-    "collect": "Collect",
-    "scan": "Scan",
-    "editions": "Editions",
-    "selfHosted": "Self-hosted",
-    "privacy": "Privacy",
-    "faq": "Questions",
+    "collect": "Gyűjtés",
+    "scan": "Beolvasás",
+    "editions": "Kiadások",
+    "selfHosted": "Saját szerver",
+    "privacy": "Adatvédelem",
+    "faq": "Kérdések",
     "docs": "Docs",
-    "get": "Get DiscVault"
+    "get": "DiscVault beszerzése"
   },
   "actions": {
-    "appStore": "Download on the App Store",
-    "selfHost": "Self-host DiscVault",
-    "android": "Request Android beta access",
-    "testflight": "Join the TestFlight beta",
-    "installGuide": "Read the install guide",
-    "migrationGuide": "Read the migration guide",
-    "privacyPolicy": "Read the privacy policy",
-    "discord": "Join the Discord",
-    "github": "Source on GitHub",
-    "issues": "Report an issue",
-    "support": "Buy me a coffee",
-    "moreAnswers": "More answers in the docs",
-    "backToTop": "Back to top"
+    "appStore": "Letölthető az App Store-ból",
+    "selfHost": "DiscVault futtatása saját szerveren",
+    "android": "Hozzáférés kérése az Android bétához",
+    "testflight": "Csatlakozás a TestFlight bétához",
+    "installGuide": "Telepítési útmutató megnyitása",
+    "migrationGuide": "Migrálási útmutató megnyitása",
+    "privacyPolicy": "Adatvédelmi szabályzat megnyitása",
+    "discord": "Csatlakozás a Discordhoz",
+    "github": "Forráskód a GitHubon",
+    "issues": "Hiba bejelentése",
+    "support": "Hívj meg egy kávéra",
+    "moreAnswers": "További válaszok a dokumentációban",
+    "backToTop": "Vissza a tetejére"
   },
   "hero": {
-    "title": "Your film shelf, catalogued.",
-    "lead": "DiscVault keeps track of every film you own on 4K, Blu-ray and DVD. Scan a barcode and the title, edition and cover fill themselves in.",
-    "note": "For iPhone and iPad, or self-hosted on your own server. Android is in beta.",
-    "mediaAlt": "The DiscVault library: a wall of film covers, each with a 4K, Blu-ray, DVD or box-set badge."
+    "title": "A filmespolcod, katalogizálva.",
+    "lead": "A DiscVault számon tartja minden filmedet, amely 4K, Blu-ray vagy DVD lemezen megvan. Olvass be egy vonalkódot, és a cím, a kiadás és a borító magától kitöltődik.",
+    "note": "iPhone-ra és iPadre, vagy saját szerveren futtatva. Az Android béta állapotban van.",
+    "mediaAlt": "A DiscVault könyvtára: filmborítókból álló fal, mindegyiken 4K, Blu-ray, DVD vagy díszdoboz jelvény."
   },
   "collect": {
-    "title": "Built for collectors.",
+    "title": "Gyűjtőknek építve.",
     "blocks": {
       "library": {
-        "title": "A library that looks like your shelf",
+        "title": "Könyvtár, amely úgy néz ki, mint a polcod",
         "points": [
-          "Posters, a list or a detail view",
-          "Filter by 4K, Blu-ray or DVD",
-          "Search by title, barcode, cast or crew",
-          "Box sets open to the films inside",
-          "Quick, even on a large collection"
+          "Plakátok, lista vagy részletnézet",
+          "Szűrés 4K, Blu-ray vagy DVD szerint",
+          "Keresés cím, vonalkód, szereplő vagy stábtag szerint",
+          "A díszdobozok a bennük lévő filmekre nyílnak",
+          "Gyors, nagy gyűjteménynél is"
         ],
-        "mediaAlt": "The library on a phone: a grid of film covers with format badges."
+        "mediaAlt": "A könyvtár telefonon: filmborítók rácsa formátumjelvényekkel."
       },
       "detail": {
-        "title": "Every film gets a proper page",
+        "title": "Minden film rendes adatlapot kap",
         "points": [
-          "Edition, format and barcode",
-          "Cast, crew and artwork",
-          "Your own poster or backdrop",
-          "Series and their seasons",
-          "Plex and Jellyfin copies marked"
+          "Kiadás, formátum és vonalkód",
+          "Szereplők, stáb és képanyag",
+          "Saját plakát vagy háttérkép",
+          "Sorozatok és évadaik",
+          "Jelölve a Plex- és Jellyfin-példányok"
         ],
-        "mediaAlt": "A film’s page on a phone: cover, backdrop, year, format and barcode."
+        "mediaAlt": "Egy film adatlapja telefonon: borító, háttérkép, év, formátum és vonalkód."
       },
       "lists": {
-        "title": "Lists for what happens next",
+        "title": "Listák arra, ami ezután jön",
         "points": [
-          "A watchlist for tonight",
-          "Watch history, with dates",
-          "A wishlist with price alerts",
-          "Loans: who has which disc",
-          "Tags you make up yourself"
+          "Néznivalók listája ma estére",
+          "Megtekintési előzmények, dátumokkal",
+          "Kívánságlista árfigyeléssel",
+          "Kölcsönadások: kinél melyik lemez van",
+          "Címkék, amelyeket te találsz ki"
         ],
-        "mediaAlt": "The wishlist: four films with their current and target prices."
+        "mediaAlt": "A kívánságlista: négy film a jelenlegi árával és a célárával."
       },
       "insight": {
-        "title": "Know what you own",
+        "title": "Tudd, mid van",
         "points": [
-          "Statistics by format, decade and genre",
-          "A place for every disc, down to the shelf",
-          "Your own score for every film",
-          "What is on loan, and what is overdue"
+          "Statisztikák formátum, évtized és műfaj szerint",
+          "Minden lemeznek helye van, polcra pontosan",
+          "Saját pontszám minden filmhez",
+          "Mi van kölcsönben, és mi késik"
         ],
-        "mediaAlt": "Statistics: 54 films split by format into Blu-ray, 4K UHD and DVD."
+        "mediaAlt": "Statisztikák: 54 film formátum szerint bontva: Blu-ray, 4K UHD és DVD."
       },
       "iphone": {
-        "title": "At home on iPhone and iPad",
+        "title": "Otthon van iPhone-on és iPaden",
         "points": [
-          "Ask Siri how many films by a director you own",
-          "Find any disc from Spotlight",
-          "Discover what to add next, on your own TMDB key",
-          "Lock the app with Face ID",
-          "iCloud keeps your devices in step"
+          "Kérdezd meg Sirit, hány filmed van egy rendezőtől",
+          "Bármelyik lemezt megtalálod a Spotlightból",
+          "Fedezd fel, mit vegyél fel legközelebb, a saját TMDB-kulcsoddal",
+          "Zárold az alkalmazást Face ID-val",
+          "Az iCloud szinkronban tartja az eszközeidet"
         ],
-        "mediaAlt": "DiscVault on an iPhone."
+        "mediaAlt": "A DiscVault egy iPhone-on."
       }
     }
   },
   "scan": {
-    "titleStart": "Point the camera.",
-    "titleEnd": "It files itself.",
-    "lead": "Every disc has a barcode. Pick one of these and see what DiscVault makes of it.",
+    "titleStart": "Irányítsd rá a kamerát.",
+    "titleEnd": "Magától katalogizálódik.",
+    "lead": "Minden lemezen van vonalkód. Válassz egyet az alábbiak közül, és nézd meg, mit kezd vele a DiscVault.",
     "record": {
-      "format": "Format",
-      "year": "Year",
-      "runtime": "Runtime",
-      "minutes": "min",
-      "director": "Director",
-      "barcode": "Barcode",
-      "added": "Added to your library"
+      "format": "Formátum",
+      "year": "Év",
+      "runtime": "Játékidő",
+      "minutes": "perc",
+      "director": "Rendező",
+      "barcode": "Vonalkód",
+      "added": "Hozzáadva a könyvtáradhoz"
     },
-    "note": "On iPhone and iPad the disc catalogue lives on the device, so a scan works offline.",
-    "fallback": "No barcode? Search by title, or paste an IMDb or TMDB ID."
+    "note": "iPhone-on és iPaden a lemezkatalógus az eszközön van, így a beolvasás offline is működik.",
+    "fallback": "Nincs vonalkód? Keress cím szerint, vagy illessz be egy IMDb- vagy TMDB-azonosítót."
   },
   "editions": {
-    "title": "Editions matter.",
-    "lead": "A 4K disc is not a Blu-ray. A Steelbook is not a keep case. Box sets, and the discs inside a release, are catalogued as what they are.",
+    "title": "A kiadások számítanak.",
+    "lead": "A 4K lemez nem Blu-ray. A Steelbook nem sima tok. A díszdobozok és a kiadásban lévő lemezek annak vannak katalogizálva, amik.",
     "items": {
       "uhd": {
         "name": "4K Ultra HD",
-        "detail": "17 on this shelf"
+        "detail": "17 ezen a polcon"
       },
       "bluray": {
         "name": "Blu-ray",
-        "detail": "26 on this shelf"
+        "detail": "26 ezen a polcon"
       },
       "dvd": {
         "name": "DVD",
-        "detail": "11 on this shelf"
+        "detail": "11 ezen a polcon"
       },
       "steelbook": {
         "name": "Steelbook",
-        "detail": "1 on this shelf"
+        "detail": "1 ezen a polcon"
       },
       "boxset": {
-        "name": "Box sets",
-        "detail": "3 sets, 12 films"
+        "name": "Díszdobozok",
+        "detail": "3 díszdoboz, 12 film"
       }
     },
-    "note": "The shelf on this page is a demo library of 54 invented films."
+    "note": "Az oldalon látható polc egy 54 kitalált filmből álló bemutatókönyvtár."
   },
   "platforms": {
-    "title": "Two ways to keep it.",
-    "lead": "On the device in your pocket, or on a server in your home. Both are DiscVault; pick where your collection lives.",
+    "title": "Kétféleképpen tarthatod.",
+    "lead": "A zsebedben lévő eszközön vagy az otthonodban álló szerveren. Mindkettő DiscVault; te döntöd el, hol lakik a gyűjteményed.",
     "columns": {
       "ios": {
-        "name": "iPhone and iPad",
-        "sub": "The app"
+        "name": "iPhone és iPad",
+        "sub": "Az alkalmazás"
       },
       "selfHosted": {
-        "name": "Your own server",
-        "sub": "Self-hosted"
+        "name": "Saját szerver",
+        "sub": "Saját üzemeltetés"
       }
     },
     "rows": {
       "home": {
-        "label": "Where it lives",
-        "ios": "On your device, synced through your own iCloud",
-        "selfHosted": "On a server you run"
+        "label": "Hol lakik",
+        "ios": "Az eszközödön, a saját iCloudodon keresztül szinkronizálva",
+        "selfHosted": "Egy általad üzemeltetett szerveren"
       },
       "add": {
-        "label": "Adding a disc",
-        "ios": "Scan with the camera, search or type it in",
-        "selfHosted": "Barcode, search or a whole import"
+        "label": "Lemez hozzáadása",
+        "ios": "Beolvasás kamerával, keresés vagy kézi bevitel",
+        "selfHosted": "Vonalkód, keresés vagy teljes importálás"
       },
       "share": {
-        "label": "Sharing",
-        "ios": "Your own devices",
-        "selfHosted": "A household: invites, groups and roles"
+        "label": "Megosztás",
+        "ios": "A saját eszközeid",
+        "selfHosted": "Egy háztartás: meghívók, csoportok és szerepkörök"
       },
       "signin": {
-        "label": "Signing in",
-        "ios": "No account at all",
-        "selfHosted": "Passkeys first; password, TOTP or OpenID Connect if you prefer"
+        "label": "Bejelentkezés",
+        "ios": "Fiók nélkül",
+        "selfHosted": "Elsősorban jelkulcsok; jelszó, TOTP vagy OpenID Connect, ha úgy szeretnéd"
       },
       "extras": {
-        "label": "Also there",
-        "ios": "Siri, Spotlight and Face ID lock",
-        "selfHosted": "Plugins, API keys, an MCP endpoint, backup and restore"
+        "label": "Ezenkívül",
+        "ios": "Siri, Spotlight és Face ID-zár",
+        "selfHosted": "Bővítmények, API-kulcsok, MCP-végpont, biztonsági mentés és visszaállítás"
       },
       "languages": {
-        "label": "Languages",
+        "label": "Nyelvek",
         "ios": "13",
         "selfHosted": "29"
       }
     },
     "android": {
       "title": "Android",
-      "body": "In beta. Request access on Discord; approved testers install through Google Play."
+      "body": "Bétában. Kérj hozzáférést a Discordon; a jóváhagyott tesztelők a Google Playen keresztül telepítenek."
     },
-    "roadmap": "The apps work on their own today. Connecting them to a self-hosted DiscVault is planned for a later stage."
+    "roadmap": "Az alkalmazások jelenleg önállóan működnek. A saját üzemeltetésű DiscVault-példányhoz való csatlakoztatásuk egy későbbi szakaszra van tervezve."
   },
   "selfHosted": {
-    "title": "On a server you run.",
-    "lead": "The self-hosted edition is a web app for the whole household. It installs on Docker, Unraid or Home Assistant.",
+    "title": "Általad üzemeltetett szerveren.",
+    "lead": "A saját szerveren futó változat egy webalkalmazás az egész háztartásnak. Dockerre, Unraidre vagy Home Assistantre telepíthető.",
     "shots": {
       "library": {
-        "label": "Library",
-        "alt": "DiscVault in a browser: the library as a wall of covers, with search, view switch and format filters."
+        "label": "Könyvtár",
+        "alt": "DiscVault böngészőben: a könyvtár borítófalként, kereséssel, nézetváltóval és formátumszűrőkkel."
       },
       "detail": {
-        "label": "Detail",
-        "alt": "DiscVault: a film's detail page with backdrop, cover, edition and metadata."
+        "label": "Részletek",
+        "alt": "DiscVault: egy film adatlapja háttérképpel, borítóval, kiadással és metaadatokkal."
       },
       "boxset": {
-        "label": "Box set",
-        "alt": "DiscVault: a box set opened to show the films it contains."
+        "label": "Díszdoboz",
+        "alt": "DiscVault: egy kinyitott díszdoboz a benne lévő filmekkel."
       },
       "lists": {
-        "label": "Watchlist",
-        "alt": "DiscVault: the watchlist as a grid of covers."
+        "label": "Néznivalók",
+        "alt": "DiscVault: a néznivalók listája borítók rácsaként."
       }
     },
     "points": [
-      "Invite-only accounts with roles",
-      "Passkeys first",
-      "Plugins for metadata and prices",
-      "API keys and an MCP endpoint",
-      "Backup and restore",
-      "Installs as an app on your phone"
+      "Meghívásos fiókok, szerepkörökkel",
+      "Elsősorban jelkulcsok",
+      "Bővítmények metaadatokhoz és árakhoz",
+      "API-kulcsok és MCP-végpont",
+      "Biztonsági mentés és visszaállítás",
+      "Alkalmazásként telepíthető a telefonodra"
     ],
     "migration": {
-      "title": "Coming from DiscVault Legacy?",
-      "body": "The migration wizard carries your collection across to the current DiscVault."
+      "title": "A DiscVault Legacyről jössz?",
+      "body": "A migrációs varázsló átviszi a gyűjteményedet a jelenlegi DiscVaultba."
     }
   },
   "runs": {
-    "title": "Where DiscVault runs",
+    "title": "Hol fut a DiscVault",
     "names": [
       "iPhone",
       "iPad",
       "Docker",
       "Unraid",
       "Home Assistant",
-      "Android beta",
-      "Any browser"
+      "Android béta",
+      "Bármilyen böngésző"
     ],
-    "caption": "Where DiscVault runs today."
+    "caption": "Itt fut ma a DiscVault."
   },
   "privacy": {
-    "title": "It lives where you put it.",
-    "lead": "On your device, or on a server you run. No profiling, no advertising, nobody watching what you watch.",
+    "title": "Ott van, ahová teszed.",
+    "lead": "A saját eszközödön vagy egy általad üzemeltetett szerveren. Nincs profilalkotás, nincs hirdetés, senki sem nézi, mit nézel.",
     "tiles": {
       "ads": {
         "figure": "0",
-        "label": "ads"
+        "label": "hirdetés"
       },
       "trackers": {
         "figure": "0",
-        "label": "trackers"
+        "label": "nyomkövető"
       },
       "profiles": {
         "figure": "0",
-        "label": "profiles"
+        "label": "profil"
       },
       "count": {
         "figure": "1",
-        "label": "anonymous daily count"
+        "label": "névtelen napi számlálás"
       }
     },
     "body": [
-      "The iPhone and iPad app keeps your collection on the device. The self-hosted edition keeps it on a server you administer. Either way the only thing that leaves is a barcode or a search term.",
-      "One exception: a self-hosted server tells api.discvault.eu once a day that it is running. It sends its version and the number of days since its previous report: no identifier, and nothing about your collection. That is only there to estimate how much DiscVault is used, and you can turn it off."
+      "Az iPhone- és iPad-alkalmazás az eszközön tartja a gyűjteményt. A saját szerveren futó változat egy általad kezelt szerveren tartja. Mindkét esetben csak egy vonalkód vagy egy keresőkifejezés megy ki.",
+      "Egy kivétel: a saját szerveren futó DiscVault naponta egyszer jelzi az api.discvault.eu címnek, hogy fut. A verzióját és az előző jelzése óta eltelt napok számát küldi el: azonosítót és a gyűjteményedről szóló adatot nem. Ez kizárólag annak felmérésére szolgál, hogy mennyire használják a DiscVaultot, és kikapcsolhatod."
     ]
   },
   "plans": {
-    "titleStart": "The core is",
-    "titleFree": "free",
+    "titleStart": "Az alap",
+    "titleFree": "ingyenes",
     "titleEnd": ".",
-    "lead": "Scanning, cataloguing, searching, backing up and restoring cost nothing. DiscVault is free to self-host.",
+    "lead": "A beolvasás, a katalogizálás, a keresés, a biztonsági mentés és a visszaállítás semmibe sem kerül. A DiscVault saját szerveren ingyen futtatható.",
     "points": [
-      "Scanning and adding discs",
-      "Full backup and restore",
-      "Watchlist, history and wishlist",
-      "iCloud sync between your devices",
-      "Getting your data out, always"
+      "Lemezek beolvasása és hozzáadása",
+      "Teljes biztonsági mentés és visszaállítás",
+      "Néznivalók listája, előzmények és kívánságlista",
+      "iCloud-szinkronizálás az eszközeid között",
+      "Az adataid kinyerése, mindig"
     ],
-    "support": "DiscVault is made by one developer. If it earns a place on your shelf, a coffee is welcome. A donation unlocks nothing; it is only a thank-you."
+    "support": "A DiscVaultot egyetlen fejlesztő készíti. Ha kiérdemel egy helyet a polcodon, egy kávét szívesen fogadok. Az adomány semmit sem old fel; csak köszönet."
   },
   "faq": {
-    "title": "Good questions.",
+    "title": "Jó kérdések.",
     "items": {
       "server": {
-        "question": "Do I need a server?",
+        "question": "Kell hozzá szerver?",
         "answer": [
-          "No. The iPhone and iPad app works entirely on its own. A server is only for people who want the self-hosted web edition, made for a whole household."
+          "Nem. Az iPhone- és iPad-alkalmazás teljesen önállóan működik. Szerver csak azoknak kell, akik a saját szerveren futó webes változatot szeretnék, amely egy egész háztartásnak készült."
         ]
       },
       "account": {
-        "question": "Do I need an account?",
+        "question": "Kell hozzá fiók?",
         "answer": [
-          "Not for the app. On a self-hosted DiscVault the accounts live on your own server; you invite who you like."
+          "Az alkalmazáshoz nem. Saját szerveren futó DiscVault esetén a fiókok a saját szervereden vannak; azt hívsz meg, akit szeretnél."
         ]
       },
       "data": {
-        "question": "Where does the film information come from?",
+        "question": "Honnan származnak a filmadatok?",
         "answer": [
-          "Disc releases, barcodes and covers come from MovieVault, the catalogue behind DiscVault. Film details, cast and Discover use TMDB with your own free key.",
-          "This product uses the TMDB API but is not endorsed or certified by TMDB."
+          "A lemezkiadások, a vonalkódok és a borítók a MovieVaultból származnak, amely a DiscVault mögötti katalógus. A filmek részletei, a szereplők és a Discover funkció a TMDB-t használják a saját ingyenes kulcsoddal.",
+          "Ez a termék a TMDB API-t használja, de a TMDB nem támogatja és nem tanúsítja."
         ]
       },
       "sends": {
-        "question": "What does DiscVault send out?",
+        "question": "Mit küld ki a DiscVault?",
         "answer": [
-          "A barcode or a search term when you look something up. A self-hosted server also reports once a day, anonymously, that it is running; you can turn that off. The privacy policy has the details."
+          "Egy vonalkódot vagy egy keresőkifejezést, amikor rákeresel valamire. A saját szerveren futó DiscVault naponta egyszer névtelenül azt is jelzi, hogy fut; ezt kikapcsolhatod. A részletek az adatvédelmi szabályzatban vannak."
         ]
       },
       "sync": {
-        "question": "Can the app sync with my own server?",
+        "question": "Szinkronizálhat az alkalmazás a saját szerveremmel?",
         "answer": [
-          "Not yet. The apps and the self-hosted edition each work on their own today; connecting them is planned for a later stage."
+          "Még nem. Az alkalmazások és a saját szerveren futó változat ma külön-külön, önállóan működnek; összekapcsolásuk egy későbbi szakaszra van tervezve."
         ]
       },
       "export": {
-        "question": "Can I get my collection out again?",
+        "question": "Ki tudom nyerni a gyűjteményemet?",
         "answer": [
-          "Yes. Backup and restore are part of the free core, and so is a CSV export. Your data is never held back."
+          "Igen. A biztonsági mentés és a visszaállítás az ingyenes alap része, ahogy a CSV-exportálás is. Az adataidat soha nem tartjuk vissza."
         ]
       },
       "android": {
-        "question": "Is there an Android app?",
+        "question": "Van Android-alkalmazás?",
         "answer": [
-          "It is in beta. Request access on Discord; approved testers install it through Google Play."
+          "Bétában van. Kérj hozzáférést a Discordon; a jóváhagyott tesztelők a Google Playen keresztül telepítik."
         ]
       },
       "legacy": {
-        "question": "I still run DiscVault Legacy. How do I move?",
+        "question": "Még a DiscVault Legacyt használom. Hogyan váltsak?",
         "answer": [
-          "The self-hosted edition has a migration wizard that brings your collection across from Legacy. The migration guide walks through it for Unraid and Docker."
+          "A saját szerveren futó változatban van egy migrációs varázsló, amely áthozza a gyűjteményedet a Legacyből. A migrálási útmutató végigvezet rajta Unraiden és Dockeren."
         ]
       }
     }
   },
   "cta": {
-    "title": "Scan your first disc.",
-    "lead": "Take the nearest case off the shelf and point the camera at the barcode. That is the whole setup."
+    "title": "Olvasd be az első lemezed.",
+    "lead": "Vedd le a polcról a legközelebbi tokot, és irányítsd a kamerát a vonalkódra. Ennyi az egész beállítás."
   },
   "footer": {
-    "tagline": "DiscVault. Built for collectors.",
+    "tagline": "DiscVault. Gyűjtőknek építve.",
     "groups": {
-      "product": "Product",
-      "help": "Help",
-      "legal": "Legal"
+      "product": "Termék",
+      "help": "Segítség",
+      "legal": "Jogi tudnivalók"
     },
-    "privacy": "Privacy policy",
-    "terms": "Terms",
-    "legacy": "Legacy migration",
-    "production": "Made by",
-    "tmdb": "This product uses the TMDB API but is not endorsed or certified by TMDB."
+    "privacy": "Adatvédelmi szabályzat",
+    "terms": "Feltételek",
+    "legacy": "Migrálás a Legacyről",
+    "production": "Készítette",
+    "tmdb": "Ez a termék a TMDB API-t használja, de a TMDB nem támogatja és nem tanúsítja."
   }
 }

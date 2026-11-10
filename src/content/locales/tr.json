@@ -2,359 +2,359 @@
   "locale": "tr",
   "languageName": "Türkçe",
   "seo": {
-    "title": "DiscVault — catalogue the films you own on disc",
-    "description": "DiscVault catalogues the films you own on 4K, Blu-ray and DVD. Scan a barcode, keep editions and box sets straight, on your iPhone or your own server. No ads, no tracking.",
-    "ogAlt": "DiscVault: a wall of film covers with 4K, Blu-ray and DVD badges."
+    "title": "DiscVault — diskte sahip olduğun filmleri katalogla",
+    "description": "DiscVault, 4K, Blu-ray ve DVD filmlerini kataloglar. Barkodu tara, sürümleri ve kutu setlerini ayırt et; iPhone’unda ya da kendi sunucunda. Reklam yok, takip yok.",
+    "ogAlt": "DiscVault: 4K, Blu-ray ve DVD rozetleri taşıyan film kapaklarından bir duvar."
   },
   "a11y": {
-    "skip": "Skip to content",
-    "home": "DiscVault, home",
-    "menu": "Menu",
-    "language": "Language",
-    "sections": "Sections",
-    "pauseMotion": "Pause the motion",
-    "playMotion": "Play the motion"
+    "skip": "İçeriğe geç",
+    "home": "DiscVault, ana sayfa",
+    "menu": "Menü",
+    "language": "Dil",
+    "sections": "Bölümler",
+    "pauseMotion": "Hareketi duraklat",
+    "playMotion": "Hareketi oynat"
   },
   "nav": {
-    "collect": "Collect",
-    "scan": "Scan",
-    "editions": "Editions",
-    "selfHosted": "Self-hosted",
-    "privacy": "Privacy",
-    "faq": "Questions",
+    "collect": "Koleksiyon",
+    "scan": "Tara",
+    "editions": "Sürümler",
+    "selfHosted": "Kendi sunucun",
+    "privacy": "Gizlilik",
+    "faq": "Sorular",
     "docs": "Docs",
-    "get": "Get DiscVault"
+    "get": "DiscVault’u edin"
   },
   "actions": {
-    "appStore": "Download on the App Store",
-    "selfHost": "Self-host DiscVault",
-    "android": "Request Android beta access",
-    "testflight": "Join the TestFlight beta",
-    "installGuide": "Read the install guide",
-    "migrationGuide": "Read the migration guide",
-    "privacyPolicy": "Read the privacy policy",
-    "discord": "Join the Discord",
-    "github": "Source on GitHub",
-    "issues": "Report an issue",
-    "support": "Buy me a coffee",
-    "moreAnswers": "More answers in the docs",
-    "backToTop": "Back to top"
+    "appStore": "App Store’dan indirin",
+    "selfHost": "DiscVault’u kendi sunucuna kur",
+    "android": "Android beta erişimi iste",
+    "testflight": "TestFlight betasına katıl",
+    "installGuide": "Kurulum kılavuzunu oku",
+    "migrationGuide": "Geçiş kılavuzunu oku",
+    "privacyPolicy": "Gizlilik politikasını oku",
+    "discord": "Discord’a katıl",
+    "github": "GitHub’da kaynak kodu",
+    "issues": "Sorun bildir",
+    "support": "Bana bir kahve ısmarla",
+    "moreAnswers": "Daha fazla yanıt belgelerde",
+    "backToTop": "Başa dön"
   },
   "hero": {
-    "title": "Your film shelf, catalogued.",
-    "lead": "DiscVault keeps track of every film you own on 4K, Blu-ray and DVD. Scan a barcode and the title, edition and cover fill themselves in.",
-    "note": "For iPhone and iPad, or self-hosted on your own server. Android is in beta.",
-    "mediaAlt": "The DiscVault library: a wall of film covers, each with a 4K, Blu-ray, DVD or box-set badge."
+    "title": "Film rafın, kataloglandı.",
+    "lead": "DiscVault, 4K, Blu-ray ve DVD’de sahip olduğun her filmin kaydını tutar. Barkodu tara; başlık, sürüm ve kapak kendiliğinden dolsun.",
+    "note": "iPhone ve iPad için ya da kendi sunucunda. Android betada.",
+    "mediaAlt": "DiscVault kitaplığı: her biri 4K, Blu-ray, DVD ya da kutu seti rozeti taşıyan film kapaklarından bir duvar."
   },
   "collect": {
-    "title": "Built for collectors.",
+    "title": "Koleksiyoncular için yapıldı.",
     "blocks": {
       "library": {
-        "title": "A library that looks like your shelf",
+        "title": "Rafına benzeyen bir kitaplık",
         "points": [
-          "Posters, a list or a detail view",
-          "Filter by 4K, Blu-ray or DVD",
-          "Search by title, barcode, cast or crew",
-          "Box sets open to the films inside",
-          "Quick, even on a large collection"
+          "Afişler, liste ya da ayrıntı görünümü",
+          "4K, Blu-ray ya da DVD’ye göre filtrele",
+          "Başlığa, barkoda, oyunculara ya da ekibe göre ara",
+          "Kutu setleri açılır, içindeki filmler görünür",
+          "Büyük bir koleksiyonda bile hızlı"
         ],
-        "mediaAlt": "The library on a phone: a grid of film covers with format badges."
+        "mediaAlt": "Telefonda kitaplık: biçim rozetli film kapaklarından bir ızgara."
       },
       "detail": {
-        "title": "Every film gets a proper page",
+        "title": "Her filmin düzgün bir sayfası var",
         "points": [
-          "Edition, format and barcode",
-          "Cast, crew and artwork",
-          "Your own poster or backdrop",
-          "Series and their seasons",
-          "Plex and Jellyfin copies marked"
+          "Sürüm, biçim ve barkod",
+          "Oyuncular, ekip ve görseller",
+          "Kendi afişin ya da arka plan görselin",
+          "Diziler ve sezonları",
+          "Plex ve Jellyfin kopyaları işaretlenir"
         ],
-        "mediaAlt": "A film’s page on a phone: cover, backdrop, year, format and barcode."
+        "mediaAlt": "Telefonda bir filmin sayfası: kapak, arka plan görseli, yıl, biçim ve barkod."
       },
       "lists": {
-        "title": "Lists for what happens next",
+        "title": "Sırada ne varsa onun için listeler",
         "points": [
-          "A watchlist for tonight",
-          "Watch history, with dates",
-          "A wishlist with price alerts",
-          "Loans: who has which disc",
-          "Tags you make up yourself"
+          "Bu akşam için bir izleme listesi",
+          "Tarihleriyle izleme geçmişi",
+          "Fiyat uyarılı bir istek listesi",
+          "Ödünç verilenler: hangi disk kimde",
+          "Kendi uydurduğun etiketler"
         ],
-        "mediaAlt": "The wishlist: four films with their current and target prices."
+        "mediaAlt": "İstek listesi: güncel ve hedef fiyatlarıyla dört film."
       },
       "insight": {
-        "title": "Know what you own",
+        "title": "Neye sahip olduğunu bil",
         "points": [
-          "Statistics by format, decade and genre",
-          "A place for every disc, down to the shelf",
-          "Your own score for every film",
-          "What is on loan, and what is overdue"
+          "Biçime, on yıla ve türe göre istatistikler",
+          "Her disk için bir yer, rafına kadar",
+          "Her film için kendi puanın",
+          "Ne ödünçte, neyin süresi geçti"
         ],
-        "mediaAlt": "Statistics: 54 films split by format into Blu-ray, 4K UHD and DVD."
+        "mediaAlt": "İstatistikler: biçime göre Blu-ray, 4K UHD ve DVD olarak ayrılmış 54 film."
       },
       "iphone": {
-        "title": "At home on iPhone and iPad",
+        "title": "iPhone ve iPad’de evinde",
         "points": [
-          "Ask Siri how many films by a director you own",
-          "Find any disc from Spotlight",
-          "Discover what to add next, on your own TMDB key",
-          "Lock the app with Face ID",
-          "iCloud keeps your devices in step"
+          "Siri’ye bir yönetmenin kaç filmine sahip olduğunu sor",
+          "Herhangi bir diski Spotlight’tan bul",
+          "Sırada ne ekleyeceğini kendi TMDB anahtarınla keşfet",
+          "Uygulamayı Face ID ile kilitle",
+          "iCloud cihazlarını eşzamanlı tutar"
         ],
-        "mediaAlt": "DiscVault on an iPhone."
+        "mediaAlt": "iPhone’da DiscVault."
       }
     }
   },
   "scan": {
-    "titleStart": "Point the camera.",
-    "titleEnd": "It files itself.",
-    "lead": "Every disc has a barcode. Pick one of these and see what DiscVault makes of it.",
+    "titleStart": "Kamerayı tut.",
+    "titleEnd": "Disk yerini kendi bulur.",
+    "lead": "Her diskin bir barkodu var. Bunlardan birini seç ve DiscVault’un ondan ne çıkardığını gör.",
     "record": {
-      "format": "Format",
-      "year": "Year",
-      "runtime": "Runtime",
-      "minutes": "min",
-      "director": "Director",
-      "barcode": "Barcode",
-      "added": "Added to your library"
+      "format": "Biçim",
+      "year": "Yıl",
+      "runtime": "Süre",
+      "minutes": "dk",
+      "director": "Yönetmen",
+      "barcode": "Barkod",
+      "added": "Kitaplığına eklendi"
     },
-    "note": "On iPhone and iPad the disc catalogue lives on the device, so a scan works offline.",
-    "fallback": "No barcode? Search by title, or paste an IMDb or TMDB ID."
+    "note": "iPhone ve iPad’de disk kataloğu cihazda durur; bu yüzden tarama çevrimdışı da çalışır.",
+    "fallback": "Barkod yok mu? Başlığa göre ara ya da bir IMDb veya TMDB kimliği yapıştır."
   },
   "editions": {
-    "title": "Editions matter.",
-    "lead": "A 4K disc is not a Blu-ray. A Steelbook is not a keep case. Box sets, and the discs inside a release, are catalogued as what they are.",
+    "title": "Sürümler önemlidir.",
+    "lead": "4K disk Blu-ray değildir. Steelbook sıradan bir kutu değildir. Kutu setleri ve bir yayının içindeki diskler ne iseler o olarak kataloglanır.",
     "items": {
       "uhd": {
         "name": "4K Ultra HD",
-        "detail": "17 on this shelf"
+        "detail": "Bu rafta 17"
       },
       "bluray": {
         "name": "Blu-ray",
-        "detail": "26 on this shelf"
+        "detail": "Bu rafta 26"
       },
       "dvd": {
         "name": "DVD",
-        "detail": "11 on this shelf"
+        "detail": "Bu rafta 11"
       },
       "steelbook": {
         "name": "Steelbook",
-        "detail": "1 on this shelf"
+        "detail": "Bu rafta 1"
       },
       "boxset": {
-        "name": "Box sets",
-        "detail": "3 sets, 12 films"
+        "name": "Kutu setleri",
+        "detail": "3 set, 12 film"
       }
     },
-    "note": "The shelf on this page is a demo library of 54 invented films."
+    "note": "Bu sayfadaki raf, uydurma 54 filmden oluşan bir demo kitaplığıdır."
   },
   "platforms": {
-    "title": "Two ways to keep it.",
-    "lead": "On the device in your pocket, or on a server in your home. Both are DiscVault; pick where your collection lives.",
+    "title": "Saklamanın iki yolu.",
+    "lead": "Cebindeki cihazda ya da evindeki bir sunucuda. İkisi de DiscVault; koleksiyonunun nerede duracağını sen seç.",
     "columns": {
       "ios": {
-        "name": "iPhone and iPad",
-        "sub": "The app"
+        "name": "iPhone ve iPad",
+        "sub": "Uygulama"
       },
       "selfHosted": {
-        "name": "Your own server",
+        "name": "Kendi sunucun",
         "sub": "Self-hosted"
       }
     },
     "rows": {
       "home": {
-        "label": "Where it lives",
-        "ios": "On your device, synced through your own iCloud",
-        "selfHosted": "On a server you run"
+        "label": "Nerede durur",
+        "ios": "Cihazında; kendi iCloud’un üzerinden eşzamanlanır",
+        "selfHosted": "Kendi çalıştırdığın bir sunucuda"
       },
       "add": {
-        "label": "Adding a disc",
-        "ios": "Scan with the camera, search or type it in",
-        "selfHosted": "Barcode, search or a whole import"
+        "label": "Disk ekleme",
+        "ios": "Kamerayla tara, ara ya da elle yaz",
+        "selfHosted": "Barkod, arama ya da toplu içe aktarma"
       },
       "share": {
-        "label": "Sharing",
-        "ios": "Your own devices",
-        "selfHosted": "A household: invites, groups and roles"
+        "label": "Paylaşım",
+        "ios": "Kendi cihazların",
+        "selfHosted": "Bir hane: davetler, gruplar ve roller"
       },
       "signin": {
-        "label": "Signing in",
-        "ios": "No account at all",
-        "selfHosted": "Passkeys first; password, TOTP or OpenID Connect if you prefer"
+        "label": "Oturum açma",
+        "ios": "Hiç hesap yok",
+        "selfHosted": "Önce geçiş anahtarları; istersen parola, TOTP ya da OpenID Connect"
       },
       "extras": {
-        "label": "Also there",
-        "ios": "Siri, Spotlight and Face ID lock",
-        "selfHosted": "Plugins, API keys, an MCP endpoint, backup and restore"
+        "label": "Ayrıca",
+        "ios": "Siri, Spotlight ve Face ID kilidi",
+        "selfHosted": "Eklentiler, API anahtarları, bir MCP uç noktası, yedekleme ve geri yükleme"
       },
       "languages": {
-        "label": "Languages",
+        "label": "Diller",
         "ios": "13",
         "selfHosted": "29"
       }
     },
     "android": {
       "title": "Android",
-      "body": "In beta. Request access on Discord; approved testers install through Google Play."
+      "body": "Betada. Discord üzerinden erişim iste; onaylanan test kullanıcıları Google Play üzerinden yükler."
     },
-    "roadmap": "The apps work on their own today. Connecting them to a self-hosted DiscVault is planned for a later stage."
+    "roadmap": "Uygulamalar şu anda bağımsız çalışır. Kendi sunucunda barındırılan bir DiscVault kurulumuna bağlanmaları ileriki bir aşama için planlanıyor."
   },
   "selfHosted": {
-    "title": "On a server you run.",
-    "lead": "The self-hosted edition is a web app for the whole household. It installs on Docker, Unraid or Home Assistant.",
+    "title": "Kendi çalıştırdığın sunucuda.",
+    "lead": "Kendi sunucunda çalışan sürüm, tüm hane için bir web uygulamasıdır. Docker, Unraid ya da Home Assistant üzerine kurulur.",
     "shots": {
       "library": {
-        "label": "Library",
-        "alt": "DiscVault in a browser: the library as a wall of covers, with search, view switch and format filters."
+        "label": "Kitaplık",
+        "alt": "Tarayıcıda DiscVault: arama, görünüm değiştirici ve biçim filtreleriyle, kapaklardan bir duvar olarak kitaplık."
       },
       "detail": {
-        "label": "Detail",
-        "alt": "DiscVault: a film's detail page with backdrop, cover, edition and metadata."
+        "label": "Ayrıntı",
+        "alt": "DiscVault: arka plan görseli, kapak, sürüm ve meta verilerle bir filmin ayrıntı sayfası."
       },
       "boxset": {
-        "label": "Box set",
-        "alt": "DiscVault: a box set opened to show the films it contains."
+        "label": "Kutu seti",
+        "alt": "DiscVault: içindeki filmleri gösterecek şekilde açılmış bir kutu seti."
       },
       "lists": {
-        "label": "Watchlist",
-        "alt": "DiscVault: the watchlist as a grid of covers."
+        "label": "İzleme listesi",
+        "alt": "DiscVault: kapaklardan bir ızgara olarak izleme listesi."
       }
     },
     "points": [
-      "Invite-only accounts with roles",
-      "Passkeys first",
-      "Plugins for metadata and prices",
-      "API keys and an MCP endpoint",
-      "Backup and restore",
-      "Installs as an app on your phone"
+      "Yalnızca davetle açılan, rollü hesaplar",
+      "Önce geçiş anahtarları",
+      "Meta veriler ve fiyatlar için eklentiler",
+      "API anahtarları ve bir MCP uç noktası",
+      "Yedekleme ve geri yükleme",
+      "Telefonuna uygulama olarak kurulur"
     ],
     "migration": {
-      "title": "Coming from DiscVault Legacy?",
-      "body": "The migration wizard carries your collection across to the current DiscVault."
+      "title": "DiscVault Legacy’den mi geliyorsun?",
+      "body": "Geçiş sihirbazı koleksiyonunu güncel DiscVault’a taşır."
     }
   },
   "runs": {
-    "title": "Where DiscVault runs",
+    "title": "DiscVault nerede çalışır",
     "names": [
       "iPhone",
       "iPad",
       "Docker",
       "Unraid",
       "Home Assistant",
-      "Android beta",
-      "Any browser"
+      "Android betası",
+      "Herhangi bir tarayıcı"
     ],
-    "caption": "Where DiscVault runs today."
+    "caption": "DiscVault’un bugün çalıştığı yerler."
   },
   "privacy": {
-    "title": "It lives where you put it.",
-    "lead": "On your device, or on a server you run. No profiling, no advertising, nobody watching what you watch.",
+    "title": "Koyduğun yerde kalır.",
+    "lead": "Kendi cihazında ya da kendi çalıştırdığın bir sunucuda. Profilleme yok, reklam yok, ne izlediğini kimse izlemiyor.",
     "tiles": {
       "ads": {
         "figure": "0",
-        "label": "ads"
+        "label": "reklam"
       },
       "trackers": {
         "figure": "0",
-        "label": "trackers"
+        "label": "izleyici"
       },
       "profiles": {
         "figure": "0",
-        "label": "profiles"
+        "label": "profil"
       },
       "count": {
         "figure": "1",
-        "label": "anonymous daily count"
+        "label": "anonim günlük sayım"
       }
     },
     "body": [
-      "The iPhone and iPad app keeps your collection on the device. The self-hosted edition keeps it on a server you administer. Either way the only thing that leaves is a barcode or a search term.",
-      "One exception: a self-hosted server tells api.discvault.eu once a day that it is running. It sends its version and the number of days since its previous report: no identifier, and nothing about your collection. That is only there to estimate how much DiscVault is used, and you can turn it off."
+      "iPhone ve iPad uygulaması koleksiyonu cihazda tutar. Kendi sunucunda çalışan sürüm onu senin yönettiğin bir sunucuda tutar. Her iki durumda da cihazdan yalnızca bir barkod ya da bir arama terimi çıkar.",
+      "Tek bir istisna: kendi sunucunda çalışan DiscVault günde bir kez api.discvault.eu adresine çalıştığını bildirir. Sürümünü ve önceki bildiriminden bu yana geçen gün sayısını gönderir: hiçbir tanımlayıcı yok, koleksiyonun hakkında hiçbir şey yok. Bu yalnızca DiscVault’un ne kadar kullanıldığını tahmin etmek içindir ve kapatabilirsin."
     ]
   },
   "plans": {
-    "titleStart": "The core is",
-    "titleFree": "free",
+    "titleStart": "Temel özellikler",
+    "titleFree": "ücretsiz",
     "titleEnd": ".",
-    "lead": "Scanning, cataloguing, searching, backing up and restoring cost nothing. DiscVault is free to self-host.",
+    "lead": "Tarama, kataloglama, arama, yedekleme ve geri yükleme için hiçbir şey ödemezsin. DiscVault’u kendi sunucunda barındırmak ücretsizdir.",
     "points": [
-      "Scanning and adding discs",
-      "Full backup and restore",
-      "Watchlist, history and wishlist",
-      "iCloud sync between your devices",
-      "Getting your data out, always"
+      "Disk tarama ve ekleme",
+      "Tam yedekleme ve geri yükleme",
+      "İzleme listesi, geçmiş ve istek listesi",
+      "Cihazların arasında iCloud eşzamanlaması",
+      "Verilerini dışarı alma, her zaman"
     ],
-    "support": "DiscVault is made by one developer. If it earns a place on your shelf, a coffee is welcome. A donation unlocks nothing; it is only a thank-you."
+    "support": "DiscVault’u tek bir geliştirici yapıyor. Rafında bir yer hak ederse bir kahve memnuniyetle karşılanır. Bağış hiçbir şeyin kilidini açmaz; yalnızca bir teşekkürdür."
   },
   "faq": {
-    "title": "Good questions.",
+    "title": "İyi sorular.",
     "items": {
       "server": {
-        "question": "Do I need a server?",
+        "question": "Bir sunucuya ihtiyacım var mı?",
         "answer": [
-          "No. The iPhone and iPad app works entirely on its own. A server is only for people who want the self-hosted web edition, made for a whole household."
+          "Hayır. iPhone ve iPad uygulaması tamamen kendi başına çalışır. Sunucu yalnızca, tüm hane için yapılmış, kendi sunucunda çalışan web sürümünü isteyenler içindir."
         ]
       },
       "account": {
-        "question": "Do I need an account?",
+        "question": "Bir hesaba ihtiyacım var mı?",
         "answer": [
-          "Not for the app. On a self-hosted DiscVault the accounts live on your own server; you invite who you like."
+          "Uygulama için hayır. Kendi sunucunda çalışan DiscVault’ta hesaplar kendi sunucunda durur; kimi istersen onu davet edersin."
         ]
       },
       "data": {
-        "question": "Where does the film information come from?",
+        "question": "Film bilgileri nereden geliyor?",
         "answer": [
-          "Disc releases, barcodes and covers come from MovieVault, the catalogue behind DiscVault. Film details, cast and Discover use TMDB with your own free key.",
-          "This product uses the TMDB API but is not endorsed or certified by TMDB."
+          "Disk yayınları, barkodlar ve kapaklar, DiscVault’un arkasındaki katalog olan MovieVault’tan gelir. Film ayrıntıları, oyuncular ve Keşfet, kendi ücretsiz anahtarınla TMDB’yi kullanır.",
+          "Bu ürün TMDB API’sini kullanır ancak TMDB tarafından onaylanmamış veya sertifikalandırılmamıştır."
         ]
       },
       "sends": {
-        "question": "What does DiscVault send out?",
+        "question": "DiscVault dışarıya ne gönderir?",
         "answer": [
-          "A barcode or a search term when you look something up. A self-hosted server also reports once a day, anonymously, that it is running; you can turn that off. The privacy policy has the details."
+          "Bir şey aradığında bir barkod ya da bir arama terimi. Kendi sunucunda çalışan DiscVault ayrıca günde bir kez, anonim olarak, çalıştığını bildirir; bunu kapatabilirsin. Ayrıntılar gizlilik politikasında."
         ]
       },
       "sync": {
-        "question": "Can the app sync with my own server?",
+        "question": "Uygulama kendi sunucumla eşzamanlanabilir mi?",
         "answer": [
-          "Not yet. The apps and the self-hosted edition each work on their own today; connecting them is planned for a later stage."
+          "Henüz değil. Uygulamalar ve kendi sunucunda çalışan sürüm bugün ayrı ayrı çalışır; bunları birbirine bağlamak ileriki bir aşama için planlanıyor."
         ]
       },
       "export": {
-        "question": "Can I get my collection out again?",
+        "question": "Koleksiyonumu yeniden dışarı alabilir miyim?",
         "answer": [
-          "Yes. Backup and restore are part of the free core, and so is a CSV export. Your data is never held back."
+          "Evet. Yedekleme ve geri yükleme ücretsiz temel özelliklerin parçasıdır; CSV dışa aktarımı da öyle. Verilerin asla alıkonmaz."
         ]
       },
       "android": {
-        "question": "Is there an Android app?",
+        "question": "Android uygulaması var mı?",
         "answer": [
-          "It is in beta. Request access on Discord; approved testers install it through Google Play."
+          "Betada. Discord üzerinden erişim iste; onaylanan test kullanıcıları onu Google Play üzerinden yükler."
         ]
       },
       "legacy": {
-        "question": "I still run DiscVault Legacy. How do I move?",
+        "question": "Hâlâ DiscVault Legacy kullanıyorum. Nasıl geçerim?",
         "answer": [
-          "The self-hosted edition has a migration wizard that brings your collection across from Legacy. The migration guide walks through it for Unraid and Docker."
+          "Kendi sunucunda çalışan sürümde, koleksiyonunu Legacy’den taşıyan bir geçiş sihirbazı var. Geçiş kılavuzu bunu Unraid ve Docker için adım adım anlatır."
         ]
       }
     }
   },
   "cta": {
-    "title": "Scan your first disc.",
-    "lead": "Take the nearest case off the shelf and point the camera at the barcode. That is the whole setup."
+    "title": "İlk diskini tara.",
+    "lead": "Raftan en yakın kutuyu al ve kamerayı barkoda tut. Bütün kurulum bu kadar."
   },
   "footer": {
-    "tagline": "DiscVault. Built for collectors.",
+    "tagline": "DiscVault. Koleksiyoncular için yapıldı.",
     "groups": {
-      "product": "Product",
-      "help": "Help",
-      "legal": "Legal"
+      "product": "Ürün",
+      "help": "Yardım",
+      "legal": "Yasal"
     },
-    "privacy": "Privacy policy",
-    "terms": "Terms",
-    "legacy": "Legacy migration",
-    "production": "Made by",
-    "tmdb": "This product uses the TMDB API but is not endorsed or certified by TMDB."
+    "privacy": "Gizlilik politikası",
+    "terms": "Koşullar",
+    "legacy": "Eski sürüm geçişi",
+    "production": "Yapım",
+    "tmdb": "Bu ürün TMDB API’sini kullanır ancak TMDB tarafından onaylanmamış veya sertifikalandırılmamıştır."
   }
 }

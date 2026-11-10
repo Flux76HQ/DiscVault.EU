@@ -2,359 +2,359 @@
   "locale": "zh",
   "languageName": "中文",
   "seo": {
-    "title": "DiscVault — catalogue the films you own on disc",
-    "description": "DiscVault catalogues the films you own on 4K, Blu-ray and DVD. Scan a barcode, keep editions and box sets straight, on your iPhone or your own server. No ads, no tracking.",
-    "ogAlt": "DiscVault: a wall of film covers with 4K, Blu-ray and DVD badges."
+    "title": "DiscVault — 为你收藏的电影光盘建立目录",
+    "description": "DiscVault 为你拥有的 4K、Blu-ray 和 DVD 电影建立目录。扫描条形码，分清各个版本和套装，保存在你的 iPhone 或你自己的服务器上。无广告，无跟踪。",
+    "ogAlt": "DiscVault：一面电影封面墙，带有 4K、Blu-ray 和 DVD 标记。"
   },
   "a11y": {
-    "skip": "Skip to content",
-    "home": "DiscVault, home",
-    "menu": "Menu",
-    "language": "Language",
-    "sections": "Sections",
-    "pauseMotion": "Pause the motion",
-    "playMotion": "Play the motion"
+    "skip": "跳到正文",
+    "home": "DiscVault，首页",
+    "menu": "菜单",
+    "language": "语言",
+    "sections": "栏目",
+    "pauseMotion": "暂停动效",
+    "playMotion": "播放动效"
   },
   "nav": {
-    "collect": "Collect",
-    "scan": "Scan",
-    "editions": "Editions",
-    "selfHosted": "Self-hosted",
-    "privacy": "Privacy",
-    "faq": "Questions",
+    "collect": "收藏",
+    "scan": "扫描",
+    "editions": "版本",
+    "selfHosted": "自托管",
+    "privacy": "隐私",
+    "faq": "常见问题",
     "docs": "Docs",
-    "get": "Get DiscVault"
+    "get": "获取 DiscVault"
   },
   "actions": {
-    "appStore": "Download on the App Store",
-    "selfHost": "Self-host DiscVault",
-    "android": "Request Android beta access",
-    "testflight": "Join the TestFlight beta",
-    "installGuide": "Read the install guide",
-    "migrationGuide": "Read the migration guide",
-    "privacyPolicy": "Read the privacy policy",
-    "discord": "Join the Discord",
-    "github": "Source on GitHub",
-    "issues": "Report an issue",
-    "support": "Buy me a coffee",
-    "moreAnswers": "More answers in the docs",
-    "backToTop": "Back to top"
+    "appStore": "从 App Store 下载",
+    "selfHost": "自托管 DiscVault",
+    "android": "申请 Android 测试版资格",
+    "testflight": "加入 TestFlight 测试版",
+    "installGuide": "阅读安装指南",
+    "migrationGuide": "阅读迁移指南",
+    "privacyPolicy": "阅读隐私政策",
+    "discord": "加入 Discord",
+    "github": "GitHub 上的源代码",
+    "issues": "报告问题",
+    "support": "请我喝杯咖啡",
+    "moreAnswers": "更多解答见文档",
+    "backToTop": "回到顶部"
   },
   "hero": {
-    "title": "Your film shelf, catalogued.",
-    "lead": "DiscVault keeps track of every film you own on 4K, Blu-ray and DVD. Scan a barcode and the title, edition and cover fill themselves in.",
-    "note": "For iPhone and iPad, or self-hosted on your own server. Android is in beta.",
-    "mediaAlt": "The DiscVault library: a wall of film covers, each with a 4K, Blu-ray, DVD or box-set badge."
+    "title": "你的电影架，已编好目录。",
+    "lead": "DiscVault 记录你拥有的每一部 4K、Blu-ray 和 DVD 电影。扫描条形码，片名、版本和封面会自动填好。",
+    "note": "适用于 iPhone 和 iPad，也可以自托管在你自己的服务器上。Android 版正在测试中。",
+    "mediaAlt": "DiscVault 资料库：一面电影封面墙，每张封面都带有 4K、Blu-ray、DVD 或套装标记。"
   },
   "collect": {
-    "title": "Built for collectors.",
+    "title": "为收藏者打造。",
     "blocks": {
       "library": {
-        "title": "A library that looks like your shelf",
+        "title": "像你的架子一样的资料库",
         "points": [
-          "Posters, a list or a detail view",
-          "Filter by 4K, Blu-ray or DVD",
-          "Search by title, barcode, cast or crew",
-          "Box sets open to the films inside",
-          "Quick, even on a large collection"
+          "海报、列表或详情视图",
+          "按 4K、Blu-ray 或 DVD 筛选",
+          "按片名、条形码或演职人员搜索",
+          "套装可展开，查看其中的电影",
+          "收藏再多也流畅"
         ],
-        "mediaAlt": "The library on a phone: a grid of film covers with format badges."
+        "mediaAlt": "手机上的资料库：带格式标记的电影封面网格。"
       },
       "detail": {
-        "title": "Every film gets a proper page",
+        "title": "每部电影都有一个像样的页面",
         "points": [
-          "Edition, format and barcode",
-          "Cast, crew and artwork",
-          "Your own poster or backdrop",
-          "Series and their seasons",
-          "Plex and Jellyfin copies marked"
+          "版本、格式和条形码",
+          "演职人员和图片",
+          "自选海报或背景图",
+          "剧集及其各季",
+          "标出 Plex 和 Jellyfin 中的副本"
         ],
-        "mediaAlt": "A film’s page on a phone: cover, backdrop, year, format and barcode."
+        "mediaAlt": "手机上的电影页面：封面、背景图、年份、格式和条形码。"
       },
       "lists": {
-        "title": "Lists for what happens next",
+        "title": "为接下来的事准备的列表",
         "points": [
-          "A watchlist for tonight",
-          "Watch history, with dates",
-          "A wishlist with price alerts",
-          "Loans: who has which disc",
-          "Tags you make up yourself"
+          "今晚看什么，有待看列表",
+          "带日期的观看记录",
+          "带价格提醒的心愿单",
+          "外借：哪张光盘在谁手里",
+          "由你自己定义的标签"
         ],
-        "mediaAlt": "The wishlist: four films with their current and target prices."
+        "mediaAlt": "心愿单：四部电影及其当前价格和目标价格。"
       },
       "insight": {
-        "title": "Know what you own",
+        "title": "清楚自己拥有什么",
         "points": [
-          "Statistics by format, decade and genre",
-          "A place for every disc, down to the shelf",
-          "Your own score for every film",
-          "What is on loan, and what is overdue"
+          "按格式、年代和类型统计",
+          "每张光盘都有位置，精确到哪一层架子",
+          "给每部电影打上你自己的分数",
+          "哪些已外借，哪些已逾期"
         ],
-        "mediaAlt": "Statistics: 54 films split by format into Blu-ray, 4K UHD and DVD."
+        "mediaAlt": "统计信息：54 部电影按格式分为 Blu-ray、4K UHD 和 DVD。"
       },
       "iphone": {
-        "title": "At home on iPhone and iPad",
+        "title": "在 iPhone 和 iPad 上得心应手",
         "points": [
-          "Ask Siri how many films by a director you own",
-          "Find any disc from Spotlight",
-          "Discover what to add next, on your own TMDB key",
-          "Lock the app with Face ID",
-          "iCloud keeps your devices in step"
+          "问 Siri 你有多少部某位导演的电影",
+          "用 Spotlight 找到任何一张光盘",
+          "用你自己的 TMDB 密钥，发现接下来该添加什么",
+          "用 Face ID 锁定应用",
+          "iCloud 让你的设备保持同步"
         ],
-        "mediaAlt": "DiscVault on an iPhone."
+        "mediaAlt": "iPhone 上的 DiscVault。"
       }
     }
   },
   "scan": {
-    "titleStart": "Point the camera.",
-    "titleEnd": "It files itself.",
-    "lead": "Every disc has a barcode. Pick one of these and see what DiscVault makes of it.",
+    "titleStart": "相机一扫。",
+    "titleEnd": "自动归档。",
+    "lead": "每张光盘都有条形码。从下面选一个，看看 DiscVault 能读出什么。",
     "record": {
-      "format": "Format",
-      "year": "Year",
-      "runtime": "Runtime",
-      "minutes": "min",
-      "director": "Director",
-      "barcode": "Barcode",
-      "added": "Added to your library"
+      "format": "格式",
+      "year": "年份",
+      "runtime": "片长",
+      "minutes": "分钟",
+      "director": "导演",
+      "barcode": "条形码",
+      "added": "已添加到你的资料库"
     },
-    "note": "On iPhone and iPad the disc catalogue lives on the device, so a scan works offline.",
-    "fallback": "No barcode? Search by title, or paste an IMDb or TMDB ID."
+    "note": "在 iPhone 和 iPad 上，光盘目录保存在设备本地，所以离线也能扫描。",
+    "fallback": "没有条形码？按片名搜索，或粘贴 IMDb 或 TMDB ID。"
   },
   "editions": {
-    "title": "Editions matter.",
-    "lead": "A 4K disc is not a Blu-ray. A Steelbook is not a keep case. Box sets, and the discs inside a release, are catalogued as what they are.",
+    "title": "版本很重要。",
+    "lead": "4K 光盘不是 Blu-ray。Steelbook 不是普通盒。套装和一次发行中的各张光盘，都按它们本来的样子建立目录。",
     "items": {
       "uhd": {
         "name": "4K Ultra HD",
-        "detail": "17 on this shelf"
+        "detail": "本架 17 张"
       },
       "bluray": {
         "name": "Blu-ray",
-        "detail": "26 on this shelf"
+        "detail": "本架 26 张"
       },
       "dvd": {
         "name": "DVD",
-        "detail": "11 on this shelf"
+        "detail": "本架 11 张"
       },
       "steelbook": {
         "name": "Steelbook",
-        "detail": "1 on this shelf"
+        "detail": "本架 1 张"
       },
       "boxset": {
-        "name": "Box sets",
-        "detail": "3 sets, 12 films"
+        "name": "套装",
+        "detail": "3 套，12 部电影"
       }
     },
-    "note": "The shelf on this page is a demo library of 54 invented films."
+    "note": "本页的架子是一个演示资料库，包含 54 部虚构的电影。"
   },
   "platforms": {
-    "title": "Two ways to keep it.",
-    "lead": "On the device in your pocket, or on a server in your home. Both are DiscVault; pick where your collection lives.",
+    "title": "两种保存方式。",
+    "lead": "在口袋里的设备上，或在家里的服务器上。两者都是 DiscVault；由你决定收藏放在哪里。",
     "columns": {
       "ios": {
-        "name": "iPhone and iPad",
-        "sub": "The app"
+        "name": "iPhone 和 iPad",
+        "sub": "应用"
       },
       "selfHosted": {
-        "name": "Your own server",
-        "sub": "Self-hosted"
+        "name": "你自己的服务器",
+        "sub": "自托管"
       }
     },
     "rows": {
       "home": {
-        "label": "Where it lives",
-        "ios": "On your device, synced through your own iCloud",
-        "selfHosted": "On a server you run"
+        "label": "保存位置",
+        "ios": "在你的设备上，通过你自己的 iCloud 同步",
+        "selfHosted": "在你自己运行的服务器上"
       },
       "add": {
-        "label": "Adding a disc",
-        "ios": "Scan with the camera, search or type it in",
-        "selfHosted": "Barcode, search or a whole import"
+        "label": "添加光盘",
+        "ios": "用相机扫描、搜索或手动输入",
+        "selfHosted": "条形码、搜索或整批导入"
       },
       "share": {
-        "label": "Sharing",
-        "ios": "Your own devices",
-        "selfHosted": "A household: invites, groups and roles"
+        "label": "共享",
+        "ios": "你自己的设备",
+        "selfHosted": "一个家庭：邀请、群组和角色"
       },
       "signin": {
-        "label": "Signing in",
-        "ios": "No account at all",
-        "selfHosted": "Passkeys first; password, TOTP or OpenID Connect if you prefer"
+        "label": "登录",
+        "ios": "完全不需要账户",
+        "selfHosted": "通行密钥优先；也可以用密码、TOTP 或 OpenID Connect"
       },
       "extras": {
-        "label": "Also there",
-        "ios": "Siri, Spotlight and Face ID lock",
-        "selfHosted": "Plugins, API keys, an MCP endpoint, backup and restore"
+        "label": "还有",
+        "ios": "Siri、Spotlight 和 Face ID 锁定",
+        "selfHosted": "插件、API 密钥、MCP 端点、备份与恢复"
       },
       "languages": {
-        "label": "Languages",
+        "label": "语言",
         "ios": "13",
         "selfHosted": "29"
       }
     },
     "android": {
       "title": "Android",
-      "body": "In beta. Request access on Discord; approved testers install through Google Play."
+      "body": "正在测试中。通过 Discord 申请资格；获批的测试用户可通过 Google Play 安装。"
     },
-    "roadmap": "The apps work on their own today. Connecting them to a self-hosted DiscVault is planned for a later stage."
+    "roadmap": "这些应用目前可独立运行。未来计划支持连接到自托管的 DiscVault 实例。"
   },
   "selfHosted": {
-    "title": "On a server you run.",
-    "lead": "The self-hosted edition is a web app for the whole household. It installs on Docker, Unraid or Home Assistant.",
+    "title": "在你自己运行的服务器上。",
+    "lead": "自托管版是面向全家人的 Web 应用，可安装在 Docker、Unraid 或 Home Assistant 上。",
     "shots": {
       "library": {
-        "label": "Library",
-        "alt": "DiscVault in a browser: the library as a wall of covers, with search, view switch and format filters."
+        "label": "资料库",
+        "alt": "浏览器中的 DiscVault：以封面墙呈现的资料库，带搜索、视图切换和格式筛选。"
       },
       "detail": {
-        "label": "Detail",
-        "alt": "DiscVault: a film's detail page with backdrop, cover, edition and metadata."
+        "label": "详情",
+        "alt": "DiscVault：电影详情页，包含背景图、封面、版本和元数据。"
       },
       "boxset": {
-        "label": "Box set",
-        "alt": "DiscVault: a box set opened to show the films it contains."
+        "label": "套装",
+        "alt": "DiscVault：展开的套装，显示其中包含的电影。"
       },
       "lists": {
-        "label": "Watchlist",
-        "alt": "DiscVault: the watchlist as a grid of covers."
+        "label": "待看列表",
+        "alt": "DiscVault：以封面网格呈现的待看列表。"
       }
     },
     "points": [
-      "Invite-only accounts with roles",
-      "Passkeys first",
-      "Plugins for metadata and prices",
-      "API keys and an MCP endpoint",
-      "Backup and restore",
-      "Installs as an app on your phone"
+      "仅限邀请的账户，带角色",
+      "通行密钥优先",
+      "获取元数据和价格的插件",
+      "API 密钥和 MCP 端点",
+      "备份与恢复",
+      "可作为应用安装到手机上"
     ],
     "migration": {
-      "title": "Coming from DiscVault Legacy?",
-      "body": "The migration wizard carries your collection across to the current DiscVault."
+      "title": "从 DiscVault Legacy 迁移过来？",
+      "body": "迁移向导会把你的收藏带到当前的 DiscVault。"
     }
   },
   "runs": {
-    "title": "Where DiscVault runs",
+    "title": "DiscVault 运行在哪里",
     "names": [
       "iPhone",
       "iPad",
       "Docker",
       "Unraid",
       "Home Assistant",
-      "Android beta",
-      "Any browser"
+      "Android 测试版",
+      "任意浏览器"
     ],
-    "caption": "Where DiscVault runs today."
+    "caption": "DiscVault 目前可运行的平台。"
   },
   "privacy": {
-    "title": "It lives where you put it.",
-    "lead": "On your device, or on a server you run. No profiling, no advertising, nobody watching what you watch.",
+    "title": "它在你放的地方。",
+    "lead": "在你的设备上，或在你自己运行的服务器上。无用户画像，无广告，没有人看你在看什么。",
     "tiles": {
       "ads": {
         "figure": "0",
-        "label": "ads"
+        "label": "广告"
       },
       "trackers": {
         "figure": "0",
-        "label": "trackers"
+        "label": "跟踪器"
       },
       "profiles": {
         "figure": "0",
-        "label": "profiles"
+        "label": "用户画像"
       },
       "count": {
         "figure": "1",
-        "label": "anonymous daily count"
+        "label": "每日匿名计数"
       }
     },
     "body": [
-      "The iPhone and iPad app keeps your collection on the device. The self-hosted edition keeps it on a server you administer. Either way the only thing that leaves is a barcode or a search term.",
-      "One exception: a self-hosted server tells api.discvault.eu once a day that it is running. It sends its version and the number of days since its previous report: no identifier, and nothing about your collection. That is only there to estimate how much DiscVault is used, and you can turn it off."
+      "iPhone 和 iPad 应用把收藏保存在设备上。自托管版把它保存在你管理的服务器上。无论哪种方式，离开设备的只有一个条形码或一个搜索词。",
+      "只有一个例外：自托管的服务器每天一次告知 api.discvault.eu 它正在运行。它只发送自己的版本和距上次报告的天数，不含任何标识符，也不含任何关于你收藏的信息。这仅用于估算 DiscVault 的使用规模，并且可以关闭。"
     ]
   },
   "plans": {
-    "titleStart": "The core is",
-    "titleFree": "free",
-    "titleEnd": ".",
-    "lead": "Scanning, cataloguing, searching, backing up and restoring cost nothing. DiscVault is free to self-host.",
+    "titleStart": "核心功能",
+    "titleFree": "免费",
+    "titleEnd": "。",
+    "lead": "扫描、编目、搜索、备份和恢复都不花钱。自托管 DiscVault 是免费的。",
     "points": [
-      "Scanning and adding discs",
-      "Full backup and restore",
-      "Watchlist, history and wishlist",
-      "iCloud sync between your devices",
-      "Getting your data out, always"
+      "扫描和添加光盘",
+      "完整的备份与恢复",
+      "待看列表、观看记录和心愿单",
+      "在你的设备之间通过 iCloud 同步",
+      "随时导出你的数据"
     ],
-    "support": "DiscVault is made by one developer. If it earns a place on your shelf, a coffee is welcome. A donation unlocks nothing; it is only a thank-you."
+    "support": "DiscVault 由一位开发者独立制作。如果它在你的架子上占有一席之地，欢迎请我喝杯咖啡。捐赠不会解锁任何功能，只是一声谢谢。"
   },
   "faq": {
-    "title": "Good questions.",
+    "title": "问得好。",
     "items": {
       "server": {
-        "question": "Do I need a server?",
+        "question": "我需要服务器吗？",
         "answer": [
-          "No. The iPhone and iPad app works entirely on its own. A server is only for people who want the self-hosted web edition, made for a whole household."
+          "不需要。iPhone 和 iPad 应用完全独立运行。只有想使用面向全家人的自托管 Web 版时，才需要服务器。"
         ]
       },
       "account": {
-        "question": "Do I need an account?",
+        "question": "我需要账户吗？",
         "answer": [
-          "Not for the app. On a self-hosted DiscVault the accounts live on your own server; you invite who you like."
+          "使用应用不需要。在自托管的 DiscVault 上，账户保存在你自己的服务器上；想邀请谁由你决定。"
         ]
       },
       "data": {
-        "question": "Where does the film information come from?",
+        "question": "电影信息从哪里来？",
         "answer": [
-          "Disc releases, barcodes and covers come from MovieVault, the catalogue behind DiscVault. Film details, cast and Discover use TMDB with your own free key.",
-          "This product uses the TMDB API but is not endorsed or certified by TMDB."
+          "光盘发行信息、条形码和封面来自 MovieVault，即 DiscVault 背后的目录。电影详情、演职人员和“发现”通过你自己的免费密钥使用 TMDB。",
+          "本产品使用 TMDB API，但未获得 TMDB 的认可或认证。"
         ]
       },
       "sends": {
-        "question": "What does DiscVault send out?",
+        "question": "DiscVault 会向外发送什么？",
         "answer": [
-          "A barcode or a search term when you look something up. A self-hosted server also reports once a day, anonymously, that it is running; you can turn that off. The privacy policy has the details."
+          "查找内容时发送一个条形码或一个搜索词。自托管的服务器还会每天匿名报告一次它正在运行；这可以关闭。详情见隐私政策。"
         ]
       },
       "sync": {
-        "question": "Can the app sync with my own server?",
+        "question": "应用能与我自己的服务器同步吗？",
         "answer": [
-          "Not yet. The apps and the self-hosted edition each work on their own today; connecting them is planned for a later stage."
+          "暂时不能。应用和自托管版目前各自独立运行；未来计划把它们连接起来。"
         ]
       },
       "export": {
-        "question": "Can I get my collection out again?",
+        "question": "我能把收藏再导出来吗？",
         "answer": [
-          "Yes. Backup and restore are part of the free core, and so is a CSV export. Your data is never held back."
+          "能。备份与恢复属于免费的核心功能，CSV 导出也是。你的数据永远不会被扣留。"
         ]
       },
       "android": {
-        "question": "Is there an Android app?",
+        "question": "有 Android 应用吗？",
         "answer": [
-          "It is in beta. Request access on Discord; approved testers install it through Google Play."
+          "正在测试中。通过 Discord 申请资格；获批的测试用户可通过 Google Play 安装。"
         ]
       },
       "legacy": {
-        "question": "I still run DiscVault Legacy. How do I move?",
+        "question": "我还在用 DiscVault Legacy，怎么迁移？",
         "answer": [
-          "The self-hosted edition has a migration wizard that brings your collection across from Legacy. The migration guide walks through it for Unraid and Docker."
+          "自托管版带有迁移向导，可以把你的收藏从 Legacy 带过来。迁移指南针对 Unraid 和 Docker 逐步讲解了整个过程。"
         ]
       }
     }
   },
   "cta": {
-    "title": "Scan your first disc.",
-    "lead": "Take the nearest case off the shelf and point the camera at the barcode. That is the whole setup."
+    "title": "扫描你的第一张光盘。",
+    "lead": "从架子上取下最近的一盒，把相机对准条形码。全部设置就是这样。"
   },
   "footer": {
-    "tagline": "DiscVault. Built for collectors.",
+    "tagline": "DiscVault。为收藏者打造。",
     "groups": {
-      "product": "Product",
-      "help": "Help",
-      "legal": "Legal"
+      "product": "产品",
+      "help": "帮助",
+      "legal": "法律"
     },
-    "privacy": "Privacy policy",
-    "terms": "Terms",
-    "legacy": "Legacy migration",
-    "production": "Made by",
-    "tmdb": "This product uses the TMDB API but is not endorsed or certified by TMDB."
+    "privacy": "隐私政策",
+    "terms": "条款",
+    "legacy": "旧版迁移",
+    "production": "出品",
+    "tmdb": "本产品使用 TMDB API，但未获得 TMDB 的认可或认证。"
   }
 }

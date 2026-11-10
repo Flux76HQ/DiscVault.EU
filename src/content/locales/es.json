@@ -2,359 +2,359 @@
   "locale": "es",
   "languageName": "Español",
   "seo": {
-    "title": "DiscVault — catalogue the films you own on disc",
-    "description": "DiscVault catalogues the films you own on 4K, Blu-ray and DVD. Scan a barcode, keep editions and box sets straight, on your iPhone or your own server. No ads, no tracking.",
-    "ogAlt": "DiscVault: a wall of film covers with 4K, Blu-ray and DVD badges."
+    "title": "DiscVault — cataloga las películas que tienes en disco",
+    "description": "DiscVault cataloga tus películas en 4K, Blu-ray y DVD. Escanea un código de barras y distingue ediciones y packs, en tu iPhone o servidor. Sin anuncios ni rastreo.",
+    "ogAlt": "DiscVault: un mural de carátulas de películas con distintivos de 4K, Blu-ray y DVD."
   },
   "a11y": {
-    "skip": "Skip to content",
-    "home": "DiscVault, home",
-    "menu": "Menu",
-    "language": "Language",
-    "sections": "Sections",
-    "pauseMotion": "Pause the motion",
-    "playMotion": "Play the motion"
+    "skip": "Saltar al contenido",
+    "home": "DiscVault, inicio",
+    "menu": "Menú",
+    "language": "Idioma",
+    "sections": "Secciones",
+    "pauseMotion": "Pausar la animación",
+    "playMotion": "Reproducir la animación"
   },
   "nav": {
-    "collect": "Collect",
-    "scan": "Scan",
-    "editions": "Editions",
-    "selfHosted": "Self-hosted",
-    "privacy": "Privacy",
-    "faq": "Questions",
+    "collect": "Coleccionar",
+    "scan": "Escanear",
+    "editions": "Ediciones",
+    "selfHosted": "Autoalojado",
+    "privacy": "Privacidad",
+    "faq": "Preguntas",
     "docs": "Docs",
-    "get": "Get DiscVault"
+    "get": "Obtener DiscVault"
   },
   "actions": {
-    "appStore": "Download on the App Store",
-    "selfHost": "Self-host DiscVault",
-    "android": "Request Android beta access",
-    "testflight": "Join the TestFlight beta",
-    "installGuide": "Read the install guide",
-    "migrationGuide": "Read the migration guide",
-    "privacyPolicy": "Read the privacy policy",
-    "discord": "Join the Discord",
-    "github": "Source on GitHub",
-    "issues": "Report an issue",
-    "support": "Buy me a coffee",
-    "moreAnswers": "More answers in the docs",
-    "backToTop": "Back to top"
+    "appStore": "Descárgalo en el App Store",
+    "selfHost": "Autoalojar DiscVault",
+    "android": "Solicitar acceso a la beta de Android",
+    "testflight": "Unirse a la beta de TestFlight",
+    "installGuide": "Leer la guía de instalación",
+    "migrationGuide": "Leer la guía de migración",
+    "privacyPolicy": "Leer la política de privacidad",
+    "discord": "Unirse al Discord",
+    "github": "Código fuente en GitHub",
+    "issues": "Informar de un problema",
+    "support": "Invítame a un café",
+    "moreAnswers": "Más respuestas en la documentación",
+    "backToTop": "Volver arriba"
   },
   "hero": {
-    "title": "Your film shelf, catalogued.",
-    "lead": "DiscVault keeps track of every film you own on 4K, Blu-ray and DVD. Scan a barcode and the title, edition and cover fill themselves in.",
-    "note": "For iPhone and iPad, or self-hosted on your own server. Android is in beta.",
-    "mediaAlt": "The DiscVault library: a wall of film covers, each with a 4K, Blu-ray, DVD or box-set badge."
+    "title": "Tu videoteca, catalogada.",
+    "lead": "DiscVault lleva la cuenta de todas las películas que tienes en 4K, Blu-ray y DVD. Escanea un código de barras y el título, la edición y la carátula se rellenan solos.",
+    "note": "Para iPhone y iPad, o autoalojado en tu propio servidor. Android está en beta.",
+    "mediaAlt": "La biblioteca de DiscVault: un mural de carátulas de películas, cada una con su distintivo de 4K, Blu-ray, DVD o pack."
   },
   "collect": {
-    "title": "Built for collectors.",
+    "title": "Creado para coleccionistas.",
     "blocks": {
       "library": {
-        "title": "A library that looks like your shelf",
+        "title": "Una biblioteca que se parece a tu estantería",
         "points": [
-          "Posters, a list or a detail view",
-          "Filter by 4K, Blu-ray or DVD",
-          "Search by title, barcode, cast or crew",
-          "Box sets open to the films inside",
-          "Quick, even on a large collection"
+          "Carátulas, lista o vista de detalle",
+          "Filtra por 4K, Blu-ray o DVD",
+          "Busca por título, código de barras, reparto o equipo",
+          "Los packs se abren y muestran sus películas",
+          "Rápida, incluso con una colección grande"
         ],
-        "mediaAlt": "The library on a phone: a grid of film covers with format badges."
+        "mediaAlt": "La biblioteca en un móvil: una cuadrícula de carátulas con distintivos de formato."
       },
       "detail": {
-        "title": "Every film gets a proper page",
+        "title": "Cada película tiene su propia página",
         "points": [
-          "Edition, format and barcode",
-          "Cast, crew and artwork",
-          "Your own poster or backdrop",
-          "Series and their seasons",
-          "Plex and Jellyfin copies marked"
+          "Edición, formato y código de barras",
+          "Reparto, equipo e imágenes",
+          "Tu propio póster o imagen de fondo",
+          "Series y sus temporadas",
+          "Copias en Plex y Jellyfin señaladas"
         ],
-        "mediaAlt": "A film’s page on a phone: cover, backdrop, year, format and barcode."
+        "mediaAlt": "La página de una película en un móvil: carátula, imagen de fondo, año, formato y código de barras."
       },
       "lists": {
-        "title": "Lists for what happens next",
+        "title": "Listas para lo que viene después",
         "points": [
-          "A watchlist for tonight",
-          "Watch history, with dates",
-          "A wishlist with price alerts",
-          "Loans: who has which disc",
-          "Tags you make up yourself"
+          "Una lista para ver esta noche",
+          "Historial de visualización, con fechas",
+          "Una lista de deseos con alertas de precio",
+          "Préstamos: quién tiene cada disco",
+          "Etiquetas que te inventas tú"
         ],
-        "mediaAlt": "The wishlist: four films with their current and target prices."
+        "mediaAlt": "La lista de deseos: cuatro películas con su precio actual y su precio objetivo."
       },
       "insight": {
-        "title": "Know what you own",
+        "title": "Saber lo que tienes",
         "points": [
-          "Statistics by format, decade and genre",
-          "A place for every disc, down to the shelf",
-          "Your own score for every film",
-          "What is on loan, and what is overdue"
+          "Estadísticas por formato, década y género",
+          "Un sitio para cada disco, hasta la balda",
+          "Tu propia nota para cada película",
+          "Lo que está prestado y lo que ya debería haber vuelto"
         ],
-        "mediaAlt": "Statistics: 54 films split by format into Blu-ray, 4K UHD and DVD."
+        "mediaAlt": "Estadísticas: 54 películas repartidas por formato entre Blu-ray, 4K UHD y DVD."
       },
       "iphone": {
-        "title": "At home on iPhone and iPad",
+        "title": "Como en casa en iPhone y iPad",
         "points": [
-          "Ask Siri how many films by a director you own",
-          "Find any disc from Spotlight",
-          "Discover what to add next, on your own TMDB key",
-          "Lock the app with Face ID",
-          "iCloud keeps your devices in step"
+          "Pregunta a Siri cuántas películas tienes de un director",
+          "Encuentra cualquier disco desde Spotlight",
+          "Descubre qué añadir a continuación, con tu propia clave de TMDB",
+          "Bloquea la app con Face ID",
+          "iCloud mantiene tus dispositivos al día"
         ],
-        "mediaAlt": "DiscVault on an iPhone."
+        "mediaAlt": "DiscVault en un iPhone."
       }
     }
   },
   "scan": {
-    "titleStart": "Point the camera.",
-    "titleEnd": "It files itself.",
-    "lead": "Every disc has a barcode. Pick one of these and see what DiscVault makes of it.",
+    "titleStart": "Apunta con la cámara.",
+    "titleEnd": "Se archiva solo.",
+    "lead": "Todos los discos llevan un código de barras. Elige uno de estos y mira lo que DiscVault hace con él.",
     "record": {
-      "format": "Format",
-      "year": "Year",
-      "runtime": "Runtime",
+      "format": "Formato",
+      "year": "Año",
+      "runtime": "Duración",
       "minutes": "min",
       "director": "Director",
-      "barcode": "Barcode",
-      "added": "Added to your library"
+      "barcode": "Código de barras",
+      "added": "Añadido a tu biblioteca"
     },
-    "note": "On iPhone and iPad the disc catalogue lives on the device, so a scan works offline.",
-    "fallback": "No barcode? Search by title, or paste an IMDb or TMDB ID."
+    "note": "En iPhone y iPad el catálogo de discos está en el dispositivo, así que el escaneo funciona sin conexión.",
+    "fallback": "¿Sin código de barras? Busca por título o pega un ID de IMDb o TMDB."
   },
   "editions": {
-    "title": "Editions matter.",
-    "lead": "A 4K disc is not a Blu-ray. A Steelbook is not a keep case. Box sets, and the discs inside a release, are catalogued as what they are.",
+    "title": "Las ediciones importan.",
+    "lead": "Un disco 4K no es un Blu-ray. Un Steelbook no es una caja normal. Los packs y los discos de un lanzamiento se catalogan como lo que son.",
     "items": {
       "uhd": {
         "name": "4K Ultra HD",
-        "detail": "17 on this shelf"
+        "detail": "17 en esta estantería"
       },
       "bluray": {
         "name": "Blu-ray",
-        "detail": "26 on this shelf"
+        "detail": "26 en esta estantería"
       },
       "dvd": {
         "name": "DVD",
-        "detail": "11 on this shelf"
+        "detail": "11 en esta estantería"
       },
       "steelbook": {
         "name": "Steelbook",
-        "detail": "1 on this shelf"
+        "detail": "1 en esta estantería"
       },
       "boxset": {
-        "name": "Box sets",
-        "detail": "3 sets, 12 films"
+        "name": "Packs",
+        "detail": "3 packs, 12 películas"
       }
     },
-    "note": "The shelf on this page is a demo library of 54 invented films."
+    "note": "La estantería de esta página es una biblioteca de demostración con 54 películas inventadas."
   },
   "platforms": {
-    "title": "Two ways to keep it.",
-    "lead": "On the device in your pocket, or on a server in your home. Both are DiscVault; pick where your collection lives.",
+    "title": "Dos formas de guardarla.",
+    "lead": "En el dispositivo que llevas en el bolsillo o en un servidor en tu casa. Las dos son DiscVault; tú eliges dónde vive tu colección.",
     "columns": {
       "ios": {
-        "name": "iPhone and iPad",
-        "sub": "The app"
+        "name": "iPhone y iPad",
+        "sub": "La app"
       },
       "selfHosted": {
-        "name": "Your own server",
-        "sub": "Self-hosted"
+        "name": "Tu propio servidor",
+        "sub": "Autoalojado"
       }
     },
     "rows": {
       "home": {
-        "label": "Where it lives",
-        "ios": "On your device, synced through your own iCloud",
-        "selfHosted": "On a server you run"
+        "label": "Dónde vive",
+        "ios": "En tu dispositivo, sincronizada con tu propio iCloud",
+        "selfHosted": "En un servidor que tú gestionas"
       },
       "add": {
-        "label": "Adding a disc",
-        "ios": "Scan with the camera, search or type it in",
-        "selfHosted": "Barcode, search or a whole import"
+        "label": "Añadir un disco",
+        "ios": "Escanea con la cámara, busca o escríbelo a mano",
+        "selfHosted": "Código de barras, búsqueda o una importación completa"
       },
       "share": {
-        "label": "Sharing",
-        "ios": "Your own devices",
-        "selfHosted": "A household: invites, groups and roles"
+        "label": "Compartir",
+        "ios": "Tus propios dispositivos",
+        "selfHosted": "Un hogar: invitaciones, grupos y roles"
       },
       "signin": {
-        "label": "Signing in",
-        "ios": "No account at all",
-        "selfHosted": "Passkeys first; password, TOTP or OpenID Connect if you prefer"
+        "label": "Inicio de sesión",
+        "ios": "Sin cuenta alguna",
+        "selfHosted": "Primero llaves de acceso; contraseña, TOTP u OpenID Connect si lo prefieres"
       },
       "extras": {
-        "label": "Also there",
-        "ios": "Siri, Spotlight and Face ID lock",
-        "selfHosted": "Plugins, API keys, an MCP endpoint, backup and restore"
+        "label": "También incluye",
+        "ios": "Siri, Spotlight y bloqueo con Face ID",
+        "selfHosted": "Plugins, claves de API, un endpoint MCP, copia de seguridad y restauración"
       },
       "languages": {
-        "label": "Languages",
+        "label": "Idiomas",
         "ios": "13",
         "selfHosted": "29"
       }
     },
     "android": {
       "title": "Android",
-      "body": "In beta. Request access on Discord; approved testers install through Google Play."
+      "body": "En beta. Solicita acceso en Discord; los testers aprobados instalan desde Google Play."
     },
-    "roadmap": "The apps work on their own today. Connecting them to a self-hosted DiscVault is planned for a later stage."
+    "roadmap": "Las aplicaciones funcionan de forma independiente actualmente. Su conexión con una instalación autoalojada de DiscVault está prevista para más adelante."
   },
   "selfHosted": {
-    "title": "On a server you run.",
-    "lead": "The self-hosted edition is a web app for the whole household. It installs on Docker, Unraid or Home Assistant.",
+    "title": "En tu propio servidor.",
+    "lead": "La edición autoalojada es una aplicación web para todo el hogar. Se instala en Docker, Unraid o Home Assistant.",
     "shots": {
       "library": {
-        "label": "Library",
-        "alt": "DiscVault in a browser: the library as a wall of covers, with search, view switch and format filters."
+        "label": "Biblioteca",
+        "alt": "DiscVault en un navegador: la biblioteca como un mural de carátulas, con búsqueda, selector de vista y filtros de formato."
       },
       "detail": {
-        "label": "Detail",
-        "alt": "DiscVault: a film's detail page with backdrop, cover, edition and metadata."
+        "label": "Detalle",
+        "alt": "DiscVault: la página de detalle de una película, con imagen de fondo, carátula, edición y metadatos."
       },
       "boxset": {
-        "label": "Box set",
-        "alt": "DiscVault: a box set opened to show the films it contains."
+        "label": "Pack",
+        "alt": "DiscVault: un pack abierto que muestra las películas que contiene."
       },
       "lists": {
-        "label": "Watchlist",
-        "alt": "DiscVault: the watchlist as a grid of covers."
+        "label": "Lista para ver",
+        "alt": "DiscVault: la lista para ver como una cuadrícula de carátulas."
       }
     },
     "points": [
-      "Invite-only accounts with roles",
-      "Passkeys first",
-      "Plugins for metadata and prices",
-      "API keys and an MCP endpoint",
-      "Backup and restore",
-      "Installs as an app on your phone"
+      "Cuentas solo por invitación, con roles",
+      "Llaves de acceso primero",
+      "Plugins para metadatos y precios",
+      "Claves de API y un endpoint MCP",
+      "Copia de seguridad y restauración",
+      "Se instala como app en tu móvil"
     ],
     "migration": {
-      "title": "Coming from DiscVault Legacy?",
-      "body": "The migration wizard carries your collection across to the current DiscVault."
+      "title": "¿Vienes de DiscVault Legacy?",
+      "body": "El asistente de migración traslada tu colección al DiscVault actual."
     }
   },
   "runs": {
-    "title": "Where DiscVault runs",
+    "title": "Dónde funciona DiscVault",
     "names": [
       "iPhone",
       "iPad",
       "Docker",
       "Unraid",
       "Home Assistant",
-      "Android beta",
-      "Any browser"
+      "Beta de Android",
+      "Cualquier navegador"
     ],
-    "caption": "Where DiscVault runs today."
+    "caption": "Dónde funciona DiscVault hoy."
   },
   "privacy": {
-    "title": "It lives where you put it.",
-    "lead": "On your device, or on a server you run. No profiling, no advertising, nobody watching what you watch.",
+    "title": "Vive donde tú la pones.",
+    "lead": "En tu dispositivo, o en un servidor que tú gestionas. Sin perfiles, sin publicidad, nadie mira lo que ves.",
     "tiles": {
       "ads": {
         "figure": "0",
-        "label": "ads"
+        "label": "anuncios"
       },
       "trackers": {
         "figure": "0",
-        "label": "trackers"
+        "label": "rastreadores"
       },
       "profiles": {
         "figure": "0",
-        "label": "profiles"
+        "label": "perfiles"
       },
       "count": {
         "figure": "1",
-        "label": "anonymous daily count"
+        "label": "recuento diario anónimo"
       }
     },
     "body": [
-      "The iPhone and iPad app keeps your collection on the device. The self-hosted edition keeps it on a server you administer. Either way the only thing that leaves is a barcode or a search term.",
-      "One exception: a self-hosted server tells api.discvault.eu once a day that it is running. It sends its version and the number of days since its previous report: no identifier, and nothing about your collection. That is only there to estimate how much DiscVault is used, and you can turn it off."
+      "La app de iPhone y iPad guarda tu colección en el dispositivo. La edición autoalojada la guarda en un servidor que tú administras. En ambos casos, lo único que sale es un código de barras o un término de búsqueda.",
+      "Una excepción: un servidor autoalojado avisa una vez al día a api.discvault.eu de que está en marcha. Envía su versión y el número de días desde su aviso anterior: ningún identificador y nada sobre tu colección. Solo sirve para estimar cuánto se usa DiscVault, y puedes desactivarlo."
     ]
   },
   "plans": {
-    "titleStart": "The core is",
-    "titleFree": "free",
+    "titleStart": "La base es",
+    "titleFree": "gratis",
     "titleEnd": ".",
-    "lead": "Scanning, cataloguing, searching, backing up and restoring cost nothing. DiscVault is free to self-host.",
+    "lead": "Escanear, catalogar, buscar, hacer copias de seguridad y restaurarlas no cuesta nada. Autoalojar DiscVault es gratis.",
     "points": [
-      "Scanning and adding discs",
-      "Full backup and restore",
-      "Watchlist, history and wishlist",
-      "iCloud sync between your devices",
-      "Getting your data out, always"
+      "Escanear y añadir discos",
+      "Copia de seguridad y restauración completas",
+      "Lista para ver, historial y lista de deseos",
+      "Sincronización con iCloud entre tus dispositivos",
+      "Sacar tus datos, siempre"
     ],
-    "support": "DiscVault is made by one developer. If it earns a place on your shelf, a coffee is welcome. A donation unlocks nothing; it is only a thank-you."
+    "support": "DiscVault lo hace un solo desarrollador. Si se gana un hueco en tu estantería, un café es bienvenido. Una donación no desbloquea nada; es solo una forma de dar las gracias."
   },
   "faq": {
-    "title": "Good questions.",
+    "title": "Buenas preguntas.",
     "items": {
       "server": {
-        "question": "Do I need a server?",
+        "question": "¿Necesito un servidor?",
         "answer": [
-          "No. The iPhone and iPad app works entirely on its own. A server is only for people who want the self-hosted web edition, made for a whole household."
+          "No. La app de iPhone y iPad funciona por sí sola. El servidor es solo para quien quiera la edición web autoalojada, pensada para todo un hogar."
         ]
       },
       "account": {
-        "question": "Do I need an account?",
+        "question": "¿Necesito una cuenta?",
         "answer": [
-          "Not for the app. On a self-hosted DiscVault the accounts live on your own server; you invite who you like."
+          "Para la app, no. En un DiscVault autoalojado las cuentas están en tu propio servidor; invitas a quien quieras."
         ]
       },
       "data": {
-        "question": "Where does the film information come from?",
+        "question": "¿De dónde sale la información de las películas?",
         "answer": [
-          "Disc releases, barcodes and covers come from MovieVault, the catalogue behind DiscVault. Film details, cast and Discover use TMDB with your own free key.",
-          "This product uses the TMDB API but is not endorsed or certified by TMDB."
+          "Los lanzamientos en disco, los códigos de barras y las carátulas vienen de MovieVault, el catálogo que hay detrás de DiscVault. Los detalles de las películas, el reparto y Descubrir usan TMDB con tu propia clave gratuita.",
+          "Este producto utiliza la API de TMDB, pero no está avalado ni certificado por TMDB."
         ]
       },
       "sends": {
-        "question": "What does DiscVault send out?",
+        "question": "¿Qué envía DiscVault al exterior?",
         "answer": [
-          "A barcode or a search term when you look something up. A self-hosted server also reports once a day, anonymously, that it is running; you can turn that off. The privacy policy has the details."
+          "Un código de barras o un término de búsqueda cuando buscas algo. Un servidor autoalojado además avisa una vez al día, de forma anónima, de que está en marcha; puedes desactivarlo. Los detalles están en la política de privacidad."
         ]
       },
       "sync": {
-        "question": "Can the app sync with my own server?",
+        "question": "¿Puede la app sincronizarse con mi propio servidor?",
         "answer": [
-          "Not yet. The apps and the self-hosted edition each work on their own today; connecting them is planned for a later stage."
+          "Todavía no. Las apps y la edición autoalojada funcionan hoy cada una por su cuenta; conectarlas está previsto para más adelante."
         ]
       },
       "export": {
-        "question": "Can I get my collection out again?",
+        "question": "¿Puedo volver a sacar mi colección?",
         "answer": [
-          "Yes. Backup and restore are part of the free core, and so is a CSV export. Your data is never held back."
+          "Sí. La copia de seguridad y la restauración forman parte de la base gratuita, igual que la exportación a CSV. Tus datos nunca quedan retenidos."
         ]
       },
       "android": {
-        "question": "Is there an Android app?",
+        "question": "¿Hay app para Android?",
         "answer": [
-          "It is in beta. Request access on Discord; approved testers install it through Google Play."
+          "Está en beta. Solicita acceso en Discord; los testers aprobados la instalan desde Google Play."
         ]
       },
       "legacy": {
-        "question": "I still run DiscVault Legacy. How do I move?",
+        "question": "Sigo usando DiscVault Legacy. ¿Cómo me cambio?",
         "answer": [
-          "The self-hosted edition has a migration wizard that brings your collection across from Legacy. The migration guide walks through it for Unraid and Docker."
+          "La edición autoalojada tiene un asistente de migración que trae tu colección desde Legacy. La guía de migración lo explica paso a paso para Unraid y Docker."
         ]
       }
     }
   },
   "cta": {
-    "title": "Scan your first disc.",
-    "lead": "Take the nearest case off the shelf and point the camera at the barcode. That is the whole setup."
+    "title": "Escanea tu primer disco.",
+    "lead": "Coge de la estantería la caja que tengas más a mano y apunta con la cámara al código de barras. Esa es toda la configuración."
   },
   "footer": {
-    "tagline": "DiscVault. Built for collectors.",
+    "tagline": "DiscVault. Creado para coleccionistas.",
     "groups": {
-      "product": "Product",
-      "help": "Help",
+      "product": "Producto",
+      "help": "Ayuda",
       "legal": "Legal"
     },
-    "privacy": "Privacy policy",
-    "terms": "Terms",
-    "legacy": "Legacy migration",
-    "production": "Made by",
-    "tmdb": "This product uses the TMDB API but is not endorsed or certified by TMDB."
+    "privacy": "Política de privacidad",
+    "terms": "Términos",
+    "legacy": "Migración desde Legacy",
+    "production": "Creado por",
+    "tmdb": "Este producto utiliza la API de TMDB, pero no está avalado ni certificado por TMDB."
   }
 }

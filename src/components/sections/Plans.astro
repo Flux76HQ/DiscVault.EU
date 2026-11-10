@@ -9,13 +9,18 @@ interface Props {
 }
 
 const { plans, actions } = Astro.props.content;
+// Chinese, Japanese and Korean set no space between the words of a sentence.
+const gap = /[\u3000-\u9fff\uac00-\ud7af]$/.test(plans.titleStart.trim())
+  ? ''
+  : ' ';
 ---
 
 <section class="chapter plans on-white" id="plans" data-chapter="on-white">
   <div class="grid">
     <h2 class="display plans-title" data-rise>
-      {plans.titleStart}
-      <span class="plans-free">{plans.titleFree}</span>{plans.titleEnd}
+      {plans.titleStart.trim()}{gap}<span class="plans-free"
+        >{plans.titleFree}</span
+      >{plans.titleEnd}
     </h2>
     <p class="statement plans-lead" data-rise>{plans.lead}</p>
     <ul class="plans-points" data-rise>
