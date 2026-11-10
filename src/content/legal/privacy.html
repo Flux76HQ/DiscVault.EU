@@ -4,8 +4,10 @@
         </p>
 
         <p class="legal-meta">
-          <strong>Last updated:</strong> 16 July 2026 &nbsp;·&nbsp;
-          <strong>Applies to:</strong> DiscVault for iOS, iPadOS, and Android
+          <strong>Last updated:</strong> 10 November 2026 &nbsp;·&nbsp;
+          <strong>Applies to:</strong> DiscVault for iOS, iPadOS, and Android, and
+          the anonymous installation count of DiscVault servers you host yourself
+          (Section 5)
         </p>
 
         <div class="legal-callout">
@@ -18,7 +20,9 @@
             through MovieVault. You may also add your own TMDB API key; that key stays
             on your device and the app sends TMDB requests directly to TMDB. DiscVault
             and Flux76 do not receive or store your identity, collection, watchlist,
-            watch history, TMDB key, or TMDB lookup history.
+            watch history, TMDB key, or TMDB lookup history. A DiscVault server you host
+            yourself tells us once a day, without any identifier, that it is running;
+            its owner can turn that off (Section 5).
           </p>
         </div>
 
@@ -28,8 +32,9 @@
           “we”, “us”). For any privacy question or request, contact us at
           <a href="mailto:privacy@discvault.eu">privacy@discvault.eu</a>. For the purposes
           of the EU General Data Protection Regulation (GDPR), DiscVault — Flux76 is
-          the data controller for the limited MovieVault processing described in Section
-          4. MovieVault is a service managed by Flux76, which also manages DiscVault.
+          the data controller for the limited MovieVault processing described in
+          Sections 4 and 5. MovieVault is a service managed by Flux76, which also manages
+          DiscVault.
           Direct TMDB requests are processed by TMDB under its own privacy policy and are
           not received by us.
         </p>
@@ -116,7 +121,50 @@
           key.
         </p>
 
-        <h2>5. Camera</h2>
+        <h2>5. Anonymous installation count (DiscVault servers you host yourself)</h2>
+        <p>
+          This section applies to <strong>DiscVault servers you host yourself</strong>
+          (DiscVault 26.11.2 and later), not to the iOS, iPadOS, or Android apps. Such a
+          server keeps your collection on a machine you run; we do not receive it.
+        </p>
+        <p>
+          A running server tells us, at most once a day, that it is in use. It does so
+          with one request to <code>https://api.discvault.eu</code> over HTTPS. The
+          count has one purpose: to estimate how much DiscVault is used, so that the
+          MovieVault backend can be scaled to match.
+        </p>
+        <p><strong>What is sent:</strong></p>
+        <ul>
+          <li>The <strong>DiscVault version</strong> the server runs.</li>
+          <li>The <strong>number of days since that server’s previous report</strong>. This is what lets us count servers without recognising any of them.</li>
+          <li>Two fixed values: the format of the report (“presence-1”) and the kind of installation (“server”).</li>
+        </ul>
+        <p><strong>What is <em>not</em> sent:</strong></p>
+        <ul>
+          <li>Any identifier: no instance ID, hostname, account, cookie, or credential.</li>
+          <li>Anything about your collection, your users, or the number of accounts on the server.</li>
+        </ul>
+        <p>
+          We keep <strong>daily totals only</strong>: how many reports arrived, per
+          version and per number of days since the previous report. We keep those totals
+          for up to 760 days. Like any internet request, a report arrives from an IP
+          address. We use that address for rate limiting only, as a keyed hash that
+          expires within 24 hours. We do not store it with the report, and our servers
+          keep no request log for this endpoint. Because nothing in a report identifies
+          a server or a person, we cannot look up, correct, or delete the reports of one
+          particular server. As far as the GDPR applies, the legal basis is our
+          <strong>legitimate interest</strong> (Art. 6(1)(f)) in knowing how many
+          installations the service has to carry.
+        </p>
+        <p>
+          <strong>Turning it off.</strong> The count is on by default. The owner of a
+          server is told about it in the app, and can turn it off at any time under
+          <em>Preferences &gt; Collectors</em>, or by setting
+          <code>DISCVAULT_INSTALLATION_COUNT=off</code> in the server’s environment.
+          With the count off, the server makes no request to this endpoint at all.
+        </p>
+
+        <h2>6. Camera</h2>
         <p>
           The app asks for camera access only so you can scan a disc’s barcode when adding a
           title. Scanning is performed on your device using the platform’s on-device
@@ -126,16 +174,16 @@
           decline camera access and add titles manually instead.
         </p>
 
-        <h2>6. What we do not do</h2>
+        <h2>7. What we do not do</h2>
         <ul>
-          <li>We do not collect analytics or usage statistics.</li>
+          <li>We do not collect analytics or usage statistics from the apps. The only count we keep is the anonymous installation count of self-hosted servers described in Section 5.</li>
           <li>We do not show advertising or use advertising identifiers.</li>
           <li>We do not use third-party tracking or profiling SDKs.</li>
           <li>We do not sell or share your data with data brokers.</li>
           <li>We do not access your location, contacts, photos, or microphone.</li>
         </ul>
 
-        <h2>7. Data retention</h2>
+        <h2>8. Data retention</h2>
         <p>
           We do not retain a copy of your library. Local data remains on your device until
           you delete it or uninstall the app. Your optional TMDB key remains in secure
@@ -143,39 +191,44 @@
           Flux76 do not receive or store it. MovieVault keeps only the minimal operational
           records (such as the random device credential and short-lived request and
           security logs) needed to run and secure the lookup service, for no longer than
-          necessary. TMDB determines its own retention under its privacy policy.
+          necessary. The daily totals of the anonymous installation count (Section 5)
+          are kept for up to 760 days. TMDB determines its own retention under its
+          privacy policy.
         </p>
 
-        <h2>8. International transfers</h2>
+        <h2>9. International transfers</h2>
         <p>
           MovieVault is hosted in the European Union. If you use the app from outside the
           EU, your MovieVault barcode or search request is processed on EU-based
-          infrastructure. If you configure TMDB, the app sends that request directly to
+          infrastructure. The same holds for the daily report of a self-hosted server
+          (Section 5). If you configure TMDB, the app sends that request directly to
           TMDB, which may process data in the locations described in its privacy policy.
           DiscVault and Flux76 do not route or copy the direct TMDB request.
         </p>
 
-        <h2>9. Children’s privacy</h2>
+        <h2>10. Children’s privacy</h2>
         <p>
           DiscVault is a general-audience collection tool and is not directed at children.
           It does not knowingly collect personal information from children.
         </p>
 
-        <h2>10. Your rights</h2>
+        <h2>11. Your rights</h2>
         <p>
           Because the app is local-first and we hold almost no personal data about you, most
           data control is directly in your hands: delete titles in the app, or uninstall to
           remove everything locally. Where the GDPR applies, you have rights of access,
           rectification, erasure, restriction, objection, and portability regarding any data
           we do process. To exercise these rights, or to reset your MovieVault device link,
-          contact <a href="mailto:privacy@discvault.eu">privacy@discvault.eu</a>. You also
+          contact <a href="mailto:privacy@discvault.eu">privacy@discvault.eu</a>. The
+          anonymous installation count (Section 5) holds nothing that can be traced to
+          one server, so the way to object to it is to turn it off. You also
           have the right to lodge a complaint with your local data protection authority (in
           the Netherlands, the Autoriteit Persoonsgegevens). For information TMDB
           processes independently, exercise your rights with TMDB as described in its
           privacy policy.
         </p>
 
-        <h2>11. Third-party metadata and artwork</h2>
+        <h2>12. Third-party metadata and artwork</h2>
         <p>
           Titles, descriptions, and cover art returned by MovieVault or TMDB originate
           from third-party sources and belong to their respective owners. They are
@@ -183,14 +236,14 @@
           purposes only.
         </p>
 
-        <h2>12. Changes to this policy</h2>
+        <h2>13. Changes to this policy</h2>
         <p>
           We may update this policy as the app evolves. Material changes will be reflected on
           this page with a new “Last updated” date. Continued use of the app after an update
           means you accept the revised policy.
         </p>
 
-        <h2>13. Contact</h2>
+        <h2>14. Contact</h2>
         <p>
           DiscVault — Flux76<br />
           <a href="mailto:privacy@discvault.eu">privacy@discvault.eu</a>

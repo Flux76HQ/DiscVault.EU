@@ -101,16 +101,17 @@
       "Kasa",
       "0 izleyici",
       "0 reklam",
-      "Analitik yok"
+      "Profilleme yok"
     ],
     "voice": [
       "Koyduğun yerde ",
       "kalır",
       "."
     ],
-    "lead": "Kendi cihazında ya da kendi çalıştırdığın bir sunucuda. Analitik yok, reklam yok, ne izlediğini kimse izlemiyor.",
+    "lead": "Kendi cihazında ya da kendi çalıştırdığın bir sunucuda. Profilleme yok, reklam yok, ne izlediğini kimse izlemiyor.",
     "body": [
-      "iPhone ve iPad uygulaması koleksiyonu cihazda tutar. DiscVault 26 onu senin yönettiğin bir sunucuda tutar. Her iki durumda da cihazdan yalnızca bir barkod ya da bir arama terimi çıkar."
+      "iPhone ve iPad uygulaması koleksiyonu cihazda tutar. DiscVault 26 onu senin yönettiğin bir sunucuda tutar. Her iki durumda da cihazdan yalnızca bir barkod ya da bir arama terimi çıkar.",
+      "Tek bir istisna: kendi sunucunda çalışan DiscVault günde bir kez api.discvault.eu adresine çalıştığını bildirir. Sürümünü ve önceki bildiriminden bu yana geçen gün sayısını gönderir: hiçbir tanımlayıcı yok, koleksiyonun hakkında hiçbir şey yok. Bu yalnızca DiscVault'un ne kadar kullanıldığını tahmin etmek içindir ve kapatabilirsin."
     ]
   },
   "formats": {

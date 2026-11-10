@@ -101,16 +101,17 @@
       "Skarbiec",
       "0 trackerów",
       "0 reklam",
-      "Bez analityki"
+      "Bez profilowania"
     ],
     "voice": [
       "Jest tam, gdzie go ",
       "położysz",
       "."
     ],
-    "lead": "Na Twoim urządzeniu albo na serwerze, który sam prowadzisz. Bez analityki, bez reklam, nikt nie patrzy, co oglądasz.",
+    "lead": "Na Twoim urządzeniu albo na serwerze, który sam prowadzisz. Bez profilowania, bez reklam, nikt nie patrzy, co oglądasz.",
     "body": [
-      "Aplikacja na iPhone'a i iPada trzyma kolekcję na urządzeniu. DiscVault 26 trzyma ją na serwerze, którym administrujesz. Tak czy inaczej urządzenie opuszcza tylko kod kreskowy lub hasło wyszukiwania."
+      "Aplikacja na iPhone'a i iPada trzyma kolekcję na urządzeniu. DiscVault 26 trzyma ją na serwerze, którym administrujesz. Tak czy inaczej urządzenie opuszcza tylko kod kreskowy lub hasło wyszukiwania.",
+      "Jeden wyjątek: serwer self-hosted raz dziennie zgłasza do api.discvault.eu, że działa. Wysyła swoją wersję i liczbę dni od poprzedniego zgłoszenia: żadnego identyfikatora i nic o Twojej kolekcji. Służy to wyłącznie do oszacowania, jak często DiscVault jest używany, i możesz to wyłączyć."
     ]
   },
   "formats": {

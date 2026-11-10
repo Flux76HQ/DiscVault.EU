@@ -99,6 +99,11 @@ const privacyClaims = {
     'sends lookup requests directly to TMDB over HTTPS',
     'Your TMDB API key or any direct TMDB request.',
     'Your collection, watchlist, or watch history.',
+    // The anonymous installation count (App-Guidance ADR-0020): the policy names
+    // the host a server reports to, what we keep, and the operator's off switch.
+    'https://api.discvault.eu',
+    'daily totals only',
+    'DISCVAULT_INSTALLATION_COUNT=off',
   ],
   'privacy-nl.html': [
     'DiscVault voor iOS, iPadOS en Android',
@@ -107,6 +112,9 @@ const privacyClaims = {
     'verstuurt de app lookup-verzoeken rechtstreeks via HTTPS naar TMDB',
     'Je TMDB API-key of enig rechtstreeks TMDB-verzoek.',
     'Je collectie, watchlist of kijkgeschiedenis.',
+    'https://api.discvault.eu',
+    'alleen dagtotalen',
+    'DISCVAULT_INSTALLATION_COUNT=off',
   ],
 };
 for (const [name, claims] of Object.entries(privacyClaims)) {

@@ -55,11 +55,12 @@
     "spines": ["4K Ultra HD", "Blu-ray", "DVD", "Steelbook", "Box set · 8 films"]
   },
   "vault": {
-    "slate": ["Reel 04", "The Vault", "0 trackers", "0 ads", "No analytics"],
+    "slate": ["Reel 04", "The Vault", "0 trackers", "0 ads", "No profiling"],
     "voice": ["It lives where you ", "put", " it."],
-    "lead": "On your device, or on a server you run. No analytics, no advertising, nobody watching what you watch.",
+    "lead": "On your device, or on a server you run. No profiling, no advertising, nobody watching what you watch.",
     "body": [
-      "The iPhone and iPad app keeps your collection on the device. DiscVault 26 keeps it on a server you administer. Either way the only thing that leaves is a barcode or a search term."
+      "The iPhone and iPad app keeps your collection on the device. DiscVault 26 keeps it on a server you administer. Either way the only thing that leaves is a barcode or a search term.",
+      "One exception: a self-hosted server tells api.discvault.eu once a day that it is running. It sends its version and the number of days since its previous report: no identifier, and nothing about your collection. That is only there to estimate how much DiscVault is used, and you can turn it off."
     ]
   },
   "formats": {

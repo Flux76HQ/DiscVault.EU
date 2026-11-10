@@ -101,16 +101,17 @@
       "Holvi",
       "0 seurainta",
       "0 mainosta",
-      "Ei analytiikkaa"
+      "Ei profilointia"
     ],
     "voice": [
       "Se on siellä, minne sen ",
       "laitat",
       "."
     ],
-    "lead": "Omalla laitteellasi tai palvelimella, jota itse ylläpidät. Ei analytiikkaa, ei mainoksia, kukaan ei katso mitä katsot.",
+    "lead": "Omalla laitteellasi tai palvelimella, jota itse ylläpidät. Ei profilointia, ei mainoksia, kukaan ei katso mitä katsot.",
     "body": [
-      "iPhone- ja iPad-sovellus pitää kokoelman laitteella. DiscVault 26 pitää sen palvelimella, jota hallinnoit. Kummassakin tapauksessa laitteelta lähtee vain viivakoodi tai hakusana."
+      "iPhone- ja iPad-sovellus pitää kokoelman laitteella. DiscVault 26 pitää sen palvelimella, jota hallinnoit. Kummassakin tapauksessa laitteelta lähtee vain viivakoodi tai hakusana.",
+      "Yksi poikkeus: itse isännöity palvelin ilmoittaa kerran päivässä osoitteeseen api.discvault.eu olevansa käynnissä. Se lähettää versionsa ja päivien määrän edellisestä ilmoituksestaan: ei tunnistetta eikä mitään kokoelmastasi. Tällä arvioidaan vain sitä, kuinka paljon DiscVaultia käytetään, ja voit kytkeä sen pois."
     ]
   },
   "formats": {

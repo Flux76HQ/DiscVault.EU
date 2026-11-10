@@ -101,16 +101,17 @@
       "Hvelvet",
       "0 sporere",
       "0 annonser",
-      "Ingen analyse"
+      "Ingen profilering"
     ],
     "voice": [
       "Den bor der du ",
       "legger",
       " den."
     ],
-    "lead": "På enheten din, eller på en server du selv kjører. Ingen analyse, ingen annonser, ingen som ser hva du ser.",
+    "lead": "På enheten din, eller på en server du selv kjører. Ingen profilering, ingen annonser, ingen som ser hva du ser.",
     "body": [
-      "iPhone- og iPad-appen holder samlingen på enheten. DiscVault 26 holder den på en server du administrerer. Uansett forlater bare en strekkode eller et søkeord enheten."
+      "iPhone- og iPad-appen holder samlingen på enheten. DiscVault 26 holder den på en server du administrerer. Uansett forlater bare en strekkode eller et søkeord enheten.",
+      "Ett unntak: en self-hosted server forteller api.discvault.eu én gang om dagen at den kjører. Den sender versjonen sin og antall dager siden forrige melding: ingen identifikator og ingenting om samlingen din. Det brukes bare til å anslå hvor mye DiscVault blir brukt, og du kan slå det av."
     ]
   },
   "formats": {

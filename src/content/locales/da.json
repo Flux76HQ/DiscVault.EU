@@ -101,16 +101,17 @@
       "Boksen",
       "0 trackere",
       "0 reklamer",
-      "Ingen analyse"
+      "Ingen profilering"
     ],
     "voice": [
       "Den bor, hvor du ",
       "lægger",
       " den."
     ],
-    "lead": "På din enhed eller på en server, du selv driver. Ingen analyse, ingen reklamer, ingen der ser, hvad du ser.",
+    "lead": "På din enhed eller på en server, du selv driver. Ingen profilering, ingen reklamer, ingen der ser, hvad du ser.",
     "body": [
-      "iPhone- og iPad-appen holder din samling på enheden. DiscVault 26 holder den på en server, du administrerer. Uanset hvad forlader kun en stregkode eller et søgeord enheden."
+      "iPhone- og iPad-appen holder din samling på enheden. DiscVault 26 holder den på en server, du administrerer. Uanset hvad forlader kun en stregkode eller et søgeord enheden.",
+      "Én undtagelse: en self-hosted server fortæller api.discvault.eu én gang om dagen, at den kører. Den sender sin version og antallet af dage siden sin forrige melding: ingen identifikator og intet om din samling. Det bruges kun til at vurdere, hvor meget DiscVault bliver brugt, og du kan slå det fra."
     ]
   },
   "formats": {
