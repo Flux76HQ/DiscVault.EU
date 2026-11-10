@@ -1,0 +1,109 @@
+---
+/**
+ * A real EAN-13 symbol, drawn from the digits: the printed thing every disc
+ * case carries. Bars are filled rectangles in the current colour.
+ */
+interface Props {
+  /** Thirteen digits; spaces are ignored. */
+  code: string;
+  class?: string;
+}
+
+const { code, class: className } = Astro.props;
+const digits = code.replace(/\D/g, '');
+if (digits.length !== 13) throw new Error(`EAN-13 needs 13 digits: "${code}"`);
+
+const L = [
+  '0001101',
+  '0011001',
+  '0010011',
+  '0111101',
+  '0100011',
+  '0110001',
+  '0101111',
+  '0111011',
+  '0110111',
+  '0001011',
+];
+const G = [
+  '0100111',
+  '0110011',
+  '0011011',
+  '0100001',
+  '0011101',
+  '0111001',
+  '0000101',
+  '0010001',
+  '0001001',
+  '0010111',
+];
+const R = [
+  '1110010',
+  '1100110',
+  '1101100',
+  '1000010',
+  '1011100',
+  '1001110',
+  '1010000',
+  '1000100',
+  '1001000',
+  '1110100',
+];
+const parity = [
+  'LLLLLL',
+  'LLGLGG',
+  'LLGGLG',
+  'LLGGGL',
+  'LGLLGG',
+  'LGGLLG',
+  'LGGGLL',
+  'LGLGLG',
+  'LGLGGL',
+  'LGGLGL',
+];
+
+const first = Number(digits[0]);
+const left = [...digits.slice(1, 7)]
+  .map((digit, index) => (parity[first][index] === 'L' ? L : G)[Number(digit)])
+  .join('');
+const right = [...digits.slice(7)].map((digit) => R[Number(digit)]).join('');
+const modules = `101${left}01010${right}101`;
+
+// Merge neighbouring dark modules into one bar; guard bars run taller.
+const bars: Array<{ x: number; width: number; guard: boolean }> = [];
+const isGuard = (index: number) =>
+  index < 3 || (index >= 45 && index < 50) || index >= 92;
+for (let index = 0; index < modules.length; index += 1) {
+  if (modules[index] !== '1') continue;
+  const previous = bars.at(-1);
+  if (
+    previous &&
+    previous.x + previous.width === index &&
+    previous.guard === isGuard(index)
+  ) {
+    previous.width += 1;
+  } else {
+    bars.push({ x: index, width: 1, guard: isGuard(index) });
+  }
+}
+---
+
+<svg
+  class:list={['barcode', className]}
+  viewBox="0 0 95 56"
+  preserveAspectRatio="none"
+  aria-hidden="true"
+  focusable="false"
+>
+  {
+    bars.map(({ x, width, guard }) => (
+      <rect
+        x={x}
+        y="0"
+        width={width}
+        height={guard ? 56 : 50}
+        fill="currentColor"
+      />
+    ))
+  }
+</svg>

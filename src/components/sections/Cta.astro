@@ -1,0 +1,54 @@
+---
+import '../../styles/sections/cta.css';
+/** The close: one row of tiles, the action in the middle. */
+import { Picture } from 'astro:assets';
+import type { MarketingContent } from '../../content/types';
+import { APP_STORE_URL, DOCS_URL } from '../../config';
+import { poster } from '../../media/registry';
+
+interface Props {
+  content: MarketingContent;
+}
+
+const { cta, actions } = Astro.props.content;
+---
+
+<section class="cta on-navy" id="community" data-chapter="on-navy">
+  <div class="cta-row">
+    <div class="cta-flank cta-flank-cover" aria-hidden="true">
+      <Picture
+        src={poster('the-last-lighthouse')}
+        formats={['avif']}
+        fallbackFormat="webp"
+        widths={[240, 360, 480, 688]}
+        sizes="20vw"
+        alt=""
+        loading="lazy"
+        decoding="async"
+      />
+    </div>
+    <div class="cta-tile on-blue">
+      <h2 class="cta-title" data-rise>{cta.title}</h2>
+      <p class="cta-lead" data-rise>{cta.lead}</p>
+      <div class="actions" data-rise>
+        <a
+          class="button"
+          href={APP_STORE_URL}
+          data-cta="app-store"
+          data-rank="primary"
+        >
+          {actions.appStore}
+        </a>
+        <a
+          class="button button-quiet"
+          href={DOCS_URL}
+          data-cta="self-hosted"
+          data-rank="primary"
+        >
+          {actions.selfHost}
+        </a>
+      </div>
+    </div>
+    <div class="cta-flank cta-flank-gold" aria-hidden="true"></div>
+  </div>
+</section>

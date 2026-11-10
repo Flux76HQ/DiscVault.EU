@@ -2,235 +2,358 @@
   "locale": "ko",
   "languageName": "한국어",
   "seo": {
-    "title": "DiscVault — 당신의 디스크를 위한 카탈로그",
-    "description": "DiscVault는 4K, Blu-ray, DVD로 소장한 영화를 카탈로그로 정리합니다. 바코드를 스캔하고, 에디션을 구분하고, 내 기기나 내 서버에 보관하세요. 추적 없음."
+    "title": "DiscVault — catalogue the films you own on disc",
+    "description": "DiscVault catalogues the films you own on 4K, Blu-ray and DVD. Scan a barcode, keep editions and box sets straight, on your iPhone or your own server. No ads, no tracking.",
+    "ogAlt": "DiscVault: a wall of film covers with 4K, Blu-ray and DVD badges."
+  },
+  "a11y": {
+    "skip": "Skip to content",
+    "home": "DiscVault, home",
+    "menu": "Menu",
+    "language": "Language",
+    "sections": "Sections",
+    "pauseMotion": "Pause the video",
+    "playMotion": "Play the video"
   },
   "nav": {
-    "library": "라이브러리",
-    "scan": "스캔",
-    "editions": "에디션",
-    "privacy": "개인정보",
-    "install": "설치",
+    "collect": "Collect",
+    "scan": "Scan",
+    "editions": "Editions",
+    "selfHosted": "Self-hosted",
+    "privacy": "Privacy",
+    "faq": "Questions",
     "docs": "Docs",
-    "menu": "메뉴",
-    "language": "언어"
+    "get": "Get DiscVault"
   },
   "actions": {
-    "install": "DiscVault 26 설치",
-    "installCompact": "v26 설치",
-    "appStore": "App Store에서 다운로드",
-    "android": "Android 베타 액세스 요청",
-    "testflight": "TestFlight 베타",
-    "privacy": "개인정보 처리방침"
+    "appStore": "Download on the App Store",
+    "selfHost": "Self-host DiscVault 26",
+    "android": "Request Android beta access",
+    "testflight": "Join the TestFlight beta",
+    "installGuide": "Read the install guide",
+    "migrationGuide": "Read the migration guide",
+    "privacyPolicy": "Read the privacy policy",
+    "discord": "Join the Discord",
+    "github": "Source on GitHub",
+    "issues": "Report an issue",
+    "support": "Buy me a coffee",
+    "moreAnswers": "More answers in the docs",
+    "backToTop": "Back to top"
   },
-  "leader": {
-    "slate": [
-      "DiscVault 26",
-      "당신의 디스크를 위한 카탈로그",
-      "셀프 호스팅",
-      "iPhone & iPad",
-      "Android 베타"
-    ],
-    "voice": [
-      "빛을, ",
-      "간직하다."
-    ],
-    "lead": "DiscVault는 당신이 소장한 영화를 카탈로그로 정리합니다 — 디스크에, 선반에, 당신의 서버에.",
-    "note": [
-      "PWA & 데스크톱",
-      "설치 안내"
-    ]
+  "hero": {
+    "title": "Your film shelf, catalogued.",
+    "lead": "DiscVault keeps track of every film you own on 4K, Blu-ray and DVD. Scan a barcode and the title, edition and cover fill themselves in.",
+    "note": "For iPhone and iPad, or self-hosted on your own server. Android is in beta.",
+    "mediaAlt": "The DiscVault library: a wall of film covers, each with a 4K, Blu-ray, DVD or box-set badge."
   },
-  "shelf": {
-    "slate": [
-      "Reel 01",
-      "선반"
-    ],
-    "counter": [
-      "45 / 45편",
-      "29 타일"
-    ],
-    "voice": [
-      "모든 에디션을, 당신이 ",
-      "둔",
-      " 자리에."
-    ],
-    "lead": "포스터를 둘러보고, 목록이나 상세 보기로 전환하고, 포맷으로 필터링하고, 박스 세트와 컨테이너를 열어 보세요. 큰 컬렉션에서도 빠릅니다."
-  },
-  "read": {
-    "slate": [
-      "Reel 02",
-      "읽기",
-      "EAN → 제목 · 연도 · 포맷 · 커버"
-    ],
-    "voice": [
-      "카메라를 대세요. 디스크가 스스로 ",
-      "읽힙니다",
-      "."
-    ],
-    "lead": "바코드를 스캔하면 DiscVault가 제목, 연도, 포맷, 커버를 채웁니다. 이름으로 검색할 수도 있습니다.",
-    "note": [
-      "iPhone & iPad",
-      "단독 실행",
-      "서버 불필요"
-    ],
-    "captureAlt": "iPhone의 DiscVault: 바코드를 스캔한 뒤 영화 추가"
-  },
-  "edition": {
-    "slate": [
-      "Reel 03",
-      "에디션",
-      "4K · BD · DVD · Steel · 박스 세트"
-    ],
-    "voice": [
-      "에디션이 ",
-      "중요합니다."
-    ],
-    "lead": "4K 디스크는 Blu-ray가 아닙니다. 스틸북은 일반 케이스가 아닙니다. 박스 세트, 컨테이너, 그리고 한 릴리스 안의 디스크들은 있는 그대로 카탈로그에 담깁니다.",
-    "spines": [
-      "4K Ultra HD",
-      "Blu-ray",
-      "DVD",
-      "Steelbook",
-      "박스 세트 · 8편"
-    ]
-  },
-  "vault": {
-    "slate": [
-      "Reel 04",
-      "금고",
-      "트래커 0",
-      "광고 0",
-      "프로파일링 없음"
-    ],
-    "voice": [
-      "당신이 ",
-      "둔",
-      " 곳에 있습니다."
-    ],
-    "lead": "내 기기에, 또는 내가 직접 운영하는 서버에. 프로파일링 없음, 광고 없음, 무엇을 보는지 아무도 보지 않습니다.",
-    "body": [
-      "iPhone과 iPad 앱은 컬렉션을 기기에 보관합니다. DiscVault 26은 당신이 관리하는 서버에 보관합니다. 어느 쪽이든 기기 밖으로 나가는 것은 바코드나 검색어뿐입니다.",
-      "예외가 하나 있습니다. 셀프 호스팅 서버는 하루에 한 번 api.discvault.eu에 실행 중임을 알립니다. 버전과 이전 보고 이후 지난 일수만 보내며, 식별자나 컬렉션에 관한 정보는 보내지 않습니다. DiscVault가 얼마나 사용되는지 가늠하기 위한 용도일 뿐이며 끌 수 있습니다."
-    ]
-  },
-  "formats": {
-    "slate": [
-      "Reel 05",
-      "포맷"
-    ],
-    "voice": [
-      "들어가는 길은 ",
-      "셋."
-    ],
-    "lead": "셀프 호스팅 DiscVault 26은 오늘부터. iPhone과 iPad는 단독 실행. Android는 베타.",
-    "routes": [
-      {
-        "id": "self-hosted",
-        "slate": [
-          "PWA",
-          "Desktop",
-          "DiscVault 26"
+  "collect": {
+    "title": "Built for collectors.",
+    "blocks": {
+      "library": {
+        "title": "A library that looks like your shelf",
+        "points": [
+          "Posters, a list or a detail view",
+          "Filter by 4K, Blu-ray or DVD",
+          "Search by title, barcode, cast or crew",
+          "Box sets open to the films inside",
+          "Quick, even on a large collection"
         ],
-        "title": "Self-hosted",
-        "body": [
-          "데스크톱 우선 라이브러리, 더 풍부한 상세 페이지, PostgreSQL 기반, 플러그인, 마이그레이션 도구, 그리고 자신의 서버에 카탈로그를 두는 수집가를 위한 관리 기능.",
-          "초대 전용 흐름, 소유자 및 관리자 도구, 역할 기반 접근, 감사 보기, API 접근, MCP 지원 통합."
-        ],
-        "action": "DiscVault 26 설치"
+        "mediaAlt": "The library as a grid of film covers with format badges."
       },
-      {
-        "id": "ios",
-        "slate": [
-          "iOS",
-          "iPadOS",
-          "단독 실행"
+      "detail": {
+        "title": "Every film gets a proper page",
+        "points": [
+          "Edition, format and barcode",
+          "Cast, crew and artwork",
+          "Your own poster or backdrop",
+          "Series and their seasons",
+          "Plex and Jellyfin copies marked"
         ],
-        "title": "iPhone & iPad",
-        "body": [
-          "기기에서 완전히 실행됩니다. 서버 없이 스캔, 보강, 필터링, 검색."
-        ],
-        "action": "App Store에서 다운로드"
+        "mediaAlt": "A film's detail page with its cover, backdrop, edition and cast."
       },
-      {
-        "id": "android",
-        "slate": [
-          "Android",
-          "베타"
+      "lists": {
+        "title": "Lists for what happens next",
+        "points": [
+          "A watchlist for tonight",
+          "Watch history, with dates",
+          "A wishlist with price alerts",
+          "Loans: who has which disc",
+          "Tags you make up yourself"
         ],
-        "title": "Android",
-        "body": [
-          "Discord에서 액세스를 요청하세요. 승인된 테스터는 Google Play를 통해 설치합니다."
+        "mediaAlt": "The watchlist: films still to watch, shown as covers."
+      },
+      "discover": {
+        "title": "Find the next one",
+        "points": [
+          "Popular, now playing and upcoming",
+          "Pages for films and for people",
+          "Add to your wishlist in one tap",
+          "Runs on your own free TMDB key"
         ],
-        "action": "Android 베타 액세스 요청"
+        "mediaAlt": "Discover: popular and upcoming films to add to the wishlist."
+      },
+      "siri": {
+        "title": "Ask your iPhone",
+        "points": [
+          "“How many films by this director do I own?”",
+          "Find any disc from Spotlight",
+          "Lock the app with Face ID",
+          "Switched on by you, never by default"
+        ],
+        "mediaAlt": "Siri answering a question about the collection."
       }
-    ],
-    "roadmap": "iOS 및 Android 앱은 현재 독립적으로 작동합니다. 자체 호스팅 DiscVault 설치와의 연결은 추후 단계에서 제공할 예정입니다.",
-    "migration": [
-      "Legacy에서 이전",
-      "Docs"
-    ]
+    }
   },
-  "credits": {
-    "install": {
-      "role": "설치",
-      "name": "DiscVault 26"
+  "scan": {
+    "titleStart": "Point the camera.",
+    "titleEnd": "It files itself.",
+    "lead": "Every disc has a barcode. Pick one of these and see what DiscVault makes of it.",
+    "record": {
+      "format": "Format",
+      "year": "Year",
+      "runtime": "Runtime",
+      "minutes": "min",
+      "director": "Director",
+      "barcode": "Barcode",
+      "added": "Added to your library"
     },
-    "appStore": {
-      "role": "iPhone & iPad",
-      "name": "App Store"
+    "note": "On iPhone and iPad the disc catalogue lives on the device, so a scan works offline.",
+    "fallback": "No barcode? Search by title, or paste an IMDb or TMDB ID."
+  },
+  "editions": {
+    "title": "Editions matter.",
+    "lead": "A 4K disc is not a Blu-ray. A Steelbook is not a keep case. Box sets, and the discs inside a release, are catalogued as what they are.",
+    "items": {
+      "uhd": {
+        "name": "4K Ultra HD",
+        "detail": "18 on this shelf"
+      },
+      "bluray": {
+        "name": "Blu-ray",
+        "detail": "26 on this shelf"
+      },
+      "dvd": {
+        "name": "DVD",
+        "detail": "11 on this shelf"
+      },
+      "steelbook": {
+        "name": "Steelbook",
+        "detail": "1 on this shelf"
+      },
+      "boxset": {
+        "name": "Box sets",
+        "detail": "3 sets, 12 films"
+      }
+    },
+    "note": "The shelf on this page is a demo library of 55 invented films."
+  },
+  "platforms": {
+    "title": "Two ways to keep it.",
+    "lead": "On the device in your pocket, or on a server in your home. Both are DiscVault; pick where your collection lives.",
+    "columns": {
+      "ios": {
+        "name": "iPhone and iPad",
+        "sub": "The app"
+      },
+      "selfHosted": {
+        "name": "DiscVault 26",
+        "sub": "Self-hosted"
+      }
+    },
+    "rows": {
+      "home": {
+        "label": "Where it lives",
+        "ios": "On your device, synced through your own iCloud",
+        "selfHosted": "On a server you run"
+      },
+      "add": {
+        "label": "Adding a disc",
+        "ios": "Scan with the camera, search or type it in",
+        "selfHosted": "Barcode, search or a whole import"
+      },
+      "share": {
+        "label": "Sharing",
+        "ios": "Your own devices",
+        "selfHosted": "A household: invites, groups and roles"
+      },
+      "signin": {
+        "label": "Signing in",
+        "ios": "No account at all",
+        "selfHosted": "Passkeys first; password, TOTP or OpenID Connect if you prefer"
+      },
+      "extras": {
+        "label": "Also there",
+        "ios": "Siri, Spotlight and Face ID lock",
+        "selfHosted": "Plugins, API keys, an MCP endpoint, backup and restore"
+      },
+      "languages": {
+        "label": "Languages",
+        "ios": "13",
+        "selfHosted": "29"
+      }
     },
     "android": {
-      "role": "Android",
-      "name": "Discord에서 베타"
+      "title": "Android",
+      "body": "In beta. Request access on Discord; approved testers install through Google Play."
     },
-    "testflight": {
-      "role": "TestFlight",
-      "name": "베타"
+    "roadmap": "The apps work on their own today. Connecting them to a self-hosted DiscVault is planned for a later stage."
+  },
+  "selfHosted": {
+    "title": "On a server you run.",
+    "lead": "DiscVault 26 is the self-hosted edition: a web app for the whole household that installs on Docker, Unraid or Home Assistant.",
+    "shots": {
+      "library": {
+        "label": "Library",
+        "alt": "DiscVault 26 in a browser: the library as a wall of covers, with search, view switch and format filters."
+      },
+      "detail": {
+        "label": "Detail",
+        "alt": "DiscVault 26: a film's detail page with backdrop, cover, edition and metadata."
+      },
+      "boxset": {
+        "label": "Box set",
+        "alt": "DiscVault 26: a box set opened to show the films it contains."
+      },
+      "lists": {
+        "label": "Watchlist",
+        "alt": "DiscVault 26: the watchlist as a grid of covers."
+      }
     },
-    "source": {
-      "role": "소스",
-      "name": "GitHub"
+    "points": [
+      "Invite-only accounts with roles",
+      "Passkeys first",
+      "Plugins for metadata and prices",
+      "API keys and an MCP endpoint",
+      "Backup and restore",
+      "Installs as an app on your phone"
+    ],
+    "migration": {
+      "title": "Coming from DiscVault Legacy?",
+      "body": "The migration wizard carries your collection across to DiscVault 26."
+    }
+  },
+  "runs": {
+    "title": "Where DiscVault runs",
+    "names": [
+      "iPhone",
+      "iPad",
+      "Docker",
+      "Unraid",
+      "Home Assistant",
+      "Android beta",
+      "Any browser"
+    ],
+    "caption": "Where DiscVault runs today."
+  },
+  "privacy": {
+    "title": "It lives where you put it.",
+    "lead": "On your device, or on a server you run. No profiling, no advertising, nobody watching what you watch.",
+    "tiles": {
+      "ads": {
+        "figure": "0",
+        "label": "ads"
+      },
+      "trackers": {
+        "figure": "0",
+        "label": "trackers"
+      },
+      "profiles": {
+        "figure": "0",
+        "label": "profiles"
+      },
+      "count": {
+        "figure": "1",
+        "label": "anonymous daily count"
+      }
     },
-    "community": {
-      "role": "커뮤니티",
-      "name": "Discord"
-    },
-    "issues": {
-      "role": "문제 신고",
-      "name": "GitHub"
-    },
-    "languages": {
-      "role": "언어",
-      "name": "스무 개"
-    },
-    "privacy": {
-      "role": "개인정보",
-      "name": "개인정보 처리방침"
-    },
-    "terms": {
-      "role": "약관",
-      "name": "약관"
-    },
-    "legacy": {
-      "role": "Legacy",
-      "name": "레거시 마이그레이션"
-    },
-    "production": {
-      "role": "제작",
-      "name": "Flux76"
-    },
-    "final": [
-      "DiscVault. 수집가를 위해 ",
-      "만들었습니다."
+    "body": [
+      "The iPhone and iPad app keeps your collection on the device. DiscVault 26 keeps it on a server you administer. Either way the only thing that leaves is a barcode or a search term.",
+      "One exception: a self-hosted server tells api.discvault.eu once a day that it is running. It sends its version and the number of days since its previous report: no identifier, and nothing about your collection. That is only there to estimate how much DiscVault is used, and you can turn it off."
     ]
   },
+  "plans": {
+    "titleStart": "The core is",
+    "titleFree": "free",
+    "titleEnd": ".",
+    "lead": "Scanning, cataloguing, searching, backing up and restoring cost nothing. DiscVault 26 is free to self-host.",
+    "points": [
+      "Scanning and adding discs",
+      "Full backup and restore",
+      "Watchlist, history and wishlist",
+      "iCloud sync between your devices",
+      "Getting your data out, always"
+    ],
+    "support": "DiscVault is made by one developer. If it earns a place on your shelf, a coffee is welcome. A donation unlocks nothing; it is only a thank-you."
+  },
+  "faq": {
+    "title": "Good questions.",
+    "items": {
+      "server": {
+        "question": "Do I need a server?",
+        "answer": [
+          "No. The iPhone and iPad app works entirely on its own. A server is only for people who want DiscVault 26, the self-hosted web edition for a whole household."
+        ]
+      },
+      "account": {
+        "question": "Do I need an account?",
+        "answer": [
+          "Not for the app. On a self-hosted DiscVault the accounts live on your own server; you invite who you like."
+        ]
+      },
+      "data": {
+        "question": "Where does the film information come from?",
+        "answer": [
+          "Disc releases, barcodes and covers come from MovieVault, the catalogue behind DiscVault. Film details, cast and Discover use TMDB with your own free key.",
+          "This product uses the TMDB API but is not endorsed or certified by TMDB."
+        ]
+      },
+      "sends": {
+        "question": "What does DiscVault send out?",
+        "answer": [
+          "A barcode or a search term when you look something up. A self-hosted server also reports once a day, anonymously, that it is running; you can turn that off. The privacy policy has the details."
+        ]
+      },
+      "sync": {
+        "question": "Can the app sync with my own server?",
+        "answer": [
+          "Not yet. The apps and the self-hosted edition each work on their own today; connecting them is planned for a later stage."
+        ]
+      },
+      "export": {
+        "question": "Can I get my collection out again?",
+        "answer": [
+          "Yes. Backup and restore are part of the free core, and so is a CSV export. Your data is never held back."
+        ]
+      },
+      "android": {
+        "question": "Is there an Android app?",
+        "answer": [
+          "It is in beta. Request access on Discord; approved testers install it through Google Play."
+        ]
+      },
+      "legacy": {
+        "question": "I still run DiscVault Legacy. How do I move?",
+        "answer": [
+          "DiscVault 26 has a migration wizard that brings your collection across. The migration guide walks through it for Unraid and Docker."
+        ]
+      }
+    }
+  },
+  "cta": {
+    "title": "Scan your first disc.",
+    "lead": "Take the nearest case off the shelf and point the camera at the barcode. That is the whole setup."
+  },
   "footer": {
-    "tagline": "DiscVault. 수집가를 위해 설계되었습니다.",
-    "source": "GitHub 소스",
-    "legacy": "레거시 마이그레이션",
-    "privacy": "개인정보",
-    "terms": "약관",
-    "support": "지원 스레드"
+    "tagline": "DiscVault. Built for collectors.",
+    "groups": {
+      "product": "Product",
+      "help": "Help",
+      "legal": "Legal"
+    },
+    "privacy": "Privacy policy",
+    "terms": "Terms",
+    "legacy": "Legacy migration",
+    "production": "Made by",
+    "tmdb": "This product uses the TMDB API but is not endorsed or certified by TMDB."
   }
 }

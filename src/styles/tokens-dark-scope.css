@@ -1,9 +1,9 @@
 /*
- * Generated from Flux76HQ/App-Guidance/docs/branding/apps/discvault/pwa/tokens.json
- * Dark values scoped to .cine-dark (the strip and the credits) in both
+ * Generated from Flux76HQ/App-Guidance/projects/discvault/branding/pwa/tokens.json
+ * Dark values scoped to .dv-dark (the header and the footer) in both
  * schemes. Run "pnpm brand:build" after updating tokens.json.
  */
-.cine-dark {
+.dv-dark {
   --dv-bg: #090F1A;
   --dv-surface-1: #111A2A;
   --dv-surface-2: #1A2438;

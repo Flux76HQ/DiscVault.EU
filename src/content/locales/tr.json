@@ -2,235 +2,358 @@
   "locale": "tr",
   "languageName": "Türkçe",
   "seo": {
-    "title": "DiscVault — disklerin için bir katalog",
-    "description": "DiscVault, 4K, Blu-ray ve DVD'de sahip olduğun filmleri kataloglar. Bir barkod tara, sürümleri ayırt et, kendi cihazında ya da kendi sunucunda. Takip yok."
+    "title": "DiscVault — catalogue the films you own on disc",
+    "description": "DiscVault catalogues the films you own on 4K, Blu-ray and DVD. Scan a barcode, keep editions and box sets straight, on your iPhone or your own server. No ads, no tracking.",
+    "ogAlt": "DiscVault: a wall of film covers with 4K, Blu-ray and DVD badges."
+  },
+  "a11y": {
+    "skip": "Skip to content",
+    "home": "DiscVault, home",
+    "menu": "Menu",
+    "language": "Language",
+    "sections": "Sections",
+    "pauseMotion": "Pause the video",
+    "playMotion": "Play the video"
   },
   "nav": {
-    "library": "Kitaplık",
-    "scan": "Tara",
-    "editions": "Sürümler",
-    "privacy": "Gizlilik",
-    "install": "Kur",
+    "collect": "Collect",
+    "scan": "Scan",
+    "editions": "Editions",
+    "selfHosted": "Self-hosted",
+    "privacy": "Privacy",
+    "faq": "Questions",
     "docs": "Docs",
-    "menu": "Menü",
-    "language": "Diller"
+    "get": "Get DiscVault"
   },
   "actions": {
-    "install": "DiscVault 26'yı kur",
-    "installCompact": "v26 kur",
-    "appStore": "App Store'dan indirin",
-    "android": "Android beta erişimi isteyin",
-    "testflight": "TestFlight betası",
-    "privacy": "Gizlilik politikası"
+    "appStore": "Download on the App Store",
+    "selfHost": "Self-host DiscVault 26",
+    "android": "Request Android beta access",
+    "testflight": "Join the TestFlight beta",
+    "installGuide": "Read the install guide",
+    "migrationGuide": "Read the migration guide",
+    "privacyPolicy": "Read the privacy policy",
+    "discord": "Join the Discord",
+    "github": "Source on GitHub",
+    "issues": "Report an issue",
+    "support": "Buy me a coffee",
+    "moreAnswers": "More answers in the docs",
+    "backToTop": "Back to top"
   },
-  "leader": {
-    "slate": [
-      "DiscVault 26",
-      "Disklerin için bir katalog",
-      "Kendi sunucunda",
-      "iPhone & iPad",
-      "Android betası"
-    ],
-    "voice": [
-      "Işık, ",
-      "saklandı."
-    ],
-    "lead": "DiscVault sahip olduğun filmleri kataloglar — diskte, rafında, kendi sunucunda.",
-    "note": [
-      "PWA ve masaüstü",
-      "Kurulum kılavuzu"
-    ]
+  "hero": {
+    "title": "Your film shelf, catalogued.",
+    "lead": "DiscVault keeps track of every film you own on 4K, Blu-ray and DVD. Scan a barcode and the title, edition and cover fill themselves in.",
+    "note": "For iPhone and iPad, or self-hosted on your own server. Android is in beta.",
+    "mediaAlt": "The DiscVault library: a wall of film covers, each with a 4K, Blu-ray, DVD or box-set badge."
   },
-  "shelf": {
-    "slate": [
-      "Reel 01",
-      "Raf"
-    ],
-    "counter": [
-      "45 / 45 film",
-      "29 kart"
-    ],
-    "voice": [
-      "Her sürüm, onu ",
-      "bıraktığın",
-      " yerde."
-    ],
-    "lead": "Afişlere göz at, liste ya da ayrıntı görünümüne geç, biçime göre filtrele, kutu setlerini ve kapları aç. Büyük koleksiyonlarda hızlı."
-  },
-  "read": {
-    "slate": [
-      "Reel 02",
-      "Okuma",
-      "EAN → Başlık · Yıl · Biçim · Kapak"
-    ],
-    "voice": [
-      "Kamerayı tut. Disk kendini ",
-      "okur",
-      "."
-    ],
-    "lead": "Bir barkod tara, DiscVault başlığı, yılı, biçimi ve kapağı doldursun. Ya da adla ara.",
-    "note": [
-      "iPhone & iPad",
-      "Bağımsız",
-      "Sunucu gerekmez"
-    ],
-    "captureAlt": "iPhone'da DiscVault: barkodu tarandıktan sonra bir film ekleniyor"
-  },
-  "edition": {
-    "slate": [
-      "Reel 03",
-      "Sürüm",
-      "4K · BD · DVD · Steel · Kutu seti"
-    ],
-    "voice": [
-      "Sürümler ",
-      "önemlidir."
-    ],
-    "lead": "4K disk Blu-ray değildir. Steelbook sıradan bir kutu değildir. Kutu setleri, kaplar ve bir yayının içindeki diskler ne iseler o olarak kataloglanır.",
-    "spines": [
-      "4K Ultra HD",
-      "Blu-ray",
-      "DVD",
-      "Steelbook",
-      "Kutu seti · 8 film"
-    ]
-  },
-  "vault": {
-    "slate": [
-      "Reel 04",
-      "Kasa",
-      "0 izleyici",
-      "0 reklam",
-      "Profilleme yok"
-    ],
-    "voice": [
-      "Koyduğun yerde ",
-      "kalır",
-      "."
-    ],
-    "lead": "Kendi cihazında ya da kendi çalıştırdığın bir sunucuda. Profilleme yok, reklam yok, ne izlediğini kimse izlemiyor.",
-    "body": [
-      "iPhone ve iPad uygulaması koleksiyonu cihazda tutar. DiscVault 26 onu senin yönettiğin bir sunucuda tutar. Her iki durumda da cihazdan yalnızca bir barkod ya da bir arama terimi çıkar.",
-      "Tek bir istisna: kendi sunucunda çalışan DiscVault günde bir kez api.discvault.eu adresine çalıştığını bildirir. Sürümünü ve önceki bildiriminden bu yana geçen gün sayısını gönderir: hiçbir tanımlayıcı yok, koleksiyonun hakkında hiçbir şey yok. Bu yalnızca DiscVault'un ne kadar kullanıldığını tahmin etmek içindir ve kapatabilirsin."
-    ]
-  },
-  "formats": {
-    "slate": [
-      "Reel 05",
-      "Biçimler"
-    ],
-    "voice": [
-      "İçeri üç ",
-      "yol."
-    ],
-    "lead": "Kendi sunucunda DiscVault 26 bugün. iPhone ve iPad bağımsız. Android betada.",
-    "routes": [
-      {
-        "id": "self-hosted",
-        "slate": [
-          "PWA",
-          "Desktop",
-          "DiscVault 26"
+  "collect": {
+    "title": "Built for collectors.",
+    "blocks": {
+      "library": {
+        "title": "A library that looks like your shelf",
+        "points": [
+          "Posters, a list or a detail view",
+          "Filter by 4K, Blu-ray or DVD",
+          "Search by title, barcode, cast or crew",
+          "Box sets open to the films inside",
+          "Quick, even on a large collection"
         ],
-        "title": "Self-hosted",
-        "body": [
-          "Masaüstü öncelikli bir kitaplık, daha zengin ayrıntı sayfaları, PostgreSQL temeli, eklentiler, taşıma araçları ve kataloğunu kendi sunucusunda tutan koleksiyoncular için yönetim denetimleri.",
-          "Yalnızca davetle akışlar, sahip ve yönetici araçları, rol tabanlı erişim, denetim görünümleri, API erişimi ve MCP'ye hazır entegrasyonlar."
-        ],
-        "action": "DiscVault 26'yı kur"
+        "mediaAlt": "The library as a grid of film covers with format badges."
       },
-      {
-        "id": "ios",
-        "slate": [
-          "iOS",
-          "iPadOS",
-          "Bağımsız"
+      "detail": {
+        "title": "Every film gets a proper page",
+        "points": [
+          "Edition, format and barcode",
+          "Cast, crew and artwork",
+          "Your own poster or backdrop",
+          "Series and their seasons",
+          "Plex and Jellyfin copies marked"
         ],
-        "title": "iPhone & iPad",
-        "body": [
-          "Tamamen cihazda çalışır. Sunucu olmadan tara, zenginleştir, filtrele ve ara."
-        ],
-        "action": "App Store'dan indirin"
+        "mediaAlt": "A film's detail page with its cover, backdrop, edition and cast."
       },
-      {
-        "id": "android",
-        "slate": [
-          "Android",
-          "Beta"
+      "lists": {
+        "title": "Lists for what happens next",
+        "points": [
+          "A watchlist for tonight",
+          "Watch history, with dates",
+          "A wishlist with price alerts",
+          "Loans: who has which disc",
+          "Tags you make up yourself"
         ],
-        "title": "Android",
-        "body": [
-          "Discord üzerinden erişim isteyin. Onaylanan test kullanıcıları Google Play üzerinden yükler."
+        "mediaAlt": "The watchlist: films still to watch, shown as covers."
+      },
+      "discover": {
+        "title": "Find the next one",
+        "points": [
+          "Popular, now playing and upcoming",
+          "Pages for films and for people",
+          "Add to your wishlist in one tap",
+          "Runs on your own free TMDB key"
         ],
-        "action": "Android beta erişimi isteyin"
+        "mediaAlt": "Discover: popular and upcoming films to add to the wishlist."
+      },
+      "siri": {
+        "title": "Ask your iPhone",
+        "points": [
+          "“How many films by this director do I own?”",
+          "Find any disc from Spotlight",
+          "Lock the app with Face ID",
+          "Switched on by you, never by default"
+        ],
+        "mediaAlt": "Siri answering a question about the collection."
       }
-    ],
-    "roadmap": "iOS ve Android uygulamaları şu anda bağımsız çalışır. Kendi sunucunuzda barındırılan bir DiscVault kurulumuna bağlanmaları ileride planlanmaktadır.",
-    "migration": [
-      "Legacy'den geçiş",
-      "Docs"
-    ]
+    }
   },
-  "credits": {
-    "install": {
-      "role": "Kurulum",
-      "name": "DiscVault 26"
+  "scan": {
+    "titleStart": "Point the camera.",
+    "titleEnd": "It files itself.",
+    "lead": "Every disc has a barcode. Pick one of these and see what DiscVault makes of it.",
+    "record": {
+      "format": "Format",
+      "year": "Year",
+      "runtime": "Runtime",
+      "minutes": "min",
+      "director": "Director",
+      "barcode": "Barcode",
+      "added": "Added to your library"
     },
-    "appStore": {
-      "role": "iPhone & iPad",
-      "name": "App Store"
+    "note": "On iPhone and iPad the disc catalogue lives on the device, so a scan works offline.",
+    "fallback": "No barcode? Search by title, or paste an IMDb or TMDB ID."
+  },
+  "editions": {
+    "title": "Editions matter.",
+    "lead": "A 4K disc is not a Blu-ray. A Steelbook is not a keep case. Box sets, and the discs inside a release, are catalogued as what they are.",
+    "items": {
+      "uhd": {
+        "name": "4K Ultra HD",
+        "detail": "18 on this shelf"
+      },
+      "bluray": {
+        "name": "Blu-ray",
+        "detail": "26 on this shelf"
+      },
+      "dvd": {
+        "name": "DVD",
+        "detail": "11 on this shelf"
+      },
+      "steelbook": {
+        "name": "Steelbook",
+        "detail": "1 on this shelf"
+      },
+      "boxset": {
+        "name": "Box sets",
+        "detail": "3 sets, 12 films"
+      }
+    },
+    "note": "The shelf on this page is a demo library of 55 invented films."
+  },
+  "platforms": {
+    "title": "Two ways to keep it.",
+    "lead": "On the device in your pocket, or on a server in your home. Both are DiscVault; pick where your collection lives.",
+    "columns": {
+      "ios": {
+        "name": "iPhone and iPad",
+        "sub": "The app"
+      },
+      "selfHosted": {
+        "name": "DiscVault 26",
+        "sub": "Self-hosted"
+      }
+    },
+    "rows": {
+      "home": {
+        "label": "Where it lives",
+        "ios": "On your device, synced through your own iCloud",
+        "selfHosted": "On a server you run"
+      },
+      "add": {
+        "label": "Adding a disc",
+        "ios": "Scan with the camera, search or type it in",
+        "selfHosted": "Barcode, search or a whole import"
+      },
+      "share": {
+        "label": "Sharing",
+        "ios": "Your own devices",
+        "selfHosted": "A household: invites, groups and roles"
+      },
+      "signin": {
+        "label": "Signing in",
+        "ios": "No account at all",
+        "selfHosted": "Passkeys first; password, TOTP or OpenID Connect if you prefer"
+      },
+      "extras": {
+        "label": "Also there",
+        "ios": "Siri, Spotlight and Face ID lock",
+        "selfHosted": "Plugins, API keys, an MCP endpoint, backup and restore"
+      },
+      "languages": {
+        "label": "Languages",
+        "ios": "13",
+        "selfHosted": "29"
+      }
     },
     "android": {
-      "role": "Android",
-      "name": "Discord'da beta"
+      "title": "Android",
+      "body": "In beta. Request access on Discord; approved testers install through Google Play."
     },
-    "testflight": {
-      "role": "TestFlight",
-      "name": "Beta"
+    "roadmap": "The apps work on their own today. Connecting them to a self-hosted DiscVault is planned for a later stage."
+  },
+  "selfHosted": {
+    "title": "On a server you run.",
+    "lead": "DiscVault 26 is the self-hosted edition: a web app for the whole household that installs on Docker, Unraid or Home Assistant.",
+    "shots": {
+      "library": {
+        "label": "Library",
+        "alt": "DiscVault 26 in a browser: the library as a wall of covers, with search, view switch and format filters."
+      },
+      "detail": {
+        "label": "Detail",
+        "alt": "DiscVault 26: a film's detail page with backdrop, cover, edition and metadata."
+      },
+      "boxset": {
+        "label": "Box set",
+        "alt": "DiscVault 26: a box set opened to show the films it contains."
+      },
+      "lists": {
+        "label": "Watchlist",
+        "alt": "DiscVault 26: the watchlist as a grid of covers."
+      }
     },
-    "source": {
-      "role": "Kaynak",
-      "name": "GitHub"
+    "points": [
+      "Invite-only accounts with roles",
+      "Passkeys first",
+      "Plugins for metadata and prices",
+      "API keys and an MCP endpoint",
+      "Backup and restore",
+      "Installs as an app on your phone"
+    ],
+    "migration": {
+      "title": "Coming from DiscVault Legacy?",
+      "body": "The migration wizard carries your collection across to DiscVault 26."
+    }
+  },
+  "runs": {
+    "title": "Where DiscVault runs",
+    "names": [
+      "iPhone",
+      "iPad",
+      "Docker",
+      "Unraid",
+      "Home Assistant",
+      "Android beta",
+      "Any browser"
+    ],
+    "caption": "Where DiscVault runs today."
+  },
+  "privacy": {
+    "title": "It lives where you put it.",
+    "lead": "On your device, or on a server you run. No profiling, no advertising, nobody watching what you watch.",
+    "tiles": {
+      "ads": {
+        "figure": "0",
+        "label": "ads"
+      },
+      "trackers": {
+        "figure": "0",
+        "label": "trackers"
+      },
+      "profiles": {
+        "figure": "0",
+        "label": "profiles"
+      },
+      "count": {
+        "figure": "1",
+        "label": "anonymous daily count"
+      }
     },
-    "community": {
-      "role": "Topluluk",
-      "name": "Discord"
-    },
-    "issues": {
-      "role": "Sorunlar",
-      "name": "GitHub"
-    },
-    "languages": {
-      "role": "Diller",
-      "name": "Yirmi"
-    },
-    "privacy": {
-      "role": "Gizlilik",
-      "name": "Gizlilik politikası"
-    },
-    "terms": {
-      "role": "Koşullar",
-      "name": "Koşullar"
-    },
-    "legacy": {
-      "role": "Legacy",
-      "name": "Eski sürüm geçişi"
-    },
-    "production": {
-      "role": "Yapım",
-      "name": "Flux76"
-    },
-    "final": [
-      "DiscVault. Koleksiyoncular için ",
-      "yapıldı."
+    "body": [
+      "The iPhone and iPad app keeps your collection on the device. DiscVault 26 keeps it on a server you administer. Either way the only thing that leaves is a barcode or a search term.",
+      "One exception: a self-hosted server tells api.discvault.eu once a day that it is running. It sends its version and the number of days since its previous report: no identifier, and nothing about your collection. That is only there to estimate how much DiscVault is used, and you can turn it off."
     ]
   },
+  "plans": {
+    "titleStart": "The core is",
+    "titleFree": "free",
+    "titleEnd": ".",
+    "lead": "Scanning, cataloguing, searching, backing up and restoring cost nothing. DiscVault 26 is free to self-host.",
+    "points": [
+      "Scanning and adding discs",
+      "Full backup and restore",
+      "Watchlist, history and wishlist",
+      "iCloud sync between your devices",
+      "Getting your data out, always"
+    ],
+    "support": "DiscVault is made by one developer. If it earns a place on your shelf, a coffee is welcome. A donation unlocks nothing; it is only a thank-you."
+  },
+  "faq": {
+    "title": "Good questions.",
+    "items": {
+      "server": {
+        "question": "Do I need a server?",
+        "answer": [
+          "No. The iPhone and iPad app works entirely on its own. A server is only for people who want DiscVault 26, the self-hosted web edition for a whole household."
+        ]
+      },
+      "account": {
+        "question": "Do I need an account?",
+        "answer": [
+          "Not for the app. On a self-hosted DiscVault the accounts live on your own server; you invite who you like."
+        ]
+      },
+      "data": {
+        "question": "Where does the film information come from?",
+        "answer": [
+          "Disc releases, barcodes and covers come from MovieVault, the catalogue behind DiscVault. Film details, cast and Discover use TMDB with your own free key.",
+          "This product uses the TMDB API but is not endorsed or certified by TMDB."
+        ]
+      },
+      "sends": {
+        "question": "What does DiscVault send out?",
+        "answer": [
+          "A barcode or a search term when you look something up. A self-hosted server also reports once a day, anonymously, that it is running; you can turn that off. The privacy policy has the details."
+        ]
+      },
+      "sync": {
+        "question": "Can the app sync with my own server?",
+        "answer": [
+          "Not yet. The apps and the self-hosted edition each work on their own today; connecting them is planned for a later stage."
+        ]
+      },
+      "export": {
+        "question": "Can I get my collection out again?",
+        "answer": [
+          "Yes. Backup and restore are part of the free core, and so is a CSV export. Your data is never held back."
+        ]
+      },
+      "android": {
+        "question": "Is there an Android app?",
+        "answer": [
+          "It is in beta. Request access on Discord; approved testers install it through Google Play."
+        ]
+      },
+      "legacy": {
+        "question": "I still run DiscVault Legacy. How do I move?",
+        "answer": [
+          "DiscVault 26 has a migration wizard that brings your collection across. The migration guide walks through it for Unraid and Docker."
+        ]
+      }
+    }
+  },
+  "cta": {
+    "title": "Scan your first disc.",
+    "lead": "Take the nearest case off the shelf and point the camera at the barcode. That is the whole setup."
+  },
   "footer": {
-    "tagline": "DiscVault. Koleksiyoncular için geliştirildi.",
-    "source": "GitHub üzerinde kaynak",
-    "legacy": "Eski sürüm geçişi",
-    "privacy": "Gizlilik",
-    "terms": "Koşullar",
-    "support": "Destek konusu"
+    "tagline": "DiscVault. Built for collectors.",
+    "groups": {
+      "product": "Product",
+      "help": "Help",
+      "legal": "Legal"
+    },
+    "privacy": "Privacy policy",
+    "terms": "Terms",
+    "legacy": "Legacy migration",
+    "production": "Made by",
+    "tmdb": "This product uses the TMDB API but is not endorsed or certified by TMDB."
   }
 }

@@ -80,15 +80,15 @@ ${formatLines('dark')}
 }
 `;
 
-// The shell (strip and credits) is a dark object on every page, including
-// the light-capable legal shell: this scoped file pins the dark values on
-// `.cine-dark` in both schemes.
+// The header and footer are dark objects on every page, including the
+// light-capable legal shell: this scoped file pins the dark values on
+// `.dv-dark` in both schemes.
 const scoped = `/*
  * Generated from ${source.repository}/${source.tokens}
- * Dark values scoped to .cine-dark (the strip and the credits) in both
+ * Dark values scoped to .dv-dark (the header and the footer) in both
  * schemes. Run "pnpm brand:build" after updating tokens.json.
  */
-.cine-dark {
+.dv-dark {
 ${themeLines('dark')}
   --dv-accent-bright: ${accent['bright-dark']};
   --dv-sheen: ${tokens.effect.sheen.dark.$value};

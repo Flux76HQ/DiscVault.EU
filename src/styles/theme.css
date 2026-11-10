@@ -1,0 +1,117 @@
+/*
+ * Site tokens for discvault.eu. Colour comes only from the generated --dv-*
+ * brand tokens (Chrome & Blue v3.1, tokens.css); nothing here declares or
+ * overrides one. Design source: Flux76HQ/App-Guidance,
+ * projects/discvault/website/chrome-and-blue-web.md.
+ */
+:root {
+  /*
+   * Chapter fields. The page is a row of flat colour chapters; the colours
+   * are the app's own ground and its fixed format-badge colours.
+   */
+  --field-navy: var(--dv-bg);
+  --field-deep: var(--dv-surface-1);
+  --field-slate: var(--dv-surface-2);
+  --field-white: var(--dv-fmt-4k-fill);
+  --field-blue: var(--dv-accent);
+  --field-platinum: var(--dv-platinum);
+  --field-gold: var(--dv-fmt-dvd-fill);
+
+  /* Type: one family, five steps. */
+  --font:
+    Inter, 'Inter Fallback', ui-sans-serif, system-ui, -apple-system,
+    'Segoe UI', sans-serif;
+  --step-display: clamp(2.75rem, 8.4vw, 8rem);
+  --step-title: clamp(2.5rem, 6.2vw, 6rem);
+  --step-statement: clamp(1.375rem, 2.3vw, 2.125rem);
+  --step-body: clamp(1.0625rem, 1.25vw, 1.25rem);
+  --step-small: 0.9375rem;
+
+  /* Space: one grid, one pair of margins. */
+  --margin: clamp(1.25rem, 2.2vw, 2rem);
+  --gutter: clamp(0.75rem, 1.4vw, 1.5rem);
+  --chapter-pad: clamp(5rem, 11vw, 10rem);
+
+  /* Shape: the radii of the app. */
+  --radius-sm: 6px;
+  --radius: 8px;
+  --radius-lg: 16px;
+
+  /* Motion. */
+  --ease-out: cubic-bezier(0.16, 0.84, 0.3, 1);
+  --t-fast: 160ms;
+  --t-move: 620ms;
+  --stagger: 80ms;
+
+  /*
+   * Breakpoints are literals (no preprocessor here): 37.5rem (600 px),
+   * 56.25rem (900 px) and 75rem (1200 px).
+   */
+}
+
+/*
+ * A chapter sets its ground and the inks that stay legible on it. Buttons,
+ * links and notes read these, so a component never names a colour itself.
+ */
+.on-navy,
+.on-deep,
+.on-slate {
+  --ground: var(--field-navy);
+  --ink: var(--dv-text);
+  --ink-2: var(--dv-text-2);
+  --tone: var(--dv-surface-2);
+  --tone-2: var(--dv-surface-3);
+  --link: var(--dv-accent-bright);
+  --action: var(--dv-accent);
+  --action-hover: var(--dv-accent-hover);
+  --action-press: var(--dv-accent-press);
+  --action-ink: var(--dv-accent-on);
+}
+.on-deep {
+  --ground: var(--field-deep);
+}
+.on-slate {
+  --ground: var(--field-slate);
+  --tone: var(--dv-surface-3);
+  --tone-2: var(--dv-border);
+}
+.on-white,
+.on-platinum,
+.on-gold {
+  --ground: var(--field-white);
+  --ink: var(--dv-fmt-4k-on);
+  --ink-2: var(--dv-surface-3);
+  --tone: color-mix(in srgb, var(--dv-fmt-4k-on) 9%, transparent);
+  --tone-2: color-mix(in srgb, var(--dv-fmt-4k-on) 16%, transparent);
+  --link: var(--dv-accent-press);
+  --action: var(--dv-accent);
+  --action-hover: var(--dv-accent-hover);
+  --action-press: var(--dv-accent-press);
+  --action-ink: var(--dv-accent-on);
+}
+.on-platinum {
+  --ground: var(--field-platinum);
+  --link: var(--dv-bg);
+}
+.on-gold {
+  --ground: var(--field-gold);
+  --ink: var(--dv-fmt-dvd-on);
+  --ink-2: var(--dv-fmt-dvd-on);
+  --link: var(--dv-fmt-dvd-on);
+  --action: var(--dv-bg);
+  --action-hover: var(--dv-surface-1);
+  --action-press: var(--dv-surface-2);
+  --action-ink: var(--dv-text);
+}
+.on-blue {
+  --ground: var(--field-blue);
+  --ink: var(--dv-accent-on);
+  --ink-2: var(--dv-accent-on);
+  --tone: color-mix(in srgb, var(--dv-bg) 22%, transparent);
+  --tone-2: color-mix(in srgb, var(--dv-bg) 34%, transparent);
+  --link: var(--dv-accent-on);
+  --action: var(--dv-fmt-4k-fill);
+  --action-hover: var(--dv-accent-on);
+  --action-press: var(--dv-platinum);
+  --action-ink: var(--dv-fmt-4k-on);
+}

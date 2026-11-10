@@ -1,0 +1,104 @@
+/* Hero: the panel and the swatch column, inside a narrow navy frame. */
+.hero {
+  --frame: clamp(0.5rem, 0.8vw, 0.75rem);
+  display: grid;
+  grid-template-columns: minmax(0, 10fr) minmax(0, 2fr);
+  gap: var(--frame);
+  min-height: calc(100svh - 4rem);
+  padding: 0 var(--frame) var(--frame);
+  background: var(--ground);
+  color: var(--ink);
+}
+
+.hero-panel {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background: var(--ground);
+  color: var(--ink);
+}
+
+.hero-copy {
+  display: grid;
+  justify-items: center;
+  padding: clamp(2.5rem, 5.4vh, 4.5rem) var(--margin) 0;
+  text-align: center;
+}
+.hero-title {
+  max-width: 13ch;
+}
+.hero-lead {
+  max-width: 48ch;
+  margin-top: clamp(1.5rem, 2.4vw, 2.25rem);
+  font-size: var(--step-body);
+}
+.hero-actions {
+  justify-content: center;
+  margin-top: 1.75rem;
+}
+.hero-note {
+  margin-top: 1rem;
+}
+
+.hero-view {
+  width: min(100% - 2 * var(--margin), 82rem);
+  flex: 1 1 auto;
+  min-height: 15rem;
+  margin-top: clamp(2rem, 3.4vw, 3rem);
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+.hero-swatches {
+  display: grid;
+  grid-auto-rows: 1fr;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+}
+.hero-swatch {
+  display: block;
+  padding: 1.1rem 1.25rem;
+  background: var(--ground);
+  color: var(--ink);
+  font-size: 1.0625rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+  transition: padding-left var(--t-fast) ease;
+}
+.hero-swatch:hover {
+  padding-left: 1.75rem;
+  text-decoration: underline;
+}
+
+@media (max-width: 56.24rem) {
+  .hero {
+    grid-template-columns: minmax(0, 1fr);
+    min-height: 0;
+  }
+  .hero-panel {
+    min-height: 64svh;
+  }
+  .hero-view {
+    width: calc(100% - 2 * var(--margin));
+    aspect-ratio: 4 / 3 !important;
+    flex: none;
+    min-height: 0;
+  }
+  .hero-swatch {
+    display: flex;
+    min-height: 3.25rem;
+    align-items: center;
+    padding-block: 0.5rem;
+    font-size: var(--step-small);
+  }
+}
+@media (max-width: 37.49rem) {
+  .hero-actions .button {
+    width: 100%;
+  }
+  .hero-actions {
+    width: 100%;
+  }
+}

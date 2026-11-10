@@ -1,0 +1,62 @@
+/* Editions: a poster. Giant names flush left, one small fact flush right. */
+.editions-title {
+  grid-column: 1 / span 7;
+}
+.editions-lead {
+  grid-column: 8 / -1;
+  align-self: end;
+}
+.editions-list {
+  display: grid;
+  margin-top: clamp(3rem, 7vw, 6rem);
+  padding-inline: var(--margin);
+}
+.editions-item {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+.editions-name {
+  font-size: clamp(3rem, 11vw, 10.5rem);
+  font-weight: 700;
+  letter-spacing: -0.055em;
+  line-height: 0.94;
+  white-space: nowrap;
+  transition: color var(--t-fast) ease;
+}
+.editions-item:hover .editions-name {
+  color: var(--dv-bg);
+}
+.editions-detail {
+  flex: none;
+  font-size: var(--step-body);
+  font-weight: 500;
+  text-align: right;
+}
+.editions-note {
+  margin-top: clamp(2.5rem, 5vw, 4rem);
+  padding-inline: var(--margin);
+}
+
+@media (max-width: 56.24rem) {
+  .editions-title,
+  .editions-lead {
+    grid-column: 1 / -1;
+  }
+  .editions-lead {
+    margin-top: 1.5rem;
+  }
+  .editions-item {
+    display: grid;
+    gap: 0.25rem;
+    margin-bottom: 1.25rem;
+  }
+  .editions-name {
+    font-size: clamp(2.5rem, 14vw, 6rem);
+  }
+  .editions-detail {
+    font-size: var(--step-small);
+    text-align: left;
+  }
+}

@@ -1,125 +1,135 @@
 ---
-import '../styles/cinematic.css';
 import '../styles/tokens-dark-scope.css';
 import '../styles/shell.css';
 /**
- * Reel 06, the credits: role on the left in the slate, name on the right in
- * the voice. Carries the conversion ladder once more (docs as `button`, App
- * Store and Discord as `button button-secondary`, TestFlight as text), the
- * legal routes (Dutch variants on /nl/), the Legacy link and the verified
- * Flux76 credit.
+ * The close: the name first, at the full width of the page, then the ways
+ * in, then everything else. Dark on every page, including the light-capable
+ * legal shell.
  */
 import type { MarketingContent } from '../content/types';
-import type { Locale } from '../content/locales';
+import { localePath, type Locale } from '../content/locales';
 import {
   ANDROID_BETA_SIGNUP_URL,
   APP_STORE_URL,
   DISCORD_URL,
   DOCS_URL,
+  FLUX76_URL,
   GITHUB_URL,
   ISSUES_URL,
+  LEGACY_PATH,
+  SUPPORT_URL,
   TESTFLIGHT_URL,
 } from '../config';
 import LocaleSwitcher from './LocaleSwitcher.astro';
-import Voice from './reels/Voice.astro';
 
 interface Props {
   content: MarketingContent;
   locale: Locale;
-  /** The legal shell keeps both colour schemes; marketing routes are dark. */
-  lightCapable?: boolean;
 }
 
-const { content, locale, lightCapable = false } = Astro.props;
+const { content, locale } = Astro.props;
+const { actions, footer, nav } = content;
+const home = localePath(locale);
+const at = (anchor: string) => `${home}${anchor}`;
 const privacyPath = locale === 'nl' ? '/privacy-nl.html' : '/privacy.html';
 const termsPath = locale === 'nl' ? '/terms-nl.html' : '/terms.html';
-const { credits } = content;
+const groups = [
+  {
+    title: footer.groups.product,
+    links: [
+      { href: at('#product'), label: nav.collect },
+      { href: at('#scan'), label: nav.scan },
+      { href: at('#editions'), label: nav.editions },
+      { href: at('#self-hosted'), label: nav.selfHosted },
+      { href: at('#privacy'), label: nav.privacy },
+    ],
+  },
+  {
+    title: footer.groups.help,
+    links: [
+      { href: DOCS_URL, label: nav.docs },
+      { href: at('#faq'), label: nav.faq },
+      { href: ISSUES_URL, label: actions.issues },
+      { href: GITHUB_URL, label: actions.github },
+      { href: LEGACY_PATH, label: footer.legacy },
+    ],
+  },
+  {
+    title: footer.groups.legal,
+    links: [
+      { href: privacyPath, label: footer.privacy },
+      { href: termsPath, label: footer.terms },
+      { href: SUPPORT_URL, label: actions.support },
+    ],
+  },
+];
 ---
 
-<footer class="credits cine-dark" id="credits">
-  <div class="credits-inner">
-    <dl class="credits-list">
-      <div class="credit">
-        <dt class="slate">{credits.install.role}</dt>
-        <dd><a class="button" href={DOCS_URL}>{credits.install.name}</a></dd>
-      </div>
-      <div class="credit">
-        <dt class="slate">{credits.appStore.role}</dt>
-        <dd>
-          <a class="button button-secondary" href={APP_STORE_URL}>
-            {credits.appStore.name}
-          </a>
-        </dd>
-      </div>
-      <div class="credit">
-        <dt class="slate">{credits.android.role}</dt>
-        <dd>
-          <a class="button button-secondary" href={ANDROID_BETA_SIGNUP_URL}>
-            {credits.android.name}
-          </a>
-        </dd>
-      </div>
-      <div class="credit">
-        <dt class="slate">{credits.testflight.role}</dt>
-        <dd><a href={TESTFLIGHT_URL}>{credits.testflight.name}</a></dd>
-      </div>
-      <div class="credit">
-        <dt class="slate">{credits.source.role}</dt>
-        <dd><a href={GITHUB_URL}>{credits.source.name}</a></dd>
-      </div>
-      <div class="credit">
-        <dt class="slate">{credits.community.role}</dt>
-        <dd><a href={DISCORD_URL}>{credits.community.name}</a></dd>
-      </div>
-      <div class="credit">
-        <dt class="slate">{credits.issues.role}</dt>
-        <dd><a href={ISSUES_URL}>{credits.issues.name}</a></dd>
-      </div>
-      <div class="credit">
-        <dt class="slate">{credits.languages.role}</dt>
-        <dd>
-          <span>{credits.languages.name}</span>
-          <LocaleSwitcher locale={locale} label={content.nav.language} />
-        </dd>
-      </div>
-      <div class="credit">
-        <dt class="slate">{credits.privacy.role}</dt>
-        <dd><a href={privacyPath}>{credits.privacy.name}</a></dd>
-      </div>
-      <div class="credit">
-        <dt class="slate">{credits.terms.role}</dt>
-        <dd><a href={termsPath}>{credits.terms.name}</a></dd>
-      </div>
-      <div class="credit">
-        <dt class="slate">{credits.legacy.role}</dt>
-        <dd><a href="/legacy/">{credits.legacy.name}</a></dd>
-      </div>
-      <div class="credit credit-production">
-        <dt class="slate">{credits.production.role}</dt>
-        <dd>
-          <a href="https://flux76.com" aria-label="Flux76">
-            <picture>
-              {
-                lightCapable && (
-                  <source
-                    srcset="/brand/flux76-wordmark-light.png"
-                    media="(prefers-color-scheme: light)"
-                  />
-                )
-              }
-              <img
-                src="/brand/flux76-wordmark-dark.png"
-                width="160"
-                height="48"
-                alt="Flux76"
-                loading="lazy"
-                decoding="async"
-              />
-            </picture>
-          </a>
-        </dd>
-      </div>
-    </dl>
-    <Voice segments={credits.final} level="p" size="l" class="credits-final" />
+<footer class="footer dv-dark on-navy" id="footer">
+  <p class="footer-name" aria-hidden="true">DiscVault</p>
+
+  <div class="grid footer-main">
+    <ul class="footer-ways">
+      <li>
+        <a href={APP_STORE_URL} data-cta="app-store" data-rank="text">
+          {actions.appStore}
+        </a>
+      </li>
+      <li>
+        <a href={DOCS_URL} data-cta="self-hosted" data-rank="text">
+          {actions.selfHost}
+        </a>
+      </li>
+      <li>
+        <a href={ANDROID_BETA_SIGNUP_URL} data-cta="android" data-rank="text">
+          {actions.android}
+        </a>
+      </li>
+      <li>
+        <a href={TESTFLIGHT_URL} data-cta="testflight" data-rank="text">
+          {actions.testflight}
+        </a>
+      </li>
+      <li><a href={DISCORD_URL}>{actions.discord}</a></li>
+    </ul>
+
+    <div class="footer-groups">
+      {
+        groups.map(({ title, links }) => (
+          <nav class="footer-group small" aria-label={title}>
+            <p class="footer-group-title">{title}</p>
+            <ul>
+              {links.map(({ href, label }) => (
+                <li>
+                  <a href={href}>{label}</a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        ))
+      }
+    </div>
+  </div>
+
+  <div class="grid footer-legal small">
+    <p class="footer-tagline">{footer.tagline}</p>
+    <p class="footer-made">
+      <span>{footer.production}</span>
+      <a href={FLUX76_URL} aria-label="Flux76">
+        <img
+          src="/brand/flux76-wordmark-dark.png"
+          width="107"
+          height="32"
+          alt="Flux76"
+          loading="lazy"
+          decoding="async"
+        />
+      </a>
+    </p>
+    <p class="footer-tmdb note">{footer.tmdb}</p>
+    <div class="footer-end">
+      <LocaleSwitcher locale={locale} label={content.a11y.language} />
+      <a href="#main">{actions.backToTop}</a>
+    </div>
   </div>
 </footer>

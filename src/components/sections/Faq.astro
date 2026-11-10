@@ -1,0 +1,39 @@
+---
+import '../../styles/sections/faq.css';
+/** Chapter: questions, as filled tiles that open one at a time. */
+import { faqIds } from '../../content/structure';
+import type { MarketingContent } from '../../content/types';
+import { DOCS_URL } from '../../config';
+
+interface Props {
+  content: MarketingContent;
+}
+
+const { faq, actions } = Astro.props.content;
+---
+
+<section class="chapter faq on-deep" id="faq" data-chapter="on-deep">
+  <div class="grid">
+    <div class="faq-head">
+      <h2 class="title faq-title" data-rise>{faq.title}</h2>
+      <a class="text-link" href={DOCS_URL} data-rise>{actions.moreAnswers}</a>
+    </div>
+    <div class="faq-list">
+      {
+        faqIds.map((id) => (
+          <details class="faq-item" name="faq" data-rise>
+            <summary>
+              <span>{faq.items[id].question}</span>
+              <span class="faq-sign" aria-hidden="true" />
+            </summary>
+            <div class="faq-answer">
+              {faq.items[id].answer.map((paragraph) => (
+                <p>{paragraph}</p>
+              ))}
+            </div>
+          </details>
+        ))
+      }
+    </div>
+  </div>
+</section>

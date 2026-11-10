@@ -1,0 +1,111 @@
+---
+import '../../styles/media.css';
+/**
+ * One media slot: a responsive still (AVIF with a WebP fallback) that is
+ * always rendered, and over it, when the slot has one, a muted loop. The
+ * loop has `preload="none"` and no `autoplay`: the media script starts it
+ * only while it is on screen, and never under reduced motion or Save-Data.
+ * The still is therefore both the poster and the no-script fallback.
+ */
+import { Picture } from 'astro:assets';
+import { mediaSlot } from '../../media/registry';
+
+interface Props {
+  slot: string;
+  alt: string;
+  /** CSS aspect-ratio of the frame, e.g. "16 / 10". Crops with cover. */
+  ratio?: string;
+  sizes?: string;
+  widths?: number[];
+  /** Above the fold: load eagerly with high priority. */
+  priority?: boolean;
+  /** Which part of a taller or wider source stays in view. */
+  position?: string;
+  pauseLabel?: string;
+  playLabel?: string;
+  class?: string;
+}
+
+const {
+  slot,
+  alt,
+  ratio,
+  sizes = '100vw',
+  widths = [640, 960, 1440, 1920, 2560],
+  priority = false,
+  position = 'top',
+  pauseLabel = 'Pause',
+  playLabel = 'Play',
+  class: className,
+} = Astro.props;
+const { still, loop } = mediaSlot(slot);
+const frameRatio =
+  ratio ?? (still ? `${still.width} / ${still.height}` : '16 / 10');
+const usableWidths = still
+  ? [
+      ...new Set(
+        widths.filter((width) => width < still.width).concat(still.width),
+      ),
+    ]
+  : [];
+---
+
+<div
+  class:list={['media', 'shot', className]}
+  style={`aspect-ratio: ${frameRatio}; --media-position: ${position};`}
+  data-media={slot}
+>
+  {
+    still ? (
+      <Picture
+        src={still}
+        formats={['avif']}
+        fallbackFormat="webp"
+        widths={usableWidths}
+        sizes={sizes}
+        alt={alt}
+        loading={priority ? 'eager' : 'lazy'}
+        fetchpriority={priority ? 'high' : undefined}
+        decoding={priority ? 'sync' : 'async'}
+      />
+    ) : (
+      <div
+        class="media-placeholder"
+        role="img"
+        aria-label={alt}
+        data-media-placeholder
+      />
+    )
+  }
+  {
+    still && loop && (
+      <>
+        <video
+          muted
+          playsinline
+          loop
+          preload="none"
+          width={still.width}
+          height={still.height}
+          aria-hidden="true"
+          tabindex="-1"
+          data-loop
+        >
+          <source src={loop.webm} type="video/webm" />
+          <source src={loop.mp4} type="video/mp4" />
+        </video>
+        <button
+          class="media-toggle"
+          type="button"
+          hidden
+          aria-label={pauseLabel}
+          data-loop-toggle
+          data-pause-label={pauseLabel}
+          data-play-label={playLabel}
+        >
+          <span class="media-toggle-icon" aria-hidden="true" />
+        </button>
+      </>
+    )
+  }
+</div>
