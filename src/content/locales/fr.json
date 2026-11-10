@@ -101,16 +101,17 @@
       "Le coffre",
       "0 traceur",
       "0 publicité",
-      "Aucune analyse"
+      "Aucun profilage"
     ],
     "voice": [
       "Elle vit là où vous la ",
       "posez",
       "."
     ],
-    "lead": "Sur votre appareil ou sur un serveur à vous. Aucune analyse, aucune publicité, personne ne regarde ce que vous regardez.",
+    "lead": "Sur votre appareil ou sur un serveur à vous. Aucun profilage, aucune publicité, personne ne regarde ce que vous regardez.",
     "body": [
-      "L'app iPhone et iPad garde votre collection sur l'appareil. DiscVault 26 la garde sur un serveur que vous administrez. Dans les deux cas, seul un code-barres ou un terme de recherche sort de l'appareil."
+      "L'app iPhone et iPad garde votre collection sur l'appareil. DiscVault 26 la garde sur un serveur que vous administrez. Dans les deux cas, seul un code-barres ou un terme de recherche sort de l'appareil.",
+      "Une exception : un serveur auto-hébergé signale une fois par jour à api.discvault.eu qu'il fonctionne. Il envoie sa version et le nombre de jours écoulés depuis son précédent signalement : aucun identifiant et rien sur votre collection. Cela sert uniquement à estimer à quel point DiscVault est utilisé, et vous pouvez le désactiver."
     ]
   },
   "formats": {

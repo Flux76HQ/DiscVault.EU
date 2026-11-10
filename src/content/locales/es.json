@@ -101,16 +101,17 @@
       "La cámara",
       "0 rastreadores",
       "0 anuncios",
-      "Sin analítica"
+      "Sin perfiles"
     ],
     "voice": [
       "Vive donde tú la ",
       "pones",
       "."
     ],
-    "lead": "En tu dispositivo, o en un servidor que tú gestionas. Sin analítica, sin publicidad, nadie mira lo que ves.",
+    "lead": "En tu dispositivo, o en un servidor que tú gestionas. Sin perfiles, sin publicidad, nadie mira lo que ves.",
     "body": [
-      "La app de iPhone y iPad guarda tu colección en el dispositivo. DiscVault 26 la guarda en un servidor que tú administras. En ambos casos, lo único que sale es un código de barras o un término de búsqueda."
+      "La app de iPhone y iPad guarda tu colección en el dispositivo. DiscVault 26 la guarda en un servidor que tú administras. En ambos casos, lo único que sale es un código de barras o un término de búsqueda.",
+      "Una excepción: un servidor autoalojado avisa una vez al día a api.discvault.eu de que está en marcha. Envía su versión y el número de días desde su aviso anterior: ningún identificador y nada sobre tu colección. Solo sirve para estimar cuánto se usa DiscVault, y puedes desactivarlo."
     ]
   },
   "formats": {

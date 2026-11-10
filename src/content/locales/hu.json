@@ -101,16 +101,17 @@
       "A széf",
       "0 nyomkövető",
       "0 hirdetés",
-      "Nincs analitika"
+      "Nincs profilalkotás"
     ],
     "voice": [
       "Ott van, ahová ",
       "teszed",
       "."
     ],
-    "lead": "A saját eszközödön vagy egy általad üzemeltetett szerveren. Nincs analitika, nincs hirdetés, senki sem nézi, mit nézel.",
+    "lead": "A saját eszközödön vagy egy általad üzemeltetett szerveren. Nincs profilalkotás, nincs hirdetés, senki sem nézi, mit nézel.",
     "body": [
-      "Az iPhone- és iPad-alkalmazás az eszközön tartja a gyűjteményt. A DiscVault 26 egy általad kezelt szerveren tartja. Mindkét esetben csak egy vonalkód vagy egy keresőkifejezés hagyja el az eszközt."
+      "Az iPhone- és iPad-alkalmazás az eszközön tartja a gyűjteményt. A DiscVault 26 egy általad kezelt szerveren tartja. Mindkét esetben csak egy vonalkód vagy egy keresőkifejezés hagyja el az eszközt.",
+      "Egy kivétel: a saját szerveren futó DiscVault naponta egyszer jelzi az api.discvault.eu címnek, hogy fut. A verzióját és az előző jelzése óta eltelt napok számát küldi el: azonosítót és a gyűjteményedről szóló adatot nem. Ez kizárólag annak felmérésére szolgál, hogy mennyire használják a DiscVaultot, és kikapcsolhatod."
     ]
   },
   "formats": {

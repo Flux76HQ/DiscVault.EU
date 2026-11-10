@@ -101,16 +101,17 @@
       "Der Tresor",
       "0 Tracker",
       "0 Werbung",
-      "Keine Analyse"
+      "Kein Profiling"
     ],
     "voice": [
       "Es bleibt, wo du es ",
       "hinlegst",
       "."
     ],
-    "lead": "Auf deinem Gerät oder auf einem Server, den du betreibst. Keine Analyse, keine Werbung, niemand sieht, was du siehst.",
+    "lead": "Auf deinem Gerät oder auf einem Server, den du betreibst. Kein Profiling, keine Werbung, niemand sieht, was du siehst.",
     "body": [
-      "Die iPhone- und iPad-App behält deine Sammlung auf dem Gerät. DiscVault 26 behält sie auf einem Server, den du verwaltest. So oder so verlässt nur ein Barcode oder ein Suchbegriff das Gerät."
+      "Die iPhone- und iPad-App behält deine Sammlung auf dem Gerät. DiscVault 26 behält sie auf einem Server, den du verwaltest. So oder so verlässt nur ein Barcode oder ein Suchbegriff das Gerät.",
+      "Eine Ausnahme: Ein Self-hosted-Server meldet api.discvault.eu einmal am Tag, dass er läuft. Er sendet seine Version und die Anzahl der Tage seit seiner vorherigen Meldung: keine Kennung und nichts über deine Sammlung. Das dient nur dazu, einzuschätzen, wie viel DiscVault genutzt wird, und du kannst es abschalten."
     ]
   },
   "formats": {

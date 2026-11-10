@@ -101,15 +101,16 @@
       "De kluis",
       "0 trackers",
       "0 advertenties",
-      "Geen analytics"
+      "Geen profilering"
     ],
     "voice": [
       "Het staat waar jij het ",
       "neerzet."
     ],
-    "lead": "Op je apparaat, of op een server die je zelf draait. Geen analytics, geen advertenties, niemand die meekijkt wat je kijkt.",
+    "lead": "Op je apparaat, of op een server die je zelf draait. Geen profilering, geen advertenties, niemand die meekijkt wat je kijkt.",
     "body": [
-      "De iPhone- en iPad-app bewaart je collectie op het apparaat. DiscVault 26 bewaart hem op een server die jij beheert. In beide gevallen verlaat alleen een barcode of een zoekterm het apparaat."
+      "De iPhone- en iPad-app bewaart je collectie op het apparaat. DiscVault 26 bewaart hem op een server die jij beheert. In beide gevallen verlaat alleen een barcode of een zoekterm het apparaat.",
+      "Eén uitzondering: een self-hosted server meldt één keer per dag aan api.discvault.eu dat hij draait. Hij stuurt zijn versie en het aantal dagen sinds zijn vorige melding: geen identificatie en niets over je collectie. Dat is er alleen om in te schatten hoeveel DiscVault gebruikt wordt, en je kunt het uitzetten."
     ]
   },
   "formats": {
