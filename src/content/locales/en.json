@@ -60,7 +60,7 @@
     "lead": "On your device, or on a server you run. No profiling, no advertising, nobody watching what you watch.",
     "body": [
       "The iPhone and iPad app keeps your collection on the device. DiscVault 26 keeps it on a server you administer. Either way the only thing that leaves is a barcode or a search term.",
-      "One exception: a self-hosted server tells api.discvault.eu once a day that it is running. It sends its version and the number of days since its previous report: no identifier, and nothing about your collection. That is only there to estimate how much DiscVault is used, and you can turn it off."
+      "One exception: the iPhone and iPad app and a self-hosted server tell api.discvault.eu once a day that they are in use. They send their version and the number of days since their previous report: no identifier, and nothing about your collection. That is only there to estimate how much DiscVault is used. On a server you can turn it off; the app always sends it."
     ]
   },
   "formats": {

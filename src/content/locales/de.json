@@ -111,7 +111,7 @@
     "lead": "Auf deinem Gerät oder auf einem Server, den du betreibst. Kein Profiling, keine Werbung, niemand sieht, was du siehst.",
     "body": [
       "Die iPhone- und iPad-App behält deine Sammlung auf dem Gerät. DiscVault 26 behält sie auf einem Server, den du verwaltest. So oder so verlässt nur ein Barcode oder ein Suchbegriff das Gerät.",
-      "Eine Ausnahme: Ein Self-hosted-Server meldet api.discvault.eu einmal am Tag, dass er läuft. Er sendet seine Version und die Anzahl der Tage seit seiner vorherigen Meldung: keine Kennung und nichts über deine Sammlung. Das dient nur dazu, einzuschätzen, wie viel DiscVault genutzt wird, und du kannst es abschalten."
+      "Eine Ausnahme: Die iPhone- und iPad-App und ein Self-hosted-Server melden api.discvault.eu einmal am Tag, dass sie genutzt werden. Sie senden ihre Version und die Anzahl der Tage seit ihrer vorherigen Meldung: keine Kennung und nichts über deine Sammlung. Das dient nur dazu, einzuschätzen, wie viel DiscVault genutzt wird. Auf einem Server kannst du es abschalten; die App sendet es immer."
     ]
   },
   "formats": {

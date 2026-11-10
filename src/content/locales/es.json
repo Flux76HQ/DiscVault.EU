@@ -111,7 +111,7 @@
     "lead": "En tu dispositivo, o en un servidor que tú gestionas. Sin perfiles, sin publicidad, nadie mira lo que ves.",
     "body": [
       "La app de iPhone y iPad guarda tu colección en el dispositivo. DiscVault 26 la guarda en un servidor que tú administras. En ambos casos, lo único que sale es un código de barras o un término de búsqueda.",
-      "Una excepción: un servidor autoalojado avisa una vez al día a api.discvault.eu de que está en marcha. Envía su versión y el número de días desde su aviso anterior: ningún identificador y nada sobre tu colección. Solo sirve para estimar cuánto se usa DiscVault, y puedes desactivarlo."
+      "Una excepción: la app de iPhone y iPad y un servidor autoalojado avisan una vez al día a api.discvault.eu de que están en uso. Envían su versión y el número de días desde su aviso anterior: ningún identificador y nada sobre tu colección. Solo sirve para estimar cuánto se usa DiscVault. En un servidor puedes desactivarlo; la app lo envía siempre."
     ]
   },
   "formats": {

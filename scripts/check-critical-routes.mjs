@@ -104,6 +104,10 @@ const privacyClaims = {
     'https://api.discvault.eu',
     'daily totals only',
     'DISCVAULT_INSTALLATION_COUNT=off',
+    // The iOS and iPadOS app reports too, always (ADR-0020, addition of
+    // 2026-11-10): the policy is the only place an iOS user learns of it, so it
+    // must say there is no setting.
+    'In the iOS and iPadOS app the count has no setting.',
   ],
   'privacy-nl.html': [
     'DiscVault voor iOS, iPadOS en Android',
@@ -115,6 +119,7 @@ const privacyClaims = {
     'https://api.discvault.eu',
     'alleen dagtotalen',
     'DISCVAULT_INSTALLATION_COUNT=off',
+    'In de app voor iOS en iPadOS heeft de telling geen instelling.',
   ],
 };
 for (const [name, claims] of Object.entries(privacyClaims)) {

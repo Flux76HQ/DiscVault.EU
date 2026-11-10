@@ -111,7 +111,7 @@
     "lead": "Na Twoim urządzeniu albo na serwerze, który sam prowadzisz. Bez profilowania, bez reklam, nikt nie patrzy, co oglądasz.",
     "body": [
       "Aplikacja na iPhone'a i iPada trzyma kolekcję na urządzeniu. DiscVault 26 trzyma ją na serwerze, którym administrujesz. Tak czy inaczej urządzenie opuszcza tylko kod kreskowy lub hasło wyszukiwania.",
-      "Jeden wyjątek: serwer self-hosted raz dziennie zgłasza do api.discvault.eu, że działa. Wysyła swoją wersję i liczbę dni od poprzedniego zgłoszenia: żadnego identyfikatora i nic o Twojej kolekcji. Służy to wyłącznie do oszacowania, jak często DiscVault jest używany, i możesz to wyłączyć."
+      "Jeden wyjątek: aplikacja na iPhone'a i iPada oraz serwer self-hosted raz dziennie zgłaszają do api.discvault.eu, że są używane. Wysyłają swoją wersję i liczbę dni od poprzedniego zgłoszenia: żadnego identyfikatora i nic o Twojej kolekcji. Służy to wyłącznie do oszacowania, jak często DiscVault jest używany. Na serwerze możesz to wyłączyć; aplikacja wysyła to zawsze."
     ]
   },
   "formats": {

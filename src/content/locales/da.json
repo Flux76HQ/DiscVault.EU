@@ -111,7 +111,7 @@
     "lead": "På din enhed eller på en server, du selv driver. Ingen profilering, ingen reklamer, ingen der ser, hvad du ser.",
     "body": [
       "iPhone- og iPad-appen holder din samling på enheden. DiscVault 26 holder den på en server, du administrerer. Uanset hvad forlader kun en stregkode eller et søgeord enheden.",
-      "Én undtagelse: en self-hosted server fortæller api.discvault.eu én gang om dagen, at den kører. Den sender sin version og antallet af dage siden sin forrige melding: ingen identifikator og intet om din samling. Det bruges kun til at vurdere, hvor meget DiscVault bliver brugt, og du kan slå det fra."
+      "Én undtagelse: iPhone- og iPad-appen og en self-hosted server fortæller api.discvault.eu én gang om dagen, at de er i brug. De sender deres version og antallet af dage siden deres forrige melding: ingen identifikator og intet om din samling. Det bruges kun til at vurdere, hvor meget DiscVault bliver brugt. På en server kan du slå det fra; appen sender det altid."
     ]
   },
   "formats": {
