@@ -63,15 +63,26 @@ curl --fail http://localhost:4321/legacy/
 - `src/pages/` — English `/`, 19 generated `/<locale>/` routes, legal `.html`
   routes and the FAQ compatibility route.
 - `src/content/locales/` — one parity-checked marketing content shape per
-  locale; `src/content/types.ts` is the typed model.
+  locale; `src/content/types.ts` is the typed model. Locale files hold copy
+  only: order, anchors and the demo films live in `src/content/structure.ts`.
 - `src/content/legal/` — preserved EN/NL legal bodies rendered by one
   accessible Astro legal shell.
-- `src/components/` and `src/layouts/` — reusable marketing and shell UI.
+- `src/components/` and `src/layouts/` — the shell (`Header`, `Footer`), one
+  component per homepage chapter in `sections/`, and the shared `media/` and
+  `ui/` parts.
+- `src/styles/` — `tokens*.css` are generated brand tokens; `theme.css` holds
+  the site's own tokens (chapter fields, type steps, spacing), which only
+  alias brand tokens; `base.css`, `shell.css`, `legal.css` and one file per
+  chapter in `sections/`.
 - `src/design/tokens.json` — Chrome & Blue v3.1 source imported from
   `Flux76HQ/App-Guidance`; `corepack pnpm brand:build` generates
   `src/styles/tokens.css`.
-- `src/assets/showcase/` — temporary source captures optimized by Astro into
-  responsive AVIF/WebP build assets.
+- `src/assets/media/<slot>/` — one folder per media slot: `still.webp` (or
+  `.png`/`.jpg`) and, optionally, a muted loop as `loop.webm` plus `loop.mp4`.
+  Astro turns stills into responsive AVIF/WebP; `src/media/registry.ts` finds
+  the files. See "Media" below.
+- `src/assets/posters/` — covers of the demo shelf: invented films with
+  generated artwork, so the site shows no artwork it has no right to.
 - `public/legacy/`, `public/images/upgrade-message/` and
   `public/images/v26-migration/` — preserved Legacy page and its proven image
   dependencies.
@@ -88,8 +99,8 @@ or user data.
 1. Update the typed locale files and keep every locale at parity.
 2. If brand tokens change, replace `src/design/tokens.json`, update
    `src/design/source.json`, then run `pnpm brand:build`.
-3. Replace temporary showcase sources in `src/assets/showcase/` while keeping
-   the responsive `<Picture>` pipeline.
+3. To replace a screenshot or a loop, drop the new file into its slot folder
+   under `src/assets/media/` (see "Media" below). No code changes.
 4. Run `corepack pnpm format` and `corepack pnpm check`.
 5. Set the release version idempotently:
 
@@ -99,6 +110,38 @@ or user data.
 
 Protected runtime, content, style, asset, script, config, deployment and
 workflow paths require `VERSION` to be part of the same staged change.
+
+## Media
+
+The homepage is built from media slots. A slot is a folder under
+`src/assets/media/`; a component names the slot and the registry supplies
+whatever is in it.
+
+| Slot                                                                    | Shows                                          | Used in                |
+| ----------------------------------------------------------------------- | ---------------------------------------------- | ---------------------- |
+| `hero`                                                                  | the library as a wall of covers (still + loop) | first screen           |
+| `collect-library`, `collect-detail`, `collect-lists`, `collect-insight` | portrait crops of the interface                | "Built for collectors" |
+| `collect-iphone`                                                        | an iPhone screenshot (empty until supplied)    | "Built for collectors" |
+| `self-hosted-library`, `-detail`, `-boxset`, `-lists`                   | the self-hosted edition in a browser           | "On a server you run"  |
+| `disc`                                                                  | the DiscVault disc (still + loop)              | closing row            |
+
+Rules:
+
+- A still is required for a slot to render; a slot without one renders
+  nothing (optional slots) or a flat placeholder.
+- A loop needs both `loop.webm` and `loop.mp4`, no audio track, at most 1.5 MB
+  each (aim for 900 KB mp4 and 600 KB webm, 6–10 s, 1280–1440 px wide). The
+  still is its poster and its fallback.
+- Loops never autoplay by attribute: `src/scripts/media.ts` starts one only
+  while it is on screen, never under reduced motion or Save-Data, and gives
+  it a pause control.
+- Screenshots show the demo shelf of invented films, dark theme, the Blu-ray
+  accent and the English interface. Do not publish real film artwork.
+- No Git LFS: GitHub Pages does not serve it. Commit final encodes only.
+
+The design this implements, and the reasons for these rules, are in
+`Flux76HQ/App-Guidance`: `projects/discvault/website/chrome-and-blue-web.md`
+and ADR-0021.
 
 ## Deploy and release channels
 
