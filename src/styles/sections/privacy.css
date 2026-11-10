@@ -1,10 +1,10 @@
 /* Privacy: a wall of square tiles, four figures and four covers. */
 .privacy-title {
-  grid-column: 1 / span 8;
+  grid-column: 1 / span 6;
 }
 .privacy-lead {
-  grid-column: 1 / span 7;
-  margin-top: 1.75rem;
+  grid-column: 7 / -1;
+  align-self: end;
 }
 .privacy-wall {
   display: grid;
@@ -82,6 +82,9 @@
   .privacy-body p:nth-child(2),
   .privacy-action {
     grid-column: 1 / -1;
+  }
+  .privacy-lead {
+    margin-top: 1.5rem;
   }
   .privacy-wall {
     grid-template-columns: repeat(2, minmax(0, 1fr));

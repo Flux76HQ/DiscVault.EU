@@ -6,8 +6,8 @@ export const featureIds = [
   'library',
   'detail',
   'lists',
-  'discover',
-  'siri',
+  'insight',
+  'iphone',
 ] as const;
 export type FeatureId = (typeof featureIds)[number];
 

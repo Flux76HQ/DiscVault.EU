@@ -1,9 +1,9 @@
 /* Editions: a poster. Giant names flush left, one small fact flush right. */
 .editions-title {
-  grid-column: 1 / span 7;
+  grid-column: 1 / span 6;
 }
 .editions-lead {
-  grid-column: 8 / -1;
+  grid-column: 7 / -1;
   align-self: end;
 }
 .editions-list {

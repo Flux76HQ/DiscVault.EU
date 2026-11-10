@@ -6,7 +6,8 @@ import '../styles/base.css';
 import { localeCodes, localePath, ogLocale } from '../content/locales';
 import type { MarketingContent } from '../content/types';
 import tokens from '../design/tokens.json';
-import { SITE_URL } from '../config';
+import { APP_STORE_URL, DOCS_URL, SITE_URL } from '../config';
+import { faqIds } from '../content/structure';
 
 interface Props {
   content: MarketingContent;
@@ -50,20 +51,52 @@ const socialImage =
         width: 1200,
         height: 630,
       };
+// Home pages describe both editions and the questions they answer on the
+// page itself; the FAQ entries are generated from the copy that is rendered.
 const structuredData = {
   '@context': 'https://schema.org',
-  '@type': 'SoftwareApplication',
-  '@id': `${SITE_URL}/#product`,
-  name: 'DiscVault',
-  description,
-  url: canonical,
-  image: iconImage,
-  applicationCategory: 'LifestyleApplication',
-  operatingSystem: 'iOS, iPadOS, Web',
-  brand: {
-    '@type': 'Brand',
-    name: 'DiscVault',
-  },
+  '@graph': [
+    {
+      '@type': 'SoftwareApplication',
+      '@id': `${SITE_URL}/#product`,
+      name: 'DiscVault',
+      description,
+      url: canonical,
+      image: iconImage,
+      applicationCategory: 'LifestyleApplication',
+      operatingSystem: 'iOS, iPadOS',
+      downloadUrl: APP_STORE_URL,
+      installUrl: APP_STORE_URL,
+      inLanguage: content.locale,
+      brand: { '@type': 'Brand', name: 'DiscVault' },
+    },
+    {
+      '@type': 'SoftwareApplication',
+      '@id': `${SITE_URL}/#self-hosted`,
+      name: 'DiscVault (self-hosted)',
+      description: content.selfHosted.lead,
+      url: canonical,
+      image: iconImage,
+      applicationCategory: 'LifestyleApplication',
+      operatingSystem: 'Docker, Unraid, Home Assistant',
+      downloadUrl: DOCS_URL,
+      offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
+      brand: { '@type': 'Brand', name: 'DiscVault' },
+    },
+    {
+      '@type': 'FAQPage',
+      '@id': `${canonical}#faq`,
+      inLanguage: content.locale,
+      mainEntity: faqIds.map((id) => ({
+        '@type': 'Question',
+        name: content.faq.items[id].question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: content.faq.items[id].answer.join(' '),
+        },
+      })),
+    },
+  ],
 };
 ---
 

@@ -147,7 +147,7 @@
 
 .footer-name {
   margin: 0 var(--margin) clamp(2.5rem, 5vw, 4.5rem);
-  font-size: clamp(4rem, 23.4vw, 28rem);
+  font-size: clamp(4rem, 22.4vw, 27rem);
   font-weight: 700;
   letter-spacing: -0.065em;
   line-height: 0.8;

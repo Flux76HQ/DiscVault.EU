@@ -4,6 +4,7 @@
 }
 .plans-free {
   display: inline-block;
+  margin-inline-start: 0.06em;
   padding: 0.04em 0.16em 0.1em;
   border-radius: var(--radius);
   background: var(--dv-accent);
@@ -12,15 +13,18 @@
 .plans-lead {
   grid-column: 1 / span 6;
   margin-top: clamp(2.5rem, 4.4vw, 4rem);
+  font-weight: 400;
 }
 .plans-points {
   display: grid;
   grid-column: 8 / -1;
   align-content: start;
-  gap: 0.875rem;
+  gap: 0.75rem;
   margin-top: clamp(2.5rem, 4.4vw, 4rem);
-  font-weight: 500;
-  line-height: 1.3;
+  font-size: var(--step-statement);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
 }
 .plans-support {
   display: grid;

@@ -12,8 +12,8 @@
     "menu": "Menu",
     "language": "Language",
     "sections": "Sections",
-    "pauseMotion": "Pause the video",
-    "playMotion": "Play the video"
+    "pauseMotion": "Pause the motion",
+    "playMotion": "Play the motion"
   },
   "nav": {
     "collect": "Collect",
@@ -27,7 +27,7 @@
   },
   "actions": {
     "appStore": "Download on the App Store",
-    "selfHost": "Self-host DiscVault 26",
+    "selfHost": "Self-host DiscVault",
     "android": "Request Android beta access",
     "testflight": "Join the TestFlight beta",
     "installGuide": "Read the install guide",
@@ -58,7 +58,7 @@
           "Box sets open to the films inside",
           "Quick, even on a large collection"
         ],
-        "mediaAlt": "The library as a grid of film covers with format badges."
+        "mediaAlt": "The library on a phone: a grid of film covers with format badges."
       },
       "detail": {
         "title": "Every film gets a proper page",
@@ -69,7 +69,7 @@
           "Series and their seasons",
           "Plex and Jellyfin copies marked"
         ],
-        "mediaAlt": "A film's detail page with its cover, backdrop, edition and cast."
+        "mediaAlt": "A film’s page on a phone: cover, backdrop, year, format and barcode."
       },
       "lists": {
         "title": "Lists for what happens next",
@@ -80,27 +80,28 @@
           "Loans: who has which disc",
           "Tags you make up yourself"
         ],
-        "mediaAlt": "The watchlist: films still to watch, shown as covers."
+        "mediaAlt": "The wishlist: four films with their current and target prices."
       },
-      "discover": {
-        "title": "Find the next one",
+      "insight": {
+        "title": "Know what you own",
         "points": [
-          "Popular, now playing and upcoming",
-          "Pages for films and for people",
-          "Add to your wishlist in one tap",
-          "Runs on your own free TMDB key"
+          "Statistics by format, decade and genre",
+          "A place for every disc, down to the shelf",
+          "Your own score for every film",
+          "What is on loan, and what is overdue"
         ],
-        "mediaAlt": "Discover: popular and upcoming films to add to the wishlist."
+        "mediaAlt": "Statistics: 54 films split by format into Blu-ray, 4K UHD and DVD."
       },
-      "siri": {
-        "title": "Ask your iPhone",
+      "iphone": {
+        "title": "At home on iPhone and iPad",
         "points": [
-          "“How many films by this director do I own?”",
+          "Ask Siri how many films by a director you own",
           "Find any disc from Spotlight",
+          "Discover what to add next, on your own TMDB key",
           "Lock the app with Face ID",
-          "Switched on by you, never by default"
+          "iCloud keeps your devices in step"
         ],
-        "mediaAlt": "Siri answering a question about the collection."
+        "mediaAlt": "DiscVault on an iPhone."
       }
     }
   },
@@ -124,20 +125,41 @@
     "title": "Editions matter.",
     "lead": "A 4K disc is not a Blu-ray. A Steelbook is not a keep case. Box sets, and the discs inside a release, are catalogued as what they are.",
     "items": {
-      "uhd": { "name": "4K Ultra HD", "detail": "18 on this shelf" },
-      "bluray": { "name": "Blu-ray", "detail": "26 on this shelf" },
-      "dvd": { "name": "DVD", "detail": "11 on this shelf" },
-      "steelbook": { "name": "Steelbook", "detail": "1 on this shelf" },
-      "boxset": { "name": "Box sets", "detail": "3 sets, 12 films" }
+      "uhd": {
+        "name": "4K Ultra HD",
+        "detail": "17 on this shelf"
+      },
+      "bluray": {
+        "name": "Blu-ray",
+        "detail": "26 on this shelf"
+      },
+      "dvd": {
+        "name": "DVD",
+        "detail": "11 on this shelf"
+      },
+      "steelbook": {
+        "name": "Steelbook",
+        "detail": "1 on this shelf"
+      },
+      "boxset": {
+        "name": "Box sets",
+        "detail": "3 sets, 12 films"
+      }
     },
-    "note": "The shelf on this page is a demo library of 55 invented films."
+    "note": "The shelf on this page is a demo library of 54 invented films."
   },
   "platforms": {
     "title": "Two ways to keep it.",
     "lead": "On the device in your pocket, or on a server in your home. Both are DiscVault; pick where your collection lives.",
     "columns": {
-      "ios": { "name": "iPhone and iPad", "sub": "The app" },
-      "selfHosted": { "name": "DiscVault 26", "sub": "Self-hosted" }
+      "ios": {
+        "name": "iPhone and iPad",
+        "sub": "The app"
+      },
+      "selfHosted": {
+        "name": "Your own server",
+        "sub": "Self-hosted"
+      }
     },
     "rows": {
       "home": {
@@ -179,23 +201,23 @@
   },
   "selfHosted": {
     "title": "On a server you run.",
-    "lead": "DiscVault 26 is the self-hosted edition: a web app for the whole household that installs on Docker, Unraid or Home Assistant.",
+    "lead": "The self-hosted edition is a web app for the whole household. It installs on Docker, Unraid or Home Assistant.",
     "shots": {
       "library": {
         "label": "Library",
-        "alt": "DiscVault 26 in a browser: the library as a wall of covers, with search, view switch and format filters."
+        "alt": "DiscVault in a browser: the library as a wall of covers, with search, view switch and format filters."
       },
       "detail": {
         "label": "Detail",
-        "alt": "DiscVault 26: a film's detail page with backdrop, cover, edition and metadata."
+        "alt": "DiscVault: a film's detail page with backdrop, cover, edition and metadata."
       },
       "boxset": {
         "label": "Box set",
-        "alt": "DiscVault 26: a box set opened to show the films it contains."
+        "alt": "DiscVault: a box set opened to show the films it contains."
       },
       "lists": {
         "label": "Watchlist",
-        "alt": "DiscVault 26: the watchlist as a grid of covers."
+        "alt": "DiscVault: the watchlist as a grid of covers."
       }
     },
     "points": [
@@ -208,7 +230,7 @@
     ],
     "migration": {
       "title": "Coming from DiscVault Legacy?",
-      "body": "The migration wizard carries your collection across to DiscVault 26."
+      "body": "The migration wizard carries your collection across to the current DiscVault."
     }
   },
   "runs": {
@@ -228,13 +250,25 @@
     "title": "It lives where you put it.",
     "lead": "On your device, or on a server you run. No profiling, no advertising, nobody watching what you watch.",
     "tiles": {
-      "ads": { "figure": "0", "label": "ads" },
-      "trackers": { "figure": "0", "label": "trackers" },
-      "profiles": { "figure": "0", "label": "profiles" },
-      "count": { "figure": "1", "label": "anonymous daily count" }
+      "ads": {
+        "figure": "0",
+        "label": "ads"
+      },
+      "trackers": {
+        "figure": "0",
+        "label": "trackers"
+      },
+      "profiles": {
+        "figure": "0",
+        "label": "profiles"
+      },
+      "count": {
+        "figure": "1",
+        "label": "anonymous daily count"
+      }
     },
     "body": [
-      "The iPhone and iPad app keeps your collection on the device. DiscVault 26 keeps it on a server you administer. Either way the only thing that leaves is a barcode or a search term.",
+      "The iPhone and iPad app keeps your collection on the device. The self-hosted edition keeps it on a server you administer. Either way the only thing that leaves is a barcode or a search term.",
       "One exception: a self-hosted server tells api.discvault.eu once a day that it is running. It sends its version and the number of days since its previous report: no identifier, and nothing about your collection. That is only there to estimate how much DiscVault is used, and you can turn it off."
     ]
   },
@@ -242,7 +276,7 @@
     "titleStart": "The core is",
     "titleFree": "free",
     "titleEnd": ".",
-    "lead": "Scanning, cataloguing, searching, backing up and restoring cost nothing. DiscVault 26 is free to self-host.",
+    "lead": "Scanning, cataloguing, searching, backing up and restoring cost nothing. DiscVault is free to self-host.",
     "points": [
       "Scanning and adding discs",
       "Full backup and restore",
@@ -258,7 +292,7 @@
       "server": {
         "question": "Do I need a server?",
         "answer": [
-          "No. The iPhone and iPad app works entirely on its own. A server is only for people who want DiscVault 26, the self-hosted web edition for a whole household."
+          "No. The iPhone and iPad app works entirely on its own. A server is only for people who want the self-hosted web edition, made for a whole household."
         ]
       },
       "account": {
@@ -301,7 +335,7 @@
       "legacy": {
         "question": "I still run DiscVault Legacy. How do I move?",
         "answer": [
-          "DiscVault 26 has a migration wizard that brings your collection across. The migration guide walks through it for Unraid and Docker."
+          "The self-hosted edition has a migration wizard that brings your collection across from Legacy. The migration guide walks through it for Unraid and Docker."
         ]
       }
     }

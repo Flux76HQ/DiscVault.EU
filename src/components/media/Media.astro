@@ -23,6 +23,8 @@ interface Props {
   position?: string;
   pauseLabel?: string;
   playLabel?: string;
+  /** Render nothing, rather than a placeholder, while the slot is empty. */
+  optional?: boolean;
   class?: string;
 }
 
@@ -36,6 +38,7 @@ const {
   position = 'top',
   pauseLabel = 'Pause',
   playLabel = 'Play',
+  optional = false,
   class: className,
 } = Astro.props;
 const { still, loop } = mediaSlot(slot);
@@ -50,62 +53,62 @@ const usableWidths = still
   : [];
 ---
 
-<div
-  class:list={['media', 'shot', className]}
-  style={`aspect-ratio: ${frameRatio}; --media-position: ${position};`}
-  data-media={slot}
->
-  {
-    still ? (
-      <Picture
-        src={still}
-        formats={['avif']}
-        fallbackFormat="webp"
-        widths={usableWidths}
-        sizes={sizes}
-        alt={alt}
-        loading={priority ? 'eager' : 'lazy'}
-        fetchpriority={priority ? 'high' : undefined}
-        decoding={priority ? 'sync' : 'async'}
-      />
-    ) : (
-      <div
-        class="media-placeholder"
-        role="img"
-        aria-label={alt}
-        data-media-placeholder
-      />
-    )
-  }
-  {
-    still && loop && (
-      <>
-        <video
-          muted
-          playsinline
-          loop
-          preload="none"
-          width={still.width}
-          height={still.height}
-          aria-hidden="true"
-          tabindex="-1"
-          data-loop
-        >
-          <source src={loop.webm} type="video/webm" />
-          <source src={loop.mp4} type="video/mp4" />
-        </video>
-        <button
-          class="media-toggle"
-          type="button"
-          hidden
-          aria-label={pauseLabel}
-          data-loop-toggle
-          data-pause-label={pauseLabel}
-          data-play-label={playLabel}
-        >
-          <span class="media-toggle-icon" aria-hidden="true" />
-        </button>
-      </>
-    )
-  }
-</div>
+{
+  (still || !optional) && (
+    <div
+      class:list={['media', 'shot', className]}
+      style={`aspect-ratio: ${frameRatio}; --media-position: ${position};`}
+      data-media={slot}
+    >
+      {still ? (
+        <Picture
+          src={still}
+          formats={['avif']}
+          fallbackFormat="webp"
+          widths={usableWidths}
+          sizes={sizes}
+          alt={alt}
+          loading={priority ? 'eager' : 'lazy'}
+          fetchpriority={priority ? 'high' : undefined}
+          decoding={priority ? 'sync' : 'async'}
+        />
+      ) : (
+        <div
+          class="media-placeholder"
+          role="img"
+          aria-label={alt}
+          data-media-placeholder
+        />
+      )}
+      {still && loop && (
+        <>
+          <video
+            muted
+            playsinline
+            loop
+            preload="none"
+            width={still.width}
+            height={still.height}
+            aria-hidden="true"
+            tabindex="-1"
+            data-loop
+          >
+            <source src={loop.webm} type="video/webm" />
+            <source src={loop.mp4} type="video/mp4" />
+          </video>
+          <button
+            class="media-toggle"
+            type="button"
+            hidden
+            aria-label={pauseLabel}
+            data-loop-toggle
+            data-pause-label={pauseLabel}
+            data-play-label={playLabel}
+          >
+            <span class="media-toggle-icon" aria-hidden="true" />
+          </button>
+        </>
+      )}
+    </div>
+  )
+}

@@ -7,7 +7,7 @@ interface Props {
   content: MarketingContent;
 }
 
-const { runs } = Astro.props.content;
+const { runs, a11y } = Astro.props.content;
 ---
 
 <section
@@ -32,5 +32,11 @@ const { runs } = Astro.props.content;
   <ul class="sr-only">
     {runs.names.map((name) => <li>{name}</li>)}
   </ul>
-  <p class="runs-caption">{runs.caption}</p>
+  <div class="runs-foot">
+    <p class="runs-caption">{runs.caption}</p>
+    <label class="runs-pause small">
+      <input type="checkbox" data-runs-pause />
+      <span>{a11y.pauseMotion}</span>
+    </label>
+  </div>
 </section>

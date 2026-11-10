@@ -5,12 +5,13 @@ import { Picture } from 'astro:assets';
 import type { MarketingContent } from '../../content/types';
 import { APP_STORE_URL, DOCS_URL } from '../../config';
 import { poster } from '../../media/registry';
+import Media from '../media/Media.astro';
 
 interface Props {
   content: MarketingContent;
 }
 
-const { cta, actions } = Astro.props.content;
+const { cta, actions, a11y } = Astro.props.content;
 ---
 
 <section class="cta on-navy" id="community" data-chapter="on-navy">
@@ -49,6 +50,17 @@ const { cta, actions } = Astro.props.content;
         </a>
       </div>
     </div>
-    <div class="cta-flank cta-flank-gold" aria-hidden="true"></div>
+    <div class="cta-flank cta-flank-disc">
+      <Media
+        slot="disc"
+        alt=""
+        ratio="1"
+        sizes="(min-width: 56.25rem) 20vw, 50vw"
+        widths={[360, 540, 720, 1076]}
+        position="center"
+        pauseLabel={a11y.pauseMotion}
+        playLabel={a11y.playMotion}
+      />
+    </div>
   </div>
 </section>

@@ -44,13 +44,42 @@
     transform: translateX(-50%);
   }
 }
-.runs-caption {
+.runs-foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
   margin-top: 1.25rem;
   padding-inline: var(--margin);
+}
+/* The band moves for longer than five seconds, so it can be paused. */
+.runs-pause {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.4rem 0.9rem;
+  border-radius: var(--radius);
+  background: var(--tone);
+  font-weight: 500;
+  cursor: pointer;
+}
+.runs-pause input {
+  width: 1.1rem;
+  height: 1.1rem;
+  margin: 0;
+  accent-color: var(--dv-accent);
+}
+.runs:has([data-runs-pause]:checked) .runs-track {
+  animation-play-state: paused;
 }
 @media (prefers-reduced-motion: reduce) {
   .runs-track {
     animation: none;
+  }
+  .runs-pause {
+    display: none;
   }
 }
 @media (max-width: 37.49rem) {

@@ -9,7 +9,7 @@ interface Props {
   content: MarketingContent;
 }
 
-const { collect } = Astro.props.content;
+const { collect, a11y } = Astro.props.content;
 ---
 
 <section class="chapter collect on-slate" id="product" data-chapter="on-slate">
@@ -37,6 +37,9 @@ const { collect } = Astro.props.content;
                   ratio="3 / 4"
                   sizes="(min-width: 56.25rem) 20vw, 100vw"
                   widths={[320, 480, 720, 960]}
+                  pauseLabel={a11y.pauseMotion}
+                  playLabel={a11y.playMotion}
+                  optional
                   class="collect-shot"
                 />
                 <ul class="collect-points" data-rise>

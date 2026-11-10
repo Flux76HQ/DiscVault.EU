@@ -42,8 +42,11 @@
   height: 100%;
   object-fit: cover;
 }
-.cta-flank-gold {
-  background: var(--field-gold);
+.cta-flank-disc .media {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  aspect-ratio: auto !important;
 }
 
 @media (max-width: 56.24rem) {

@@ -1,6 +1,6 @@
 ---
 import '../../styles/sections/self-hosted.css';
-/** Chapter: DiscVault 26, the self-hosted edition, shown at full width. */
+/** Chapter: the self-hosted edition, shown at full width. */
 import { shotIds } from '../../content/structure';
 import type { MarketingContent } from '../../content/types';
 import { DOCS_URL, LEGACY_PATH } from '../../config';
@@ -20,7 +20,9 @@ const [mainShot, ...moreShots] = shotIds;
   data-chapter="on-platinum"
 >
   <div class="grid">
-    <h2 class="title self-hosted-title" data-rise>{selfHosted.title}</h2>
+    <h2 class="title self-hosted-title" id="showcase-title" data-rise>
+      {selfHosted.title}
+    </h2>
     <div class="self-hosted-intro" data-rise>
       <p class="statement">{selfHosted.lead}</p>
       <a
@@ -55,6 +57,8 @@ const [mainShot, ...moreShots] = shotIds;
                 ratio="16 / 10"
                 sizes="(min-width: 56.25rem) 32vw, 100vw"
                 widths={[480, 720, 960, 1440]}
+                pauseLabel={a11y.pauseMotion}
+                playLabel={a11y.playMotion}
               />
               <figcaption class="small">
                 {selfHosted.shots[id].label}

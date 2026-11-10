@@ -1,10 +1,10 @@
 /* Self-hosted: the web edition at full width on a light field. */
 .self-hosted-title {
-  grid-column: 1 / span 7;
+  grid-column: 1 / span 6;
 }
 .self-hosted-intro {
   display: grid;
-  grid-column: 8 / -1;
+  grid-column: 7 / -1;
   align-self: end;
   justify-items: start;
   gap: 1.5rem;
@@ -30,10 +30,10 @@
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.75rem var(--gutter);
   margin-top: clamp(3rem, 6vw, 5rem);
-  font-size: var(--step-statement);
+  font-size: clamp(1.1875rem, 1.6vw, 1.5rem);
   font-weight: 600;
-  letter-spacing: -0.025em;
-  line-height: 1.15;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
 }
 .self-hosted-migration {
   display: grid;
