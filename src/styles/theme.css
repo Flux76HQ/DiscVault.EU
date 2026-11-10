@@ -5,18 +5,6 @@
  * projects/discvault/website/chrome-and-blue-web.md.
  */
 :root {
-  /*
-   * Chapter fields. The page is a row of flat colour chapters; the colours
-   * are the app's own ground and its fixed format-badge colours.
-   */
-  --field-navy: var(--dv-bg);
-  --field-deep: var(--dv-surface-1);
-  --field-slate: var(--dv-surface-2);
-  --field-white: var(--dv-fmt-4k-fill);
-  --field-blue: var(--dv-accent);
-  --field-platinum: var(--dv-platinum);
-  --field-gold: var(--dv-fmt-dvd-fill);
-
   /* Type: one family, five steps. */
   --font:
     Inter, 'Inter Fallback', ui-sans-serif, system-ui, -apple-system,
@@ -52,11 +40,17 @@
 /*
  * A chapter sets its ground and the inks that stay legible on it. Buttons,
  * links and notes read these, so a component never names a colour itself.
+ *
+ * The page is a row of flat colour chapters, and the colours are the app's
+ * own ground and its fixed format-badge colours. Each ground names a brand
+ * token directly, never an alias declared on :root: an alias is resolved
+ * there, so it would ignore the dark values that .dv-dark pins on the header
+ * and footer of the light-capable legal shell.
  */
 .on-navy,
 .on-deep,
 .on-slate {
-  --ground: var(--field-navy);
+  --ground: var(--dv-bg);
   --ink: var(--dv-text);
   --ink-2: var(--dv-text-2);
   --tone: var(--dv-surface-2);
@@ -68,17 +62,17 @@
   --action-ink: var(--dv-accent-on);
 }
 .on-deep {
-  --ground: var(--field-deep);
+  --ground: var(--dv-surface-1);
 }
 .on-slate {
-  --ground: var(--field-slate);
+  --ground: var(--dv-surface-2);
   --tone: var(--dv-surface-3);
   --tone-2: var(--dv-border);
 }
 .on-white,
 .on-platinum,
 .on-gold {
-  --ground: var(--field-white);
+  --ground: var(--dv-fmt-4k-fill);
   --ink: var(--dv-fmt-4k-on);
   --ink-2: var(--dv-surface-3);
   --tone: color-mix(in srgb, var(--dv-fmt-4k-on) 9%, transparent);
@@ -90,11 +84,11 @@
   --action-ink: var(--dv-accent-on);
 }
 .on-platinum {
-  --ground: var(--field-platinum);
+  --ground: var(--dv-platinum);
   --link: var(--dv-bg);
 }
 .on-gold {
-  --ground: var(--field-gold);
+  --ground: var(--dv-fmt-dvd-fill);
   --ink: var(--dv-fmt-dvd-on);
   --ink-2: var(--dv-fmt-dvd-on);
   --link: var(--dv-fmt-dvd-on);
@@ -104,7 +98,7 @@
   --action-ink: var(--dv-text);
 }
 .on-blue {
-  --ground: var(--field-blue);
+  --ground: var(--dv-accent);
   --ink: var(--dv-accent-on);
   --ink-2: var(--dv-accent-on);
   --tone: color-mix(in srgb, var(--dv-bg) 22%, transparent);
