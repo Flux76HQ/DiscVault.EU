@@ -87,7 +87,8 @@ const androidBeta = config.ANDROID_BETA_SIGNUP_URL;
 const docs = config.DOCS_URL;
 const legacyPath = config.LEGACY_PATH;
 const obsoleteDiscord = 'https://discord.gg/6fEXZV8A';
-// The host a self-hosted server reports its daily count to (ADR-0020).
+// The host the iPhone and iPad app and a self-hosted server report their
+// daily count to (ADR-0020, with the addition of 2026-11-10).
 const installationCountHost = 'api.discvault.eu';
 
 // Failures of the 3.0 contract are collected and reported together; the
@@ -189,7 +190,8 @@ const privacyClaims = {
     'Your TMDB API key or any direct TMDB request.',
     'Your collection, watchlist, or watch history.',
     // The anonymous installation count (App-Guidance ADR-0020): the policy names
-    // the host a server reports to, what we keep, and the operator's off switch.
+    // the host an installation reports to, what we keep, and the operator's off
+    // switch on a server.
     'https://api.discvault.eu',
     'daily totals only',
     'DISCVAULT_INSTALLATION_COUNT=off',
@@ -488,8 +490,8 @@ for (const [file, locale, canonical, homePath] of marketingPages) {
     }
   }
 
-  // The installation-count disclosure (ADR-0020) names the host a
-  // self-hosted server reports to, in every language.
+  // The installation-count disclosure (ADR-0020) names the host the app and
+  // a self-hosted server report to, in every language.
   if (
     scope.privacy &&
     !textOf(document, scope.privacy).includes(installationCountHost)
@@ -497,11 +499,9 @@ for (const [file, locale, canonical, homePath] of marketingPages) {
     fail(`${file}: #privacy does not name ${installationCountHost}`);
   }
 
-  const usesObsoleteDiscord = findAll(
-    document.root,
-    (node) => node.tag === 'a',
-  ).some((node) => node.attrs.href === obsoleteDiscord);
-  if (usesObsoleteDiscord) {
+  // The whole page, not only link targets: the old invite must not survive
+  // in copy or structured data either.
+  if (html.includes(obsoleteDiscord)) {
     throw new Error(`${file} retains the obsolete Discord invite`);
   }
   const alternates = [...html.matchAll(/rel="alternate" hreflang=/g)].length;

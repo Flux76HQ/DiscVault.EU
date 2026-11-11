@@ -318,7 +318,7 @@
       "sends": {
         "question": "What does DiscVault send out?",
         "answer": [
-          "A barcode or a search term when you look something up. A self-hosted server also reports once a day, anonymously, that it is running; you can turn that off. The privacy policy has the details."
+          "A barcode or a search term when you look something up. The iPhone and iPad app and a self-hosted server also report once a day, anonymously, that they are in use. On a server you can turn that off; the app always sends it. The privacy policy has the details."
         ]
       },
       "sync": {

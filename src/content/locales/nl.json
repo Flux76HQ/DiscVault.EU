@@ -275,7 +275,7 @@
     },
     "body": [
       "De iPhone- en iPad-app bewaart je collectie op het apparaat. De zelfgehoste versie bewaart hem op een server die jij beheert. In beide gevallen verlaat alleen een barcode of een zoekterm het apparaat.",
-      "Eén uitzondering: de iPhone- en iPad-app en een self-hosted server melden één keer per dag aan api.discvault.eu dat ze in gebruik zijn. Ze sturen hun versie en het aantal dagen sinds hun vorige melding: geen identificatie en niets over je collectie. Dat is er alleen om in te schatten hoeveel DiscVault gebruikt wordt. Op een server kun je het uitzetten; de app stuurt het altijd."
+      "Eén uitzondering: de iPhone- en iPad-app en een zelfgehoste server melden één keer per dag aan api.discvault.eu dat ze in gebruik zijn. Ze sturen hun versie en het aantal dagen sinds hun vorige melding: geen identificatie en niets over je collectie. Dat is er alleen om in te schatten hoeveel DiscVault gebruikt wordt. Op een server kun je het uitzetten; de app stuurt het altijd."
     ]
   },
   "plans": {
@@ -318,7 +318,7 @@
       "sends": {
         "question": "Wat stuurt DiscVault naar buiten?",
         "answer": [
-          "Een barcode of een zoekterm wanneer je iets opzoekt. Een zelfgehoste server meldt daarnaast één keer per dag, anoniem, dat hij draait; dat kun je uitzetten. De details staan in het privacybeleid."
+          "Een barcode of een zoekterm wanneer je iets opzoekt. De iPhone- en iPad-app en een zelfgehoste server melden daarnaast één keer per dag, anoniem, dat ze in gebruik zijn. Op een server kun je dat uitzetten; de app stuurt het altijd. De details staan in het privacybeleid."
         ]
       },
       "sync": {

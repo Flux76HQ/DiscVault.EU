@@ -318,7 +318,7 @@
       "sends": {
         "question": "¿Qué envía DiscVault al exterior?",
         "answer": [
-          "Un código de barras o un término de búsqueda cuando buscas algo. Un servidor autoalojado además avisa una vez al día, de forma anónima, de que está en marcha; puedes desactivarlo. Los detalles están en la política de privacidad."
+          "Un código de barras o un término de búsqueda cuando buscas algo. La app de iPhone y iPad y un servidor autoalojado además avisan una vez al día, de forma anónima, de que están en uso. En un servidor puedes desactivarlo; la app lo envía siempre. Los detalles están en la política de privacidad."
         ]
       },
       "sync": {

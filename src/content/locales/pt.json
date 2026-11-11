@@ -318,7 +318,7 @@
       "sends": {
         "question": "O que é que o DiscVault envia para fora?",
         "answer": [
-          "Um código de barras ou um termo de pesquisa quando procuras algo. Um servidor self-hosted também avisa uma vez por dia, de forma anónima, de que está a funcionar; podes desativar isso. A política de privacidade tem os pormenores."
+          "Um código de barras ou um termo de pesquisa quando procuras algo. A app para iPhone e iPad e um servidor self-hosted também avisam uma vez por dia, de forma anónima, de que estão a ser utilizados. Num servidor podes desativar isso; a app envia-o sempre. A política de privacidade tem os pormenores."
         ]
       },
       "sync": {

@@ -318,7 +318,7 @@
       "sends": {
         "question": "Co DiscVault odesílá ven?",
         "answer": [
-          "Čárový kód nebo hledaný výraz, když něco vyhledáváte. Self-hostovaný server navíc jednou denně anonymně oznámí, že běží; to můžete vypnout. Podrobnosti najdete v zásadách ochrany soukromí."
+          "Čárový kód nebo hledaný výraz, když něco vyhledáváte. Aplikace pro iPhone a iPad i self-hostovaný server navíc jednou denně anonymně oznámí, že se používají. Na serveru to můžete vypnout; aplikace to posílá vždy. Podrobnosti najdete v zásadách ochrany soukromí."
         ]
       },
       "sync": {

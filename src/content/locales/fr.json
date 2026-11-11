@@ -275,7 +275,7 @@
     },
     "body": [
       "L’app iPhone et iPad garde votre collection sur l’appareil. L’édition auto-hébergée la garde sur un serveur que vous administrez. Dans les deux cas, seul un code-barres ou un terme de recherche en sort.",
-      "Une exception : l'app iPhone et iPad et un serveur auto-hébergé signalent une fois par jour à api.discvault.eu qu'ils sont utilisés. Ils envoient leur version et le nombre de jours écoulés depuis leur précédent signalement : aucun identifiant et rien sur votre collection. Cela sert uniquement à estimer à quel point DiscVault est utilisé. Sur un serveur, vous pouvez le désactiver ; l'app l'envoie toujours."
+      "Une exception : l’app iPhone et iPad et un serveur auto-hébergé signalent une fois par jour à api.discvault.eu qu’ils sont utilisés. Ils envoient leur version et le nombre de jours écoulés depuis leur précédent signalement : aucun identifiant et rien sur votre collection. Cela sert uniquement à estimer à quel point DiscVault est utilisé. Sur un serveur, vous pouvez le désactiver ; l’app l’envoie toujours."
     ]
   },
   "plans": {
@@ -318,7 +318,7 @@
       "sends": {
         "question": "Qu’est-ce que DiscVault envoie ?",
         "answer": [
-          "Un code-barres ou un terme de recherche quand vous cherchez quelque chose. Un serveur auto-hébergé signale aussi une fois par jour, anonymement, qu’il fonctionne ; vous pouvez le désactiver. La politique de confidentialité donne les détails."
+          "Un code-barres ou un terme de recherche quand vous cherchez quelque chose. L’app iPhone et iPad et un serveur auto-hébergé signalent aussi une fois par jour, anonymement, qu’ils sont utilisés. Sur un serveur, vous pouvez le désactiver ; l’app l’envoie toujours. La politique de confidentialité donne les détails."
         ]
       },
       "sync": {

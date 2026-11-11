@@ -318,7 +318,7 @@
       "sends": {
         "question": "Mit küld ki a DiscVault?",
         "answer": [
-          "Egy vonalkódot vagy egy keresőkifejezést, amikor rákeresel valamire. A saját szerveren futó DiscVault naponta egyszer névtelenül azt is jelzi, hogy fut; ezt kikapcsolhatod. A részletek az adatvédelmi szabályzatban vannak."
+          "Egy vonalkódot vagy egy keresőkifejezést, amikor rákeresel valamire. Az iPhone- és iPad-alkalmazás, valamint a saját szerveren futó DiscVault naponta egyszer névtelenül azt is jelzi, hogy használatban van. Szerveren ezt kikapcsolhatod; az alkalmazás mindig elküldi. A részletek az adatvédelmi szabályzatban vannak."
         ]
       },
       "sync": {

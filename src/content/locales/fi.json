@@ -275,7 +275,7 @@
     },
     "body": [
       "iPhone- ja iPad-sovellus pitää kokoelman laitteella. Itse ylläpidetty versio pitää sen palvelimella, jota hallinnoit. Kummassakin tapauksessa ulos lähtee vain viivakoodi tai hakusana.",
-      "Yksi poikkeus: iPhone- ja iPad-sovellus sekä itse isännöity palvelin ilmoittavat kerran päivässä osoitteeseen api.discvault.eu olevansa käytössä. Ne lähettävät versionsa ja päivien määrän edellisestä ilmoituksestaan: ei tunnistetta eikä mitään kokoelmastasi. Tällä arvioidaan vain sitä, kuinka paljon DiscVaultia käytetään. Palvelimella voit kytkeä sen pois; sovellus lähettää sen aina."
+      "Yksi poikkeus: iPhone- ja iPad-sovellus sekä itse ylläpidetty palvelin ilmoittavat kerran päivässä osoitteeseen api.discvault.eu olevansa käytössä. Ne lähettävät versionsa ja päivien määrän edellisestä ilmoituksestaan: ei tunnistetta eikä mitään kokoelmastasi. Tällä arvioidaan vain sitä, kuinka paljon DiscVaultia käytetään. Palvelimella voit kytkeä sen pois; sovellus lähettää sen aina."
     ]
   },
   "plans": {
@@ -318,7 +318,7 @@
       "sends": {
         "question": "Mitä DiscVault lähettää ulos?",
         "answer": [
-          "Viivakoodin tai hakusanan, kun haet jotakin. Itse ylläpidetty palvelin ilmoittaa lisäksi kerran päivässä nimettömästi olevansa käynnissä; voit kytkeä sen pois. Yksityiskohdat ovat tietosuojakäytännössä."
+          "Viivakoodin tai hakusanan, kun haet jotakin. iPhone- ja iPad-sovellus sekä itse ylläpidetty palvelin ilmoittavat lisäksi kerran päivässä nimettömästi olevansa käytössä. Palvelimella voit kytkeä sen pois; sovellus lähettää sen aina. Yksityiskohdat ovat tietosuojakäytännössä."
         ]
       },
       "sync": {

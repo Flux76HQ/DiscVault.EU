@@ -120,8 +120,9 @@ const seoLimits = { 'seo.title': 60, 'seo.description': 170 };
 /**
  * Link targets live in src/config.ts, never in copy: a URL inside a string
  * cannot be checked by the link gate and would be translated along with the
- * sentence. The one exception is the host a self-hosted server reports to,
- * which the privacy chapter must name in every language (ADR-0020).
+ * sentence. The one exception is the host the iPhone and iPad app and a
+ * self-hosted server report to, which the privacy chapter must name in every
+ * language (ADR-0020).
  * Besides the three URL forms, any discvault.eu host counts as a URL here,
  * which is what makes the exception an exception.
  */
