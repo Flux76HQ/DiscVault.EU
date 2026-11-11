@@ -6,23 +6,24 @@
         <p class="legal-meta">
           <strong>Last updated:</strong> 10 November 2026 &nbsp;·&nbsp;
           <strong>Applies to:</strong> DiscVault for iOS, iPadOS, and Android, and
-          the anonymous installation count of DiscVault servers you host yourself
-          (Section 5)
+          the anonymous installation count of the iOS and iPadOS app and of DiscVault
+          servers you host yourself (Section 5)
         </p>
 
         <div class="legal-callout">
           <p>
-            <strong>In short:</strong> DiscVault for iOS, iPadOS, and Android does not
-            run analytics, advertising, or third-party tracking and requires no
+            <strong>In short:</strong> DiscVault for iOS, iPadOS, and Android runs no
+            advertising, no third-party tracking, and no analytics SDK, and requires no
             DiscVault account. Your library stays on your device: the apps are
             standalone and do not upload or sync your collection, watchlist, or watch
             history. All app versions can make user-initiated, limited metadata lookups
             through MovieVault. You may also add your own TMDB API key; that key stays
             on your device and the app sends TMDB requests directly to TMDB. DiscVault
             and Flux76 do not receive or store your identity, collection, watchlist,
-            watch history, TMDB key, or TMDB lookup history. A DiscVault server you host
-            yourself tells us once a day, without any identifier, that it is running;
-            its owner can turn that off (Section 5).
+            watch history, TMDB key, or TMDB lookup history. Once a day, without any
+            identifier, the iOS and iPadOS app and a DiscVault server you host yourself
+            tell us that they are in use; on a server its owner can turn that off
+            (Section 5).
           </p>
         </div>
 
@@ -55,6 +56,7 @@
         <ul>
           <li><strong>Your library</strong> — the titles, box sets, disc formats, watchlist, and watch history you add.</li>
           <li><strong>App preferences</strong> — display and filtering settings you choose.</li>
+          <li><strong>Installation-count date (iOS and iPadOS)</strong> — the date of the app’s last accepted report under Section 5, so it can work out how many days have passed since. The date itself is not sent, is not synced between your devices, and is not included in DiscVault backups.</li>
           <li>
             <strong>Credentials in secure platform storage</strong> — such as the iOS
             Keychain or Android Keystore. For MovieVault, this includes a device-only
@@ -121,47 +123,62 @@
           key.
         </p>
 
-        <h2>5. Anonymous installation count (DiscVault servers you host yourself)</h2>
+        <h2>5. Anonymous installation count (iOS and iPadOS app, and DiscVault servers you host yourself)</h2>
         <p>
-          This section applies to <strong>DiscVault servers you host yourself</strong>
-          (DiscVault 26.11.2 and later), not to the iOS, iPadOS, or Android apps. Such a
-          server keeps your collection on a machine you run; we do not receive it.
+          This section applies to the <strong>DiscVault app for iOS and iPadOS</strong>
+          and to <strong>DiscVault servers you host yourself</strong> (DiscVault 26.11.2
+          and later). It does not apply to the Android app. A server keeps your
+          collection on a machine you run; we do not receive it.
         </p>
         <p>
-          A running server tells us, at most once a day, that it is in use. It does so
-          with one request to <code>https://api.discvault.eu</code> over HTTPS. The
-          count has one purpose: to estimate how much DiscVault is used, so that the
-          MovieVault backend can be scaled to match.
+          Each installation tells us, at most once a day, that it is in use: the app
+          when you open it, a server while it runs. It does so with one request to
+          <code>https://api.discvault.eu</code> over HTTPS. The count has one purpose:
+          to estimate how much DiscVault is used, so that the MovieVault backend can be
+          scaled to match. An iPhone and an iPad are counted as two installations.
         </p>
         <p><strong>What is sent:</strong></p>
         <ul>
-          <li>The <strong>DiscVault version</strong> the server runs.</li>
-          <li>The <strong>number of days since that server’s previous report</strong>. This is what lets us count servers without recognising any of them.</li>
-          <li>Two fixed values: the format of the report (“presence-1”) and the kind of installation (“server”).</li>
+          <li>The <strong>DiscVault version</strong> the installation runs.</li>
+          <li>The <strong>number of days since that installation’s previous report</strong>. This is what lets us count installations without recognising any of them.</li>
+          <li>For the app only: whether it is <strong>linked to a DiscVault server</strong> of your own (“coupled”) or not (“standalone”).</li>
+          <li>Two fixed values: the format of the report (“presence-1”) and the kind of installation (“ios” or “server”).</li>
         </ul>
         <p><strong>What is <em>not</em> sent:</strong></p>
         <ul>
-          <li>Any identifier: no instance ID, hostname, account, cookie, or credential.</li>
-          <li>Anything about your collection, your users, or the number of accounts on the server.</li>
+          <li>Any identifier: no device or instance ID, hostname, account, cookie, or credential.</li>
+          <li>Anything about your collection, your device model, your language, your users, or the number of accounts on a server.</li>
         </ul>
         <p>
+          To work out the number of days, the app keeps the date of its last accepted
+          report on your device (Section 3). It is not synced between your devices and
+          not included in DiscVault backups, so each device counts once.
+        </p>
+        <p>
           We keep <strong>daily totals only</strong>: how many reports arrived, per
-          version and per number of days since the previous report. We keep those totals
+          kind of installation, version, linked or standalone, and number of days since
+          the previous report. We keep those totals
           for up to 760 days. Like any internet request, a report arrives from an IP
           address. We use that address for rate limiting only, as a keyed hash that
           expires within 24 hours. We do not store it with the report, and our servers
           keep no request log for this endpoint. Because nothing in a report identifies
-          a server or a person, we cannot look up, correct, or delete the reports of one
-          particular server. As far as the GDPR applies, the legal basis is our
+          an installation or a person, we cannot look up, correct, or delete the reports
+          of one particular device or server. As far as the GDPR applies, the legal basis is our
           <strong>legitimate interest</strong> (Art. 6(1)(f)) in knowing how many
           installations the service has to carry.
         </p>
         <p>
-          <strong>Turning it off.</strong> The count is on by default. The owner of a
-          server is told about it in the app, and can turn it off at any time under
-          <em>Preferences &gt; Collectors</em>, or by setting
+          <strong>Turning it off.</strong> On a server the count is on by default. The
+          owner of a server is told about it in the app, and can turn it off at any time
+          under <em>Preferences &gt; Collectors</em>, or by setting
           <code>DISCVAULT_INSTALLATION_COUNT=off</code> in the server’s environment.
           With the count off, the server makes no request to this endpoint at all.
+        </p>
+        <p>
+          <strong>In the iOS and iPadOS app the count has no setting.</strong> The app
+          always sends the report when you open it, at most once a day. Debug and
+          simulator builds used for development send nothing. The report contains
+          nothing that identifies you or your device.
         </p>
 
         <h2>6. Camera</h2>
@@ -176,7 +193,7 @@
 
         <h2>7. What we do not do</h2>
         <ul>
-          <li>We do not collect analytics or usage statistics from the apps. The only count we keep is the anonymous installation count of self-hosted servers described in Section 5.</li>
+          <li>We do not use analytics SDKs and do not collect statistics about what you do in the apps. The only count we keep is the anonymous installation count described in Section 5: whether an installation was in use on a day, nothing about how.</li>
           <li>We do not show advertising or use advertising identifiers.</li>
           <li>We do not use third-party tracking or profiling SDKs.</li>
           <li>We do not sell or share your data with data brokers.</li>
@@ -200,8 +217,8 @@
         <p>
           MovieVault is hosted in the European Union. If you use the app from outside the
           EU, your MovieVault barcode or search request is processed on EU-based
-          infrastructure. The same holds for the daily report of a self-hosted server
-          (Section 5). If you configure TMDB, the app sends that request directly to
+          infrastructure. The same holds for the daily installation-count report of the
+          app and of a self-hosted server (Section 5). If you configure TMDB, the app sends that request directly to
           TMDB, which may process data in the locations described in its privacy policy.
           DiscVault and Flux76 do not route or copy the direct TMDB request.
         </p>
@@ -221,7 +238,8 @@
           we do process. To exercise these rights, or to reset your MovieVault device link,
           contact <a href="mailto:privacy@discvault.eu">privacy@discvault.eu</a>. The
           anonymous installation count (Section 5) holds nothing that can be traced to
-          one server, so the way to object to it is to turn it off. You also
+          one device, server, or person. On a server, the way to object to it is to turn
+          it off. You also
           have the right to lodge a complaint with your local data protection authority (in
           the Netherlands, the Autoriteit Persoonsgegevens). For information TMDB
           processes independently, exercise your rights with TMDB as described in its

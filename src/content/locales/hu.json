@@ -275,7 +275,7 @@
     },
     "body": [
       "Az iPhone- és iPad-alkalmazás az eszközön tartja a gyűjteményt. A saját szerveren futó változat egy általad kezelt szerveren tartja. Mindkét esetben csak egy vonalkód vagy egy keresőkifejezés megy ki.",
-      "Egy kivétel: a saját szerveren futó DiscVault naponta egyszer jelzi az api.discvault.eu címnek, hogy fut. A verzióját és az előző jelzése óta eltelt napok számát küldi el: azonosítót és a gyűjteményedről szóló adatot nem. Ez kizárólag annak felmérésére szolgál, hogy mennyire használják a DiscVaultot, és kikapcsolhatod."
+      "Egy kivétel: az iPhone- és iPad-alkalmazás, valamint a saját szerveren futó DiscVault naponta egyszer jelzi az api.discvault.eu címnek, hogy használatban van. A verziójukat és az előző jelzésük óta eltelt napok számát küldik el: azonosítót és a gyűjteményedről szóló adatot nem. Ez kizárólag annak felmérésére szolgál, hogy mennyire használják a DiscVaultot. Szerveren kikapcsolhatod; az alkalmazás mindig elküldi."
     ]
   },
   "plans": {
@@ -318,7 +318,7 @@
       "sends": {
         "question": "Mit küld ki a DiscVault?",
         "answer": [
-          "Egy vonalkódot vagy egy keresőkifejezést, amikor rákeresel valamire. A saját szerveren futó DiscVault naponta egyszer névtelenül azt is jelzi, hogy fut; ezt kikapcsolhatod. A részletek az adatvédelmi szabályzatban vannak."
+          "Egy vonalkódot vagy egy keresőkifejezést, amikor rákeresel valamire. Az iPhone- és iPad-alkalmazás, valamint a saját szerveren futó DiscVault naponta egyszer névtelenül azt is jelzi, hogy használatban van. Szerveren ezt kikapcsolhatod; az alkalmazás mindig elküldi. A részletek az adatvédelmi szabályzatban vannak."
         ]
       },
       "sync": {

@@ -6,24 +6,25 @@
         <p class="legal-meta">
           <strong>Laatst bijgewerkt:</strong> 10 november 2026 &nbsp;·&nbsp;
           <strong>Van toepassing op:</strong> DiscVault voor iOS, iPadOS en Android, en
-          de anonieme installatietelling van DiscVault-servers die je zelf host
-          (paragraaf 5)
+          de anonieme installatietelling van de app voor iOS en iPadOS en van
+          DiscVault-servers die je zelf host (paragraaf 5)
         </p>
 
         <div class="legal-callout">
           <p>
             <strong>Kort gezegd:</strong> DiscVault voor iOS, iPadOS en Android
-            gebruikt geen analytics, advertenties of tracking van derden en vereist
-            geen DiscVault-account. Je collectie blijft op je toestel: de apps zijn
+            gebruikt geen advertenties, geen tracking van derden en geen analytics-SDK,
+            en vereist geen DiscVault-account. Je collectie blijft op je toestel: de apps zijn
             standalone en uploaden of synchroniseren je collectie, watchlist of
             kijkgeschiedenis niet. Alle appversies kunnen door jou gestarte, beperkte
             metadata-lookups via MovieVault uitvoeren. Je kunt daarnaast je eigen TMDB
             API-key toevoegen; die key blijft op je toestel en de app verstuurt
             TMDB-verzoeken rechtstreeks naar TMDB. DiscVault en Flux76 ontvangen of
             bewaren je identiteit, collectie, watchlist, kijkgeschiedenis, TMDB-key of
-            TMDB-zoekhistorie niet. Een DiscVault-server die je zelf host, meldt ons één
-            keer per dag, zonder enige identificatie, dat hij draait; de eigenaar kan
-            dat uitzetten (paragraaf 5).
+            TMDB-zoekhistorie niet. De app voor iOS en iPadOS en een DiscVault-server
+            die je zelf host, melden ons één keer per dag, zonder enige identificatie,
+            dat ze in gebruik zijn; op een server kan de eigenaar dat uitzetten
+            (paragraaf 5).
           </p>
         </div>
 
@@ -58,6 +59,7 @@
         <ul>
           <li><strong>Je collectie</strong> — de titels, box sets, schijfformaten, watchlist en kijkgeschiedenis die je toevoegt.</li>
           <li><strong>App-voorkeuren</strong> — weergave- en filterinstellingen die je kiest.</li>
+          <li><strong>Datum van de installatietelling (iOS en iPadOS)</strong> — de datum van de laatste geaccepteerde melding van de app volgens paragraaf 5, zodat de app kan uitrekenen hoeveel dagen er sindsdien voorbij zijn. De datum zelf wordt niet verzonden, niet tussen je toestellen gesynchroniseerd en niet meegenomen in DiscVault-back-ups.</li>
           <li>
             <strong>Sleutels in beveiligde platformopslag</strong> — zoals de
             iOS-sleutelhanger (Keychain) of Android Keystore. Voor MovieVault omvat
@@ -132,50 +134,66 @@
           Voor het gebruik van MovieVault is geen TMDB-key nodig.
         </p>
 
-        <h2>5. Anonieme installatietelling (DiscVault-servers die je zelf host)</h2>
+        <h2>5. Anonieme installatietelling (app voor iOS en iPadOS, en DiscVault-servers die je zelf host)</h2>
         <p>
-          Deze paragraaf geldt voor <strong>DiscVault-servers die je zelf host</strong>
-          (DiscVault 26.11.2 en later), niet voor de apps voor iOS, iPadOS of Android.
-          Zo'n server bewaart je collectie op een machine die je zelf draait; wij
-          ontvangen die niet.
+          Deze paragraaf geldt voor de <strong>DiscVault-app voor iOS en iPadOS</strong>
+          en voor <strong>DiscVault-servers die je zelf host</strong> (DiscVault 26.11.2
+          en later). Ze geldt niet voor de Android-app. Een server bewaart je collectie
+          op een machine die je zelf draait; wij ontvangen die niet.
         </p>
         <p>
-          Een draaiende server meldt ons hooguit één keer per dag dat hij in gebruik
-          is. Dat gebeurt met één verzoek naar <code>https://api.discvault.eu</code>
-          via HTTPS. De telling heeft één doel: inschatten hoeveel DiscVault gebruikt
-          wordt, zodat de MovieVault-backend daarop kan worden geschaald.
+          Elke installatie meldt ons hooguit één keer per dag dat ze in gebruik is: de
+          app wanneer je haar opent, een server terwijl hij draait. Dat gebeurt met één
+          verzoek naar <code>https://api.discvault.eu</code> via HTTPS. De telling heeft
+          één doel: inschatten hoeveel DiscVault gebruikt wordt, zodat de
+          MovieVault-backend daarop kan worden geschaald. Een iPhone en een iPad tellen
+          als twee installaties.
         </p>
         <p><strong>Wat er wordt verzonden:</strong></p>
         <ul>
-          <li>De <strong>DiscVault-versie</strong> die de server draait.</li>
-          <li>Het <strong>aantal dagen sinds de vorige melding van die server</strong>. Daardoor kunnen we servers tellen zonder er één te herkennen.</li>
-          <li>Twee vaste waarden: het formaat van de melding (“presence-1”) en het soort installatie (“server”).</li>
+          <li>De <strong>DiscVault-versie</strong> van de installatie.</li>
+          <li>Het <strong>aantal dagen sinds de vorige melding van die installatie</strong>. Daardoor kunnen we installaties tellen zonder er één te herkennen.</li>
+          <li>Alleen voor de app: of ze <strong>gekoppeld is aan een eigen DiscVault-server</strong> (“coupled”) of niet (“standalone”).</li>
+          <li>Twee vaste waarden: het formaat van de melding (“presence-1”) en het soort installatie (“ios” of “server”).</li>
         </ul>
         <p><strong>Wat er <em>niet</em> wordt verzonden:</strong></p>
         <ul>
-          <li>Geen enkele identificatie: geen instance-ID, hostnaam, account, cookie of credential.</li>
-          <li>Niets over je collectie, je gebruikers of het aantal accounts op de server.</li>
+          <li>Geen enkele identificatie: geen toestel- of instance-ID, hostnaam, account, cookie of credential.</li>
+          <li>Niets over je collectie, je toesteltype, je taal, je gebruikers of het aantal accounts op een server.</li>
         </ul>
         <p>
+          Om het aantal dagen te kunnen uitrekenen, bewaart de app de datum van haar
+          laatste geaccepteerde melding op je toestel (paragraaf 3). Die wordt niet
+          tussen je toestellen gesynchroniseerd en niet meegenomen in
+          DiscVault-back-ups, zodat elk toestel één keer telt.
+        </p>
+        <p>
           Wij bewaren <strong>alleen dagtotalen</strong>: hoeveel meldingen er
-          binnenkwamen, per versie en per aantal dagen sinds de vorige melding. Die
+          binnenkwamen, per soort installatie, versie, gekoppeld of standalone, en
+          aantal dagen sinds de vorige melding. Die
           totalen bewaren we maximaal 760 dagen. Zoals elk internetverzoek komt een
           melding van een IP-adres. Dat adres gebruiken we alleen voor rate limiting,
           als een gesleutelde hash die binnen 24 uur vervalt. We slaan het niet op bij
           de melding, en onze servers houden voor dit endpoint geen verzoeklog bij.
-          Omdat niets in een melding een server of een persoon identificeert, kunnen
-          we de meldingen van één bepaalde server niet opzoeken, corrigeren of
-          verwijderen. Voor zover de AVG van toepassing is, is de grondslag ons
+          Omdat niets in een melding een installatie of een persoon identificeert,
+          kunnen we de meldingen van één bepaald toestel of één bepaalde server niet
+          opzoeken, corrigeren of verwijderen. Voor zover de AVG van toepassing is, is de grondslag ons
           <strong>gerechtvaardigd belang</strong> (art. 6 lid 1 onder f) om te weten
           hoeveel installaties de dienst moet kunnen dragen.
         </p>
         <p>
-          <strong>Uitzetten.</strong> De telling staat standaard aan. De eigenaar van
-          een server krijgt daarvan een melding in de app en kan de telling op elk
-          moment uitzetten onder <em>Voorkeuren &gt; Verzamelaars</em>, of met
+          <strong>Uitzetten.</strong> Op een server staat de telling standaard aan. De
+          eigenaar van een server krijgt daarvan een melding in de app en kan de telling
+          op elk moment uitzetten onder <em>Voorkeuren &gt; Verzamelaars</em>, of met
           <code>DISCVAULT_INSTALLATION_COUNT=off</code> in de omgeving van de server.
           Staat de telling uit, dan doet de server helemaal geen verzoek naar dit
           endpoint.
+        </p>
+        <p>
+          <strong>In de app voor iOS en iPadOS heeft de telling geen instelling.</strong>
+          De app verstuurt de melding altijd wanneer je haar opent, hooguit één keer per
+          dag. Debug- en simulatorbuilds voor ontwikkeling versturen niets. De melding
+          bevat niets dat jou of je toestel identificeert.
         </p>
 
         <h2>6. Camera</h2>
@@ -191,7 +209,7 @@
 
         <h2>7. Wat we niet doen</h2>
         <ul>
-          <li>We verzamelen geen analytics of gebruiksstatistieken uit de apps. De enige telling die we bijhouden is de anonieme installatietelling van self-hosted servers uit paragraaf 5.</li>
+          <li>We gebruiken geen analytics-SDK's en verzamelen geen statistieken over wat je in de apps doet. De enige telling die we bijhouden is de anonieme installatietelling uit paragraaf 5: of een installatie op een dag in gebruik was, niets over hoe.</li>
           <li>We tonen geen advertenties en gebruiken geen advertentie-identificaties.</li>
           <li>We gebruiken geen tracking- of profilerings-SDK's van derden.</li>
           <li>We verkopen of delen je gegevens niet met databrokers.</li>
@@ -216,8 +234,8 @@
         <p>
           MovieVault wordt gehost in de Europese Unie. Als je de app buiten de EU
           gebruikt, wordt je MovieVault-barcode- of zoekverzoek verwerkt op
-          EU-infrastructuur. Hetzelfde geldt voor de dagelijkse melding van een
-          self-hosted server (paragraaf 5). Als je TMDB configureert, verstuurt de app dat verzoek
+          EU-infrastructuur. Hetzelfde geldt voor de dagelijkse melding van de
+          installatietelling, van de app en van een self-hosted server (paragraaf 5). Als je TMDB configureert, verstuurt de app dat verzoek
           rechtstreeks naar TMDB, dat gegevens kan verwerken op de locaties die in
           zijn privacyverklaring worden beschreven. DiscVault en Flux76 leiden het
           rechtstreekse TMDB-verzoek niet door en kopieren het niet.
@@ -238,8 +256,9 @@
           overdraagbaarheid van eventuele gegevens die wij verwerken. Om deze rechten
           uit te oefenen, of om je MovieVault-toestelkoppeling te resetten, neem je
           contact op via <a href="mailto:privacy@discvault.eu">privacy@discvault.eu</a>.
-          De anonieme installatietelling (paragraaf 5) bevat niets dat naar één server
-          te herleiden is; bezwaar maken doe je daar door de telling uit te zetten.
+          De anonieme installatietelling (paragraaf 5) bevat niets dat naar één toestel,
+          server of persoon te herleiden is. Op een server maak je bezwaar door de
+          telling uit te zetten.
           Je hebt ook het recht een klacht in te dienen bij je lokale
           toezichthouder (in Nederland de Autoriteit Persoonsgegevens). Voor gegevens
           die TMDB zelfstandig verwerkt, oefen je je rechten uit bij TMDB zoals

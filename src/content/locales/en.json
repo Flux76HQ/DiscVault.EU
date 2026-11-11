@@ -275,7 +275,7 @@
     },
     "body": [
       "The iPhone and iPad app keeps your collection on the device. The self-hosted edition keeps it on a server you administer. Either way the only thing that leaves is a barcode or a search term.",
-      "One exception: a self-hosted server tells api.discvault.eu once a day that it is running. It sends its version and the number of days since its previous report: no identifier, and nothing about your collection. That is only there to estimate how much DiscVault is used, and you can turn it off."
+      "One exception: the iPhone and iPad app and a self-hosted server tell api.discvault.eu once a day that they are in use. They send their version and the number of days since their previous report: no identifier, and nothing about your collection. That is only there to estimate how much DiscVault is used. On a server you can turn it off; the app always sends it."
     ]
   },
   "plans": {
@@ -318,7 +318,7 @@
       "sends": {
         "question": "What does DiscVault send out?",
         "answer": [
-          "A barcode or a search term when you look something up. A self-hosted server also reports once a day, anonymously, that it is running; you can turn that off. The privacy policy has the details."
+          "A barcode or a search term when you look something up. The iPhone and iPad app and a self-hosted server also report once a day, anonymously, that they are in use. On a server you can turn that off; the app always sends it. The privacy policy has the details."
         ]
       },
       "sync": {

@@ -275,7 +275,7 @@
     },
     "body": [
       "iPhone ve iPad uygulaması koleksiyonu cihazda tutar. Kendi sunucunda çalışan sürüm onu senin yönettiğin bir sunucuda tutar. Her iki durumda da cihazdan yalnızca bir barkod ya da bir arama terimi çıkar.",
-      "Tek bir istisna: kendi sunucunda çalışan DiscVault günde bir kez api.discvault.eu adresine çalıştığını bildirir. Sürümünü ve önceki bildiriminden bu yana geçen gün sayısını gönderir: hiçbir tanımlayıcı yok, koleksiyonun hakkında hiçbir şey yok. Bu yalnızca DiscVault’un ne kadar kullanıldığını tahmin etmek içindir ve kapatabilirsin."
+      "Tek bir istisna: iPhone ve iPad uygulaması ile kendi sunucunda çalışan DiscVault günde bir kez api.discvault.eu adresine kullanımda olduklarını bildirir. Sürümlerini ve önceki bildirimlerinden bu yana geçen gün sayısını gönderirler: hiçbir tanımlayıcı yok, koleksiyonun hakkında hiçbir şey yok. Bu yalnızca DiscVault’un ne kadar kullanıldığını tahmin etmek içindir. Sunucuda kapatabilirsin; uygulama bunu her zaman gönderir."
     ]
   },
   "plans": {
@@ -318,7 +318,7 @@
       "sends": {
         "question": "DiscVault dışarıya ne gönderir?",
         "answer": [
-          "Bir şey aradığında bir barkod ya da bir arama terimi. Kendi sunucunda çalışan DiscVault ayrıca günde bir kez, anonim olarak, çalıştığını bildirir; bunu kapatabilirsin. Ayrıntılar gizlilik politikasında."
+          "Bir şey aradığında bir barkod ya da bir arama terimi. iPhone ve iPad uygulaması ile kendi sunucunda çalışan DiscVault ayrıca günde bir kez, anonim olarak, kullanımda olduklarını bildirir. Sunucuda bunu kapatabilirsin; uygulama her zaman gönderir. Ayrıntılar gizlilik politikasında."
         ]
       },
       "sync": {

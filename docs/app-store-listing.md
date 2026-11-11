@@ -51,7 +51,7 @@ BUILT FOR REAL SHELVES
 
 PRIVATE BY DESIGN
 • No account required — just install and start scanning
-• No analytics, no advertising, no third-party tracking
+• No advertising, no third-party tracking — only an anonymous daily count of active installations
 • Your collection is stored on your device, not on our servers
 • The only online lookup sends just a barcode or search term — never your identity, your library, or your contacts
 
@@ -101,8 +101,11 @@ plus a randomly generated device identifier used to issue a token and rate-limit
 abuse. No name, email, Apple ID, location, or contacts are sent.
 
 PRIVACY LABEL: Device ID and Search History are collected for App Functionality
-only — not linked to identity, not used for tracking. No ATT prompt is required
-(the app does no tracking). Full details:
+only — not linked to identity, not used for tracking. Product Interaction is
+collected for Analytics only: once a day, when the app is opened, it tells
+api.discvault.eu that it is in use (version, linked or standalone, days since
+its previous report; no identifier). Not linked to identity, not used for
+tracking. No ATT prompt is required (the app does no tracking). Full details:
 https://discvault.eu/privacy.html
 
 Server sync is not enabled in this release.
@@ -140,7 +143,7 @@ GEMAAKT VOOR ECHTE KASTEN
 
 PRIVÉ VAN NATURE
 • Geen account nodig — installeren en meteen scannen
-• Geen analytics, geen advertenties, geen tracking van derden
+• Geen advertenties, geen tracking van derden — alleen een anonieme dagelijkse telling van actieve installaties
 • Je collectie staat op je toestel, niet op onze servers
 • De enige online lookup stuurt alleen een barcode of zoekterm — nooit je identiteit, je collectie of je contacten
 
@@ -191,8 +194,12 @@ token af te geven en misbruik te beperken. Er worden geen naam, e-mail, Apple
 ID, locatie of contacten verzonden.
 
 PRIVACYLABEL: Device ID en Search History worden alleen voor App Functionality
-verzameld — niet gekoppeld aan identiteit, niet voor tracking. Er is geen
-ATT-prompt nodig (de app doet geen tracking). Volledige details:
+verzameld — niet gekoppeld aan identiteit, niet voor tracking. Product
+Interaction wordt alleen voor Analytics verzameld: één keer per dag, bij het
+openen, meldt de app aan api.discvault.eu dat ze in gebruik is (versie,
+gekoppeld of standalone, dagen sinds de vorige melding; geen identificatie).
+Niet gekoppeld aan identiteit, niet voor tracking. Er is geen ATT-prompt nodig
+(de app doet geen tracking). Volledige details:
 https://discvault.eu/privacy.html
 
 Serversync is in deze release niet ingeschakeld.

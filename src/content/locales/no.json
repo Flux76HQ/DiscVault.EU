@@ -275,7 +275,7 @@
     },
     "body": [
       "iPhone- og iPad-appen holder samlingen på enheten. Den selvhostede versjonen holder den på en server du administrerer. Uansett forlater bare en strekkode eller et søkeord enheten.",
-      "Ett unntak: en selvhostet server forteller api.discvault.eu én gang om dagen at den kjører. Den sender versjonen sin og antall dager siden forrige melding: ingen identifikator og ingenting om samlingen din. Det brukes bare til å anslå hvor mye DiscVault blir brukt, og du kan slå det av."
+      "Ett unntak: iPhone- og iPad-appen og en selvhostet server forteller api.discvault.eu én gang om dagen at de er i bruk. De sender versjonen sin og antall dager siden forrige melding: ingen identifikator og ingenting om samlingen din. Det brukes bare til å anslå hvor mye DiscVault blir brukt. På en server kan du slå det av; appen sender det alltid."
     ]
   },
   "plans": {
@@ -318,7 +318,7 @@
       "sends": {
         "question": "Hva sender DiscVault ut?",
         "answer": [
-          "En strekkode eller et søkeord når du slår opp noe. En selvhostet server melder også én gang om dagen, anonymt, at den kjører; det kan du slå av. Detaljene står i personvernerklæringen."
+          "En strekkode eller et søkeord når du slår opp noe. iPhone- og iPad-appen og en selvhostet server melder også én gang om dagen, anonymt, at de er i bruk. På en server kan du slå det av; appen sender det alltid. Detaljene står i personvernerklæringen."
         ]
       },
       "sync": {
