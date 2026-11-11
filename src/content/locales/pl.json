@@ -275,7 +275,7 @@
     },
     "body": [
       "Aplikacja na iPhone’a i iPada trzyma kolekcję na urządzeniu. Wersja self-hosted trzyma ją na serwerze, którym administrujesz. Tak czy inaczej urządzenie opuszcza tylko kod kreskowy lub hasło wyszukiwania.",
-      "Jeden wyjątek: serwer self-hosted raz dziennie zgłasza do api.discvault.eu, że działa. Wysyła swoją wersję i liczbę dni od poprzedniego zgłoszenia: żadnego identyfikatora i nic o Twojej kolekcji. Służy to wyłącznie do oszacowania, jak często DiscVault jest używany, i możesz to wyłączyć."
+      "Jeden wyjątek: aplikacja na iPhone’a i iPada oraz serwer self-hosted raz dziennie zgłaszają do api.discvault.eu, że są używane. Wysyłają swoją wersję i liczbę dni od poprzedniego zgłoszenia: żadnego identyfikatora i nic o Twojej kolekcji. Służy to wyłącznie do oszacowania, jak często DiscVault jest używany. Na serwerze możesz to wyłączyć; aplikacja wysyła to zawsze."
     ]
   },
   "plans": {
@@ -318,7 +318,7 @@
       "sends": {
         "question": "Co DiscVault wysyła na zewnątrz?",
         "answer": [
-          "Kod kreskowy lub hasło wyszukiwania, gdy czegoś szukasz. Serwer self-hosted dodatkowo raz dziennie anonimowo zgłasza, że działa; możesz to wyłączyć. Szczegóły są w polityce prywatności."
+          "Kod kreskowy lub hasło wyszukiwania, gdy czegoś szukasz. Aplikacja na iPhone’a i iPada oraz serwer self-hosted dodatkowo raz dziennie anonimowo zgłaszają, że są używane. Na serwerze możesz to wyłączyć; aplikacja wysyła to zawsze. Szczegóły są w polityce prywatności."
         ]
       },
       "sync": {

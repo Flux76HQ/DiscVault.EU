@@ -20,8 +20,9 @@ verlaat op een manier die jij (of je partners) kunt inzien. De app zelf
 verzamelt niets voor lokaal gebruik, **maar** roept één online dienst aan die
 door jou (DiscVault — VaultStack) wordt beheerd: **MovieVault**
 (`movies2.vaultstack.eu`). Daar wordt bij een barcode-scan of titelzoekopdracht
-data naartoe gestuurd. Daardoor moet je "Yes" kiezen en de betreffende
-datatypes declareren.
+data naartoe gestuurd. Vanaf de build met de anonieme installatietelling meldt de
+app daarnaast één keer per dag aan `api.discvault.eu` dat ze in gebruik is (zie
+1c). Daardoor moet je "Yes" kiezen en de betreffende datatypes declareren.
 
 **Belangrijk onderscheid — wat je NIET hoeft te declareren:**
 
@@ -87,6 +88,40 @@ toe. Voor beide geldt hetzelfde antwoordpatroon:
 
 ---
 
+### 1c. Usage Data → Product Interaction (installatietelling, vanaf de eerste build die meldt)
+
+- **Wat:** hooguit één keer per UTC-dag, wanneer de gebruiker de app opent,
+  stuurt de app `POST https://api.discvault.eu/v2/presence` met vijf velden:
+  `protocol` (`presence-1`), `platform` (`ios`), de marketingversie, `mode`
+  (`standalone` of `coupled`) en het aantal hele dagen sinds de vorige
+  geaccepteerde melding van dit toestel. Geen id, geen taal, geen toesteltype,
+  niets over de collectie. MovieVault bewaart alleen dagtotalen.
+  Besluit en regels: App-Guidance ADR-0020 en
+  `projects/discvault/specs/active-installation-count.md` §7.
+- **Waarom declareren:** Apple rekent het als *collected*: het verlaat het
+  toestel en wij kunnen de totalen langer inzien dan nodig is om het verzoek te
+  beantwoorden (760 dagen). De uitzondering voor "optional disclosure" geldt
+  niet, want de telling is op iOS **niet optioneel** voor de gebruiker: er is
+  geen schakelaar (besluit 2026-11-10).
+- **Data type:** **Product Interaction** (onder *Usage Data*: "app launches,
+  taps, …" — een melding dat de app vandaag geopend is, is precies een
+  app-launch-signaal).
+- **Purposes:** alleen **Analytics**. *Niet* App Functionality: de app werkt
+  zonder.
+- **Linked to the user's identity?** → **No**. Er gaat geen enkele
+  identificatie mee, en de dagtotalen zijn niet naar een toestel te herleiden.
+- **Used for tracking?** → **No**. Niets wordt gekoppeld aan data van derden.
+- **Wanneer:** in dezelfde week als de eerste build die meldt wordt
+  gedistribueerd, **TestFlight inbegrepen** (TestFlight-builds melden ook). Niet
+  eerder: een label dat iets declareert wat geen build doet, klopt evenmin.
+- **Stappen in App Store Connect:** *Apps → DiscVault → App Privacy →
+  Data Types → Edit* → vink onder *Usage Data* **Product Interaction** aan →
+  *Save* → bij Product Interaction: purpose **Analytics** → *Linked to user:*
+  **No** → *Tracking:* **No** → *Save* → bovenaan **Publish**. Het label is
+  per app, niet per build: na *Publish* geldt het direct voor de App Store-pagina.
+
+---
+
 ## 2. Datatypes die je NIET verzamelt (expliciet uitsluiten)
 
 Deze horen bij "Data Not Collected" — vink ze **niet** aan:
@@ -103,7 +138,8 @@ Deze horen bij "Data Not Collected" — vink ze **niet** aan:
 - **Identifiers → User ID:** niet verzameld (geen account).
 - **Purchases:** niet verzameld.
 - **Diagnostics** — crash data, performance, other diagnostics: niet verzameld
-  (geen analytics/crash-SDK).
+  (geen analytics- of crash-SDK). De installatietelling is *Usage Data →
+  Product Interaction* (1c), niet Diagnostics.
 - **Advertising Data / Ad-identifiers:** niet verzameld (geen ads).
 
 ---
@@ -137,6 +173,7 @@ Deze horen bij "Data Not Collected" — vink ze **niet** aan:
 | Collect data? | **Yes** (via MovieVault) |
 | Identifiers → Device ID | Collected · App Functionality (+ Security) · niet gekoppeld · geen tracking |
 | Usage Data → Search History | Collected · App Functionality · niet gekoppeld · geen tracking |
+| Usage Data → Product Interaction | Collected · **Analytics** · niet gekoppeld · geen tracking (installatietelling, 1c; vanaf de eerste build die meldt) |
 | Contact Info / Location / Contacts / Health / Financial / Browsing / User Content / Diagnostics / Purchases / User ID / Ads | **Not Collected** |
 | Data van sync naar eigen server | **Niet declareren** (jij ontvangt het niet) |
 | Camerabeelden | **Niet declareren** (blijft on-device) |
@@ -151,7 +188,10 @@ Deze horen bij "Data Not Collected" — vink ze **niet** aan:
 Werk zowel dit document, het privacy-label als
 [`privacy.html`](../privacy.html) bij zodra je:
 
-- analytics of crash-reporting toevoegt (dan komt **Diagnostics** erbij),
+- een veld aan de installatietelling toevoegt (dat is eerst een nieuw besluit in
+  App-Guidance en een nieuwe contractversie in MovieVault), of er een
+  schakelaar voor maakt (dan wordt 1c mogelijk "optional to disclose"),
+- crash-reporting toevoegt (dan komt **Diagnostics** erbij),
 - accounts/inlog in de app toevoegt (dan mogelijk **User ID**/**Contact Info**),
 - een nieuwe externe dienst aanroept,
 - of advertenties/tracking toevoegt (dan ATT + Tracking = Yes).

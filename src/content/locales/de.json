@@ -275,7 +275,7 @@
     },
     "body": [
       "Die iPhone- und iPad-App behält deine Sammlung auf dem Gerät. Die selbst gehostete Edition behält sie auf einem Server, den du verwaltest. So oder so verlässt nur ein Barcode oder ein Suchbegriff das Gerät.",
-      "Eine Ausnahme: Ein selbst gehosteter Server meldet api.discvault.eu einmal am Tag, dass er läuft. Er sendet seine Version und die Anzahl der Tage seit seiner vorherigen Meldung: keine Kennung und nichts über deine Sammlung. Das dient nur dazu, einzuschätzen, wie viel DiscVault genutzt wird, und du kannst es abschalten."
+      "Eine Ausnahme: Die iPhone- und iPad-App und ein selbst gehosteter Server melden api.discvault.eu einmal am Tag, dass sie genutzt werden. Sie senden ihre Version und die Anzahl der Tage seit ihrer vorherigen Meldung: keine Kennung und nichts über deine Sammlung. Das dient nur dazu, einzuschätzen, wie viel DiscVault genutzt wird. Auf einem Server kannst du es abschalten; die App sendet es immer."
     ]
   },
   "plans": {
@@ -318,7 +318,7 @@
       "sends": {
         "question": "Was sendet DiscVault nach außen?",
         "answer": [
-          "Einen Barcode oder einen Suchbegriff, wenn du etwas nachschlägst. Ein selbst gehosteter Server meldet außerdem einmal am Tag anonym, dass er läuft; das kannst du abschalten. Die Details stehen in der Datenschutzerklärung."
+          "Einen Barcode oder einen Suchbegriff, wenn du etwas nachschlägst. Die iPhone- und iPad-App und ein selbst gehosteter Server melden außerdem einmal am Tag anonym, dass sie genutzt werden. Auf einem Server kannst du das abschalten; die App sendet es immer. Die Details stehen in der Datenschutzerklärung."
         ]
       },
       "sync": {

@@ -275,7 +275,7 @@
     },
     "body": [
       "Aplikace pro iPhone a iPad drží sbírku na zařízení. Self-hostovaná edice ji drží na serveru, který spravujete. V obou případech zařízení opouští jen čárový kód nebo hledaný výraz.",
-      "Jedna výjimka: server, který sami provozujete, jednou denně oznámí adrese api.discvault.eu, že běží. Posílá svou verzi a počet dní od předchozího hlášení: žádný identifikátor a nic o vaší sbírce. Slouží to jen k odhadu, jak moc se DiscVault používá, a můžete to vypnout."
+      "Jedna výjimka: aplikace pro iPhone a iPad i server, který sami provozujete, jednou denně oznámí adrese api.discvault.eu, že se používají. Posílají svou verzi a počet dní od předchozího hlášení: žádný identifikátor a nic o vaší sbírce. Slouží to jen k odhadu, jak moc se DiscVault používá. Na serveru to můžete vypnout; aplikace to posílá vždy."
     ]
   },
   "plans": {
@@ -318,7 +318,7 @@
       "sends": {
         "question": "Co DiscVault odesílá ven?",
         "answer": [
-          "Čárový kód nebo hledaný výraz, když něco vyhledáváte. Self-hostovaný server navíc jednou denně anonymně oznámí, že běží; to můžete vypnout. Podrobnosti najdete v zásadách ochrany soukromí."
+          "Čárový kód nebo hledaný výraz, když něco vyhledáváte. Aplikace pro iPhone a iPad i self-hostovaný server navíc jednou denně anonymně oznámí, že se používají. Na serveru to můžete vypnout; aplikace to posílá vždy. Podrobnosti najdete v zásadách ochrany soukromí."
         ]
       },
       "sync": {
