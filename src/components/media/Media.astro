@@ -6,9 +6,22 @@ import '../../styles/media.css';
  * loop has `preload="none"` and no `autoplay`: the media script starts it
  * only while it is on screen, and never under reduced motion or Save-Data.
  * The still is therefore both the poster and the no-script fallback.
+ *
+ * A slot that also has a light picture shows the one that matches the
+ * page's scheme, and a visitor downloads only that one:
+ *
+ * - a lazy still is two pictures, `only-dark` and `only-light`. A lazy image
+ *   that is not rendered is never fetched;
+ * - a `priority` still is fetched before any style applies, so two of them
+ *   would both arrive. It is one picture whose light sources carry a media
+ *   query, and a few lines of script point that query at the visitor's own
+ *   choice when it differs from the system;
+ * - each loop sits in its own `only-dark` or `only-light` wrapper with its
+ *   pause control, and a loop that is not rendered is never started.
  */
-import { Picture } from 'astro:assets';
-import { mediaSlot } from '../../media/registry';
+import { getImage, Picture } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+import { mediaSlot, type MediaLoop } from '../../media/registry';
 
 interface Props {
   slot: string;
@@ -41,16 +54,49 @@ const {
   optional = false,
   class: className,
 } = Astro.props;
-const { still, loop } = mediaSlot(slot);
+const { still, loop, light } = mediaSlot(slot);
 const frameRatio =
   ratio ?? (still ? `${still.width} / ${still.height}` : '16 / 10');
-const usableWidths = still
-  ? [
-      ...new Set(
-        widths.filter((width) => width < still.width).concat(still.width),
-      ),
-    ]
-  : [];
+const widthsFor = (image: ImageMetadata) => [
+  ...new Set(widths.filter((width) => width < image.width).concat(image.width)),
+];
+
+// The loops of this slot, each with the scheme it belongs to. Without a
+// light picture the one loop plays in both schemes.
+const loops: {
+  loop: MediaLoop;
+  image: ImageMetadata;
+  scheme?: 'only-dark' | 'only-light';
+}[] = [];
+if (still && loop) {
+  loops.push({ loop, image: still, scheme: light ? 'only-dark' : undefined });
+}
+if (light?.loop) {
+  loops.push({ loop: light.loop, image: light.still, scheme: 'only-light' });
+}
+
+// The priority picture with a light variant is written out by hand: the
+// light sources first, behind a media query, then the dark ones.
+const lightQuery = '(prefers-color-scheme: light)';
+const variant = (image: ImageMetadata, format: 'avif' | 'webp') =>
+  getImage({ src: image, format, widths: widthsFor(image) });
+const schemed =
+  still && light && priority
+    ? {
+        light: {
+          avif: await variant(light.still, 'avif'),
+          webp: await variant(light.still, 'webp'),
+        },
+        dark: {
+          avif: await variant(still, 'avif'),
+          webp: await variant(still, 'webp'),
+        },
+      }
+    : undefined;
+// A stored light or dark choice wins over the system: the query on the light
+// sources becomes "always" or "never". Inline, right after the picture, so
+// it runs before the page is laid out; it also follows a later change.
+const schemeScript = `(function(){var r=document.documentElement,q=${JSON.stringify(lightQuery)};function f(){var t=r.dataset.theme,m=t==='light'?'all':t==='dark'?'not all':q;document.querySelectorAll('source[data-scheme-source]').forEach(function(s){if(s.media!==m)s.media=m})}f();new MutationObserver(f).observe(r,{attributes:true,attributeFilter:['data-theme']})})()`;
 ---
 
 {
@@ -60,19 +106,71 @@ const usableWidths = still
       style={`aspect-ratio: ${frameRatio}; --media-position: ${position};`}
       data-media={slot}
     >
-      {still ? (
+      {still && schemed && (
+        <>
+          <picture>
+            <source
+              type="image/avif"
+              srcset={schemed.light.avif.srcSet.attribute}
+              sizes={sizes}
+              media={lightQuery}
+              data-scheme-source
+            />
+            <source
+              type="image/webp"
+              srcset={schemed.light.webp.srcSet.attribute}
+              sizes={sizes}
+              media={lightQuery}
+              data-scheme-source
+            />
+            <source
+              type="image/avif"
+              srcset={schemed.dark.avif.srcSet.attribute}
+              sizes={sizes}
+            />
+            <img
+              src={schemed.dark.webp.src}
+              srcset={schemed.dark.webp.srcSet.attribute}
+              sizes={sizes}
+              alt={alt}
+              width={still.width}
+              height={still.height}
+              loading="eager"
+              fetchpriority="high"
+              decoding="sync"
+            />
+          </picture>
+          <script is:inline set:html={schemeScript} />
+        </>
+      )}
+      {still && !schemed && (
         <Picture
           src={still}
           formats={['avif']}
           fallbackFormat="webp"
-          widths={usableWidths}
+          widths={widthsFor(still)}
           sizes={sizes}
           alt={alt}
           loading={priority ? 'eager' : 'lazy'}
           fetchpriority={priority ? 'high' : undefined}
           decoding={priority ? 'sync' : 'async'}
+          pictureAttributes={light ? { class: 'only-dark' } : {}}
         />
-      ) : (
+      )}
+      {still && !schemed && light && (
+        <Picture
+          src={light.still}
+          formats={['avif']}
+          fallbackFormat="webp"
+          widths={widthsFor(light.still)}
+          sizes={sizes}
+          alt={alt}
+          loading="lazy"
+          decoding="async"
+          pictureAttributes={{ class: 'only-light' }}
+        />
+      )}
+      {!still && (
         <div
           class="media-placeholder"
           role="img"
@@ -80,21 +178,21 @@ const usableWidths = still
           data-media-placeholder
         />
       )}
-      {still && loop && (
-        <>
+      {loops.map(({ loop: files, image, scheme }) => (
+        <div class:list={['media-loop', scheme]}>
           <video
             muted
             playsinline
             loop
             preload="none"
-            width={still.width}
-            height={still.height}
+            width={image.width}
+            height={image.height}
             aria-hidden="true"
             tabindex="-1"
             data-loop
           >
-            <source src={loop.webm} type="video/webm" />
-            <source src={loop.mp4} type="video/mp4" />
+            <source src={files.webm} type="video/webm" />
+            <source src={files.mp4} type="video/mp4" />
           </video>
           <button
             class="media-toggle"
@@ -107,8 +205,8 @@ const usableWidths = still
           >
             <span class="media-toggle-icon" aria-hidden="true" />
           </button>
-        </>
-      )}
+        </div>
+      ))}
     </div>
   )
 }

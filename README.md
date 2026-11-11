@@ -81,8 +81,11 @@ critical routes and synchronized versions. What each gate holds the site to:
   neither fetched nor started under reduced motion or Save-Data; a full scroll
   shifts the layout by at most 0.05; the scan demo and the bar's chapter colour
   work; no keyframes animate `background-position`, `filter` or `box-shadow`;
-  axe finds nothing serious at 1440 and 390 px; and `/`, `/de/` and `/ja/` never
-  scroll sideways at 320, 390, 768 and 1440 px.
+  axe finds nothing serious at 1440 and 390 px, in the dark and in the light
+  scheme; the theme choice applies, survives a reload and can be undone; a
+  media slot shows the picture of the page's scheme, and nothing of the other
+  scheme is downloaded; and `/`, `/de/` and `/ja/` never scroll sideways at
+  320, 390, 768 and 1440 px. The loop checks run once in each scheme.
 - **`lighthouse`** — performance ≥ 80, accessibility ≥ 95, best practices ≥ 90
   and SEO ≥ 95 for English, Dutch and the legal shell, each judged on the median
   of three runs.
@@ -184,7 +187,8 @@ and near-black in the light one, as the 4K badge is in the app.
 
 When adding a colour pair, check it in both schemes: the experience gate
 runs axe in each. Two pictures of one thing take the classes `only-dark` and
-`only-light`. Screenshots and loops show the dark interface in both schemes.
+`only-light`. A screenshot of the interface has a scheme of its own, so a
+media slot holds one per scheme (see "Media").
 
 ## Media
 
@@ -207,11 +211,25 @@ Rules:
 - A loop needs both `loop.webm` and `loop.mp4`, no audio track, at most 1.5 MB
   each (aim for 900 KB mp4 and 600 KB webm, 6–10 s, 1280–1440 px wide). The
   still is its poster and its fallback.
+- **One picture per scheme.** The plain files show the dark interface. A slot
+  that shows the interface also holds `still-light.webp`, the same view in
+  the light interface with the same crop and size, and with a loop also
+  `loop-light.webm` and `loop-light.mp4`. The page then shows the one that
+  matches the visitor's scheme. A slot without light files shows its one
+  picture in both schemes, which is right for the disc and wrong for a
+  screenshot.
+- A visitor downloads the files of one scheme only, and the experience gate
+  holds that. Lazy stills and loops are simply not rendered in the other
+  scheme. A `priority` still (the first screen) is fetched before any style
+  applies, so it is one `<picture>` whose light sources carry a media query;
+  `Media.astro` points that query at the visitor's own choice when it differs
+  from the system. Do not turn it into two eager pictures: both would load.
 - Loops never autoplay by attribute: `src/scripts/media.ts` starts one only
   while it is on screen, never under reduced motion or Save-Data, and gives
   it a pause control.
-- Screenshots show the demo shelf of invented films, dark theme, the Blu-ray
-  accent and the English interface. Do not publish real film artwork.
+- Screenshots show the demo shelf of invented films, the Blu-ray accent and
+  the English interface, once in the dark and once in the light theme. Do
+  not publish real film artwork.
 - No Git LFS: GitHub Pages does not serve it. Commit final encodes only.
 
 The design this implements, and the reasons for these rules, are in
