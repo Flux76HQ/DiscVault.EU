@@ -2,235 +2,373 @@
   "locale": "ja",
   "languageName": "日本語",
   "seo": {
-    "title": "DiscVault — あなたのディスクのためのカタログ",
-    "description": "DiscVault は、4K、Blu-ray、DVD で所有する映画をカタログ化します。バーコードをスキャンし、エディションを区別し、自分のデバイスまたは自分のサーバーで管理。トラッキングはありません。"
+    "title": "DiscVault — ディスクで持っている映画をカタログに",
+    "description": "DiscVault は、4K、Blu-ray、DVD で所有する映画をカタログ化します。バーコードをスキャンし、エディションやボックスセットを整理。iPhone でも自分のサーバーでも。広告もトラッキングもありません。",
+    "ogAlt": "DiscVault：4K、Blu-ray、DVD のバッジが付いた映画のカバーが並ぶ壁。"
+  },
+  "a11y": {
+    "skip": "コンテンツへスキップ",
+    "home": "DiscVault ホーム",
+    "menu": "メニュー",
+    "language": "言語",
+    "sections": "セクション",
+    "pauseMotion": "動きを一時停止",
+    "playMotion": "動きを再生"
+  },
+  "theme": {
+    "label": "テーマ",
+    "system": "システム",
+    "light": "ライト",
+    "dark": "ダーク"
   },
   "nav": {
-    "library": "ライブラリ",
+    "collect": "集める",
     "scan": "スキャン",
     "editions": "エディション",
+    "selfHosted": "セルフホスト",
     "privacy": "プライバシー",
-    "install": "インストール",
+    "faq": "質問",
     "docs": "Docs",
-    "menu": "メニュー",
-    "language": "言語"
+    "get": "DiscVault を入手"
   },
   "actions": {
-    "install": "DiscVault 26 をインストール",
-    "installCompact": "v26 をインストール",
     "appStore": "App Store からダウンロード",
+    "selfHost": "DiscVault をセルフホストする",
     "android": "Android ベータ版へのアクセスを申請",
-    "testflight": "TestFlight ベータ",
-    "privacy": "プライバシーポリシー"
+    "testflight": "TestFlight ベータに参加",
+    "installGuide": "インストールガイドを読む",
+    "migrationGuide": "移行ガイドを読む",
+    "privacyPolicy": "プライバシーポリシーを読む",
+    "discord": "Discord に参加",
+    "github": "GitHub のソースコード",
+    "issues": "不具合を報告",
+    "support": "コーヒーをおごる",
+    "moreAnswers": "その他の回答はドキュメントで",
+    "backToTop": "トップへ戻る"
   },
-  "leader": {
-    "slate": [
-      "DiscVault 26",
-      "あなたのディスクのためのカタログ",
-      "セルフホスト",
-      "iPhone & iPad",
-      "Android ベータ"
-    ],
-    "voice": [
-      "光を、",
-      "残す。"
-    ],
-    "lead": "DiscVault は、あなたが所有する映画をカタログ化します — ディスクで、棚で、自分のサーバーで。",
-    "note": [
-      "PWA & デスクトップ",
-      "インストールガイド"
-    ]
+  "hero": {
+    "title": "映画の棚を、カタログに。",
+    "lead": "DiscVault は、4K、Blu-ray、DVD で持っている映画をすべて記録します。バーコードをスキャンすれば、タイトル、エディション、カバーが自動で入力されます。",
+    "note": "iPhone と iPad で、または自分のサーバーでセルフホスト。Android はベータ版です。",
+    "mediaAlt": "DiscVault のライブラリ：映画のカバーが並ぶ壁。それぞれに 4K、Blu-ray、DVD、ボックスセットのバッジが付いている。"
   },
-  "shelf": {
-    "slate": [
-      "Reel 01",
-      "棚"
-    ],
-    "counter": [
-      "45 / 45 作品",
-      "29 タイル"
-    ],
-    "voice": [
-      "すべて、",
-      "置いた",
-      "場所に。"
-    ],
-    "lead": "ポスターを眺め、リストや詳細表示に切り替え、形式で絞り込み、ボックスセットやコンテナを開く。大きなコレクションでも高速。"
+  "collect": {
+    "title": "コレクターのために。",
+    "blocks": {
+      "library": {
+        "title": "あなたの棚のように見えるライブラリ",
+        "points": [
+          "ポスター、リスト、詳細の各表示",
+          "4K、Blu-ray、DVD で絞り込み",
+          "タイトル、バーコード、キャスト、スタッフで検索",
+          "ボックスセットを開くと収録作品が並ぶ",
+          "大きなコレクションでも高速"
+        ],
+        "mediaAlt": "スマートフォンのライブラリ：形式のバッジが付いた映画カバーのグリッド。"
+      },
+      "detail": {
+        "title": "どの映画にも、きちんとしたページを",
+        "points": [
+          "エディション、形式、バーコード",
+          "キャスト、スタッフ、アートワーク",
+          "自分で選んだポスターや背景画像",
+          "シリーズとそのシーズン",
+          "Plex と Jellyfin にあるコピーを表示"
+        ],
+        "mediaAlt": "スマートフォンの映画ページ：カバー、背景画像、年、形式、バーコード。"
+      },
+      "lists": {
+        "title": "これからのためのリスト",
+        "points": [
+          "今夜のためのウォッチリスト",
+          "日付つきの視聴履歴",
+          "価格アラートつきのウィッシュリスト",
+          "貸出：どのディスクが誰の手元にあるか",
+          "自分で作るタグ"
+        ],
+        "mediaAlt": "ウィッシュリスト：4 作品と、それぞれの現在価格と目標価格。"
+      },
+      "insight": {
+        "title": "持っているものを把握する",
+        "points": [
+          "形式、年代、ジャンル別の統計",
+          "ディスクごとの置き場所を、棚の段まで",
+          "映画ごとの自分の評価",
+          "貸出中のものと、返却期限を過ぎたもの"
+        ],
+        "mediaAlt": "統計：54 作品を Blu-ray、4K UHD、DVD の形式別に分けた内訳。"
+      },
+      "iphone": {
+        "title": "iPhone と iPad になじむ",
+        "points": [
+          "ある監督の映画を何本持っているか Siri に聞く",
+          "Spotlight からどのディスクでも見つける",
+          "自分の TMDB キーで、次に加える作品を見つける",
+          "Face ID でアプリをロック",
+          "iCloud がデバイス間を同期"
+        ],
+        "mediaAlt": "iPhone 上の DiscVault。"
+      }
+    }
   },
-  "read": {
-    "slate": [
-      "Reel 02",
-      "読み取り",
-      "EAN → タイトル · 年 · 形式 · カバー"
-    ],
-    "voice": [
-      "カメラを向ける。ディスクが自分を",
-      "読み取る",
-      "。"
-    ],
-    "lead": "バーコードをスキャンすると、DiscVault がタイトル、年、形式、カバーを入力します。名前で検索することもできます。",
-    "note": [
-      "iPhone & iPad",
-      "スタンドアロン",
-      "サーバー不要"
-    ],
-    "captureAlt": "iPhone の DiscVault：バーコードをスキャンした後に映画を追加"
+  "scan": {
+    "titleStart": "カメラを向ける。",
+    "titleEnd": "あとは自動で整理。",
+    "lead": "どのディスクにもバーコードがあります。下から 1 つ選んで、DiscVault が何を読み取るか見てみてください。",
+    "record": {
+      "format": "形式",
+      "year": "年",
+      "runtime": "上映時間",
+      "minutes": "分",
+      "director": "監督",
+      "barcode": "バーコード",
+      "added": "ライブラリに追加しました"
+    },
+    "note": "iPhone と iPad ではディスクのカタログがデバイス上にあるため、スキャンはオフラインでも動作します。",
+    "fallback": "バーコードがない場合は、タイトルで検索するか、IMDb または TMDB の ID を貼り付けてください。"
   },
-  "edition": {
-    "slate": [
-      "Reel 03",
-      "エディション",
-      "4K · BD · DVD · Steel · ボックスセット"
-    ],
-    "voice": [
-      "エディションが",
-      "大事。"
-    ],
-    "lead": "4K ディスクは Blu-ray ではありません。スチールブックはキープケースではありません。ボックスセット、コンテナ、リリース内のディスクは、それぞれあるがままにカタログ化されます。",
-    "spines": [
-      "4K Ultra HD",
-      "Blu-ray",
-      "DVD",
-      "Steelbook",
-      "ボックスセット · 8 作品"
-    ]
+  "editions": {
+    "title": "エディションが大事。",
+    "lead": "4K ディスクは Blu-ray ではありません。Steelbook はキープケースではありません。ボックスセットも、リリースに含まれるディスクも、あるがままにカタログ化されます。",
+    "items": {
+      "uhd": {
+        "name": "4K Ultra HD",
+        "detail": "この棚に 17 作品"
+      },
+      "bluray": {
+        "name": "Blu-ray",
+        "detail": "この棚に 26 作品"
+      },
+      "dvd": {
+        "name": "DVD",
+        "detail": "この棚に 11 作品"
+      },
+      "steelbook": {
+        "name": "Steelbook",
+        "detail": "この棚に 1 作品"
+      },
+      "boxset": {
+        "name": "ボックスセット",
+        "detail": "3 セット、12 作品"
+      }
+    },
+    "note": "このページの棚は、架空の映画 54 作品のデモライブラリです。"
   },
-  "vault": {
-    "slate": [
-      "Reel 04",
-      "保管庫",
-      "トラッカー 0",
-      "広告 0",
-      "プロファイリングなし"
+  "platforms": {
+    "title": "保管の方法は二つ。",
+    "lead": "ポケットの中のデバイスに、または自宅のサーバーに。どちらも DiscVault です。コレクションの置き場所を選んでください。",
+    "columns": {
+      "ios": {
+        "name": "iPhone と iPad",
+        "sub": "アプリ"
+      },
+      "selfHosted": {
+        "name": "自分のサーバー",
+        "sub": "セルフホスト"
+      }
+    },
+    "rows": {
+      "home": {
+        "label": "保存場所",
+        "ios": "デバイス上に保存し、自分の iCloud で同期",
+        "selfHosted": "自分で運用するサーバー上"
+      },
+      "add": {
+        "label": "ディスクの追加",
+        "ios": "カメラでスキャン、検索、または手入力",
+        "selfHosted": "バーコード、検索、または一括インポート"
+      },
+      "share": {
+        "label": "共有",
+        "ios": "自分のデバイス間",
+        "selfHosted": "家族で共有：招待、グループ、ロール"
+      },
+      "signin": {
+        "label": "サインイン",
+        "ios": "アカウント不要",
+        "selfHosted": "パスキー優先。パスワード、TOTP、OpenID Connect も選べます"
+      },
+      "extras": {
+        "label": "そのほか",
+        "ios": "Siri、Spotlight、Face ID ロック",
+        "selfHosted": "プラグイン、API キー、MCP エンドポイント、バックアップと復元"
+      },
+      "languages": {
+        "label": "言語",
+        "ios": "13",
+        "selfHosted": "29"
+      }
+    },
+    "android": {
+      "title": "Android",
+      "body": "ベータ版です。Discord でアクセスを申請してください。承認されたテスターは Google Play からインストールできます。"
+    },
+    "roadmap": "アプリは現在スタンドアロンで動作します。セルフホスト版 DiscVault との連携は今後の段階で予定しています。"
+  },
+  "selfHosted": {
+    "title": "自分で運用するサーバーで。",
+    "lead": "セルフホスト版は、家族みんなで使える Web アプリです。Docker、Unraid、Home Assistant にインストールできます。",
+    "shots": {
+      "library": {
+        "label": "ライブラリ",
+        "alt": "ブラウザで開いた DiscVault：カバーが並ぶライブラリ。検索、表示切り替え、形式フィルターがある。"
+      },
+      "detail": {
+        "label": "詳細",
+        "alt": "DiscVault：背景画像、カバー、エディション、メタデータを表示した映画の詳細ページ。"
+      },
+      "boxset": {
+        "label": "ボックスセット",
+        "alt": "DiscVault：ボックスセットを開いて収録作品を表示したところ。"
+      },
+      "lists": {
+        "label": "ウォッチリスト",
+        "alt": "DiscVault：カバーのグリッドで表示したウォッチリスト。"
+      }
+    },
+    "points": [
+      "招待制のアカウントとロール",
+      "パスキー優先",
+      "メタデータと価格のプラグイン",
+      "API キーと MCP エンドポイント",
+      "バックアップと復元",
+      "スマートフォンにアプリとしてインストール可能"
     ],
-    "voice": [
-      "あなたが",
-      "置いた",
-      "場所に。"
+    "migration": {
+      "title": "DiscVault Legacy からの移行ですか？",
+      "body": "移行ウィザードが、コレクションを現在の DiscVault に引き継ぎます。"
+    }
+  },
+  "runs": {
+    "title": "DiscVault が動く場所",
+    "names": [
+      "iPhone",
+      "iPad",
+      "Docker",
+      "Unraid",
+      "Home Assistant",
+      "Android ベータ",
+      "あらゆるブラウザ"
     ],
+    "caption": "現在 DiscVault が動く場所。"
+  },
+  "privacy": {
+    "title": "あなたが置いた場所に。",
     "lead": "自分のデバイスに、または自分で運用するサーバーに。プロファイリングなし、広告なし、何を観ているか誰も見ていません。",
+    "tiles": {
+      "ads": {
+        "figure": "0",
+        "label": "広告"
+      },
+      "trackers": {
+        "figure": "0",
+        "label": "トラッカー"
+      },
+      "profiles": {
+        "figure": "0",
+        "label": "プロファイル"
+      },
+      "count": {
+        "figure": "1",
+        "label": "匿名の日次カウント"
+      }
+    },
     "body": [
-      "iPhone と iPad のアプリはコレクションをデバイス上に保持します。DiscVault 26 はあなたが管理するサーバー上に保持します。どちらの場合も、外に出るのはバーコードか検索語だけです。",
+      "iPhone と iPad のアプリはコレクションをデバイス上に保持します。セルフホスト版はあなたが管理するサーバー上に保持します。どちらの場合も、外に出るのはバーコードか検索語だけです。",
       "例外が 1 つあります。セルフホストのサーバーは 1 日 1 回、稼働中であることを api.discvault.eu に知らせます。送るのはバージョンと前回の報告からの日数だけで、識別子もコレクションの情報も含みません。DiscVault がどの程度使われているかを見積もるためだけのもので、オフにできます。"
     ]
   },
-  "formats": {
-    "slate": [
-      "Reel 05",
-      "形式"
+  "plans": {
+    "titleStart": "基本機能は",
+    "titleFree": "無料",
+    "titleEnd": "です。",
+    "lead": "スキャン、カタログ化、検索、バックアップ、復元に費用はかかりません。セルフホスト版は無料で、今後も無料のままです。",
+    "points": [
+      "スキャンと追加は無制限",
+      "完全なバックアップと復元",
+      "ウォッチリスト、視聴履歴、ウィッシュリスト",
+      "デバイス間の iCloud 同期",
+      "データはいつでも書き出せます"
     ],
-    "voice": [
-      "入り口は",
-      "三つ。"
-    ],
-    "lead": "セルフホストの DiscVault 26 は今日から。iPhone と iPad はスタンドアロン。Android はベータ。",
-    "routes": [
-      {
-        "id": "self-hosted",
-        "slate": [
-          "PWA",
-          "Desktop",
-          "DiscVault 26"
-        ],
-        "title": "Self-hosted",
-        "body": [
-          "デスクトップ向けのライブラリ、より充実した詳細ページ、PostgreSQL の基盤、プラグイン、移行ツール、そして自分のサーバーでカタログを管理するコレクターのための管理機能。",
-          "招待制のフロー、オーナー／管理者ツール、ロールベースのアクセス、監査ビュー、API アクセス、MCP 対応の統合。"
-        ],
-        "action": "DiscVault 26 をインストール"
-      },
-      {
-        "id": "ios",
-        "slate": [
-          "iOS",
-          "iPadOS",
-          "スタンドアロン"
-        ],
-        "title": "iPhone & iPad",
-        "body": [
-          "完全にデバイス上で動作。サーバーなしでスキャン、補完、絞り込み、検索。"
-        ],
-        "action": "App Store からダウンロード"
-      },
-      {
-        "id": "android",
-        "slate": [
-          "Android",
-          "ベータ"
-        ],
-        "title": "Android",
-        "body": [
-          "Discord でアクセスを申請してください。承認されたテスターは Google Play からインストールできます。"
-        ],
-        "action": "Android ベータ版へのアクセスを申請"
-      }
-    ],
-    "roadmap": "iOSおよびAndroidアプリは現在スタンドアロンで動作します。セルフホスト版DiscVaultとの連携は今後の段階で予定しています。",
-    "migration": [
-      "Legacy からの移行",
-      "Docs"
-    ]
+    "pro": "アプリ向けの Pro アップグレードは、後日、買い切りで提供します。サブスクリプションではありません。価格はまだ決まっていません。",
+    "support": "DiscVault は 1 人の開発者が作っています。あなたの棚に置く価値があると思ったら、コーヒー 1 杯の支援を歓迎します。寄付で解放される機能はありません。あくまで感謝のしるしです。"
   },
-  "credits": {
-    "install": {
-      "role": "インストール",
-      "name": "DiscVault 26"
-    },
-    "appStore": {
-      "role": "iPhone & iPad",
-      "name": "App Store"
-    },
-    "android": {
-      "role": "Android",
-      "name": "Discord でベータ"
-    },
-    "testflight": {
-      "role": "TestFlight",
-      "name": "ベータ"
-    },
-    "source": {
-      "role": "ソース",
-      "name": "GitHub"
-    },
-    "community": {
-      "role": "コミュニティ",
-      "name": "Discord"
-    },
-    "issues": {
-      "role": "不具合報告",
-      "name": "GitHub"
-    },
-    "languages": {
-      "role": "言語",
-      "name": "20 言語"
-    },
-    "privacy": {
-      "role": "プライバシー",
-      "name": "プライバシーポリシー"
-    },
-    "terms": {
-      "role": "利用規約",
-      "name": "利用規約"
-    },
-    "legacy": {
-      "role": "Legacy",
-      "name": "レガシー移行"
-    },
-    "production": {
-      "role": "制作",
-      "name": "Flux76"
-    },
-    "final": [
-      "DiscVault。コレクターのために",
-      "構築。"
-    ]
+  "faq": {
+    "title": "よい質問です。",
+    "items": {
+      "server": {
+        "question": "サーバーは必要ですか？",
+        "answer": [
+          "いいえ。iPhone と iPad のアプリは単体で完全に動作します。サーバーが必要なのは、家族みんなで使うセルフホストの Web 版を使いたい人だけです。"
+        ]
+      },
+      "account": {
+        "question": "アカウントは必要ですか？",
+        "answer": [
+          "アプリには不要です。セルフホスト版 DiscVault では、アカウントは自分のサーバー上にあり、招待したい人を招待できます。"
+        ]
+      },
+      "data": {
+        "question": "映画の情報はどこから来ますか？",
+        "answer": [
+          "ディスクのリリース情報、バーコード、カバーは、DiscVault を支えるカタログである MovieVault から取得します。映画の詳細、キャスト、「Discover」は、あなた自身の無料キーで TMDB を利用します。",
+          "この製品は TMDB API を使用していますが、TMDB による承認または認定を受けたものではありません。"
+        ]
+      },
+      "sends": {
+        "question": "DiscVault は何を外部に送信しますか？",
+        "answer": [
+          "何かを検索したときのバーコードまたは検索語です。セルフホストのサーバーはこれに加えて 1 日 1 回、稼働中であることを匿名で報告します。これはオフにできます。詳細はプライバシーポリシーにあります。"
+        ]
+      },
+      "sync": {
+        "question": "アプリを自分のサーバーと同期できますか？",
+        "answer": [
+          "まだできません。現在、アプリとセルフホスト版はそれぞれ単体で動作します。両者の連携は今後の段階で予定しています。"
+        ]
+      },
+      "export": {
+        "question": "コレクションをあとから取り出せますか？",
+        "answer": [
+          "はい。バックアップと復元は無料の基本機能に含まれ、CSV エクスポートも同様です。あなたのデータを囲い込むことはありません。"
+        ]
+      },
+      "pro": {
+        "question": "DiscVault は有料になりますか？",
+        "answer": [
+          "基本機能は無料です。スキャン、カタログ化、バックアップ、復元が含まれます。セルフホスト版は無料で、今後も無料のままです。",
+          "アプリ向けの Pro アップグレードを今後予定しています。サブスクリプションではなく、買い切りです。価格はまだ決まっていません。"
+        ]
+      },
+      "android": {
+        "question": "Android アプリはありますか？",
+        "answer": [
+          "ベータ版です。Discord でアクセスを申請してください。承認されたテスターは Google Play からインストールできます。"
+        ]
+      },
+      "legacy": {
+        "question": "まだ DiscVault Legacy を使っています。移行するには？",
+        "answer": [
+          "セルフホスト版には、Legacy からコレクションを引き継ぐ移行ウィザードがあります。移行ガイドで Unraid と Docker での手順を説明しています。"
+        ]
+      }
+    }
+  },
+  "cta": {
+    "title": "最初の 1 枚をスキャン。",
+    "lead": "棚からいちばん近いケースを取り、カメラをバーコードに向けてください。セットアップはそれだけです。"
   },
   "footer": {
     "tagline": "DiscVault。コレクターのために構築。",
-    "source": "GitHub のソース",
-    "legacy": "レガシー移行",
-    "privacy": "プライバシー",
+    "groups": {
+      "product": "製品",
+      "help": "ヘルプ",
+      "legal": "法的情報"
+    },
+    "privacy": "プライバシーポリシー",
     "terms": "利用規約",
-    "support": "サポートスレッド"
+    "legacy": "Legacy からの移行",
+    "production": "制作",
+    "tmdb": "この製品は TMDB API を使用していますが、TMDB による承認または認定を受けたものではありません。"
   }
 }

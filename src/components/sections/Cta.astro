@@ -1,0 +1,66 @@
+---
+import '../../styles/sections/cta.css';
+/** The close: one row of tiles, the action in the middle. */
+import { Picture } from 'astro:assets';
+import type { MarketingContent } from '../../content/types';
+import { APP_STORE_URL, DOCS_URL } from '../../config';
+import { poster } from '../../media/registry';
+import Media from '../media/Media.astro';
+
+interface Props {
+  content: MarketingContent;
+}
+
+const { cta, actions, a11y } = Astro.props.content;
+---
+
+<section class="cta on-base" id="community" data-chapter="on-base">
+  <div class="cta-row">
+    <div class="cta-flank cta-flank-cover" aria-hidden="true">
+      <Picture
+        src={poster('the-last-lighthouse')}
+        formats={['avif']}
+        fallbackFormat="webp"
+        widths={[240, 360, 480, 688]}
+        sizes="20vw"
+        alt=""
+        loading="lazy"
+        decoding="async"
+      />
+    </div>
+    <div class="cta-tile on-accent">
+      <h2 class="cta-title" data-rise>{cta.title}</h2>
+      <p class="cta-lead" data-rise>{cta.lead}</p>
+      <div class="actions" data-rise>
+        <a
+          class="button"
+          href={APP_STORE_URL}
+          data-cta="app-store"
+          data-rank="primary"
+        >
+          {actions.appStore}
+        </a>
+        <a
+          class="button button-quiet"
+          href={DOCS_URL}
+          data-cta="self-hosted"
+          data-rank="primary"
+        >
+          {actions.selfHost}
+        </a>
+      </div>
+    </div>
+    <div class="cta-flank cta-flank-disc">
+      <Media
+        slot="disc"
+        alt=""
+        ratio="1"
+        sizes="(min-width: 56.25rem) 20vw, 50vw"
+        widths={[360, 540, 720, 1076]}
+        position="center"
+        pauseLabel={a11y.pauseMotion}
+        playLabel={a11y.playMotion}
+      />
+    </div>
+  </div>
+</section>

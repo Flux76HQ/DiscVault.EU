@@ -3,8 +3,6 @@ import { readFile, writeFile } from 'node:fs/promises';
 const tokens = JSON.parse(await readFile('src/design/tokens.json', 'utf8'));
 const source = JSON.parse(await readFile('src/design/source.json', 'utf8'));
 const outputPath = 'src/styles/tokens.css';
-const pinOutputPath = 'src/styles/tokens-dark-pin.css';
-const scopeOutputPath = 'src/styles/tokens-dark-scope.css';
 
 const variableName = (key) => `--dv-${key}`;
 const themeLines = (theme) =>
@@ -28,6 +26,17 @@ const formatLines = (theme) =>
     `  --dv-fmt-digital-fill: ${tokens.format.digital[theme].fill};`,
     `  --dv-fmt-digital-on: ${tokens.format.digital[theme].on};`,
   ].join('\n');
+// Three states, the same three the apps have: the system setting decides
+// unless the visitor chose. `data-theme` on the root element is that choice
+// (set before first paint by the layout, stored by the theme switcher).
+// Dark is the brand's first scheme, so it is the bare :root.
+const light = `${themeLines('light')}
+${formatLines('light')}
+  --dv-accent-bright: ${accent['bright-light']};
+  --dv-sheen: ${tokens.effect.sheen.light.$value};
+  --dv-shadow: ${tokens.effect.shadow.light.$value};
+  --dv-theme-color: ${tokens.pwa['theme-color-light'].$value};
+  color-scheme: light;`;
 const generated = `/*
  * Generated from ${source.repository}/${source.tokens}
  * Revision: ${source.revision}
@@ -45,76 +54,28 @@ ${themeLines('dark')}
   --dv-shadow: ${tokens.effect.shadow.dark.$value};
   --dv-theme-color: ${tokens.pwa['theme-color-dark'].$value};
 ${formatLines('dark')}
+  color-scheme: dark;
 }
 
 @media (prefers-color-scheme: light) {
-  :root {
-${themeLines('light')}
-${formatLines('light')}
-    --dv-accent-bright: ${accent['bright-light']};
-    --dv-sheen: ${tokens.effect.sheen.light.$value};
-    --dv-shadow: ${tokens.effect.shadow.light.$value};
-    --dv-theme-color: ${tokens.pwa['theme-color-light'].$value};
+  :root:not([data-theme='dark']) {
+${light}
   }
 }
-`;
 
-// The marketing routes are dark-only. tokens.css still carries the light
-// scheme for the legal shell, so this second file re-pins the dark values on
-// marketing routes (imported only there) with a selector that outranks the
-// light media query in tokens.css.
-const pinned = `/*
- * Generated from ${source.repository}/${source.tokens}
- * Dark-only pin for the marketing routes. Run "pnpm brand:build" after
- * updating tokens.json.
- */
-@media (prefers-color-scheme: light) {
-  html:root {
-${themeLines('dark')}
-    --dv-accent-bright: ${accent['bright-dark']};
-    --dv-sheen: ${tokens.effect.sheen.dark.$value};
-    --dv-shadow: ${tokens.effect.shadow.dark.$value};
-    --dv-theme-color: ${tokens.pwa['theme-color-dark'].$value};
-${formatLines('dark')}
-  }
-}
-`;
-
-// The shell (strip and credits) is a dark object on every page, including
-// the light-capable legal shell: this scoped file pins the dark values on
-// `.cine-dark` in both schemes.
-const scoped = `/*
- * Generated from ${source.repository}/${source.tokens}
- * Dark values scoped to .cine-dark (the strip and the credits) in both
- * schemes. Run "pnpm brand:build" after updating tokens.json.
- */
-.cine-dark {
-${themeLines('dark')}
-  --dv-accent-bright: ${accent['bright-dark']};
-  --dv-sheen: ${tokens.effect.sheen.dark.$value};
-  --dv-shadow: ${tokens.effect.shadow.dark.$value};
-${formatLines('dark')}
+:root[data-theme='light'] {
+${light}
 }
 `;
 
 if (process.argv.includes('--check')) {
   const current = await readFile(outputPath, 'utf8').catch(() => '');
-  const currentPin = await readFile(pinOutputPath, 'utf8').catch(() => '');
-  const currentScope = await readFile(scopeOutputPath, 'utf8').catch(() => '');
-  if (
-    current !== generated ||
-    currentPin !== pinned ||
-    currentScope !== scoped
-  ) {
+  if (current !== generated) {
     console.error('Brand CSS is stale. Run: pnpm brand:build');
     process.exit(1);
   }
   console.log('Brand CSS matches Chrome & Blue v3.1 source tokens');
 } else {
   await writeFile(outputPath, generated);
-  await writeFile(pinOutputPath, pinned);
-  await writeFile(scopeOutputPath, scoped);
-  console.log(
-    `Generated ${outputPath}, ${pinOutputPath} and ${scopeOutputPath}`,
-  );
+  console.log(`Generated ${outputPath}`);
 }

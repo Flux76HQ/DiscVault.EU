@@ -2,235 +2,373 @@
   "locale": "fi",
   "languageName": "Suomi",
   "seo": {
-    "title": "DiscVault — luettelo levyillesi",
-    "description": "DiscVault luetteloi elokuvasi 4K-, Blu-ray- ja DVD-levyillä. Skannaa viivakoodi, pidä julkaisut erillään, omalla laitteella tai palvelimella. Ei seurantaa."
+    "title": "DiscVault — luetteloi levyillä omistamasi elokuvat",
+    "description": "DiscVault luetteloi elokuvasi 4K-, Blu-ray- ja DVD-levyillä. Skannaa viivakoodi, pidä julkaisut erillään, iPhonella tai palvelimellasi. Ei mainoksia, ei seurantaa.",
+    "ogAlt": "DiscVault: seinällinen elokuvien kansia, joissa on 4K-, Blu-ray- ja DVD-merkit."
+  },
+  "a11y": {
+    "skip": "Siirry sisältöön",
+    "home": "DiscVault, etusivu",
+    "menu": "Valikko",
+    "language": "Kieli",
+    "sections": "Osiot",
+    "pauseMotion": "Pysäytä liike",
+    "playMotion": "Käynnistä liike"
+  },
+  "theme": {
+    "label": "Teema",
+    "system": "Järjestelmä",
+    "light": "Vaalea",
+    "dark": "Tumma"
   },
   "nav": {
-    "library": "Kirjasto",
+    "collect": "Keräile",
     "scan": "Skannaa",
     "editions": "Julkaisut",
+    "selfHosted": "Oma palvelin",
     "privacy": "Tietosuoja",
-    "install": "Asenna",
+    "faq": "Kysymykset",
     "docs": "Docs",
-    "menu": "Valikko",
-    "language": "Kielet"
+    "get": "Hanki DiscVault"
   },
   "actions": {
-    "install": "Asenna DiscVault 26",
-    "installCompact": "Asenna v26",
     "appStore": "Lataa App Storesta",
+    "selfHost": "Asenna DiscVault omalle palvelimelle",
     "android": "Pyydä pääsyä Android-betaan",
-    "testflight": "TestFlight-beta",
-    "privacy": "Tietosuojakäytäntö"
+    "testflight": "Liity TestFlight-betaan",
+    "installGuide": "Lue asennusohje",
+    "migrationGuide": "Lue siirto-ohje",
+    "privacyPolicy": "Lue tietosuojakäytäntö",
+    "discord": "Liity Discordiin",
+    "github": "Lähdekoodi GitHubissa",
+    "issues": "Ilmoita ongelmasta",
+    "support": "Tarjoa minulle kahvi",
+    "moreAnswers": "Lisää vastauksia ohjeissa",
+    "backToTop": "Takaisin ylös"
   },
-  "leader": {
-    "slate": [
-      "DiscVault 26",
-      "Luettelo levyillesi",
-      "Itse isännöity",
-      "iPhone & iPad",
-      "Android-beta"
-    ],
-    "voice": [
-      "Valo, ",
-      "talletettu."
-    ],
-    "lead": "DiscVault luetteloi omistamasi elokuvat — levyllä, hyllyssä, omalla palvelimellasi.",
-    "note": [
-      "PWA & työpöytä",
-      "Asennusohje"
-    ]
+  "hero": {
+    "title": "Elokuvahyllysi, luetteloituna.",
+    "lead": "DiscVault pitää kirjaa jokaisesta elokuvasta, jonka omistat 4K-, Blu-ray- tai DVD-levyllä. Skannaa viivakoodi, niin nimi, julkaisu ja kansi täyttyvät itsestään.",
+    "note": "iPhonelle ja iPadille, tai itse ylläpidettynä omalla palvelimellasi. Android on betassa.",
+    "mediaAlt": "DiscVaultin kirjasto: seinällinen elokuvien kansia, joista jokaisessa on 4K-, Blu-ray-, DVD- tai boksimerkki."
   },
-  "shelf": {
-    "slate": [
-      "Reel 01",
-      "Hylly"
-    ],
-    "counter": [
-      "45 / 45 elokuvaa",
-      "29 ruutua"
-    ],
-    "voice": [
-      "Jokainen julkaisu siinä, mihin sen ",
-      "jätit",
-      "."
-    ],
-    "lead": "Selaa julisteita, vaihda luettelo- tai tietonäkymään, suodata formaatin mukaan, avaa boksit ja säiliöt. Nopea suurissa kokoelmissa."
-  },
-  "read": {
-    "slate": [
-      "Reel 02",
-      "Luku",
-      "EAN → Nimi · Vuosi · Formaatti · Kansi"
-    ],
-    "voice": [
-      "Osoita kameralla. Levy ",
-      "lukee",
-      " itsensä."
-    ],
-    "lead": "Skannaa viivakoodi, ja DiscVault täyttää nimen, vuoden, formaatin ja kannen. Tai hae nimellä.",
-    "note": [
-      "iPhone & iPad",
-      "Itsenäinen",
-      "Ei palvelinta"
-    ],
-    "captureAlt": "DiscVault iPhonella: elokuvan lisääminen viivakoodin skannauksen jälkeen"
-  },
-  "edition": {
-    "slate": [
-      "Reel 03",
-      "Julkaisu",
-      "4K · BD · DVD · Steel · Boksi"
-    ],
-    "voice": [
-      "Julkaisuilla on ",
-      "väliä."
-    ],
-    "lead": "4K-levy ei ole Blu-ray. Steelbook ei ole tavallinen kotelo. Boksit, säiliöt ja julkaisun sisältämät levyt luetteloidaan sinä, mitä ne ovat.",
-    "spines": [
-      "4K Ultra HD",
-      "Blu-ray",
-      "DVD",
-      "Steelbook",
-      "Boksi · 8 elokuvaa"
-    ]
-  },
-  "vault": {
-    "slate": [
-      "Reel 04",
-      "Holvi",
-      "0 seurainta",
-      "0 mainosta",
-      "Ei profilointia"
-    ],
-    "voice": [
-      "Se on siellä, minne sen ",
-      "laitat",
-      "."
-    ],
-    "lead": "Omalla laitteellasi tai palvelimella, jota itse ylläpidät. Ei profilointia, ei mainoksia, kukaan ei katso mitä katsot.",
-    "body": [
-      "iPhone- ja iPad-sovellus pitää kokoelman laitteella. DiscVault 26 pitää sen palvelimella, jota hallinnoit. Kummassakin tapauksessa laitteelta lähtee vain viivakoodi tai hakusana.",
-      "Yksi poikkeus: itse isännöity palvelin ilmoittaa kerran päivässä osoitteeseen api.discvault.eu olevansa käynnissä. Se lähettää versionsa ja päivien määrän edellisestä ilmoituksestaan: ei tunnistetta eikä mitään kokoelmastasi. Tällä arvioidaan vain sitä, kuinka paljon DiscVaultia käytetään, ja voit kytkeä sen pois."
-    ]
-  },
-  "formats": {
-    "slate": [
-      "Reel 05",
-      "Formaatit"
-    ],
-    "voice": [
-      "Kolme tietä ",
-      "sisään."
-    ],
-    "lead": "Itse isännöity DiscVault 26 tänään. iPhone ja iPad itsenäisesti. Android betassa.",
-    "routes": [
-      {
-        "id": "self-hosted",
-        "slate": [
-          "PWA",
-          "Desktop",
-          "DiscVault 26"
+  "collect": {
+    "title": "Rakennettu keräilijöille.",
+    "blocks": {
+      "library": {
+        "title": "Kirjasto, joka näyttää hyllyltäsi",
+        "points": [
+          "Julisteet, luettelo tai tietonäkymä",
+          "Suodata: 4K, Blu-ray tai DVD",
+          "Hae nimellä, viivakoodilla, näyttelijällä tai tekijällä",
+          "Boksit avautuvat sisältämiinsä elokuviin",
+          "Nopea suurellakin kokoelmalla"
         ],
-        "title": "Self-hosted",
-        "body": [
-          "Työpöydälle suunniteltu kirjasto, rikkaammat tietosivut, PostgreSQL-perusta, lisäosat, siirtotyökalut ja hallintatyökalut keräilijöille, jotka pitävät luettelonsa omalla palvelimellaan.",
-          "Kutsuperusteiset kulut, omistajan ja ylläpitäjän työkalut, roolipohjainen pääsy, auditointinäkymät, API-pääsy ja MCP-valmiit integraatiot."
-        ],
-        "action": "Asenna DiscVault 26"
+        "mediaAlt": "Kirjasto puhelimessa: ruudukko elokuvien kansia formaattimerkkeineen."
       },
-      {
-        "id": "ios",
-        "slate": [
-          "iOS",
-          "iPadOS",
-          "Itsenäinen"
+      "detail": {
+        "title": "Jokainen elokuva saa kunnon sivun",
+        "points": [
+          "Julkaisu, formaatti ja viivakoodi",
+          "Näyttelijät, tekijät ja kuvitus",
+          "Oma juliste tai taustakuva",
+          "Sarjat ja niiden kaudet",
+          "Plex- ja Jellyfin-kopiot merkittyinä"
         ],
-        "title": "iPhone & iPad",
-        "body": [
-          "Toimii kokonaan laitteella. Skannaa, rikasta, suodata ja hae ilman palvelinta."
-        ],
-        "action": "Lataa App Storesta"
+        "mediaAlt": "Elokuvan sivu puhelimessa: kansi, taustakuva, vuosi, formaatti ja viivakoodi."
       },
-      {
-        "id": "android",
-        "slate": [
-          "Android",
-          "Beta"
+      "lists": {
+        "title": "Listat sille, mitä tapahtuu seuraavaksi",
+        "points": [
+          "Katselulista tälle illalle",
+          "Katseluhistoria päivämäärineen",
+          "Toivelista hintahälytyksillä",
+          "Lainat: kenellä mikäkin levy on",
+          "Itse keksimäsi tunnisteet"
         ],
-        "title": "Android",
-        "body": [
-          "Pyydä pääsyä Discordissa. Hyväksytyt testaajat asentavat Google Playn kautta."
+        "mediaAlt": "Toivelista: neljä elokuvaa nykyisine hintoineen ja tavoitehintoineen."
+      },
+      "insight": {
+        "title": "Tiedä, mitä omistat",
+        "points": [
+          "Tilastot formaatin, vuosikymmenen ja genren mukaan",
+          "Jokaiselle levylle paikka, hyllyä myöten",
+          "Oma arvosanasi jokaiselle elokuvalle",
+          "Mikä on lainassa ja mikä myöhässä"
         ],
-        "action": "Pyydä pääsyä Android-betaan"
+        "mediaAlt": "Tilastot: 54 elokuvaa jaettuna formaatin mukaan: Blu-ray, 4K UHD ja DVD."
+      },
+      "iphone": {
+        "title": "Kotonaan iPhonessa ja iPadissa",
+        "points": [
+          "Kysy Siriltä, montako ohjaajan elokuvaa omistat",
+          "Löydä mikä tahansa levy Spotlightilla",
+          "Etsi uutta lisättävää omalla TMDB-avaimellasi",
+          "Lukitse sovellus Face ID:llä",
+          "iCloud pitää laitteesi ajan tasalla"
+        ],
+        "mediaAlt": "DiscVault iPhonessa."
       }
-    ],
-    "roadmap": "iOS- ja Android-sovellukset toimivat tällä hetkellä itsenäisesti. Niiden yhdistäminen itse ylläpidettyyn DiscVault-asennukseen on suunnitteilla myöhemmin.",
-    "migration": [
-      "Siirtyminen Legacystä",
-      "Docs"
-    ]
+    }
   },
-  "credits": {
-    "install": {
-      "role": "Asenna",
-      "name": "DiscVault 26"
+  "scan": {
+    "titleStart": "Osoita kameralla.",
+    "titleEnd": "Levy luetteloi itsensä.",
+    "lead": "Jokaisessa levyssä on viivakoodi. Valitse jokin näistä ja katso, mitä DiscVault siitä saa irti.",
+    "record": {
+      "format": "Formaatti",
+      "year": "Vuosi",
+      "runtime": "Kesto",
+      "minutes": "min",
+      "director": "Ohjaaja",
+      "barcode": "Viivakoodi",
+      "added": "Lisätty kirjastoosi"
     },
-    "appStore": {
-      "role": "iPhone & iPad",
-      "name": "App Store"
+    "note": "iPhonessa ja iPadissa levyluettelo on laitteella, joten skannaus toimii ilman verkkoyhteyttä.",
+    "fallback": "Ei viivakoodia? Hae nimellä tai liitä IMDb- tai TMDB-tunnus."
+  },
+  "editions": {
+    "title": "Julkaisuilla on väliä.",
+    "lead": "4K-levy ei ole Blu-ray. Steelbook ei ole tavallinen kotelo. Boksit ja julkaisun sisältämät levyt luetteloidaan sinä, mitä ne ovat.",
+    "items": {
+      "uhd": {
+        "name": "4K Ultra HD",
+        "detail": "17 tässä hyllyssä"
+      },
+      "bluray": {
+        "name": "Blu-ray",
+        "detail": "26 tässä hyllyssä"
+      },
+      "dvd": {
+        "name": "DVD",
+        "detail": "11 tässä hyllyssä"
+      },
+      "steelbook": {
+        "name": "Steelbook",
+        "detail": "1 tässä hyllyssä"
+      },
+      "boxset": {
+        "name": "Boksit",
+        "detail": "3 boksia, 12 elokuvaa"
+      }
+    },
+    "note": "Tämän sivun hylly on esittelykirjasto, jossa on 54 keksittyä elokuvaa."
+  },
+  "platforms": {
+    "title": "Kaksi tapaa säilyttää se.",
+    "lead": "Taskussasi olevalla laitteella tai kotonasi olevalla palvelimella. Molemmat ovat DiscVault; valitse, missä kokoelmasi asuu.",
+    "columns": {
+      "ios": {
+        "name": "iPhone ja iPad",
+        "sub": "Sovellus"
+      },
+      "selfHosted": {
+        "name": "Oma palvelimesi",
+        "sub": "Itse ylläpidetty"
+      }
+    },
+    "rows": {
+      "home": {
+        "label": "Missä se asuu",
+        "ios": "Laitteellasi, synkronoituna oman iCloudisi kautta",
+        "selfHosted": "Palvelimella, jota itse ylläpidät"
+      },
+      "add": {
+        "label": "Levyn lisääminen",
+        "ios": "Skannaa kameralla, hae tai kirjoita itse",
+        "selfHosted": "Viivakoodi, haku tai kokonainen tuonti"
+      },
+      "share": {
+        "label": "Jakaminen",
+        "ios": "Omat laitteesi",
+        "selfHosted": "Kotitalous: kutsut, ryhmät ja roolit"
+      },
+      "signin": {
+        "label": "Kirjautuminen",
+        "ios": "Ei tiliä lainkaan",
+        "selfHosted": "Ensisijaisesti pääsyavaimet; halutessasi salasana, TOTP tai OpenID Connect"
+      },
+      "extras": {
+        "label": "Lisäksi",
+        "ios": "Siri, Spotlight ja Face ID -lukitus",
+        "selfHosted": "Lisäosat, API-avaimet, MCP-päätepiste, varmuuskopiointi ja palautus"
+      },
+      "languages": {
+        "label": "Kielet",
+        "ios": "13",
+        "selfHosted": "29"
+      }
     },
     "android": {
-      "role": "Android",
-      "name": "Beta Discordissa"
+      "title": "Android",
+      "body": "Betassa. Pyydä pääsyä Discordissa; hyväksytyt testaajat asentavat Google Playn kautta."
     },
-    "testflight": {
-      "role": "TestFlight",
-      "name": "Beta"
+    "roadmap": "Sovellukset toimivat tällä hetkellä itsenäisesti. Niiden yhdistäminen itse ylläpidettyyn DiscVault-asennukseen on suunnitteilla myöhemmin."
+  },
+  "selfHosted": {
+    "title": "Palvelimella, jota ylläpidät.",
+    "lead": "Itse ylläpidetty versio on verkkosovellus koko kotitaloudelle. Sen voi asentaa Dockeriin, Unraidiin tai Home Assistantiin.",
+    "shots": {
+      "library": {
+        "label": "Kirjasto",
+        "alt": "DiscVault selaimessa: kirjasto kansiseinänä, jossa on haku, näkymän vaihto ja formaattisuodattimet."
+      },
+      "detail": {
+        "label": "Tiedot",
+        "alt": "DiscVault: elokuvan tietosivu, jossa on taustakuva, kansi, julkaisu ja metatiedot."
+      },
+      "boxset": {
+        "label": "Boksi",
+        "alt": "DiscVault: avattu boksi, josta näkyvät sen sisältämät elokuvat."
+      },
+      "lists": {
+        "label": "Katselulista",
+        "alt": "DiscVault: katselulista kansien ruudukkona."
+      }
     },
-    "source": {
-      "role": "Lähdekoodi",
-      "name": "GitHub"
+    "points": [
+      "Tilit vain kutsusta, rooleineen",
+      "Pääsyavaimet ensin",
+      "Lisäosat metatiedoille ja hinnoille",
+      "API-avaimet ja MCP-päätepiste",
+      "Varmuuskopiointi ja palautus",
+      "Asentuu sovellukseksi puhelimeesi"
+    ],
+    "migration": {
+      "title": "Tuletko DiscVault Legacystä?",
+      "body": "Ohjattu siirto tuo kokoelmasi nykyiseen DiscVaultiin."
+    }
+  },
+  "runs": {
+    "title": "Missä DiscVault toimii",
+    "names": [
+      "iPhone",
+      "iPad",
+      "Docker",
+      "Unraid",
+      "Home Assistant",
+      "Android-beta",
+      "Mikä tahansa selain"
+    ],
+    "caption": "Missä DiscVault toimii tänään."
+  },
+  "privacy": {
+    "title": "Se on siellä, minne sen laitat.",
+    "lead": "Omalla laitteellasi tai palvelimella, jota itse ylläpidät. Ei profilointia, ei mainoksia, kukaan ei katso mitä katsot.",
+    "tiles": {
+      "ads": {
+        "figure": "0",
+        "label": "mainosta"
+      },
+      "trackers": {
+        "figure": "0",
+        "label": "seurainta"
+      },
+      "profiles": {
+        "figure": "0",
+        "label": "profiilia"
+      },
+      "count": {
+        "figure": "1",
+        "label": "anonyymi päivittäinen laskenta"
+      }
     },
-    "community": {
-      "role": "Yhteisö",
-      "name": "Discord"
-    },
-    "issues": {
-      "role": "Ongelmat",
-      "name": "GitHub"
-    },
-    "languages": {
-      "role": "Kielet",
-      "name": "Kaksikymmentä"
-    },
-    "privacy": {
-      "role": "Tietosuoja",
-      "name": "Tietosuojakäytäntö"
-    },
-    "terms": {
-      "role": "Ehdot",
-      "name": "Käyttöehdot"
-    },
-    "legacy": {
-      "role": "Legacy",
-      "name": "Vanhan version siirto"
-    },
-    "production": {
-      "role": "Tuotanto",
-      "name": "Flux76"
-    },
-    "final": [
-      "DiscVault. Tehty ",
-      "keräilijöille."
+    "body": [
+      "iPhone- ja iPad-sovellus pitää kokoelman laitteella. Itse ylläpidetty versio pitää sen palvelimella, jota hallinnoit. Kummassakin tapauksessa ulos lähtee vain viivakoodi tai hakusana.",
+      "Yksi poikkeus: itse ylläpidetty palvelin ilmoittaa kerran päivässä osoitteeseen api.discvault.eu olevansa käynnissä. Se lähettää versionsa ja päivien määrän edellisestä ilmoituksestaan: ei tunnistetta eikä mitään kokoelmastasi. Tällä arvioidaan vain sitä, kuinka paljon DiscVaultia käytetään, ja voit kytkeä sen pois."
     ]
+  },
+  "plans": {
+    "titleStart": "Ydin on",
+    "titleFree": "ilmainen",
+    "titleEnd": ".",
+    "lead": "Skannaus, luettelointi, haku, varmuuskopiointi ja palautus eivät maksa mitään. Itse ylläpidetty versio on ilmainen ja pysyy ilmaisena.",
+    "points": [
+      "Skannaus ja lisääminen ilman rajoituksia",
+      "Täysi varmuuskopiointi ja palautus",
+      "Katselulista, historia ja toivelista",
+      "iCloud-synkronointi laitteidesi välillä",
+      "Tietosi saat ulos, aina"
+    ],
+    "pro": "Sovelluksiin tulee myöhemmin Pro-päivitys kertaostoksena. Se ei ole tilaus. Hintaa ei ole vielä päätetty.",
+    "support": "DiscVaultin tekee yksi kehittäjä. Jos se ansaitsee paikan hyllyssäsi, kahvi on tervetullut. Lahjoitus ei avaa mitään; se on vain kiitos."
+  },
+  "faq": {
+    "title": "Hyviä kysymyksiä.",
+    "items": {
+      "server": {
+        "question": "Tarvitsenko palvelimen?",
+        "answer": [
+          "Et. iPhone- ja iPad-sovellus toimii täysin itsenäisesti. Palvelin on vain niille, jotka haluavat itse ylläpidetyn verkkoversion, joka on tehty koko kotitaloudelle."
+        ]
+      },
+      "account": {
+        "question": "Tarvitsenko tilin?",
+        "answer": [
+          "Et sovellukseen. Itse ylläpidetyssä DiscVaultissa tilit ovat omalla palvelimellasi; kutsut mukaan kenet haluat."
+        ]
+      },
+      "data": {
+        "question": "Mistä elokuvatiedot tulevat?",
+        "answer": [
+          "Levyjulkaisut, viivakoodit ja kannet tulevat MovieVaultista, DiscVaultin taustalla olevasta luettelosta. Elokuvan tiedot, näyttelijät ja Discover-osio käyttävät TMDB:tä omalla ilmaisella avaimellasi.",
+          "Tämä tuote käyttää TMDB:n APIa, mutta se ei ole TMDB:n hyväksymä eikä sertifioima."
+        ]
+      },
+      "sends": {
+        "question": "Mitä DiscVault lähettää ulos?",
+        "answer": [
+          "Viivakoodin tai hakusanan, kun haet jotakin. Itse ylläpidetty palvelin ilmoittaa lisäksi kerran päivässä nimettömästi olevansa käynnissä; voit kytkeä sen pois. Yksityiskohdat ovat tietosuojakäytännössä."
+        ]
+      },
+      "sync": {
+        "question": "Voiko sovellus synkronoida oman palvelimeni kanssa?",
+        "answer": [
+          "Ei vielä. Sovellukset ja itse ylläpidetty versio toimivat tällä hetkellä kumpikin itsenäisesti; niiden yhdistäminen on suunnitteilla myöhemmin."
+        ]
+      },
+      "export": {
+        "question": "Saanko kokoelmani taas ulos?",
+        "answer": [
+          "Kyllä. Varmuuskopiointi ja palautus kuuluvat ilmaiseen ytimeen, samoin CSV-vienti. Tietojasi ei koskaan pidätetä."
+        ]
+      },
+      "pro": {
+        "question": "Maksaako DiscVault jotakin?",
+        "answer": [
+          "Ydin on ilmainen: skannaus, luettelointi, varmuuskopiointi ja palautus. Itse ylläpidetty versio on ilmainen ja pysyy ilmaisena.",
+          "Sovelluksiin on suunnitteilla myöhemmin Pro-päivitys, kertaostoksena eikä tilauksena. Sen hintaa ei ole vielä päätetty."
+        ]
+      },
+      "android": {
+        "question": "Onko Android-sovellusta?",
+        "answer": [
+          "Se on betassa. Pyydä pääsyä Discordissa; hyväksytyt testaajat asentavat sen Google Playn kautta."
+        ]
+      },
+      "legacy": {
+        "question": "Käytän yhä DiscVault Legacyä. Miten siirryn?",
+        "answer": [
+          "Itse ylläpidetyssä versiossa on ohjattu siirto, joka tuo kokoelmasi Legacystä. Siirto-ohje käy sen läpi Unraidille ja Dockerille."
+        ]
+      }
+    }
+  },
+  "cta": {
+    "title": "Skannaa ensimmäinen levysi.",
+    "lead": "Ota hyllystä lähin kotelo ja osoita kameralla viivakoodia. Muuta käyttöönottoa ei tarvita."
   },
   "footer": {
     "tagline": "DiscVault. Rakennettu keräilijöille.",
-    "source": "Lähdekoodi GitHubissa",
-    "legacy": "Vanhan version siirto",
-    "privacy": "Tietosuoja",
+    "groups": {
+      "product": "Tuote",
+      "help": "Tuki",
+      "legal": "Oikeudelliset tiedot"
+    },
+    "privacy": "Tietosuojakäytäntö",
     "terms": "Käyttöehdot",
-    "support": "Tukiketju"
+    "legacy": "Siirto Legacystä",
+    "production": "Tekijä",
+    "tmdb": "Tämä tuote käyttää TMDB:n APIa, mutta se ei ole TMDB:n hyväksymä eikä sertifioima."
   }
 }

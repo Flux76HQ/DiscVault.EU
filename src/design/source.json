@@ -1,7 +1,7 @@
 {
   "repository": "Flux76HQ/App-Guidance",
   "revision": "957e28901e0ce54d7bdc297593f716bb9c0fe9fd",
-  "tokens": "docs/branding/apps/discvault/pwa/tokens.json",
-  "logo": "docs/branding/apps/discvault/mobile/logo/discvault-icon-512-dark.png",
+  "tokens": "projects/discvault/branding/pwa/tokens.json",
+  "logo": "projects/discvault/branding/mobile/logo/discvault-icon-512-dark.png",
   "brand": "DiscVault Chrome & Blue v3.1"
 }

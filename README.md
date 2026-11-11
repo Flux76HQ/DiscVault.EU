@@ -38,16 +38,70 @@ corepack pnpm health         # build plus links and critical-route smoke checks
 corepack pnpm check          # complete release gate
 corepack pnpm format         # apply repository formatting
 corepack pnpm lighthouse     # local Lighthouse budgets (Chromium required)
+corepack pnpm check:experience  # browser checks on a built dist/ (Chromium required)
+corepack pnpm matrix         # review screenshots per chapter in .experience/ (not a gate)
 ```
 
-The complete gate checks formatting, generated Chrome & Blue brand tokens,
-Astro/TypeScript, all 20 locale models, the build, internal links, protected
-legal/Legacy routes, responsive image output and synchronized versions.
+The complete gate (`check`) checks formatting, generated Chrome & Blue brand
+tokens, Astro/TypeScript, all 20 locale models, the build, internal links, the
+critical routes and synchronized versions. What each gate holds the site to:
+
+- **`check:locales`** — every locale has exactly the keys, value types and
+  array lengths of `en.json`, and the ids of `src/content/structure.ts`; no
+  empty string; `seo.title` ≤ 60 and `seo.description` ≤ 170 characters; no URL
+  inside copy (link targets live in `src/config.ts`), except the host
+  `api.discvault.eu` that `privacy.body[1]` must name; `DiscVault` stays
+  untranslated. A locale that still holds the English copy of the listed paths
+  is an error, or only a warning while the marker file
+  `scripts/.locales-pending` exists: delete the marker when the translations
+  land.
+- **`check:links`** — every internal `href`, `src`, `poster`, `srcset` and
+  `imagesrcset` in the build resolves to a file, and so do the icons named in
+  `site.webmanifest` when the build has one.
+- **`check:routes`** — the legal bodies are verbatim, with their hreflang and
+  privacy claims; the Legacy page, `public/styles.css` and `public/favicon.svg`
+  are byte-identical to their SHA-256 pins; the FAQ redirect, robots, sitemap,
+  `CNAME` and 21 hreflang alternates are intact. Every homepage has its fifteen
+  anchors and the call-to-action contract, read from `data-cta` (`get`,
+  `app-store`, `self-hosted`, `android`, `testflight`) and `data-rank`
+  (`primary`, `secondary`, `text`) rather than from CSS classes: the hero and
+  the closing call each carry one primary App Store and one primary self-hosted
+  link, the bar two primary `get` links to `#install`, and a beta (TestFlight,
+  Android) is never primary. All JSON-LD parses, each homepage has a
+  `SoftwareApplication` node, and an `FAQPage` lists as many questions as the
+  page shows. `#privacy` names `api.discvault.eu` in all 20 locales. Every
+  `<video>` is a muted, inline loop with `preload="none"`, dimensions, no
+  `autoplay`, and a WebM and an MP4 source; a video file is at most 1.5 MB and
+  all of them together 16 MB; the fonts total at most 220 KB (1 KB = 1000
+  bytes). No `--dv-` custom property is declared outside the generated token
+  files.
+- **`check:experience`** — in a real browser: nothing in `<main>` is hidden
+  without JavaScript; no request leaves the site; no video is requested before
+  the first scroll; a loop plays only while on screen, can be paused, and is
+  neither fetched nor started under reduced motion or Save-Data; a full scroll
+  shifts the layout by at most 0.05; the scan demo and the bar's chapter colour
+  work; no keyframes animate `background-position`, `filter` or `box-shadow`;
+  axe finds nothing serious at 1440 and 390 px; and `/`, `/de/` and `/ja/` never
+  scroll sideways at 320, 390, 768 and 1440 px.
+- **`lighthouse`** — performance ≥ 80, accessibility ≥ 95, best practices ≥ 90
+  and SEO ≥ 95 for English, Dutch and the legal shell, each judged on the median
+  of three runs.
+
+The 3.0 contract and the reasons it replaced the 2.0 one are recorded in
+`Flux76HQ/App-Guidance` (`projects/discvault/website/chrome-and-blue-web.md`,
+ADR-0021); an assertion that changed for a design reason says so in a comment
+above it.
 
 Install the project browser once with
-`corepack pnpm exec playwright install chromium` before running Lighthouse.
-CI runs performance, accessibility, best-practices and SEO budgets for English,
-Dutch and the legal shell.
+`corepack pnpm exec playwright install chromium` before running Lighthouse,
+the experience checks or the screenshot matrix. To use a Chromium that is
+already on the machine instead, point `DV_CHROMIUM_PATH` at its executable:
+
+```sh
+DV_CHROMIUM_PATH=/path/to/chrome corepack pnpm check:experience
+```
+
+CI sets nothing and runs Playwright's own browser.
 
 To inspect a build manually:
 
@@ -63,15 +117,27 @@ curl --fail http://localhost:4321/legacy/
 - `src/pages/` — English `/`, 19 generated `/<locale>/` routes, legal `.html`
   routes and the FAQ compatibility route.
 - `src/content/locales/` — one parity-checked marketing content shape per
-  locale; `src/content/types.ts` is the typed model.
+  locale; `src/content/types.ts` is the typed model. Locale files hold copy
+  only: order, anchors and the demo films live in `src/content/structure.ts`.
 - `src/content/legal/` — preserved EN/NL legal bodies rendered by one
   accessible Astro legal shell.
-- `src/components/` and `src/layouts/` — reusable marketing and shell UI.
+- `src/components/` and `src/layouts/` — the shell (`Header`, `Footer`), one
+  component per homepage chapter in `sections/`, and the shared `media/` and
+  `ui/` parts.
+- `src/styles/` — `tokens.css` is the generated brand tokens, in both schemes
+  (see "Light and dark" below); `theme.css` holds
+  the site's own tokens (type steps, spacing, radii) and the `.on-*` classes
+  that give each chapter its ground and inks from brand tokens; `base.css`, `shell.css`, `legal.css` and one file per
+  chapter in `sections/`.
 - `src/design/tokens.json` — Chrome & Blue v3.1 source imported from
   `Flux76HQ/App-Guidance`; `corepack pnpm brand:build` generates
   `src/styles/tokens.css`.
-- `src/assets/showcase/` — temporary source captures optimized by Astro into
-  responsive AVIF/WebP build assets.
+- `src/assets/media/<slot>/` — one folder per media slot: `still.webp` (or
+  `.png`/`.jpg`) and, optionally, a muted loop as `loop.webm` plus `loop.mp4`.
+  Astro turns stills into responsive AVIF/WebP; `src/media/registry.ts` finds
+  the files. See "Media" below.
+- `src/assets/posters/` — covers of the demo shelf: invented films with
+  generated artwork, so the site shows no artwork it has no right to.
 - `public/legacy/`, `public/images/upgrade-message/` and
   `public/images/v26-migration/` — preserved Legacy page and its proven image
   dependencies.
@@ -88,8 +154,8 @@ or user data.
 1. Update the typed locale files and keep every locale at parity.
 2. If brand tokens change, replace `src/design/tokens.json`, update
    `src/design/source.json`, then run `pnpm brand:build`.
-3. Replace temporary showcase sources in `src/assets/showcase/` while keeping
-   the responsive `<Picture>` pipeline.
+3. To replace a screenshot or a loop, drop the new file into its slot folder
+   under `src/assets/media/` (see "Media" below). No code changes.
 4. Run `corepack pnpm format` and `corepack pnpm check`.
 5. Set the release version idempotently:
 
@@ -99,6 +165,58 @@ or user data.
 
 Protected runtime, content, style, asset, script, config, deployment and
 workflow paths require `VERSION` to be part of the same staged change.
+
+## Light and dark
+
+Every page follows the visitor's system setting, and the theme switcher in
+the bar, the menu and the footer lets them choose light or dark instead. The
+choice is `data-theme="light"` or `data-theme="dark"` on the root element,
+stored in the browser under `dv-theme` and applied before first paint by an
+inline script in `BaseLayout.astro`; no attribute means "follow the system".
+
+`tokens.css` defines the dark values on `:root` and the light values twice:
+under `prefers-color-scheme: light` (unless the choice is dark) and under
+`[data-theme='light']`. Nothing else knows about schemes. A chapter class in
+`theme.css` (`on-base`, `on-surface`, `on-raised`, `on-uhd`, `on-accent`,
+`on-platinum`, `on-dvd`) names brand tokens only, so each field has its
+light and its dark form for free: the 4K field is white in the dark scheme
+and near-black in the light one, as the 4K badge is in the app.
+
+When adding a colour pair, check it in both schemes: the experience gate
+runs axe in each. Two pictures of one thing take the classes `only-dark` and
+`only-light`. Screenshots and loops show the dark interface in both schemes.
+
+## Media
+
+The homepage is built from media slots. A slot is a folder under
+`src/assets/media/`; a component names the slot and the registry supplies
+whatever is in it.
+
+| Slot                                                                    | Shows                                          | Used in                |
+| ----------------------------------------------------------------------- | ---------------------------------------------- | ---------------------- |
+| `hero`                                                                  | the library as a wall of covers (still + loop) | first screen           |
+| `collect-library`, `collect-detail`, `collect-lists`, `collect-insight` | portrait crops of the interface                | "Built for collectors" |
+| `collect-iphone`                                                        | an iPhone screenshot; the block waits for it   | "Built for collectors" |
+| `self-hosted-library`, `-detail`, `-boxset`, `-lists`                   | the self-hosted edition in a browser           | "On a server you run"  |
+| `disc`                                                                  | the DiscVault disc (still + loop)              | closing row            |
+
+Rules:
+
+- A still is required for a slot to render; a slot without one renders
+  nothing (optional slots) or a flat placeholder.
+- A loop needs both `loop.webm` and `loop.mp4`, no audio track, at most 1.5 MB
+  each (aim for 900 KB mp4 and 600 KB webm, 6–10 s, 1280–1440 px wide). The
+  still is its poster and its fallback.
+- Loops never autoplay by attribute: `src/scripts/media.ts` starts one only
+  while it is on screen, never under reduced motion or Save-Data, and gives
+  it a pause control.
+- Screenshots show the demo shelf of invented films, dark theme, the Blu-ray
+  accent and the English interface. Do not publish real film artwork.
+- No Git LFS: GitHub Pages does not serve it. Commit final encodes only.
+
+The design this implements, and the reasons for these rules, are in
+`Flux76HQ/App-Guidance`: `projects/discvault/website/chrome-and-blue-web.md`
+and ADR-0021.
 
 ## Deploy and release channels
 

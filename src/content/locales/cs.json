@@ -2,235 +2,373 @@
   "locale": "cs",
   "languageName": "Čeština",
   "seo": {
-    "title": "DiscVault — katalog pro vaše disky",
-    "description": "DiscVault katalogizuje filmy, které vlastníte na 4K, Blu-ray a DVD. Naskenujte čárový kód, rozlišujte edice, na svém zařízení nebo serveru. Bez sledování."
+    "title": "DiscVault — katalog filmů, které máte na discích",
+    "description": "DiscVault katalogizuje filmy, které máte na 4K, Blu-ray a DVD. Naskenujte čárový kód, rozlišujte edice a boxy, na iPhonu či vlastním serveru. Bez reklam a sledování.",
+    "ogAlt": "DiscVault: stěna filmových obalů s odznaky 4K, Blu-ray a DVD."
+  },
+  "a11y": {
+    "skip": "Přeskočit na obsah",
+    "home": "DiscVault, úvodní stránka",
+    "menu": "Nabídka",
+    "language": "Jazyk",
+    "sections": "Sekce",
+    "pauseMotion": "Pozastavit pohyb",
+    "playMotion": "Spustit pohyb"
+  },
+  "theme": {
+    "label": "Vzhled",
+    "system": "Podle systému",
+    "light": "Světlý",
+    "dark": "Tmavý"
   },
   "nav": {
-    "library": "Knihovna",
+    "collect": "Sbírat",
     "scan": "Skenovat",
     "editions": "Edice",
+    "selfHosted": "Self-hosted",
     "privacy": "Soukromí",
-    "install": "Instalovat",
+    "faq": "Otázky",
     "docs": "Docs",
-    "menu": "Nabídka",
-    "language": "Jazyky"
+    "get": "Získat DiscVault"
   },
   "actions": {
-    "install": "Nainstalovat DiscVault 26",
-    "installCompact": "Instalovat v26",
-    "appStore": "Stáhnout v App Storu",
+    "appStore": "Stáhnout v App Store",
+    "selfHost": "Provozovat DiscVault sami",
     "android": "Požádat o přístup k Android beta verzi",
-    "testflight": "Beta TestFlight",
-    "privacy": "Zásady ochrany soukromí"
+    "testflight": "Zapojit se do bety v TestFlight",
+    "installGuide": "Přečíst instalační příručku",
+    "migrationGuide": "Přečíst příručku k migraci",
+    "privacyPolicy": "Přečíst zásady ochrany soukromí",
+    "discord": "Přidat se na Discord",
+    "github": "Zdrojový kód na GitHub",
+    "issues": "Nahlásit problém",
+    "support": "Kupte mi kávu",
+    "moreAnswers": "Další odpovědi v dokumentaci",
+    "backToTop": "Zpět nahoru"
   },
-  "leader": {
-    "slate": [
-      "DiscVault 26",
-      "Katalog pro vaše disky",
-      "Self-hosted",
-      "iPhone & iPad",
-      "Beta pro Android"
-    ],
-    "voice": [
-      "Světlo, ",
-      "uchované."
-    ],
-    "lead": "DiscVault katalogizuje filmy, které vlastníte — na disku, na poličce, na vlastním serveru.",
-    "note": [
-      "PWA a desktop",
-      "Instalační průvodce"
-    ]
+  "hero": {
+    "title": "Vaše filmová polička v katalogu.",
+    "lead": "DiscVault eviduje každý film, který vlastníte na 4K, Blu-ray a DVD. Naskenujte čárový kód a název, edice i obal se doplní samy.",
+    "note": "Pro iPhone a iPad, nebo na vašem vlastním serveru. Android je v betě.",
+    "mediaAlt": "Knihovna DiscVault: stěna filmových obalů, každý s odznakem 4K, Blu-ray, DVD nebo boxu."
   },
-  "shelf": {
-    "slate": [
-      "Reel 01",
-      "Polička"
-    ],
-    "counter": [
-      "45 / 45 filmů",
-      "29 dlaždic"
-    ],
-    "voice": [
-      "Každá edice tam, kde jste ji ",
-      "nechali",
-      "."
-    ],
-    "lead": "Procházejte plakáty, přepínejte na seznam nebo detail, filtrujte podle formátu, otevírejte boxy a kontejnery. Rychlé i u velkých sbírek."
+  "collect": {
+    "title": "Postaveno pro sběratele.",
+    "blocks": {
+      "library": {
+        "title": "Knihovna, která vypadá jako vaše polička",
+        "points": [
+          "Plakáty, seznam nebo detail",
+          "Filtr podle 4K, Blu-ray nebo DVD",
+          "Hledání podle názvu, čárového kódu, herců nebo štábu",
+          "Boxy se otevírají na filmy uvnitř",
+          "Rychlá i u velké sbírky"
+        ],
+        "mediaAlt": "Knihovna na telefonu: mřížka filmových obalů s odznaky formátu."
+      },
+      "detail": {
+        "title": "Každý film má pořádnou stránku",
+        "points": [
+          "Edice, formát a čárový kód",
+          "Herci, štáb a obrazové materiály",
+          "Vlastní plakát nebo pozadí",
+          "Seriály a jejich řady",
+          "Označení kopií na serverech Plex a Jellyfin"
+        ],
+        "mediaAlt": "Stránka filmu na telefonu: obal, pozadí, rok, formát a čárový kód."
+      },
+      "lists": {
+        "title": "Seznamy pro to, co bude dál",
+        "points": [
+          "Seznam ke zhlédnutí na dnešní večer",
+          "Historie sledování s daty",
+          "Seznam přání s hlídáním cen",
+          "Výpůjčky: kdo má který disk",
+          "Štítky, které si vymyslíte sami"
+        ],
+        "mediaAlt": "Seznam přání: čtyři filmy s aktuální a cílovou cenou."
+      },
+      "insight": {
+        "title": "Přehled o tom, co vlastníte",
+        "points": [
+          "Statistiky podle formátu, desetiletí a žánru",
+          "Místo pro každý disk, až na úroveň police",
+          "Vlastní hodnocení každého filmu",
+          "Co je půjčené a co už mělo být zpátky"
+        ],
+        "mediaAlt": "Statistiky: 54 filmů rozdělených podle formátu na Blu-ray, 4K UHD a DVD."
+      },
+      "iphone": {
+        "title": "Na iPhonu a iPadu jako doma",
+        "points": [
+          "Zeptejte se Siri, kolik filmů od daného režiséra vlastníte",
+          "Najděte kterýkoli disk přes Spotlight",
+          "Objevujte, co přidat příště, s vlastním klíčem TMDB",
+          "Zamkněte aplikaci pomocí Face ID",
+          "iCloud udržuje vaše zařízení ve shodě"
+        ],
+        "mediaAlt": "DiscVault na iPhonu."
+      }
+    }
   },
-  "read": {
-    "slate": [
-      "Reel 02",
-      "Čtení",
-      "EAN → Název · Rok · Formát · Obal"
-    ],
-    "voice": [
-      "Namiřte fotoaparát. Disk se ",
-      "přečte",
-      " sám."
-    ],
-    "lead": "Naskenujte čárový kód a DiscVault doplní název, rok, formát a obal. Nebo hledejte podle názvu.",
-    "note": [
-      "iPhone & iPad",
-      "Samostatně",
-      "Bez serveru"
-    ],
-    "captureAlt": "DiscVault na iPhonu: přidání filmu po naskenování čárového kódu"
+  "scan": {
+    "titleStart": "Namiřte fotoaparát.",
+    "titleEnd": "Zařadí se sám.",
+    "lead": "Každý disk má čárový kód. Vyberte si jeden z těchto a podívejte se, co s ním DiscVault udělá.",
+    "record": {
+      "format": "Formát",
+      "year": "Rok",
+      "runtime": "Délka",
+      "minutes": "min",
+      "director": "Režie",
+      "barcode": "Čárový kód",
+      "added": "Přidáno do vaší knihovny"
+    },
+    "note": "Na iPhonu a iPadu je katalog disků uložený v zařízení, takže skenování funguje i offline.",
+    "fallback": "Bez čárového kódu? Hledejte podle názvu nebo vložte ID z IMDb či TMDB."
   },
-  "edition": {
-    "slate": [
-      "Reel 03",
-      "Edice",
-      "4K · BD · DVD · Steel · Box"
-    ],
-    "voice": [
-      "Na edicích ",
-      "záleží."
-    ],
-    "lead": "4K disk není Blu-ray. Steelbook není obyčejný obal. Boxy, kontejnery a disky uvnitř vydání se katalogizují jako to, čím jsou.",
-    "spines": [
-      "4K Ultra HD",
-      "Blu-ray",
-      "DVD",
-      "Steelbook",
-      "Box · 8 filmů"
-    ]
+  "editions": {
+    "title": "Na edicích záleží.",
+    "lead": "4K disk není Blu-ray. Steelbook není obyčejný obal. Boxy a disky uvnitř vydání se katalogizují jako to, čím jsou.",
+    "items": {
+      "uhd": {
+        "name": "4K Ultra HD",
+        "detail": "17 na této poličce"
+      },
+      "bluray": {
+        "name": "Blu-ray",
+        "detail": "26 na této poličce"
+      },
+      "dvd": {
+        "name": "DVD",
+        "detail": "11 na této poličce"
+      },
+      "steelbook": {
+        "name": "Steelbook",
+        "detail": "1 na této poličce"
+      },
+      "boxset": {
+        "name": "Boxy",
+        "detail": "3 boxy, 12 filmů"
+      }
+    },
+    "note": "Polička na této stránce je ukázková knihovna s 54 smyšlenými filmy."
   },
-  "vault": {
-    "slate": [
-      "Reel 04",
-      "Trezor",
-      "0 trackerů",
-      "0 reklam",
-      "Bez profilování"
+  "platforms": {
+    "title": "Dvě místa pro vaši sbírku.",
+    "lead": "V zařízení ve vaší kapse, nebo na serveru u vás doma. Obojí je DiscVault; vyberte si, kde bude vaše sbírka uložená.",
+    "columns": {
+      "ios": {
+        "name": "iPhone a iPad",
+        "sub": "Aplikace"
+      },
+      "selfHosted": {
+        "name": "Váš vlastní server",
+        "sub": "Self-hosted"
+      }
+    },
+    "rows": {
+      "home": {
+        "label": "Kde je uložená",
+        "ios": "Ve vašem zařízení, synchronizovaná přes váš vlastní iCloud",
+        "selfHosted": "Na serveru, který sami provozujete"
+      },
+      "add": {
+        "label": "Přidání disku",
+        "ios": "Naskenujte fotoaparátem, vyhledejte nebo zadejte ručně",
+        "selfHosted": "Čárový kód, vyhledávání nebo celý import"
+      },
+      "share": {
+        "label": "Sdílení",
+        "ios": "Vaše vlastní zařízení",
+        "selfHosted": "Domácnost: pozvánky, skupiny a role"
+      },
+      "signin": {
+        "label": "Přihlášení",
+        "ios": "Úplně bez účtu",
+        "selfHosted": "Nejdřív přístupové klíče; heslo, TOTP nebo OpenID Connect, pokud jim dáváte přednost"
+      },
+      "extras": {
+        "label": "Dále nabízí",
+        "ios": "Siri, Spotlight a zámek přes Face ID",
+        "selfHosted": "Pluginy, klíče API, koncový bod MCP, zálohování a obnovení"
+      },
+      "languages": {
+        "label": "Jazyky",
+        "ios": "13",
+        "selfHosted": "29"
+      }
+    },
+    "android": {
+      "title": "Android",
+      "body": "V betě. Požádejte o přístup přes Discord; schválení testeři instalují přes Google Play."
+    },
+    "roadmap": "Aplikace dnes fungují samostatně. Jejich propojení se self-hostovanou instalací DiscVault je plánováno na později."
+  },
+  "selfHosted": {
+    "title": "Na vašem vlastním serveru.",
+    "lead": "Self-hostovaná edice je webová aplikace pro celou domácnost. Nainstalujete ji na Docker, Unraid nebo Home Assistant.",
+    "shots": {
+      "library": {
+        "label": "Knihovna",
+        "alt": "DiscVault v prohlížeči: knihovna jako stěna obalů, s vyhledáváním, přepínačem zobrazení a filtry formátu."
+      },
+      "detail": {
+        "label": "Detail",
+        "alt": "DiscVault: stránka s detailem filmu, s pozadím, obalem, edicí a metadaty."
+      },
+      "boxset": {
+        "label": "Box",
+        "alt": "DiscVault: otevřený box s filmy, které obsahuje."
+      },
+      "lists": {
+        "label": "Ke zhlédnutí",
+        "alt": "DiscVault: seznam ke zhlédnutí jako mřížka obalů."
+      }
+    },
+    "points": [
+      "Účty jen na pozvání, s rolemi",
+      "Nejdřív přístupové klíče",
+      "Pluginy pro metadata a ceny",
+      "Klíče API a koncový bod MCP",
+      "Zálohování a obnovení",
+      "Nainstalujete si ji do telefonu jako aplikaci"
     ],
-    "voice": [
-      "Je tam, kam ho ",
-      "dáte",
-      "."
+    "migration": {
+      "title": "Přecházíte z DiscVault Legacy?",
+      "body": "Průvodce migrací převede vaši sbírku do aktuální verze DiscVault."
+    }
+  },
+  "runs": {
+    "title": "Kde DiscVault běží",
+    "names": [
+      "iPhone",
+      "iPad",
+      "Docker",
+      "Unraid",
+      "Home Assistant",
+      "Beta pro Android",
+      "Libovolný prohlížeč"
     ],
+    "caption": "Kde DiscVault běží dnes."
+  },
+  "privacy": {
+    "title": "Je tam, kam ho dáte.",
     "lead": "Na vašem zařízení nebo na serveru, který sami provozujete. Bez profilování, bez reklam, nikdo nesleduje, co sledujete.",
+    "tiles": {
+      "ads": {
+        "figure": "0",
+        "label": "reklam"
+      },
+      "trackers": {
+        "figure": "0",
+        "label": "trackerů"
+      },
+      "profiles": {
+        "figure": "0",
+        "label": "profilů"
+      },
+      "count": {
+        "figure": "1",
+        "label": "anonymní denní hlášení"
+      }
+    },
     "body": [
-      "Aplikace pro iPhone a iPad drží sbírku na zařízení. DiscVault 26 ji drží na serveru, který spravujete. V obou případech zařízení opouští jen čárový kód nebo hledaný výraz.",
+      "Aplikace pro iPhone a iPad drží sbírku na zařízení. Self-hostovaná edice ji drží na serveru, který spravujete. V obou případech zařízení opouští jen čárový kód nebo hledaný výraz.",
       "Jedna výjimka: server, který sami provozujete, jednou denně oznámí adrese api.discvault.eu, že běží. Posílá svou verzi a počet dní od předchozího hlášení: žádný identifikátor a nic o vaší sbírce. Slouží to jen k odhadu, jak moc se DiscVault používá, a můžete to vypnout."
     ]
   },
-  "formats": {
-    "slate": [
-      "Reel 05",
-      "Formáty"
+  "plans": {
+    "titleStart": "Základ je",
+    "titleFree": "zdarma",
+    "titleEnd": ".",
+    "lead": "Skenování, katalogizace, vyhledávání, zálohování a obnovení nestojí nic. Self-hostovaná edice je zdarma a zdarma zůstane.",
+    "points": [
+      "Skenování a přidávání bez omezení",
+      "Úplná záloha a obnovení",
+      "Seznam ke zhlédnutí, historie a seznam přání",
+      "Synchronizace přes iCloud mezi vašimi zařízeními",
+      "Svá data dostanete ven, vždy"
     ],
-    "voice": [
-      "Tři cesty ",
-      "dovnitř."
-    ],
-    "lead": "Self-hosted DiscVault 26 už dnes. iPhone a iPad samostatně. Android v betě.",
-    "routes": [
-      {
-        "id": "self-hosted",
-        "slate": [
-          "PWA",
-          "Desktop",
-          "DiscVault 26"
-        ],
-        "title": "Self-hosted",
-        "body": [
-          "Knihovna navržená pro desktop, bohatší stránky detailu, základ na PostgreSQL, pluginy, migrační nástroje a administrátorské ovládání pro sběratele, kteří drží katalog na vlastním serveru.",
-          "Toky jen na pozvání, nástroje vlastníka a správce, přístup podle rolí, auditní pohledy, přístup k API a integrace připravené na MCP."
-        ],
-        "action": "Nainstalovat DiscVault 26"
-      },
-      {
-        "id": "ios",
-        "slate": [
-          "iOS",
-          "iPadOS",
-          "Samostatně"
-        ],
-        "title": "iPhone & iPad",
-        "body": [
-          "Běží celá na zařízení. Skenujte, obohacujte, filtrujte a hledejte bez serveru."
-        ],
-        "action": "Stáhnout v App Storu"
-      },
-      {
-        "id": "android",
-        "slate": [
-          "Android",
-          "Beta"
-        ],
-        "title": "Android",
-        "body": [
-          "Požádejte o přístup přes Discord. Schválení testeři instalují přes Google Play."
-        ],
-        "action": "Požádat o přístup k Android beta verzi"
-      }
-    ],
-    "roadmap": "Aplikace pro iOS a Android dnes fungují samostatně. Jejich propojení se self-hostovanou instalací DiscVault je plánováno na později.",
-    "migration": [
-      "Migrace z Legacy",
-      "Docs"
-    ]
+    "pro": "Aplikace později dostanou upgrade Pro, a to jako jednorázový nákup. Není to předplatné. Cena zatím není stanovena.",
+    "support": "DiscVault vytváří jediný vývojář. Pokud si u vás na poličce vyslouží místo, káva potěší. Dar nic neodemyká; je to jen poděkování."
   },
-  "credits": {
-    "install": {
-      "role": "Instalace",
-      "name": "DiscVault 26"
-    },
-    "appStore": {
-      "role": "iPhone & iPad",
-      "name": "App Store"
-    },
-    "android": {
-      "role": "Android",
-      "name": "Beta na Discordu"
-    },
-    "testflight": {
-      "role": "TestFlight",
-      "name": "Beta"
-    },
-    "source": {
-      "role": "Zdrojový kód",
-      "name": "GitHub"
-    },
-    "community": {
-      "role": "Komunita",
-      "name": "Discord"
-    },
-    "issues": {
-      "role": "Problémy",
-      "name": "GitHub"
-    },
-    "languages": {
-      "role": "Jazyky",
-      "name": "Dvacet"
-    },
-    "privacy": {
-      "role": "Soukromí",
-      "name": "Zásady ochrany soukromí"
-    },
-    "terms": {
-      "role": "Podmínky",
-      "name": "Podmínky"
-    },
-    "legacy": {
-      "role": "Legacy",
-      "name": "Migrace předchozí verze"
-    },
-    "production": {
-      "role": "Produkce",
-      "name": "Flux76"
-    },
-    "final": [
-      "DiscVault. Postaveno pro ",
-      "sběratele."
-    ]
+  "faq": {
+    "title": "Dobré otázky.",
+    "items": {
+      "server": {
+        "question": "Potřebuji server?",
+        "answer": [
+          "Ne. Aplikace pro iPhone a iPad funguje zcela samostatně. Server je jen pro ty, kdo chtějí self-hostovanou webovou edici, určenou pro celou domácnost."
+        ]
+      },
+      "account": {
+        "question": "Potřebuji účet?",
+        "answer": [
+          "Pro aplikaci ne. U self-hostované instalace DiscVault jsou účty na vašem vlastním serveru; pozvete, koho chcete."
+        ]
+      },
+      "data": {
+        "question": "Odkud pocházejí informace o filmech?",
+        "answer": [
+          "Vydání na discích, čárové kódy a obaly pocházejí z MovieVault, katalogu, na kterém DiscVault stojí. Podrobnosti o filmech, obsazení a Objevování používají TMDB s vaším vlastním bezplatným klíčem.",
+          "Tento produkt používá TMDB API, ale není podporován ani certifikován společností TMDB."
+        ]
+      },
+      "sends": {
+        "question": "Co DiscVault odesílá ven?",
+        "answer": [
+          "Čárový kód nebo hledaný výraz, když něco vyhledáváte. Self-hostovaný server navíc jednou denně anonymně oznámí, že běží; to můžete vypnout. Podrobnosti najdete v zásadách ochrany soukromí."
+        ]
+      },
+      "sync": {
+        "question": "Umí se aplikace synchronizovat s mým vlastním serverem?",
+        "answer": [
+          "Zatím ne. Aplikace a self-hostovaná edice dnes fungují každá samostatně; jejich propojení je plánováno na později."
+        ]
+      },
+      "export": {
+        "question": "Dostanu svou sbírku zase ven?",
+        "answer": [
+          "Ano. Zálohování a obnovení jsou součástí bezplatného základu, stejně jako export do CSV. Vaše data nikdy nezadržujeme."
+        ]
+      },
+      "pro": {
+        "question": "Bude DiscVault něco stát?",
+        "answer": [
+          "Základ je zdarma: skenování, katalogizace, zálohování a obnovení. Self-hostovaná edice je zdarma a zdarma zůstane.",
+          "Na později je pro aplikace plánován upgrade Pro, a to jako jednorázový nákup, nikoli předplatné. Jeho cena zatím není stanovena."
+        ]
+      },
+      "android": {
+        "question": "Existuje aplikace pro Android?",
+        "answer": [
+          "Je v betě. Požádejte o přístup přes Discord; schválení testeři ji instalují přes Google Play."
+        ]
+      },
+      "legacy": {
+        "question": "Stále používám DiscVault Legacy. Jak přejdu?",
+        "answer": [
+          "Self-hostovaná edice má průvodce migrací, který vaši sbírku z Legacy převede. Příručka k migraci vás provede postupem pro Unraid a Docker."
+        ]
+      }
+    }
+  },
+  "cta": {
+    "title": "Naskenujte svůj první disk.",
+    "lead": "Vezměte z poličky nejbližší obal a namiřte fotoaparát na čárový kód. To je celé nastavení."
   },
   "footer": {
     "tagline": "DiscVault. Postavený pro sběratele.",
-    "source": "Zdroj na GitHub",
-    "legacy": "Migrace předchozí verze",
-    "privacy": "Soukromí",
+    "groups": {
+      "product": "Produkt",
+      "help": "Nápověda",
+      "legal": "Právní informace"
+    },
+    "privacy": "Zásady ochrany soukromí",
     "terms": "Podmínky",
-    "support": "Vlákno podpory"
+    "legacy": "Migrace z Legacy",
+    "production": "Produkce",
+    "tmdb": "Tento produkt používá TMDB API, ale není podporován ani certifikován společností TMDB."
   }
 }

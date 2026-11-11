@@ -2,235 +2,373 @@
   "locale": "da",
   "languageName": "Dansk",
   "seo": {
-    "title": "DiscVault — et katalog til dine diske",
-    "description": "DiscVault katalogiserer de film, du ejer på 4K, Blu-ray og DVD. Scan en stregkode, hold styr på udgaver, på din enhed eller din egen server. Ingen sporing."
+    "title": "DiscVault — katalogiser de film, du ejer på disk",
+    "description": "DiscVault katalogiserer dine film på 4K, Blu-ray og DVD. Scan stregkoden, hold styr på udgaver og bokssæt, på iPhone eller egen server. Ingen reklamer eller sporing.",
+    "ogAlt": "DiscVault: en væg af filmcovere med mærker for 4K, Blu-ray og DVD."
+  },
+  "a11y": {
+    "skip": "Spring til indhold",
+    "home": "DiscVault, forside",
+    "menu": "Menu",
+    "language": "Sprog",
+    "sections": "Sektioner",
+    "pauseMotion": "Sæt bevægelsen på pause",
+    "playMotion": "Afspil bevægelsen"
+  },
+  "theme": {
+    "label": "Tema",
+    "system": "System",
+    "light": "Lyst",
+    "dark": "Mørkt"
   },
   "nav": {
-    "library": "Bibliotek",
-    "scan": "Skan",
+    "collect": "Saml",
+    "scan": "Scan",
     "editions": "Udgaver",
+    "selfHosted": "Self-hosted",
     "privacy": "Privatliv",
-    "install": "Installer",
+    "faq": "Spørgsmål",
     "docs": "Docs",
-    "menu": "Menu",
-    "language": "Sprog"
+    "get": "Hent DiscVault"
   },
   "actions": {
-    "install": "Installer DiscVault 26",
-    "installCompact": "Installer v26",
     "appStore": "Hent i App Store",
+    "selfHost": "Host DiscVault selv",
     "android": "Anmod om adgang til Android-betaen",
-    "testflight": "TestFlight-beta",
-    "privacy": "Privatlivspolitik"
+    "testflight": "Deltag i TestFlight-betaen",
+    "installGuide": "Læs installationsvejledningen",
+    "migrationGuide": "Læs migreringsvejledningen",
+    "privacyPolicy": "Læs privatlivspolitikken",
+    "discord": "Kom med på Discord",
+    "github": "Kildekode på GitHub",
+    "issues": "Rapportér et problem",
+    "support": "Giv en kop kaffe",
+    "moreAnswers": "Flere svar i dokumentationen",
+    "backToTop": "Til toppen"
   },
-  "leader": {
-    "slate": [
-      "DiscVault 26",
-      "Et katalog til dine diske",
-      "Self-hosted",
-      "iPhone & iPad",
-      "Android-beta"
-    ],
-    "voice": [
-      "Lys, ",
-      "bevaret."
-    ],
-    "lead": "DiscVault katalogiserer de film, du ejer — på disk, på hylden, på din egen server.",
-    "note": [
-      "PWA & desktop",
-      "Installationsvejledning"
-    ]
+  "hero": {
+    "title": "Din filmhylde, katalogiseret.",
+    "lead": "DiscVault holder styr på alle de film, du ejer på 4K, Blu-ray og DVD. Scan en stregkode, så udfylder titel, udgave og cover sig selv.",
+    "note": "Til iPhone og iPad, eller self-hostet på din egen server. Android er i beta.",
+    "mediaAlt": "DiscVault-biblioteket: en væg af filmcovere, hver med et mærke for 4K, Blu-ray, DVD eller bokssæt."
   },
-  "shelf": {
-    "slate": [
-      "Reel 01",
-      "Hylden"
-    ],
-    "counter": [
-      "45 / 45 film",
-      "29 felter"
-    ],
-    "voice": [
-      "Hver udgave, hvor du ",
-      "efterlod",
-      " den."
-    ],
-    "lead": "Gennemse plakater, skift til liste- eller detaljevisning, filtrer efter format, åbn bokssæt og beholdere. Hurtigt i store samlinger."
-  },
-  "read": {
-    "slate": [
-      "Reel 02",
-      "Aflæsningen",
-      "EAN → Titel · År · Format · Cover"
-    ],
-    "voice": [
-      "Ret kameraet. Disken ",
-      "læser",
-      " sig selv."
-    ],
-    "lead": "Scan en stregkode, og DiscVault udfylder titel, år, format og cover. Eller søg på navn.",
-    "note": [
-      "iPhone & iPad",
-      "Selvstændig",
-      "Ingen server nødvendig"
-    ],
-    "captureAlt": "DiscVault på iPhone: tilføjer en film efter scanning af stregkoden"
-  },
-  "edition": {
-    "slate": [
-      "Reel 03",
-      "Udgaven",
-      "4K · BD · DVD · Steel · Bokssæt"
-    ],
-    "voice": [
-      "Udgaver ",
-      "betyder noget."
-    ],
-    "lead": "En 4K-disk er ikke en Blu-ray. En steelbook er ikke en keepcase. Bokssæt, beholdere og diskene i en udgivelse katalogiseres som det, de er.",
-    "spines": [
-      "4K Ultra HD",
-      "Blu-ray",
-      "DVD",
-      "Steelbook",
-      "Bokssæt · 8 film"
-    ]
-  },
-  "vault": {
-    "slate": [
-      "Reel 04",
-      "Boksen",
-      "0 trackere",
-      "0 reklamer",
-      "Ingen profilering"
-    ],
-    "voice": [
-      "Den bor, hvor du ",
-      "lægger",
-      " den."
-    ],
-    "lead": "På din enhed eller på en server, du selv driver. Ingen profilering, ingen reklamer, ingen der ser, hvad du ser.",
-    "body": [
-      "iPhone- og iPad-appen holder din samling på enheden. DiscVault 26 holder den på en server, du administrerer. Uanset hvad forlader kun en stregkode eller et søgeord enheden.",
-      "Én undtagelse: en self-hosted server fortæller api.discvault.eu én gang om dagen, at den kører. Den sender sin version og antallet af dage siden sin forrige melding: ingen identifikator og intet om din samling. Det bruges kun til at vurdere, hvor meget DiscVault bliver brugt, og du kan slå det fra."
-    ]
-  },
-  "formats": {
-    "slate": [
-      "Reel 05",
-      "Formaterne"
-    ],
-    "voice": [
-      "Tre veje ",
-      "ind."
-    ],
-    "lead": "Self-hosted DiscVault 26 i dag. iPhone og iPad selvstændigt. Android i beta.",
-    "routes": [
-      {
-        "id": "self-hosted",
-        "slate": [
-          "PWA",
-          "Desktop",
-          "DiscVault 26"
+  "collect": {
+    "title": "Bygget til samlere.",
+    "blocks": {
+      "library": {
+        "title": "Et bibliotek, der ligner din hylde",
+        "points": [
+          "Plakater, liste eller detaljevisning",
+          "Filtrer efter 4K, Blu-ray eller DVD",
+          "Søg på titel, stregkode, medvirkende eller crew",
+          "Bokssæt åbner sig til filmene indeni",
+          "Hurtigt, også i en stor samling"
         ],
-        "title": "Self-hosted",
-        "body": [
-          "Et desktop-first bibliotek, rigere detaljesider, PostgreSQL-fundament, plugins, migreringsværktøjer og admin-kontroller til samlere, der holder deres katalog på egen server.",
-          "Invite-only-flows, ejer- og adminværktøjer, rollebaseret adgang, auditvisninger, API-adgang og MCP-klare integrationer."
-        ],
-        "action": "Installer DiscVault 26"
+        "mediaAlt": "Biblioteket på en telefon: et gitter af filmcovere med formatmærker."
       },
-      {
-        "id": "ios",
-        "slate": [
-          "iOS",
-          "iPadOS",
-          "Selvstændig"
+      "detail": {
+        "title": "Hver film får en ordentlig side",
+        "points": [
+          "Udgave, format og stregkode",
+          "Medvirkende, crew og billeder",
+          "Din egen plakat eller dit eget baggrundsbillede",
+          "Serier og deres sæsoner",
+          "Kopier i Plex og Jellyfin er markeret"
         ],
-        "title": "iPhone & iPad",
-        "body": [
-          "Kører helt på enheden. Scan, berig, filtrer og søg uden server."
-        ],
-        "action": "Hent i App Store"
+        "mediaAlt": "En films side på en telefon: cover, baggrundsbillede, år, format og stregkode."
       },
-      {
-        "id": "android",
-        "slate": [
-          "Android",
-          "Beta"
+      "lists": {
+        "title": "Lister til det, der kommer bagefter",
+        "points": [
+          "En vil se-liste til i aften",
+          "Sehistorik med datoer",
+          "En ønskeliste med prisalarmer",
+          "Udlån: hvem har hvilken disk",
+          "Tags, du selv finder på"
         ],
-        "title": "Android",
-        "body": [
-          "Anmod om adgang via Discord. Godkendte testere installerer via Google Play."
+        "mediaAlt": "Ønskelisten: fire film med deres aktuelle pris og målpris."
+      },
+      "insight": {
+        "title": "Vid, hvad du ejer",
+        "points": [
+          "Statistik efter format, årti og genre",
+          "En plads til hver disk, helt ned til hylden",
+          "Din egen karakter til hver film",
+          "Hvad der er udlånt, og hvad der er overskredet"
         ],
-        "action": "Anmod om adgang til Android-betaen"
+        "mediaAlt": "Statistik: 54 film fordelt efter format på Blu-ray, 4K UHD og DVD."
+      },
+      "iphone": {
+        "title": "Hjemme på iPhone og iPad",
+        "points": [
+          "Spørg Siri, hvor mange film af en instruktør du ejer",
+          "Find enhver disk fra Spotlight",
+          "Opdag, hvad du skal tilføje næste gang, med din egen TMDB-nøgle",
+          "Lås appen med Face ID",
+          "iCloud holder dine enheder ajour"
+        ],
+        "mediaAlt": "DiscVault på en iPhone."
       }
-    ],
-    "roadmap": "iOS- og Android-apps fungerer selvstændigt i dag. Tilslutning til en self-hostet DiscVault-installation er planlagt til et senere tidspunkt.",
-    "migration": [
-      "Migrering fra Legacy",
-      "Docs"
-    ]
+    }
   },
-  "credits": {
-    "install": {
-      "role": "Installer",
-      "name": "DiscVault 26"
+  "scan": {
+    "titleStart": "Ret kameraet mod koden.",
+    "titleEnd": "Den sætter sig selv på plads.",
+    "lead": "Hver disk har en stregkode. Vælg en af disse, og se, hvad DiscVault får ud af den.",
+    "record": {
+      "format": "Format",
+      "year": "År",
+      "runtime": "Spilletid",
+      "minutes": "min.",
+      "director": "Instruktør",
+      "barcode": "Stregkode",
+      "added": "Tilføjet til dit bibliotek"
     },
-    "appStore": {
-      "role": "iPhone & iPad",
-      "name": "App Store"
+    "note": "På iPhone og iPad ligger diskkataloget på enheden, så en scanning virker offline.",
+    "fallback": "Ingen stregkode? Søg på titel, eller indsæt et IMDb- eller TMDB-id."
+  },
+  "editions": {
+    "title": "Udgaver betyder noget.",
+    "lead": "En 4K-disk er ikke en Blu-ray. En Steelbook er ikke en keepcase. Bokssæt og diskene i en udgivelse katalogiseres som det, de er.",
+    "items": {
+      "uhd": {
+        "name": "4K Ultra HD",
+        "detail": "17 på denne hylde"
+      },
+      "bluray": {
+        "name": "Blu-ray",
+        "detail": "26 på denne hylde"
+      },
+      "dvd": {
+        "name": "DVD",
+        "detail": "11 på denne hylde"
+      },
+      "steelbook": {
+        "name": "Steelbook",
+        "detail": "1 på denne hylde"
+      },
+      "boxset": {
+        "name": "Bokssæt",
+        "detail": "3 sæt, 12 film"
+      }
+    },
+    "note": "Hylden på denne side er et demobibliotek med 54 opdigtede film."
+  },
+  "platforms": {
+    "title": "To steder til din samling.",
+    "lead": "På enheden i din lomme eller på en server i dit hjem. Begge dele er DiscVault; du vælger, hvor din samling bor.",
+    "columns": {
+      "ios": {
+        "name": "iPhone og iPad",
+        "sub": "Appen"
+      },
+      "selfHosted": {
+        "name": "Din egen server",
+        "sub": "Self-hosted"
+      }
+    },
+    "rows": {
+      "home": {
+        "label": "Hvor den bor",
+        "ios": "På din enhed, synkroniseret via din egen iCloud",
+        "selfHosted": "På en server, du selv driver"
+      },
+      "add": {
+        "label": "Tilføj en disk",
+        "ios": "Scan med kameraet, søg, eller skriv den ind",
+        "selfHosted": "Stregkode, søgning eller en hel import"
+      },
+      "share": {
+        "label": "Deling",
+        "ios": "Dine egne enheder",
+        "selfHosted": "En husstand: invitationer, grupper og roller"
+      },
+      "signin": {
+        "label": "Log ind",
+        "ios": "Slet ingen konto",
+        "selfHosted": "Adgangsnøgler først; adgangskode, TOTP eller OpenID Connect, hvis du foretrækker det"
+      },
+      "extras": {
+        "label": "Også med",
+        "ios": "Siri, Spotlight og lås med Face ID",
+        "selfHosted": "Plugins, API-nøgler, et MCP-endpoint, backup og gendannelse"
+      },
+      "languages": {
+        "label": "Sprog",
+        "ios": "13",
+        "selfHosted": "29"
+      }
     },
     "android": {
-      "role": "Android",
-      "name": "Beta via Discord"
+      "title": "Android",
+      "body": "I beta. Anmod om adgang via Discord; godkendte testere installerer via Google Play."
     },
-    "testflight": {
-      "role": "TestFlight",
-      "name": "Beta"
+    "roadmap": "Appsene fungerer selvstændigt i dag. Tilslutning til en self-hostet DiscVault-installation er planlagt til et senere tidspunkt."
+  },
+  "selfHosted": {
+    "title": "På din egen server.",
+    "lead": "Den self-hostede udgave er en webapp til hele husstanden. Den installeres på Docker, Unraid eller Home Assistant.",
+    "shots": {
+      "library": {
+        "label": "Bibliotek",
+        "alt": "DiscVault i en browser: biblioteket som en væg af covere, med søgning, visningsskift og formatfiltre."
+      },
+      "detail": {
+        "label": "Detaljer",
+        "alt": "DiscVault: en films detaljeside med baggrundsbillede, cover, udgave og metadata."
+      },
+      "boxset": {
+        "label": "Bokssæt",
+        "alt": "DiscVault: et bokssæt åbnet, så man ser de film, det indeholder."
+      },
+      "lists": {
+        "label": "Vil se-liste",
+        "alt": "DiscVault: vil se-listen som et gitter af covere."
+      }
     },
-    "source": {
-      "role": "Kildekode",
-      "name": "GitHub"
+    "points": [
+      "Konti kun efter invitation, med roller",
+      "Adgangsnøgler først",
+      "Plugins til metadata og priser",
+      "API-nøgler og et MCP-endpoint",
+      "Backup og gendannelse",
+      "Kan installeres som app på din telefon"
+    ],
+    "migration": {
+      "title": "Kommer du fra DiscVault Legacy?",
+      "body": "Migreringsguiden flytter din samling over til det nuværende DiscVault."
+    }
+  },
+  "runs": {
+    "title": "Hvor DiscVault kører",
+    "names": [
+      "iPhone",
+      "iPad",
+      "Docker",
+      "Unraid",
+      "Home Assistant",
+      "Android-beta",
+      "Enhver browser"
+    ],
+    "caption": "Her kører DiscVault i dag."
+  },
+  "privacy": {
+    "title": "Den bor, hvor du lægger den.",
+    "lead": "På din enhed eller på en server, du selv driver. Ingen profilering, ingen reklamer, ingen der ser, hvad du ser.",
+    "tiles": {
+      "ads": {
+        "figure": "0",
+        "label": "reklamer"
+      },
+      "trackers": {
+        "figure": "0",
+        "label": "trackere"
+      },
+      "profiles": {
+        "figure": "0",
+        "label": "profiler"
+      },
+      "count": {
+        "figure": "1",
+        "label": "anonym daglig optælling"
+      }
     },
-    "community": {
-      "role": "Fællesskab",
-      "name": "Discord"
-    },
-    "issues": {
-      "role": "Fejl",
-      "name": "GitHub"
-    },
-    "languages": {
-      "role": "Sprog",
-      "name": "Tyve"
-    },
-    "privacy": {
-      "role": "Privatliv",
-      "name": "Privatlivspolitik"
-    },
-    "terms": {
-      "role": "Vilkår",
-      "name": "Vilkår"
-    },
-    "legacy": {
-      "role": "Legacy",
-      "name": "Migrering af ældre version"
-    },
-    "production": {
-      "role": "En produktion af",
-      "name": "Flux76"
-    },
-    "final": [
-      "DiscVault. Bygget til ",
-      "samlere."
+    "body": [
+      "iPhone- og iPad-appen holder din samling på enheden. Den self-hostede udgave holder den på en server, du administrerer. Uanset hvad forlader kun en stregkode eller et søgeord enheden.",
+      "Én undtagelse: en self-hostet server fortæller api.discvault.eu én gang om dagen, at den kører. Den sender sin version og antallet af dage siden sin forrige melding: ingen identifikator og intet om din samling. Det bruges kun til at vurdere, hvor meget DiscVault bliver brugt, og du kan slå det fra."
     ]
+  },
+  "plans": {
+    "titleStart": "Kernen er",
+    "titleFree": "gratis",
+    "titleEnd": ".",
+    "lead": "Scanning, katalogisering, søgning, backup og gendannelse koster ingenting. Den self-hostede udgave er gratis og bliver ved med at være det.",
+    "points": [
+      "Scan og tilføj, uden begrænsning",
+      "Fuld backup og gendannelse",
+      "Vil se-liste, historik og ønskeliste",
+      "iCloud-synkronisering mellem dine enheder",
+      "Få dine data ud, altid"
+    ],
+    "pro": "En Pro-opgradering til appsene kommer senere, som et engangskøb. Ikke et abonnement. Prisen er ikke fastsat endnu.",
+    "support": "DiscVault laves af én udvikler. Hvis den gør sig fortjent til en plads på din hylde, er en kop kaffe velkommen. En donation låser ikke noget op; den er bare et tak."
+  },
+  "faq": {
+    "title": "Gode spørgsmål.",
+    "items": {
+      "server": {
+        "question": "Skal jeg have en server?",
+        "answer": [
+          "Nej. iPhone- og iPad-appen fungerer helt for sig selv. En server er kun til dem, der vil have den self-hostede webudgave, som er lavet til en hel husstand."
+        ]
+      },
+      "account": {
+        "question": "Skal jeg have en konto?",
+        "answer": [
+          "Ikke til appen. På et self-hostet DiscVault ligger kontiene på din egen server; du inviterer, hvem du vil."
+        ]
+      },
+      "data": {
+        "question": "Hvor kommer filmoplysningerne fra?",
+        "answer": [
+          "Diskudgivelser, stregkoder og covere kommer fra MovieVault, kataloget bag DiscVault. Filmdetaljer, medvirkende og Opdag bruger TMDB med din egen gratis nøgle.",
+          "Dette produkt bruger TMDB API, men er ikke godkendt eller certificeret af TMDB."
+        ]
+      },
+      "sends": {
+        "question": "Hvad sender DiscVault ud?",
+        "answer": [
+          "En stregkode eller et søgeord, når du slår noget op. En self-hostet server melder også én gang om dagen, anonymt, at den kører; det kan du slå fra. Privatlivspolitikken har detaljerne."
+        ]
+      },
+      "sync": {
+        "question": "Kan appen synkronisere med min egen server?",
+        "answer": [
+          "Ikke endnu. Appsene og den self-hostede udgave fungerer hver for sig i dag; at forbinde dem er planlagt til et senere tidspunkt."
+        ]
+      },
+      "export": {
+        "question": "Kan jeg få min samling ud igen?",
+        "answer": [
+          "Ja. Backup og gendannelse er en del af den gratis kerne, og det er CSV-eksport også. Dine data bliver aldrig holdt tilbage."
+        ]
+      },
+      "pro": {
+        "question": "Kommer DiscVault til at koste penge?",
+        "answer": [
+          "Kernen er gratis: scanning, katalogisering, backup og gendannelse. Den self-hostede udgave er gratis og bliver ved med at være det.",
+          "En Pro-opgradering til appsene er planlagt til senere, som et engangskøb og ikke et abonnement. Prisen er ikke fastsat endnu."
+        ]
+      },
+      "android": {
+        "question": "Findes der en Android-app?",
+        "answer": [
+          "Den er i beta. Anmod om adgang via Discord; godkendte testere installerer den via Google Play."
+        ]
+      },
+      "legacy": {
+        "question": "Jeg kører stadig DiscVault Legacy. Hvordan flytter jeg?",
+        "answer": [
+          "Den self-hostede udgave har en migreringsguide, der henter din samling over fra Legacy. Migreringsvejledningen gennemgår det for Unraid og Docker."
+        ]
+      }
+    }
+  },
+  "cta": {
+    "title": "Scan din første disk.",
+    "lead": "Tag den nærmeste film ned fra hylden, og ret kameraet mod stregkoden. Det er hele opsætningen."
   },
   "footer": {
     "tagline": "DiscVault. Bygget til samlere.",
-    "source": "Kildekode på GitHub",
-    "legacy": "Migrering af ældre version",
-    "privacy": "Privatliv",
+    "groups": {
+      "product": "Produkt",
+      "help": "Hjælp",
+      "legal": "Juridisk"
+    },
+    "privacy": "Privatlivspolitik",
     "terms": "Vilkår",
-    "support": "Supporttråd"
+    "legacy": "Migrering fra Legacy",
+    "production": "Lavet af",
+    "tmdb": "Dette produkt bruger TMDB API, men er ikke godkendt eller certificeret af TMDB."
   }
 }

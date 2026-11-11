@@ -1,0 +1,151 @@
+/* Platforms: the two ways to keep a collection, as a real table. */
+.platforms-title {
+  grid-column: 1 / span 6;
+}
+.platforms-lead {
+  grid-column: 7 / -1;
+  align-self: end;
+}
+.platforms-table-wrap {
+  grid-column: 1 / -1;
+  margin-top: clamp(3rem, 6vw, 5rem);
+}
+.platforms-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 0.5rem;
+  table-layout: fixed;
+  text-align: left;
+}
+.platforms-table col:first-child,
+.platforms-table thead td {
+  width: 22%;
+}
+.platforms-table th,
+.platforms-table td {
+  padding: 1.1rem 1.25rem;
+  vertical-align: top;
+  font-weight: 400;
+}
+.platforms-table thead th {
+  padding-bottom: 1.25rem;
+}
+.platforms-name {
+  display: block;
+  font-size: var(--step-statement);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+.platforms-table tbody th {
+  color: var(--ink-2);
+  font-weight: 500;
+}
+.platforms-table tbody th,
+.platforms-table tbody td {
+  background: var(--tone);
+}
+.platforms-table tbody th {
+  border-radius: var(--radius) 0 0 var(--radius);
+}
+.platforms-table tbody td:last-child {
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+.platforms-table tfoot td {
+  padding-top: 1.25rem;
+}
+.platforms-sub {
+  display: block;
+  width: fit-content;
+  margin-top: 0.85rem;
+}
+
+.platforms-android {
+  display: grid;
+  grid-column: 1 / span 6;
+  justify-items: start;
+  gap: 0.85rem;
+  margin-top: clamp(3rem, 6vw, 5rem);
+}
+.platforms-android p {
+  max-width: 44ch;
+}
+.platforms-roadmap {
+  grid-column: 8 / -1;
+  align-self: end;
+  max-width: 44ch;
+  margin-top: clamp(3rem, 6vw, 5rem);
+}
+
+@media (max-width: 56.24rem) {
+  .platforms-title,
+  .platforms-lead,
+  .platforms-android,
+  .platforms-roadmap {
+    grid-column: 1 / -1;
+  }
+  .platforms-lead {
+    margin-top: 1.5rem;
+  }
+  .platforms-roadmap {
+    margin-top: 2rem;
+  }
+  .platforms-table th,
+  .platforms-table td {
+    padding: 0.85rem 0.75rem;
+    font-size: var(--step-small);
+  }
+  .platforms-table thead td,
+  .platforms-table tfoot td:first-child {
+    width: 26%;
+  }
+  .platforms-table .button {
+    min-height: 3rem;
+    padding: 0.6rem 0.8rem;
+    font-size: var(--step-small);
+  }
+}
+
+/* On a phone the row label moves above its two answers. */
+@media (max-width: 37.49rem) {
+  .platforms-table,
+  .platforms-table thead,
+  .platforms-table tbody,
+  .platforms-table tfoot {
+    display: block;
+  }
+  .platforms-table tr {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    column-gap: 0.5rem;
+  }
+  .platforms-table thead td,
+  .platforms-table tfoot td:first-child {
+    display: none;
+  }
+  .platforms-table thead th {
+    padding-inline: 0;
+  }
+  .platforms-table .platforms-name {
+    font-size: 1.25rem;
+  }
+  .platforms-table tbody tr {
+    margin-bottom: 0.5rem;
+    border-radius: var(--radius);
+    background: var(--tone);
+  }
+  .platforms-table tbody th {
+    grid-column: 1 / -1;
+    padding-bottom: 0;
+  }
+  .platforms-table tbody th,
+  .platforms-table tbody td {
+    background: none;
+  }
+  .platforms-table tfoot td {
+    padding-inline: 0;
+  }
+  .platforms-table .button {
+    width: 100%;
+  }
+}

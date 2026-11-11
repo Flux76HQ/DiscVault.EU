@@ -1,0 +1,167 @@
+/*
+ * Site tokens for discvault.eu. Colour comes only from the generated --dv-*
+ * brand tokens (Chrome & Blue v3.1, tokens.css); nothing here declares or
+ * overrides one. Design source: Flux76HQ/App-Guidance,
+ * projects/discvault/website/chrome-and-blue-web.md.
+ */
+:root {
+  /* Type: one family, five steps. */
+  --font:
+    Inter, 'Inter Fallback', ui-sans-serif, system-ui, -apple-system,
+    'Segoe UI', sans-serif;
+  --step-display: clamp(2.75rem, 8.4vw, 8rem);
+  --step-title: clamp(2.5rem, 6.2vw, 6rem);
+  --step-statement: clamp(1.3125rem, 2.05vw, 1.875rem);
+  --step-body: clamp(1.125rem, 1.4vw, 1.375rem);
+  --step-small: 0.9375rem;
+
+  /* Space: one grid, one pair of margins. */
+  --margin: clamp(1.25rem, 2.2vw, 2rem);
+  --gutter: clamp(0.75rem, 1.4vw, 1.5rem);
+  --chapter-pad: clamp(5rem, 11vw, 10rem);
+
+  /* Shape: the radii of the app. */
+  --radius-sm: 6px;
+  --radius: 8px;
+  --radius-lg: 16px;
+
+  /* Motion. */
+  --ease-out: cubic-bezier(0.16, 0.84, 0.3, 1);
+  --t-fast: 160ms;
+  --t-move: 620ms;
+  --stagger: 80ms;
+
+  /*
+   * Breakpoints are literals (no preprocessor here): 37.5rem (600 px),
+   * 56.25rem (900 px) and 75rem (1200 px).
+   */
+}
+
+/*
+ * A chapter sets its ground and the inks that stay legible on it. Buttons,
+ * links and notes read these, so a component never names a colour itself.
+ *
+ * The page is a row of flat colour chapters, and the colours are the app's
+ * own ground and its fixed format-badge colours. Every value below is a
+ * brand token, and the brand tokens carry both schemes, so each chapter has
+ * a light and a dark form without a rule of its own here: the 4K field is
+ * white in the dark scheme and near-black in the light one, exactly as the
+ * 4K badge is in the app. That is why the classes are named for what a
+ * field is (base, surface, uhd, accent, platinum, dvd), not for a colour.
+ *
+ * Name brand tokens directly, never an alias declared on :root: an alias is
+ * resolved there and would not follow a scheme set further down the tree.
+ */
+.on-base,
+.on-surface,
+.on-raised {
+  --ground: var(--dv-bg);
+  --ink: var(--dv-text);
+  --ink-2: var(--dv-text-2);
+  --tone: var(--dv-surface-2);
+  --tone-2: var(--dv-surface-3);
+  --link: var(--dv-accent-bright);
+  --action: var(--dv-accent);
+  --action-hover: var(--dv-accent-hover);
+  --action-press: var(--dv-accent-press);
+  --action-ink: var(--dv-accent-on);
+}
+.on-surface {
+  --ground: var(--dv-surface-1);
+}
+.on-raised {
+  --ground: var(--dv-surface-2);
+  --tone: var(--dv-surface-3);
+  --tone-2: var(--dv-border);
+}
+/* The 4K field: the badge's fill and the ink the badge sets on it. */
+.on-uhd {
+  --ground: var(--dv-fmt-4k-fill);
+  --ink: var(--dv-fmt-4k-on);
+  --ink-2: color-mix(in srgb, var(--dv-fmt-4k-on) 82%, var(--dv-fmt-4k-fill));
+  --tone: color-mix(in srgb, var(--dv-fmt-4k-on) 9%, transparent);
+  --tone-2: color-mix(in srgb, var(--dv-fmt-4k-on) 16%, transparent);
+  --link: var(--dv-fmt-4k-on);
+  --action: var(--dv-accent);
+  --action-hover: var(--dv-accent-hover);
+  --action-press: var(--dv-accent-press);
+  --action-ink: var(--dv-accent-on);
+}
+/*
+ * Platinum is light in the dark scheme and a mid slate in the light one,
+ * and the accent blue disappears on the slate. So this field's action is
+ * its own ink, which holds in both.
+ */
+.on-platinum {
+  --ground: var(--dv-platinum);
+  --ink: var(--dv-fmt-4k-on);
+  --ink-2: var(--dv-fmt-4k-on);
+  --tone: color-mix(in srgb, var(--dv-fmt-4k-on) 10%, transparent);
+  --tone-2: color-mix(in srgb, var(--dv-fmt-4k-on) 18%, transparent);
+  --link: var(--dv-fmt-4k-on);
+  --action: var(--dv-fmt-4k-on);
+  --action-hover: color-mix(
+    in srgb,
+    var(--dv-fmt-4k-on) 86%,
+    var(--dv-platinum)
+  );
+  --action-press: color-mix(
+    in srgb,
+    var(--dv-fmt-4k-on) 74%,
+    var(--dv-platinum)
+  );
+  --action-ink: var(--dv-platinum);
+}
+.on-dvd {
+  --ground: var(--dv-fmt-dvd-fill);
+  --ink: var(--dv-fmt-dvd-on);
+  --ink-2: var(--dv-fmt-dvd-on);
+  --tone: color-mix(in srgb, var(--dv-fmt-dvd-on) 10%, transparent);
+  --tone-2: color-mix(in srgb, var(--dv-fmt-dvd-on) 18%, transparent);
+  --link: var(--dv-fmt-dvd-on);
+  --action: var(--dv-bg);
+  --action-hover: var(--dv-surface-1);
+  --action-press: var(--dv-surface-2);
+  --action-ink: var(--dv-text);
+}
+/* The accent is the same blue in both schemes; its darker step carries the
+   quiet button, so white text on it stays legible in both. */
+.on-accent {
+  --ground: var(--dv-accent);
+  --ink: var(--dv-accent-on);
+  --ink-2: var(--dv-accent-on);
+  --tone: var(--dv-accent-press);
+  --tone-2: color-mix(in srgb, var(--dv-accent-press) 86%, var(--dv-accent-on));
+  --link: var(--dv-accent-on);
+  --action: var(--dv-fmt-4k-fill);
+  --action-hover: color-mix(
+    in srgb,
+    var(--dv-fmt-4k-fill) 88%,
+    var(--dv-accent)
+  );
+  --action-press: color-mix(
+    in srgb,
+    var(--dv-fmt-4k-fill) 76%,
+    var(--dv-accent)
+  );
+  --action-ink: var(--dv-fmt-4k-on);
+}
+
+/* Two pictures of one thing, one per scheme. */
+.only-light {
+  display: none;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme='dark']) .only-light {
+    display: revert;
+  }
+  :root:not([data-theme='dark']) .only-dark {
+    display: none;
+  }
+}
+:root[data-theme='light'] .only-light {
+  display: revert;
+}
+:root[data-theme='light'] .only-dark {
+  display: none;
+}

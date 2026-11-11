@@ -1,10 +1,13 @@
 ---
 import '../styles/tokens.css';
-import '../styles/global.css';
-import { localeCodes, localePath } from '../content/locales';
+import '../styles/theme.css';
+import '../styles/fonts.css';
+import '../styles/base.css';
+import { localeCodes, localePath, ogLocale } from '../content/locales';
 import type { MarketingContent } from '../content/types';
 import tokens from '../design/tokens.json';
-import { SITE_URL } from '../config';
+import { APP_STORE_URL, DOCS_URL, SITE_URL } from '../config';
+import { faqIds } from '../content/structure';
 
 interface Props {
   content: MarketingContent;
@@ -15,12 +18,6 @@ interface Props {
   productSchema?: boolean;
   alternateLinks?: Array<{ locale: string; path: string }>;
   xDefaultPath?: string;
-  /** Marketing routes are dark-only; the legal shell keeps both schemes. */
-  scheme?: 'dark' | 'dark light';
-  /** Preload the Voice typeface; only the marketing routes set it large. */
-  preloadFonts?: boolean;
-  /** Apply the return-visit flag before first paint (marketing routes). */
-  motion?: boolean;
 }
 
 const {
@@ -37,41 +34,69 @@ const {
     path: localePath(locale),
   })),
   xDefaultPath = '/',
-  scheme = 'dark',
-  preloadFonts = true,
-  motion = true,
 } = Astro.props;
-const groundColor = '#04070D';
-// Applied before first paint so a return visit in the same session skips
-// the hero's entrance (motion-system.md §4). Storage failures are ignored.
-const returnFlagScript =
-  "try{if(sessionStorage.getItem('dv-hero-seen'))document.documentElement.classList.add('is-return')}catch(e){}";
+// Applied before first paint, so a stored light or dark choice never
+// flashes the other scheme. With no stored choice the page follows the
+// system. Storage failures are ignored.
+const themeScript =
+  "try{var t=localStorage.getItem('dv-theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}";
 const canonical = new URL(canonicalPath, SITE_URL).href;
 const iconImage = new URL('/brand/discvault-icon-512-dark.png', SITE_URL).href;
-// The marketing routes share a 1200 × 630 social image (the disc under the
-// key light with the campaign line); the legal shell keeps the icon.
-const socialImage =
-  Astro.props.scheme === 'dark light'
-    ? { url: iconImage, width: 512, height: 512 }
-    : {
-        url: new URL('/brand/og-pressed-light.png', SITE_URL).href,
-        width: 1200,
-        height: 630,
-      };
+// The marketing routes share a 1200 × 630 social image; the legal shell
+// keeps the icon.
+const socialImage = !productSchema
+  ? { url: iconImage, width: 512, height: 512 }
+  : {
+      url: new URL('/brand/og-discvault.jpg', SITE_URL).href,
+      width: 1200,
+      height: 630,
+    };
+// Home pages describe both editions and the questions they answer on the
+// page itself; the FAQ entries are generated from the copy that is rendered.
 const structuredData = {
   '@context': 'https://schema.org',
-  '@type': 'SoftwareApplication',
-  '@id': `${SITE_URL}/#product`,
-  name: 'DiscVault',
-  description,
-  url: canonical,
-  image: iconImage,
-  applicationCategory: 'LifestyleApplication',
-  operatingSystem: 'iOS, iPadOS, Web',
-  brand: {
-    '@type': 'Brand',
-    name: 'DiscVault',
-  },
+  '@graph': [
+    {
+      '@type': 'SoftwareApplication',
+      '@id': `${SITE_URL}/#product`,
+      name: 'DiscVault',
+      description,
+      url: canonical,
+      image: iconImage,
+      applicationCategory: 'LifestyleApplication',
+      operatingSystem: 'iOS, iPadOS',
+      downloadUrl: APP_STORE_URL,
+      installUrl: APP_STORE_URL,
+      inLanguage: content.locale,
+      brand: { '@type': 'Brand', name: 'DiscVault' },
+    },
+    {
+      '@type': 'SoftwareApplication',
+      '@id': `${SITE_URL}/#self-hosted`,
+      name: 'DiscVault (self-hosted)',
+      description: content.selfHosted.lead,
+      url: canonical,
+      image: iconImage,
+      applicationCategory: 'LifestyleApplication',
+      operatingSystem: 'Docker, Unraid, Home Assistant',
+      downloadUrl: DOCS_URL,
+      offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
+      brand: { '@type': 'Brand', name: 'DiscVault' },
+    },
+    {
+      '@type': 'FAQPage',
+      '@id': `${canonical}#faq`,
+      inLanguage: content.locale,
+      mainEntity: faqIds.map((id) => ({
+        '@type': 'Question',
+        name: content.faq.items[id].question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: content.faq.items[id].answer.join(' '),
+        },
+      })),
+    },
+  ],
 };
 ---
 
@@ -80,53 +105,25 @@ const structuredData = {
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="color-scheme" content={scheme} />
-    {
-      scheme === 'dark' ? (
-        <meta name="theme-color" content={groundColor} />
-      ) : (
-        <>
-          <meta
-            name="theme-color"
-            content={tokens.pwa['theme-color-dark'].$value}
-            media="(prefers-color-scheme: dark)"
-          />
-          <meta
-            name="theme-color"
-            content={tokens.pwa['theme-color-light'].$value}
-            media="(prefers-color-scheme: light)"
-          />
-        </>
-      )
-    }
-    {
-      preloadFonts && (
-        <>
-          <link
-            rel="preload"
-            href="/fonts/instrument-serif-regular-latin.woff2"
-            as="font"
-            type="font/woff2"
-            crossorigin
-          />
-          <link
-            rel="preload"
-            href="/fonts/instrument-serif-italic-latin.woff2"
-            as="font"
-            type="font/woff2"
-            crossorigin
-          />
-          <link
-            rel="preload"
-            href="/fonts/inter-regular-latin.woff2"
-            as="font"
-            type="font/woff2"
-            crossorigin
-          />
-        </>
-      )
-    }
-    {motion && <script is:inline set:html={returnFlagScript} />}
+    <meta name="color-scheme" content="dark light" />
+    <meta
+      name="theme-color"
+      content={tokens.pwa['theme-color-dark'].$value}
+      media="(prefers-color-scheme: dark)"
+    />
+    <meta
+      name="theme-color"
+      content={tokens.pwa['theme-color-light'].$value}
+      media="(prefers-color-scheme: light)"
+    />
+    <script is:inline set:html={themeScript} />
+    <link
+      rel="preload"
+      href="/fonts/inter-var-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
     <title>{title}</title>
     <meta name="description" content={description} />
     {noindex && <meta name="robots" content="noindex, follow" />}
@@ -145,13 +142,15 @@ const structuredData = {
       hreflang="x-default"
       href={new URL(xDefaultPath, SITE_URL).href}
     />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
     <link
       rel="icon"
       type="image/png"
-      sizes="48x48"
-      href="/brand/discvault-icon-48.png"
+      sizes="192x192"
+      href="/brand/discvault-icon-192.png"
     />
     <link rel="apple-touch-icon" href="/brand/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="DiscVault" />
@@ -161,7 +160,11 @@ const structuredData = {
     <meta property="og:image" content={socialImage.url} />
     <meta property="og:image:width" content={String(socialImage.width)} />
     <meta property="og:image:height" content={String(socialImage.height)} />
-    <meta property="og:locale" content={content.locale} />
+    <meta property="og:image:alt" content={content.seo.ogAlt} />
+    <meta
+      property="og:locale"
+      content={ogLocale[content.locale as keyof typeof ogLocale] ?? 'en_GB'}
+    />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
@@ -177,7 +180,7 @@ const structuredData = {
     }
   </head>
   <body>
-    <a class="skip-link" href="#main">Skip to content</a>
+    <a class="skip-link" href="#main">{content.a11y.skip}</a>
     <slot />
   </body>
 </html>

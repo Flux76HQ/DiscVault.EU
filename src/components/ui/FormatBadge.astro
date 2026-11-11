@@ -1,0 +1,10 @@
+---
+/** The app's own format badge: fixed brand colours, never themed. */
+interface Props {
+  kind: 'uhd' | 'bluray' | 'dvd' | 'steel' | 'boxset';
+  label: string;
+}
+const { kind, label } = Astro.props;
+---
+
+<span class:list={['format-badge', `format-badge-${kind}`]}>{label}</span>

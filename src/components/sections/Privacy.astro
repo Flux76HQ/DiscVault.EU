@@ -1,0 +1,75 @@
+---
+import '../../styles/sections/privacy.css';
+/**
+ * Chapter: privacy. A wall of tiles: four figures and four covers from the
+ * shelf nobody else gets to look at. The second paragraph carries the
+ * installation-count disclosure, which every locale must keep.
+ */
+import { Picture } from 'astro:assets';
+import { privacyTileIds } from '../../content/structure';
+import type { MarketingContent } from '../../content/types';
+import { poster } from '../../media/registry';
+
+interface Props {
+  content: MarketingContent;
+  privacyPath: string;
+}
+
+const { content, privacyPath } = Astro.props;
+const { privacy, actions } = content;
+const covers = [
+  'vanta',
+  'the-emberwood-crown',
+  'pip-and-the-paper-moon',
+  'parallax-nine',
+];
+const tones = ['tile-base', 'tile-uhd', 'tile-accent', 'tile-raised'];
+// Figure, cover, figure, figure / cover, figure, cover, cover.
+const order = ['f0', 'c0', 'f1', 'f2', 'c1', 'f3', 'c2', 'c3'];
+---
+
+<section class="chapter privacy on-dvd" id="privacy" data-chapter="on-dvd">
+  <div class="grid">
+    <h2 class="title privacy-title" data-rise>{privacy.title}</h2>
+    <p class="statement privacy-lead" data-rise>{privacy.lead}</p>
+  </div>
+
+  <ul class="privacy-wall">
+    {
+      order.map((cell) => {
+        const index = Number(cell[1]);
+        if (cell[0] === 'c') {
+          return (
+            <li class="privacy-tile privacy-cover" data-rise>
+              <Picture
+                src={poster(covers[index])}
+                formats={['avif']}
+                fallbackFormat="webp"
+                widths={[240, 360, 480, 688]}
+                sizes="(min-width: 56.25rem) 25vw, 50vw"
+                alt=""
+                loading="lazy"
+                decoding="async"
+              />
+            </li>
+          );
+        }
+        const tile = privacy.tiles[privacyTileIds[index]];
+        return (
+          <li class:list={['privacy-tile', tones[index]]} data-rise>
+            <span class="privacy-figure tabular">{tile.figure}</span>
+            <span class="privacy-label">{tile.label}</span>
+          </li>
+        );
+      })
+    }
+  </ul>
+
+  <div class="grid privacy-body">
+    <p data-rise>{privacy.body[0]}</p>
+    <p data-rise>{privacy.body[1]}</p>
+    <a class="button privacy-action" href={privacyPath} data-rise>
+      {actions.privacyPolicy}
+    </a>
+  </div>
+</section>

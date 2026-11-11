@@ -1,0 +1,66 @@
+---
+import '../../styles/sections/collect.css';
+/** Chapter: what DiscVault keeps. A pinned heading; the capabilities pass. */
+import { featureIds, featuresNeedingPicture } from '../../content/structure';
+import { mediaSlot } from '../../media/registry';
+import type { MarketingContent } from '../../content/types';
+import Media from '../media/Media.astro';
+
+interface Props {
+  content: MarketingContent;
+}
+
+const { collect, a11y } = Astro.props.content;
+const shown = featureIds.filter(
+  (id) =>
+    !featuresNeedingPicture.includes(id) || mediaSlot(`collect-${id}`).still,
+);
+---
+
+<section
+  class="chapter collect on-raised"
+  id="product"
+  data-chapter="on-raised"
+>
+  <div class="grid">
+    <h2 class="title collect-title" data-rise>{collect.title}</h2>
+    <div class="collect-blocks">
+      {
+        shown.map((id, index) => {
+          const block = collect.blocks[id];
+          return (
+            <article
+              class:list={[
+                'collect-block',
+                { 'collect-block-flip': index % 2 === 1 },
+              ]}
+              data-rise-group
+            >
+              <h3 class="collect-block-title" data-rise>
+                {block.title}
+              </h3>
+              <div class="collect-row">
+                <Media
+                  slot={`collect-${id}`}
+                  alt={block.mediaAlt}
+                  ratio="3 / 4"
+                  sizes="(min-width: 56.25rem) 20vw, 100vw"
+                  widths={[320, 480, 720, 960]}
+                  pauseLabel={a11y.pauseMotion}
+                  playLabel={a11y.playMotion}
+                  optional
+                  class="collect-shot"
+                />
+                <ul class="collect-points" data-rise>
+                  {block.points.map((point) => (
+                    <li>{point}</li>
+                  ))}
+                </ul>
+              </div>
+            </article>
+          );
+        })
+      }
+    </div>
+  </div>
+</section>

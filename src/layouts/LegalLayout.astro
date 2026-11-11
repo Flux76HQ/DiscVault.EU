@@ -1,4 +1,5 @@
 ---
+import '../styles/legal.css';
 import BaseLayout from './BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
@@ -42,17 +43,8 @@ const dutchPath = `/${documentType}-nl.html`;
     { locale: 'nl', path: dutchPath },
   ]}
   xDefaultPath={englishPath}
-  scheme="dark light"
-  preloadFonts={false}
-  motion={false}
 >
-  <Header
-    content={content}
-    locale={locale}
-    homePath={localePath(locale)}
-    showCounter={false}
-    solid
-  />
+  <Header content={content} locale={locale} homePath={localePath(locale)} />
   <main id="main">
     <header class="legal-hero wrap">
       <p class="eyebrow">{eyebrow}</p>
@@ -61,5 +53,5 @@ const dutchPath = `/${documentType}-nl.html`;
     </header>
     <article class="legal wrap" set:html={body} />
   </main>
-  <Footer content={content} locale={locale} lightCapable />
+  <Footer content={content} locale={locale} />
 </BaseLayout>
