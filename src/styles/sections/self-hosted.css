@@ -44,7 +44,11 @@
   margin-top: clamp(3rem, 6vw, 5rem);
   padding: 1.5rem;
   border-radius: var(--radius-lg);
-  background: var(--tone);
+  /* The field's own ink as the card and its ground as the text: a tint of
+     platinum would lose contrast in one of the two schemes. */
+  background: var(--ink);
+  color: var(--ground);
+  --link: var(--ground);
 }
 .self-hosted-migration h3 {
   font-size: var(--step-body);

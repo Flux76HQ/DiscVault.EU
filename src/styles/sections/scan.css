@@ -161,8 +161,8 @@
   margin-top: 0.5rem;
   padding: 0.4rem 0.7rem;
   border-radius: var(--radius-sm);
-  background: color-mix(in srgb, var(--dv-success) 16%, transparent);
-  color: var(--dv-success);
+  background: color-mix(in srgb, var(--dv-success) 22%, transparent);
+  color: var(--dv-text);
   font-weight: 600;
 }
 

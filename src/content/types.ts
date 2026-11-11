@@ -33,6 +33,8 @@ export interface MarketingContent {
     pauseMotion: string;
     playMotion: string;
   };
+  /** The theme choice: follow the system, or light or dark. */
+  theme: { label: string; system: string; light: string; dark: string };
   nav: {
     collect: string;
     scan: string;

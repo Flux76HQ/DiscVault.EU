@@ -15,6 +15,12 @@
     "pauseMotion": "Beweging pauzeren",
     "playMotion": "Beweging afspelen"
   },
+  "theme": {
+    "label": "Thema",
+    "system": "Systeem",
+    "light": "Licht",
+    "dark": "Donker"
+  },
   "nav": {
     "collect": "Verzamelen",
     "scan": "Scannen",

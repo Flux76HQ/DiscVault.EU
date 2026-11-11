@@ -15,6 +15,12 @@
     "pauseMotion": "動きを一時停止",
     "playMotion": "動きを再生"
   },
+  "theme": {
+    "label": "テーマ",
+    "system": "システム",
+    "light": "ライト",
+    "dark": "ダーク"
+  },
   "nav": {
     "collect": "集める",
     "scan": "スキャン",

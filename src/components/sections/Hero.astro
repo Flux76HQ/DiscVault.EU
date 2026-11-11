@@ -16,16 +16,16 @@ interface Props {
 const { content } = Astro.props;
 const { hero, nav, actions, a11y } = content;
 const swatches = [
-  { href: '#product', label: nav.collect, field: 'on-slate' },
-  { href: '#scan', label: nav.scan, field: 'on-white' },
-  { href: '#editions', label: nav.editions, field: 'on-blue' },
+  { href: '#product', label: nav.collect, field: 'on-raised' },
+  { href: '#scan', label: nav.scan, field: 'on-uhd' },
+  { href: '#editions', label: nav.editions, field: 'on-accent' },
   { href: '#self-hosted', label: nav.selfHosted, field: 'on-platinum' },
-  { href: '#privacy', label: nav.privacy, field: 'on-gold' },
+  { href: '#privacy', label: nav.privacy, field: 'on-dvd' },
 ];
 ---
 
-<section class="hero on-navy" id="discvault26" data-chapter="on-navy">
-  <div class="hero-panel on-deep">
+<section class="hero on-base" id="discvault26" data-chapter="on-base">
+  <div class="hero-panel on-surface">
     <div class="hero-copy">
       <h1 class="title hero-title">{hero.title}</h1>
       <p class="hero-lead">{hero.lead}</p>

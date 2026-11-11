@@ -11,7 +11,11 @@ interface Props {
 const { editions } = Astro.props.content;
 ---
 
-<section class="chapter editions on-blue" id="editions" data-chapter="on-blue">
+<section
+  class="chapter editions on-accent"
+  id="editions"
+  data-chapter="on-accent"
+>
   <div class="grid editions-head">
     <h2 class="title editions-title" data-rise>{editions.title}</h2>
     <p class="statement editions-lead" data-rise>{editions.lead}</p>

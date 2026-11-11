@@ -657,9 +657,7 @@ if (fontBytes > fontTotalLimit) {
  * Design source: chrome-and-blue-web.md.
  */
 const tokenFiles = new Set(
-  ['tokens.css', 'tokens-dark-pin.css', 'tokens-dark-scope.css'].map((file) =>
-    path.join('src', 'styles', file),
-  ),
+  ['tokens.css'].map((file) => path.join('src', 'styles', file)),
 );
 let scannedSources = 0;
 for (const file of await walk('src')) {

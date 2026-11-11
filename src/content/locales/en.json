@@ -15,6 +15,12 @@
     "pauseMotion": "Pause the motion",
     "playMotion": "Play the motion"
   },
+  "theme": {
+    "label": "Theme",
+    "system": "System",
+    "light": "Light",
+    "dark": "Dark"
+  },
   "nav": {
     "collect": "Collect",
     "scan": "Scan",

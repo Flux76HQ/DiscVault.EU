@@ -15,6 +15,12 @@
     "pauseMotion": "Wstrzymaj animację",
     "playMotion": "Odtwórz animację"
   },
+  "theme": {
+    "label": "Motyw",
+    "system": "Systemowy",
+    "light": "Jasny",
+    "dark": "Ciemny"
+  },
   "nav": {
     "collect": "Kolekcja",
     "scan": "Skanuj",

@@ -15,6 +15,12 @@
     "pauseMotion": "Pausa rörelsen",
     "playMotion": "Spela upp rörelsen"
   },
+  "theme": {
+    "label": "Tema",
+    "system": "System",
+    "light": "Ljust",
+    "dark": "Mörkt"
+  },
   "nav": {
     "collect": "Samla",
     "scan": "Skanna",

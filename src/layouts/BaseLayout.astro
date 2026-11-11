@@ -18,8 +18,6 @@ interface Props {
   productSchema?: boolean;
   alternateLinks?: Array<{ locale: string; path: string }>;
   xDefaultPath?: string;
-  /** Marketing routes are dark-only; the legal shell keeps both schemes. */
-  scheme?: 'dark' | 'dark light';
 }
 
 const {
@@ -36,21 +34,23 @@ const {
     path: localePath(locale),
   })),
   xDefaultPath = '/',
-  scheme = 'dark',
 } = Astro.props;
-const groundColor = tokens.pwa['theme-color-dark'].$value;
+// Applied before first paint, so a stored light or dark choice never
+// flashes the other scheme. With no stored choice the page follows the
+// system. Storage failures are ignored.
+const themeScript =
+  "try{var t=localStorage.getItem('dv-theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}";
 const canonical = new URL(canonicalPath, SITE_URL).href;
 const iconImage = new URL('/brand/discvault-icon-512-dark.png', SITE_URL).href;
 // The marketing routes share a 1200 × 630 social image; the legal shell
 // keeps the icon.
-const socialImage =
-  Astro.props.scheme === 'dark light'
-    ? { url: iconImage, width: 512, height: 512 }
-    : {
-        url: new URL('/brand/og-discvault.jpg', SITE_URL).href,
-        width: 1200,
-        height: 630,
-      };
+const socialImage = !productSchema
+  ? { url: iconImage, width: 512, height: 512 }
+  : {
+      url: new URL('/brand/og-discvault.jpg', SITE_URL).href,
+      width: 1200,
+      height: 630,
+    };
 // Home pages describe both editions and the questions they answer on the
 // page itself; the FAQ entries are generated from the copy that is rendered.
 const structuredData = {
@@ -105,25 +105,18 @@ const structuredData = {
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="color-scheme" content={scheme} />
-    {
-      scheme === 'dark' ? (
-        <meta name="theme-color" content={groundColor} />
-      ) : (
-        <>
-          <meta
-            name="theme-color"
-            content={tokens.pwa['theme-color-dark'].$value}
-            media="(prefers-color-scheme: dark)"
-          />
-          <meta
-            name="theme-color"
-            content={tokens.pwa['theme-color-light'].$value}
-            media="(prefers-color-scheme: light)"
-          />
-        </>
-      )
-    }
+    <meta name="color-scheme" content="dark light" />
+    <meta
+      name="theme-color"
+      content={tokens.pwa['theme-color-dark'].$value}
+      media="(prefers-color-scheme: dark)"
+    />
+    <meta
+      name="theme-color"
+      content={tokens.pwa['theme-color-light'].$value}
+      media="(prefers-color-scheme: light)"
+    />
+    <script is:inline set:html={themeScript} />
     <link
       rel="preload"
       href="/fonts/inter-var-latin.woff2"

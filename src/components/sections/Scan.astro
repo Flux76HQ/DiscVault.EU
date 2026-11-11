@@ -21,7 +21,7 @@ const { scan } = Astro.props.content;
 ---
 
 <section class="scan" id="scan">
-  <div class="scan-in on-navy" data-chapter="on-navy">
+  <div class="scan-in on-base" data-chapter="on-base">
     <div class="scan-in-body">
       <p class="statement scan-lead" id="scan-lead" data-rise>{scan.lead}</p>
       <div
@@ -51,11 +51,11 @@ const { scan } = Astro.props.content;
     <h2 class="title scan-title">{scan.titleStart}</h2>
   </div>
 
-  <div class="scan-out on-white" data-chapter="on-white">
+  <div class="scan-out on-uhd" data-chapter="on-uhd">
     <div class="scan-out-body" aria-live="polite">
       {
         scanFilms.map((film, index) => (
-          <article class="record dv-dark" data-ui data-record={index + 1}>
+          <article class="record" data-ui data-record={index + 1}>
             <Picture
               src={poster(film.slug)}
               formats={['avif']}

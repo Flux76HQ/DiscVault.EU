@@ -1,5 +1,4 @@
 ---
-import '../styles/tokens-dark-scope.css';
 import '../styles/shell.css';
 /**
  * The bar: wordmark, docs, language and one action. Plain and sticky. On the
@@ -16,6 +15,7 @@ import {
   TESTFLIGHT_URL,
 } from '../config';
 import LocaleSwitcher from './LocaleSwitcher.astro';
+import ThemeSwitcher from './ThemeSwitcher.astro';
 
 interface Props {
   content: MarketingContent;
@@ -35,7 +35,7 @@ const sections = [
 ];
 ---
 
-<header class="bar dv-dark on-navy" data-bar>
+<header class="bar on-base" data-bar>
   <a class="bar-brand" href={homePath} aria-label={content.a11y.home}>
     <img src="/brand/discvault-mark-96.png" width="28" height="28" alt="" />
     <span>DiscVault</span>
@@ -43,6 +43,7 @@ const sections = [
 
   <div class="bar-tools">
     <a class="bar-link" href={DOCS_URL}>{content.nav.docs}</a>
+    <ThemeSwitcher theme={content.theme} />
     <LocaleSwitcher locale={locale} label={content.a11y.language} />
     <a
       class="button button-compact bar-action"
@@ -65,6 +66,7 @@ const sections = [
         </a>
         {sections.map(({ href, label }) => <a href={href}>{label}</a>)}
         <a href={DOCS_URL}>{content.nav.docs}</a>
+        <ThemeSwitcher theme={content.theme} />
         <a href={APP_STORE_URL} data-cta="app-store" data-rank="text">
           {content.actions.appStore}
         </a>

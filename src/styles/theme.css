@@ -42,14 +42,19 @@
  * links and notes read these, so a component never names a colour itself.
  *
  * The page is a row of flat colour chapters, and the colours are the app's
- * own ground and its fixed format-badge colours. Each ground names a brand
- * token directly, never an alias declared on :root: an alias is resolved
- * there, so it would ignore the dark values that .dv-dark pins on the header
- * and footer of the light-capable legal shell.
+ * own ground and its fixed format-badge colours. Every value below is a
+ * brand token, and the brand tokens carry both schemes, so each chapter has
+ * a light and a dark form without a rule of its own here: the 4K field is
+ * white in the dark scheme and near-black in the light one, exactly as the
+ * 4K badge is in the app. That is why the classes are named for what a
+ * field is (base, surface, uhd, accent, platinum, dvd), not for a colour.
+ *
+ * Name brand tokens directly, never an alias declared on :root: an alias is
+ * resolved there and would not follow a scheme set further down the tree.
  */
-.on-navy,
-.on-deep,
-.on-slate {
+.on-base,
+.on-surface,
+.on-raised {
   --ground: var(--dv-bg);
   --ink: var(--dv-text);
   --ink-2: var(--dv-text-2);
@@ -61,51 +66,102 @@
   --action-press: var(--dv-accent-press);
   --action-ink: var(--dv-accent-on);
 }
-.on-deep {
+.on-surface {
   --ground: var(--dv-surface-1);
 }
-.on-slate {
+.on-raised {
   --ground: var(--dv-surface-2);
   --tone: var(--dv-surface-3);
   --tone-2: var(--dv-border);
 }
-.on-white,
-.on-platinum,
-.on-gold {
+/* The 4K field: the badge's fill and the ink the badge sets on it. */
+.on-uhd {
   --ground: var(--dv-fmt-4k-fill);
   --ink: var(--dv-fmt-4k-on);
-  --ink-2: var(--dv-surface-3);
+  --ink-2: color-mix(in srgb, var(--dv-fmt-4k-on) 82%, var(--dv-fmt-4k-fill));
   --tone: color-mix(in srgb, var(--dv-fmt-4k-on) 9%, transparent);
   --tone-2: color-mix(in srgb, var(--dv-fmt-4k-on) 16%, transparent);
-  --link: var(--dv-accent-press);
+  --link: var(--dv-fmt-4k-on);
   --action: var(--dv-accent);
   --action-hover: var(--dv-accent-hover);
   --action-press: var(--dv-accent-press);
   --action-ink: var(--dv-accent-on);
 }
+/*
+ * Platinum is light in the dark scheme and a mid slate in the light one,
+ * and the accent blue disappears on the slate. So this field's action is
+ * its own ink, which holds in both.
+ */
 .on-platinum {
   --ground: var(--dv-platinum);
-  --link: var(--dv-bg);
+  --ink: var(--dv-fmt-4k-on);
+  --ink-2: var(--dv-fmt-4k-on);
+  --tone: color-mix(in srgb, var(--dv-fmt-4k-on) 10%, transparent);
+  --tone-2: color-mix(in srgb, var(--dv-fmt-4k-on) 18%, transparent);
+  --link: var(--dv-fmt-4k-on);
+  --action: var(--dv-fmt-4k-on);
+  --action-hover: color-mix(
+    in srgb,
+    var(--dv-fmt-4k-on) 86%,
+    var(--dv-platinum)
+  );
+  --action-press: color-mix(
+    in srgb,
+    var(--dv-fmt-4k-on) 74%,
+    var(--dv-platinum)
+  );
+  --action-ink: var(--dv-platinum);
 }
-.on-gold {
+.on-dvd {
   --ground: var(--dv-fmt-dvd-fill);
   --ink: var(--dv-fmt-dvd-on);
   --ink-2: var(--dv-fmt-dvd-on);
+  --tone: color-mix(in srgb, var(--dv-fmt-dvd-on) 10%, transparent);
+  --tone-2: color-mix(in srgb, var(--dv-fmt-dvd-on) 18%, transparent);
   --link: var(--dv-fmt-dvd-on);
   --action: var(--dv-bg);
   --action-hover: var(--dv-surface-1);
   --action-press: var(--dv-surface-2);
   --action-ink: var(--dv-text);
 }
-.on-blue {
+/* The accent is the same blue in both schemes; its darker step carries the
+   quiet button, so white text on it stays legible in both. */
+.on-accent {
   --ground: var(--dv-accent);
   --ink: var(--dv-accent-on);
   --ink-2: var(--dv-accent-on);
-  --tone: color-mix(in srgb, var(--dv-bg) 22%, transparent);
-  --tone-2: color-mix(in srgb, var(--dv-bg) 34%, transparent);
+  --tone: var(--dv-accent-press);
+  --tone-2: color-mix(in srgb, var(--dv-accent-press) 86%, var(--dv-accent-on));
   --link: var(--dv-accent-on);
   --action: var(--dv-fmt-4k-fill);
-  --action-hover: var(--dv-accent-on);
-  --action-press: var(--dv-platinum);
+  --action-hover: color-mix(
+    in srgb,
+    var(--dv-fmt-4k-fill) 88%,
+    var(--dv-accent)
+  );
+  --action-press: color-mix(
+    in srgb,
+    var(--dv-fmt-4k-fill) 76%,
+    var(--dv-accent)
+  );
   --action-ink: var(--dv-fmt-4k-on);
+}
+
+/* Two pictures of one thing, one per scheme. */
+.only-light {
+  display: none;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme='dark']) .only-light {
+    display: revert;
+  }
+  :root:not([data-theme='dark']) .only-dark {
+    display: none;
+  }
+}
+:root[data-theme='light'] .only-light {
+  display: revert;
+}
+:root[data-theme='light'] .only-dark {
+  display: none;
 }

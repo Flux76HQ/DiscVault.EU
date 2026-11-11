@@ -15,6 +15,12 @@
     "pauseMotion": "Mozgás szüneteltetése",
     "playMotion": "Mozgás lejátszása"
   },
+  "theme": {
+    "label": "Téma",
+    "system": "Rendszer",
+    "light": "Világos",
+    "dark": "Sötét"
+  },
   "nav": {
     "collect": "Gyűjtés",
     "scan": "Beolvasás",

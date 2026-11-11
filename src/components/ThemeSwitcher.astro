@@ -1,0 +1,65 @@
+---
+/**
+ * The theme choice: follow the system (the default) or pick light or dark.
+ * The choice is `data-theme` on the root element, which the brand tokens
+ * read; it is stored per browser and applied before first paint by the
+ * layout. Without script the page simply follows the system, so the control
+ * stays hidden until the script can make it work.
+ */
+import type { MarketingContent } from '../content/types';
+
+interface Props {
+  theme: MarketingContent['theme'];
+}
+
+const { theme } = Astro.props;
+---
+
+<label class="switcher theme-switcher" hidden data-theme-switcher>
+  <span class="sr-only">{theme.label}</span>
+  <select aria-label={theme.label}>
+    <option value="system">{theme.system}</option>
+    <option value="light">{theme.light}</option>
+    <option value="dark">{theme.dark}</option>
+  </select>
+</label>
+
+<script>
+  const root = document.documentElement;
+  const key = 'dv-theme';
+  const wraps = [
+    ...document.querySelectorAll<HTMLElement>('[data-theme-switcher]'),
+  ];
+  const selects = wraps.flatMap((wrap) => [...wrap.querySelectorAll('select')]);
+  const current = () =>
+    root.dataset.theme === 'light' || root.dataset.theme === 'dark'
+      ? root.dataset.theme
+      : 'system';
+  const show = () => selects.forEach((select) => (select.value = current()));
+
+  const apply = (choice: string) => {
+    if (choice === 'light' || choice === 'dark') root.dataset.theme = choice;
+    else delete root.dataset.theme;
+    try {
+      if (choice === 'system') localStorage.removeItem(key);
+      else localStorage.setItem(key, choice);
+    } catch {
+      // Storage may be unavailable; the choice then lasts for this page.
+    }
+    show();
+  };
+
+  selects.forEach((select) =>
+    select.addEventListener('change', () => apply(select.value)),
+  );
+  // Another tab changed it: follow.
+  window.addEventListener('storage', (event) => {
+    if (event.key !== key) return;
+    const choice = event.newValue;
+    if (choice === 'light' || choice === 'dark') root.dataset.theme = choice;
+    else delete root.dataset.theme;
+    show();
+  });
+  show();
+  wraps.forEach((wrap) => (wrap.hidden = false));
+</script>

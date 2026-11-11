@@ -15,6 +15,12 @@
     "pauseMotion": "Pozastavit pohyb",
     "playMotion": "Spustit pohyb"
   },
+  "theme": {
+    "label": "Vzhled",
+    "system": "Podle systému",
+    "light": "Světlý",
+    "dark": "Tmavý"
+  },
   "nav": {
     "collect": "Sbírat",
     "scan": "Skenovat",

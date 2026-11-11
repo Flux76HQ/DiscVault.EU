@@ -11,7 +11,9 @@
  *  - the bar takes the colour of the chapter beneath it;
  *  - under reduced motion nothing is running after 100 ms;
  *  - the compiled CSS animates no background-position, filter or box-shadow;
- *  - axe reports no serious or critical violation at 1440 and 390 px;
+ *  - axe reports no serious or critical violation at 1440 and 390 px, in
+ *    the dark and in the light scheme;
+ *  - the theme choice sets the scheme, survives a reload and can be undone;
  * and, on three routes at four widths, that the page never scrolls sideways.
  *
  * Release 3.0 replaced the Pressed Light homepage with colour chapters on
@@ -429,9 +431,9 @@ try {
       });
       if (barClass === null) {
         fail(`${route}: no [data-bar] or no #editions to test the bar against`);
-      } else if (!barClass.split(/\s+/).includes('on-blue')) {
+      } else if (!barClass.split(/\s+/).includes('on-accent')) {
         fail(
-          `${route}: with #editions under the bar, [data-bar] is "${barClass}" and lacks on-blue`,
+          `${route}: with #editions under the bar, [data-bar] is "${barClass}" and lacks on-accent`,
         );
       }
 
@@ -519,9 +521,17 @@ try {
      * for the hero entrance; 3.0 scrolls the page through first, so every
      * part has risen and is tested at its resting colours.
      */
-    for (const width of [1440, 390]) {
+    for (const [width, colorScheme] of [
+      [1440, 'dark'],
+      [390, 'dark'],
+      [1440, 'light'],
+      [390, 'light'],
+    ]) {
+      // Every page follows the system scheme, so both are tested: a pair
+      // that is legible in one can fail in the other.
       const context = await browser.newContext({
         viewport: { width, height: width === 390 ? 844 : 900 },
+        colorScheme,
       });
       const page = await context.newPage();
       const network = track(page, route);
@@ -541,10 +551,53 @@ try {
       for (const violation of results.violations) {
         if (violation.impact === 'serious' || violation.impact === 'critical') {
           fail(
-            `${route} @${width}: axe ${violation.impact} ${violation.id} on ${violation.nodes
+            `${route} @${width} ${colorScheme}: axe ${violation.impact} ${violation.id} on ${violation.nodes
               .slice(0, 3)
               .map((node) => node.target.join(' '))
               .join(', ')}`,
+          );
+        }
+      }
+      await context.close();
+    }
+
+    /**
+     * 3b. The theme choice. The system scheme decides until the visitor
+     * picks one; the pick is `data-theme` on the root element, changes the
+     * ground at once, survives a reload without a flash of the other
+     * scheme (the layout applies it before first paint) and can be undone.
+     */
+    {
+      const context = await browser.newContext({
+        viewport: { width: 1440, height: 900 },
+        colorScheme: 'dark',
+      });
+      const page = await context.newPage();
+      await page.goto(base + route, { waitUntil: 'networkidle' });
+      const ground = () =>
+        page.evaluate(() => getComputedStyle(document.body).backgroundColor);
+      const select = page.locator('[data-theme-switcher] select').first();
+      const dark = await ground();
+      if (!(await select.isVisible())) {
+        fail(`${route}: the theme switcher is not shown`);
+      } else {
+        await select.selectOption('light');
+        const light = await ground();
+        if (light === dark) {
+          fail(`${route}: choosing the light theme did not change the ground`);
+        }
+        await page.reload({ waitUntil: 'domcontentloaded' });
+        if ((await ground()) !== light) {
+          fail(`${route}: the theme choice did not survive a reload`);
+        }
+        await page.waitForLoadState('networkidle');
+        await page
+          .locator('[data-theme-switcher] select')
+          .first()
+          .selectOption('system');
+        if ((await ground()) !== dark) {
+          fail(
+            `${route}: choosing "system" did not return to the system scheme`,
           );
         }
       }

@@ -124,7 +124,8 @@ curl --fail http://localhost:4321/legacy/
 - `src/components/` and `src/layouts/` — the shell (`Header`, `Footer`), one
   component per homepage chapter in `sections/`, and the shared `media/` and
   `ui/` parts.
-- `src/styles/` — `tokens*.css` are generated brand tokens; `theme.css` holds
+- `src/styles/` — `tokens.css` is the generated brand tokens, in both schemes
+  (see "Light and dark" below); `theme.css` holds
   the site's own tokens (type steps, spacing, radii) and the `.on-*` classes
   that give each chapter its ground and inks from brand tokens; `base.css`, `shell.css`, `legal.css` and one file per
   chapter in `sections/`.
@@ -164,6 +165,26 @@ or user data.
 
 Protected runtime, content, style, asset, script, config, deployment and
 workflow paths require `VERSION` to be part of the same staged change.
+
+## Light and dark
+
+Every page follows the visitor's system setting, and the theme switcher in
+the bar, the menu and the footer lets them choose light or dark instead. The
+choice is `data-theme="light"` or `data-theme="dark"` on the root element,
+stored in the browser under `dv-theme` and applied before first paint by an
+inline script in `BaseLayout.astro`; no attribute means "follow the system".
+
+`tokens.css` defines the dark values on `:root` and the light values twice:
+under `prefers-color-scheme: light` (unless the choice is dark) and under
+`[data-theme='light']`. Nothing else knows about schemes. A chapter class in
+`theme.css` (`on-base`, `on-surface`, `on-raised`, `on-uhd`, `on-accent`,
+`on-platinum`, `on-dvd`) names brand tokens only, so each field has its
+light and its dark form for free: the 4K field is white in the dark scheme
+and near-black in the light one, as the 4K badge is in the app.
+
+When adding a colour pair, check it in both schemes: the experience gate
+runs axe in each. Two pictures of one thing take the classes `only-dark` and
+`only-light`. Screenshots and loops show the dark interface in both schemes.
 
 ## Media
 

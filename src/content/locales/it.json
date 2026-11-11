@@ -15,6 +15,12 @@
     "pauseMotion": "Metti in pausa l’animazione",
     "playMotion": "Riproduci l’animazione"
   },
+  "theme": {
+    "label": "Tema",
+    "system": "Sistema",
+    "light": "Chiaro",
+    "dark": "Scuro"
+  },
   "nav": {
     "collect": "Colleziona",
     "scan": "Scansiona",

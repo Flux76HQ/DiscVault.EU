@@ -15,6 +15,12 @@
     "pauseMotion": "Animation anhalten",
     "playMotion": "Animation abspielen"
   },
+  "theme": {
+    "label": "Erscheinungsbild",
+    "system": "System",
+    "light": "Hell",
+    "dark": "Dunkel"
+  },
   "nav": {
     "collect": "Sammeln",
     "scan": "Scannen",

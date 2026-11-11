@@ -50,7 +50,7 @@
   text-decoration: underline;
 }
 
-.locale-switcher select {
+.switcher select {
   min-height: 44px;
   max-width: 11rem;
   padding: 0.4rem 0.5rem;
@@ -62,10 +62,10 @@
   font-weight: 500;
   cursor: pointer;
 }
-.locale-switcher select:hover {
+.switcher select:hover {
   background: var(--tone);
 }
-.locale-switcher option {
+.switcher option {
   background: var(--dv-surface-1);
   color: var(--dv-text);
 }
@@ -117,15 +117,22 @@
 
 @media (max-width: 56.24rem) {
   .bar-link,
-  .bar-action {
+  .bar-action,
+  .bar-tools > .theme-switcher {
     display: none;
+  }
+  .menu-sheet .theme-switcher select {
+    max-width: none;
+    margin-top: 0.5rem;
+    padding-inline: 0.75rem;
+    background: var(--dv-surface-2);
   }
   .menu {
     display: block;
   }
 }
 @media (max-width: 37.49rem) {
-  .bar .locale-switcher select {
+  .bar .switcher select {
     max-width: 7.5rem;
   }
 }
@@ -136,7 +143,7 @@
   .bar-tools {
     gap: 0.25rem;
   }
-  .bar .locale-switcher select {
+  .bar .switcher select {
     max-width: 6rem;
     padding-inline: 0.25rem;
   }

@@ -15,6 +15,12 @@
     "pauseMotion": "Pysäytä liike",
     "playMotion": "Käynnistä liike"
   },
+  "theme": {
+    "label": "Teema",
+    "system": "Järjestelmä",
+    "light": "Vaalea",
+    "dark": "Tumma"
+  },
   "nav": {
     "collect": "Keräile",
     "scan": "Skannaa",

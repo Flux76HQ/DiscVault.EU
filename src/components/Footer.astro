@@ -1,5 +1,4 @@
 ---
-import '../styles/tokens-dark-scope.css';
 import '../styles/shell.css';
 /**
  * The close: the name first, at the full width of the page, then the ways
@@ -21,6 +20,7 @@ import {
   TESTFLIGHT_URL,
 } from '../config';
 import LocaleSwitcher from './LocaleSwitcher.astro';
+import ThemeSwitcher from './ThemeSwitcher.astro';
 
 interface Props {
   content: MarketingContent;
@@ -65,7 +65,7 @@ const groups = [
 ];
 ---
 
-<footer class="footer dv-dark on-navy" id="footer">
+<footer class="footer on-base" id="footer">
   <p class="footer-name" aria-hidden="true">DiscVault</p>
 
   <div class="grid footer-main">
@@ -117,7 +117,17 @@ const groups = [
       <span>{footer.production}</span>
       <a href={FLUX76_URL} aria-label="Flux76">
         <img
+          class="only-dark"
           src="/brand/flux76-wordmark-dark.png"
+          width="107"
+          height="32"
+          alt="Flux76"
+          loading="lazy"
+          decoding="async"
+        />
+        <img
+          class="only-light"
+          src="/brand/flux76-wordmark-light.png"
           width="107"
           height="32"
           alt="Flux76"
@@ -128,6 +138,7 @@ const groups = [
     </p>
     <p class="footer-tmdb note">{footer.tmdb}</p>
     <div class="footer-end">
+      <ThemeSwitcher theme={content.theme} />
       <LocaleSwitcher locale={locale} label={content.a11y.language} />
       <a href="#main">{actions.backToTop}</a>
     </div>

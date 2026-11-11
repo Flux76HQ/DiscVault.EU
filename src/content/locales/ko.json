@@ -15,6 +15,12 @@
     "pauseMotion": "움직임 일시 정지",
     "playMotion": "움직임 재생"
   },
+  "theme": {
+    "label": "테마",
+    "system": "시스템",
+    "light": "라이트",
+    "dark": "다크"
+  },
   "nav": {
     "collect": "수집",
     "scan": "스캔",

@@ -15,6 +15,12 @@
     "pauseMotion": "Pausar o movimento",
     "playMotion": "Reproduzir o movimento"
   },
+  "theme": {
+    "label": "Tema",
+    "system": "Sistema",
+    "light": "Claro",
+    "dark": "Escuro"
+  },
   "nav": {
     "collect": "Colecionar",
     "scan": "Digitalizar",

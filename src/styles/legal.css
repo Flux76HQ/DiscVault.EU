@@ -1,7 +1,7 @@
 /*
  * The legal shell (privacy and terms, English and Dutch). The bodies are
  * protected HTML; this file styles the classes they use. Follows the system
- * colour scheme, unlike the dark-only marketing routes.
+ * colour scheme, as every page of the site does.
  */
 .wrap {
   width: min(100% - 2 * var(--margin), 52rem);

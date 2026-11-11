@@ -44,19 +44,19 @@
   object-fit: cover;
   object-position: center 22%;
 }
-.tile-navy {
+.tile-base {
   background: var(--dv-bg);
   color: var(--dv-text);
 }
-.tile-white {
+.tile-uhd {
   background: var(--dv-fmt-4k-fill);
   color: var(--dv-fmt-4k-on);
 }
-.tile-blue {
+.tile-accent {
   background: var(--dv-accent);
   color: var(--dv-accent-on);
 }
-.tile-slate {
+.tile-raised {
   background: var(--dv-surface-2);
   color: var(--dv-text);
 }
