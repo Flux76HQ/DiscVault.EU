@@ -1,0 +1,2776 @@
+{
+ "_comment": "DiscVault demo library for marketing screenshots. All titles, people, studios, barcodes, shops and prices are invented; barcodes use the GS1 in-store prefix 2.",
+ "rating_country": "NL",
+ "owner": {
+  "username": "alex",
+  "display_name": "Alex Morgan"
+ },
+ "users": [
+  {
+   "username": "robin",
+   "display_name": "Robin Vale",
+   "role": "media_editor"
+  },
+  {
+   "username": "sam",
+   "display_name": "Sam Okafor",
+   "role": "media_fan"
+  },
+  {
+   "username": "noor",
+   "display_name": "Noor Haddad",
+   "role": "media_viewer"
+  }
+ ],
+ "locations": [
+  {
+   "name": "Living room",
+   "description": "The main wall"
+  },
+  {
+   "name": "Living room > Shelf A",
+   "description": "4K and box sets"
+  },
+  {
+   "name": "Living room > Shelf B",
+   "description": "Blu-ray, A to M"
+  },
+  {
+   "name": "Living room > Shelf C",
+   "description": "Blu-ray, N to Z"
+  },
+  {
+   "name": "Study",
+   "description": "Second screen"
+  },
+  {
+   "name": "Study > Cabinet",
+   "description": "Documentaries and music"
+  },
+  {
+   "name": "Attic",
+   "description": "Storage"
+  },
+  {
+   "name": "Attic > Box 1",
+   "description": "DVDs"
+  }
+ ],
+ "tags": [
+  {
+   "name": "Favourites",
+   "color": "#f5c518"
+  },
+  {
+   "name": "Lent out before",
+   "color": "#30A46C"
+  },
+  {
+   "name": "Movie night",
+   "color": "#2A6FD6"
+  }
+ ],
+ "catalog": [
+  {
+   "title": "Tidecaller",
+   "year": 2023,
+   "format": "4K UHD",
+   "barcode": "2009992400193",
+   "poster": "posters/40-tidecaller.webp",
+   "studio": "Tramontane Studios",
+   "runtime": 125
+  }
+ ],
+ "films": [
+  {
+   "title": "Orbit of Ash",
+   "year": 2023,
+   "format": "4K UHD",
+   "barcode": "2009992010231",
+   "poster": "posters/01-orbit-of-ash.webp",
+   "overview": "The last surveyor of a dying mining world has nine days to decide whether its colony is worth saving.",
+   "runtime": 128,
+   "genres": [
+    "Science Fiction",
+    "Drama"
+   ],
+   "director": "Mara Lindqvist",
+   "cast": [
+    {
+     "name": "Elias Thorne",
+     "character": "Tomas"
+    },
+    {
+     "name": "Idris Calloway",
+     "character": "Nora"
+    },
+    {
+     "name": "Yuna Sato",
+     "character": "Mara"
+    },
+    {
+     "name": "Noor Haddad",
+     "character": "Captain Rooke"
+    }
+   ],
+   "studio": "Lowland Cinema",
+   "community_rating": 7.2,
+   "content_rating": "12",
+   "location": "Living room > Shelf B",
+   "purchase_date": "2025-06-08",
+   "purchase_price": 9.99,
+   "value": 11.99,
+   "tech": {
+    "resolution": "2160p",
+    "hdr": [
+     "Dolby Vision",
+     "HDR10"
+    ],
+    "audio": "Dolby Atmos",
+    "region": "ABC"
+   },
+   "backdrop": "backdrops/102.webp",
+   "watched": "2026-11-08",
+   "rating": 9,
+   "tags": [
+    "Favourites"
+   ]
+  },
+  {
+   "title": "Halcyon Drift",
+   "year": 2021,
+   "format": "4K UHD",
+   "barcode": "2009992020193",
+   "poster": "posters/02-halcyon-drift.webp",
+   "overview": "A salvage pilot boards a generation ship that has been drifting above a quiet ocean world for two hundred years.",
+   "runtime": 116,
+   "genres": [
+    "Science Fiction",
+    "Drama"
+   ],
+   "director": "Tobias Renner",
+   "cast": [
+    {
+     "name": "Jasper Lindholm",
+     "character": "Captain Rooke"
+    },
+    {
+     "name": "Ottilie Grant",
+     "character": "Pim"
+    },
+    {
+     "name": "Anders Holt",
+     "character": "The Stranger"
+    },
+    {
+     "name": "Amara Osei",
+     "character": "The Cartographer"
+    }
+   ],
+   "studio": "Meridian Pictures",
+   "community_rating": 8.0,
+   "content_rating": "12",
+   "location": "Living room > Shelf C",
+   "purchase_date": "2024-11-15",
+   "purchase_price": 12.99,
+   "value": 20.78,
+   "tech": {
+    "resolution": "2160p",
+    "hdr": [
+     "HDR10"
+    ],
+    "audio": "Dolby Atmos",
+    "region": "ABC"
+   },
+   "backdrop": "backdrops/105.webp"
+  },
+  {
+   "title": "Neon Tidewater",
+   "year": 2019,
+   "format": "Blu-ray",
+   "barcode": "2009992030192",
+   "poster": "posters/03-neon-tidewater.webp",
+   "overview": "In a drowned port city, a ferrywoman is hired to find a passenger who never reached the other shore.",
+   "runtime": 109,
+   "genres": [
+    "Science Fiction",
+    "Thriller"
+   ],
+   "director": "Ines Calder",
+   "cast": [
+    {
+     "name": "Saskia Verbeek",
+     "character": "The Cartographer"
+    },
+    {
+     "name": "Dorian Pike",
+     "character": "Dr. Ilse Brandt"
+    },
+    {
+     "name": "Elias Thorne",
+     "character": "Elias"
+    },
+    {
+     "name": "Idris Calloway",
+     "character": "The Keeper"
+    }
+   ],
+   "studio": "Northlight Pictures",
+   "community_rating": 8.8,
+   "content_rating": "16",
+   "location": "Study > Cabinet",
+   "purchase_date": "2020-04-22",
+   "purchase_price": 14.99,
+   "value": 16.49,
+   "tech": {
+    "resolution": "1080p",
+    "audio": "DTS-HD Master Audio 5.1",
+    "region": "B"
+   },
+   "backdrop": "backdrops/108.webp"
+  },
+  {
+   "title": "The Quiet Signal",
+   "year": 2024,
+   "format": "4K UHD",
+   "barcode": "2009992040191",
+   "poster": "posters/04-the-quiet-signal.webp",
+   "overview": "A night-shift technician at a remote observatory answers a signal nobody else can hear.",
+   "runtime": 121,
+   "genres": [
+    "Science Fiction",
+    "Mystery"
+   ],
+   "director": "Odile Ferrand",
+   "cast": [
+    {
+     "name": "Mateo Ferreira",
+     "character": "The Keeper"
+    },
+    {
+     "name": "Maeve Donnelly",
+     "character": "June"
+    },
+    {
+     "name": "Jasper Lindholm",
+     "character": "Sister Maren"
+    },
+    {
+     "name": "Ottilie Grant",
+     "character": "Tomas"
+    }
+   ],
+   "studio": "Tramontane Studios",
+   "community_rating": 6.7,
+   "content_rating": "12",
+   "location": "Attic > Box 1",
+   "purchase_date": "2026-09-02",
+   "purchase_price": 19.99,
+   "value": 29.98,
+   "tech": {
+    "resolution": "2160p",
+    "hdr": [
+     "HDR10"
+    ],
+    "audio": "Dolby Atmos",
+    "region": "ABC"
+   },
+   "watchlist": true
+  },
+  {
+   "title": "Parallax Nine",
+   "year": 2017,
+   "format": "Blu-ray",
+   "barcode": "2009992050190",
+   "poster": "posters/05-parallax-nine.webp",
+   "overview": "Nine rookie pilots are sent past a double sun to bring back a squadron that vanished a generation ago.",
+   "runtime": 102,
+   "genres": [
+    "Adventure",
+    "Science Fiction"
+   ],
+   "director": "Callum Hartley",
+   "cast": [
+    {
+     "name": "Freya Lund",
+     "character": "Tomas"
+    },
+    {
+     "name": "Emeric Vaughn",
+     "character": "Nora"
+    },
+    {
+     "name": "Saskia Verbeek",
+     "character": "Mara"
+    },
+    {
+     "name": "Dorian Pike",
+     "character": "Captain Rooke"
+    }
+   ],
+   "studio": "Harbour & Vale",
+   "community_rating": 7.5,
+   "content_rating": "9",
+   "location": "Living room > Shelf A",
+   "purchase_date": "2020-02-09",
+   "purchase_price": 24.99,
+   "value": 24.99,
+   "tech": {
+    "resolution": "1080p",
+    "audio": "DTS-HD Master Audio 5.1",
+    "region": "B"
+   },
+   "watched": "2026-10-19",
+   "rating": 7
+  },
+  {
+   "title": "Starling Protocol",
+   "year": 2022,
+   "format": "4K UHD",
+   "barcode": "2009992060199",
+   "poster": "posters/06-starling-protocol.webp",
+   "overview": "An air-traffic analyst notices that the city's drone swarm has started flying in patterns no one programmed.",
+   "runtime": 118,
+   "genres": [
+    "Thriller",
+    "Science Fiction"
+   ],
+   "director": "Priya Nandakumar",
+   "cast": [
+    {
+     "name": "Rafael Quist",
+     "character": "Captain Rooke"
+    },
+    {
+     "name": "Wren Castillo",
+     "character": "Pim"
+    },
+    {
+     "name": "Mateo Ferreira",
+     "character": "The Stranger"
+    },
+    {
+     "name": "Maeve Donnelly",
+     "character": "The Cartographer"
+    }
+   ],
+   "studio": "Brackwater Films",
+   "community_rating": 8.3,
+   "content_rating": "12",
+   "location": "Living room > Shelf B",
+   "purchase_date": "2023-07-16",
+   "purchase_price": 29.99,
+   "value": 41.99,
+   "tech": {
+    "resolution": "2160p",
+    "hdr": [
+     "HDR10"
+    ],
+    "audio": "Dolby Atmos",
+    "region": "ABC"
+   },
+   "tags": [
+    "Lent out before"
+   ]
+  },
+  {
+   "title": "Glass Meridian",
+   "year": 2020,
+   "format": "4K UHD",
+   "barcode": "2009992070198",
+   "poster": "posters/07-glass-meridian.webp",
+   "overview": "A disgraced courier has one night to carry a key across a city of glass towers before the buildings lock down.",
+   "runtime": 124,
+   "genres": [
+    "Action",
+    "Thriller"
+   ],
+   "director": "Desmond Achebe",
+   "cast": [
+    {
+     "name": "Zadie Rowe",
+     "character": "The Cartographer"
+    },
+    {
+     "name": "Theo Blackwood",
+     "character": "Dr. Ilse Brandt"
+    },
+    {
+     "name": "Freya Lund",
+     "character": "Elias"
+    },
+    {
+     "name": "Emeric Vaughn",
+     "character": "The Keeper"
+    }
+   ],
+   "studio": "Lowland Cinema",
+   "community_rating": 9.1,
+   "content_rating": "12",
+   "location": "Living room > Shelf C",
+   "purchase_date": "2022-12-23",
+   "purchase_price": 7.99,
+   "value": 7.19,
+   "tech": {
+    "resolution": "2160p",
+    "hdr": [
+     "Dolby Vision",
+     "HDR10"
+    ],
+    "audio": "Dolby Atmos",
+    "region": "ABC"
+   },
+   "backdrop": "backdrops/101.webp",
+   "watched": "2026-11-06",
+   "rating": 9,
+   "box_set": {
+    "name": "The Meridian Trilogy",
+    "year": 2020,
+    "barcode": "2009992460197",
+    "poster": "posters/46-box-the-meridian-trilogy.webp",
+    "description": "3 films in one set.",
+    "location": "Living room > Shelf A"
+   }
+  },
+  {
+   "title": "Cold Harbor Run",
+   "year": 2018,
+   "format": "Blu-ray",
+   "barcode": "2009992080197",
+   "poster": "posters/08-cold-harbor-run.webp",
+   "overview": "A trawler captain agrees to one last crossing and learns too late what is in the hold.",
+   "runtime": 113,
+   "genres": [
+    "Crime",
+    "Thriller"
+   ],
+   "director": "Sunniva Dahl",
+   "cast": [
+    {
+     "name": "Noor Haddad",
+     "character": "The Keeper"
+    },
+    {
+     "name": "Lena Marsh",
+     "character": "June"
+    },
+    {
+     "name": "Rafael Quist",
+     "character": "Sister Maren"
+    },
+    {
+     "name": "Wren Castillo",
+     "character": "Tomas"
+    }
+   ],
+   "studio": "Meridian Pictures",
+   "community_rating": 7.0,
+   "content_rating": "16",
+   "location": "Study > Cabinet",
+   "purchase_date": "2021-05-03",
+   "purchase_price": 9.99,
+   "value": 12.99,
+   "tech": {
+    "resolution": "1080p",
+    "audio": "DTS-HD Master Audio 5.1",
+    "region": "B"
+   }
+  },
+  {
+   "title": "Vanta",
+   "year": 2023,
+   "format": "4K UHD",
+   "barcode": "2009992090196",
+   "poster": "posters/09-vanta.webp",
+   "overview": "She was trained to disappear. Tonight someone has finally seen her.",
+   "runtime": 107,
+   "genres": [
+    "Action",
+    "Thriller"
+   ],
+   "director": "Lucien Marchetti",
+   "cast": [
+    {
+     "name": "Amara Osei",
+     "character": "Tomas"
+    },
+    {
+     "name": "Kofi Mensah",
+     "character": "Nora"
+    },
+    {
+     "name": "Zadie Rowe",
+     "character": "Mara"
+    },
+    {
+     "name": "Theo Blackwood",
+     "character": "Captain Rooke"
+    }
+   ],
+   "studio": "Northlight Pictures",
+   "community_rating": 7.8,
+   "content_rating": "12",
+   "location": "Attic > Box 1",
+   "purchase_date": "2024-10-10",
+   "purchase_price": 12.99,
+   "value": 10.39,
+   "tech": {
+    "resolution": "2160p",
+    "hdr": [
+     "Dolby Vision",
+     "HDR10"
+    ],
+    "audio": "Dolby Atmos",
+    "region": "ABC"
+   },
+   "backdrop": "backdrops/107.webp",
+   "steelbook": true,
+   "edition": "Limited Edition Steelbook",
+   "finishes": [
+    "embossed"
+   ],
+   "tags": [
+    "Favourites"
+   ]
+  },
+  {
+   "title": "Seven Minutes North",
+   "year": 2016,
+   "format": "DVD",
+   "barcode": "2009992100192",
+   "poster": "posters/10-seven-minutes-north.webp",
+   "overview": "When the lake ice begins to break, a rescue volunteer has seven minutes to reach a stranded research hut.",
+   "runtime": 98,
+   "genres": [
+    "Thriller",
+    "Adventure"
+   ],
+   "director": "Henrik Solvang",
+   "cast": [
+    {
+     "name": "Idris Calloway",
+     "character": "Captain Rooke"
+    },
+    {
+     "name": "Yuna Sato",
+     "character": "Pim"
+    },
+    {
+     "name": "Noor Haddad",
+     "character": "The Stranger"
+    },
+    {
+     "name": "Lena Marsh",
+     "character": "The Cartographer"
+    }
+   ],
+   "studio": "Tramontane Studios",
+   "community_rating": 8.6,
+   "content_rating": "9",
+   "location": "Living room > Shelf A",
+   "purchase_date": "2018-03-17",
+   "purchase_price": 14.99,
+   "value": 17.99,
+   "tech": {
+    "resolution": "576p",
+    "audio": "Dolby Digital 5.1",
+    "region": "2"
+   }
+  },
+  {
+   "title": "The Copper Line",
+   "year": 2022,
+   "format": "Blu-ray",
+   "barcode": "2009992110191",
+   "poster": "posters/11-the-copper-line.webp",
+   "overview": "Two rival crews board the same mountain express, each planning to rob it before the last viaduct.",
+   "runtime": 119,
+   "genres": [
+    "Crime",
+    "Adventure"
+   ],
+   "director": "Rosalind Faye",
+   "cast": [
+    {
+     "name": "Ottilie Grant",
+     "character": "The Cartographer"
+    },
+    {
+     "name": "Anders Holt",
+     "character": "Dr. Ilse Brandt"
+    },
+    {
+     "name": "Amara Osei",
+     "character": "Elias"
+    },
+    {
+     "name": "Kofi Mensah",
+     "character": "The Keeper"
+    }
+   ],
+   "studio": "Harbour & Vale",
+   "community_rating": 6.5,
+   "content_rating": "12",
+   "location": "Living room > Shelf B",
+   "purchase_date": "2025-08-24",
+   "purchase_price": 19.99,
+   "value": 31.98,
+   "tech": {
+    "resolution": "1080p",
+    "audio": "DTS-HD Master Audio 5.1",
+    "region": "B"
+   }
+  },
+  {
+   "title": "Night Freight",
+   "year": 2015,
+   "format": "DVD",
+   "barcode": "2009992120190",
+   "poster": "posters/12-night-freight.webp",
+   "overview": "A long-haul driver picks up a sealed trailer and a set of rules: no stops, no questions, no daylight.",
+   "runtime": 96,
+   "genres": [
+    "Thriller"
+   ],
+   "director": "Wade Corrigan",
+   "cast": [
+    {
+     "name": "Dorian Pike",
+     "character": "The Keeper"
+    },
+    {
+     "name": "Elias Thorne",
+     "character": "June"
+    },
+    {
+     "name": "Idris Calloway",
+     "character": "Sister Maren"
+    },
+    {
+     "name": "Yuna Sato",
+     "character": "Tomas"
+    }
+   ],
+   "studio": "Brackwater Films",
+   "community_rating": 7.3,
+   "content_rating": "12",
+   "location": "Living room > Shelf C",
+   "purchase_date": "2016-01-04",
+   "purchase_price": 24.99,
+   "value": 27.49,
+   "tech": {
+    "resolution": "576p",
+    "audio": "Dolby Digital 5.1",
+    "region": "2"
+   },
+   "tags": [
+    "Lent out before"
+   ]
+  },
+  {
+   "title": "The Last Lighthouse",
+   "year": 2019,
+   "format": "Blu-ray",
+   "barcode": "2009992130199",
+   "poster": "posters/13-the-last-lighthouse.webp",
+   "overview": "The keeper of the last manned lighthouse on the coast refuses to leave on the day it is automated.",
+   "runtime": 111,
+   "genres": [
+    "Drama"
+   ],
+   "director": "Aoife Brennan",
+   "cast": [
+    {
+     "name": "Maeve Donnelly",
+     "character": "Tomas"
+    },
+    {
+     "name": "Jasper Lindholm",
+     "character": "Nora"
+    },
+    {
+     "name": "Ottilie Grant",
+     "character": "Mara"
+    },
+    {
+     "name": "Anders Holt",
+     "character": "Captain Rooke"
+    }
+   ],
+   "studio": "Lowland Cinema",
+   "community_rating": 8.1,
+   "content_rating": "16",
+   "location": "Study > Cabinet",
+   "purchase_date": "2021-06-11",
+   "purchase_price": 29.99,
+   "value": 44.98,
+   "tech": {
+    "resolution": "1080p",
+    "audio": "DTS-HD Master Audio 5.1",
+    "region": "B"
+   },
+   "backdrop": "backdrops/111.webp",
+   "watched": "2026-10-25",
+   "rating": 8,
+   "tags": [
+    "Favourites"
+   ]
+  },
+  {
+   "title": "Paper Orchards",
+   "year": 2021,
+   "format": "Blu-ray",
+   "barcode": "2009992140198",
+   "poster": "posters/14-paper-orchards.webp",
+   "overview": "A daughter returns to the family orchard and finds her mother folding blossoms for trees that no longer flower.",
+   "runtime": 104,
+   "genres": [
+    "Drama"
+   ],
+   "director": "Mirela Kostova",
+   "cast": [
+    {
+     "name": "Emeric Vaughn",
+     "character": "Captain Rooke"
+    },
+    {
+     "name": "Saskia Verbeek",
+     "character": "Pim"
+    },
+    {
+     "name": "Dorian Pike",
+     "character": "The Stranger"
+    },
+    {
+     "name": "Elias Thorne",
+     "character": "The Cartographer"
+    }
+   ],
+   "studio": "Meridian Pictures",
+   "community_rating": 8.9,
+   "content_rating": "12",
+   "location": "Attic > Box 1",
+   "purchase_date": "2024-11-18",
+   "purchase_price": 7.99,
+   "value": 7.99,
+   "tech": {
+    "resolution": "1080p",
+    "audio": "DTS-HD Master Audio 5.1",
+    "region": "B"
+   }
+  },
+  {
+   "title": "Salt and Cedar",
+   "year": 2020,
+   "format": "Blu-ray",
+   "barcode": "2009992150197",
+   "poster": "posters/15-salt-and-cedar.webp",
+   "overview": "Two estranged brothers spend a summer rebuilding the boat their father never finished.",
+   "runtime": 117,
+   "genres": [
+    "Drama"
+   ],
+   "director": "Jonah Whitlock",
+   "cast": [
+    {
+     "name": "Wren Castillo",
+     "character": "The Cartographer"
+    },
+    {
+     "name": "Mateo Ferreira",
+     "character": "Dr. Ilse Brandt"
+    },
+    {
+     "name": "Maeve Donnelly",
+     "character": "Elias"
+    },
+    {
+     "name": "Jasper Lindholm",
+     "character": "The Keeper"
+    }
+   ],
+   "studio": "Northlight Pictures",
+   "community_rating": 6.8,
+   "content_rating": "9",
+   "location": "Living room > Shelf A",
+   "purchase_date": "2021-04-25",
+   "purchase_price": 9.99,
+   "value": 13.99,
+   "tech": {
+    "resolution": "1080p",
+    "audio": "DTS-HD Master Audio 5.1",
+    "region": "B"
+   }
+  },
+  {
+   "title": "Letters to Marrow Bay",
+   "year": 2014,
+   "format": "DVD",
+   "barcode": "2009992160196",
+   "poster": "posters/16-letters-to-marrow-bay.webp",
+   "overview": "A postmistress starts answering letters addressed to a fisherman who was lost at sea.",
+   "runtime": 123,
+   "genres": [
+    "Drama",
+    "Romance"
+   ],
+   "director": "Eleanor Voss",
+   "cast": [
+    {
+     "name": "Theo Blackwood",
+     "character": "The Keeper"
+    },
+    {
+     "name": "Freya Lund",
+     "character": "June"
+    },
+    {
+     "name": "Emeric Vaughn",
+     "character": "Sister Maren"
+    },
+    {
+     "name": "Saskia Verbeek",
+     "character": "Tomas"
+    }
+   ],
+   "studio": "Tramontane Studios",
+   "community_rating": 7.6,
+   "content_rating": "12",
+   "location": "Living room > Shelf B",
+   "purchase_date": "2016-09-05",
+   "purchase_price": 12.99,
+   "value": 11.69,
+   "tech": {
+    "resolution": "576p",
+    "audio": "Dolby Digital 5.1",
+    "region": "2"
+   }
+  },
+  {
+   "title": "The Understudy's Daughter",
+   "year": 2022,
+   "format": "Blu-ray",
+   "barcode": "2009992170195",
+   "poster": "posters/17-the-understudys-daughter.webp",
+   "overview": "Raised in the wings of a failing theatre, a girl learns every part her mother never got to play.",
+   "runtime": 108,
+   "genres": [
+    "Drama"
+   ],
+   "director": "Camille Arnaud",
+   "cast": [
+    {
+     "name": "Lena Marsh",
+     "character": "Tomas"
+    },
+    {
+     "name": "Rafael Quist",
+     "character": "Nora"
+    },
+    {
+     "name": "Wren Castillo",
+     "character": "Mara"
+    },
+    {
+     "name": "Mateo Ferreira",
+     "character": "Captain Rooke"
+    }
+   ],
+   "studio": "Harbour & Vale",
+   "community_rating": 8.4,
+   "content_rating": "12",
+   "location": "Living room > Shelf C",
+   "purchase_date": "2025-02-12",
+   "purchase_price": 14.99,
+   "value": 19.49,
+   "tech": {
+    "resolution": "1080p",
+    "audio": "DTS-HD Master Audio 5.1",
+    "region": "B"
+   }
+  },
+  {
+   "title": "Small Hours",
+   "year": 2018,
+   "format": "Blu-ray",
+   "barcode": "2009992180194",
+   "poster": "posters/18-small-hours.webp",
+   "overview": "One diner, one night, and the eleven strangers who come in between midnight and dawn.",
+   "runtime": 94,
+   "genres": [
+    "Drama"
+   ],
+   "director": "Teo Marlow",
+   "cast": [
+    {
+     "name": "Kofi Mensah",
+     "character": "Captain Rooke"
+    },
+    {
+     "name": "Zadie Rowe",
+     "character": "Pim"
+    },
+    {
+     "name": "Theo Blackwood",
+     "character": "The Stranger"
+    },
+    {
+     "name": "Freya Lund",
+     "character": "The Cartographer"
+    }
+   ],
+   "studio": "Brackwater Films",
+   "community_rating": 9.2,
+   "content_rating": "16",
+   "location": "Study > Cabinet",
+   "purchase_date": "2019-07-19",
+   "purchase_price": 19.99,
+   "value": 15.99,
+   "tech": {
+    "resolution": "1080p",
+    "audio": "DTS-HD Master Audio 5.1",
+    "region": "B"
+   },
+   "tags": [
+    "Lent out before"
+   ]
+  },
+  {
+   "title": "Hollow Pines",
+   "year": 2020,
+   "format": "4K UHD",
+   "barcode": "2009992190193",
+   "poster": "posters/19-hollow-pines.webp",
+   "overview": "A search party follows a child's red coat into a forest that is not on any map.",
+   "runtime": 101,
+   "genres": [
+    "Horror"
+   ],
+   "director": "Greta Holm",
+   "cast": [
+    {
+     "name": "Yuna Sato",
+     "character": "The Cartographer"
+    },
+    {
+     "name": "Noor Haddad",
+     "character": "Dr. Ilse Brandt"
+    },
+    {
+     "name": "Lena Marsh",
+     "character": "Elias"
+    },
+    {
+     "name": "Rafael Quist",
+     "character": "The Keeper"
+    }
+   ],
+   "studio": "Lowland Cinema",
+   "community_rating": 7.1,
+   "content_rating": "16",
+   "location": "Attic > Box 1",
+   "purchase_date": "2022-12-26",
+   "purchase_price": 24.99,
+   "value": 29.99,
+   "tech": {
+    "resolution": "2160p",
+    "hdr": [
+     "Dolby Vision",
+     "HDR10"
+    ],
+    "audio": "Dolby Atmos",
+    "region": "ABC"
+   },
+   "watched": "2026-09-27",
+   "rating": 8.5
+  },
+  {
+   "title": "Beneath Ashgrove",
+   "year": 2017,
+   "format": "Blu-ray",
+   "barcode": "2009992200199",
+   "poster": "posters/20-beneath-ashgrove.webp",
+   "overview": "The new owners of Ashgrove House find a staircase in the cellar that goes down further than the house goes up.",
+   "runtime": 105,
+   "genres": [
+    "Horror",
+    "Mystery"
+   ],
+   "director": "Ambrose Kelling",
+   "cast": [
+    {
+     "name": "Anders Holt",
+     "character": "The Keeper"
+    },
+    {
+     "name": "Amara Osei",
+     "character": "June"
+    },
+    {
+     "name": "Kofi Mensah",
+     "character": "Sister Maren"
+    },
+    {
+     "name": "Zadie Rowe",
+     "character": "Tomas"
+    }
+   ],
+   "studio": "Meridian Pictures",
+   "community_rating": 7.9,
+   "content_rating": "16",
+   "location": "Living room > Shelf A",
+   "purchase_date": "2020-05-06",
+   "purchase_price": 29.99,
+   "value": 47.98,
+   "tech": {
+    "resolution": "1080p",
+    "audio": "DTS-HD Master Audio 5.1",
+    "region": "B"
+   }
+  },
+  {
+   "title": "Saltmarsh",
+   "year": 2023,
+   "format": "4K UHD",
+   "barcode": "2009992210198",
+   "poster": "posters/21-saltmarsh.webp",
+   "overview": "At low tide the walkway leads to the old village. At high tide, something uses it to come back.",
+   "runtime": 97,
+   "genres": [
+    "Horror"
+   ],
+   "director": "Nell Ashdown",
+   "cast": [
+    {
+     "name": "Elias Thorne",
+     "character": "Tomas"
+    },
+    {
+     "name": "Idris Calloway",
+     "character": "Nora"
+    },
+    {
+     "name": "Yuna Sato",
+     "character": "Mara"
+    },
+    {
+     "name": "Noor Haddad",
+     "character": "Captain Rooke"
+    }
+   ],
+   "studio": "Northlight Pictures",
+   "community_rating": 8.7,
+   "content_rating": "16",
+   "location": "Living room > Shelf B",
+   "purchase_date": "2024-10-13",
+   "purchase_price": 7.99,
+   "value": 8.79,
+   "tech": {
+    "resolution": "2160p",
+    "hdr": [
+     "Dolby Vision",
+     "HDR10"
+    ],
+    "audio": "Dolby Atmos",
+    "region": "ABC"
+   },
+   "watchlist": true
+  },
+  {
+   "title": "Whisper Mill",
+   "year": 2012,
+   "format": "DVD",
+   "barcode": "2009992220197",
+   "poster": "posters/22-whisper-mill.webp",
+   "overview": "A family restoring a watermill discovers why the wheel was chained.",
+   "runtime": 92,
+   "genres": [
+    "Horror"
+   ],
+   "director": "Victor Hale",
+   "cast": [
+    {
+     "name": "Jasper Lindholm",
+     "character": "Captain Rooke"
+    },
+    {
+     "name": "Ottilie Grant",
+     "character": "Pim"
+    },
+    {
+     "name": "Anders Holt",
+     "character": "The Stranger"
+    },
+    {
+     "name": "Amara Osei",
+     "character": "The Cartographer"
+    }
+   ],
+   "studio": "Tramontane Studios",
+   "community_rating": 6.6,
+   "content_rating": "16",
+   "location": "Living room > Shelf C",
+   "purchase_date": "2014-03-20",
+   "purchase_price": 9.99,
+   "value": 14.98,
+   "tech": {
+    "resolution": "576p",
+    "audio": "Dolby Digital 5.1",
+    "region": "2"
+   }
+  },
+  {
+   "title": "Pip and the Paper Moon",
+   "year": 2021,
+   "format": "Blu-ray",
+   "barcode": "2009992230196",
+   "poster": "posters/23-pip-and-the-paper-moon.webp",
+   "overview": "A small mouse folds a paper aeroplane and sets out to return a star to the moon.",
+   "runtime": 88,
+   "genres": [
+    "Animation",
+    "Family"
+   ],
+   "director": "Hana Ueda",
+   "cast": [
+    {
+     "name": "Saskia Verbeek",
+     "character": "The Cartographer"
+    },
+    {
+     "name": "Dorian Pike",
+     "character": "Dr. Ilse Brandt"
+    },
+    {
+     "name": "Elias Thorne",
+     "character": "Elias"
+    },
+    {
+     "name": "Idris Calloway",
+     "character": "The Keeper"
+    }
+   ],
+   "studio": "Harbour & Vale",
+   "community_rating": 7.4,
+   "content_rating": "AL",
+   "location": "Study > Cabinet",
+   "purchase_date": "2024-08-27",
+   "purchase_price": 12.99,
+   "value": 12.99,
+   "tech": {
+    "resolution": "1080p",
+    "audio": "DTS-HD Master Audio 5.1",
+    "region": "B"
+   }
+  },
+  {
+   "title": "The Clockmaker's Fox",
+   "year": 2019,
+   "format": "4K UHD",
+   "barcode": "2009992240195",
+   "poster": "posters/24-the-clockmakers-fox.webp",
+   "overview": "When the town clock stops on the longest night, a fox apprentice climbs inside to wind time forward again.",
+   "runtime": 95,
+   "genres": [
+    "Animation",
+    "Adventure"
+   ],
+   "director": "Bastien Leroux",
+   "cast": [
+    {
+     "name": "Mateo Ferreira",
+     "character": "The Keeper"
+    },
+    {
+     "name": "Maeve Donnelly",
+     "character": "June"
+    },
+    {
+     "name": "Jasper Lindholm",
+     "character": "Sister Maren"
+    },
+    {
+     "name": "Ottilie Grant",
+     "character": "Tomas"
+    }
+   ],
+   "studio": "Brackwater Films",
+   "community_rating": 8.2,
+   "content_rating": "6",
+   "location": "Attic > Box 1",
+   "purchase_date": "2020-01-07",
+   "purchase_price": 14.99,
+   "value": 20.99,
+   "tech": {
+    "resolution": "2160p",
+    "hdr": [
+     "HDR10"
+    ],
+    "audio": "Dolby Atmos",
+    "region": "ABC"
+   },
+   "backdrop": "backdrops/103.webp",
+   "watched": "2026-11-02",
+   "rating": 9.5,
+   "tags": [
+    "Favourites"
+   ]
+  },
+  {
+   "title": "Captain Thistle",
+   "year": 2016,
+   "format": "DVD",
+   "barcode": "2009992250194",
+   "poster": "posters/25-captain-thistle.webp",
+   "overview": "A hedgehog with a walnut-shell ship sets sail across the pond to find the edge of the map.",
+   "runtime": 86,
+   "genres": [
+    "Animation",
+    "Family"
+   ],
+   "director": "Molly Pennington",
+   "cast": [
+    {
+     "name": "Freya Lund",
+     "character": "Tomas"
+    },
+    {
+     "name": "Emeric Vaughn",
+     "character": "Nora"
+    },
+    {
+     "name": "Saskia Verbeek",
+     "character": "Mara"
+    },
+    {
+     "name": "Dorian Pike",
+     "character": "Captain Rooke"
+    }
+   ],
+   "studio": "Lowland Cinema",
+   "community_rating": 9.0,
+   "content_rating": "AL",
+   "location": "Living room > Shelf A",
+   "purchase_date": "2018-06-14",
+   "purchase_price": 19.99,
+   "value": 17.99,
+   "tech": {
+    "resolution": "576p",
+    "audio": "Dolby Digital 5.1",
+    "region": "2"
+   },
+   "backdrop": "backdrops/110.webp",
+   "box_set": {
+    "name": "Captain Thistle Adventures: 4-Film Collection",
+    "year": 2016,
+    "barcode": "2009992550195",
+    "poster": "posters/55-box-captain-thistle-adventures.webp",
+    "description": "4 films in one set.",
+    "location": "Living room > Shelf A"
+   }
+  },
+  {
+   "title": "Lanternfish",
+   "year": 2023,
+   "format": "4K UHD",
+   "barcode": "2009992260193",
+   "poster": "posters/26-lanternfish.webp",
+   "overview": "The smallest light in the deep sea goes looking for the biggest one.",
+   "runtime": 91,
+   "genres": [
+    "Animation",
+    "Family"
+   ],
+   "director": "Kaito Mori",
+   "cast": [
+    {
+     "name": "Rafael Quist",
+     "character": "Captain Rooke"
+    },
+    {
+     "name": "Wren Castillo",
+     "character": "Pim"
+    },
+    {
+     "name": "Mateo Ferreira",
+     "character": "The Stranger"
+    },
+    {
+     "name": "Maeve Donnelly",
+     "character": "The Cartographer"
+    }
+   ],
+   "studio": "Meridian Pictures",
+   "community_rating": 6.9,
+   "content_rating": "AL",
+   "location": "Living room > Shelf B",
+   "purchase_date": "2026-11-21",
+   "purchase_price": 24.99,
+   "value": 32.49,
+   "tech": {
+    "resolution": "2160p",
+    "hdr": [
+     "HDR10"
+    ],
+    "audio": "Dolby Atmos",
+    "region": "ABC"
+   },
+   "watchlist": true
+  },
+  {
+   "title": "Second Tuesday",
+   "year": 2018,
+   "format": "Blu-ray",
+   "barcode": "2009992270192",
+   "poster": "posters/27-second-tuesday.webp",
+   "overview": "Two strangers share the same park bench on the second Tuesday of every month and never say hello.",
+   "runtime": 99,
+   "genres": [
+    "Comedy",
+    "Romance"
+   ],
+   "director": "Dana Okafor",
+   "cast": [
+    {
+     "name": "Zadie Rowe",
+     "character": "The Cartographer"
+    },
+    {
+     "name": "Theo Blackwood",
+     "character": "Dr. Ilse Brandt"
+    },
+    {
+     "name": "Freya Lund",
+     "character": "Elias"
+    },
+    {
+     "name": "Emeric Vaughn",
+     "character": "The Keeper"
+    }
+   ],
+   "studio": "Northlight Pictures",
+   "community_rating": 7.7,
+   "content_rating": "12",
+   "location": "Living room > Shelf C",
+   "purchase_date": "2019-04-01",
+   "purchase_price": 29.99,
+   "value": 23.99,
+   "tech": {
+    "resolution": "1080p",
+    "audio": "DTS-HD Master Audio 5.1",
+    "region": "B"
+   },
+   "watched": "2026-10-12",
+   "rating": 9
+  },
+  {
+   "title": "The Wrong Sofia",
+   "year": 2020,
+   "format": "Blu-ray",
+   "barcode": "2009992280191",
+   "poster": "posters/28-the-wrong-sofia.webp",
+   "overview": "A tired traveller is collected at arrivals by a wedding party that is expecting somebody else.",
+   "runtime": 103,
+   "genres": [
+    "Comedy"
+   ],
+   "director": "Paolo Venturi",
+   "cast": [
+    {
+     "name": "Noor Haddad",
+     "character": "The Keeper"
+    },
+    {
+     "name": "Lena Marsh",
+     "character": "June"
+    },
+    {
+     "name": "Rafael Quist",
+     "character": "Sister Maren"
+    },
+    {
+     "name": "Wren Castillo",
+     "character": "Tomas"
+    }
+   ],
+   "studio": "Tramontane Studios",
+   "community_rating": 8.5,
+   "content_rating": "16",
+   "location": "Study > Cabinet",
+   "purchase_date": "2022-09-08",
+   "purchase_price": 7.99,
+   "value": 9.59,
+   "tech": {
+    "resolution": "1080p",
+    "audio": "DTS-HD Master Audio 5.1",
+    "region": "B"
+   }
+  },
+  {
+   "title": "Plus One, Minus Two",
+   "year": 2022,
+   "format": "Blu-ray",
+   "barcode": "2009992290190",
+   "poster": "posters/29-plus-one-minus-two.webp",
+   "overview": "Table nine has three empty chairs and one very good reason for each.",
+   "runtime": 100,
+   "genres": [
+    "Comedy",
+    "Romance"
+   ],
+   "director": "Fern Gallagher",
+   "cast": [
+    {
+     "name": "Amara Osei",
+     "character": "Tomas"
+    },
+    {
+     "name": "Kofi Mensah",
+     "character": "Nora"
+    },
+    {
+     "name": "Zadie Rowe",
+     "character": "Mara"
+    },
+    {
+     "name": "Theo Blackwood",
+     "character": "Captain Rooke"
+    }
+   ],
+   "studio": "Harbour & Vale",
+   "community_rating": 6.4,
+   "content_rating": "12",
+   "location": "Attic > Box 1",
+   "purchase_date": "2025-02-15",
+   "purchase_price": 9.99,
+   "value": 15.98,
+   "tech": {
+    "resolution": "1080p",
+    "audio": "DTS-HD Master Audio 5.1",
+    "region": "B"
+   }
+  },
+  {
+   "title": "Postcards from Nowhere",
+   "year": 2015,
+   "format": "DVD",
+   "barcode": "2009992300196",
+   "poster": "posters/30-postcards-from-nowhere.webp",
+   "overview": "A retired postman, his dog and a failing camper van try to deliver forty years of unsent postcards.",
+   "runtime": 97,
+   "genres": [
+    "Comedy",
+    "Adventure"
+   ],
+   "director": "Arlo Bexley",
+   "cast": [
+    {
+     "name": "Idris Calloway",
+     "character": "Captain Rooke"
+    },
+    {
+     "name": "Yuna Sato",
+     "character": "Pim"
+    },
+    {
+     "name": "Noor Haddad",
+     "character": "The Stranger"
+    },
+    {
+     "name": "Lena Marsh",
+     "character": "The Cartographer"
+    }
+   ],
+   "studio": "Brackwater Films",
+   "community_rating": 7.2,
+   "content_rating": "9",
+   "location": "Living room > Shelf A",
+   "purchase_date": "2016-07-22",
+   "purchase_price": 12.99,
+   "value": 14.29,
+   "tech": {
+    "resolution": "576p",
+    "audio": "Dolby Digital 5.1",
+    "region": "2"
+   },
+   "tags": [
+    "Lent out before"
+   ]
+  },
+  {
+   "title": "Dust of the Seventh Mesa",
+   "year": 2017,
+   "format": "Blu-ray",
+   "barcode": "2009992310195",
+   "poster": "posters/31-dust-of-the-seventh-mesa.webp",
+   "overview": "A surveyor hired to redraw a border finds the last family living on the wrong side of it.",
+   "runtime": 126,
+   "genres": [
+    "Western"
+   ],
+   "director": "Silas Okoro",
+   "cast": [
+    {
+     "name": "Ottilie Grant",
+     "character": "The Cartographer"
+    },
+    {
+     "name": "Anders Holt",
+     "character": "Dr. Ilse Brandt"
+    },
+    {
+     "name": "Amara Osei",
+     "character": "Elias"
+    },
+    {
+     "name": "Kofi Mensah",
+     "character": "The Keeper"
+    }
+   ],
+   "studio": "Lowland Cinema",
+   "community_rating": 8.0,
+   "content_rating": "12",
+   "location": "Living room > Shelf B",
+   "purchase_date": "2019-12-02",
+   "purchase_price": 14.99,
+   "value": 22.48,
+   "tech": {
+    "resolution": "1080p",
+    "audio": "DTS-HD Master Audio 5.1",
+    "region": "B"
+   }
+  },
+  {
+   "title": "The Cartographer's Son",
+   "year": 2021,
+   "format": "4K UHD",
+   "barcode": "2009992320194",
+   "poster": "posters/32-the-cartographers-son.webp",
+   "overview": "A mapmaker's son sails to prove that his father's last map was not a forgery.",
+   "runtime": 131,
+   "genres": [
+    "Adventure",
+    "Drama"
+   ],
+   "director": "Isolde Ravn",
+   "cast": [
+    {
+     "name": "Dorian Pike",
+     "character": "The Keeper"
+    },
+    {
+     "name": "Elias Thorne",
+     "character": "June"
+    },
+    {
+     "name": "Idris Calloway",
+     "character": "Sister Maren"
+    },
+    {
+     "name": "Yuna Sato",
+     "character": "Tomas"
+    }
+   ],
+   "studio": "Meridian Pictures",
+   "community_rating": 8.8,
+   "content_rating": "12",
+   "location": "Living room > Shelf C",
+   "purchase_date": "2024-05-09",
+   "purchase_price": 19.99,
+   "value": 19.99,
+   "tech": {
+    "resolution": "2160p",
+    "hdr": [
+     "HDR10"
+    ],
+    "audio": "Dolby Atmos",
+    "region": "ABC"
+   },
+   "watchlist": true
+  },
+  {
+   "title": "Ironwood Trail",
+   "year": 2013,
+   "format": "DVD",
+   "barcode": "2009992330131",
+   "poster": "posters/33-ironwood-trail.webp",
+   "overview": "A scout leads a wagon train through a forest the old maps mark only with a warning.",
+   "runtime": 114,
+   "genres": [
+    "Western",
+    "Adventure"
+   ],
+   "director": "Clay Barrett",
+   "cast": [
+    {
+     "name": "Maeve Donnelly",
+     "character": "Tomas"
+    },
+    {
+     "name": "Jasper Lindholm",
+     "character": "Nora"
+    },
+    {
+     "name": "Ottilie Grant",
+     "character": "Mara"
+    },
+    {
+     "name": "Anders Holt",
+     "character": "Captain Rooke"
+    }
+   ],
+   "studio": "Northlight Pictures",
+   "community_rating": 6.7,
+   "content_rating": "16",
+   "location": "Study > Cabinet",
+   "purchase_date": "2014-10-16",
+   "purchase_price": 24.99,
+   "value": 34.99,
+   "tech": {
+    "resolution": "576p",
+    "audio": "Dolby Digital 5.1",
+    "region": "2"
+   }
+  },
+  {
+   "title": "Kingdom of Reeds",
+   "year": 2024,
+   "format": "4K UHD",
+   "barcode": "2009992340192",
+   "poster": "posters/34-kingdom-of-reeds.webp",
+   "overview": "A young queen must hold a river kingdom together with nothing but boats, reeds and patience.",
+   "runtime": 142,
+   "genres": [
+    "Adventure",
+    "History"
+   ],
+   "director": "Nadia Rahimi",
+   "cast": [
+    {
+     "name": "Emeric Vaughn",
+     "character": "Captain Rooke"
+    },
+    {
+     "name": "Saskia Verbeek",
+     "character": "Pim"
+    },
+    {
+     "name": "Dorian Pike",
+     "character": "The Stranger"
+    },
+    {
+     "name": "Elias Thorne",
+     "character": "The Cartographer"
+    }
+   ],
+   "studio": "Tramontane Studios",
+   "community_rating": 7.5,
+   "content_rating": "12",
+   "location": "Attic > Box 1",
+   "purchase_date": "2026-03-23",
+   "purchase_price": 29.99,
+   "value": 26.99,
+   "tech": {
+    "resolution": "2160p",
+    "hdr": [
+     "HDR10"
+    ],
+    "audio": "Dolby Atmos",
+    "region": "ABC"
+   },
+   "backdrop": "backdrops/109.webp",
+   "watchlist": true
+  },
+  {
+   "title": "Velvet Alibi",
+   "year": 2019,
+   "format": "Blu-ray",
+   "barcode": "2009992350191",
+   "poster": "posters/35-velvet-alibi.webp",
+   "overview": "Everyone at the Blue Door Club saw her that night. That is exactly the problem.",
+   "runtime": 110,
+   "genres": [
+    "Crime",
+    "Mystery"
+   ],
+   "director": "Raymond Castellan",
+   "cast": [
+    {
+     "name": "Wren Castillo",
+     "character": "The Cartographer"
+    },
+    {
+     "name": "Mateo Ferreira",
+     "character": "Dr. Ilse Brandt"
+    },
+    {
+     "name": "Maeve Donnelly",
+     "character": "Elias"
+    },
+    {
+     "name": "Jasper Lindholm",
+     "character": "The Keeper"
+    }
+   ],
+   "studio": "Harbour & Vale",
+   "community_rating": 8.3,
+   "content_rating": "9",
+   "location": "Living room > Shelf A",
+   "purchase_date": "2022-08-03",
+   "purchase_price": 7.99,
+   "value": 10.39,
+   "tech": {
+    "resolution": "1080p",
+    "audio": "DTS-HD Master Audio 5.1",
+    "region": "B"
+   },
+   "watched": "2026-10-30",
+   "rating": 7
+  },
+  {
+   "title": "The Harrow Street Ledger",
+   "year": 2016,
+   "format": "Blu-ray",
+   "barcode": "2009992360190",
+   "poster": "posters/36-the-harrow-street-ledger.webp",
+   "overview": "A bookkeeper notices one number that should not be there, and cannot stop reading.",
+   "runtime": 120,
+   "genres": [
+    "Crime",
+    "Drama"
+   ],
+   "director": "Edith Lowell",
+   "cast": [
+    {
+     "name": "Theo Blackwood",
+     "character": "The Keeper"
+    },
+    {
+     "name": "Freya Lund",
+     "character": "June"
+    },
+    {
+     "name": "Emeric Vaughn",
+     "character": "Sister Maren"
+    },
+    {
+     "name": "Saskia Verbeek",
+     "character": "Tomas"
+    }
+   ],
+   "studio": "Brackwater Films",
+   "community_rating": 9.1,
+   "content_rating": "12",
+   "location": "Living room > Shelf B",
+   "purchase_date": "2017-01-10",
+   "purchase_price": 9.99,
+   "value": 7.99,
+   "tech": {
+    "resolution": "1080p",
+    "audio": "DTS-HD Master Audio 5.1",
+    "region": "B"
+   },
+   "tags": [
+    "Lent out before"
+   ]
+  },
+  {
+   "title": "Blue Hour Motel",
+   "year": 2022,
+   "format": "4K UHD",
+   "barcode": "2009992370199",
+   "poster": "posters/37-blue-hour-motel.webp",
+   "overview": "Room six has been paid for through Sunday. Nobody has seen who is staying in it.",
+   "runtime": 106,
+   "genres": [
+    "Crime",
+    "Thriller"
+   ],
+   "director": "Marco Estes",
+   "cast": [
+    {
+     "name": "Lena Marsh",
+     "character": "Tomas"
+    },
+    {
+     "name": "Rafael Quist",
+     "character": "Nora"
+    },
+    {
+     "name": "Wren Castillo",
+     "character": "Mara"
+    },
+    {
+     "name": "Mateo Ferreira",
+     "character": "Captain Rooke"
+    }
+   ],
+   "studio": "Lowland Cinema",
+   "community_rating": 7.0,
+   "content_rating": "12",
+   "location": "Living room > Shelf C",
+   "purchase_date": "2024-06-17",
+   "purchase_price": 12.99,
+   "value": 15.59,
+   "tech": {
+    "resolution": "2160p",
+    "hdr": [
+     "Dolby Vision",
+     "HDR10"
+    ],
+    "audio": "Dolby Atmos",
+    "region": "ABC"
+   },
+   "watchlist": true
+  },
+  {
+   "title": "Counterfeit Saints",
+   "year": 2020,
+   "format": "Blu-ray",
+   "barcode": "2009992380198",
+   "poster": "posters/38-counterfeit-saints.webp",
+   "overview": "A restorer and a forger have one week to swap six paintings before anyone counts the halos.",
+   "runtime": 112,
+   "genres": [
+    "Crime",
+    "Comedy"
+   ],
+   "director": "Beatrix Morel",
+   "cast": [
+    {
+     "name": "Kofi Mensah",
+     "character": "Captain Rooke"
+    },
+    {
+     "name": "Zadie Rowe",
+     "character": "Pim"
+    },
+    {
+     "name": "Theo Blackwood",
+     "character": "The Stranger"
+    },
+    {
+     "name": "Freya Lund",
+     "character": "The Cartographer"
+    }
+   ],
+   "studio": "Meridian Pictures",
+   "community_rating": 7.8,
+   "content_rating": "16",
+   "location": "Study > Cabinet",
+   "purchase_date": "2023-11-24",
+   "purchase_price": 14.99,
+   "value": 23.98,
+   "tech": {
+    "resolution": "1080p",
+    "audio": "DTS-HD Master Audio 5.1",
+    "region": "B"
+   },
+   "watchlist": true
+  },
+  {
+   "title": "The Emberwood Crown",
+   "year": 2018,
+   "format": "4K UHD",
+   "barcode": "2009992390197",
+   "poster": "posters/39-the-emberwood-crown.webp",
+   "overview": "The crown of the forest kingdom burns anyone unworthy to wear it. No one has been worthy for a hundred years.",
+   "runtime": 138,
+   "genres": [
+    "Fantasy",
+    "Adventure"
+   ],
+   "director": "Rowan Aldridge",
+   "cast": [
+    {
+     "name": "Yuna Sato",
+     "character": "The Cartographer"
+    },
+    {
+     "name": "Noor Haddad",
+     "character": "Dr. Ilse Brandt"
+    },
+    {
+     "name": "Lena Marsh",
+     "character": "Elias"
+    },
+    {
+     "name": "Rafael Quist",
+     "character": "The Keeper"
+    }
+   ],
+   "studio": "Northlight Pictures",
+   "community_rating": 8.6,
+   "content_rating": "12",
+   "location": "Attic > Box 1",
+   "purchase_date": "2019-04-04",
+   "purchase_price": 19.99,
+   "value": 21.99,
+   "tech": {
+    "resolution": "2160p",
+    "hdr": [
+     "Dolby Vision",
+     "HDR10"
+    ],
+    "audio": "Dolby Atmos",
+    "region": "ABC"
+   },
+   "backdrop": "backdrops/104.webp",
+   "watched": "2026-10-04",
+   "rating": 8.5,
+   "tags": [
+    "Favourites"
+   ]
+  },
+  {
+   "title": "Aurelia and the Wolf King",
+   "year": 2015,
+   "format": "Blu-ray",
+   "barcode": "2009992410192",
+   "poster": "posters/41-aurelia-and-the-wolf-king.webp",
+   "overview": "To end the long winter, a girl walks north to bargain with the king of the wolves.",
+   "runtime": 107,
+   "genres": [
+    "Fantasy",
+    "Family"
+   ],
+   "director": "Liesel Brandt",
+   "cast": [
+    {
+     "name": "Elias Thorne",
+     "character": "Tomas"
+    },
+    {
+     "name": "Idris Calloway",
+     "character": "Nora"
+    },
+    {
+     "name": "Yuna Sato",
+     "character": "Mara"
+    },
+    {
+     "name": "Noor Haddad",
+     "character": "Captain Rooke"
+    }
+   ],
+   "studio": "Harbour & Vale",
+   "community_rating": 7.3,
+   "content_rating": "AL",
+   "location": "Living room > Shelf B",
+   "purchase_date": "2018-02-18",
+   "purchase_price": 29.99,
+   "value": 29.99,
+   "tech": {
+    "resolution": "1080p",
+    "audio": "DTS-HD Master Audio 5.1",
+    "region": "B"
+   }
+  },
+  {
+   "title": "The Long Ascent",
+   "year": 2021,
+   "format": "Blu-ray",
+   "barcode": "2009992420191",
+   "poster": "posters/42-the-long-ascent.webp",
+   "overview": "Five climbers, one unclimbed ridge, and the winter that nearly kept them.",
+   "runtime": 93,
+   "genres": [
+    "Documentary"
+   ],
+   "director": "Tenzin Okada",
+   "cast": [
+    {
+     "name": "Jasper Lindholm",
+     "character": "Captain Rooke"
+    },
+    {
+     "name": "Ottilie Grant",
+     "character": "Pim"
+    },
+    {
+     "name": "Anders Holt",
+     "character": "The Stranger"
+    },
+    {
+     "name": "Amara Osei",
+     "character": "The Cartographer"
+    }
+   ],
+   "studio": "Brackwater Films",
+   "community_rating": 8.1,
+   "content_rating": "12",
+   "location": "Living room > Shelf C",
+   "purchase_date": "2022-07-25",
+   "purchase_price": 7.99,
+   "value": 11.19,
+   "tech": {
+    "resolution": "1080p",
+    "audio": "DTS-HD Master Audio 5.1",
+    "region": "B"
+   },
+   "tags": [
+    "Lent out before"
+   ]
+  },
+  {
+   "title": "Vinyl Summer",
+   "year": 2019,
+   "format": "Blu-ray",
+   "barcode": "2009992430190",
+   "poster": "posters/43-vinyl-summer.webp",
+   "overview": "Three friends spend the hottest summer on record trying to press their own album.",
+   "runtime": 105,
+   "genres": [
+    "Drama",
+    "Music"
+   ],
+   "director": "Gwen Halloran",
+   "cast": [
+    {
+     "name": "Saskia Verbeek",
+     "character": "The Cartographer"
+    },
+    {
+     "name": "Dorian Pike",
+     "character": "Dr. Ilse Brandt"
+    },
+    {
+     "name": "Elias Thorne",
+     "character": "Elias"
+    },
+    {
+     "name": "Idris Calloway",
+     "character": "The Keeper"
+    }
+   ],
+   "studio": "Lowland Cinema",
+   "community_rating": 8.9,
+   "content_rating": "16",
+   "location": "Study > Cabinet",
+   "purchase_date": "2021-12-05",
+   "purchase_price": 9.99,
+   "value": 8.99,
+   "tech": {
+    "resolution": "1080p",
+    "audio": "DTS-HD Master Audio 5.1",
+    "region": "B"
+   },
+   "watched": "2026-09-20",
+   "rating": 8
+  },
+  {
+   "title": "The Iron Regatta",
+   "year": 2017,
+   "format": "DVD",
+   "barcode": "2009992440199",
+   "poster": "posters/44-the-iron-regatta.webp",
+   "overview": "A dockyard crew with a borrowed boat enters the one race they were never meant to see.",
+   "runtime": 118,
+   "genres": [
+    "Drama",
+    "Sport"
+   ],
+   "director": "Arthur Finch",
+   "cast": [
+    {
+     "name": "Mateo Ferreira",
+     "character": "The Keeper"
+    },
+    {
+     "name": "Maeve Donnelly",
+     "character": "June"
+    },
+    {
+     "name": "Jasper Lindholm",
+     "character": "Sister Maren"
+    },
+    {
+     "name": "Ottilie Grant",
+     "character": "Tomas"
+    }
+   ],
+   "studio": "Meridian Pictures",
+   "community_rating": 6.8,
+   "content_rating": "12",
+   "location": "Attic > Box 1",
+   "purchase_date": "2020-05-12",
+   "purchase_price": 12.99,
+   "value": 16.89,
+   "tech": {
+    "resolution": "576p",
+    "audio": "Dolby Digital 5.1",
+    "region": "2"
+   }
+  },
+  {
+   "title": "Radio Silence at Dawn",
+   "year": 2020,
+   "format": "4K UHD",
+   "barcode": "2009992450198",
+   "poster": "posters/45-radio-silence-at-dawn.webp",
+   "overview": "A radio operator is ordered to stay off the air until sunrise, whatever he hears.",
+   "runtime": 122,
+   "genres": [
+    "War",
+    "Drama"
+   ],
+   "director": "Emil Novak",
+   "cast": [
+    {
+     "name": "Freya Lund",
+     "character": "Tomas"
+    },
+    {
+     "name": "Emeric Vaughn",
+     "character": "Nora"
+    },
+    {
+     "name": "Saskia Verbeek",
+     "character": "Mara"
+    },
+    {
+     "name": "Dorian Pike",
+     "character": "Captain Rooke"
+    }
+   ],
+   "studio": "Northlight Pictures",
+   "community_rating": 7.6,
+   "content_rating": "9",
+   "location": "Living room > Shelf A",
+   "purchase_date": "2021-10-19",
+   "purchase_price": 14.99,
+   "value": 11.99,
+   "tech": {
+    "resolution": "2160p",
+    "hdr": [
+     "Dolby Vision",
+     "HDR10"
+    ],
+    "audio": "Dolby Atmos",
+    "region": "ABC"
+   }
+  },
+  {
+   "title": "Meridian: Fracture",
+   "year": 2022,
+   "format": "4K UHD",
+   "barcode": "2009992470196",
+   "poster": "posters/47-meridian-fracture.webp",
+   "overview": "The key opened more than one door. Now every reflection in the city is looking for him.",
+   "runtime": 127,
+   "genres": [
+    "Action",
+    "Thriller"
+   ],
+   "director": "Desmond Achebe",
+   "cast": [
+    {
+     "name": "Rafael Quist",
+     "character": "The Cartographer"
+    },
+    {
+     "name": "Wren Castillo",
+     "character": "Dr. Ilse Brandt"
+    },
+    {
+     "name": "Mateo Ferreira",
+     "character": "Elias"
+    },
+    {
+     "name": "Maeve Donnelly",
+     "character": "The Keeper"
+    }
+   ],
+   "studio": "Harbour & Vale",
+   "community_rating": 9.2,
+   "content_rating": "12",
+   "location": "Living room > Shelf C",
+   "purchase_date": "2025-08-06",
+   "purchase_price": 24.99,
+   "value": 39.98,
+   "tech": {
+    "resolution": "2160p",
+    "hdr": [
+     "Dolby Vision",
+     "HDR10"
+    ],
+    "audio": "Dolby Atmos",
+    "region": "ABC"
+   },
+   "box_set": {
+    "name": "The Meridian Trilogy",
+    "year": 2020,
+    "barcode": "2009992460197",
+    "poster": "posters/46-box-the-meridian-trilogy.webp",
+    "description": "3 films in one set.",
+    "location": "Living room > Shelf A"
+   }
+  },
+  {
+   "title": "Meridian: Zero Hour",
+   "year": 2024,
+   "format": "4K UHD",
+   "barcode": "2009992480195",
+   "poster": "posters/48-meridian-zero-hour.webp",
+   "overview": "At midnight the towers reset. One man is still inside the clock.",
+   "runtime": 133,
+   "genres": [
+    "Action",
+    "Thriller"
+   ],
+   "director": "Desmond Achebe",
+   "cast": [
+    {
+     "name": "Zadie Rowe",
+     "character": "The Keeper"
+    },
+    {
+     "name": "Theo Blackwood",
+     "character": "June"
+    },
+    {
+     "name": "Freya Lund",
+     "character": "Sister Maren"
+    },
+    {
+     "name": "Emeric Vaughn",
+     "character": "Tomas"
+    }
+   ],
+   "studio": "Brackwater Films",
+   "community_rating": 7.1,
+   "content_rating": "16",
+   "location": "Study > Cabinet",
+   "purchase_date": "2025-01-13",
+   "purchase_price": 29.99,
+   "value": 32.99,
+   "tech": {
+    "resolution": "2160p",
+    "hdr": [
+     "HDR10"
+    ],
+    "audio": "Dolby Atmos",
+    "region": "ABC"
+   },
+   "tags": [
+    "Lent out before"
+   ],
+   "box_set": {
+    "name": "The Meridian Trilogy",
+    "year": 2020,
+    "barcode": "2009992460197",
+    "poster": "posters/46-box-the-meridian-trilogy.webp",
+    "description": "3 films in one set.",
+    "location": "Living room > Shelf A"
+   }
+  },
+  {
+   "title": "Starfall",
+   "year": 2009,
+   "format": "Blu-ray",
+   "barcode": "2009992500190",
+   "poster": "posters/50-starfall.webp",
+   "overview": "A farm girl follows a falling star across the desert and finds it was sent for her.",
+   "runtime": 121,
+   "genres": [
+    "Science Fiction",
+    "Adventure"
+   ],
+   "director": "Corwin Vale",
+   "cast": [
+    {
+     "name": "Noor Haddad",
+     "character": "Captain Rooke"
+    },
+    {
+     "name": "Lena Marsh",
+     "character": "Pim"
+    },
+    {
+     "name": "Rafael Quist",
+     "character": "The Stranger"
+    },
+    {
+     "name": "Wren Castillo",
+     "character": "The Cartographer"
+    }
+   ],
+   "studio": "Meridian Pictures",
+   "community_rating": 8.7,
+   "content_rating": "9",
+   "location": "Living room > Shelf A",
+   "purchase_date": "2012-11-27",
+   "purchase_price": 9.99,
+   "value": 9.99,
+   "tech": {
+    "resolution": "1080p",
+    "audio": "DTS-HD Master Audio 5.1",
+    "region": "B"
+   },
+   "backdrop": "backdrops/106.webp",
+   "box_set": {
+    "name": "Starfall Saga: The Complete Collection",
+    "year": 2009,
+    "barcode": "2009992490194",
+    "poster": "posters/49-box-starfall-saga.webp",
+    "description": "5 films in one set.",
+    "location": "Living room > Shelf A"
+   }
+  },
+  {
+   "title": "Starfall: Exile",
+   "year": 2011,
+   "format": "Blu-ray",
+   "barcode": "2009992510199",
+   "poster": "posters/51-starfall-exile.webp",
+   "overview": "Hunted across a frozen world, the star-bearer learns what the light actually costs.",
+   "runtime": 129,
+   "genres": [
+    "Science Fiction",
+    "Adventure"
+   ],
+   "director": "Corwin Vale",
+   "cast": [
+    {
+     "name": "Amara Osei",
+     "character": "The Cartographer"
+    },
+    {
+     "name": "Kofi Mensah",
+     "character": "Dr. Ilse Brandt"
+    },
+    {
+     "name": "Zadie Rowe",
+     "character": "Elias"
+    },
+    {
+     "name": "Theo Blackwood",
+     "character": "The Keeper"
+    }
+   ],
+   "studio": "Northlight Pictures",
+   "community_rating": 6.6,
+   "content_rating": "12",
+   "location": "Living room > Shelf B",
+   "purchase_date": "2012-04-07",
+   "purchase_price": 12.99,
+   "value": 18.19,
+   "tech": {
+    "resolution": "1080p",
+    "audio": "DTS-HD Master Audio 5.1",
+    "region": "B"
+   },
+   "box_set": {
+    "name": "Starfall Saga: The Complete Collection",
+    "year": 2009,
+    "barcode": "2009992490194",
+    "poster": "posters/49-box-starfall-saga.webp",
+    "description": "5 films in one set.",
+    "location": "Living room > Shelf A"
+   }
+  },
+  {
+   "title": "Starfall: Ironsong",
+   "year": 2013,
+   "format": "Blu-ray",
+   "barcode": "2009992520198",
+   "poster": "posters/52-starfall-ironsong.webp",
+   "overview": "In the forge-city inside the hollow moon, an army waits for a song only she can finish.",
+   "runtime": 134,
+   "genres": [
+    "Science Fiction",
+    "Adventure"
+   ],
+   "director": "Corwin Vale",
+   "cast": [
+    {
+     "name": "Idris Calloway",
+     "character": "The Keeper"
+    },
+    {
+     "name": "Yuna Sato",
+     "character": "June"
+    },
+    {
+     "name": "Noor Haddad",
+     "character": "Sister Maren"
+    },
+    {
+     "name": "Lena Marsh",
+     "character": "Tomas"
+    }
+   ],
+   "studio": "Tramontane Studios",
+   "community_rating": 7.4,
+   "content_rating": "12",
+   "location": "Living room > Shelf C",
+   "purchase_date": "2015-09-14",
+   "purchase_price": 14.99,
+   "value": 13.49,
+   "tech": {
+    "resolution": "1080p",
+    "audio": "DTS-HD Master Audio 5.1",
+    "region": "B"
+   },
+   "box_set": {
+    "name": "Starfall Saga: The Complete Collection",
+    "year": 2009,
+    "barcode": "2009992490194",
+    "poster": "posters/49-box-starfall-saga.webp",
+    "description": "5 films in one set.",
+    "location": "Living room > Shelf A"
+   }
+  },
+  {
+   "title": "Starfall: Twin Suns Rising",
+   "year": 2015,
+   "format": "Blu-ray",
+   "barcode": "2009992530197",
+   "poster": "posters/53-starfall-twin-suns-rising.webp",
+   "overview": "Two suns, two heirs, and one day on which both of them rise.",
+   "runtime": 137,
+   "genres": [
+    "Science Fiction",
+    "Adventure"
+   ],
+   "director": "Corwin Vale",
+   "cast": [
+    {
+     "name": "Ottilie Grant",
+     "character": "Tomas"
+    },
+    {
+     "name": "Anders Holt",
+     "character": "Nora"
+    },
+    {
+     "name": "Amara Osei",
+     "character": "Mara"
+    },
+    {
+     "name": "Kofi Mensah",
+     "character": "Captain Rooke"
+    }
+   ],
+   "studio": "Harbour & Vale",
+   "community_rating": 8.2,
+   "content_rating": "16",
+   "location": "Study > Cabinet",
+   "purchase_date": "2018-02-21",
+   "purchase_price": 19.99,
+   "value": 25.99,
+   "tech": {
+    "resolution": "1080p",
+    "audio": "DTS-HD Master Audio 5.1",
+    "region": "B"
+   },
+   "box_set": {
+    "name": "Starfall Saga: The Complete Collection",
+    "year": 2009,
+    "barcode": "2009992490194",
+    "poster": "posters/49-box-starfall-saga.webp",
+    "description": "5 films in one set.",
+    "location": "Living room > Shelf A"
+   }
+  },
+  {
+   "title": "Starfall: Homecoming",
+   "year": 2017,
+   "format": "Blu-ray",
+   "barcode": "2009992540196",
+   "poster": "posters/54-starfall-homecoming.webp",
+   "overview": "The fleet comes home. The star-bearer has to decide whether she can.",
+   "runtime": 141,
+   "genres": [
+    "Science Fiction",
+    "Adventure"
+   ],
+   "director": "Corwin Vale",
+   "cast": [
+    {
+     "name": "Dorian Pike",
+     "character": "Captain Rooke"
+    },
+    {
+     "name": "Elias Thorne",
+     "character": "Pim"
+    },
+    {
+     "name": "Idris Calloway",
+     "character": "The Stranger"
+    },
+    {
+     "name": "Yuna Sato",
+     "character": "The Cartographer"
+    }
+   ],
+   "studio": "Brackwater Films",
+   "community_rating": 9.0,
+   "content_rating": "12",
+   "location": "Attic > Box 1",
+   "purchase_date": "2018-07-01",
+   "purchase_price": 24.99,
+   "value": 19.99,
+   "tech": {
+    "resolution": "1080p",
+    "audio": "DTS-HD Master Audio 5.1",
+    "region": "B"
+   },
+   "tags": [
+    "Lent out before"
+   ],
+   "box_set": {
+    "name": "Starfall Saga: The Complete Collection",
+    "year": 2009,
+    "barcode": "2009992490194",
+    "poster": "posters/49-box-starfall-saga.webp",
+    "description": "5 films in one set.",
+    "location": "Living room > Shelf A"
+   }
+  },
+  {
+   "title": "Captain Thistle and the Sunken Bell",
+   "year": 2018,
+   "format": "DVD",
+   "barcode": "2009992560194",
+   "poster": "posters/56-captain-thistle-and-the-sunken-bell.webp",
+   "overview": "Something is ringing at the bottom of the pond, and Captain Thistle has a diving helmet.",
+   "runtime": 84,
+   "genres": [
+    "Animation",
+    "Family"
+   ],
+   "director": "Molly Pennington",
+   "cast": [
+    {
+     "name": "Maeve Donnelly",
+     "character": "The Keeper"
+    },
+    {
+     "name": "Jasper Lindholm",
+     "character": "June"
+    },
+    {
+     "name": "Ottilie Grant",
+     "character": "Sister Maren"
+    },
+    {
+     "name": "Anders Holt",
+     "character": "Tomas"
+    }
+   ],
+   "studio": "Meridian Pictures",
+   "community_rating": 7.7,
+   "content_rating": "AL",
+   "location": "Living room > Shelf B",
+   "purchase_date": "2021-05-15",
+   "purchase_price": 7.99,
+   "value": 12.78,
+   "tech": {
+    "resolution": "576p",
+    "audio": "Dolby Digital 5.1",
+    "region": "2"
+   },
+   "box_set": {
+    "name": "Captain Thistle Adventures: 4-Film Collection",
+    "year": 2016,
+    "barcode": "2009992550195",
+    "poster": "posters/55-box-captain-thistle-adventures.webp",
+    "description": "4 films in one set.",
+    "location": "Living room > Shelf A"
+   }
+  },
+  {
+   "title": "Captain Thistle: Sky Pirates",
+   "year": 2020,
+   "format": "DVD",
+   "barcode": "2009992570193",
+   "poster": "posters/57-captain-thistle-sky-pirates.webp",
+   "overview": "When magpies steal the harvest moon lanterns, the Captain trades his ship for a balloon.",
+   "runtime": 87,
+   "genres": [
+    "Animation",
+    "Family"
+   ],
+   "director": "Molly Pennington",
+   "cast": [
+    {
+     "name": "Emeric Vaughn",
+     "character": "Tomas"
+    },
+    {
+     "name": "Saskia Verbeek",
+     "character": "Nora"
+    },
+    {
+     "name": "Dorian Pike",
+     "character": "Mara"
+    },
+    {
+     "name": "Elias Thorne",
+     "character": "Captain Rooke"
+    }
+   ],
+   "studio": "Northlight Pictures",
+   "community_rating": 8.5,
+   "content_rating": "AL",
+   "location": "Living room > Shelf C",
+   "purchase_date": "2021-10-22",
+   "purchase_price": 9.99,
+   "value": 10.99,
+   "tech": {
+    "resolution": "576p",
+    "audio": "Dolby Digital 5.1",
+    "region": "2"
+   },
+   "box_set": {
+    "name": "Captain Thistle Adventures: 4-Film Collection",
+    "year": 2016,
+    "barcode": "2009992550195",
+    "poster": "posters/55-box-captain-thistle-adventures.webp",
+    "description": "4 films in one set.",
+    "location": "Living room > Shelf A"
+   }
+  },
+  {
+   "title": "Captain Thistle's Winter Voyage",
+   "year": 2022,
+   "format": "DVD",
+   "barcode": "2009992580192",
+   "poster": "posters/58-captain-thistles-winter-voyage.webp",
+   "overview": "The pond is freezing over, and one last lantern needs to reach the harbour before the snow.",
+   "runtime": 89,
+   "genres": [
+    "Animation",
+    "Family"
+   ],
+   "director": "Molly Pennington",
+   "cast": [
+    {
+     "name": "Wren Castillo",
+     "character": "Captain Rooke"
+    },
+    {
+     "name": "Mateo Ferreira",
+     "character": "Pim"
+    },
+    {
+     "name": "Maeve Donnelly",
+     "character": "The Stranger"
+    },
+    {
+     "name": "Jasper Lindholm",
+     "character": "The Cartographer"
+    }
+   ],
+   "studio": "Tramontane Studios",
+   "community_rating": 6.4,
+   "content_rating": "AL",
+   "location": "Study > Cabinet",
+   "purchase_date": "2024-03-02",
+   "purchase_price": 12.99,
+   "value": 19.48,
+   "tech": {
+    "resolution": "576p",
+    "audio": "Dolby Digital 5.1",
+    "region": "2"
+   },
+   "box_set": {
+    "name": "Captain Thistle Adventures: 4-Film Collection",
+    "year": 2016,
+    "barcode": "2009992550195",
+    "poster": "posters/55-box-captain-thistle-adventures.webp",
+    "description": "4 films in one set.",
+    "location": "Living room > Shelf A"
+   }
+  },
+  {
+   "title": "The Emberwood Crown: Extended Edition",
+   "year": 2018,
+   "format": "4K UHD",
+   "barcode": "2009993000194",
+   "poster": "posters/39-the-emberwood-crown.webp",
+   "wishlist": true,
+   "note": "Waiting for a better price.",
+   "price_alert": {
+    "shop": "Discshelf",
+    "url": "https://shop.example/0",
+    "currency": "EUR",
+    "current": 34.99,
+    "target": 29.99,
+    "history": [
+     39.99,
+     37.99,
+     36.49,
+     34.99
+    ]
+   }
+  },
+  {
+   "title": "Neon Tidewater",
+   "year": 2019,
+   "format": "4K UHD",
+   "barcode": "2009993010193",
+   "poster": "posters/03-neon-tidewater.webp",
+   "wishlist": true,
+   "note": "At my price now.",
+   "price_alert": {
+    "shop": "Filmkast",
+    "url": "https://shop.example/1",
+    "currency": "EUR",
+    "current": 22.49,
+    "target": 24.99,
+    "history": [
+     29.99,
+     27.99,
+     24.99,
+     22.49
+    ]
+   }
+  },
+  {
+   "title": "Aurelia and the Wolf King",
+   "year": 2015,
+   "format": "4K UHD",
+   "barcode": "2009993020192",
+   "poster": "posters/41-aurelia-and-the-wolf-king.webp",
+   "wishlist": true,
+   "note": "Waiting for a better price.",
+   "price_alert": {
+    "shop": "Spoel & Co",
+    "url": "https://shop.example/2",
+    "currency": "EUR",
+    "current": 27.99,
+    "target": 22.0,
+    "history": [
+     27.99,
+     27.99,
+     27.99,
+     27.99
+    ]
+   }
+  },
+  {
+   "title": "Halcyon Drift: Steelbook Edition",
+   "year": 2021,
+   "format": "4K UHD",
+   "barcode": "2009993030191",
+   "poster": "posters/02-halcyon-drift.webp",
+   "wishlist": true,
+   "note": "Waiting for a better price.",
+   "price_alert": {
+    "shop": "Discshelf",
+    "url": "https://shop.example/3",
+    "currency": "EUR",
+    "current": 31.99,
+    "target": 30.0,
+    "history": [
+     39.99,
+     36.99,
+     33.99,
+     31.99
+    ]
+   }
+  }
+ ]
+}
