@@ -5,9 +5,9 @@
 *{box-sizing:border-box;margin:0}
 body{width:1320px;height:2868px;overflow:hidden;font-family:Inter,sans-serif;position:relative;background:var(--g);color:var(--i)}
 body.navy{--g:#090F1A;--i:#EAF0F7}body.white{--g:#F2F6FA;--i:#0A0E14}body.blue{--g:#2A6FD6;--i:#fff}body.platinum{--g:#C7D2DE;--i:#0A0E14}body.gold{--g:#C2A878;--i:#1C1508}
-h1{position:absolute;left:96px;right:96px;top:190px;font-size:148px;line-height:.97;font-weight:700;letter-spacing:-.045em;text-wrap:balance}
+h1{position:absolute;left:96px;right:96px;top:190px;font-size:148px;line-height:.97;font-weight:700;letter-spacing:-.045em;text-wrap:balance;white-space:pre-line}
 .shot{position:absolute;left:120px;right:120px;top:640px;bottom:-140px;border-radius:96px;overflow:hidden;background:#090F1A;border:18px solid #111A2A}
 .shot img{width:100%;display:block}
 </style>
 <body><h1 id="t"></h1><div class="shot"><img id="s"></div>
-<script>const p=new URLSearchParams(location.search);document.body.className=p.get('field')||'navy';document.getElementById('t').innerHTML=(p.get('title')||'').replace(/\|/g,'<br>');document.getElementById('s').src=p.get('shot')||''</script>
+<script>const p=new URLSearchParams(location.search);const field=p.get('field');document.body.className=['navy','white','blue','platinum','gold'].includes(field)?field:'navy';document.getElementById('t').textContent=(p.get('title')||'').replace(/\|/g,'\n');const shot=p.get('shot')||'';if(/^in\/[A-Za-z0-9_-]+\.png$/.test(shot))document.getElementById('s').src=shot</script>

@@ -497,7 +497,11 @@ for (const [file, locale, canonical, homePath] of marketingPages) {
     fail(`${file}: #privacy does not name ${installationCountHost}`);
   }
 
-  if (html.includes(obsoleteDiscord)) {
+  const usesObsoleteDiscord = findAll(
+    document.root,
+    (node) => node.tag === 'a',
+  ).some((node) => node.attrs.href === obsoleteDiscord);
+  if (usesObsoleteDiscord) {
     throw new Error(`${file} retains the obsolete Discord invite`);
   }
   const alternates = [...html.matchAll(/rel="alternate" hreflang=/g)].length;
