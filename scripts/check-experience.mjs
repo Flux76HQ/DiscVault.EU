@@ -1,16 +1,26 @@
 /**
- * Experience checks for the marketing routes (build plan prompt 8;
- * motion-system.md §10). Runs against a built dist/ through the static
- * preview and asserts, per route:
+ * Experience checks for the marketing routes. Runs against a built dist/
+ * through the static preview and asserts, per route:
  *  - nothing inside <main> is hidden at rest without JavaScript;
  *  - no request leaves the preview host;
- *  - under reduced motion nothing runs after 100 ms and the idle pass rests;
- *  - the pointer drives the hero tilt and the wall torch, and nothing else;
- *  - the strip is scrolled after 100 px;
- *  - the idle pass repeats three times;
+ *  - no video is requested before the first scroll;
+ *  - a loop plays only while it is on screen, can be paused, and is neither
+ *    fetched nor started under reduced motion or Save-Data;
+ *  - a full scroll shifts the layout by no more than 0.05;
+ *  - the scan demo answers a barcode with its record;
+ *  - the bar takes the colour of the chapter beneath it;
+ *  - under reduced motion nothing is running after 100 ms;
  *  - the compiled CSS animates no background-position, filter or box-shadow;
- *  - every pass band rests entirely outside its parent;
- *  - axe reports no serious or critical violation at 1440 and 390 px.
+ *  - axe reports no serious or critical violation at 1440 and 390 px;
+ * and, on three routes at four widths, that the page never scrolls sideways.
+ *
+ * Release 3.0 replaced the Pressed Light homepage with colour chapters on
+ * the house style (design source: Flux76HQ/App-Guidance,
+ * projects/discvault/website/chrome-and-blue-web.md, and ADR-0021). Each
+ * block that changed for that reason says below what it asserted in 2.0.
+ *
+ * Set DV_CHROMIUM_PATH to run against a Chromium other than the one
+ * Playwright installs; without it Playwright's own browser is used.
  */
 import { spawn } from 'node:child_process';
 import { readdir, readFile } from 'node:fs/promises';
@@ -22,6 +32,17 @@ const host = '127.0.0.1';
 const port = 4177;
 const base = `http://${host}:${port}`;
 const routes = ['/', '/nl/'];
+// Sideways scroll shows up with long words and wide glyphs, so the widths
+// are tried in English, in German and in Japanese.
+const overflowRoutes = ['/', '/de/', '/ja/'];
+const overflowViewports = [
+  [320, 568],
+  [390, 844],
+  [768, 1024],
+  [1440, 900],
+];
+const layoutShiftLimit = 0.05;
+const executablePath = process.env.DV_CHROMIUM_PATH || undefined;
 
 const server = spawn(
   process.execPath,
@@ -41,9 +62,25 @@ await new Promise((resolve, reject) => {
     reject(new Error(`Static preview exited with code ${code}`)),
   );
 });
+// A preview that dies mid-run would otherwise surface as a refused
+// connection with no hint of the cause.
+let stopping = false;
+server.on('exit', (code, signal) => {
+  if (!stopping) {
+    console.error(
+      `Static preview stopped unexpectedly (code ${code}, signal ${signal})`,
+    );
+  }
+});
+const stopServer = () => {
+  stopping = true;
+  server.kill();
+};
 
-const failures = [];
-const fail = (message) => failures.push(message);
+const failures = new Set();
+const fail = (message) => failures.add(message);
+const notes = new Set();
+const note = (message) => notes.add(message);
 
 // Compiled CSS (inlined into the pages, or emitted as files): no animated
 // background-position, filter or box-shadow.
@@ -80,31 +117,159 @@ for (const { name, css } of cssSources) {
   }
 }
 
+const isMedia = (url) => /\.(?:mp4|webm)$/i.test(new URL(url).pathname);
+
+/**
+ * Watch a page's network: which hosts it talks to, which videos it asks
+ * for, and whether anything other than a video is still in flight. (A
+ * paused video can hold its connection open, so it never counts as busy.)
+ */
+function track(page, route) {
+  const media = [];
+  const inFlight = new Set();
+  page.on('request', (request) => {
+    const url = new URL(request.url());
+    if (url.protocol === 'data:' || url.protocol === 'blob:') return;
+    if (url.host !== `${host}:${port}`) {
+      fail(`${route}: request to external host ${url.host}`);
+    }
+    if (isMedia(request.url())) media.push(url.pathname);
+    else inFlight.add(request);
+  });
+  const done = (request) => inFlight.delete(request);
+  page.on('requestfinished', done);
+  page.on('requestfailed', done);
+  return {
+    media,
+    /** Resolves once nothing has been in flight for a quarter second. */
+    async idle(limit = 10_000) {
+      const deadline = Date.now() + limit;
+      let quietSince = Date.now();
+      while (Date.now() < deadline) {
+        if (inFlight.size) quietSince = Date.now();
+        else if (Date.now() - quietSince >= 250) return;
+        await new Promise((resolve) => setTimeout(resolve, 50));
+      }
+    },
+  };
+}
+
+/** Wait for every finite animation and transition to finish. */
+async function settle(page) {
+  await page.evaluate(() =>
+    Promise.race([
+      Promise.all(
+        document
+          .getAnimations()
+          .filter(
+            (animation) =>
+              animation.effect?.getComputedTiming().endTime !== Infinity,
+          )
+          .map((animation) => animation.finished.catch(() => {})),
+      ),
+      new Promise((resolve) => setTimeout(resolve, 3000)),
+    ]),
+  );
+}
+
+/** Scroll from the top of the page to its end, a viewport at a time. */
+async function scrollThrough(page, network) {
+  await page.evaluate(async () => {
+    const frames = () =>
+      new Promise((resolve) =>
+        requestAnimationFrame(() => requestAnimationFrame(resolve)),
+      );
+    const step = Math.max(200, Math.floor(innerHeight * 0.8));
+    for (let y = 0; y < document.documentElement.scrollHeight; y += step) {
+      scrollTo({ top: y, behavior: 'instant' });
+      await frames();
+      await new Promise((resolve) => setTimeout(resolve, 50));
+    }
+    scrollTo({
+      top: document.documentElement.scrollHeight,
+      behavior: 'instant',
+    });
+    await frames();
+  });
+  await network.idle();
+  await settle(page);
+}
+
+const loopState = (page) =>
+  page.evaluate(() =>
+    [...document.querySelectorAll('video[data-loop]')].map((video) => ({
+      slot: video.closest('[data-media]')?.dataset.media ?? '?',
+      paused: video.paused,
+    })),
+  );
+
+/**
+ * A context in which loops must stay still (reduced motion, Save-Data):
+ * after a full scroll no video was requested and every loop is paused.
+ */
+async function expectStillLoops(page, network, route, condition) {
+  await scrollThrough(page, network);
+  if (network.media.length) {
+    fail(
+      `${route}: video requested ${condition}: ${[...new Set(network.media)].join(', ')}`,
+    );
+  }
+  const playing = (await loopState(page)).filter((loop) => !loop.paused);
+  if (playing.length) {
+    fail(
+      `${route}: loop playing ${condition}: ${playing.map((loop) => loop.slot).join(', ')}`,
+    );
+  }
+}
+
 let browser;
 try {
-  browser = await chromium.launch();
+  browser = await chromium.launch(executablePath ? { executablePath } : {});
 } catch (error) {
-  server.kill();
+  stopServer();
   throw error;
 }
 try {
   for (const route of routes) {
-    // 1. No JavaScript: nothing hidden inside main.
+    let loopCount = 0;
+
+    /**
+     * 1. No JavaScript: nothing hidden inside main.
+     *
+     * 2.0 waited a fixed 2.8 s here for the hero's entrance, a lighting
+     * change that played without script. 3.0 has no scriptless entrance:
+     * the class that holds a part back is set by the motion script alone,
+     * so the page is judged as soon as its finite animations have ended.
+     * Three things are not "hidden content": decorative (aria-hidden)
+     * layers; the body of a closed <details>, which the reader opens; and a
+     * radio or checkbox drawn by its own visible label.
+     */
     {
       const context = await browser.newContext({
         javaScriptEnabled: false,
         viewport: { width: 1440, height: 900 },
       });
       const page = await context.newPage();
+      track(page, route);
       await page.goto(base + route, { waitUntil: 'load' });
-      // The hero's entrance (a lighting change over decorative layers) may
-      // still be playing; content is judged after it, and decorative
-      // (aria-hidden) layers are light, not content.
-      await page.waitForTimeout(2800);
+      await settle(page);
       const hidden = await page.evaluate(() =>
         [...document.querySelectorAll('main *')]
           .filter((element) => {
             if (element.closest('[aria-hidden="true"]')) return false;
+            if (
+              element.closest('details:not([open])') &&
+              !element.closest('summary')
+            ) {
+              return false;
+            }
+            if (
+              element.matches(
+                'label input[type="radio"], label input[type="checkbox"]',
+              )
+            ) {
+              return false;
+            }
             const style = getComputedStyle(element);
             return (
               style.visibility === 'hidden' ||
@@ -125,126 +290,245 @@ try {
       await context.close();
     }
 
-    // 2. With JavaScript: hosts, pointer, strip, idle pass, pass rest.
+    /**
+     * 2. With JavaScript, at desktop width.
+     *
+     * 2.0 asserted the Pressed Light motion here: the pointer drove the
+     * hero tilt (`--tx`) and the wall torch (`.wall-torch`), the strip took
+     * `.is-scrolled` after 100 px, the idle pass (`.pass`) repeated three
+     * times and its bands rested outside the hero button and `.reel-rule`.
+     * None of those parts exist in 3.0. What moves now is the media (muted
+     * loops under ADR-0021 decision 5), the scan demo and the bar's colour,
+     * so those are what this block holds to their rules.
+     */
     {
       const context = await browser.newContext({
         viewport: { width: 1440, height: 900 },
         hasTouch: false,
       });
-      const page = await context.newPage();
-      const hosts = new Set();
-      page.on('request', (request) => hosts.add(new URL(request.url()).host));
-      await page.goto(base + route, { waitUntil: 'networkidle' });
-      for (const external of [...hosts].filter(
-        (h) => h !== `${host}:${port}`,
-      )) {
-        fail(`${route}: request to external host ${external}`);
-      }
-      const before = await page.evaluate(() => ({
-        tx: getComputedStyle(document.documentElement).getPropertyValue('--tx'),
-        torch: getComputedStyle(
-          document.querySelector('.wall-torch'),
-        ).getPropertyValue('--torch-x'),
-      }));
-      await page.mouse.move(400, 400);
-      await page.mouse.move(900, 300);
-      await page.waitForTimeout(100);
-      const afterHero = await page.evaluate(() =>
-        getComputedStyle(document.documentElement)
-          .getPropertyValue('--tx')
-          .trim(),
-      );
-      if (!afterHero || afterHero === before.tx.trim() || afterHero === '0') {
-        fail(`${route}: pointer over the hero did not change --tx`);
-      }
-      const wallTop = await page.evaluate(() => {
-        document.documentElement.style.scrollBehavior = 'auto';
-        const wall = document.querySelector('.wall');
-        scrollTo(0, wall.getBoundingClientRect().top + scrollY - 100);
-        return wall.getBoundingClientRect().top;
+      await context.addInitScript(() => {
+        window.__layoutShift = { supported: false, total: 0, worst: null };
+        if (!PerformanceObserver.supportedEntryTypes?.includes('layout-shift'))
+          return;
+        window.__layoutShift.supported = true;
+        new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (entry.hadRecentInput) continue;
+            const state = window.__layoutShift;
+            state.total += entry.value;
+            if (!state.worst || entry.value > state.worst.value) {
+              const node = entry.sources?.[0]?.node;
+              const element =
+                node && node.nodeType !== 1 ? node.parentElement : node;
+              state.worst = {
+                value: entry.value,
+                source: element
+                  ? `${element.tagName.toLowerCase()}${element.id ? `#${element.id}` : ''}${
+                      typeof element.className === 'string' && element.className
+                        ? `.${element.className.trim().split(/\s+/).join('.')}`
+                        : ''
+                    }`
+                  : 'unknown',
+              };
+            }
+          }
+        }).observe({ type: 'layout-shift', buffered: true });
       });
-      await page.waitForTimeout(100);
-      await page.mouse.move(600, wallTop + 200);
-      await page.mouse.move(700, wallTop + 240);
-      await page.waitForTimeout(100);
-      const torch = await page.evaluate(() =>
-        document
-          .querySelector('.wall-torch')
-          .style.getPropertyValue('--torch-x'),
-      );
-      if (!torch || torch === before.torch)
-        fail(`${route}: pointer over the wall did not move the torch`);
-      const scrolled = await page.evaluate(() => {
-        scrollTo(0, 100);
-        return new Promise((resolve) =>
-          requestAnimationFrame(() =>
-            requestAnimationFrame(() =>
-              resolve(
-                document
-                  .querySelector('[data-strip]')
-                  .classList.contains('is-scrolled'),
+      const page = await context.newPage();
+      const network = track(page, route);
+      await page.goto(base + route, { waitUntil: 'networkidle' });
+      await network.idle();
+
+      // Nothing has been scrolled yet. A loop has `preload="none"` and no
+      // `autoplay`, so the only video that may have been asked for is one
+      // whose slot is on the first screen (the hero), and the script may only
+      // ask for it once the page has finished loading, so it never competes
+      // with the first paint. (2.0 allowed no video at all; 3.0 shows the
+      // library in motion on the first screen: ADR-0021.)
+      const early = await page.evaluate(() => {
+        const onScreen = new Set(
+          [...document.querySelectorAll('video[data-loop]')]
+            .filter((video) => {
+              const rect = video.getBoundingClientRect();
+              return rect.bottom > 0 && rect.top < window.innerHeight;
+            })
+            .flatMap((video) =>
+              [...video.querySelectorAll('source')].map(
+                (source) => new URL(source.src, location.href).pathname,
               ),
             ),
-          ),
         );
+        const [navigation] = performance.getEntriesByType('navigation');
+        return performance
+          .getEntriesByType('resource')
+          .filter((entry) => /\.(webm|mp4)(\?|$)/.test(entry.name))
+          .map((entry) => ({
+            path: new URL(entry.name).pathname,
+            offScreen: !onScreen.has(new URL(entry.name).pathname),
+            beforeLoad: entry.startTime < navigation.loadEventStart,
+          }));
       });
-      if (!scrolled) fail(`${route}: strip is not scrolled after 100 px`);
-      const pass = await page.evaluate(() => {
-        const style = getComputedStyle(
-          document.querySelector('.pass'),
-          '::after',
-        );
-        return {
-          count: style.animationIterationCount,
-          name: style.animationName,
-        };
-      });
-      if (pass.count !== '3')
+      for (const request of early) {
+        if (request.offScreen) {
+          fail(
+            `${route}: video requested before any scroll for a slot that is not on the first screen: ${request.path}`,
+          );
+        }
+        if (request.beforeLoad) {
+          fail(
+            `${route}: video requested before the page finished loading: ${request.path}`,
+          );
+        }
+      }
+
+      await scrollThrough(page, network);
+      const shift = await page.evaluate(() => window.__layoutShift);
+      if (!shift.supported) {
+        fail(`${route}: this browser cannot report layout shifts`);
+      } else if (shift.total > layoutShiftLimit) {
         fail(
-          `${route}: idle pass iteration count is ${pass.count}, expected 3`,
+          `${route}: cumulative layout shift after a full scroll is ${shift.total.toFixed(4)}, limit ${layoutShiftLimit} (largest shift: ${shift.worst.value.toFixed(4)} at ${shift.worst.source})`,
         );
-      // Pass bands at rest sit entirely outside their parent's box.
-      await page.evaluate(() => scrollTo(0, 0));
-      const rest = await page.evaluate(() => {
-        const results = [];
-        for (const selector of [
-          '.hero .button:not(.button-secondary)',
-          '.reel-rule',
-        ]) {
-          for (const element of document.querySelectorAll(selector)) {
-            const style = getComputedStyle(element, '::before');
-            const style2 = getComputedStyle(element, '::after');
-            const pseudo = selector === '.reel-rule' ? style2 : style;
-            const matrix = pseudo.transform.match(/matrix\(([^)]+)\)/);
-            const tx = matrix ? Number(matrix[1].split(',')[4]) : 0;
-            const width = Number.parseFloat(pseudo.width);
-            results.push({
-              selector,
-              tx,
-              width,
-              parent: element.getBoundingClientRect().width,
-            });
+      }
+
+      // The scan demo: a barcode in, its record out, without script.
+      const codes = page.locator('input[name="scan-code"]');
+      if ((await codes.count()) < 2) {
+        fail(`${route}: the scan demo has fewer than two barcodes`);
+      } else {
+        await codes
+          .nth(1)
+          .check({ timeout: 5000 })
+          .catch(() => fail(`${route}: the second barcode cannot be chosen`));
+        const second = await page
+          .locator('.record[data-record="2"]')
+          .isVisible();
+        const first = await page
+          .locator('.record[data-record="1"]')
+          .isVisible();
+        if (!second || first) {
+          fail(
+            `${route}: choosing the second barcode must show record 2 and hide record 1 (record 2 ${second ? 'shown' : 'hidden'}, record 1 ${first ? 'shown' : 'hidden'})`,
+          );
+        }
+      }
+
+      // The bar takes the ground and ink of the chapter beneath it.
+      const barClass = await page.evaluate(async () => {
+        const chapter = document.querySelector('#editions');
+        const bar = document.querySelector('[data-bar]');
+        if (!chapter || !bar) return null;
+        scrollTo({
+          top: chapter.getBoundingClientRect().top + scrollY,
+          behavior: 'instant',
+        });
+        await new Promise((resolve) =>
+          requestAnimationFrame(() => requestAnimationFrame(resolve)),
+        );
+        return bar.className;
+      });
+      if (barClass === null) {
+        fail(`${route}: no [data-bar] or no #editions to test the bar against`);
+      } else if (!barClass.split(/\s+/).includes('on-blue')) {
+        fail(
+          `${route}: with #editions under the bar, [data-bar] is "${barClass}" and lacks on-blue`,
+        );
+      }
+
+      // Loops: on screen they play, off screen they pause, and each has a
+      // working pause control (WCAG 2.2.2).
+      loopCount = (await loopState(page)).length;
+      if (!loopCount) note(`${route}: no loops on the page`);
+      for (let index = 0; index < loopCount; index += 1) {
+        const slot = await page.evaluate((i) => {
+          const video = document.querySelectorAll('video[data-loop]')[i];
+          video.scrollIntoView({ block: 'center', behavior: 'instant' });
+          return video.closest('[data-media]')?.dataset.media ?? `#${i}`;
+        }, index);
+        const waitFor = (playing, timeout) =>
+          page
+            .waitForFunction(
+              ([i, wanted]) => {
+                const video = document.querySelectorAll('video[data-loop]')[i];
+                const isPlaying =
+                  !video.paused &&
+                  video.readyState > 2 &&
+                  video.currentTime > 0;
+                return wanted ? isPlaying : video.paused;
+              },
+              [index, playing],
+              { timeout },
+            )
+            .then(
+              () => true,
+              () => false,
+            );
+        if (!(await waitFor(true, 10_000))) {
+          fail(`${route}: loop "${slot}" did not start playing on screen`);
+          continue;
+        }
+        const toggle = page
+          .locator('video[data-loop]')
+          .nth(index)
+          .locator('xpath=..')
+          .locator('[data-loop-toggle]');
+        if (!(await toggle.count()) || !(await toggle.isVisible())) {
+          fail(`${route}: loop "${slot}" plays without a visible pause button`);
+        } else {
+          // A press that cannot land leaves the state as it was, which the
+          // wait that follows reports.
+          const press = () => toggle.click({ timeout: 5000 }).catch(() => {});
+          await press();
+          if (!(await waitFor(false, 3000))) {
+            fail(`${route}: the pause button did not pause loop "${slot}"`);
+          }
+          await press();
+          if (!(await waitFor(true, 5000))) {
+            fail(`${route}: the pause button did not resume loop "${slot}"`);
           }
         }
-        return results;
-      });
-      for (const { selector, tx, width, parent } of rest) {
-        if (tx < parent)
-          fail(
-            `${route}: ${selector} pass band rests inside its parent (tx ${tx}, width ${width}, parent ${parent})`,
-          );
+        const stillOnScreen = await page.evaluate((i) => {
+          const video = document.querySelectorAll('video[data-loop]')[i];
+          const top = video.getBoundingClientRect().top + scrollY;
+          scrollTo({
+            top:
+              top > innerHeight * 1.5
+                ? 0
+                : document.documentElement.scrollHeight,
+            behavior: 'instant',
+          });
+          const rect = video.getBoundingClientRect();
+          return rect.bottom > 0 && rect.top < innerHeight;
+        }, index);
+        if (stillOnScreen) {
+          note(`${route}: loop "${slot}" cannot be scrolled off screen`);
+        } else if (!(await waitFor(false, 3000))) {
+          fail(`${route}: loop "${slot}" kept playing off screen`);
+        }
+      }
+      if (loopCount) {
+        note(
+          `${route}: ${loopCount} loop(s) tried on screen, at the pause button and off screen`,
+        );
       }
       await context.close();
     }
 
-    // 3. Accessibility: axe at desktop and phone widths, after the entrance.
+    /**
+     * 3. Accessibility: axe at desktop and phone widths. 2.0 waited 2.8 s
+     * for the hero entrance; 3.0 scrolls the page through first, so every
+     * part has risen and is tested at its resting colours.
+     */
     for (const width of [1440, 390]) {
       const context = await browser.newContext({
         viewport: { width, height: width === 390 ? 844 : 900 },
       });
       const page = await context.newPage();
+      const network = track(page, route);
       await page.goto(base + route, { waitUntil: 'networkidle' });
-      await page.waitForTimeout(2800);
+      await scrollThrough(page, network);
+      await page.evaluate(() => scrollTo({ top: 0, behavior: 'instant' }));
+      await settle(page);
       const results = await new AxeBuilder({ page })
         .withTags([
           'wcag2a',
@@ -267,13 +551,15 @@ try {
       await context.close();
     }
 
-    // 4. Reduced motion: nothing running after 100 ms; the pass rests.
+    // 4. Reduced motion: nothing running after 100 ms, and no loop is
+    //    fetched or started however far the page is scrolled.
     {
       const context = await browser.newContext({
         viewport: { width: 1440, height: 900 },
         reducedMotion: 'reduce',
       });
       const page = await context.newPage();
+      const network = track(page, route);
       await page.goto(base + route, { waitUntil: 'networkidle' });
       await page.waitForTimeout(100);
       const running = await page.evaluate(
@@ -284,16 +570,112 @@ try {
       );
       if (running)
         fail(`${route}: ${running} animation(s) running under reduced motion`);
+      if (loopCount) {
+        await expectStillLoops(page, network, route, 'under reduced motion');
+      }
+      await context.close();
+    }
+
+    // 5. Save-Data: the same promise for a visitor who asked for less data.
+    if (loopCount) {
+      const context = await browser.newContext({
+        viewport: { width: 1440, height: 900 },
+      });
+      await context.addInitScript(() => {
+        Object.defineProperty(Navigator.prototype, 'connection', {
+          configurable: true,
+          get: () => ({ saveData: true, addEventListener() {} }),
+        });
+      });
+      const page = await context.newPage();
+      const network = track(page, route);
+      await page.goto(base + route, { waitUntil: 'networkidle' });
+      if (
+        !(await page.evaluate(() => navigator.connection?.saveData === true))
+      ) {
+        fail(`${route}: could not stub navigator.connection.saveData`);
+      }
+      await expectStillLoops(page, network, route, 'with Save-Data on');
       await context.close();
     }
   }
+
+  // 6. No sideways scroll, at four widths in three scripts' worth of copy.
+  for (const [width, height] of overflowViewports) {
+    const context = await browser.newContext({ viewport: { width, height } });
+    for (const route of overflowRoutes) {
+      const page = await context.newPage();
+      track(page, route);
+      await page.goto(base + route, { waitUntil: 'load' });
+      const overflow = await page.evaluate(() => {
+        const root = document.documentElement;
+        if (root.scrollWidth <= innerWidth) return null;
+        // Name the parts that widen the page: those that reach past the
+        // right edge, are actually rendered, and are not cut off by an
+        // ancestor that clips or scrolls its own overflow.
+        const widens = (element) => {
+          const rect = element.getBoundingClientRect();
+          if (rect.right <= innerWidth + 0.5 || !rect.width) return false;
+          if (
+            element.closest('details:not([open])') &&
+            !element.closest('summary')
+          ) {
+            return false;
+          }
+          for (
+            let parent = element.parentElement;
+            parent && parent !== document.body;
+            parent = parent.parentElement
+          ) {
+            if (getComputedStyle(parent).overflowX !== 'visible') return false;
+          }
+          return true;
+        };
+        const wide = [...document.querySelectorAll('body *')].filter(widens);
+        const culprits = wide
+          // Innermost first: a parent is only wide because of its child.
+          .filter(
+            (element) =>
+              !wide.some(
+                (other) => other !== element && element.contains(other),
+              ),
+          )
+          .sort(
+            (a, b) =>
+              b.getBoundingClientRect().right - a.getBoundingClientRect().right,
+          )
+          .map(
+            (element) =>
+              `${element.tagName.toLowerCase()}${
+                typeof element.className === 'string' && element.className
+                  ? `.${element.className.trim().split(/\s+/).join('.')}`
+                  : ''
+              } (to ${Math.round(element.getBoundingClientRect().right)} px)`,
+          );
+        return {
+          scrollWidth: root.scrollWidth,
+          culprits: [...new Set(culprits)].slice(0, 6),
+        };
+      });
+      if (overflow) {
+        fail(
+          `${route} @${width}: the page scrolls sideways (scrollWidth ${overflow.scrollWidth} > ${width}); reaching past the edge: ${overflow.culprits.join(', ') || 'unknown'}`,
+        );
+      }
+      await page.close();
+    }
+    await context.close();
+  }
 } finally {
   await browser.close();
-  server.kill();
+  stopServer();
 }
 
-if (failures.length) {
+for (const message of notes) console.log(`· ${message}`);
+if (failures.size) {
   for (const failure of failures) console.error(`✗ ${failure}`);
   process.exit(1);
 }
-console.log(`Experience checks passed for ${routes.length} routes`);
+console.log(
+  `Experience checks passed for ${routes.length} routes, and no sideways scroll on ${overflowRoutes.length} routes at ${overflowViewports.length} widths`,
+);

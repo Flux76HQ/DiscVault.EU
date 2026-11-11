@@ -60,7 +60,11 @@ if (loops.length && !reduceMotion.matches && !connection?.saveData) {
     },
     { threshold: 0.25 },
   );
-  loops.forEach((video) => observer.observe(video));
+  // Nothing is asked for before the page has finished loading, so a loop on
+  // the first screen never competes with the first paint.
+  const watch = () => loops.forEach((video) => observer.observe(video));
+  if (document.readyState === 'complete') watch();
+  else window.addEventListener('load', watch, { once: true });
 
   document.addEventListener('visibilitychange', () => {
     for (const video of loops) {

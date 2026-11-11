@@ -130,6 +130,11 @@ input {
 :lang(zh) .title {
   letter-spacing: -0.01em;
   line-height: 1.08;
+}
+/* Korean breaks between words, not inside them; Japanese and Chinese have
+   no word spaces, so they must be free to break anywhere. */
+:lang(ko) .display,
+:lang(ko) .title {
   word-break: keep-all;
 }
 

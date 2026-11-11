@@ -38,16 +38,70 @@ corepack pnpm health         # build plus links and critical-route smoke checks
 corepack pnpm check          # complete release gate
 corepack pnpm format         # apply repository formatting
 corepack pnpm lighthouse     # local Lighthouse budgets (Chromium required)
+corepack pnpm check:experience  # browser checks on a built dist/ (Chromium required)
+corepack pnpm matrix         # review screenshots per chapter in .experience/ (not a gate)
 ```
 
-The complete gate checks formatting, generated Chrome & Blue brand tokens,
-Astro/TypeScript, all 20 locale models, the build, internal links, protected
-legal/Legacy routes, responsive image output and synchronized versions.
+The complete gate (`check`) checks formatting, generated Chrome & Blue brand
+tokens, Astro/TypeScript, all 20 locale models, the build, internal links, the
+critical routes and synchronized versions. What each gate holds the site to:
+
+- **`check:locales`** — every locale has exactly the keys, value types and
+  array lengths of `en.json`, and the ids of `src/content/structure.ts`; no
+  empty string; `seo.title` ≤ 60 and `seo.description` ≤ 170 characters; no URL
+  inside copy (link targets live in `src/config.ts`), except the host
+  `api.discvault.eu` that `privacy.body[1]` must name; `DiscVault` stays
+  untranslated. A locale that still holds the English copy of the listed paths
+  is an error, or only a warning while the marker file
+  `scripts/.locales-pending` exists: delete the marker when the translations
+  land.
+- **`check:links`** — every internal `href`, `src`, `poster`, `srcset` and
+  `imagesrcset` in the build resolves to a file, and so do the icons named in
+  `site.webmanifest` when the build has one.
+- **`check:routes`** — the legal bodies are verbatim, with their hreflang and
+  privacy claims; the Legacy page, `public/styles.css` and `public/favicon.svg`
+  are byte-identical to their SHA-256 pins; the FAQ redirect, robots, sitemap,
+  `CNAME` and 21 hreflang alternates are intact. Every homepage has its fifteen
+  anchors and the call-to-action contract, read from `data-cta` (`get`,
+  `app-store`, `self-hosted`, `android`, `testflight`) and `data-rank`
+  (`primary`, `secondary`, `text`) rather than from CSS classes: the hero and
+  the closing call each carry one primary App Store and one primary self-hosted
+  link, the bar two primary `get` links to `#install`, and a beta (TestFlight,
+  Android) is never primary. All JSON-LD parses, each homepage has a
+  `SoftwareApplication` node, and an `FAQPage` lists as many questions as the
+  page shows. `#privacy` names `api.discvault.eu` in all 20 locales. Every
+  `<video>` is a muted, inline loop with `preload="none"`, dimensions, no
+  `autoplay`, and a WebM and an MP4 source; a video file is at most 1.5 MB and
+  all of them together 16 MB; the fonts total at most 220 KB (1 KB = 1000
+  bytes). No `--dv-` custom property is declared outside the generated token
+  files.
+- **`check:experience`** — in a real browser: nothing in `<main>` is hidden
+  without JavaScript; no request leaves the site; no video is requested before
+  the first scroll; a loop plays only while on screen, can be paused, and is
+  neither fetched nor started under reduced motion or Save-Data; a full scroll
+  shifts the layout by at most 0.05; the scan demo and the bar's chapter colour
+  work; no keyframes animate `background-position`, `filter` or `box-shadow`;
+  axe finds nothing serious at 1440 and 390 px; and `/`, `/de/` and `/ja/` never
+  scroll sideways at 320, 390, 768 and 1440 px.
+- **`lighthouse`** — performance ≥ 80, accessibility ≥ 95, best practices ≥ 90
+  and SEO ≥ 95 for English, Dutch and the legal shell, each judged on the median
+  of three runs.
+
+The 3.0 contract and the reasons it replaced the 2.0 one are recorded in
+`Flux76HQ/App-Guidance` (`projects/discvault/website/chrome-and-blue-web.md`,
+ADR-0021); an assertion that changed for a design reason says so in a comment
+above it.
 
 Install the project browser once with
-`corepack pnpm exec playwright install chromium` before running Lighthouse.
-CI runs performance, accessibility, best-practices and SEO budgets for English,
-Dutch and the legal shell.
+`corepack pnpm exec playwright install chromium` before running Lighthouse,
+the experience checks or the screenshot matrix. To use a Chromium that is
+already on the machine instead, point `DV_CHROMIUM_PATH` at its executable:
+
+```sh
+DV_CHROMIUM_PATH=/path/to/chrome corepack pnpm check:experience
+```
+
+CI sets nothing and runs Playwright's own browser.
 
 To inspect a build manually:
 

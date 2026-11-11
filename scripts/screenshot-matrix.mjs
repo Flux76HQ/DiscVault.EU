@@ -1,8 +1,11 @@
 /**
- * Screenshot matrix for review (build plan prompt 12): every available
- * engine × five viewports × the hero and each reel's top, written to
- * .experience/ (git-ignored). Not a gate; a person looks at the output.
+ * Screenshot matrix for review: every available engine × five viewports ×
+ * the top of each colour chapter, written to .experience/ (git-ignored).
+ * Not a gate; a person looks at the output.
  * Usage: node scripts/screenshot-matrix.mjs [route ...]   (default: /)
+ *
+ * Set DV_CHROMIUM_PATH to use a Chromium other than the one Playwright
+ * installs. Firefox and WebKit are used when Playwright has them.
  */
 import { spawn } from 'node:child_process';
 import { mkdir } from 'node:fs/promises';
@@ -20,15 +23,26 @@ const viewports = [
   [390, 844],
   [320, 568],
 ];
+// 2.0 listed the seven reels of the Pressed Light homepage (hero, shelf,
+// read, edition, vault, formats, credits). Release 3.0 replaces them with
+// colour chapters (App-Guidance, chrome-and-blue-web.md; ADR-0021), so the
+// targets are the chapters, in page order.
 const targets = [
   ['hero', '#discvault26'],
-  ['shelf', '#product'],
-  ['read', '#scan'],
-  ['edition', '#editions'],
-  ['vault', '#privacy'],
-  ['formats', '#install'],
-  ['credits', '#credits'],
+  ['collect', '#product'],
+  ['scan', '#scan'],
+  ['editions', '#editions'],
+  ['self-hosted', '#self-hosted'],
+  ['platforms', '#install'],
+  ['privacy', '#privacy'],
+  ['plans', '#plans'],
+  ['faq', '#faq'],
+  ['cta', '#community'],
+  ['footer', '#footer'],
 ];
+// 2.0 waited 5.6 s for the entrance and the first idle pass. 3.0 has
+// neither; this only lets the fonts and the first images settle.
+const settleMs = 1200;
 
 const server = spawn(
   process.execPath,
@@ -42,16 +56,17 @@ await new Promise((resolve, reject) => {
 
 const outDir = '.experience';
 await mkdir(outDir, { recursive: true });
+const chromiumPath = process.env.DV_CHROMIUM_PATH || undefined;
 const engines = [
-  ['chromium', chromium],
-  ['firefox', firefox],
-  ['webkit', webkit],
+  ['chromium', chromium, chromiumPath ? { executablePath: chromiumPath } : {}],
+  ['firefox', firefox, {}],
+  ['webkit', webkit, {}],
 ];
 try {
-  for (const [name, type] of engines) {
+  for (const [name, type, launchOptions] of engines) {
     let browser;
     try {
-      browser = await type.launch();
+      browser = await type.launch(launchOptions);
     } catch (error) {
       console.log(
         `${name}: not available here (${String(error.message).split('\n')[0]})`,
@@ -69,18 +84,35 @@ try {
         await page.evaluate(() => {
           document.documentElement.style.scrollBehavior = 'auto';
         });
-        // After the entrance and the first idle pass (which rests at 4.8 s).
-        await page.waitForTimeout(5600);
+        await page.waitForTimeout(settleMs);
         for (const [label, selector] of targets) {
           const element = page.locator(selector);
           if (!(await element.count())) continue;
-          await element.scrollIntoViewIfNeeded();
+          // The chapter's top edge at the top of the viewport, so each
+          // shot shows a chapter from its start, bar included.
+          await element.evaluate((node) =>
+            scrollTo(0, node.getBoundingClientRect().top + scrollY),
+          );
+          // Decode what is on screen. A lazy image elsewhere on the page (or
+          // in a record the scan demo is not showing) never loads, so its
+          // decode() would never settle: only the viewport is waited for,
+          // and not for longer than two seconds.
           await page.evaluate(() =>
-            Promise.all(
-              [...document.images].map((image) =>
-                image.decode().catch(() => {}),
+            Promise.race([
+              Promise.all(
+                [...document.images]
+                  .filter((image) => {
+                    const rect = image.getBoundingClientRect();
+                    return (
+                      rect.width > 0 &&
+                      rect.bottom > 0 &&
+                      rect.top < innerHeight
+                    );
+                  })
+                  .map((image) => image.decode().catch(() => {})),
               ),
-            ),
+              new Promise((resolve) => setTimeout(resolve, 2000)),
+            ]),
           );
           await page.waitForTimeout(600);
           await page.screenshot({

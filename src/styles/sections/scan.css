@@ -133,6 +133,7 @@
   gap: 0.75rem;
 }
 .record-title {
+  overflow-wrap: anywhere;
   font-size: 1.5rem;
   font-weight: 700;
   letter-spacing: -0.03em;
@@ -214,8 +215,12 @@
 }
 @media (max-width: 26rem) {
   .record {
-    grid-template-columns: minmax(0, 7rem) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 6rem) minmax(0, 1fr);
+    gap: 0.875rem;
     padding: 1rem;
+  }
+  .record-facts dd {
+    overflow-wrap: anywhere;
   }
   .record-title {
     font-size: 1.25rem;

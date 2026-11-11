@@ -129,6 +129,21 @@
     max-width: 7.5rem;
   }
 }
+@media (max-width: 22.49rem) {
+  .bar {
+    gap: 0.5rem;
+  }
+  .bar-tools {
+    gap: 0.25rem;
+  }
+  .bar .locale-switcher select {
+    max-width: 6rem;
+    padding-inline: 0.25rem;
+  }
+  .menu summary {
+    padding-inline: 0.7rem;
+  }
+}
 
 /* Footer */
 .footer {
