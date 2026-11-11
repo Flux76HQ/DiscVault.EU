@@ -30,6 +30,8 @@ const PASS = process.env.DV_OWNER_PASSWORD;
 if (!PASS) throw new Error('DV_OWNER_PASSWORD is not set: run this through run.sh');
 const OUT = process.env.DV_SHOTS_DIR || path.join(HERE, 'shots');
 const SIDEBAR = (process.env.DV_SIDEBAR || 'expanded').toLowerCase();
+// DV_THEME=light shoots the light interface; anything else is dark.
+const THEME = process.env.DV_THEME === 'light' ? 'light' : 'dark';
 const manifest = JSON.parse(fs.readFileSync(process.env.DV_MANIFEST || path.join(HERE, 'manifest.json'), 'utf8'));
 const only = process.argv.slice(2).map((s) => s.toLowerCase());
 fs.mkdirSync(OUT, { recursive: true });
@@ -44,11 +46,11 @@ const SCAN = process.env.DV_SCAN_BARCODE
 const BOXSET = process.env.DV_BOXSET || (owned.find((f) => f.box_set && f.backdrop) || owned.find((f) => f.box_set) || {}).box_set?.name;
 
 // Runs before every page script. Nothing here changes what the app stores on the server.
-const initScript = ({ sidebar }) => {
+const initScript = ({ sidebar, theme }) => {
   try {
     const set = (k, v) => localStorage.setItem(k, v);
     set('dv_next_support_prompt_seen', '1');   // no "Enjoying DiscVault?" dialog
-    set('dv_next_theme', 'dark');
+    set('dv_next_theme', theme);
     set('dv_next_accent', 'bluray');
     set('dv_next_locale', 'en');
     set('dv_next_locale_explicit', '1');
@@ -112,19 +114,19 @@ async function main() {
 
   async function newContext(viewport, deviceScaleFactor, mobile) {
     const context = await browser.newContext({
-      viewport, deviceScaleFactor, locale: 'en-US', colorScheme: 'dark', timezoneId: 'Europe/Amsterdam',
+      viewport, deviceScaleFactor, locale: 'en-US', colorScheme: THEME, timezoneId: 'Europe/Amsterdam',
       ...(mobile ? { isMobile: true, hasTouch: true,
         userAgent: 'Mozilla/5.0 (iPhone; CPU iPhone OS 17_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5 Mobile/15E148 Safari/604.1' } : {}),
       extraHTTPHeaders: { 'Accept-Language': 'en-US,en;q=0.9' },
     });
-    await context.addInitScript(initScript, { sidebar: SIDEBAR });
+    await context.addInitScript(initScript, { sidebar: SIDEBAR, theme: THEME });
     const login = await context.request.post(`${BASE}/api/next/auth/legacy/login`, {
       data: { username: USER, password: PASS }, headers: { Origin: BASE },
     });
     const body = await login.json().catch(() => ({}));
     if (!login.ok() || body.stage !== 'complete') throw new Error(`login failed: ${login.status()} ${JSON.stringify(body).slice(0, 200)}`);
     // belt and braces: the stored preferences decide theme/accent/locale on first paint
-    await context.request.patch(`${BASE}/api/next/preferences`, { data: { theme: 'dark', accent: 'bluray' }, headers: { Origin: BASE } });
+    await context.request.patch(`${BASE}/api/next/preferences`, { data: { theme: THEME, accent: 'bluray' }, headers: { Origin: BASE } });
     await context.request.post(`${BASE}/api/next/preferences/locale`, { data: { locale: 'en' }, headers: { Origin: BASE } });
     return context;
   }

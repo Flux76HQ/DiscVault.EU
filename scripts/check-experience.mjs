@@ -14,6 +14,9 @@
  *  - axe reports no serious or critical violation at 1440 and 390 px, in
  *    the dark and in the light scheme;
  *  - the theme choice sets the scheme, survives a reload and can be undone;
+ *  - a slot with a light picture shows the one that matches the scheme, in
+ *    the system's scheme and in a chosen one, and the picture and loop of
+ *    the other scheme are never downloaded;
  * and, on three routes at four widths, that the page never scrolls sideways.
  *
  * Release 3.0 replaced the Pressed Light homepage with colour chapters on
@@ -197,6 +200,65 @@ async function scrollThrough(page, network) {
   await settle(page);
 }
 
+/**
+ * The slots that hold a picture per scheme (src/components/media/Media.astro).
+ * `requested` is every path the page asked for. Reports the files of a part
+ * that is not rendered and was downloaded all the same, and for each
+ * picture that switches by media query (the first screen) which scheme it
+ * shows and whether candidates of the other scheme were fetched.
+ */
+const schemeMedia = (page, requested) =>
+  page.evaluate((paths) => {
+    const fetched = new Set(paths);
+    const candidates = (node) =>
+      [
+        node.getAttribute('src'),
+        ...(node.getAttribute('srcset') ?? '')
+          .split(',')
+          .map((candidate) => candidate.trim().split(/\s+/)[0]),
+      ]
+        .filter(Boolean)
+        .map((url) => new URL(url, location.href).pathname);
+    const rendered = (node) => node.getClientRects().length > 0;
+    const wasted = [];
+    for (const part of document.querySelectorAll(
+      '[data-media] picture, [data-media] video',
+    )) {
+      if (rendered(part)) continue;
+      for (const node of part.querySelectorAll('source, img')) {
+        wasted.push(...candidates(node).filter((url) => fetched.has(url)));
+      }
+    }
+    const switching = [
+      ...new Set(
+        [...document.querySelectorAll('source[data-scheme-source]')].map(
+          (source) => source.closest('picture'),
+        ),
+      ),
+    ].map((picture) => {
+      const light = [
+        ...picture.querySelectorAll('source[data-scheme-source]'),
+      ].flatMap(candidates);
+      const dark = [
+        ...picture.querySelectorAll('source:not([data-scheme-source]), img'),
+      ].flatMap(candidates);
+      const current = new URL(picture.querySelector('img').currentSrc).pathname;
+      return {
+        slot: picture.closest('[data-media]')?.dataset.media ?? '?',
+        shows: light.includes(current) ? 'light' : 'dark',
+        lightFetched: light.filter((url) => fetched.has(url)),
+        darkFetched: dark.filter((url) => fetched.has(url)),
+      };
+    });
+    return {
+      wasted: [...new Set(wasted)],
+      switching,
+      perScheme: document.querySelectorAll(
+        '[data-media] .only-light, [data-media] source[data-scheme-source]',
+      ).length,
+    };
+  }, requested);
+
 const loopState = (page) =>
   page.evaluate(() =>
     [...document.querySelectorAll('video[data-loop]')].map((video) => ({
@@ -302,11 +364,15 @@ try {
      * None of those parts exist in 3.0. What moves now is the media (muted
      * loops under ADR-0021 decision 5), the scan demo and the bar's colour,
      * so those are what this block holds to their rules.
+     *
+     * It runs once in each scheme: a slot may hold a picture and a loop per
+     * scheme, and each loop has to be seen playing, pausing and stopping.
      */
-    {
+    for (const colorScheme of ['dark', 'light']) {
       const context = await browser.newContext({
         viewport: { width: 1440, height: 900 },
         hasTouch: false,
+        colorScheme,
       });
       await context.addInitScript(() => {
         window.__layoutShift = { supported: false, total: 0, worst: null };
@@ -338,6 +404,11 @@ try {
       });
       const page = await context.newPage();
       const network = track(page, route);
+      const requested = new Set();
+      page.on('request', (request) =>
+        requested.add(new URL(request.url()).pathname),
+      );
+      const where = `${route} (${colorScheme})`;
       await page.goto(base + route, { waitUntil: 'networkidle' });
       await network.idle();
 
@@ -384,6 +455,33 @@ try {
       }
 
       await scrollThrough(page, network);
+
+      // The whole page has now been on screen. Each slot showed the picture
+      // of this scheme, and nothing of the other scheme was downloaded.
+      const media = await schemeMedia(page, [...requested]);
+      if (route === '/' && !media.perScheme) {
+        fail(`${where}: no media slot holds a picture per scheme`);
+      }
+      if (media.wasted.length) {
+        fail(
+          `${where}: downloaded media of the other scheme: ${media.wasted.join(', ')}`,
+        );
+      }
+      for (const picture of media.switching) {
+        const other = colorScheme === 'light' ? 'dark' : 'light';
+        if (picture.shows !== colorScheme) {
+          fail(
+            `${where}: the "${picture.slot}" picture shows the ${picture.shows} interface`,
+          );
+        }
+        const stray = picture[`${other}Fetched`];
+        if (stray.length) {
+          fail(
+            `${where}: the "${picture.slot}" picture also downloaded its ${other} files: ${stray.join(', ')}`,
+          );
+        }
+      }
+
       const shift = await page.evaluate(() => window.__layoutShift);
       if (!shift.supported) {
         fail(`${route}: this browser cannot report layout shifts`);
@@ -438,12 +536,25 @@ try {
       }
 
       // Loops: on screen they play, off screen they pause, and each has a
-      // working pause control (WCAG 2.2.2).
-      loopCount = (await loopState(page)).length;
-      if (!loopCount) note(`${route}: no loops on the page`);
+      // working pause control (WCAG 2.2.2). Only the loops of this scheme
+      // are rendered; the others cannot play and are not counted.
+      loopCount = await page.evaluate(() => {
+        const loops = [...document.querySelectorAll('video[data-loop]')];
+        for (const video of loops) {
+          video.toggleAttribute(
+            'data-rendered',
+            video.getClientRects().length > 0,
+          );
+        }
+        return loops.filter((video) => video.hasAttribute('data-rendered'))
+          .length;
+      });
+      if (!loopCount) note(`${where}: no loops on the page`);
       for (let index = 0; index < loopCount; index += 1) {
         const slot = await page.evaluate((i) => {
-          const video = document.querySelectorAll('video[data-loop]')[i];
+          const video = document.querySelectorAll(
+            'video[data-loop][data-rendered]',
+          )[i];
           video.scrollIntoView({ block: 'center', behavior: 'instant' });
           return video.closest('[data-media]')?.dataset.media ?? `#${i}`;
         }, index);
@@ -451,7 +562,9 @@ try {
           page
             .waitForFunction(
               ([i, wanted]) => {
-                const video = document.querySelectorAll('video[data-loop]')[i];
+                const video = document.querySelectorAll(
+                  'video[data-loop][data-rendered]',
+                )[i];
                 const isPlaying =
                   !video.paused &&
                   video.readyState > 2 &&
@@ -466,31 +579,33 @@ try {
               () => false,
             );
         if (!(await waitFor(true, 10_000))) {
-          fail(`${route}: loop "${slot}" did not start playing on screen`);
+          fail(`${where}: loop "${slot}" did not start playing on screen`);
           continue;
         }
         const toggle = page
-          .locator('video[data-loop]')
+          .locator('video[data-loop][data-rendered]')
           .nth(index)
           .locator('xpath=..')
           .locator('[data-loop-toggle]');
         if (!(await toggle.count()) || !(await toggle.isVisible())) {
-          fail(`${route}: loop "${slot}" plays without a visible pause button`);
+          fail(`${where}: loop "${slot}" plays without a visible pause button`);
         } else {
           // A press that cannot land leaves the state as it was, which the
           // wait that follows reports.
           const press = () => toggle.click({ timeout: 5000 }).catch(() => {});
           await press();
           if (!(await waitFor(false, 3000))) {
-            fail(`${route}: the pause button did not pause loop "${slot}"`);
+            fail(`${where}: the pause button did not pause loop "${slot}"`);
           }
           await press();
           if (!(await waitFor(true, 5000))) {
-            fail(`${route}: the pause button did not resume loop "${slot}"`);
+            fail(`${where}: the pause button did not resume loop "${slot}"`);
           }
         }
         const stillOnScreen = await page.evaluate((i) => {
-          const video = document.querySelectorAll('video[data-loop]')[i];
+          const video = document.querySelectorAll(
+            'video[data-loop][data-rendered]',
+          )[i];
           const top = video.getBoundingClientRect().top + scrollY;
           scrollTo({
             top:
@@ -503,14 +618,14 @@ try {
           return rect.bottom > 0 && rect.top < innerHeight;
         }, index);
         if (stillOnScreen) {
-          note(`${route}: loop "${slot}" cannot be scrolled off screen`);
+          note(`${where}: loop "${slot}" cannot be scrolled off screen`);
         } else if (!(await waitFor(false, 3000))) {
-          fail(`${route}: loop "${slot}" kept playing off screen`);
+          fail(`${where}: loop "${slot}" kept playing off screen`);
         }
       }
       if (loopCount) {
         note(
-          `${route}: ${loopCount} loop(s) tried on screen, at the pause button and off screen`,
+          `${where}: ${loopCount} loop(s) tried on screen, at the pause button and off screen`,
         );
       }
       await context.close();
@@ -581,16 +696,47 @@ try {
       if (!(await select.isVisible())) {
         fail(`${route}: the theme switcher is not shown`);
       } else {
+        // The picture on the first screen follows the choice, not the system.
+        const firstPicture = (scheme) =>
+          page
+            .waitForFunction(
+              (wanted) => {
+                const source = document.querySelector(
+                  'source[data-scheme-source]',
+                );
+                if (!source) return true;
+                const current = source
+                  .closest('picture')
+                  .querySelector('img').currentSrc;
+                return /still-light/.test(current) === (wanted === 'light');
+              },
+              scheme,
+              { timeout: 5000 },
+            )
+            .then(
+              () => true,
+              () => false,
+            );
         await select.selectOption('light');
         const light = await ground();
         if (light === dark) {
           fail(`${route}: choosing the light theme did not change the ground`);
+        }
+        if (!(await firstPicture('light'))) {
+          fail(
+            `${route}: with the light theme chosen on a dark system, the first picture stayed dark`,
+          );
         }
         await page.reload({ waitUntil: 'domcontentloaded' });
         if ((await ground()) !== light) {
           fail(`${route}: the theme choice did not survive a reload`);
         }
         await page.waitForLoadState('networkidle');
+        if (!(await firstPicture('light'))) {
+          fail(
+            `${route}: after a reload with the light theme chosen, the first picture is dark`,
+          );
+        }
         await page
           .locator('[data-theme-switcher] select')
           .first()
@@ -598,6 +744,11 @@ try {
         if ((await ground()) !== dark) {
           fail(
             `${route}: choosing "system" did not return to the system scheme`,
+          );
+        }
+        if (!(await firstPicture('dark'))) {
+          fail(
+            `${route}: back on the system scheme, the first picture stayed light`,
           );
         }
       }

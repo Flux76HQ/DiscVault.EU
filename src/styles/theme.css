@@ -147,20 +147,23 @@
   --action-ink: var(--dv-fmt-4k-on);
 }
 
-/* Two pictures of one thing, one per scheme. */
-.only-light {
-  display: none;
-}
-@media (prefers-color-scheme: light) {
-  :root:not([data-theme='dark']) .only-light {
-    display: revert;
-  }
-  :root:not([data-theme='dark']) .only-dark {
+/*
+ * Two pictures of one thing, one per scheme. Each rule only hides: the one
+ * that shows keeps the display it has from its own styles. (Showing with
+ * `display: revert` would undo those, and turn a block picture inline.)
+ */
+@media not (prefers-color-scheme: light) {
+  :root:not([data-theme='light']) .only-light {
     display: none;
   }
 }
-:root[data-theme='light'] .only-light {
-  display: revert;
+:root[data-theme='dark'] .only-light {
+  display: none;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme='dark']) .only-dark {
+    display: none;
+  }
 }
 :root[data-theme='light'] .only-dark {
   display: none;

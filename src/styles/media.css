@@ -10,6 +10,12 @@
   width: 100%;
   height: 100%;
 }
+/* A loop and its pause control, laid over the still. One per scheme when
+   the slot has a light picture; the other is not rendered at all. */
+.media-loop {
+  position: absolute;
+  inset: 0;
+}
 .media video {
   position: absolute;
   inset: 0;

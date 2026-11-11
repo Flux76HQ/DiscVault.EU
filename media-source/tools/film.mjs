@@ -5,11 +5,13 @@ const { chromium } = createRequire(import.meta.url)('playwright');
 import fs from 'node:fs';
 const BASE = 'http://127.0.0.1:5055';
 const [name, OUT] = process.argv.slice(2);
+// DV_THEME=light films the light interface; anything else is dark.
+const THEME = process.env.DV_THEME === 'light' ? 'light' : 'dark';
 fs.mkdirSync(OUT, { recursive: true });
-const initScript = () => {
+const initScript = (theme) => {
   try {
     const set = (k, v) => localStorage.setItem(k, v);
-    set('dv_next_support_prompt_seen', '1'); set('dv_next_theme', 'dark'); set('dv_next_accent', 'bluray');
+    set('dv_next_support_prompt_seen', '1'); set('dv_next_theme', theme); set('dv_next_accent', 'bluray');
     set('dv_next_locale', 'en'); set('dv_next_locale_explicit', '1'); set('dv_lang', 'en');
     set('dv_next_debug_mode', 'false'); set('dv_next_sidebar_collapsed', '0');
     const getItem = Storage.prototype.getItem;
@@ -23,14 +25,14 @@ const browser = await chromium.launch();
 const mobile = name.startsWith('m-');
 const context = await browser.newContext({
   viewport: mobile ? { width: 390, height: 844 } : { width: 1600, height: 1000 }, deviceScaleFactor: mobile ? 2 : 1,
-  locale: 'en-US', colorScheme: 'dark', timezoneId: 'Europe/Amsterdam',
+  locale: 'en-US', colorScheme: THEME, timezoneId: 'Europe/Amsterdam',
   ...(mobile ? { isMobile: true, hasTouch: true } : {}),
 });
-await context.addInitScript(initScript);
+await context.addInitScript(initScript, THEME);
 const login = await context.request.post(`${BASE}/api/next/auth/legacy/login`, { data: { username: 'alex', password: process.env.DV_OWNER_PASSWORD }, headers: { Origin: BASE } });
 if (!login.ok()) throw new Error('login failed ' + login.status());
 const pref = (data) => context.request.patch(`${BASE}/api/next/preferences`, { data, headers: { Origin: BASE } });
-await pref({ theme: 'dark', accent: 'bluray', show_featured_hero: false });
+await pref({ theme: THEME, accent: 'bluray', show_featured_hero: false });
 const page = await context.newPage();
 await page.goto(BASE + '/', { waitUntil: 'networkidle' });
 await page.addStyleTag({ content: CSS });
