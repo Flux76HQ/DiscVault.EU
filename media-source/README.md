@@ -16,6 +16,7 @@ library, loops) and ADR-0021.
 | `library/` | The demo shelf: `manifest.json` (54 owned films, four wishlist entries, three box sets, one Steelbook, locations, tags, users) with its covers and backdrops |
 | `screenshots/` | Screenshots of the self-hosted edition showing that shelf (dark theme, Blu-ray accent, English) |
 | `screenshots-light/` | The nine of those that the site uses, taken again in the light theme |
+| `screenshots-iphone/` | Screenshots of the iPhone app showing the same shelf, taken on a device with the app's demo library on (1320 × 2868) |
 | `tools/` | Scripts that run the self-hosted edition locally, seed it from the manifest and take the screenshots and loop frames |
 | `promo/` | The 21-second promo film as an HTML timeline, rendered frame by frame |
 | `appstore/` | The App Store screenshot template (1320 × 2868, one colour field per panel) |
@@ -112,6 +113,39 @@ Both files go into `src/assets/media/hero/`. Each must stay under 1.5 MB.
 
 The light loop is the same recipe with `DV_THEME=light node film.mjs hero
 frames/hero-light`, encoded to `loop-light.mp4` and `loop-light.webm`.
+
+## The iPhone block
+
+The iPhone app has a demo library for this (`Flux76HQ/DiscVaultApp`, Debug
+menu → Demo Library; App-Guidance,
+`projects/discvault/specs/demo-library.md`). It shows the same invented shelf,
+so a screenshot of the app can go on the site. The screenshots in
+`screenshots-iphone/` were taken on a device that way.
+
+The `collect-iphone` slot is the library screen, in the dark and in the light
+appearance, cropped below the status bar so the clock and the battery are not
+in the picture:
+
+```sh
+ffmpeg -i 01-library-dark.png  -vf "crop=1320:1760:0:150,scale=960:1280:flags=lanczos" still.webp
+ffmpeg -i 01-library-light.png -vf "crop=1320:1760:0:150,scale=960:1280:flags=lanczos" still-light.webp
+```
+
+Its loop is a screen recording of the library being scrolled, with the same
+crop, played forward and then backward so that it ends where it starts:
+
+```sh
+F="[0:v]crop=1320:1760:0:150,scale=660:880:flags=lanczos:in_range=pc:out_range=tv,setpts=PTS/1.6,fps=24,format=yuv420p,split[a][b];[b]reverse[r];[a][r]concat=n=2:v=1:a=0[v]"
+ffmpeg -ss 0 -t 8 -i recording.mp4 -filter_complex "$F" -map "[v]" -an \
+  -c:v libx264 -preset slow -crf 30 -pix_fmt yuv420p -movflags +faststart loop.mp4
+ffmpeg -ss 0 -t 8 -i recording.mp4 -filter_complex "$F" -map "[v]" -an \
+  -c:v libvpx-vp9 -b:v 0 -crf 43 -row-mt 1 loop.webm
+```
+
+The recording itself is not in the repository: a screen recording ends in
+whatever the phone showed when it was stopped. Keep a screenshot that shows a
+notification, a name or a network out of this folder for the same reason. The
+slot has a dark loop only; the light page shows the light still.
 
 ## The disc
 
