@@ -11,6 +11,13 @@ export const featureIds = [
 ] as const;
 export type FeatureId = (typeof featureIds)[number];
 
+/**
+ * Blocks that are only worth showing with their picture. They stay out of
+ * the page until a still is dropped into their media slot
+ * (`src/assets/media/collect-<id>/`); the copy is kept in every locale.
+ */
+export const featuresNeedingPicture: readonly FeatureId[] = ['iphone'];
+
 export const editionIds = [
   'uhd',
   'bluray',

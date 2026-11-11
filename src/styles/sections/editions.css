@@ -54,6 +54,15 @@
   }
   .editions-name {
     font-size: clamp(2.5rem, 14vw, 6rem);
+    /* A name wider than the screen wraps rather than pushing the page. */
+    overflow-wrap: anywhere;
+    white-space: normal;
+  }
+  /* Full-width glyphs: seven of them must fit one phone line. */
+  :lang(ja) .editions-name,
+  :lang(ko) .editions-name,
+  :lang(zh) .editions-name {
+    font-size: clamp(2rem, 11vw, 6rem);
   }
   .editions-detail {
     font-size: var(--step-small);

@@ -196,7 +196,7 @@ whatever is in it.
 | ----------------------------------------------------------------------- | ---------------------------------------------- | ---------------------- |
 | `hero`                                                                  | the library as a wall of covers (still + loop) | first screen           |
 | `collect-library`, `collect-detail`, `collect-lists`, `collect-insight` | portrait crops of the interface                | "Built for collectors" |
-| `collect-iphone`                                                        | an iPhone screenshot (empty until supplied)    | "Built for collectors" |
+| `collect-iphone`                                                        | an iPhone screenshot; the block waits for it   | "Built for collectors" |
 | `self-hosted-library`, `-detail`, `-boxset`, `-lists`                   | the self-hosted edition in a browser           | "On a server you run"  |
 | `disc`                                                                  | the DiscVault disc (still + loop)              | closing row            |
 

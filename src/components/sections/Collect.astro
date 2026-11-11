@@ -1,7 +1,8 @@
 ---
 import '../../styles/sections/collect.css';
 /** Chapter: what DiscVault keeps. A pinned heading; the capabilities pass. */
-import { featureIds } from '../../content/structure';
+import { featureIds, featuresNeedingPicture } from '../../content/structure';
+import { mediaSlot } from '../../media/registry';
 import type { MarketingContent } from '../../content/types';
 import Media from '../media/Media.astro';
 
@@ -10,6 +11,10 @@ interface Props {
 }
 
 const { collect, a11y } = Astro.props.content;
+const shown = featureIds.filter(
+  (id) =>
+    !featuresNeedingPicture.includes(id) || mediaSlot(`collect-${id}`).still,
+);
 ---
 
 <section
@@ -21,7 +26,7 @@ const { collect, a11y } = Astro.props.content;
     <h2 class="title collect-title" data-rise>{collect.title}</h2>
     <div class="collect-blocks">
       {
-        featureIds.map((id, index) => {
+        shown.map((id, index) => {
           const block = collect.blocks[id];
           return (
             <article
