@@ -282,6 +282,8 @@ const anchors = [
   'faq',
   'community',
   'footer',
+  // The id of the self-hosted chapter's heading: a deep link 2.0 promised.
+  'showcase-title',
 ];
 const ctaKinds = ['get', 'app-store', 'self-hosted', 'android', 'testflight'];
 const ctaRanks = ['primary', 'secondary', 'text'];
@@ -456,13 +458,15 @@ for (const [file, locale, canonical, homePath] of marketingPages) {
   /**
    * Structured data. 2.0 asserted only that the string
    * `application/ld+json` occurred. 3.0 parses every block, requires the
-   * product node, and ties an FAQPage (not required yet: the questions
-   * chapter is new in 3.0 and its structured data follows later) to the
-   * questions actually on the page, so the two cannot drift apart.
+   * product node and an FAQPage, and ties the FAQPage to the questions
+   * actually on the page, so the two cannot drift apart.
    */
   const nodes = structuredData(file, document);
   if (!nodes.some((node) => hasType(node, 'SoftwareApplication'))) {
     fail(`${file} has no SoftwareApplication node in its JSON-LD`);
+  }
+  if (!nodes.some((node) => hasType(node, 'FAQPage'))) {
+    fail(`${file} has no FAQPage node in its JSON-LD`);
   }
   const faqItems = findAll(
     document.root,

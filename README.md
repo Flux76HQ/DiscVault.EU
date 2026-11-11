@@ -125,8 +125,8 @@ curl --fail http://localhost:4321/legacy/
   component per homepage chapter in `sections/`, and the shared `media/` and
   `ui/` parts.
 - `src/styles/` — `tokens*.css` are generated brand tokens; `theme.css` holds
-  the site's own tokens (chapter fields, type steps, spacing), which only
-  alias brand tokens; `base.css`, `shell.css`, `legal.css` and one file per
+  the site's own tokens (type steps, spacing, radii) and the `.on-*` classes
+  that give each chapter its ground and inks from brand tokens; `base.css`, `shell.css`, `legal.css` and one file per
   chapter in `sections/`.
 - `src/design/tokens.json` — Chrome & Blue v3.1 source imported from
   `Flux76HQ/App-Guidance`; `corepack pnpm brand:build` generates
