@@ -276,14 +276,15 @@
     "titleStart": "La base es",
     "titleFree": "gratis",
     "titleEnd": ".",
-    "lead": "Escanear, catalogar, buscar, hacer copias de seguridad y restaurarlas no cuesta nada. Autoalojar DiscVault es gratis.",
+    "lead": "Escanear, catalogar, buscar, hacer copias de seguridad y restaurarlas no cuesta nada. La edición autoalojada es gratis y lo seguirá siendo.",
     "points": [
-      "Escanear y añadir discos",
+      "Escanear y añadir, sin límite",
       "Copia de seguridad y restauración completas",
       "Lista para ver, historial y lista de deseos",
       "Sincronización con iCloud entre tus dispositivos",
       "Sacar tus datos, siempre"
     ],
+    "pro": "Más adelante llegará una mejora Pro para las apps, como compra única. No es una suscripción. El precio aún no está fijado.",
     "support": "DiscVault lo hace un solo desarrollador. Si se gana un hueco en tu estantería, un café es bienvenido. Una donación no desbloquea nada; es solo una forma de dar las gracias."
   },
   "faq": {
@@ -324,6 +325,13 @@
         "question": "¿Puedo volver a sacar mi colección?",
         "answer": [
           "Sí. La copia de seguridad y la restauración forman parte de la base gratuita, igual que la exportación a CSV. Tus datos nunca quedan retenidos."
+        ]
+      },
+      "pro": {
+        "question": "¿Costará dinero DiscVault?",
+        "answer": [
+          "La base es gratis: escanear, catalogar, copia de seguridad y restauración. La edición autoalojada es gratis y lo seguirá siendo.",
+          "Está prevista para más adelante una mejora Pro para las apps, como compra única y no como suscripción. Su precio aún no está fijado."
         ]
       },
       "android": {

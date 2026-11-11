@@ -276,14 +276,15 @@
     "titleStart": "Kärnan är",
     "titleFree": "gratis",
     "titleEnd": ".",
-    "lead": "Att skanna, katalogisera, söka, säkerhetskopiera och återställa kostar ingenting. DiscVault är gratis att köra på egen server.",
+    "lead": "Att skanna, katalogisera, söka, säkerhetskopiera och återställa kostar ingenting. Den självhostade versionen är gratis, och förblir gratis.",
     "points": [
-      "Skanna och lägga till skivor",
+      "Skanna och lägga till, utan begränsning",
       "Fullständig säkerhetskopiering och återställning",
       "Vill se-lista, historik och önskelista",
       "iCloud-synk mellan dina enheter",
       "Få ut dina data, alltid"
     ],
+    "pro": "En Pro-uppgradering för apparna kommer senare, som ett engångsköp. Ingen prenumeration. Priset är inte bestämt än.",
     "support": "DiscVault görs av en enda utvecklare. Om det förtjänar en plats på din hylla är en kaffe välkommen. En donation låser inte upp något; den är bara ett tack."
   },
   "faq": {
@@ -324,6 +325,13 @@
         "question": "Kan jag få ut min samling igen?",
         "answer": [
           "Ja. Säkerhetskopiering och återställning ingår i den kostnadsfria kärnan, liksom CSV-export. Dina data hålls aldrig inne."
+        ]
+      },
+      "pro": {
+        "question": "Kommer DiscVault att kosta pengar?",
+        "answer": [
+          "Kärnan är gratis: skanning, katalogisering, säkerhetskopiering och återställning. Den självhostade versionen är gratis och förblir gratis.",
+          "En Pro-uppgradering för apparna planeras till senare, som ett engångsköp och inte som en prenumeration. Priset är inte bestämt än."
         ]
       },
       "android": {

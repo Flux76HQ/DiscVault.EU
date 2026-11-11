@@ -276,14 +276,15 @@
     "titleStart": "Kjernen er",
     "titleFree": "gratis",
     "titleEnd": ".",
-    "lead": "Skanning, katalogisering, søk, sikkerhetskopiering og gjenoppretting koster ingenting. Det er gratis å hoste DiscVault selv.",
+    "lead": "Skanning, katalogisering, søk, sikkerhetskopiering og gjenoppretting koster ingenting. Den selvhostede versjonen er gratis, og forblir gratis.",
     "points": [
-      "Skanne og legge til plater",
+      "Skanne og legge til, uten begrensning",
       "Full sikkerhetskopiering og gjenoppretting",
       "Seliste, historikk og ønskeliste",
       "iCloud-synkronisering mellom enhetene dine",
       "Du får alltid ut dataene dine"
     ],
+    "pro": "En Pro-oppgradering for appene kommer senere, som et engangskjøp. Ikke et abonnement. Prisen er ikke fastsatt ennå.",
     "support": "DiscVault lages av én utvikler. Hvis det fortjener en plass i hylla di, er en kaffe velkommen. En donasjon låser ikke opp noe; den er bare en takk."
   },
   "faq": {
@@ -324,6 +325,13 @@
         "question": "Får jeg samlingen min ut igjen?",
         "answer": [
           "Ja. Sikkerhetskopiering og gjenoppretting er en del av den gratis kjernen, og det er CSV-eksport også. Dataene dine holdes aldri tilbake."
+        ]
+      },
+      "pro": {
+        "question": "Kommer DiscVault til å koste penger?",
+        "answer": [
+          "Kjernen er gratis: skanning, katalogisering, sikkerhetskopiering og gjenoppretting. Den selvhostede versjonen er gratis og forblir gratis.",
+          "En Pro-oppgradering for appene er planlagt senere, som et engangskjøp og ikke et abonnement. Prisen er ikke fastsatt ennå."
         ]
       },
       "android": {

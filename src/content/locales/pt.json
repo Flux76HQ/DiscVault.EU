@@ -276,14 +276,15 @@
     "titleStart": "A base é",
     "titleFree": "gratuita",
     "titleEnd": ".",
-    "lead": "Ler códigos, catalogar, pesquisar, fazer cópias de segurança e restaurá-las não custa nada. Alojar o DiscVault no teu servidor é gratuito.",
+    "lead": "Ler códigos, catalogar, pesquisar, fazer cópias de segurança e restaurá-las não custa nada. A versão self-hosted é gratuita, e assim vai continuar.",
     "points": [
-      "Ler e adicionar discos",
+      "Ler e adicionar, sem limite",
       "Cópia de segurança e restauro completos",
       "Lista para ver, histórico e lista de desejos",
       "Sincronização por iCloud entre os teus dispositivos",
       "Levar os teus dados contigo, sempre"
     ],
+    "pro": "Um upgrade Pro para as apps chega mais tarde, como compra única. Não é uma subscrição. O preço ainda não está definido.",
     "support": "O DiscVault é feito por um único programador. Se merecer um lugar na tua estante, um café é bem-vindo. Um donativo não desbloqueia nada; é apenas um agradecimento."
   },
   "faq": {
@@ -324,6 +325,13 @@
         "question": "Posso voltar a tirar de lá a minha coleção?",
         "answer": [
           "Sim. A cópia de segurança e o restauro fazem parte da base gratuita, tal como a exportação em CSV. Os teus dados nunca ficam retidos."
+        ]
+      },
+      "pro": {
+        "question": "O DiscVault vai custar dinheiro?",
+        "answer": [
+          "A base é gratuita: ler códigos, catalogar, cópia de segurança e restauro. A versão self-hosted é gratuita e assim vai continuar.",
+          "Está previsto para mais tarde um upgrade Pro para as apps, como compra única e não como subscrição. O preço ainda não está definido."
         ]
       },
       "android": {

@@ -43,6 +43,7 @@ export const faqIds = [
   'sends',
   'sync',
   'export',
+  'pro',
   'android',
   'legacy',
 ] as const;

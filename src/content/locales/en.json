@@ -276,14 +276,15 @@
     "titleStart": "The core is",
     "titleFree": "free",
     "titleEnd": ".",
-    "lead": "Scanning, cataloguing, searching, backing up and restoring cost nothing. DiscVault is free to self-host.",
+    "lead": "Scanning, cataloguing, searching, backing up and restoring cost nothing. The self-hosted edition is free, and stays free.",
     "points": [
-      "Scanning and adding discs",
+      "Scanning and adding, without a limit",
       "Full backup and restore",
       "Watchlist, history and wishlist",
       "iCloud sync between your devices",
       "Getting your data out, always"
     ],
+    "pro": "A Pro upgrade for the apps comes later, as a one-time purchase. Not a subscription. The price is not set yet.",
     "support": "DiscVault is made by one developer. If it earns a place on your shelf, a coffee is welcome. A donation unlocks nothing; it is only a thank-you."
   },
   "faq": {
@@ -324,6 +325,13 @@
         "question": "Can I get my collection out again?",
         "answer": [
           "Yes. Backup and restore are part of the free core, and so is a CSV export. Your data is never held back."
+        ]
+      },
+      "pro": {
+        "question": "Will DiscVault cost money?",
+        "answer": [
+          "The core is free: scanning, cataloguing, backup and restore. The self-hosted edition is free and stays free.",
+          "A Pro upgrade for the apps is planned for later, as a one-time purchase rather than a subscription. Its price is not set yet."
         ]
       },
       "android": {

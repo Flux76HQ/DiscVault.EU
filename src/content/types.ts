@@ -116,6 +116,8 @@ export interface MarketingContent {
     titleEnd: string;
     lead: string;
     points: string[];
+    /** The one line the site may say about Pro: no price, no contents. */
+    pro: string;
     support: string;
   };
   faq: {

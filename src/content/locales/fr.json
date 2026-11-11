@@ -276,14 +276,15 @@
     "titleStart": "L’essentiel est",
     "titleFree": "gratuit",
     "titleEnd": ".",
-    "lead": "Scanner, cataloguer, chercher, sauvegarder et restaurer ne coûtent rien. L’auto-hébergement de DiscVault est gratuit.",
+    "lead": "Scanner, cataloguer, chercher, sauvegarder et restaurer ne coûtent rien. L’édition auto-hébergée est gratuite, et le restera.",
     "points": [
-      "Scan et ajout de disques",
+      "Scan et ajout, sans limite",
       "Sauvegarde et restauration complètes",
       "Liste à voir, historique et liste de souhaits",
       "Synchronisation iCloud entre vos appareils",
       "L’export de vos données, toujours"
     ],
+    "pro": "Une mise à niveau Pro pour les apps arrivera plus tard, sous forme d’achat unique. Ce n’est pas un abonnement. Le prix n’est pas encore fixé.",
     "support": "DiscVault est l’œuvre d’un seul développeur. S’il mérite une place sur votre étagère, un café est le bienvenu. Un don ne débloque rien ; c’est seulement un merci."
   },
   "faq": {
@@ -324,6 +325,13 @@
         "question": "Puis-je récupérer ma collection ?",
         "answer": [
           "Oui. La sauvegarde et la restauration font partie de l’essentiel gratuit, tout comme un export CSV. Vos données ne sont jamais retenues."
+        ]
+      },
+      "pro": {
+        "question": "DiscVault sera-t-il payant ?",
+        "answer": [
+          "L’essentiel est gratuit : scan, catalogage, sauvegarde et restauration. L’édition auto-hébergée est gratuite et le restera.",
+          "Une mise à niveau Pro pour les apps est prévue pour plus tard, sous forme d’achat unique et non d’abonnement. Son prix n’est pas encore fixé."
         ]
       },
       "android": {

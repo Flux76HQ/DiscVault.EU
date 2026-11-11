@@ -276,14 +276,15 @@
     "titleStart": "L’essenziale è",
     "titleFree": "gratuito",
     "titleEnd": ".",
-    "lead": "Scansionare, catalogare, cercare, fare il backup e ripristinare non costano nulla. DiscVault in self-hosting è gratuito.",
+    "lead": "Scansionare, catalogare, cercare, fare il backup e ripristinare non costano nulla. L’edizione self-hosted è gratuita, e lo resterà.",
     "points": [
-      "Scansione e aggiunta dei dischi",
+      "Scansione e aggiunta, senza limiti",
       "Backup e ripristino completi",
       "Watchlist, cronologia e lista dei desideri",
       "Sincronizzazione iCloud tra i tuoi dispositivi",
       "I tuoi dati esportabili, sempre"
     ],
+    "pro": "Un upgrade Pro per le app arriverà più avanti, come acquisto una tantum. Non è un abbonamento. Il prezzo non è ancora stato fissato.",
     "support": "DiscVault è fatto da un solo sviluppatore. Se si guadagna un posto sul tuo scaffale, un caffè è gradito. Una donazione non sblocca nulla; è solo un grazie."
   },
   "faq": {
@@ -324,6 +325,13 @@
         "question": "Posso riprendermi la mia collezione?",
         "answer": [
           "Sì. Backup e ripristino fanno parte dell’essenziale gratuito, così come l’esportazione CSV. I tuoi dati non vengono mai trattenuti."
+        ]
+      },
+      "pro": {
+        "question": "DiscVault sarà a pagamento?",
+        "answer": [
+          "L’essenziale è gratuito: scansione, catalogazione, backup e ripristino. L’edizione self-hosted è gratuita e lo resterà.",
+          "Un upgrade Pro per le app è previsto più avanti, come acquisto una tantum e non come abbonamento. Il prezzo non è ancora stato fissato."
         ]
       },
       "android": {

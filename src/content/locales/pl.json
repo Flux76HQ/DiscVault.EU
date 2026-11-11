@@ -276,14 +276,15 @@
     "titleStart": "Podstawa jest",
     "titleFree": "darmowa",
     "titleEnd": ".",
-    "lead": "Skanowanie, katalogowanie, wyszukiwanie, tworzenie kopii zapasowych i ich przywracanie nic nie kosztują. Hostowanie DiscVault u siebie jest darmowe.",
+    "lead": "Skanowanie, katalogowanie, wyszukiwanie, tworzenie kopii zapasowych i ich przywracanie nic nie kosztują. Wersja self-hosted jest darmowa i taka pozostanie.",
     "points": [
-      "Skanowanie i dodawanie płyt",
+      "Skanowanie i dodawanie, bez limitu",
       "Pełna kopia zapasowa i przywracanie",
       "Lista do obejrzenia, historia i lista życzeń",
       "Synchronizacja iCloud między Twoimi urządzeniami",
       "Eksport własnych danych, zawsze"
     ],
+    "pro": "Ulepszenie Pro do aplikacji pojawi się później, jako jednorazowy zakup. To nie subskrypcja. Cena nie jest jeszcze ustalona.",
     "support": "DiscVault tworzy jeden programista. Jeśli zasłuży na miejsce na Twojej półce, kawa będzie mile widziana. Darowizna niczego nie odblokowuje; to tylko podziękowanie."
   },
   "faq": {
@@ -324,6 +325,13 @@
         "question": "Czy mogę z powrotem wyciągnąć swoją kolekcję?",
         "answer": [
           "Tak. Kopia zapasowa i przywracanie są częścią darmowej podstawy, podobnie jak eksport do CSV. Twoje dane nigdy nie są przetrzymywane."
+        ]
+      },
+      "pro": {
+        "question": "Czy za DiscVault trzeba będzie płacić?",
+        "answer": [
+          "Podstawa jest darmowa: skanowanie, katalogowanie, kopia zapasowa i przywracanie. Wersja self-hosted jest darmowa i taka pozostanie.",
+          "Ulepszenie Pro do aplikacji jest planowane na później, jako jednorazowy zakup, a nie subskrypcja. Jego cena nie jest jeszcze ustalona."
         ]
       },
       "android": {

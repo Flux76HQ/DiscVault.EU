@@ -276,14 +276,15 @@
     "titleStart": "Kernen er",
     "titleFree": "gratis",
     "titleEnd": ".",
-    "lead": "Scanning, katalogisering, søgning, backup og gendannelse koster ingenting. Det er gratis at hoste DiscVault selv.",
+    "lead": "Scanning, katalogisering, søgning, backup og gendannelse koster ingenting. Den self-hostede udgave er gratis og bliver ved med at være det.",
     "points": [
-      "Scan og tilføj diske",
+      "Scan og tilføj, uden begrænsning",
       "Fuld backup og gendannelse",
       "Vil se-liste, historik og ønskeliste",
       "iCloud-synkronisering mellem dine enheder",
       "Få dine data ud, altid"
     ],
+    "pro": "En Pro-opgradering til appsene kommer senere, som et engangskøb. Ikke et abonnement. Prisen er ikke fastsat endnu.",
     "support": "DiscVault laves af én udvikler. Hvis den gør sig fortjent til en plads på din hylde, er en kop kaffe velkommen. En donation låser ikke noget op; den er bare et tak."
   },
   "faq": {
@@ -324,6 +325,13 @@
         "question": "Kan jeg få min samling ud igen?",
         "answer": [
           "Ja. Backup og gendannelse er en del af den gratis kerne, og det er CSV-eksport også. Dine data bliver aldrig holdt tilbage."
+        ]
+      },
+      "pro": {
+        "question": "Kommer DiscVault til at koste penge?",
+        "answer": [
+          "Kernen er gratis: scanning, katalogisering, backup og gendannelse. Den self-hostede udgave er gratis og bliver ved med at være det.",
+          "En Pro-opgradering til appsene er planlagt til senere, som et engangskøb og ikke et abonnement. Prisen er ikke fastsat endnu."
         ]
       },
       "android": {

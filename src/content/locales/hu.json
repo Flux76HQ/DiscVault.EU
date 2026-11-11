@@ -276,14 +276,15 @@
     "titleStart": "Az alap",
     "titleFree": "ingyenes",
     "titleEnd": ".",
-    "lead": "A beolvasás, a katalogizálás, a keresés, a biztonsági mentés és a visszaállítás semmibe sem kerül. A DiscVault saját szerveren ingyen futtatható.",
+    "lead": "A beolvasás, a katalogizálás, a keresés, a biztonsági mentés és a visszaállítás semmibe sem kerül. A saját szerveren futó változat ingyenes, és az is marad.",
     "points": [
-      "Lemezek beolvasása és hozzáadása",
+      "Beolvasás és hozzáadás, korlát nélkül",
       "Teljes biztonsági mentés és visszaállítás",
       "Néznivalók listája, előzmények és kívánságlista",
       "iCloud-szinkronizálás az eszközeid között",
       "Az adataid kinyerése, mindig"
     ],
+    "pro": "Az alkalmazásokhoz később érkezik egy Pro bővítés, egyszeri vásárlásként. Nem előfizetés. Az ára még nincs meghatározva.",
     "support": "A DiscVaultot egyetlen fejlesztő készíti. Ha kiérdemel egy helyet a polcodon, egy kávét szívesen fogadok. Az adomány semmit sem old fel; csak köszönet."
   },
   "faq": {
@@ -324,6 +325,13 @@
         "question": "Ki tudom nyerni a gyűjteményemet?",
         "answer": [
           "Igen. A biztonsági mentés és a visszaállítás az ingyenes alap része, ahogy a CSV-exportálás is. Az adataidat soha nem tartjuk vissza."
+        ]
+      },
+      "pro": {
+        "question": "Pénzbe fog kerülni a DiscVault?",
+        "answer": [
+          "Az alap ingyenes: beolvasás, katalogizálás, biztonsági mentés és visszaállítás. A saját szerveren futó változat ingyenes, és az is marad.",
+          "A tervek szerint az alkalmazásokhoz később Pro bővítés érkezik, egyszeri vásárlásként, nem előfizetésként. Az ára még nincs meghatározva."
         ]
       },
       "android": {

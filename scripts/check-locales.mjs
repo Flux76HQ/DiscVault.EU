@@ -156,6 +156,7 @@ const localizedCopyPaths = [
   'privacy.body.0',
   'privacy.body.1',
   'plans.lead',
+  'plans.pro',
   'faq.title',
   'cta.title',
   'cta.lead',
@@ -233,6 +234,11 @@ for (const [locale, content] of Object.entries(locales)) {
       if (pattern.test(text)) {
         error(`${key} contains a URL (${label}); link targets live in config`);
       }
+    }
+    // No price anywhere: Pro has none yet, and a figure in one language
+    // would be a claim in all of them (the owner's decision of 2026-11-11).
+    if (/[€$£¥₩₺₴]|\b(?:EUR|USD|GBP)\b/.test(value)) {
+      error(`${key} names a price or a currency; the site states none`);
     }
     // The product name stays as it is in every language.
     const english = reference.get(key);

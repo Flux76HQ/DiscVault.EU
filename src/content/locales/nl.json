@@ -276,14 +276,15 @@
     "titleStart": "De kern is",
     "titleFree": "gratis",
     "titleEnd": ".",
-    "lead": "Scannen, catalogiseren, zoeken, back-ups maken en terugzetten kost niets. DiscVault zelf hosten is gratis.",
+    "lead": "Scannen, catalogiseren, zoeken, back-ups maken en terugzetten kost niets. De zelfgehoste versie is gratis, en blijft gratis.",
     "points": [
-      "Discs scannen en toevoegen",
+      "Scannen en toevoegen, zonder limiet",
       "Volledige back-up en herstel",
       "Kijklijst, geschiedenis en verlanglijst",
       "iCloud-synchronisatie tussen je apparaten",
       "Je gegevens kun je er altijd uit halen"
     ],
+    "pro": "Een Pro-upgrade voor de apps komt later, als eenmalige aankoop. Geen abonnement. De prijs staat nog niet vast.",
     "support": "DiscVault wordt gemaakt door één ontwikkelaar. Als het een plek in je kast verdient, is een kop koffie welkom. Een donatie ontgrendelt niets; het is alleen een bedankje."
   },
   "faq": {
@@ -324,6 +325,13 @@
         "question": "Krijg ik mijn collectie er ook weer uit?",
         "answer": [
           "Ja. Back-up en herstel horen bij de gratis kern, en een CSV-export ook. Je gegevens worden nooit achtergehouden."
+        ]
+      },
+      "pro": {
+        "question": "Gaat DiscVault geld kosten?",
+        "answer": [
+          "De kern is gratis: scannen, catalogiseren, back-up en herstel. De zelfgehoste versie is gratis en blijft gratis.",
+          "Een Pro-upgrade voor de apps staat gepland voor later, als eenmalige aankoop en niet als abonnement. De prijs staat nog niet vast."
         ]
       },
       "android": {

@@ -276,14 +276,15 @@
     "titleStart": "Ydin on",
     "titleFree": "ilmainen",
     "titleEnd": ".",
-    "lead": "Skannaus, luettelointi, haku, varmuuskopiointi ja palautus eivät maksa mitään. DiscVaultin ylläpito omalla palvelimella on ilmaista.",
+    "lead": "Skannaus, luettelointi, haku, varmuuskopiointi ja palautus eivät maksa mitään. Itse ylläpidetty versio on ilmainen ja pysyy ilmaisena.",
     "points": [
-      "Levyjen skannaus ja lisääminen",
+      "Skannaus ja lisääminen ilman rajoituksia",
       "Täysi varmuuskopiointi ja palautus",
       "Katselulista, historia ja toivelista",
       "iCloud-synkronointi laitteidesi välillä",
       "Tietosi saat ulos, aina"
     ],
+    "pro": "Sovelluksiin tulee myöhemmin Pro-päivitys kertaostoksena. Se ei ole tilaus. Hintaa ei ole vielä päätetty.",
     "support": "DiscVaultin tekee yksi kehittäjä. Jos se ansaitsee paikan hyllyssäsi, kahvi on tervetullut. Lahjoitus ei avaa mitään; se on vain kiitos."
   },
   "faq": {
@@ -324,6 +325,13 @@
         "question": "Saanko kokoelmani taas ulos?",
         "answer": [
           "Kyllä. Varmuuskopiointi ja palautus kuuluvat ilmaiseen ytimeen, samoin CSV-vienti. Tietojasi ei koskaan pidätetä."
+        ]
+      },
+      "pro": {
+        "question": "Maksaako DiscVault jotakin?",
+        "answer": [
+          "Ydin on ilmainen: skannaus, luettelointi, varmuuskopiointi ja palautus. Itse ylläpidetty versio on ilmainen ja pysyy ilmaisena.",
+          "Sovelluksiin on suunnitteilla myöhemmin Pro-päivitys, kertaostoksena eikä tilauksena. Sen hintaa ei ole vielä päätetty."
         ]
       },
       "android": {

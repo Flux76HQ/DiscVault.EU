@@ -276,14 +276,15 @@
     "titleStart": "Temel özellikler",
     "titleFree": "ücretsiz",
     "titleEnd": ".",
-    "lead": "Tarama, kataloglama, arama, yedekleme ve geri yükleme için hiçbir şey ödemezsin. DiscVault’u kendi sunucunda barındırmak ücretsizdir.",
+    "lead": "Tarama, kataloglama, arama, yedekleme ve geri yükleme için hiçbir şey ödemezsin. Kendi sunucunda çalışan sürüm ücretsizdir ve ücretsiz kalır.",
     "points": [
-      "Disk tarama ve ekleme",
+      "Sınır olmadan tarama ve ekleme",
       "Tam yedekleme ve geri yükleme",
       "İzleme listesi, geçmiş ve istek listesi",
       "Cihazların arasında iCloud eşzamanlaması",
       "Verilerini dışarı alma, her zaman"
     ],
+    "pro": "Uygulamalar için Pro yükseltmesi daha sonra, tek seferlik satın alma olarak gelecek. Abonelik değil. Fiyatı henüz belirlenmedi.",
     "support": "DiscVault’u tek bir geliştirici yapıyor. Rafında bir yer hak ederse bir kahve memnuniyetle karşılanır. Bağış hiçbir şeyin kilidini açmaz; yalnızca bir teşekkürdür."
   },
   "faq": {
@@ -324,6 +325,13 @@
         "question": "Koleksiyonumu yeniden dışarı alabilir miyim?",
         "answer": [
           "Evet. Yedekleme ve geri yükleme ücretsiz temel özelliklerin parçasıdır; CSV dışa aktarımı da öyle. Verilerin asla alıkonmaz."
+        ]
+      },
+      "pro": {
+        "question": "DiscVault için ödeme yapmam gerekecek mi?",
+        "answer": [
+          "Temel özellikler ücretsiz: tarama, kataloglama, yedekleme ve geri yükleme. Kendi sunucunda çalışan sürüm ücretsizdir ve ücretsiz kalır.",
+          "Uygulamalar için bir Pro yükseltmesi ileriki bir aşama için planlanıyor; abonelik olarak değil, tek seferlik satın alma olarak. Fiyatı henüz belirlenmedi."
         ]
       },
       "android": {

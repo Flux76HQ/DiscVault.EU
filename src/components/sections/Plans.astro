@@ -23,9 +23,12 @@ const gap = /[\u3000-\u9fff\uac00-\ud7af]$/.test(plans.titleStart.trim())
       >{plans.titleEnd}
     </h2>
     <p class="statement plans-lead" data-rise>{plans.lead}</p>
-    <ul class="plans-points" data-rise>
-      {plans.points.map((point) => <li>{point}</li>)}
-    </ul>
+    <div class="plans-list" data-rise>
+      <ul class="plans-points">
+        {plans.points.map((point) => <li>{point}</li>)}
+      </ul>
+      <p class="plans-pro">{plans.pro}</p>
+    </div>
     <div class="plans-support" data-rise>
       <p>{plans.support}</p>
       <a class="button button-quiet" href={SUPPORT_URL}>{actions.support}</a>

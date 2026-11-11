@@ -276,14 +276,15 @@
     "titleStart": "Der Kern ist",
     "titleFree": "kostenlos",
     "titleEnd": ".",
-    "lead": "Scannen, Katalogisieren, Suchen, Sichern und Wiederherstellen kosten nichts. DiscVault selbst zu hosten ist kostenlos.",
+    "lead": "Scannen, Katalogisieren, Suchen, Sichern und Wiederherstellen kosten nichts. Die selbst gehostete Edition ist kostenlos und bleibt es.",
     "points": [
-      "Discs scannen und hinzufügen",
+      "Scannen und Hinzufügen, ohne Begrenzung",
       "Vollständiges Backup mit Wiederherstellung",
       "Merkliste, Verlauf und Wunschliste",
       "iCloud-Synchronisierung zwischen deinen Geräten",
       "Deine Daten bekommst du immer heraus"
     ],
+    "pro": "Ein Pro-Upgrade für die Apps kommt später, als einmaliger Kauf. Kein Abonnement. Der Preis steht noch nicht fest.",
     "support": "DiscVault wird von einem einzelnen Entwickler gemacht. Wenn es sich einen Platz in deinem Regal verdient, ist ein Kaffee willkommen. Eine Spende schaltet nichts frei; sie ist nur ein Dankeschön."
   },
   "faq": {
@@ -324,6 +325,13 @@
         "question": "Bekomme ich meine Sammlung wieder heraus?",
         "answer": [
           "Ja. Backup und Wiederherstellung gehören zum kostenlosen Kern, ein CSV-Export ebenso. Deine Daten werden nie zurückgehalten."
+        ]
+      },
+      "pro": {
+        "question": "Wird DiscVault Geld kosten?",
+        "answer": [
+          "Der Kern ist kostenlos: Scannen, Katalogisieren, Backup und Wiederherstellung. Die selbst gehostete Edition ist kostenlos und bleibt es.",
+          "Ein Pro-Upgrade für die Apps ist für später geplant, als einmaliger Kauf statt als Abonnement. Der Preis steht noch nicht fest."
         ]
       },
       "android": {

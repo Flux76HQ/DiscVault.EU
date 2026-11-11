@@ -276,14 +276,15 @@
     "titleStart": "Základ je",
     "titleFree": "zdarma",
     "titleEnd": ".",
-    "lead": "Skenování, katalogizace, vyhledávání, zálohování a obnovení nestojí nic. Provozovat DiscVault na vlastním serveru je zdarma.",
+    "lead": "Skenování, katalogizace, vyhledávání, zálohování a obnovení nestojí nic. Self-hostovaná edice je zdarma a zdarma zůstane.",
     "points": [
-      "Skenování a přidávání disků",
+      "Skenování a přidávání bez omezení",
       "Úplná záloha a obnovení",
       "Seznam ke zhlédnutí, historie a seznam přání",
       "Synchronizace přes iCloud mezi vašimi zařízeními",
       "Svá data dostanete ven, vždy"
     ],
+    "pro": "Aplikace později dostanou upgrade Pro, a to jako jednorázový nákup. Není to předplatné. Cena zatím není stanovena.",
     "support": "DiscVault vytváří jediný vývojář. Pokud si u vás na poličce vyslouží místo, káva potěší. Dar nic neodemyká; je to jen poděkování."
   },
   "faq": {
@@ -324,6 +325,13 @@
         "question": "Dostanu svou sbírku zase ven?",
         "answer": [
           "Ano. Zálohování a obnovení jsou součástí bezplatného základu, stejně jako export do CSV. Vaše data nikdy nezadržujeme."
+        ]
+      },
+      "pro": {
+        "question": "Bude DiscVault něco stát?",
+        "answer": [
+          "Základ je zdarma: skenování, katalogizace, zálohování a obnovení. Self-hostovaná edice je zdarma a zdarma zůstane.",
+          "Na později je pro aplikace plánován upgrade Pro, a to jako jednorázový nákup, nikoli předplatné. Jeho cena zatím není stanovena."
         ]
       },
       "android": {
