@@ -1,0 +1,102 @@
+---
+import '../../styles/sections/scan.css';
+/**
+ * Chapter: the scan, and the page's one live thing. The dark half is what
+ * you hand DiscVault (a barcode); the light half is what it makes of it (a
+ * catalogue record). Radios and :has() do the work, so it needs no script;
+ * a browser without :has() shows the first record.
+ */
+import { Picture } from 'astro:assets';
+import { scanFilms } from '../../content/structure';
+import type { MarketingContent } from '../../content/types';
+import { poster } from '../../media/registry';
+import Barcode from '../ui/Barcode.astro';
+import FormatBadge from '../ui/FormatBadge.astro';
+
+interface Props {
+  content: MarketingContent;
+}
+
+const { scan } = Astro.props.content;
+---
+
+<section class="scan" id="scan">
+  <div class="scan-in on-base" data-chapter="on-base">
+    <div class="scan-in-body">
+      <p class="statement scan-lead" id="scan-lead" data-rise>{scan.lead}</p>
+      <div
+        class="scan-codes"
+        role="radiogroup"
+        aria-labelledby="scan-lead"
+        data-rise
+      >
+        {
+          scanFilms.map((film, index) => (
+            <label class="scan-code">
+              <input
+                type="radio"
+                name="scan-code"
+                value={film.slug}
+                checked={index === 0}
+                data-scan-index={index + 1}
+              />
+              <Barcode code={film.barcode} />
+              <span class="scan-digits tabular">{film.barcode}</span>
+            </label>
+          ))
+        }
+      </div>
+      <p class="small note scan-fallback">{scan.fallback}</p>
+    </div>
+    <h2 class="title scan-title">{scan.titleStart}</h2>
+  </div>
+
+  <div class="scan-out on-uhd" data-chapter="on-uhd">
+    <div class="scan-out-body" aria-live="polite">
+      {
+        scanFilms.map((film, index) => (
+          <article class="record" data-ui data-record={index + 1}>
+            <Picture
+              src={poster(film.slug)}
+              formats={['avif']}
+              fallbackFormat="webp"
+              widths={[240, 360, 480, 688]}
+              sizes="(min-width: 56.25rem) 15vw, 34vw"
+              alt=""
+              loading="lazy"
+              decoding="async"
+              class="record-cover"
+            />
+            <div class="record-body">
+              <h3 class="record-title">{film.title}</h3>
+              <FormatBadge kind={film.badge} label={film.format} />
+              <dl class="record-facts small">
+                <div>
+                  <dt>{scan.record.year}</dt>
+                  <dd class="tabular">{film.year}</dd>
+                </div>
+                <div>
+                  <dt>{scan.record.runtime}</dt>
+                  <dd class="tabular">
+                    {film.runtime} {scan.record.minutes}
+                  </dd>
+                </div>
+                <div>
+                  <dt>{scan.record.director}</dt>
+                  <dd>{film.director}</dd>
+                </div>
+                <div>
+                  <dt>{scan.record.barcode}</dt>
+                  <dd class="tabular">{film.barcode.replace(/\s/g, '')}</dd>
+                </div>
+              </dl>
+              <p class="record-added small">{scan.record.added}</p>
+            </div>
+          </article>
+        ))
+      }
+      <p class="small scan-note">{scan.note}</p>
+    </div>
+    <p class="title scan-title">{scan.titleEnd}</p>
+  </div>
+</section>

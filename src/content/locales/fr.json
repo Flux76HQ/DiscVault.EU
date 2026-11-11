@@ -2,235 +2,373 @@
   "locale": "fr",
   "languageName": "Français",
   "seo": {
-    "title": "DiscVault — un catalogue pour vos disques",
-    "description": "DiscVault catalogue vos films en 4K, Blu-ray et DVD. Scannez un code-barres, distinguez les éditions, sur votre appareil ou votre serveur. Sans pistage."
+    "title": "DiscVault — cataloguez vos films sur disque",
+    "description": "DiscVault catalogue vos films en 4K, Blu-ray et DVD. Scannez un code-barres, distinguez éditions et coffrets, sur iPhone ou sur votre serveur. Ni pub ni pistage.",
+    "ogAlt": "DiscVault : un mur de jaquettes de films avec des badges 4K, Blu-ray et DVD."
+  },
+  "a11y": {
+    "skip": "Aller au contenu",
+    "home": "DiscVault, accueil",
+    "menu": "Menu",
+    "language": "Langue",
+    "sections": "Sections",
+    "pauseMotion": "Mettre l’animation en pause",
+    "playMotion": "Lancer l’animation"
+  },
+  "theme": {
+    "label": "Thème",
+    "system": "Système",
+    "light": "Clair",
+    "dark": "Sombre"
   },
   "nav": {
-    "library": "Bibliothèque",
+    "collect": "Collectionner",
     "scan": "Scanner",
     "editions": "Éditions",
+    "selfHosted": "Auto-hébergé",
     "privacy": "Confidentialité",
-    "install": "Installer",
+    "faq": "Questions",
     "docs": "Docs",
-    "menu": "Menu",
-    "language": "Langues"
+    "get": "Obtenir DiscVault"
   },
   "actions": {
-    "install": "Installer DiscVault 26",
-    "installCompact": "Installer v26",
-    "appStore": "Télécharger sur l’App Store",
+    "appStore": "Télécharger dans l’App Store",
+    "selfHost": "Auto-héberger DiscVault",
     "android": "Demander l’accès à la bêta Android",
-    "testflight": "Bêta TestFlight",
-    "privacy": "Politique de confidentialité"
+    "testflight": "Rejoindre la bêta TestFlight",
+    "installGuide": "Lire le guide d’installation",
+    "migrationGuide": "Lire le guide de migration",
+    "privacyPolicy": "Lire la politique de confidentialité",
+    "discord": "Rejoindre le Discord",
+    "github": "Code source sur GitHub",
+    "issues": "Signaler un problème",
+    "support": "M’offrir un café",
+    "moreAnswers": "Plus de réponses dans la documentation",
+    "backToTop": "Retour en haut"
   },
-  "leader": {
-    "slate": [
-      "DiscVault 26",
-      "Un catalogue pour vos disques",
-      "Auto-hébergé",
-      "iPhone & iPad",
-      "Bêta Android"
-    ],
-    "voice": [
-      "La lumière, ",
-      "gardée."
-    ],
-    "lead": "DiscVault catalogue les films que vous possédez — sur disque, sur votre étagère, sur votre propre serveur.",
-    "note": [
-      "PWA & bureau",
-      "Guide d'installation"
-    ]
+  "hero": {
+    "title": "Votre vidéothèque, cataloguée.",
+    "lead": "DiscVault garde la trace de chaque film que vous possédez en 4K, Blu-ray et DVD. Scannez un code-barres : le titre, l’édition et la jaquette se remplissent tout seuls.",
+    "note": "Pour iPhone et iPad, ou auto-hébergé sur votre propre serveur. Android est en bêta.",
+    "mediaAlt": "La bibliothèque DiscVault : un mur de jaquettes de films, chacune avec un badge 4K, Blu-ray, DVD ou coffret."
   },
-  "shelf": {
-    "slate": [
-      "Reel 01",
-      "L'étagère"
-    ],
-    "counter": [
-      "45 / 45 films",
-      "29 vignettes"
-    ],
-    "voice": [
-      "Chaque édition, là où vous l'avez ",
-      "laissée",
-      "."
-    ],
-    "lead": "Parcourez les affiches, passez en vue liste ou détail, filtrez par format, ouvrez coffrets et conteneurs. Rapide sur les grandes collections."
+  "collect": {
+    "title": "Conçu pour les collectionneurs.",
+    "blocks": {
+      "library": {
+        "title": "Une bibliothèque qui ressemble à votre étagère",
+        "points": [
+          "Affiches, liste ou vue détaillée",
+          "Filtre par 4K, Blu-ray ou DVD",
+          "Recherche par titre, code-barres, distribution ou équipe technique",
+          "Les coffrets s’ouvrent sur les films qu’ils contiennent",
+          "Rapide, même avec une grande collection"
+        ],
+        "mediaAlt": "La bibliothèque sur un téléphone : une grille de jaquettes de films avec des badges de format."
+      },
+      "detail": {
+        "title": "Chaque film a droit à une vraie fiche",
+        "points": [
+          "Édition, format et code-barres",
+          "Distribution, équipe technique et visuels",
+          "Votre propre affiche ou image de fond",
+          "Les séries et leurs saisons",
+          "Les copies Plex et Jellyfin signalées"
+        ],
+        "mediaAlt": "La fiche d’un film sur un téléphone : jaquette, image de fond, année, format et code-barres."
+      },
+      "lists": {
+        "title": "Des listes pour la suite",
+        "points": [
+          "Une liste à voir pour ce soir",
+          "L’historique de visionnage, avec les dates",
+          "Une liste de souhaits avec alertes de prix",
+          "Prêts : qui a quel disque",
+          "Des étiquettes que vous créez vous-même"
+        ],
+        "mediaAlt": "La liste de souhaits : quatre films avec leur prix actuel et leur prix cible."
+      },
+      "insight": {
+        "title": "Sachez ce que vous possédez",
+        "points": [
+          "Statistiques par format, décennie et genre",
+          "Une place pour chaque disque, jusqu’à l’étagère",
+          "Votre propre note pour chaque film",
+          "Ce qui est prêté, et ce qui est en retard"
+        ],
+        "mediaAlt": "Statistiques : 54 films répartis par format entre Blu-ray, 4K UHD et DVD."
+      },
+      "iphone": {
+        "title": "Chez lui sur iPhone et iPad",
+        "points": [
+          "Demandez à Siri combien de films d’un réalisateur vous possédez",
+          "Retrouvez n’importe quel disque depuis Spotlight",
+          "Découvrez quoi ajouter ensuite, avec votre propre clé TMDB",
+          "Verrouillez l’app avec Face ID",
+          "iCloud garde vos appareils synchronisés"
+        ],
+        "mediaAlt": "DiscVault sur un iPhone."
+      }
+    }
   },
-  "read": {
-    "slate": [
-      "Reel 02",
-      "La lecture",
-      "EAN → Titre · Année · Format · Jaquette"
-    ],
-    "voice": [
-      "Visez avec la caméra. Le disque se ",
-      "lit",
-      " tout seul."
-    ],
-    "lead": "Scannez un code-barres et DiscVault renseigne titre, année, format et jaquette. Ou cherchez par nom.",
-    "note": [
-      "iPhone & iPad",
-      "Autonome",
-      "Aucun serveur requis"
-    ],
-    "captureAlt": "DiscVault sur iPhone : ajout d'un film après le scan de son code-barres"
+  "scan": {
+    "titleStart": "Visez avec la caméra.",
+    "titleEnd": "Le disque se classe tout seul.",
+    "lead": "Chaque disque a un code-barres. Choisissez-en un ci-dessous et voyez ce que DiscVault en tire.",
+    "record": {
+      "format": "Format",
+      "year": "Année",
+      "runtime": "Durée",
+      "minutes": "min",
+      "director": "Réalisation",
+      "barcode": "Code-barres",
+      "added": "Ajouté à votre bibliothèque"
+    },
+    "note": "Sur iPhone et iPad, le catalogue de disques est stocké sur l’appareil : un scan fonctionne donc hors ligne.",
+    "fallback": "Pas de code-barres ? Cherchez par titre, ou collez un identifiant IMDb ou TMDB."
   },
-  "edition": {
-    "slate": [
-      "Reel 03",
-      "L'édition",
-      "4K · BD · DVD · Steel · Coffret"
-    ],
-    "voice": [
-      "Les éditions ",
-      "comptent."
-    ],
-    "lead": "Un disque 4K n'est pas un Blu-ray. Un steelbook n'est pas un boîtier. Coffrets, conteneurs et disques d'une même sortie sont catalogués pour ce qu'ils sont.",
-    "spines": [
-      "4K Ultra HD",
-      "Blu-ray",
-      "DVD",
-      "Steelbook",
-      "Coffret · 8 films"
-    ]
+  "editions": {
+    "title": "Les éditions comptent.",
+    "lead": "Un disque 4K n’est pas un Blu-ray. Un Steelbook n’est pas un boîtier standard. Les coffrets, et les disques d’une même sortie, sont catalogués pour ce qu’ils sont.",
+    "items": {
+      "uhd": {
+        "name": "4K Ultra HD",
+        "detail": "17 sur cette étagère"
+      },
+      "bluray": {
+        "name": "Blu-ray",
+        "detail": "26 sur cette étagère"
+      },
+      "dvd": {
+        "name": "DVD",
+        "detail": "11 sur cette étagère"
+      },
+      "steelbook": {
+        "name": "Steelbook",
+        "detail": "1 sur cette étagère"
+      },
+      "boxset": {
+        "name": "Coffrets",
+        "detail": "3 coffrets, 12 films"
+      }
+    },
+    "note": "L’étagère de cette page est une bibliothèque de démonstration de 54 films inventés."
   },
-  "vault": {
-    "slate": [
-      "Reel 04",
-      "Le coffre",
-      "0 traceur",
-      "0 publicité",
-      "Aucun profilage"
+  "platforms": {
+    "title": "Deux façons de la garder.",
+    "lead": "Sur l’appareil dans votre poche, ou sur un serveur chez vous. Les deux sont DiscVault ; choisissez où vit votre collection.",
+    "columns": {
+      "ios": {
+        "name": "iPhone et iPad",
+        "sub": "L’app"
+      },
+      "selfHosted": {
+        "name": "Votre propre serveur",
+        "sub": "Auto-hébergé"
+      }
+    },
+    "rows": {
+      "home": {
+        "label": "Où elle vit",
+        "ios": "Sur votre appareil, synchronisée via votre propre iCloud",
+        "selfHosted": "Sur un serveur que vous gérez"
+      },
+      "add": {
+        "label": "Ajouter un disque",
+        "ios": "Scan à la caméra, recherche ou saisie manuelle",
+        "selfHosted": "Code-barres, recherche ou import complet"
+      },
+      "share": {
+        "label": "Partage",
+        "ios": "Vos propres appareils",
+        "selfHosted": "Un foyer : invitations, groupes et rôles"
+      },
+      "signin": {
+        "label": "Connexion",
+        "ios": "Aucun compte",
+        "selfHosted": "Clés d’accès d’abord ; mot de passe, TOTP ou OpenID Connect si vous préférez"
+      },
+      "extras": {
+        "label": "Et aussi",
+        "ios": "Siri, Spotlight et verrouillage Face ID",
+        "selfHosted": "Plugins, clés API, un point d’accès MCP, sauvegarde et restauration"
+      },
+      "languages": {
+        "label": "Langues",
+        "ios": "13",
+        "selfHosted": "29"
+      }
+    },
+    "android": {
+      "title": "Android",
+      "body": "En bêta. Demandez l’accès sur Discord ; les testeurs acceptés installent via Google Play."
+    },
+    "roadmap": "Les applications fonctionnent actuellement de manière autonome. Leur connexion à une installation DiscVault auto-hébergée est prévue ultérieurement."
+  },
+  "selfHosted": {
+    "title": "Sur un serveur à vous.",
+    "lead": "L’édition auto-hébergée est une application web pour tout le foyer. Elle s’installe sur Docker, Unraid ou Home Assistant.",
+    "shots": {
+      "library": {
+        "label": "Bibliothèque",
+        "alt": "DiscVault dans un navigateur : la bibliothèque en mur de jaquettes, avec recherche, changement de vue et filtres de format."
+      },
+      "detail": {
+        "label": "Détail",
+        "alt": "DiscVault : la fiche détaillée d’un film avec image de fond, jaquette, édition et métadonnées."
+      },
+      "boxset": {
+        "label": "Coffret",
+        "alt": "DiscVault : un coffret ouvert sur les films qu’il contient."
+      },
+      "lists": {
+        "label": "À voir",
+        "alt": "DiscVault : la liste à voir en grille de jaquettes."
+      }
+    },
+    "points": [
+      "Comptes sur invitation, avec des rôles",
+      "Clés d’accès d’abord",
+      "Plugins pour les métadonnées et les prix",
+      "Clés API et point d’accès MCP",
+      "Sauvegarde et restauration",
+      "S’installe comme une app sur votre téléphone"
     ],
-    "voice": [
-      "Elle vit là où vous la ",
-      "posez",
-      "."
+    "migration": {
+      "title": "Vous venez de DiscVault Legacy ?",
+      "body": "L’assistant de migration transfère votre collection vers le DiscVault actuel."
+    }
+  },
+  "runs": {
+    "title": "Où DiscVault fonctionne",
+    "names": [
+      "iPhone",
+      "iPad",
+      "Docker",
+      "Unraid",
+      "Home Assistant",
+      "Bêta Android",
+      "Tout navigateur"
     ],
+    "caption": "Là où DiscVault fonctionne aujourd’hui."
+  },
+  "privacy": {
+    "title": "Elle vit là où vous la posez.",
     "lead": "Sur votre appareil ou sur un serveur à vous. Aucun profilage, aucune publicité, personne ne regarde ce que vous regardez.",
+    "tiles": {
+      "ads": {
+        "figure": "0",
+        "label": "publicité"
+      },
+      "trackers": {
+        "figure": "0",
+        "label": "traceur"
+      },
+      "profiles": {
+        "figure": "0",
+        "label": "profil"
+      },
+      "count": {
+        "figure": "1",
+        "label": "comptage quotidien anonyme"
+      }
+    },
     "body": [
-      "L'app iPhone et iPad garde votre collection sur l'appareil. DiscVault 26 la garde sur un serveur que vous administrez. Dans les deux cas, seul un code-barres ou un terme de recherche sort de l'appareil.",
+      "L’app iPhone et iPad garde votre collection sur l’appareil. L’édition auto-hébergée la garde sur un serveur que vous administrez. Dans les deux cas, seul un code-barres ou un terme de recherche en sort.",
       "Une exception : l'app iPhone et iPad et un serveur auto-hébergé signalent une fois par jour à api.discvault.eu qu'ils sont utilisés. Ils envoient leur version et le nombre de jours écoulés depuis leur précédent signalement : aucun identifiant et rien sur votre collection. Cela sert uniquement à estimer à quel point DiscVault est utilisé. Sur un serveur, vous pouvez le désactiver ; l'app l'envoie toujours."
     ]
   },
-  "formats": {
-    "slate": [
-      "Reel 05",
-      "Les formats"
+  "plans": {
+    "titleStart": "L’essentiel est",
+    "titleFree": "gratuit",
+    "titleEnd": ".",
+    "lead": "Scanner, cataloguer, chercher, sauvegarder et restaurer ne coûtent rien. L’édition auto-hébergée est gratuite, et le restera.",
+    "points": [
+      "Scan et ajout, sans limite",
+      "Sauvegarde et restauration complètes",
+      "Liste à voir, historique et liste de souhaits",
+      "Synchronisation iCloud entre vos appareils",
+      "L’export de vos données, toujours"
     ],
-    "voice": [
-      "Trois façons ",
-      "d'entrer."
-    ],
-    "lead": "DiscVault 26 auto-hébergé dès aujourd'hui. iPhone et iPad autonomes. Android en bêta.",
-    "routes": [
-      {
-        "id": "self-hosted",
-        "slate": [
-          "PWA",
-          "Desktop",
-          "DiscVault 26"
-        ],
-        "title": "Self-hosted",
-        "body": [
-          "Une bibliothèque pensée pour le bureau, des pages de détail plus riches, des fondations PostgreSQL, des plugins, des outils de migration et des contrôles d'administration pour les collectionneurs qui gardent leur catalogue sur leur propre serveur.",
-          "Flux sur invitation, outils propriétaire et admin, accès par rôles, vues d'audit, accès API et intégrations prêtes pour MCP."
-        ],
-        "action": "Installer DiscVault 26"
-      },
-      {
-        "id": "ios",
-        "slate": [
-          "iOS",
-          "iPadOS",
-          "Autonome"
-        ],
-        "title": "iPhone & iPad",
-        "body": [
-          "Fonctionne entièrement sur l'appareil. Scanner, enrichir, filtrer et chercher sans serveur."
-        ],
-        "action": "Télécharger sur l’App Store"
-      },
-      {
-        "id": "android",
-        "slate": [
-          "Android",
-          "Bêta"
-        ],
-        "title": "Android",
-        "body": [
-          "Demandez l’accès sur Discord. Les testeurs acceptés installent via Google Play."
-        ],
-        "action": "Demander l’accès à la bêta Android"
-      }
-    ],
-    "roadmap": "Les applications iOS et Android fonctionnent actuellement de manière autonome. Leur connexion à une installation DiscVault auto-hébergée est prévue ultérieurement.",
-    "migration": [
-      "Migrer depuis Legacy",
-      "Docs"
-    ]
+    "pro": "Une mise à niveau Pro pour les apps arrivera plus tard, sous forme d’achat unique. Ce n’est pas un abonnement. Le prix n’est pas encore fixé.",
+    "support": "DiscVault est l’œuvre d’un seul développeur. S’il mérite une place sur votre étagère, un café est le bienvenu. Un don ne débloque rien ; c’est seulement un merci."
   },
-  "credits": {
-    "install": {
-      "role": "Installer",
-      "name": "DiscVault 26"
-    },
-    "appStore": {
-      "role": "iPhone & iPad",
-      "name": "App Store"
-    },
-    "android": {
-      "role": "Android",
-      "name": "Bêta sur Discord"
-    },
-    "testflight": {
-      "role": "TestFlight",
-      "name": "Bêta"
-    },
-    "source": {
-      "role": "Source",
-      "name": "GitHub"
-    },
-    "community": {
-      "role": "Communauté",
-      "name": "Discord"
-    },
-    "issues": {
-      "role": "Signalements",
-      "name": "GitHub"
-    },
-    "languages": {
-      "role": "Langues",
-      "name": "Vingt"
-    },
-    "privacy": {
-      "role": "Confidentialité",
-      "name": "Politique de confidentialité"
-    },
-    "terms": {
-      "role": "Conditions",
-      "name": "Conditions"
-    },
-    "legacy": {
-      "role": "Legacy",
-      "name": "Migration héritée"
-    },
-    "production": {
-      "role": "Une production de",
-      "name": "Flux76"
-    },
-    "final": [
-      "DiscVault. Conçu pour les ",
-      "collectionneurs."
-    ]
+  "faq": {
+    "title": "Bonnes questions.",
+    "items": {
+      "server": {
+        "question": "Ai-je besoin d’un serveur ?",
+        "answer": [
+          "Non. L’app iPhone et iPad fonctionne entièrement seule. Un serveur ne sert qu’à ceux qui veulent l’édition web auto-hébergée, pensée pour tout un foyer."
+        ]
+      },
+      "account": {
+        "question": "Ai-je besoin d’un compte ?",
+        "answer": [
+          "Pas pour l’app. Avec un DiscVault auto-hébergé, les comptes vivent sur votre propre serveur ; vous invitez qui vous voulez."
+        ]
+      },
+      "data": {
+        "question": "D’où viennent les informations sur les films ?",
+        "answer": [
+          "Les éditions de disques, les codes-barres et les jaquettes viennent de MovieVault, le catalogue derrière DiscVault. Les détails des films, la distribution et Découvrir utilisent TMDB avec votre propre clé gratuite.",
+          "Ce produit utilise l’API TMDB mais n’est ni approuvé ni certifié par TMDB."
+        ]
+      },
+      "sends": {
+        "question": "Qu’est-ce que DiscVault envoie ?",
+        "answer": [
+          "Un code-barres ou un terme de recherche quand vous cherchez quelque chose. Un serveur auto-hébergé signale aussi une fois par jour, anonymement, qu’il fonctionne ; vous pouvez le désactiver. La politique de confidentialité donne les détails."
+        ]
+      },
+      "sync": {
+        "question": "L’app peut-elle se synchroniser avec mon propre serveur ?",
+        "answer": [
+          "Pas encore. Les apps et l’édition auto-hébergée fonctionnent aujourd’hui chacune de leur côté ; leur connexion est prévue ultérieurement."
+        ]
+      },
+      "export": {
+        "question": "Puis-je récupérer ma collection ?",
+        "answer": [
+          "Oui. La sauvegarde et la restauration font partie de l’essentiel gratuit, tout comme un export CSV. Vos données ne sont jamais retenues."
+        ]
+      },
+      "pro": {
+        "question": "DiscVault sera-t-il payant ?",
+        "answer": [
+          "L’essentiel est gratuit : scan, catalogage, sauvegarde et restauration. L’édition auto-hébergée est gratuite et le restera.",
+          "Une mise à niveau Pro pour les apps est prévue pour plus tard, sous forme d’achat unique et non d’abonnement. Son prix n’est pas encore fixé."
+        ]
+      },
+      "android": {
+        "question": "Existe-t-il une app Android ?",
+        "answer": [
+          "Elle est en bêta. Demandez l’accès sur Discord ; les testeurs acceptés l’installent via Google Play."
+        ]
+      },
+      "legacy": {
+        "question": "J’utilise encore DiscVault Legacy. Comment migrer ?",
+        "answer": [
+          "L’édition auto-hébergée dispose d’un assistant de migration qui reprend votre collection depuis Legacy. Le guide de migration détaille la marche à suivre pour Unraid et Docker."
+        ]
+      }
+    }
+  },
+  "cta": {
+    "title": "Scannez votre premier disque.",
+    "lead": "Prenez le boîtier le plus proche sur l’étagère et visez le code-barres avec la caméra. Il n’y a rien d’autre à configurer."
   },
   "footer": {
     "tagline": "DiscVault. Conçu pour les collectionneurs.",
-    "source": "Code source sur GitHub",
-    "legacy": "Migration héritée",
-    "privacy": "Confidentialité",
+    "groups": {
+      "product": "Produit",
+      "help": "Aide",
+      "legal": "Mentions légales"
+    },
+    "privacy": "Politique de confidentialité",
     "terms": "Conditions",
-    "support": "Thread de support"
+    "legacy": "Migration depuis Legacy",
+    "production": "Réalisé par",
+    "tmdb": "Ce produit utilise l’API TMDB mais n’est ni approuvé ni certifié par TMDB."
   }
 }

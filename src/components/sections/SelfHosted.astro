@@ -1,0 +1,82 @@
+---
+import '../../styles/sections/self-hosted.css';
+/** Chapter: the self-hosted edition, shown at full width. */
+import { shotIds } from '../../content/structure';
+import type { MarketingContent } from '../../content/types';
+import { DOCS_URL, LEGACY_PATH } from '../../config';
+import Media from '../media/Media.astro';
+
+interface Props {
+  content: MarketingContent;
+}
+
+const { selfHosted, actions, a11y } = Astro.props.content;
+const [mainShot, ...moreShots] = shotIds;
+---
+
+<section
+  class="chapter self-hosted on-platinum"
+  id="self-hosted"
+  data-chapter="on-platinum"
+>
+  <div class="grid">
+    <h2 class="title self-hosted-title" id="showcase-title" data-rise>
+      {selfHosted.title}
+    </h2>
+    <div class="self-hosted-intro" data-rise>
+      <p class="statement">{selfHosted.lead}</p>
+      <a
+        class="button"
+        href={DOCS_URL}
+        data-cta="self-hosted"
+        data-rank="primary"
+      >
+        {actions.installGuide}
+      </a>
+    </div>
+
+    <figure class="self-hosted-main" data-rise>
+      <Media
+        slot={`self-hosted-${mainShot}`}
+        alt={selfHosted.shots[mainShot].alt}
+        ratio="16 / 9"
+        sizes="100vw"
+        pauseLabel={a11y.pauseMotion}
+        playLabel={a11y.playMotion}
+      />
+    </figure>
+
+    <ul class="self-hosted-shots">
+      {
+        moreShots.map((id) => (
+          <li data-rise>
+            <figure>
+              <Media
+                slot={`self-hosted-${id}`}
+                alt={selfHosted.shots[id].alt}
+                ratio="16 / 10"
+                sizes="(min-width: 56.25rem) 32vw, 100vw"
+                widths={[480, 720, 960, 1440]}
+                pauseLabel={a11y.pauseMotion}
+                playLabel={a11y.playMotion}
+              />
+              <figcaption class="small">
+                {selfHosted.shots[id].label}
+              </figcaption>
+            </figure>
+          </li>
+        ))
+      }
+    </ul>
+
+    <ul class="self-hosted-points" data-rise>
+      {selfHosted.points.map((point) => <li>{point}</li>)}
+    </ul>
+
+    <div class="self-hosted-migration" id="migration" data-rise>
+      <h3>{selfHosted.migration.title}</h3>
+      <p>{selfHosted.migration.body}</p>
+      <a class="text-link" href={LEGACY_PATH}>{actions.migrationGuide}</a>
+    </div>
+  </div>
+</section>

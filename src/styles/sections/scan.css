@@ -1,0 +1,228 @@
+/* Scan: two flat fields meeting on one edge; a barcode in, a record out. */
+.scan {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+.scan-in,
+.scan-out {
+  display: flex;
+  min-height: 90svh;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 3rem;
+  padding: var(--chapter-pad) var(--margin) 2rem;
+  background: var(--ground);
+  color: var(--ink);
+}
+.scan-title {
+  font-size: clamp(2.25rem, 4.8vw, 4.75rem);
+}
+.scan-out .scan-title {
+  text-align: right;
+}
+
+.scan-lead {
+  max-width: 24ch;
+}
+.scan-codes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 13rem));
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+.scan-code {
+  position: relative;
+  display: grid;
+  gap: 0.6rem;
+  padding: 1rem 1rem 0.75rem;
+  border-radius: var(--radius);
+  background: var(--tone);
+  color: var(--ink-2);
+  cursor: pointer;
+  transition:
+    background-color var(--t-fast) ease,
+    color var(--t-fast) ease;
+}
+.scan-code:hover {
+  background: var(--tone-2);
+}
+.scan-code input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+.scan-code:has(input:checked) {
+  background: var(--dv-fmt-4k-fill);
+  color: var(--dv-fmt-4k-on);
+}
+.scan-code:has(input:focus-visible) {
+  outline: 3px solid var(--link);
+  outline-offset: 3px;
+}
+.barcode {
+  width: 100%;
+  height: 3.5rem;
+}
+.scan-digits {
+  font-size: clamp(0.8125rem, 3.4vw, 0.9375rem);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+.scan-fallback {
+  max-width: 34ch;
+  margin-top: 1.5rem;
+}
+
+.scan-out-body {
+  display: grid;
+  justify-items: start;
+  gap: 1.25rem;
+}
+.scan-note {
+  max-width: 40ch;
+}
+
+/* The record: a fragment of the app's own interface. */
+.record {
+  display: none;
+  width: min(100%, 33rem);
+  grid-template-columns: minmax(0, 11.5rem) minmax(0, 1fr);
+  gap: 1.25rem;
+  padding: 1.25rem;
+  border-radius: var(--radius-lg);
+  background: var(--dv-surface-1);
+  color: var(--dv-text);
+}
+.record[data-record='1'] {
+  display: grid;
+}
+@supports selector(:has(*)) {
+  .scan:has([data-scan-index]:checked) .record {
+    display: none;
+  }
+  .scan:has([data-scan-index='1']:checked) .record[data-record='1'],
+  .scan:has([data-scan-index='2']:checked) .record[data-record='2'],
+  .scan:has([data-scan-index='3']:checked) .record[data-record='3'],
+  .scan:has([data-scan-index='4']:checked) .record[data-record='4'] {
+    display: grid;
+    animation: record-in 420ms var(--ease-out);
+  }
+}
+@keyframes record-in {
+  from {
+    opacity: 0;
+    transform: translateY(0.75rem);
+  }
+}
+.record-cover img {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  border-radius: var(--radius);
+  object-fit: cover;
+}
+.record-body {
+  display: grid;
+  min-width: 0;
+  align-content: start;
+  justify-items: start;
+  gap: 0.75rem;
+}
+.record-title {
+  overflow-wrap: anywhere;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+.record-facts {
+  display: grid;
+  width: 100%;
+  gap: 0.4rem;
+  margin-top: 0.25rem;
+}
+.record-facts div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0 1rem;
+}
+.record-facts dt {
+  color: var(--dv-text-2);
+}
+.record-facts dd {
+  text-align: right;
+}
+.record-added {
+  margin-top: 0.5rem;
+  padding: 0.4rem 0.7rem;
+  border-radius: var(--radius-sm);
+  background: color-mix(in srgb, var(--dv-success) 22%, transparent);
+  color: var(--dv-text);
+  font-weight: 600;
+}
+
+.format-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  line-height: 1.3;
+}
+.format-badge-uhd {
+  background: var(--dv-fmt-4k-fill);
+  color: var(--dv-fmt-4k-on);
+}
+.format-badge-bluray {
+  background: var(--dv-fmt-bluray-fill);
+  color: var(--dv-fmt-bluray-on);
+}
+.format-badge-dvd {
+  background: var(--dv-fmt-dvd-fill);
+  color: var(--dv-fmt-dvd-on);
+}
+.format-badge-steel {
+  background: var(--dv-fmt-steel-fill);
+  color: var(--dv-fmt-steel-on);
+}
+
+@media (max-width: 56.24rem) {
+  .scan {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .scan-in,
+  .scan-out {
+    min-height: 62svh;
+    padding-block: 4rem 1.5rem;
+  }
+  .scan-out {
+    flex-direction: column-reverse;
+    padding-block: 1.5rem 4rem;
+  }
+  .scan-out .scan-title {
+    text-align: left;
+  }
+  .scan-title {
+    font-size: clamp(2.25rem, 10.5vw, 4rem);
+  }
+}
+@media (max-width: 26rem) {
+  .record {
+    grid-template-columns: minmax(0, 6rem) minmax(0, 1fr);
+    gap: 0.875rem;
+    padding: 1rem;
+  }
+  .record-facts dd {
+    overflow-wrap: anywhere;
+  }
+  .record-title {
+    font-size: 1.25rem;
+  }
+}

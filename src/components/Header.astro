@@ -1,13 +1,10 @@
 ---
-import '../styles/cinematic.css';
-import '../styles/tokens-dark-scope.css';
 import '../styles/shell.css';
 /**
- * The slate strip: the page's clapperboard. Transparent at rest, ground and
- * a hairline after 80 px of scroll (class `is-scrolled`, set by the motion
- * script), a native <details> menu below 900 px. Release-gate hooks: exactly
- * one docs link with `button button-compact` and one with
- * `mobile-menu-primary`.
+ * The bar: wordmark, docs, language and one action. Plain and sticky. On the
+ * homepage the chapter script lets it take the ground and ink of the chapter
+ * beneath it; without script it stays navy. The section links live in the
+ * hero's swatch column and, below 900 px, in the menu.
  */
 import type { Locale } from '../content/locales';
 import type { MarketingContent } from '../content/types';
@@ -18,82 +15,68 @@ import {
   TESTFLIGHT_URL,
 } from '../config';
 import LocaleSwitcher from './LocaleSwitcher.astro';
+import ThemeSwitcher from './ThemeSwitcher.astro';
 
 interface Props {
   content: MarketingContent;
   locale: Locale;
   homePath: string;
-  showCounter?: boolean;
-  /** A solid ground from the start (the light-capable legal shell). */
-  solid?: boolean;
 }
 
-const {
-  content,
-  locale,
-  homePath,
-  showCounter = true,
-  solid = false,
-} = Astro.props;
-const homeAnchor = (anchor: string) => `${homePath}${anchor}`;
-const links = [
-  { href: homeAnchor('#product'), label: content.nav.library },
-  { href: homeAnchor('#scan'), label: content.nav.scan },
-  { href: homeAnchor('#editions'), label: content.nav.editions },
-  { href: homeAnchor('#privacy'), label: content.nav.privacy },
-  { href: homeAnchor('#install'), label: content.nav.install },
-  { href: DOCS_URL, label: content.nav.docs },
+const { content, locale, homePath } = Astro.props;
+const at = (anchor: string) => `${homePath}${anchor}`;
+const sections = [
+  { href: at('#product'), label: content.nav.collect },
+  { href: at('#scan'), label: content.nav.scan },
+  { href: at('#editions'), label: content.nav.editions },
+  { href: at('#self-hosted'), label: content.nav.selfHosted },
+  { href: at('#privacy'), label: content.nav.privacy },
+  { href: at('#faq'), label: content.nav.faq },
 ];
 ---
 
-<header
-  class:list={['strip', 'cine-dark', { 'strip-solid': solid }]}
-  data-strip
->
-  <div class="strip-inner">
-    <a class="strip-brand" href={homePath} aria-label="DiscVault">
-      <img src="/brand/discvault-mark-96.png" width="24" height="24" alt="" />
-      <span>DiscVault</span>
+<header class="bar on-base" data-bar>
+  <a class="bar-brand" href={homePath} aria-label={content.a11y.home}>
+    <img src="/brand/discvault-mark-96.png" width="28" height="28" alt="" />
+    <span>DiscVault</span>
+  </a>
+
+  <div class="bar-tools">
+    <a class="bar-link" href={DOCS_URL}>{content.nav.docs}</a>
+    <ThemeSwitcher theme={content.theme} />
+    <LocaleSwitcher locale={locale} label={content.a11y.language} />
+    <a
+      class="button button-compact bar-action"
+      href={at('#install')}
+      data-cta="get"
+      data-rank="primary"
+    >
+      {content.nav.get}
     </a>
-
-    <nav class="strip-nav slate" aria-label="DiscVault">
-      {links.map(({ href, label }) => <a href={href}>{label}</a>)}
-    </nav>
-
-    <div class="strip-tools">
-      {
-        showCounter && (
-          <span class="strip-counter slate" aria-hidden="true">
-            Reel <b data-reel-counter>00</b> / 06
-          </span>
-        )
-      }
-      <LocaleSwitcher locale={locale} label={content.nav.language} />
-      <a class="button button-compact strip-install" href={DOCS_URL}>
-        {content.actions.installCompact}
-      </a>
-      <details class="menu">
-        <summary class="slate">{content.nav.menu}</summary>
-        <nav class="menu-sheet" aria-label={content.nav.menu}>
-          <a class="mobile-menu-primary" href={DOCS_URL}>
-            {content.actions.installCompact}
-          </a>
-          {
-            links.map(({ href, label }) => (
-              <a class="slate" href={href}>
-                {label}
-              </a>
-            ))
-          }
-          <a class="slate" href={APP_STORE_URL}>{content.actions.appStore}</a>
-          <a class="slate" href={ANDROID_BETA_SIGNUP_URL}>
-            {content.actions.android}
-          </a>
-          <a class="slate" href={TESTFLIGHT_URL}>
-            {content.actions.testflight}
-          </a>
-        </nav>
-      </details>
-    </div>
+    <details class="menu">
+      <summary>{content.a11y.menu}</summary>
+      <nav class="menu-sheet" aria-label={content.a11y.menu}>
+        <a
+          class="button menu-action"
+          href={at('#install')}
+          data-cta="get"
+          data-rank="primary"
+        >
+          {content.nav.get}
+        </a>
+        {sections.map(({ href, label }) => <a href={href}>{label}</a>)}
+        <a href={DOCS_URL}>{content.nav.docs}</a>
+        <ThemeSwitcher theme={content.theme} />
+        <a href={APP_STORE_URL} data-cta="app-store" data-rank="text">
+          {content.actions.appStore}
+        </a>
+        <a href={ANDROID_BETA_SIGNUP_URL} data-cta="android" data-rank="text">
+          {content.actions.android}
+        </a>
+        <a href={TESTFLIGHT_URL} data-cta="testflight" data-rank="text">
+          {content.actions.testflight}
+        </a>
+      </nav>
+    </details>
   </div>
 </header>

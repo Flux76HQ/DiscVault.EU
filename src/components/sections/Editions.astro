@@ -1,0 +1,36 @@
+---
+import '../../styles/sections/editions.css';
+/** Chapter: editions, set as a poster. Giant names left, small facts right. */
+import { editionIds } from '../../content/structure';
+import type { MarketingContent } from '../../content/types';
+
+interface Props {
+  content: MarketingContent;
+}
+
+const { editions } = Astro.props.content;
+---
+
+<section
+  class="chapter editions on-accent"
+  id="editions"
+  data-chapter="on-accent"
+>
+  <div class="grid editions-head">
+    <h2 class="title editions-title" data-rise>{editions.title}</h2>
+    <p class="statement editions-lead" data-rise>{editions.lead}</p>
+  </div>
+  <ul class="editions-list">
+    {
+      editionIds.map((id) => (
+        <li class="editions-item" data-rise>
+          <span class="editions-name">{editions.items[id].name}</span>
+          <span class="editions-detail tabular">
+            {editions.items[id].detail}
+          </span>
+        </li>
+      ))
+    }
+  </ul>
+  <p class="small editions-note">{editions.note}</p>
+</section>

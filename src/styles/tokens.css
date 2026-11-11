@@ -1,5 +1,5 @@
 /*
- * Generated from Flux76HQ/App-Guidance/docs/branding/apps/discvault/pwa/tokens.json
+ * Generated from Flux76HQ/App-Guidance/projects/discvault/branding/pwa/tokens.json
  * Revision: 957e28901e0ce54d7bdc297593f716bb9c0fe9fd
  * Brand: DiscVault Chrome & Blue v3.1
  * Run "pnpm brand:build" after updating tokens.json.
@@ -40,10 +40,11 @@
   --dv-fmt-steel-brushed: linear-gradient(115deg, #5C6875 0%, #8A97A6 18%, #D6E0EA 32%, #93A1B0 44%, #6B7683 58%, #B9C6D3 72%, #7E8B99 86%, #566270 100%);
   --dv-fmt-digital-fill: #22C2A8;
   --dv-fmt-digital-on: #04211C;
+  color-scheme: dark;
 }
 
 @media (prefers-color-scheme: light) {
-  :root {
+  :root:not([data-theme='dark']) {
   --dv-bg: #F4F7FB;
   --dv-surface-1: #FFFFFF;
   --dv-surface-2: #EDF1F7;
@@ -71,9 +72,45 @@
   --dv-fmt-steel-brushed: linear-gradient(115deg, #6E7B89 0%, #9AA7B5 18%, #E2EAF2 32%, #A4B1BF 44%, #7C8996 58%, #C6D2DE 72%, #8D9AA8 86%, #67737F 100%);
   --dv-fmt-digital-fill: #0E9C86;
   --dv-fmt-digital-on: #FFFFFF;
-    --dv-accent-bright: #1F5FBF;
-    --dv-sheen: conic-gradient(from 210deg, #5E9AD0, #B3A8E4, #D6A8DC, #E8E4EE, #5CC4A8, #3B7BC4, #2A6FD6, #5E9AD0);
-    --dv-shadow: 0 1px 2px rgba(20,30,45,.06), 0 12px 32px rgba(30,60,110,.10);
-    --dv-theme-color: #F4F7FB;
+  --dv-accent-bright: #1F5FBF;
+  --dv-sheen: conic-gradient(from 210deg, #5E9AD0, #B3A8E4, #D6A8DC, #E8E4EE, #5CC4A8, #3B7BC4, #2A6FD6, #5E9AD0);
+  --dv-shadow: 0 1px 2px rgba(20,30,45,.06), 0 12px 32px rgba(30,60,110,.10);
+  --dv-theme-color: #F4F7FB;
+  color-scheme: light;
   }
+}
+
+:root[data-theme='light'] {
+  --dv-bg: #F4F7FB;
+  --dv-surface-1: #FFFFFF;
+  --dv-surface-2: #EDF1F7;
+  --dv-surface-3: #E1E8F1;
+  --dv-border-subtle: #E4EAF2;
+  --dv-border: #D0D9E5;
+  --dv-text: #0E141F;
+  --dv-text-2: #4A5666;
+  --dv-text-3: #7C8798;
+  --dv-platinum: #6B7787;
+  --dv-platinum-dim: #9AA6B4;
+  --dv-success: #0E9F6E;
+  --dv-warning: #C2540B;
+  --dv-error: #DC2626;
+  --dv-info: #0E7C93;
+  --dv-fmt-4k-fill: #12181F;
+  --dv-fmt-4k-on: #FFFFFF;
+  --dv-fmt-bluray-fill: #1E6FD8;
+  --dv-fmt-bluray-on: #FFFFFF;
+  --dv-fmt-dvd-fill: #8C7345;
+  --dv-fmt-dvd-deep: #6B5730;
+  --dv-fmt-dvd-on: #FFFFFF;
+  --dv-fmt-steel-fill: #556270;
+  --dv-fmt-steel-on: #FFFFFF;
+  --dv-fmt-steel-brushed: linear-gradient(115deg, #6E7B89 0%, #9AA7B5 18%, #E2EAF2 32%, #A4B1BF 44%, #7C8996 58%, #C6D2DE 72%, #8D9AA8 86%, #67737F 100%);
+  --dv-fmt-digital-fill: #0E9C86;
+  --dv-fmt-digital-on: #FFFFFF;
+  --dv-accent-bright: #1F5FBF;
+  --dv-sheen: conic-gradient(from 210deg, #5E9AD0, #B3A8E4, #D6A8DC, #E8E4EE, #5CC4A8, #3B7BC4, #2A6FD6, #5E9AD0);
+  --dv-shadow: 0 1px 2px rgba(20,30,45,.06), 0 12px 32px rgba(30,60,110,.10);
+  --dv-theme-color: #F4F7FB;
+  color-scheme: light;
 }

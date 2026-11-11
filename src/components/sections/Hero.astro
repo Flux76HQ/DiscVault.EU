@@ -1,0 +1,73 @@
+---
+import '../../styles/sections/hero.css';
+/**
+ * The first screen: a panel holding the title, what DiscVault is, the two
+ * ways in and the library itself; beside it the swatch column, which is both
+ * the section navigation and a preview of the chapters' colours.
+ */
+import type { MarketingContent } from '../../content/types';
+import { APP_STORE_URL, DOCS_URL } from '../../config';
+import Media from '../media/Media.astro';
+
+interface Props {
+  content: MarketingContent;
+}
+
+const { content } = Astro.props;
+const { hero, nav, actions, a11y } = content;
+const swatches = [
+  { href: '#product', label: nav.collect, field: 'on-raised' },
+  { href: '#scan', label: nav.scan, field: 'on-uhd' },
+  { href: '#editions', label: nav.editions, field: 'on-accent' },
+  { href: '#self-hosted', label: nav.selfHosted, field: 'on-platinum' },
+  { href: '#privacy', label: nav.privacy, field: 'on-dvd' },
+];
+---
+
+<section class="hero on-base" id="discvault26" data-chapter="on-base">
+  <div class="hero-panel on-surface">
+    <div class="hero-copy">
+      <h1 class="title hero-title">{hero.title}</h1>
+      <p class="hero-lead">{hero.lead}</p>
+      <div class="actions hero-actions">
+        <a
+          class="button"
+          href={APP_STORE_URL}
+          data-cta="app-store"
+          data-rank="primary"
+        >
+          {actions.appStore}
+        </a>
+        <a
+          class="button button-quiet"
+          href={DOCS_URL}
+          data-cta="self-hosted"
+          data-rank="primary"
+        >
+          {actions.selfHost}
+        </a>
+      </div>
+      <p class="small note hero-note">{hero.note}</p>
+    </div>
+    <Media
+      slot="hero"
+      alt={hero.mediaAlt}
+      ratio="16 / 8"
+      sizes="(min-width: 56.25rem) 78vw, 100vw"
+      priority
+      pauseLabel={a11y.pauseMotion}
+      playLabel={a11y.playMotion}
+      class="hero-view"
+    />
+  </div>
+
+  <nav class="hero-swatches" aria-label={a11y.sections}>
+    {
+      swatches.map(({ href, label, field }) => (
+        <a class:list={['hero-swatch', field]} href={href}>
+          {label}
+        </a>
+      ))
+    }
+  </nav>
+</section>

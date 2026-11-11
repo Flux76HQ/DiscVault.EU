@@ -1,0 +1,296 @@
+/*
+ * Base: reset, elements, the type steps, the grid, the chapter, the button
+ * and the shared helpers. Every page loads this; sections add their own file.
+ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4.5rem;
+  background: var(--dv-bg);
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  background: var(--dv-bg);
+  color: var(--dv-text);
+  font-family: var(--font);
+  font-size: var(--step-body);
+  font-kerning: normal;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+img,
+video {
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+p,
+ul,
+ol,
+dl,
+dd,
+figure {
+  margin: 0;
+}
+
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: var(--link, var(--dv-accent-bright));
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.18em;
+}
+
+button,
+select,
+summary,
+a,
+label {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button,
+select,
+input {
+  font: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--link, var(--dv-accent-bright));
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+::selection {
+  background: var(--dv-accent);
+  color: var(--dv-accent-on);
+}
+
+/* Type steps */
+.display,
+.title {
+  font-weight: 700;
+  letter-spacing: -0.045em;
+  line-height: 0.96;
+  text-wrap: balance;
+}
+.display {
+  font-size: var(--step-display);
+}
+.title {
+  font-size: var(--step-title);
+}
+.statement {
+  font-size: var(--step-statement);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.22;
+  text-wrap: pretty;
+}
+.small {
+  font-size: var(--step-small);
+  line-height: 1.45;
+}
+.note {
+  color: var(--ink-2);
+}
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+:lang(ja) .display,
+:lang(ja) .title,
+:lang(ko) .display,
+:lang(ko) .title,
+:lang(zh) .display,
+:lang(zh) .title {
+  letter-spacing: -0.01em;
+  line-height: 1.08;
+}
+/* Korean breaks between words, not inside them; Japanese and Chinese have
+   no word spaces, so they must be free to break anywhere. */
+:lang(ko) .display,
+:lang(ko) .title {
+  word-break: keep-all;
+}
+
+/* The grid: twelve columns, one pair of margins, everywhere. */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: var(--gutter);
+  padding-inline: var(--margin);
+}
+
+/* A chapter: one flat field, floor to ceiling, butted against the next. */
+.chapter {
+  position: relative;
+  background: var(--ground);
+  color: var(--ink);
+  padding-block: var(--chapter-pad);
+}
+
+/* One button shape for the whole site. */
+.button {
+  display: inline-flex;
+  min-height: 3.25rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.85rem 1.4rem;
+  border: 0;
+  border-radius: var(--radius);
+  background: var(--action);
+  color: var(--action-ink);
+  font-size: 1.0625rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background-color var(--t-fast) ease,
+    transform var(--t-fast) ease;
+}
+.button:hover {
+  background: var(--action-hover);
+}
+.button:active {
+  background: var(--action-press);
+  transform: scale(0.98);
+}
+.button-quiet {
+  background: var(--tone);
+  color: var(--ink);
+}
+.button-quiet:hover {
+  background: var(--tone-2);
+}
+.button-quiet:active {
+  background: var(--tone-2);
+}
+.button-compact {
+  min-height: 2.75rem;
+  padding: 0.55rem 1rem;
+  font-size: var(--step-small);
+}
+.text-link {
+  color: var(--link);
+  font-weight: 500;
+}
+.text-link:hover {
+  text-decoration-thickness: 0.14em;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1rem;
+}
+
+/* A real interface fragment or screenshot: the app's own corners. */
+.shot {
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background: var(--dv-bg);
+}
+.shot img,
+.shot video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: fixed;
+  z-index: 100;
+  top: 0.75rem;
+  left: 0.75rem;
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  padding: 0.6rem 1rem;
+  border-radius: var(--radius);
+  background: var(--dv-accent);
+  color: var(--dv-accent-on);
+  font-size: var(--step-small);
+  font-weight: 600;
+  transform: translateY(-250%);
+}
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+/*
+ * Entrances. Content is visible without script: the class that hides a part
+ * is only set by the motion script, on parts still below the fold.
+ */
+.will-rise {
+  opacity: 0;
+  transform: translateY(1.5rem);
+}
+.has-risen {
+  opacity: 1;
+  transform: none;
+  transition:
+    opacity var(--t-move) var(--ease-out),
+    transform var(--t-move) var(--ease-out);
+  transition-delay: calc(var(--rise-index, 0) * var(--stagger));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
+  }
+  .will-rise {
+    opacity: 1;
+    transform: none;
+  }
+}

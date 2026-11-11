@@ -1,0 +1,42 @@
+---
+import '../../styles/sections/runs.css';
+/** A band of names running off both edges: where DiscVault runs today. */
+import type { MarketingContent } from '../../content/types';
+
+interface Props {
+  content: MarketingContent;
+}
+
+const { runs, a11y } = Astro.props.content;
+---
+
+<section
+  class="runs on-base"
+  data-chapter="on-base"
+  aria-labelledby="runs-title"
+>
+  <h2 class="sr-only" id="runs-title">{runs.title}</h2>
+  <div class="runs-band" aria-hidden="true">
+    <div class="runs-track">
+      {
+        [0, 1].map(() => (
+          <ul class="runs-names">
+            {runs.names.map((name) => (
+              <li>{name}</li>
+            ))}
+          </ul>
+        ))
+      }
+    </div>
+  </div>
+  <ul class="sr-only">
+    {runs.names.map((name) => <li>{name}</li>)}
+  </ul>
+  <div class="runs-foot">
+    <p class="runs-caption">{runs.caption}</p>
+    <label class="runs-pause small">
+      <input type="checkbox" data-runs-pause />
+      <span>{a11y.pauseMotion}</span>
+    </label>
+  </div>
+</section>

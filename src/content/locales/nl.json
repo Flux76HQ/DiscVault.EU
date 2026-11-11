@@ -2,234 +2,373 @@
   "locale": "nl",
   "languageName": "Nederlands",
   "seo": {
-    "title": "DiscVault — een catalogus voor je discs",
-    "description": "DiscVault catalogiseert je films op 4K, Blu-ray en dvd. Scan een barcode, houd edities uit elkaar, op je apparaat of je eigen server. Geen tracking."
+    "title": "DiscVault — catalogus voor je films op disc",
+    "description": "DiscVault catalogiseert je films op 4K, Blu-ray en DVD. Scan een barcode, houd edities en boxsets uit elkaar, op iPhone of eigen server. Geen reclame, geen tracking.",
+    "ogAlt": "DiscVault: een wand van filmhoezen met labels voor 4K, Blu-ray en DVD."
+  },
+  "a11y": {
+    "skip": "Naar de inhoud",
+    "home": "DiscVault, startpagina",
+    "menu": "Menu",
+    "language": "Taal",
+    "sections": "Secties",
+    "pauseMotion": "Beweging pauzeren",
+    "playMotion": "Beweging afspelen"
+  },
+  "theme": {
+    "label": "Thema",
+    "system": "Systeem",
+    "light": "Licht",
+    "dark": "Donker"
   },
   "nav": {
-    "library": "Bibliotheek",
+    "collect": "Verzamelen",
     "scan": "Scannen",
     "editions": "Edities",
+    "selfHosted": "Zelf hosten",
     "privacy": "Privacy",
-    "install": "Installeren",
+    "faq": "Vragen",
     "docs": "Docs",
-    "menu": "Menu",
-    "language": "Talen"
+    "get": "DiscVault installeren"
   },
   "actions": {
-    "install": "Installeer DiscVault 26",
-    "installCompact": "Installeer v26",
     "appStore": "Download in de App Store",
+    "selfHost": "DiscVault zelf hosten",
     "android": "Android-bèta aanvragen",
-    "testflight": "TestFlight-bèta",
-    "privacy": "Privacybeleid"
+    "testflight": "Doe mee met de TestFlight-bèta",
+    "installGuide": "Lees de installatiegids",
+    "migrationGuide": "Lees de migratiegids",
+    "privacyPolicy": "Lees het privacybeleid",
+    "discord": "Kom erbij op Discord",
+    "github": "Broncode op GitHub",
+    "issues": "Meld een probleem",
+    "support": "Trakteer me op een koffie",
+    "moreAnswers": "Meer antwoorden in de documentatie",
+    "backToTop": "Terug naar boven"
   },
-  "leader": {
-    "slate": [
-      "DiscVault 26",
-      "Een catalogus voor je discs",
-      "Self-hosted",
-      "iPhone & iPad",
-      "Android-bèta"
-    ],
-    "voice": [
-      "Licht, ",
-      "bewaard."
-    ],
-    "lead": "DiscVault catalogiseert de films die je bezit — op disc, op je plank, op je eigen server.",
-    "note": [
-      "PWA & desktop",
-      "Installatiegids"
-    ]
+  "hero": {
+    "title": "Je filmkast, gecatalogiseerd.",
+    "lead": "DiscVault houdt elke film bij die je op 4K, Blu-ray of DVD hebt. Scan een barcode en titel, editie en hoes worden vanzelf ingevuld.",
+    "note": "Voor iPhone en iPad, of zelf gehost op je eigen server. Android is in bèta.",
+    "mediaAlt": "De bibliotheek van DiscVault: een wand van filmhoezen, elk met een label voor 4K, Blu-ray, DVD of boxset."
   },
-  "shelf": {
-    "slate": [
-      "Reel 01",
-      "De plank"
-    ],
-    "counter": [
-      "45 / 45 films",
-      "29 tegels"
-    ],
-    "voice": [
-      "Elke editie, waar je hem ",
-      "liet",
-      " staan."
-    ],
-    "lead": "Blader door posters, wissel naar lijst- of detailweergave, filter op formaat, open boxsets en containers. Snel bij grote collecties."
+  "collect": {
+    "title": "Gebouwd voor verzamelaars.",
+    "blocks": {
+      "library": {
+        "title": "Een bibliotheek die eruitziet als je kast",
+        "points": [
+          "Posters, een lijst of een detailweergave",
+          "Filter op 4K, Blu-ray of DVD",
+          "Zoek op titel, barcode, cast of crew",
+          "Boxsets tonen de films die erin zitten",
+          "Snel, ook bij een grote collectie"
+        ],
+        "mediaAlt": "De bibliotheek op een telefoon: een raster van filmhoezen met formaatlabels."
+      },
+      "detail": {
+        "title": "Elke film krijgt een volwaardige pagina",
+        "points": [
+          "Editie, formaat en barcode",
+          "Cast, crew en afbeeldingen",
+          "Je eigen poster of achtergrond",
+          "Series en hun seizoenen",
+          "Kopieën in Plex en Jellyfin zijn gemarkeerd"
+        ],
+        "mediaAlt": "De pagina van een film op een telefoon: hoes, achtergrond, jaar, formaat en barcode."
+      },
+      "lists": {
+        "title": "Lijsten voor wat hierna komt",
+        "points": [
+          "Een kijklijst voor vanavond",
+          "Kijkgeschiedenis, met datums",
+          "Een verlanglijst met prijsmeldingen",
+          "Uitlenen: wie heeft welke disc",
+          "Tags die je zelf bedenkt"
+        ],
+        "mediaAlt": "De verlanglijst: vier films met hun huidige prijs en streefprijs."
+      },
+      "insight": {
+        "title": "Weet wat je hebt",
+        "points": [
+          "Statistieken per formaat, decennium en genre",
+          "Een vaste plek voor elke disc, tot op de plank",
+          "Je eigen cijfer voor elke film",
+          "Wat uitgeleend is, en wat al terug had moeten zijn"
+        ],
+        "mediaAlt": "Statistieken: 54 films verdeeld over de formaten Blu-ray, 4K UHD en DVD."
+      },
+      "iphone": {
+        "title": "Thuis op iPhone en iPad",
+        "points": [
+          "Vraag Siri hoeveel films van een regisseur je hebt",
+          "Vind elke disc via Spotlight",
+          "Ontdek wat je hierna kunt toevoegen, met je eigen TMDB-sleutel",
+          "Vergrendel de app met Face ID",
+          "iCloud houdt je apparaten gelijk"
+        ],
+        "mediaAlt": "DiscVault op een iPhone."
+      }
+    }
   },
-  "read": {
-    "slate": [
-      "Reel 02",
-      "De scan",
-      "EAN → Titel · Jaar · Formaat · Cover"
-    ],
-    "voice": [
-      "Richt de camera. De disc ",
-      "leest",
-      " zichzelf."
-    ],
-    "lead": "Scan een barcode en DiscVault vult titel, jaar, formaat en coverafbeelding in. Of zoek op naam.",
-    "note": [
-      "iPhone & iPad",
-      "Zelfstandig",
-      "Geen server nodig"
-    ],
-    "captureAlt": "DiscVault op iPhone: een film toevoegen na het scannen van de barcode"
+  "scan": {
+    "titleStart": "Richt de camera.",
+    "titleEnd": "De rest gaat vanzelf.",
+    "lead": "Elke disc heeft een barcode. Kies een van deze en kijk wat DiscVault ervan maakt.",
+    "record": {
+      "format": "Formaat",
+      "year": "Jaar",
+      "runtime": "Speelduur",
+      "minutes": "min",
+      "director": "Regisseur",
+      "barcode": "Barcode",
+      "added": "Toegevoegd aan je bibliotheek"
+    },
+    "note": "Op iPhone en iPad staat de disccatalogus op het apparaat zelf, dus scannen werkt ook offline.",
+    "fallback": "Geen barcode? Zoek op titel, of plak een IMDb- of TMDB-ID."
   },
-  "edition": {
-    "slate": [
-      "Reel 03",
-      "De editie",
-      "4K · BD · dvd · Steel · Boxset"
-    ],
-    "voice": [
-      "Edities ",
-      "tellen."
-    ],
-    "lead": "Een 4K-disc is geen Blu-ray. Een steelbook is geen keepcase. Boxsets, containers en de discs in een release worden gecatalogiseerd als wat ze zijn.",
-    "spines": [
-      "4K Ultra HD",
-      "Blu-ray",
-      "DVD",
-      "Steelbook",
-      "Boxset · 8 films"
-    ]
+  "editions": {
+    "title": "Edities tellen.",
+    "lead": "Een 4K-disc is geen Blu-ray. Een Steelbook is geen gewoon doosje. Boxsets, en de discs binnen één uitgave, worden gecatalogiseerd als wat ze zijn.",
+    "items": {
+      "uhd": {
+        "name": "4K Ultra HD",
+        "detail": "17 op deze plank"
+      },
+      "bluray": {
+        "name": "Blu-ray",
+        "detail": "26 op deze plank"
+      },
+      "dvd": {
+        "name": "DVD",
+        "detail": "11 op deze plank"
+      },
+      "steelbook": {
+        "name": "Steelbook",
+        "detail": "1 op deze plank"
+      },
+      "boxset": {
+        "name": "Boxsets",
+        "detail": "3 sets, 12 films"
+      }
+    },
+    "note": "De plank op deze pagina is een demobibliotheek met 54 verzonnen films."
   },
-  "vault": {
-    "slate": [
-      "Reel 04",
-      "De kluis",
-      "0 trackers",
-      "0 advertenties",
-      "Geen profilering"
+  "platforms": {
+    "title": "Twee plekken voor je collectie.",
+    "lead": "Op het apparaat in je broekzak, of op een server bij je thuis. Allebei zijn het DiscVault; kies waar je collectie staat.",
+    "columns": {
+      "ios": {
+        "name": "iPhone en iPad",
+        "sub": "De app"
+      },
+      "selfHosted": {
+        "name": "Je eigen server",
+        "sub": "Zelf gehost"
+      }
+    },
+    "rows": {
+      "home": {
+        "label": "Waar het staat",
+        "ios": "Op je apparaat, gesynchroniseerd via je eigen iCloud",
+        "selfHosted": "Op een server die je zelf draait"
+      },
+      "add": {
+        "label": "Een disc toevoegen",
+        "ios": "Scan met de camera, zoek of typ het zelf in",
+        "selfHosted": "Barcode, zoeken of een complete import"
+      },
+      "share": {
+        "label": "Delen",
+        "ios": "Je eigen apparaten",
+        "selfHosted": "Een huishouden: uitnodigingen, groepen en rollen"
+      },
+      "signin": {
+        "label": "Inloggen",
+        "ios": "Helemaal geen account",
+        "selfHosted": "Passkeys voorop; wachtwoord, TOTP of OpenID Connect kan ook"
+      },
+      "extras": {
+        "label": "En verder",
+        "ios": "Siri, Spotlight en vergrendeling met Face ID",
+        "selfHosted": "Plug-ins, API-sleutels, een MCP-endpoint, back-up en herstel"
+      },
+      "languages": {
+        "label": "Talen",
+        "ios": "13",
+        "selfHosted": "29"
+      }
+    },
+    "android": {
+      "title": "Android",
+      "body": "In bèta. Vraag toegang aan via Discord; goedgekeurde testers installeren via Google Play."
+    },
+    "roadmap": "De apps werken nu zelfstandig. Koppeling met een zelfgehoste DiscVault staat gepland voor een later stadium."
+  },
+  "selfHosted": {
+    "title": "Op je eigen server.",
+    "lead": "De zelfgehoste versie is een webapp voor het hele huishouden. Je installeert hem op Docker, Unraid of Home Assistant.",
+    "shots": {
+      "library": {
+        "label": "Bibliotheek",
+        "alt": "DiscVault in een browser: de bibliotheek als een wand van hoezen, met zoekveld, weergavekeuze en formaatfilters."
+      },
+      "detail": {
+        "label": "Detail",
+        "alt": "DiscVault: de detailpagina van een film met achtergrond, hoes, editie en metadata."
+      },
+      "boxset": {
+        "label": "Boxset",
+        "alt": "DiscVault: een geopende boxset met de films die erin zitten."
+      },
+      "lists": {
+        "label": "Kijklijst",
+        "alt": "DiscVault: de kijklijst als een raster van hoezen."
+      }
+    },
+    "points": [
+      "Accounts alleen op uitnodiging, met rollen",
+      "Passkeys voorop",
+      "Plug-ins voor metadata en prijzen",
+      "API-sleutels en een MCP-endpoint",
+      "Back-up en herstel",
+      "Te installeren als app op je telefoon"
     ],
-    "voice": [
-      "Het staat waar jij het ",
-      "neerzet."
+    "migration": {
+      "title": "Kom je van DiscVault Legacy?",
+      "body": "De migratiewizard zet je collectie over naar de huidige DiscVault."
+    }
+  },
+  "runs": {
+    "title": "Waar DiscVault draait",
+    "names": [
+      "iPhone",
+      "iPad",
+      "Docker",
+      "Unraid",
+      "Home Assistant",
+      "Android-bèta",
+      "Elke browser"
     ],
+    "caption": "Waar DiscVault op dit moment draait."
+  },
+  "privacy": {
+    "title": "Het staat waar jij het neerzet.",
     "lead": "Op je apparaat, of op een server die je zelf draait. Geen profilering, geen advertenties, niemand die meekijkt wat je kijkt.",
+    "tiles": {
+      "ads": {
+        "figure": "0",
+        "label": "advertenties"
+      },
+      "trackers": {
+        "figure": "0",
+        "label": "trackers"
+      },
+      "profiles": {
+        "figure": "0",
+        "label": "profielen"
+      },
+      "count": {
+        "figure": "1",
+        "label": "anonieme dagtelling"
+      }
+    },
     "body": [
-      "De iPhone- en iPad-app bewaart je collectie op het apparaat. DiscVault 26 bewaart hem op een server die jij beheert. In beide gevallen verlaat alleen een barcode of een zoekterm het apparaat.",
+      "De iPhone- en iPad-app bewaart je collectie op het apparaat. De zelfgehoste versie bewaart hem op een server die jij beheert. In beide gevallen verlaat alleen een barcode of een zoekterm het apparaat.",
       "Eén uitzondering: de iPhone- en iPad-app en een self-hosted server melden één keer per dag aan api.discvault.eu dat ze in gebruik zijn. Ze sturen hun versie en het aantal dagen sinds hun vorige melding: geen identificatie en niets over je collectie. Dat is er alleen om in te schatten hoeveel DiscVault gebruikt wordt. Op een server kun je het uitzetten; de app stuurt het altijd."
     ]
   },
-  "formats": {
-    "slate": [
-      "Reel 05",
-      "De formaten"
+  "plans": {
+    "titleStart": "De kern is",
+    "titleFree": "gratis",
+    "titleEnd": ".",
+    "lead": "Scannen, catalogiseren, zoeken, back-ups maken en terugzetten kost niets. De zelfgehoste versie is gratis, en blijft gratis.",
+    "points": [
+      "Scannen en toevoegen, zonder limiet",
+      "Volledige back-up en herstel",
+      "Kijklijst, geschiedenis en verlanglijst",
+      "iCloud-synchronisatie tussen je apparaten",
+      "Je gegevens kun je er altijd uit halen"
     ],
-    "voice": [
-      "Drie manieren ",
-      "binnen."
-    ],
-    "lead": "Self-hosted DiscVault 26 vandaag. iPhone en iPad zelfstandig. Android in bèta.",
-    "routes": [
-      {
-        "id": "self-hosted",
-        "slate": [
-          "PWA",
-          "Desktop",
-          "DiscVault 26"
-        ],
-        "title": "Self-hosted",
-        "body": [
-          "Een desktop-first bibliotheek, rijkere detailpagina's, PostgreSQL-fundamenten, plugins, migratietools en admin-controls voor verzamelaars die hun catalogus op hun eigen server houden.",
-          "Invite-only flows, eigenaar- en admin-tools, rolgebaseerde toegang, auditweergaven, API-toegang en MCP-ready integraties."
-        ],
-        "action": "Installeer DiscVault 26"
-      },
-      {
-        "id": "ios",
-        "slate": [
-          "iOS",
-          "iPadOS",
-          "Zelfstandig"
-        ],
-        "title": "iPhone & iPad",
-        "body": [
-          "Draait volledig op het apparaat. Scannen, verrijken, filteren en zoeken zonder server."
-        ],
-        "action": "Download in de App Store"
-      },
-      {
-        "id": "android",
-        "slate": [
-          "Android",
-          "Bèta"
-        ],
-        "title": "Android",
-        "body": [
-          "Vraag toegang aan via Discord. Goedgekeurde testers installeren via Google Play."
-        ],
-        "action": "Android-bèta aanvragen"
-      }
-    ],
-    "roadmap": "De iOS- en Android-apps werken nu zelfstandig. Koppeling met een self-hosted DiscVault-installatie staat gepland voor een later stadium.",
-    "migration": [
-      "Migreren vanaf Legacy",
-      "Docs"
-    ]
+    "pro": "Een Pro-upgrade voor de apps komt later, als eenmalige aankoop. Geen abonnement. De prijs staat nog niet vast.",
+    "support": "DiscVault wordt gemaakt door één ontwikkelaar. Als het een plek in je kast verdient, is een kop koffie welkom. Een donatie ontgrendelt niets; het is alleen een bedankje."
   },
-  "credits": {
-    "install": {
-      "role": "Installeren",
-      "name": "DiscVault 26"
-    },
-    "appStore": {
-      "role": "iPhone & iPad",
-      "name": "App Store"
-    },
-    "android": {
-      "role": "Android",
-      "name": "Bèta via Discord"
-    },
-    "testflight": {
-      "role": "TestFlight",
-      "name": "Bèta"
-    },
-    "source": {
-      "role": "Broncode",
-      "name": "GitHub"
-    },
-    "community": {
-      "role": "Community",
-      "name": "Discord"
-    },
-    "issues": {
-      "role": "Problemen",
-      "name": "GitHub"
-    },
-    "languages": {
-      "role": "Talen",
-      "name": "Twintig"
-    },
-    "privacy": {
-      "role": "Privacy",
-      "name": "Privacybeleid"
-    },
-    "terms": {
-      "role": "Voorwaarden",
-      "name": "Voorwaarden"
-    },
-    "legacy": {
-      "role": "Legacy",
-      "name": "Migratie van oudere versie"
-    },
-    "production": {
-      "role": "Een productie van",
-      "name": "Flux76"
-    },
-    "final": [
-      "DiscVault. Gebouwd voor ",
-      "verzamelaars."
-    ]
+  "faq": {
+    "title": "Goede vragen.",
+    "items": {
+      "server": {
+        "question": "Heb ik een server nodig?",
+        "answer": [
+          "Nee. De app voor iPhone en iPad werkt volledig zelfstandig. Een server heb je alleen nodig voor de zelfgehoste webversie, bedoeld voor een heel huishouden."
+        ]
+      },
+      "account": {
+        "question": "Heb ik een account nodig?",
+        "answer": [
+          "Niet voor de app. Bij een zelfgehoste DiscVault staan de accounts op je eigen server; je nodigt uit wie je wilt."
+        ]
+      },
+      "data": {
+        "question": "Waar komt de filminformatie vandaan?",
+        "answer": [
+          "Disc-uitgaven, barcodes en hoezen komen van MovieVault, de catalogus achter DiscVault. Filmdetails, cast en Ontdekken gebruiken TMDB met je eigen gratis sleutel.",
+          "Dit product gebruikt de TMDB-API, maar wordt niet door TMDB onderschreven of gecertificeerd."
+        ]
+      },
+      "sends": {
+        "question": "Wat stuurt DiscVault naar buiten?",
+        "answer": [
+          "Een barcode of een zoekterm wanneer je iets opzoekt. Een zelfgehoste server meldt daarnaast één keer per dag, anoniem, dat hij draait; dat kun je uitzetten. De details staan in het privacybeleid."
+        ]
+      },
+      "sync": {
+        "question": "Kan de app synchroniseren met mijn eigen server?",
+        "answer": [
+          "Nog niet. De apps en de zelfgehoste versie werken nu elk zelfstandig; een koppeling staat gepland voor een later stadium."
+        ]
+      },
+      "export": {
+        "question": "Krijg ik mijn collectie er ook weer uit?",
+        "answer": [
+          "Ja. Back-up en herstel horen bij de gratis kern, en een CSV-export ook. Je gegevens worden nooit achtergehouden."
+        ]
+      },
+      "pro": {
+        "question": "Gaat DiscVault geld kosten?",
+        "answer": [
+          "De kern is gratis: scannen, catalogiseren, back-up en herstel. De zelfgehoste versie is gratis en blijft gratis.",
+          "Een Pro-upgrade voor de apps staat gepland voor later, als eenmalige aankoop en niet als abonnement. De prijs staat nog niet vast."
+        ]
+      },
+      "android": {
+        "question": "Is er een Android-app?",
+        "answer": [
+          "Die is in bèta. Vraag toegang aan via Discord; goedgekeurde testers installeren hem via Google Play."
+        ]
+      },
+      "legacy": {
+        "question": "Ik draai nog DiscVault Legacy. Hoe stap ik over?",
+        "answer": [
+          "De zelfgehoste versie heeft een migratiewizard die je collectie overzet vanuit Legacy. De migratiegids loopt de stappen door voor Unraid en Docker."
+        ]
+      }
+    }
+  },
+  "cta": {
+    "title": "Scan je eerste disc.",
+    "lead": "Pak het dichtstbijzijnde doosje uit de kast en richt de camera op de barcode. Meer is er niet in te stellen."
   },
   "footer": {
     "tagline": "DiscVault. Gebouwd voor verzamelaars.",
-    "source": "Broncode op GitHub",
-    "legacy": "Migratie van oudere versie",
-    "privacy": "Privacy",
+    "groups": {
+      "product": "Product",
+      "help": "Hulp",
+      "legal": "Juridisch"
+    },
+    "privacy": "Privacybeleid",
     "terms": "Voorwaarden",
-    "support": "Supportthread"
+    "legacy": "Migreren vanaf Legacy",
+    "production": "Gemaakt door",
+    "tmdb": "Dit product gebruikt de TMDB-API, maar wordt niet door TMDB onderschreven of gecertificeerd."
   }
 }

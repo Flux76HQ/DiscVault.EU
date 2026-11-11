@@ -1,0 +1,94 @@
+<!doctype html><meta charset="utf-8">
+<style>
+@font-face{font-family:Inter;src:url(inter.woff2) format('woff2');font-weight:100 900}
+*{box-sizing:border-box;margin:0}
+html,body{width:100%;height:100%;overflow:hidden;background:#090F1A}
+body{font-family:Inter,sans-serif;color:#EAF0F7;font-weight:700;letter-spacing:-.045em;--u:calc(100vw/1920)}
+body.portrait{--u:calc(100vw/1080)}
+.scene{position:absolute;inset:0;opacity:0;overflow:hidden}
+.big{font-size:calc(150*var(--u));line-height:.96}
+.mid{font-size:calc(92*var(--u));line-height:1}
+.body{font-size:calc(40*var(--u));line-height:1.25;font-weight:500;letter-spacing:-.02em}
+/* 1 intro */
+#s1{background:#02040a}#s1 img{position:absolute;right:calc(-260*var(--u));top:0;height:100%;width:auto;-webkit-mask-image:linear-gradient(to right,transparent 0,#000 30%);mask-image:linear-gradient(to right,transparent 0,#000 30%)}
+#s1 .t{position:absolute;left:calc(110*var(--u));top:50%;transform:translateY(-50%);white-space:nowrap}#s1 .big{font-size:calc(128*var(--u))}
+.portrait #s1 img{right:auto;left:50%;top:auto;bottom:0;height:62%;width:auto;transform:translateX(-62%);-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 22%);mask-image:linear-gradient(to bottom,transparent 0,#000 22%)}
+.portrait #s1 .t{top:calc(230*var(--u));transform:none;left:calc(80*var(--u))}.portrait #s1 .big{font-size:calc(118*var(--u))}
+/* 2 library */
+#s2{background:#111A2A}
+#s2 .win{transform-origin:50% 0;position:absolute;left:calc(110*var(--u));right:calc(110*var(--u));top:calc(150*var(--u));bottom:calc(-200*var(--u));border-radius:calc(28*var(--u));overflow:hidden;background:#090F1A}
+#s2 .win img{width:100%;display:block}
+#s2 .cap{position:absolute;left:calc(110*var(--u));top:calc(40*var(--u))}
+.portrait #s2 .win{left:calc(-520*var(--u));right:calc(-900*var(--u));top:calc(520*var(--u));bottom:calc(-100*var(--u))}
+.portrait #s2 .cap{left:calc(80*var(--u));top:calc(200*var(--u));width:calc(920*var(--u))}
+/* 3 scan */
+#s3 .in{position:absolute;left:0;top:0;bottom:0;width:50%;background:#090F1A;padding:calc(110*var(--u))}
+#s3 .out{position:absolute;right:0;top:0;bottom:0;width:50%;background:#F2F6FA;color:#0A0E14;padding:calc(110*var(--u))}
+.portrait #s3 .in{width:100%;height:50%;bottom:auto;padding:calc(80*var(--u))}
+.portrait #s3 .out{width:100%;height:50%;top:auto;padding:calc(80*var(--u))}
+#s3 .code{margin-top:calc(80*var(--u));width:calc(680*var(--u));background:#F2F6FA;color:#0A0E14;border-radius:calc(20*var(--u));padding:calc(34*var(--u)) calc(34*var(--u)) calc(22*var(--u))}
+#s3 .code svg{width:100%;height:calc(250*var(--u));display:block}
+#s3 .code div{font-size:calc(34*var(--u));font-weight:500;letter-spacing:.03em;margin-top:calc(16*var(--u))}
+#s3 .laser{position:absolute;left:0;right:0;height:calc(6*var(--u));background:#6CB4FC;top:0;border-radius:99px}
+#s3 .codewrap{position:relative;width:calc(680*var(--u))}
+.rec{margin-top:calc(80*var(--u));display:grid;grid-template-columns:calc(250*var(--u)) 1fr;gap:calc(32*var(--u));background:#111A2A;color:#EAF0F7;border-radius:calc(28*var(--u));padding:calc(32*var(--u));width:calc(740*var(--u))}
+.rec img{width:100%;border-radius:calc(14*var(--u));display:block}
+.rec h3{font-size:calc(46*var(--u));line-height:1.05;letter-spacing:-.03em}
+.badge{display:inline-block;margin:calc(18*var(--u)) 0;background:#F2F6FA;color:#0A0E14;font-size:calc(24*var(--u));letter-spacing:.01em;padding:calc(6*var(--u)) calc(18*var(--u));border-radius:99px}
+.rec dl{font-size:calc(26*var(--u));font-weight:400;letter-spacing:0;display:grid;gap:calc(8*var(--u))}
+.rec dl div{display:flex;justify-content:space-between}.rec dt{color:#9AA7B8}
+.added{display:inline-block;margin-top:calc(20*var(--u));font-size:calc(26*var(--u));letter-spacing:0;font-weight:600;color:#34D399;background:rgba(52,211,153,.16);padding:calc(8*var(--u)) calc(16*var(--u));border-radius:calc(10*var(--u))}
+/* 4 editions */
+#s4{background:#2A6FD6;color:#fff;padding:calc(90*var(--u)) calc(110*var(--u))}
+#s4 .row{font-size:calc(176*var(--u));line-height:.98;white-space:nowrap}
+.portrait #s4{padding:calc(240*var(--u)) calc(80*var(--u))}
+.portrait #s4 .row{font-size:calc(150*var(--u));margin-bottom:calc(40*var(--u))}
+/* 5 end */
+#s5 .c{position:absolute;inset:0;display:grid;place-content:center;justify-items:center;text-align:center;gap:calc(34*var(--u))}
+#s5 img{width:calc(230*var(--u));border-radius:calc(48*var(--u))}
+#s5 .w{font-size:calc(190*var(--u));line-height:.9;letter-spacing:-.06em}
+.portrait #s5 .w{font-size:calc(170*var(--u))}
+#s5 .u{margin-top:calc(30*var(--u));display:inline-block;background:#2A6FD6;color:#fff;font-size:calc(44*var(--u));letter-spacing:-.01em;font-weight:600;padding:calc(20*var(--u)) calc(44*var(--u));border-radius:calc(14*var(--u))}
+</style>
+<body>
+<div class="scene" id="s1"><img id="disc"><div class="t"><div class="big" id="h1a">Your film shelf,</div><div class="big" id="h1b">catalogued.</div></div></div>
+<div class="scene" id="s2"><div class="cap mid" id="cap2">Every disc you own.</div><div class="win" id="win"><img id="lib"></div></div>
+<div class="scene" id="s3"><div class="in"><div class="mid" id="t3a">Point the camera.</div><div class="codewrap" id="codewrap"><div class="code"><svg viewBox="0 0 95 56" preserveAspectRatio="none" id="bars"></svg><div>2 009992 240195</div></div><div class="laser" id="laser"></div></div></div>
+<div class="out"><div class="mid" id="t3b">It files itself.</div><div class="rec" id="rec"><img src="cover.png"><div><h3>The Clockmaker’s Fox</h3><span class="badge">4K UHD</span><dl><div><dt>Year</dt><dd>2019</dd></div><div><dt>Runtime</dt><dd>95 min</dd></div><div><dt>Director</dt><dd>Bastien Leroux</dd></div></dl><span class="added" id="added">Added to your library</span></div></div></div></div>
+<div class="scene" id="s4"><div class="row">4K Ultra HD</div><div class="row">Blu-ray</div><div class="row">DVD</div><div class="row">Steelbook</div><div class="row">Box sets</div></div>
+<div class="scene" id="s5"><div class="c"><img src="mark.png" id="mark"><div class="w" id="word">DiscVault</div><div class="body" id="tag">Built for collectors.</div><div class="u" id="url">discvault.eu</div></div></div>
+<script>
+const P=new URLSearchParams(location.search); if(P.get('portrait'))document.body.classList.add('portrait');
+// EAN-13 bars
+(()=>{const d='2009992240195',L=['0001101','0011001','0010011','0111101','0100011','0110001','0101111','0111011','0110111','0001011'],G=['0100111','0110011','0011011','0100001','0011101','0111001','0000101','0010001','0001001','0010111'],R=['1110010','1100110','1101100','1000010','1011100','1001110','1010000','1000100','1001000','1110100'],par=['LLLLLL','LLGLGG','LLGGLG','LLGGGL','LGLLGG','LGGLLG','LGGGLL','LGLGLG','LGLGGL','LGGLGL'];
+const l=[...d.slice(1,7)].map((c,i)=>(par[+d[0]][i]=='L'?L:G)[+c]).join(''),r=[...d.slice(7)].map(c=>R[+c]).join(''),m='101'+l+'01010'+r+'101';
+let s='';[...m].forEach((b,i)=>{if(b=='1')s+=`<rect x="${i}" y="0" width="1.02" height="56" fill="currentColor"/>`});document.getElementById('bars').innerHTML=s;})();
+const $=id=>document.getElementById(id);
+const clamp=(x,a=0,b=1)=>Math.min(b,Math.max(a,x));
+const eo=t=>1-Math.pow(1-clamp(t),3), eio=t=>{t=clamp(t);return t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2};
+const seg=(t,a,b)=>clamp((t-a)/(b-a));
+const rise=(el,p,dy=60)=>{el.style.opacity=eo(p);el.style.transform=`translateY(${(1-eo(p))*dy}px)`};
+const scenes=[['s1',0,3.4],['s2',3.4,8.6],['s3',8.6,13.2],['s4',13.2,16.8],['s5',16.8,21]];
+const X=.35; // cross-cut length
+const pad=(n)=>String(n).padStart(4,'0');
+window.renderAt=async(t)=>{
+  for(const [id,a,b] of scenes){const el=$(id);const vis=t>=a&&t<b;el.style.opacity=vis?1:0;el.style.zIndex=vis?2:1}
+  // 1
+  let k=t; rise($('h1a'),seg(k,.25,.95)); rise($('h1b'),seg(k,.45,1.15));
+  const disc=$('disc'); const di=1+Math.floor(clamp(t,0,5.9)*24)%145; disc.src=`disc/d${pad(di)}.jpg`;
+  disc.style.opacity=eo(seg(t,0,.8));
+  // 2
+  k=t-3.4; rise($('cap2'),seg(k,.15,.8),40);
+  const li=Math.floor(clamp(k,0,5.2)/5.2*110); $('lib').src=`lib/f${pad(li)}.jpg`;
+  $('win').style.transform=`translateY(${(1-eo(seg(k,0,.9)))*120}px) scale(${1+.03*seg(k,0,5.2)})`; $('win').style.opacity=eo(seg(k,0,.5));
+  // 3
+  k=t-8.6; rise($('t3a'),seg(k,.1,.7),40); rise($('codewrap'),seg(k,.3,.9),40);
+  const lp=seg(k,1.0,2.2); $('laser').style.opacity=(lp>0&&lp<1)?1:0; $('laser').style.top=`calc(${10+eio(lp)*72}% )`;
+  rise($('t3b'),seg(k,2.2,2.8),40); rise($('rec'),seg(k,2.4,3.1),50); rise($('added'),seg(k,3.2,3.7),14);
+  // 4
+  k=t-13.2; document.querySelectorAll('#s4 .row').forEach((r,i)=>rise(r,seg(k,.1+i*.22,.7+i*.22),70));
+  // 5
+  k=t-16.8; rise($('mark'),seg(k,.1,.8),40); rise($('word'),seg(k,.3,1.0),50); rise($('tag'),seg(k,.7,1.3),30); rise($('url'),seg(k,1.1,1.7),30);
+  await Promise.all([disc,$('lib')].map(i=>i.decode().catch(()=>{}))); await document.fonts.ready;
+};
+</script>

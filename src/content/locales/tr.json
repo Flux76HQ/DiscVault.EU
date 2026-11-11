@@ -2,235 +2,373 @@
   "locale": "tr",
   "languageName": "Türkçe",
   "seo": {
-    "title": "DiscVault — disklerin için bir katalog",
-    "description": "DiscVault, 4K, Blu-ray ve DVD'de sahip olduğun filmleri kataloglar. Bir barkod tara, sürümleri ayırt et, kendi cihazında ya da kendi sunucunda. Takip yok."
+    "title": "DiscVault — diskte sahip olduğun filmleri katalogla",
+    "description": "DiscVault, 4K, Blu-ray ve DVD filmlerini kataloglar. Barkodu tara, sürümleri ve kutu setlerini ayırt et; iPhone’unda ya da kendi sunucunda. Reklam yok, takip yok.",
+    "ogAlt": "DiscVault: 4K, Blu-ray ve DVD rozetleri taşıyan film kapaklarından bir duvar."
+  },
+  "a11y": {
+    "skip": "İçeriğe geç",
+    "home": "DiscVault, ana sayfa",
+    "menu": "Menü",
+    "language": "Dil",
+    "sections": "Bölümler",
+    "pauseMotion": "Hareketi duraklat",
+    "playMotion": "Hareketi oynat"
+  },
+  "theme": {
+    "label": "Tema",
+    "system": "Sistem",
+    "light": "Açık",
+    "dark": "Koyu"
   },
   "nav": {
-    "library": "Kitaplık",
+    "collect": "Koleksiyon",
     "scan": "Tara",
     "editions": "Sürümler",
+    "selfHosted": "Kendi sunucun",
     "privacy": "Gizlilik",
-    "install": "Kur",
+    "faq": "Sorular",
     "docs": "Docs",
-    "menu": "Menü",
-    "language": "Diller"
+    "get": "DiscVault’u edin"
   },
   "actions": {
-    "install": "DiscVault 26'yı kur",
-    "installCompact": "v26 kur",
-    "appStore": "App Store'dan indirin",
-    "android": "Android beta erişimi isteyin",
-    "testflight": "TestFlight betası",
-    "privacy": "Gizlilik politikası"
+    "appStore": "App Store’dan indirin",
+    "selfHost": "DiscVault’u kendi sunucuna kur",
+    "android": "Android beta erişimi iste",
+    "testflight": "TestFlight betasına katıl",
+    "installGuide": "Kurulum kılavuzunu oku",
+    "migrationGuide": "Geçiş kılavuzunu oku",
+    "privacyPolicy": "Gizlilik politikasını oku",
+    "discord": "Discord’a katıl",
+    "github": "GitHub’da kaynak kodu",
+    "issues": "Sorun bildir",
+    "support": "Bana bir kahve ısmarla",
+    "moreAnswers": "Daha fazla yanıt belgelerde",
+    "backToTop": "Başa dön"
   },
-  "leader": {
-    "slate": [
-      "DiscVault 26",
-      "Disklerin için bir katalog",
-      "Kendi sunucunda",
-      "iPhone & iPad",
-      "Android betası"
-    ],
-    "voice": [
-      "Işık, ",
-      "saklandı."
-    ],
-    "lead": "DiscVault sahip olduğun filmleri kataloglar — diskte, rafında, kendi sunucunda.",
-    "note": [
-      "PWA ve masaüstü",
-      "Kurulum kılavuzu"
-    ]
+  "hero": {
+    "title": "Film rafın, kataloglandı.",
+    "lead": "DiscVault, 4K, Blu-ray ve DVD’de sahip olduğun her filmin kaydını tutar. Barkodu tara; başlık, sürüm ve kapak kendiliğinden dolsun.",
+    "note": "iPhone ve iPad için ya da kendi sunucunda. Android betada.",
+    "mediaAlt": "DiscVault kitaplığı: her biri 4K, Blu-ray, DVD ya da kutu seti rozeti taşıyan film kapaklarından bir duvar."
   },
-  "shelf": {
-    "slate": [
-      "Reel 01",
-      "Raf"
-    ],
-    "counter": [
-      "45 / 45 film",
-      "29 kart"
-    ],
-    "voice": [
-      "Her sürüm, onu ",
-      "bıraktığın",
-      " yerde."
-    ],
-    "lead": "Afişlere göz at, liste ya da ayrıntı görünümüne geç, biçime göre filtrele, kutu setlerini ve kapları aç. Büyük koleksiyonlarda hızlı."
+  "collect": {
+    "title": "Koleksiyoncular için yapıldı.",
+    "blocks": {
+      "library": {
+        "title": "Rafına benzeyen bir kitaplık",
+        "points": [
+          "Afişler, liste ya da ayrıntı görünümü",
+          "4K, Blu-ray ya da DVD’ye göre filtrele",
+          "Başlığa, barkoda, oyunculara ya da ekibe göre ara",
+          "Kutu setleri açılır, içindeki filmler görünür",
+          "Büyük bir koleksiyonda bile hızlı"
+        ],
+        "mediaAlt": "Telefonda kitaplık: biçim rozetli film kapaklarından bir ızgara."
+      },
+      "detail": {
+        "title": "Her filmin düzgün bir sayfası var",
+        "points": [
+          "Sürüm, biçim ve barkod",
+          "Oyuncular, ekip ve görseller",
+          "Kendi afişin ya da arka plan görselin",
+          "Diziler ve sezonları",
+          "Plex ve Jellyfin kopyaları işaretlenir"
+        ],
+        "mediaAlt": "Telefonda bir filmin sayfası: kapak, arka plan görseli, yıl, biçim ve barkod."
+      },
+      "lists": {
+        "title": "Sırada ne varsa onun için listeler",
+        "points": [
+          "Bu akşam için bir izleme listesi",
+          "Tarihleriyle izleme geçmişi",
+          "Fiyat uyarılı bir istek listesi",
+          "Ödünç verilenler: hangi disk kimde",
+          "Kendi uydurduğun etiketler"
+        ],
+        "mediaAlt": "İstek listesi: güncel ve hedef fiyatlarıyla dört film."
+      },
+      "insight": {
+        "title": "Neye sahip olduğunu bil",
+        "points": [
+          "Biçime, on yıla ve türe göre istatistikler",
+          "Her disk için bir yer, rafına kadar",
+          "Her film için kendi puanın",
+          "Ne ödünçte, neyin süresi geçti"
+        ],
+        "mediaAlt": "İstatistikler: biçime göre Blu-ray, 4K UHD ve DVD olarak ayrılmış 54 film."
+      },
+      "iphone": {
+        "title": "iPhone ve iPad’de evinde",
+        "points": [
+          "Siri’ye bir yönetmenin kaç filmine sahip olduğunu sor",
+          "Herhangi bir diski Spotlight’tan bul",
+          "Sırada ne ekleyeceğini kendi TMDB anahtarınla keşfet",
+          "Uygulamayı Face ID ile kilitle",
+          "iCloud cihazlarını eşzamanlı tutar"
+        ],
+        "mediaAlt": "iPhone’da DiscVault."
+      }
+    }
   },
-  "read": {
-    "slate": [
-      "Reel 02",
-      "Okuma",
-      "EAN → Başlık · Yıl · Biçim · Kapak"
-    ],
-    "voice": [
-      "Kamerayı tut. Disk kendini ",
-      "okur",
-      "."
-    ],
-    "lead": "Bir barkod tara, DiscVault başlığı, yılı, biçimi ve kapağı doldursun. Ya da adla ara.",
-    "note": [
-      "iPhone & iPad",
-      "Bağımsız",
-      "Sunucu gerekmez"
-    ],
-    "captureAlt": "iPhone'da DiscVault: barkodu tarandıktan sonra bir film ekleniyor"
+  "scan": {
+    "titleStart": "Kamerayı tut.",
+    "titleEnd": "Disk yerini kendi bulur.",
+    "lead": "Her diskin bir barkodu var. Bunlardan birini seç ve DiscVault’un ondan ne çıkardığını gör.",
+    "record": {
+      "format": "Biçim",
+      "year": "Yıl",
+      "runtime": "Süre",
+      "minutes": "dk",
+      "director": "Yönetmen",
+      "barcode": "Barkod",
+      "added": "Kitaplığına eklendi"
+    },
+    "note": "iPhone ve iPad’de disk kataloğu cihazda durur; bu yüzden tarama çevrimdışı da çalışır.",
+    "fallback": "Barkod yok mu? Başlığa göre ara ya da bir IMDb veya TMDB kimliği yapıştır."
   },
-  "edition": {
-    "slate": [
-      "Reel 03",
-      "Sürüm",
-      "4K · BD · DVD · Steel · Kutu seti"
-    ],
-    "voice": [
-      "Sürümler ",
-      "önemlidir."
-    ],
-    "lead": "4K disk Blu-ray değildir. Steelbook sıradan bir kutu değildir. Kutu setleri, kaplar ve bir yayının içindeki diskler ne iseler o olarak kataloglanır.",
-    "spines": [
-      "4K Ultra HD",
-      "Blu-ray",
-      "DVD",
-      "Steelbook",
-      "Kutu seti · 8 film"
-    ]
+  "editions": {
+    "title": "Sürümler önemlidir.",
+    "lead": "4K disk Blu-ray değildir. Steelbook sıradan bir kutu değildir. Kutu setleri ve bir yayının içindeki diskler ne iseler o olarak kataloglanır.",
+    "items": {
+      "uhd": {
+        "name": "4K Ultra HD",
+        "detail": "Bu rafta 17"
+      },
+      "bluray": {
+        "name": "Blu-ray",
+        "detail": "Bu rafta 26"
+      },
+      "dvd": {
+        "name": "DVD",
+        "detail": "Bu rafta 11"
+      },
+      "steelbook": {
+        "name": "Steelbook",
+        "detail": "Bu rafta 1"
+      },
+      "boxset": {
+        "name": "Kutu setleri",
+        "detail": "3 set, 12 film"
+      }
+    },
+    "note": "Bu sayfadaki raf, uydurma 54 filmden oluşan bir demo kitaplığıdır."
   },
-  "vault": {
-    "slate": [
-      "Reel 04",
-      "Kasa",
-      "0 izleyici",
-      "0 reklam",
-      "Profilleme yok"
+  "platforms": {
+    "title": "Saklamanın iki yolu.",
+    "lead": "Cebindeki cihazda ya da evindeki bir sunucuda. İkisi de DiscVault; koleksiyonunun nerede duracağını sen seç.",
+    "columns": {
+      "ios": {
+        "name": "iPhone ve iPad",
+        "sub": "Uygulama"
+      },
+      "selfHosted": {
+        "name": "Kendi sunucun",
+        "sub": "Self-hosted"
+      }
+    },
+    "rows": {
+      "home": {
+        "label": "Nerede durur",
+        "ios": "Cihazında; kendi iCloud’un üzerinden eşzamanlanır",
+        "selfHosted": "Kendi çalıştırdığın bir sunucuda"
+      },
+      "add": {
+        "label": "Disk ekleme",
+        "ios": "Kamerayla tara, ara ya da elle yaz",
+        "selfHosted": "Barkod, arama ya da toplu içe aktarma"
+      },
+      "share": {
+        "label": "Paylaşım",
+        "ios": "Kendi cihazların",
+        "selfHosted": "Bir hane: davetler, gruplar ve roller"
+      },
+      "signin": {
+        "label": "Oturum açma",
+        "ios": "Hiç hesap yok",
+        "selfHosted": "Önce geçiş anahtarları; istersen parola, TOTP ya da OpenID Connect"
+      },
+      "extras": {
+        "label": "Ayrıca",
+        "ios": "Siri, Spotlight ve Face ID kilidi",
+        "selfHosted": "Eklentiler, API anahtarları, bir MCP uç noktası, yedekleme ve geri yükleme"
+      },
+      "languages": {
+        "label": "Diller",
+        "ios": "13",
+        "selfHosted": "29"
+      }
+    },
+    "android": {
+      "title": "Android",
+      "body": "Betada. Discord üzerinden erişim iste; onaylanan test kullanıcıları Google Play üzerinden yükler."
+    },
+    "roadmap": "Uygulamalar şu anda bağımsız çalışır. Kendi sunucunda barındırılan bir DiscVault kurulumuna bağlanmaları ileriki bir aşama için planlanıyor."
+  },
+  "selfHosted": {
+    "title": "Kendi çalıştırdığın sunucuda.",
+    "lead": "Kendi sunucunda çalışan sürüm, tüm hane için bir web uygulamasıdır. Docker, Unraid ya da Home Assistant üzerine kurulur.",
+    "shots": {
+      "library": {
+        "label": "Kitaplık",
+        "alt": "Tarayıcıda DiscVault: arama, görünüm değiştirici ve biçim filtreleriyle, kapaklardan bir duvar olarak kitaplık."
+      },
+      "detail": {
+        "label": "Ayrıntı",
+        "alt": "DiscVault: arka plan görseli, kapak, sürüm ve meta verilerle bir filmin ayrıntı sayfası."
+      },
+      "boxset": {
+        "label": "Kutu seti",
+        "alt": "DiscVault: içindeki filmleri gösterecek şekilde açılmış bir kutu seti."
+      },
+      "lists": {
+        "label": "İzleme listesi",
+        "alt": "DiscVault: kapaklardan bir ızgara olarak izleme listesi."
+      }
+    },
+    "points": [
+      "Yalnızca davetle açılan, rollü hesaplar",
+      "Önce geçiş anahtarları",
+      "Meta veriler ve fiyatlar için eklentiler",
+      "API anahtarları ve bir MCP uç noktası",
+      "Yedekleme ve geri yükleme",
+      "Telefonuna uygulama olarak kurulur"
     ],
-    "voice": [
-      "Koyduğun yerde ",
-      "kalır",
-      "."
+    "migration": {
+      "title": "DiscVault Legacy’den mi geliyorsun?",
+      "body": "Geçiş sihirbazı koleksiyonunu güncel DiscVault’a taşır."
+    }
+  },
+  "runs": {
+    "title": "DiscVault nerede çalışır",
+    "names": [
+      "iPhone",
+      "iPad",
+      "Docker",
+      "Unraid",
+      "Home Assistant",
+      "Android betası",
+      "Herhangi bir tarayıcı"
     ],
+    "caption": "DiscVault’un bugün çalıştığı yerler."
+  },
+  "privacy": {
+    "title": "Koyduğun yerde kalır.",
     "lead": "Kendi cihazında ya da kendi çalıştırdığın bir sunucuda. Profilleme yok, reklam yok, ne izlediğini kimse izlemiyor.",
+    "tiles": {
+      "ads": {
+        "figure": "0",
+        "label": "reklam"
+      },
+      "trackers": {
+        "figure": "0",
+        "label": "izleyici"
+      },
+      "profiles": {
+        "figure": "0",
+        "label": "profil"
+      },
+      "count": {
+        "figure": "1",
+        "label": "anonim günlük sayım"
+      }
+    },
     "body": [
-      "iPhone ve iPad uygulaması koleksiyonu cihazda tutar. DiscVault 26 onu senin yönettiğin bir sunucuda tutar. Her iki durumda da cihazdan yalnızca bir barkod ya da bir arama terimi çıkar.",
+      "iPhone ve iPad uygulaması koleksiyonu cihazda tutar. Kendi sunucunda çalışan sürüm onu senin yönettiğin bir sunucuda tutar. Her iki durumda da cihazdan yalnızca bir barkod ya da bir arama terimi çıkar.",
       "Tek bir istisna: iPhone ve iPad uygulaması ile kendi sunucunda çalışan DiscVault günde bir kez api.discvault.eu adresine kullanımda olduklarını bildirir. Sürümlerini ve önceki bildirimlerinden bu yana geçen gün sayısını gönderirler: hiçbir tanımlayıcı yok, koleksiyonun hakkında hiçbir şey yok. Bu yalnızca DiscVault'un ne kadar kullanıldığını tahmin etmek içindir. Sunucuda kapatabilirsin; uygulama bunu her zaman gönderir."
     ]
   },
-  "formats": {
-    "slate": [
-      "Reel 05",
-      "Biçimler"
+  "plans": {
+    "titleStart": "Temel özellikler",
+    "titleFree": "ücretsiz",
+    "titleEnd": ".",
+    "lead": "Tarama, kataloglama, arama, yedekleme ve geri yükleme için hiçbir şey ödemezsin. Kendi sunucunda çalışan sürüm ücretsizdir ve ücretsiz kalır.",
+    "points": [
+      "Sınır olmadan tarama ve ekleme",
+      "Tam yedekleme ve geri yükleme",
+      "İzleme listesi, geçmiş ve istek listesi",
+      "Cihazların arasında iCloud eşzamanlaması",
+      "Verilerini dışarı alma, her zaman"
     ],
-    "voice": [
-      "İçeri üç ",
-      "yol."
-    ],
-    "lead": "Kendi sunucunda DiscVault 26 bugün. iPhone ve iPad bağımsız. Android betada.",
-    "routes": [
-      {
-        "id": "self-hosted",
-        "slate": [
-          "PWA",
-          "Desktop",
-          "DiscVault 26"
-        ],
-        "title": "Self-hosted",
-        "body": [
-          "Masaüstü öncelikli bir kitaplık, daha zengin ayrıntı sayfaları, PostgreSQL temeli, eklentiler, taşıma araçları ve kataloğunu kendi sunucusunda tutan koleksiyoncular için yönetim denetimleri.",
-          "Yalnızca davetle akışlar, sahip ve yönetici araçları, rol tabanlı erişim, denetim görünümleri, API erişimi ve MCP'ye hazır entegrasyonlar."
-        ],
-        "action": "DiscVault 26'yı kur"
-      },
-      {
-        "id": "ios",
-        "slate": [
-          "iOS",
-          "iPadOS",
-          "Bağımsız"
-        ],
-        "title": "iPhone & iPad",
-        "body": [
-          "Tamamen cihazda çalışır. Sunucu olmadan tara, zenginleştir, filtrele ve ara."
-        ],
-        "action": "App Store'dan indirin"
-      },
-      {
-        "id": "android",
-        "slate": [
-          "Android",
-          "Beta"
-        ],
-        "title": "Android",
-        "body": [
-          "Discord üzerinden erişim isteyin. Onaylanan test kullanıcıları Google Play üzerinden yükler."
-        ],
-        "action": "Android beta erişimi isteyin"
-      }
-    ],
-    "roadmap": "iOS ve Android uygulamaları şu anda bağımsız çalışır. Kendi sunucunuzda barındırılan bir DiscVault kurulumuna bağlanmaları ileride planlanmaktadır.",
-    "migration": [
-      "Legacy'den geçiş",
-      "Docs"
-    ]
+    "pro": "Uygulamalar için Pro yükseltmesi daha sonra, tek seferlik satın alma olarak gelecek. Abonelik değil. Fiyatı henüz belirlenmedi.",
+    "support": "DiscVault’u tek bir geliştirici yapıyor. Rafında bir yer hak ederse bir kahve memnuniyetle karşılanır. Bağış hiçbir şeyin kilidini açmaz; yalnızca bir teşekkürdür."
   },
-  "credits": {
-    "install": {
-      "role": "Kurulum",
-      "name": "DiscVault 26"
-    },
-    "appStore": {
-      "role": "iPhone & iPad",
-      "name": "App Store"
-    },
-    "android": {
-      "role": "Android",
-      "name": "Discord'da beta"
-    },
-    "testflight": {
-      "role": "TestFlight",
-      "name": "Beta"
-    },
-    "source": {
-      "role": "Kaynak",
-      "name": "GitHub"
-    },
-    "community": {
-      "role": "Topluluk",
-      "name": "Discord"
-    },
-    "issues": {
-      "role": "Sorunlar",
-      "name": "GitHub"
-    },
-    "languages": {
-      "role": "Diller",
-      "name": "Yirmi"
-    },
-    "privacy": {
-      "role": "Gizlilik",
-      "name": "Gizlilik politikası"
-    },
-    "terms": {
-      "role": "Koşullar",
-      "name": "Koşullar"
-    },
-    "legacy": {
-      "role": "Legacy",
-      "name": "Eski sürüm geçişi"
-    },
-    "production": {
-      "role": "Yapım",
-      "name": "Flux76"
-    },
-    "final": [
-      "DiscVault. Koleksiyoncular için ",
-      "yapıldı."
-    ]
+  "faq": {
+    "title": "İyi sorular.",
+    "items": {
+      "server": {
+        "question": "Bir sunucuya ihtiyacım var mı?",
+        "answer": [
+          "Hayır. iPhone ve iPad uygulaması tamamen kendi başına çalışır. Sunucu yalnızca, tüm hane için yapılmış, kendi sunucunda çalışan web sürümünü isteyenler içindir."
+        ]
+      },
+      "account": {
+        "question": "Bir hesaba ihtiyacım var mı?",
+        "answer": [
+          "Uygulama için hayır. Kendi sunucunda çalışan DiscVault’ta hesaplar kendi sunucunda durur; kimi istersen onu davet edersin."
+        ]
+      },
+      "data": {
+        "question": "Film bilgileri nereden geliyor?",
+        "answer": [
+          "Disk yayınları, barkodlar ve kapaklar, DiscVault’un arkasındaki katalog olan MovieVault’tan gelir. Film ayrıntıları, oyuncular ve Keşfet, kendi ücretsiz anahtarınla TMDB’yi kullanır.",
+          "Bu ürün TMDB API’sini kullanır ancak TMDB tarafından onaylanmamış veya sertifikalandırılmamıştır."
+        ]
+      },
+      "sends": {
+        "question": "DiscVault dışarıya ne gönderir?",
+        "answer": [
+          "Bir şey aradığında bir barkod ya da bir arama terimi. Kendi sunucunda çalışan DiscVault ayrıca günde bir kez, anonim olarak, çalıştığını bildirir; bunu kapatabilirsin. Ayrıntılar gizlilik politikasında."
+        ]
+      },
+      "sync": {
+        "question": "Uygulama kendi sunucumla eşzamanlanabilir mi?",
+        "answer": [
+          "Henüz değil. Uygulamalar ve kendi sunucunda çalışan sürüm bugün ayrı ayrı çalışır; bunları birbirine bağlamak ileriki bir aşama için planlanıyor."
+        ]
+      },
+      "export": {
+        "question": "Koleksiyonumu yeniden dışarı alabilir miyim?",
+        "answer": [
+          "Evet. Yedekleme ve geri yükleme ücretsiz temel özelliklerin parçasıdır; CSV dışa aktarımı da öyle. Verilerin asla alıkonmaz."
+        ]
+      },
+      "pro": {
+        "question": "DiscVault için ödeme yapmam gerekecek mi?",
+        "answer": [
+          "Temel özellikler ücretsiz: tarama, kataloglama, yedekleme ve geri yükleme. Kendi sunucunda çalışan sürüm ücretsizdir ve ücretsiz kalır.",
+          "Uygulamalar için bir Pro yükseltmesi ileriki bir aşama için planlanıyor; abonelik olarak değil, tek seferlik satın alma olarak. Fiyatı henüz belirlenmedi."
+        ]
+      },
+      "android": {
+        "question": "Android uygulaması var mı?",
+        "answer": [
+          "Betada. Discord üzerinden erişim iste; onaylanan test kullanıcıları onu Google Play üzerinden yükler."
+        ]
+      },
+      "legacy": {
+        "question": "Hâlâ DiscVault Legacy kullanıyorum. Nasıl geçerim?",
+        "answer": [
+          "Kendi sunucunda çalışan sürümde, koleksiyonunu Legacy’den taşıyan bir geçiş sihirbazı var. Geçiş kılavuzu bunu Unraid ve Docker için adım adım anlatır."
+        ]
+      }
+    }
+  },
+  "cta": {
+    "title": "İlk diskini tara.",
+    "lead": "Raftan en yakın kutuyu al ve kamerayı barkoda tut. Bütün kurulum bu kadar."
   },
   "footer": {
-    "tagline": "DiscVault. Koleksiyoncular için geliştirildi.",
-    "source": "GitHub üzerinde kaynak",
-    "legacy": "Eski sürüm geçişi",
-    "privacy": "Gizlilik",
+    "tagline": "DiscVault. Koleksiyoncular için yapıldı.",
+    "groups": {
+      "product": "Ürün",
+      "help": "Yardım",
+      "legal": "Yasal"
+    },
+    "privacy": "Gizlilik politikası",
     "terms": "Koşullar",
-    "support": "Destek konusu"
+    "legacy": "Eski sürüm geçişi",
+    "production": "Yapım",
+    "tmdb": "Bu ürün TMDB API’sini kullanır ancak TMDB tarafından onaylanmamış veya sertifikalandırılmamıştır."
   }
 }

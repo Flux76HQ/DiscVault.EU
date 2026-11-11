@@ -1,18 +1,23 @@
 ---
-import '../styles/tokens-dark-pin.css';
-import '../styles/cinematic.css';
-import '../styles/reels/reels.css';
-import '../styles/motion.css';
+/**
+ * The homepage: a row of colour chapters. Each chapter is one flat field in
+ * a colour of the house style; the order below is the argument of the page.
+ */
 import type { Locale } from '../content/locales';
 import type { MarketingContent } from '../content/types';
 import Footer from './Footer.astro';
 import Header from './Header.astro';
-import Hero from './reels/Hero.astro';
-import Shelf from './reels/Shelf.astro';
-import Read from './reels/Read.astro';
-import Edition from './reels/Edition.astro';
-import Vault from './reels/Vault.astro';
-import Formats from './reels/Formats.astro';
+import Hero from './sections/Hero.astro';
+import Collect from './sections/Collect.astro';
+import Scan from './sections/Scan.astro';
+import Editions from './sections/Editions.astro';
+import Platforms from './sections/Platforms.astro';
+import SelfHosted from './sections/SelfHosted.astro';
+import Runs from './sections/Runs.astro';
+import Privacy from './sections/Privacy.astro';
+import Plans from './sections/Plans.astro';
+import Faq from './sections/Faq.astro';
+import Cta from './sections/Cta.astro';
 
 interface Props {
   content: MarketingContent;
@@ -21,21 +26,28 @@ interface Props {
 }
 
 const { content, locale, homePath } = Astro.props;
+const privacyPath = locale === 'nl' ? '/privacy-nl.html' : '/privacy.html';
 ---
 
 <Header content={content} locale={locale} homePath={homePath} />
 
 <main id="main">
   <Hero content={content} />
-  <Shelf content={content} />
-  <Read content={content} />
-  <Edition content={content} />
-  <Vault content={content} locale={locale} />
-  <Formats content={content} />
+  <Collect content={content} />
+  <Scan content={content} />
+  <Editions content={content} />
+  <SelfHosted content={content} />
+  <Platforms content={content} />
+  <Runs content={content} />
+  <Privacy content={content} privacyPath={privacyPath} />
+  <Plans content={content} />
+  <Faq content={content} />
+  <Cta content={content} />
 </main>
 
 <Footer content={content} locale={locale} />
 
 <script>
+  import '../scripts/media';
   import '../scripts/motion';
 </script>

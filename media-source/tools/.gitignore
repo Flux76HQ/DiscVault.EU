@@ -1,0 +1,12 @@
+# Everything run.sh creates next to itself stays local.
+.demo-env
+venv/
+pgdata/
+data/
+logs/
+shots/
+frames/
+api.pid
+worker.pid
+pg.log
+*.log

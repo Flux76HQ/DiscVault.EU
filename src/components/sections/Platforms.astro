@@ -1,0 +1,110 @@
+---
+import '../../styles/sections/platforms.css';
+/**
+ * Chapter: the two ways to keep a collection, as a real table, and the ways
+ * in: the App Store, the install guide, the Android beta.
+ */
+import { platformRowIds } from '../../content/structure';
+import type { MarketingContent } from '../../content/types';
+import {
+  ANDROID_BETA_SIGNUP_URL,
+  APP_STORE_URL,
+  DOCS_URL,
+  TESTFLIGHT_URL,
+} from '../../config';
+
+interface Props {
+  content: MarketingContent;
+}
+
+const { platforms, actions } = Astro.props.content;
+---
+
+<section
+  class="chapter platforms on-surface"
+  id="install"
+  data-chapter="on-surface"
+>
+  <div class="grid">
+    <h2 class="title platforms-title" data-rise>{platforms.title}</h2>
+    <p class="statement platforms-lead" data-rise>{platforms.lead}</p>
+
+    <div class="platforms-table-wrap" data-rise>
+      <table class="platforms-table">
+        <thead>
+          <tr>
+            <td></td>
+            <th scope="col" id="ios">
+              <span class="platforms-name">{platforms.columns.ios.name}</span>
+              <span class="small note">{platforms.columns.ios.sub}</span>
+            </th>
+            <th scope="col">
+              <span class="platforms-name"
+                >{platforms.columns.selfHosted.name}</span
+              >
+              <span class="small note">{platforms.columns.selfHosted.sub}</span>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            platformRowIds.map((id) => (
+              <tr>
+                <th scope="row">{platforms.rows[id].label}</th>
+                <td>{platforms.rows[id].ios}</td>
+                <td>{platforms.rows[id].selfHosted}</td>
+              </tr>
+            ))
+          }
+        </tbody>
+        <tfoot>
+          <tr>
+            <td></td>
+            <td>
+              <a
+                class="button"
+                href={APP_STORE_URL}
+                data-cta="app-store"
+                data-rank="primary"
+              >
+                {actions.appStore}
+              </a>
+              <a
+                class="text-link small platforms-sub"
+                href={TESTFLIGHT_URL}
+                data-cta="testflight"
+                data-rank="text"
+              >
+                {actions.testflight}
+              </a>
+            </td>
+            <td>
+              <a
+                class="button"
+                href={DOCS_URL}
+                data-cta="self-hosted"
+                data-rank="primary"
+              >
+                {actions.selfHost}
+              </a>
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+
+    <div class="platforms-android" id="android" data-rise>
+      <h3 class="platforms-name">{platforms.android.title}</h3>
+      <p>{platforms.android.body}</p>
+      <a
+        class="button button-quiet"
+        href={ANDROID_BETA_SIGNUP_URL}
+        data-cta="android"
+        data-rank="secondary"
+      >
+        {actions.android}
+      </a>
+    </div>
+    <p class="platforms-roadmap note" data-rise>{platforms.roadmap}</p>
+  </div>
+</section>

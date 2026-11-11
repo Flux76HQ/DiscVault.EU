@@ -14,7 +14,7 @@ interface Props {
 const { locale, label } = Astro.props;
 ---
 
-<label class="locale-switcher">
+<label class="switcher locale-switcher">
   <span class="sr-only">{label}</span>
   <select data-locale-switcher aria-label={label}>
     {
