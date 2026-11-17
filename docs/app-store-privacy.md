@@ -19,7 +19,8 @@ Waarom niet "No"? Apple rekent iets als *collected* zodra het het toestel
 verlaat op een manier die jij (of je partners) kunt inzien. De app zelf
 verzamelt niets voor lokaal gebruik, **maar** roept één online dienst aan die
 door jou (DiscVault — VaultStack) wordt beheerd: **MovieVault**
-(`movies2.vaultstack.eu`). Daar wordt bij een barcode-scan of titelzoekopdracht
+(`api.discvault.eu`; eerdere builds gebruiken nog het vorige adres
+`movies2.vaultstack.eu`). Daar wordt bij een barcode-scan of titelzoekopdracht
 data naartoe gestuurd. Vanaf de build met de anonieme installatietelling meldt de
 app daarnaast één keer per dag aan `api.discvault.eu` dat ze in gebruik is (zie
 1c). Daardoor moet je "Yes" kiezen en de betreffende datatypes declareren.
