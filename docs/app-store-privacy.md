@@ -71,6 +71,14 @@ toe. Voor beide geldt hetzelfde antwoordpatroon:
   rate-limiting.
 - **Linked to identity:** No · **Tracking:** No.
 - Dit is géén IDFA/advertising identifier.
+- **Vanaf de builds na 17 november 2026** valt hier ook het **toegangstoken per
+  installatie** onder (MovieVault-contract `access-1`, App-Guidance ADR-0023): de app
+  maakt een eigen P-256-sleutel (sleutelhanger of Secure Enclave), vraagt daarmee een
+  kortlevend token op bij `api.discvault.eu` en stuurt dat mee met elk catalogus-,
+  omslag- en zoekverzoek. MovieVault bewaart per installatie een willekeurige id, een
+  vingerafdruk van de sleutel en verzoekaantallen per dag (14 dagen). Zelfde
+  declaratie: **Device ID**, **App Functionality** + **Security**, niet gekoppeld,
+  geen tracking. Geen App Attest (nog niet), dus Apple ziet niets van dit verzoek.
 
 ### 1b. Usage Data → Search History (of "Other Usage Data")
 

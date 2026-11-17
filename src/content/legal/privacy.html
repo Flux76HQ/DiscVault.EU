@@ -4,7 +4,7 @@
         </p>
 
         <p class="legal-meta">
-          <strong>Last updated:</strong> 17 November 2026 &nbsp;·&nbsp;
+          <strong>Last updated:</strong> 18 November 2026 &nbsp;·&nbsp;
           <strong>Applies to:</strong> DiscVault for iOS, iPadOS, and Android, and
           the anonymous installation count of the iOS and iPadOS app and of DiscVault
           servers you host yourself (Section 5)
@@ -110,12 +110,12 @@
           not linked to your identity and is not used for tracking.
         </p>
 
-        <h3>Installation access token (Android app, version 26.11.17 and later)</h3>
+        <h3>Installation access token (Android app 26.11.17 and later; iPhone and iPad app, builds released after 17 November 2026)</h3>
         <p>
           MovieVault serves its catalogue only to DiscVault apps. To show that a request
-          comes from DiscVault, the Android app creates a random key pair for this
-          installation, kept in the Android Keystore (the private key never leaves your
-          device), and uses it to obtain a short-lived <strong>access token</strong> from
+          comes from DiscVault, the app creates a random key pair for this installation,
+          kept in the Android Keystore or, on iPhone and iPad, in the Keychain or the
+          Secure Enclave (the private key never leaves your device), and uses it to obtain a short-lived <strong>access token</strong> from
           <code>https://api.discvault.eu</code>, renewed every few hours. The app sends
           that token with every catalogue, cover-art and lookup request to MovieVault, so
           these requests are <strong>pseudonymous</strong> rather than anonymous:
@@ -123,7 +123,7 @@
           not who you are.
         </p>
         <p>
-          The token request contains only the platform (“android”), the public key, a
+          The token request contains only the platform (“android” or “ios”), the public key, a
           one-time challenge and a signature — no name, account, device model, app
           version, language or location. The token is never sent with the installation
           count (Section 5) or with contributions, and is not linked to them.
@@ -140,15 +140,19 @@
           installation.
         </p>
         <p>
-          If the optional Play Integrity check is switched on, the app also asks Google
+          The iPhone and iPad app sends no attestation with the token request: Apple is
+          not involved. If the optional Play Integrity check is switched on in the Android
+          app, the app also asks Google
           Play for an integrity verdict bound to that token request; Google processes
           that request under its own
           <a href="https://policies.google.com/privacy">Privacy Policy</a>. MovieVault
           checks the verdict offline and does not contact Google. Legal basis under the
           GDPR: our <strong>legitimate interest</strong> (Art. 6(1)(f)) in serving the
-          catalogue only to DiscVault apps and protecting it from abuse. For Google
-          Play’s Data safety disclosure, the installation identifier is disclosed as a
-          device or other identifier collected for app functionality and for security.
+          catalogue only to DiscVault apps and protecting it from abuse. For Apple’s App
+          Store privacy label and Google Play’s Data safety disclosure, the installation
+          identifier is disclosed as a device or other identifier collected for app
+          functionality and for security, not linked to your identity and not used for
+          tracking.
         </p>
 
         <h3>Optional direct TMDB lookups</h3>
@@ -252,7 +256,7 @@
           Flux76 do not receive or store it. MovieVault keeps only the minimal operational
           records (such as the random device credential and short-lived request and
           security logs) needed to run and secure the lookup service, for no longer than
-          necessary. For the Android access token (Section 4), MovieVault keeps the
+          necessary. For the installation access token (Section 4), MovieVault keeps the
           per-installation record described there, with daily request counts for 14
           days, and deletes an installation that renews no token for 90 days. The daily
           totals of the anonymous installation count (Section 5)
