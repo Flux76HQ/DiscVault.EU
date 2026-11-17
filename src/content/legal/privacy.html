@@ -20,7 +20,8 @@
             through MovieVault. You may also add your own TMDB API key; that key stays
             on your device and the app sends TMDB requests directly to TMDB. DiscVault
             and Flux76 do not receive or store your identity, collection, watchlist,
-            watch history, TMDB key, or TMDB lookup history. Once a day, without any
+            watch history, TMDB key, or TMDB lookup history. On Android, MovieVault
+            requests carry a pseudonymous installation token (Section 4). Once a day, without any
             identifier, the iOS and iPadOS app and a DiscVault server you host yourself
             tell us that they are in use; on a server its owner can turn that off
             (Section 5).
@@ -107,6 +108,47 @@
           where applicable, this random identifier is disclosed as a device or other
           identifier collected only to operate and rate-limit the lookup service. It is
           not linked to your identity and is not used for tracking.
+        </p>
+
+        <h3>Installation access token (Android app, version 26.11.17 and later)</h3>
+        <p>
+          MovieVault serves its catalogue only to DiscVault apps. To show that a request
+          comes from DiscVault, the Android app creates a random key pair for this
+          installation, kept in the Android Keystore (the private key never leaves your
+          device), and uses it to obtain a short-lived <strong>access token</strong> from
+          <code>https://api.discvault.eu</code>, renewed every few hours. The app sends
+          that token with every catalogue, cover-art and lookup request to MovieVault, so
+          these requests are <strong>pseudonymous</strong> rather than anonymous:
+          MovieVault can tell that several requests come from the same installation, but
+          not who you are.
+        </p>
+        <p>
+          The token request contains only the platform (“android”), the public key, a
+          one-time challenge and a signature — no name, account, device model, app
+          version, language or location. The token is never sent with the installation
+          count (Section 5) or with contributions, and is not linked to them.
+        </p>
+        <p>
+          MovieVault keeps, per installation: a random installation identifier (not
+          derived from the key), a fingerprint of the public key, the platform, the dates
+          of the first and the latest token, whether the latest token was verified, and
+          how many catalogue requests the installation made per day (kept for 14 days).
+          It does <strong>not</strong> keep which barcodes, films, images or catalogue
+          files were requested, and it does not keep your IP address. An installation
+          that renews no token for 90 days is deleted. The key and the token are not part
+          of any backup: reinstalling the app, or moving to a new phone, starts a new
+          installation.
+        </p>
+        <p>
+          If the optional Play Integrity check is switched on, the app also asks Google
+          Play for an integrity verdict bound to that token request; Google processes
+          that request under its own
+          <a href="https://policies.google.com/privacy">Privacy Policy</a>. MovieVault
+          checks the verdict offline and does not contact Google. Legal basis under the
+          GDPR: our <strong>legitimate interest</strong> (Art. 6(1)(f)) in serving the
+          catalogue only to DiscVault apps and protecting it from abuse. For Google
+          Play’s Data safety disclosure, the installation identifier is disclosed as a
+          device or other identifier collected for app functionality and for security.
         </p>
 
         <h3>Optional direct TMDB lookups</h3>
@@ -210,7 +252,10 @@
           Flux76 do not receive or store it. MovieVault keeps only the minimal operational
           records (such as the random device credential and short-lived request and
           security logs) needed to run and secure the lookup service, for no longer than
-          necessary. The daily totals of the anonymous installation count (Section 5)
+          necessary. For the Android access token (Section 4), MovieVault keeps the
+          per-installation record described there, with daily request counts for 14
+          days, and deletes an installation that renews no token for 90 days. The daily
+          totals of the anonymous installation count (Section 5)
           are kept for up to 760 days. TMDB determines its own retention under its
           privacy policy.
         </p>
