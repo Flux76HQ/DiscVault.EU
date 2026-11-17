@@ -21,7 +21,8 @@
             API-key toevoegen; die key blijft op je toestel en de app verstuurt
             TMDB-verzoeken rechtstreeks naar TMDB. DiscVault en Flux76 ontvangen of
             bewaren je identiteit, collectie, watchlist, kijkgeschiedenis, TMDB-key of
-            TMDB-zoekhistorie niet. De app voor iOS en iPadOS en een DiscVault-server
+            TMDB-zoekhistorie niet. Op Android dragen MovieVault-verzoeken een
+            pseudoniem installatietoken (paragraaf 4). De app voor iOS en iPadOS en een DiscVault-server
             die je zelf host, melden ons één keer per dag, zonder enige identificatie,
             dat ze in gebruik zijn; op een server kan de eigenaar dat uitzetten
             (paragraaf 5).
@@ -117,6 +118,52 @@
           vermeld als een toestel- of andere identificatie die uitsluitend wordt
           verzameld om de lookup-dienst te laten werken en misbruik te beperken. Deze
           is niet gekoppeld aan je identiteit en wordt niet gebruikt voor tracking.
+        </p>
+
+        <h3>Toegangstoken per installatie (Android-app, versie 26.11.17 en later)</h3>
+        <p>
+          MovieVault levert zijn catalogus alleen aan DiscVault-apps. Om te laten zien
+          dat een verzoek van DiscVault komt, maakt de Android-app voor deze installatie
+          een willekeurig sleutelpaar aan, bewaard in de Android Keystore (de privésleutel
+          verlaat je toestel nooit). Daarmee haalt de app bij
+          <code>https://api.discvault.eu</code> een kortlevend
+          <strong>toegangstoken</strong> op, dat om de paar uur wordt vernieuwd. De app
+          stuurt dat token mee met elk verzoek om de catalogus, omslagafbeeldingen en
+          zoekresultaten van MovieVault. Deze verzoeken zijn daardoor
+          <strong>pseudoniem</strong> in plaats van anoniem: MovieVault kan zien dat
+          verzoeken van dezelfde installatie komen, maar niet wie je bent.
+        </p>
+        <p>
+          De tokenaanvraag bevat alleen het platform (“android”), de publieke sleutel,
+          een eenmalige challenge en een handtekening: geen naam, account,
+          toestelmodel, appversie, taal of locatie. Het token gaat nooit mee met de
+          installatietelling (paragraaf 5) of met bijdragen, en is daar niet aan
+          gekoppeld.
+        </p>
+        <p>
+          MovieVault bewaart per installatie een willekeurige installatie-identificatie
+          (niet afgeleid van de sleutel), een vingerafdruk van de publieke sleutel, het
+          platform, de datum van het eerste en het laatste token, en of het laatste
+          token geverifieerd was. Ook bewaart MovieVault hoeveel catalogusverzoeken de
+          installatie per dag deed; dat blijft 14 dagen bewaard. MovieVault bewaart
+          <strong>niet</strong> welke barcodes, films, afbeeldingen of
+          catalogusbestanden zijn opgevraagd, en ook niet je IP-adres. Een installatie
+          die 90 dagen geen token vernieuwt, wordt verwijderd. De sleutel en het token
+          zitten in geen enkele back-up: na herinstallatie of op een nieuwe telefoon
+          begint een nieuwe installatie.
+        </p>
+        <p>
+          Als de optionele Play Integrity-controle aan staat, vraagt de app Google Play
+          ook om een integriteitsoordeel voor die tokenaanvraag. Google verwerkt dat
+          verzoek volgens zijn eigen
+          <a href="https://policies.google.com/privacy">privacyverklaring</a>.
+          MovieVault controleert dat oordeel offline en neemt geen contact op met
+          Google. Grondslag onder de AVG: ons <strong>gerechtvaardigd belang</strong>
+          (art. 6, lid 1, sub f) om de catalogus alleen aan DiscVault-apps te leveren en
+          tegen misbruik te beschermen. In de Data safety-vermelding van Google Play
+          wordt de installatie-identificatie vermeld als een toestel- of andere
+          identificatie die wordt verzameld voor de werking van de app en voor
+          beveiliging.
         </p>
 
         <h3>Optionele rechtstreekse TMDB-lookups</h3>
@@ -227,7 +274,10 @@
           MovieVault bewaart alleen de minimale operationele gegevens (zoals de
           willekeurige toestelcredential en kortstondige verzoek- en
           beveiligingslogs) die nodig zijn om de lookup-dienst te laten draaien en te
-          beveiligen, niet langer dan noodzakelijk. De dagtotalen van de anonieme
+          beveiligen, niet langer dan noodzakelijk. Voor het Android-toegangstoken
+          (paragraaf 4) bewaart MovieVault het daar beschreven gegeven per installatie,
+          met verzoekaantallen per dag gedurende 14 dagen, en verwijdert het een
+          installatie die 90 dagen geen token vernieuwt. De dagtotalen van de anonieme
           installatietelling (paragraaf 5) bewaren we maximaal 760 dagen. TMDB bepaalt
           zijn eigen bewaartermijnen volgens zijn privacyverklaring.
         </p>
